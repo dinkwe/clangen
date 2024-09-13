@@ -2154,11 +2154,17 @@ class Cat:
         History.add_beginning(reincarnation, clan_born=False)
         self.reincarnated = True
         self.reincarnation = reincarnation
+        reincarnation.reincarnated = True
         if game.clan.clan_settings["reincarnation_auto_fade"]:
             self.faded = True
     
     def has_reincarnation(self):
-        return self.reincarnated
+        if self.reincarnated:
+            if self.reincarnation is not None:
+                print("TRUE")
+                return True
+        print("FALSE")
+        return False
         
 
     def get_ill(self, name, event_triggered=False, lethal=True, severity="default", grief_cat=None):

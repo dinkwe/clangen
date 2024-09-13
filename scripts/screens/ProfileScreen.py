@@ -225,10 +225,8 @@ class ProfileScreen(Screens):
                 # game.switches['cur_screen'] = "events screen"
             elif event.ui_element == self.reincarnation_button:
                 self.the_cat.get_reincarnation()
-                self.clear_profile()
-                self.build_profile()
-                self.update_disabled_buttons_and_text()
-                self.reincarnation_button.disable()
+                self.close_current_tab()
+                self.change_screen(game.last_screen_forProfile)
             elif event.ui_element == self.back_button:
                 self.close_current_tab()
                 self.change_screen(game.last_screen_forProfile)
@@ -740,7 +738,7 @@ class ProfileScreen(Screens):
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
-        # History Tab
+        #  Tab
         elif self.open_tab == "history":
             if event.ui_element == self.sub_tab_1:
                 if self.open_sub_tab == "user notes":
@@ -2077,6 +2075,9 @@ class ProfileScreen(Screens):
 
         beginning = History.get_beginning(self.the_cat)
         if beginning:
+            if self.the_cat.reincarnated and not self.the_cat.has_reincarnation():
+                all_parents = [Cat.fetch_cat(i) for i in self.the_cat.get_parents()]
+                text += " {PRONOUN/m_c/subject/CAP} is the reincarnation of " + str(all_parents[0].name) + "."
             if (
                 ("encountered" in beginning and beginning['encountered'] is False)
                 or "encountered" not in beginning

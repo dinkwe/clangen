@@ -17,7 +17,9 @@ class History:
                  possible_history=None,
                  died_by=None,
                  scar_events=None,
-                 murder=None
+                 murder=None,
+                 reincarnated=False,
+                 reincarnation=False
                  ):
         self.beginning = beginning if beginning else {}
         self.mentor_influence = mentor_influence if mentor_influence else {"trait": {}, "skill": {}}
