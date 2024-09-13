@@ -2153,7 +2153,7 @@ class Cat:
         game.clan.add_cat(reincarnation)
         History.add_beginning(reincarnation, clan_born=False)
         self.reincarnated = True
-        self.reincarnation = reincarnation
+        self.reincarnation = reincarnation.ID
         reincarnation.reincarnated = True
         if game.clan.clan_settings["reincarnation_auto_fade"]:
             self.faded = True

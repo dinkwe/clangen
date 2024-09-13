@@ -287,7 +287,7 @@ class Inheritance:
             relevant_cat = self.cat.fetch_cat(relevant_id)
             if not relevant_cat:
                 continue
-            if self.cat.fetch_cat(relevant_id).has_reincarnation() and self.cat.fetch_cat(relevant_id).reincarnation == self.cat:
+            if self.cat.fetch_cat(relevant_id).has_reincarnation() and self.cat.fetch_cat(relevant_id).reincarnation == self.cat.ID:
                 self.parents[relevant_id] = {"type": RelationType.BLOOD, "additional": ["reincarnation"]}
             else:
                 self.parents[relevant_id] = {"type": RelationType.BLOOD, "additional": []}
