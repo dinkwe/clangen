@@ -2161,9 +2161,7 @@ class Cat:
     def has_reincarnation(self):
         if self.reincarnated:
             if self.reincarnation is not None:
-                print("TRUE")
                 return True
-        print("FALSE")
         return False
         
 
