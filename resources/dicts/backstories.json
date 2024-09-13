@@ -133,7 +133,10 @@
     "oldstarclan2": "This cat was originally from StarClan, but after getting lost in the Dark Forest one day, {PRONOUN/m_c/subject} {VERB/m_c/were/was} unable to find {PRONOUN/m_c/poss} way back. Now, {PRONOUN/m_c/subject} belong to the Place of No Stars, resenting {PRONOUN/m_c/poss} StarClan family who never came to find {PRONOUN/m_c/object}.",
     "oldstarclan3" : "This cat belonged to StarClan once, but got lost outside of StarClan territory one day and has been bitterly wandering the Dark Forest ever since.",
     "dfkit1": "This cat was born in the Dark Forest, with one Dark Forest parent and one living one.",
-    "dfkit2": "This cat was born in the Dark Forest and taken to live with the Clan by {PRONOUN/m_c/poss} living parent."
+    "dfkit2": "This cat was born in the Dark Forest and taken to live with the Clan by {PRONOUN/m_c/poss} living parent.",
+    "reincarnation_starclan": "This cat was born again by StarClan's will. {PRONOUN/m_c/subject/CAP} was found resting by the Moonpool and taken into the clan.",
+    "reincarnation_unknown": "This cat was born again after wandering through the Unknown Residence. {PRONOUN/m_c/subject/CAP} was found on the territory, confused and alone.",
+    "reincarnation_df": "This cat was born again by the Dark Forest's might. A trainee brought {PRONOUN/m_c/object} into the camp with no explanation."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -151,7 +154,8 @@
     "starclan_backstories": "ancient spirit",
     "df_backstories": "ancient spirit",
     "dark_forest_kits": "from the Dark Forest",
-    "oldstarclan_backstories": "ancient spirit"
+    "oldstarclan_backstories": "ancient spirit",
+    "reincarnated_backstories": "reincarnated soul"
   },
   "backstory_categories": {
     "dark_forest_kits": [
@@ -339,6 +343,11 @@
       "outsider4",
       "outsider5",
       "outsider6"
+    ],
+    "reincarnated_backstories": [
+      "reincarnation_starclan",
+      "reincarnation_unknown",
+      "reincarnation_df"
     ]
   },
   "conversion": {

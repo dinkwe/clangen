@@ -197,6 +197,7 @@ class ProfileScreen(Screens):
         self.exit_df_button = None
         self.accessories_tab_button = None
         self.exile_return_button = None
+        self.reincarnation_button = None
         self.page = 0
         self.max_pages = 1
         self.clear_accessories = None
@@ -222,6 +223,12 @@ class ProfileScreen(Screens):
                 self.change_screen('events screen')
                 # self.exit_screen()
                 # game.switches['cur_screen'] = "events screen"
+            elif event.ui_element == self.reincarnation_button:
+                self.the_cat.get_reincarnation()
+                self.clear_profile()
+                self.build_profile()
+                self.update_disabled_buttons_and_text()
+                self.reincarnation_button.disable()
             elif event.ui_element == self.back_button:
                 self.close_current_tab()
                 self.change_screen(game.last_screen_forProfile)
@@ -1235,7 +1242,6 @@ class ProfileScreen(Screens):
 
             if (
                 (not self.the_cat.dead and self.the_cat.outside) or
-                (not self.the_cat.dead and not self.the_cat.outside and game.clan.your_cat.outside and not game.clan.your_cat.dead) or 
                 game.clan.your_cat.moons < 0 or
                 self.the_cat.ID == game.clan.your_cat.ID or
                 ((game.clan.your_cat.dead or self.the_cat.dead) and dead_talk is False)
@@ -1258,7 +1264,6 @@ class ProfileScreen(Screens):
             cant_insult = False
             if (
                 self.the_cat.outside or
-                (not self.the_cat.dead and not self.the_cat.outside and game.clan.your_cat.outside and not game.clan.your_cat.dead) or 
                 game.clan.your_cat.moons < 0 or
                 self.the_cat.ID == game.clan.your_cat.ID or
                 (game.clan.your_cat.dead is True or self.the_cat.dead is True and
@@ -1287,7 +1292,6 @@ class ProfileScreen(Screens):
                 self.the_cat.outside or
                 game.clan.your_cat.moons < 0 or
                 self.the_cat.ID == game.clan.your_cat.ID or
-                (not self.the_cat.dead and not self.the_cat.outside and game.clan.your_cat.outside and not game.clan.your_cat.dead) or 
                 (game.clan.your_cat.dead is True or self.the_cat.dead is True and
                 dead_talk is False) or
                 not self.the_cat.is_dateable(game.clan.your_cat) or
@@ -1537,7 +1541,13 @@ class ProfileScreen(Screens):
         all_parents = [Cat.fetch_cat(i) for i in the_cat.get_parents()]
         if all_parents: 
             output += "\n"
-            if len(all_parents) == 1:
+            if self.the_cat.backstory in ["reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"]:
+                #ADD CODE HERE
+                name = str(all_parents[0].name)
+                name = name.replace('Echo of', '')
+                print(name)
+                output += "reincarnation of " + name
+            elif len(all_parents) == 1:
                 output += "parent: " + str(all_parents[0].name)
             elif len(all_parents) > 2:
                 output += (
@@ -2076,7 +2086,7 @@ class ProfileScreen(Screens):
                 if 'clan_born' in beginning and beginning['clan_born']:
                     text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} born on Moon " + str(
                         beginning['moon']) + " during " + str(beginning['birth_season']) + "."
-                elif 'age' in beginning and beginning['age'] and not self.the_cat.outside:
+                elif 'age' in beginning and beginning['age']:
                     text += " {PRONOUN/m_c/subject/CAP} joined the Clan on Moon " + str(
                         beginning['moon']) + " at the age of " + str(beginning['age']) + " Moons."
                 else:
@@ -2889,7 +2899,7 @@ class ProfileScreen(Screens):
             new_inv = cat.pelt.inventory
         else:
             for ac in cat.pelt.inventory:
-                if ac and self.search_bar.get_text() and self.search_bar.get_text().lower() in ac.lower():
+                if self.search_bar.get_text().lower() in ac.lower():
                     inventory_len+=1
                     new_inv.append(ac)
         self.max_pages = math.ceil(inventory_len/18)
@@ -3323,6 +3333,8 @@ class ProfileScreen(Screens):
             # Exile/Guide/Follow button
             if self.exile_cat_button:
                 self.exile_cat_button.kill()
+            if self.reincarnation_button:
+                self.reincarnation_button.kill()
             if not self.the_cat.dead:
                 self.exile_cat_button = UIImageButton(
                     scale(pygame.Rect((1156, 900), (344, 72))),
@@ -3336,6 +3348,17 @@ class ProfileScreen(Screens):
                     self.exile_cat_button.disable()
 
             elif self.the_cat.dead:
+                self.reincarnation_button = UIImageButton(
+                        scale(pygame.Rect((1156, 1044), (344, 92))),
+                        "",
+                        object_id="#reincarnate_cat_button",
+                        tool_tip_text="A new cat will be created, but the current cat will be preserved.",
+                        starting_height=2,
+                        manager=MANAGER,
+                    )
+                if self.the_cat.has_reincarnation():
+                    self.reincarnation_button.kill()
+                
                 if not self.the_cat.outside and not self.the_cat.df:
                     object_id = "#exile_df_button"
                 elif self.the_cat.df and not self.the_cat.outside:
@@ -3561,6 +3584,8 @@ class ProfileScreen(Screens):
             self.kill_cat_button.kill()
             self.exile_cat_button.kill()
             self.murder_cat_button.kill()
+            if self.reincarnation_button:
+                self.reincarnation_button.kill()
             if self.join_df_button:
                 self.join_df_button.kill()
             if self.exit_df_button:

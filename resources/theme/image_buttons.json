@@ -4794,7 +4794,6 @@
             }
         }
     },
-    "#choose_group_button": {
         "#add_button": {
             "prototype": "#image_button",
             "images": {
@@ -5661,7 +5660,23 @@
                     "path": "resources/images/buttons/filters_tab_hover.png"
                 }
             }
+        },
+        "#reincarnate_cat_button": {
+            "prototype": "#image_button",
+            "images": {
+                "normal_image": {
+                    "path": "resources/images/buttons/reincarnate.png"
+                },
+                "hovered_image": {
+                    "path": "resources/images/buttons/reincarnate_hover.png"
+                },
+                "selected_image": {
+                    "path": "resources/images/buttons/reincarnate_hover.png"
+                },
+                "disabled_image": {
+                    "path": "resources/images/buttons/exile_cat_unavailable.png"
+                }
+            }
         }
     }
-}
     

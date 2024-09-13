@@ -2139,6 +2139,23 @@ class Cat:
     # ---------------------------------------------------------------------------- #
     #                                  conditions                                  #
     # ---------------------------------------------------------------------------- #
+    
+    def get_reincarnation(self):
+        
+        backstory = "reincarnation_starclan"
+        if self.df:
+            backstory = "reincarnation_df"
+        elif self.outside or self.exiled:
+            backstory = "reincarnation_unknown"
+        reincarnation = Cat(parent1 = self.ID,prefix = self.name.prefix, status = "newborn", moons = 0, backstory=backstory, gender=self.gender)
+        game.clan.add_cat(reincarnation)
+        History.add_beginning(reincarnation, clan_born=False)
+        self.name.prefix = "Echo of " + self.name.prefix
+    
+    def has_reincarnation(self):
+        if "Echo of" in self.name.prefix:
+            return False
+        
 
     def get_ill(self, name, event_triggered=False, lethal=True, severity="default", grief_cat=None):
         """Add an illness to this cat.
@@ -3816,7 +3833,7 @@ class Cat:
                 "previous_mates": self.previous_mates,
                 "dead": self.dead,
                 "paralyzed": self.pelt.paralyzed,
-                "no_kits": self.no_kits,
+                "no_": self.no_kits,
                 "exiled": self.exiled,
                 "no_retire": self.no_retire,
                 "no_mates": self.no_mates,
