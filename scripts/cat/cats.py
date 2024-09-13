@@ -222,6 +222,8 @@ class Cat:
         self.parent1 = parent1
         self.parent2 = parent2
         self.adoptive_parents = []
+        self.reincarnated = False
+        self.reincarnation = None
         self.pelt = pelt if pelt else Pelt()
         self.former_mentor = []
         self.patrol_with_mentor = 0
@@ -2150,11 +2152,13 @@ class Cat:
         reincarnation = Cat(parent1 = self.ID,prefix = self.name.prefix, status = "newborn", moons = 0, backstory=backstory, gender=self.gender)
         game.clan.add_cat(reincarnation)
         History.add_beginning(reincarnation, clan_born=False)
-        self.name.prefix = "Echo of " + self.name.prefix
+        self.reincarnated = True
+        self.reincarnation = reincarnation
+        if game.clan.clan_settings["reincarnation_auto_fade"]:
+            self.faded = True
     
     def has_reincarnation(self):
-        if "Echo of" in self.name.prefix:
-            return False
+        return self.reincarnated
         
 
     def get_ill(self, name, event_triggered=False, lethal=True, severity="default", grief_cat=None):
@@ -3801,6 +3805,8 @@ class Cat:
                 "parent1": self.parent1,
                 "parent2": self.parent2,
                 "adoptive_parents": self.adoptive_parents,
+                "reincarnated": self.reincarnated if self.reincarnated else False,
+                "reincarnation": self.reincarnation if self.reincarnation else None,
                 "df": self.df,
                 "faded_offspring": self.faded_offspring,
             }
@@ -3822,6 +3828,8 @@ class Cat:
                 "parent1": self.parent1,
                 "parent2": self.parent2,
                 "adoptive_parents": self.adoptive_parents,
+                "reincarnated" : self.reincarnated if self.reincarnated else False,
+                "reincarnation" : self.reincarnation if self.reincarnation else None,
                 "mentor": self.mentor if self.mentor else None,
                 "former_mentor": (
                     [cat for cat in self.former_mentor] if self.former_mentor else []

@@ -1544,8 +1544,6 @@ class ProfileScreen(Screens):
             if self.the_cat.backstory in ["reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"]:
                 #ADD CODE HERE
                 name = str(all_parents[0].name)
-                name = name.replace('Echo of', '')
-                print(name)
                 output += "reincarnation of " + name
             elif len(all_parents) == 1:
                 output += "parent: " + str(all_parents[0].name)

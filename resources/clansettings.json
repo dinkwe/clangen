@@ -50,6 +50,11 @@
             "A complete copy of faded cat save info will be saved in plain-text.",
             false
         ],
+        "reincarnation_auto_fade":[
+            "Reincarnated cats fade automatically",
+            "When enabled, cats who reincarnate will fade upon reincarnation.",
+            false
+        ],
         "backgrounds": [
             "Enable Clan page background",
             "Even with this off, the camp you choose will still affect the events you encounter.",
