@@ -517,6 +517,18 @@ class RelationshipScreen(Screens):
                 gender_icon = image_cache.load_image(
                     "resources/images/male_big.png"
                 ).convert_alpha()
+            elif self.inspect_cat.gender == "intersex" and self.inspect_cat.genderalign == "trans female":
+                gender_icon = image_cache.load_image(
+                    "resources/images/transfem_intersex_big.png"
+                ).convert_alpha()
+            elif self.inspect_cat.gender == "intersex" and self.inspect_cat.genderalign == "trans male":
+                gender_icon = image_cache.load_image(
+                    "resources/images/transmasc_intersex_big.png"
+                ).convert_alpha()
+            elif self.inspect_cat.genderalign == "intersex":
+                gender_icon = image_cache.load_image(
+                    "resources/images/intersex_big.png"
+                ).convert_alpha()
             elif self.inspect_cat.genderalign == "trans female":
                 gender_icon = image_cache.load_image(
                     "resources/images/transfem_big.png"

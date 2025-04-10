@@ -36,7 +36,7 @@ from .Screens import Screens
 from ..cat.history import History
 from ..game_structure.localization import get_new_pronouns
 from ..game_structure.screen_settings import MANAGER
-from ..game_structure.windows import ChangeCatName, KillCat, ChangeCatToggles
+from ..game_structure.windows import ChangeCatName, KillCat, ChangeCatToggles, GuideEsper
 from ..housekeeping.datadir import get_save_dir
 from ..ui.generate_box import get_box, BoxStyles
 from ..ui.generate_button import ButtonStyles, get_button_dict
@@ -127,6 +127,7 @@ class ProfileScreen(Screens):
         self.placeholder_tab_4 = None
         self.placeholder_tab_3 = None
         self.placeholder_tab_2 = None
+        self.guide_tab_button = None
         self.backstory_tab_button = None
         self.dangerous_tab_button = None
         self.personal_tab_button = None
@@ -184,6 +185,8 @@ class ProfileScreen(Screens):
                 self.toggle_history_tab()
             elif event.ui_element == self.conditions_tab_button:
                 self.toggle_conditions_tab()
+            elif event.ui_element == self.guide_tab_button:
+                GuideEsper(self.the_cat)
             elif (
                     "leader_ceremony" in self.profile_elements
                     and event.ui_element == self.profile_elements["leader_ceremony"]
@@ -472,15 +475,14 @@ class ProfileScreen(Screens):
             manager=MANAGER,
         )
 
-        self.placeholder_tab_3 = UISurfaceImageButton(
+        self.guide_tab_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((400, 622), (176, 30))),
-            "",
+            "guide",
             get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
             object_id="@buttonstyles_profile_middle",
-            starting_height=1,
             manager=MANAGER,
         )
-        self.placeholder_tab_3.disable()
+        self.guide_tab_button.disable()
 
         self.placeholder_tab_4 = UISurfaceImageButton(
             ui_scale(pygame.Rect((576, 622), (176, 30))),
@@ -525,7 +527,7 @@ class ProfileScreen(Screens):
         self.dangerous_tab_button.kill()
         self.backstory_tab_button.kill()
         self.conditions_tab_button.kill()
-        self.placeholder_tab_3.kill()
+        self.guide_tab_button.kill()
         self.placeholder_tab_4.kill()
         self.inspect_button.kill()
         self.customize_cat_button.kill()
@@ -535,6 +537,8 @@ class ProfileScreen(Screens):
         """Rebuild builds the cat profile. Run when you switch cats
         or for changes in the profile."""
         self.the_cat = Cat.all_cats.get(game.switches["cat"])
+        
+        self.guide_tab_button.disable()
 
         # use these attributes to create differing profiles for StarClan cats etc.
         is_sc_instructor = False
@@ -640,6 +644,8 @@ class ProfileScreen(Screens):
                 or self.the_cat.is_injured()
         ):
             self.profile_elements["med_den"].show()
+            if self.the_cat.is_ill() and "rampaging" in self.the_cat.illnesses and not self.the_cat.guided:
+                self.guide_tab_button.enable()
         else:
             self.profile_elements["med_den"].hide()
 
@@ -967,6 +973,36 @@ class ProfileScreen(Screens):
 
         # NEWLINE ----------
         output += "\n"
+        
+        dadm_text = ""
+        if len(the_cat.pronouns) == 1:
+            if the_cat.pronouns[0].get("subject") == the_cat.pronouns[0].get("object"):
+                    dadm_text += the_cat.pronouns[0].get("subject") + "/" + the_cat.pronouns[0].get("poss")
+            else:
+                    dadm_text += the_cat.pronouns[0].get("subject") + "/" + the_cat.pronouns[0].get("object")
+        else:
+            for pronoun in the_cat.pronouns:
+                    dadm_text += pronoun.get("subject") + "/"
+            if dadm_text[-1] == "/":
+                    dadm_text = dadm_text[:-1]
+        output += dadm_text + "\n"
+        
+        #AWAKENED
+        if the_cat.awakened:
+            if the_cat.awakened["type"] in ["esper", "guide"]:
+                output += the_cat.awakened["class"] + "-class " + the_cat.awakened["type"] +  "\n" 
+            elif the_cat.awakened["type"] == "enhanced esper":
+                class1 = the_cat.awakened["class"][0]
+                class2 = the_cat.awakened["class"][1]
+                total_class = class1
+                if class1 == "C" and class2 in ["B","A","S"]:
+                    total_class = class2
+                elif class1 == "B" and class2 in ["A","S"]:
+                    total_class = class2
+                elif class1 == "A" and class2 in ["S"]:
+                    total_class = class2
+                output += total_class + "-class " + "enhanced esper" + "\n"
+
 
         # LEADER LIVES:
         # Optional - Only shows up for leaders
@@ -1873,14 +1909,25 @@ class ProfileScreen(Screens):
         )
 
         # gather a list of all the conditions and info needed.
-        all_illness_injuries = [
-            [i, self.get_condition_details(i)]
+        
+        all_illness_injuries = []
+        if self.the_cat.awakened:
+            if self.the_cat.awakened["type"] == "esper":
+                all_illness_injuries.extend(
+            [(self.the_cat.awakened["ability"], (self.the_cat.awakened["desc"]+ "<br>" + self.the_cat.awakened["class"] + "-class"))])
+            elif self.the_cat.awakened["type"] == "enhanced esper":
+                all_illness_injuries.extend(
+            [(self.the_cat.awakened["ability"][0], (self.the_cat.awakened["desc"][0]+ "<br>" + self.the_cat.awakened["class"][0] + "-class"))])
+                all_illness_injuries.extend(
+            [(self.the_cat.awakened["ability"][1], (self.the_cat.awakened["desc"][1]+ "<br>" + self.the_cat.awakened["class"][1] + "-class"))])
+
+        all_illness_injuries.extend([
+            (i, self.get_condition_details(i))
             for i in self.the_cat.permanent_condition
             if not (
-                    self.the_cat.permanent_condition[i]["born_with"]
-                    and self.the_cat.permanent_condition[i]["moons_until"] != -2
-            )
-        ]
+                self.the_cat.permanent_condition[i]["born_with"]
+                and self.the_cat.permanent_condition[i]["moons_until"] != -2
+            )])
         all_illness_injuries.extend(
             [[i, self.get_condition_details(i)] for i in self.the_cat.injuries]
         )
@@ -1893,7 +1940,7 @@ class ProfileScreen(Screens):
         )
         # forgive me. Since I don't know how else to do this,
         # we just kind of brute-force it
-        for cond in all_illness_injuries:
+        '''for cond in all_illness_injuries:
             for i in [
                 "conditions.injuries.",
                 "conditions.illnesses.",
@@ -1902,7 +1949,7 @@ class ProfileScreen(Screens):
                 temp = i18n.t(i + cond[0])
                 if temp != i + cond[0]:
                     cond[0] = temp
-                    break
+                    break'''
 
         all_illness_injuries = chunks(all_illness_injuries, 4)
 

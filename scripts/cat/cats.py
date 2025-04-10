@@ -3,6 +3,7 @@ Contains the Cat and Personality classes
 """
 
 from __future__ import annotations
+from copy import copy
 
 import bisect
 import itertools
@@ -203,6 +204,10 @@ class Cat:
         self.leader_death_heal = None
         self.also_got = False
         self.permanent_condition = {}
+        
+        self.awakened = None
+        self.guided = False
+        
         self.df = False
         self.experience_level = None
 
@@ -300,6 +305,7 @@ class Cat:
             if intersexchance < 5 and example is False:
                 self.gender = "intersex"
                 intersex_condition = choice (["excess testosterone", "testosterone deficiency", "aneuploidy", "mosaicism", "chimerism"])
+                self.get_permanent_condition(intersex_condition, born_with=True)
             else:
                 self.gender = choice(["female", "male"])
         self.g_tag = self.gender_tags[self.gender]
@@ -339,6 +345,19 @@ class Cat:
                 load_existing_name=loading_cat,
                 cat=self,
             )
+            
+        if self.awakened and self.pelt.skin in Pelt.skin_sprites:
+            if os.path.exists('resources/dicts/esper.json'):
+                with open('resources/dicts/esper.json') as read_file:
+                    powers_dict = ujson.loads(read_file.read())
+            if self.awakened["type"] == "guide":
+                #powerless shows twice bc we want it to be twice as common. visible guides
+                self.pelt.skin = choice(["POWERLESS1", "POWERLESS2","POWERLESS1", "POWERLESS2", "MIST","LIGHT1", "SPARKLES"])
+            elif self.awakened["type"] == "esper":
+                self.pelt.skin = choice(powers_dict[self.awakened["ability"]]["skin"])
+            elif self.awakened["type"] == "enhanced esper":
+                self.pelt.skin = choice(powers_dict[self.awakened["ability"][0]]["skin"])
+        
 
         # Private Sprite
         self._sprite = None
@@ -404,6 +423,47 @@ class Cat:
                     self.age_moons[key_age][0], self.age_moons[key_age][1] + 1
                 ):
                     self.age = key_age
+                    
+    def generate_ability(self):
+        if os.path.exists('resources/dicts/esper.json'):
+            with open('resources/dicts/esper.json') as read_file:
+                powers_dict = ujson.loads(read_file.read())
+        template = {
+            "type": "esper",
+            "class": "C",
+            "ability": "none",
+            "desc": "none"
+            }
+        strength = randint(1,10)
+        if strength == 10:
+            template["class"] = "S"
+        elif strength > 7:
+            template["class"] = "A"
+        elif strength > 4:
+            template["class"] = "B"
+            
+        guide_or_esp = randint(1,2)
+        if guide_or_esp == 1:
+            template["type"] = "guide"
+        else:
+            power = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+            template["desc"] = choice(powers_dict[power][template["class"]])
+            template["ability"] = power
+        
+        if self.awakened:
+            template["type"] = "enhanced esper"
+            classes = [self.awakened["class"], template["class"]]
+            abilities = [self.awakened["ability"], template["ability"]]
+            while template["desc"] == self.awakened["desc"]:
+               template["desc"] = choice(powers_dict[power][template["class"]])
+            powers = [self.awakened["desc"], template["desc"]]
+            template["class"] = classes
+            template["ability"] = abilities
+            template["desc"] = powers
+        self.awakened = template
 
     def init_generate_cat(self, skill_dict):
         """
@@ -413,29 +473,63 @@ class Cat:
         """
         # trans cat chances
         nonbiney_list = ["nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+        enby_masc = ["trans male" , "demiboy", "genderfaun", "trans masc"]
+        enby_fem = ["trans female" , "demigirl", "genderfae", "trans femme"]
         theythemdefault = game.settings["they them default"]
         self.genderalign = self.gender
-        trans_chance = randint(0, 50)
-        nb_chance = randint(0, 75)
+        trans_chance = randint(0, 30)
+        nb_chance = randint(0, 40)
+        
+        prob_awake = game.config["cat_generation"]["esper_chance"]
+        
+        if self.parent1 is not None:
+            par1 = Cat.fetch_cat(self.parent1)
+            if par1.awakened:
+                prob_awake -= 2
+            
+        if self.parent2 is not None:
+            par2 = Cat.fetch_cat(self.parent2)
+            if par2.awakened:
+                prob_awake -= 2
+        
+        awakened_chance = randint(1,prob_awake)
+        if awakened_chance == 1:
+            self.generate_ability()
+            #self.generate_ability()
+            double_powers = randint(1,prob_awake*3)
+            if double_powers == 1 and self.awakened["type"] == "esper":
+                self.generate_ability()
 
         # GENDER IDENTITY
         if self.gender == "female" and not self.status in ['newborn', 'kitten']:
             if trans_chance == 1:
-                self.genderalign = "trans male"
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = "trans male"
+                else:
+                    self.genderalign = choice(enby_masc)
             elif nb_chance == 1:
                 self.genderalign = choice(nonbiney_list)
             else:
                 self.genderalign = self.gender
         elif self.gender == "male" and not self.status in ['newborn', 'kitten']:
             if trans_chance == 1:
-                self.genderalign = "trans female"
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = "trans female"
+                else:
+                    self.genderalign = choice(enby_fem)
             elif nb_chance == 1:
                 self.genderalign = choice(nonbiney_list)
             else:
                 self.genderalign = self.gender
         elif self.gender == "intersex" and not self.status in ['newborn', 'kitten']:
             if trans_chance == 1:
-                self.genderalign = choice(["trans male", "trans female"])
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = choice(["trans female", "trans male"])
+                else:
+                    self.genderalign = choice(enby_fem + enby_masc)
             elif nb_chance == 1:
                 intergenderchance = randint(1,2)
                 if intergenderchance == 1:
@@ -1724,6 +1818,13 @@ class Cat:
         """handles the moon skip for illness"""
         if not self.is_ill():
             return True
+        
+        if illness == "rampaging":
+            if self.guided:
+                self.guided = False
+                self.healed_condition = True
+                return False
+            #COME BACK HERE
 
         if self.illnesses[illness]["event_triggered"]:
             self.illnesses[illness]["event_triggered"] = False
@@ -1940,6 +2041,12 @@ class Cat:
             return
         if name == "kittencough" and self.status != "kitten":
             return
+        
+        if name == "rampaging":
+            if not self.awakened:
+                return
+            elif self.awakened["type"] == "guide":
+                return
 
         illness = ILLNESSES[name]
         mortality = illness["mortality"][self.age.value]
@@ -2254,6 +2361,12 @@ class Cat:
     def is_injured(self):
         """Returns true if the cat is injured."""
         return len(self.injuries) > 0
+    
+    def is_awakened(self):
+        awakened = False
+        if self.awakened:
+            awakened = True
+        return awakened
 
     def is_disabled(self):
         """Returns true if the cat have permanent condition"""
@@ -2317,9 +2430,7 @@ class Cat:
         condition_file_path = condition_directory + "/" + self.ID + "_conditions.json"
 
         if (
-            (not self.is_ill() and not self.is_injured() and not self.is_disabled())
-            or self.dead
-            or self.outside
+            (not self.is_ill() and not self.is_injured() and not self.is_disabled() and not self.is_awakened())
         ):
             if os.path.exists(condition_file_path):
                 os.remove(condition_file_path)
@@ -2335,6 +2446,9 @@ class Cat:
 
         if self.is_disabled():
             conditions["permanent conditions"] = self.permanent_condition
+            
+        if self.is_awakened():
+            conditions["awakened"] = self.awakened
 
         game.safe_save(condition_file_path, conditions)
 
@@ -2355,6 +2469,8 @@ class Cat:
                 self.illnesses = rel_data.get("illnesses", {})
                 self.injuries = rel_data.get("injuries", {})
                 self.permanent_condition = rel_data.get("permanent conditions", {})
+                if rel_data["awakened"]["type"] in ["esper", "guide", "enhanced esper"]:
+                    self.awakened = rel_data["awakened"]
 
             if "paralyzed" in self.permanent_condition and not self.pelt.paralyzed:
                 self.pelt.paralyzed = True
@@ -3432,6 +3548,38 @@ class Cat:
     # ---------------------------------------------------------------------------- #
 
     def get_info_block(self, *, make_clan=False, patrol=False, relationship=False):
+        pronoun_text = ""
+        if len(self.pronouns) == 1:
+            if self.pronouns[0].get("subject") == self.pronouns[0].get("object"):
+                    pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("poss")
+            else:
+                    pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("object")
+        else:
+            for pronoun in self.pronouns:
+                    pronoun_text += pronoun.get("subject") + "/"
+            if pronoun_text[-1] == "/":
+                    pronoun_text = pronoun_text[:-1]
+        
+        awakened_text = ""
+        powers_text = ""
+        if self.awakened:
+            if self.awakened["type"] in ["esper", "guide"]:
+                awakened_text = self.awakened["class"] + "-class " + self.awakened["type"] + "\n"
+                if self.awakened["type"] == "esper":
+                    powers_text += "power: " + self.awakened["ability"] + "\n"
+            else:
+                class1 = self.awakened["class"][0]
+                class2 = self.awakened["class"][1]
+                total_class = class1
+                if class1 == "C" and class2 in ["B","A","S"]:
+                    total_class = class2
+                elif class1 == "B" and class2 in ["A","S"]:
+                    total_class = class2
+                elif class1 == "A" and class2 in ["S"]:
+                    total_class = class2
+                awakened_text = total_class + "-class " + self.awakened["type"] + "\n"
+                powers_text += "powers: " + self.awakened["ability"][0] + " and " +  self.awakened["ability"][1] + "\n"
+
         if make_clan:
             return "\n".join(
                 [
@@ -3444,6 +3592,9 @@ class Cat:
                     ),
                     i18n.t(f"cat.personality.{self.personality.trait}"),
                     self.skills.skill_string(),
+                    pronoun_text,
+                    awakened_text,
+                    powers_text
                 ]
             )
         elif patrol:
@@ -3458,6 +3609,7 @@ class Cat:
                         if game.clan.clan_settings["showxp"]
                         else "\n"
                     ),
+                    awakened_text
                 ]
             )
         elif relationship:

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: ascii -*-
 import random
+from random import randint
 import re
 from os.path import exists as path_exists
 from random import choice, choices
@@ -550,10 +551,25 @@ class PatrolOutcome:
     def _handle_condition_and_scars(self, patrol: "Patrol") -> str:
         """Handle injuring cats, or giving scars"""
 
-        if not self.injury:
-            return ""
-
         results = []
+        #rampaging risk
+        num_rampage = 0
+        if not self.success:
+            for kitty in patrol.patrol_cats:
+                if kitty.is_awakened():
+                    if kitty.awakened["type"] in ["esper", "enhanced esper"]:
+                        rampage_chance = randint(1,6)
+                        if rampage_chance == 1:
+                            kitty.get_ill("rampaging")
+                            results.append(f"{kitty.name} is rampaging!")
+                            num_rampage += 1
+                            print("RAMPAGE!")
+
+        if not self.injury:
+            if num_rampage == 0:
+                return ""
+            else:
+                return "".join(results)
         condition_lists = INJURY_GROUPS
 
         for block in self.injury:

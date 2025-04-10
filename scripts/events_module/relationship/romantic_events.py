@@ -508,6 +508,9 @@ class RomanticEvents:
             relationship_from.romantic_love -= 15
             relationship_to.comfortable -= 10
             relationship_from.comfortable -= 10
+            
+        if not RomanticEvents.BREAKUP_STRINGS:
+            RomanticEvents.rebuild_dicts()
 
         text = choice(RomanticEvents.BREAKUP_STRINGS[breakup_type])
         text = event_text_adjust(Cat, text, main_cat=cat_from, random_cat=cat_to)

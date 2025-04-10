@@ -1,6 +1,11 @@
 from copy import copy
 import random
+from random import randint, choice
 
+import os.path
+
+
+import ujson
 import pygame
 import pygame_gui
 from pygame import Rect
@@ -196,6 +201,10 @@ class CustomizeCatScreen(Screens):
         self.scar3_dropdown = None
         self.scar4_label = None
         self.scar4_dropdown = None
+        
+        self.powers = ["none", "esper", "guide", "enhanced esper"]
+        self.powers_label = None
+        self.powers_dropdown = None
 
     # prints attributes for testing
     #def print_pelt_attributes(self):
@@ -252,10 +261,12 @@ class CustomizeCatScreen(Screens):
         self.reverse_label = create_text_box("reverse", (52, 500), (135, 40), "#text_box_22_horizleft")
         self.scar_message = create_text_box("Adding/removing scars will not affect a cat's conditions or history.",
                                             (52, 650), (500, 40), "#text_box_26_horizleft")
-        self.scar1_label = create_text_box("scar 1", (56, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar2_label = create_text_box("scar 2", (242, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar3_label = create_text_box("scar 3", (428, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar4_label = create_text_box("scar 4", (614, 580), (135, 40), "#text_box_22_horizleft")
+        self.scar1_label = create_text_box("scar 1", (46, 580), (135, 40), "#text_box_22_horizleft")
+        self.scar2_label = create_text_box("scar 2", (196, 580), (135, 40), "#text_box_22_horizleft")
+        self.scar3_label = create_text_box("scar 3", (346, 580), (135, 40), "#text_box_22_horizleft")
+        self.scar4_label = create_text_box("scar 4", (496, 580), (135, 40), "#text_box_22_horizleft")
+        
+        self.powers_label = create_text_box("powers", (646, 580), (135, 40), "#text_box_22_horizleft")
         """------------------------------------------------------------------------------------------------------------#
         #                                              LABEL SETUP END                                                 #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -324,14 +335,20 @@ class CustomizeCatScreen(Screens):
                                                   get_selected_option(self.the_cat.pelt.accessory, "upper"), "dropup")
 
         scars = self.the_cat.pelt.scars
-        self.scar1_dropdown = create_dropdown((52, 605), (135, 40), create_options_list(self.scars, "upper"),
+        self.scar1_dropdown = create_dropdown((42, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars, "upper"), "dropup")
-        self.scar2_dropdown = create_dropdown((238, 605), (135, 40), create_options_list(self.scars, "upper"),
+        self.scar2_dropdown = create_dropdown((192, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars[1:], "upper"), "dropup")
-        self.scar3_dropdown = create_dropdown((424, 605), (135, 40), create_options_list(self.scars, "upper"),
+        self.scar3_dropdown = create_dropdown((342, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars[2:], "upper"), "dropup")
-        self.scar4_dropdown = create_dropdown((610, 605), (135, 40), create_options_list(self.scars, "upper"),
+        self.scar4_dropdown = create_dropdown((492, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars[3:], "upper"), "dropup")
+        
+        powers = "none"
+        if self.the_cat.awakened:
+            powers = self.the_cat.awakened["type"]
+        self.powers_dropdown = create_dropdown((642, 605), (135, 40), create_options_list(self.powers, "upper"),
+                                              get_selected_option(powers, "upper"), "dropup")
         """------------------------------------------------------------------------------------------------------------#
         #                                              DROPDOWN SETUP END                                              #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -536,6 +553,8 @@ class CustomizeCatScreen(Screens):
             elif event.ui_element in [self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown,
                                       self.scar4_dropdown]:
                 self.handle_scar_dropdown(event.ui_element)
+            elif event.ui_element == self.powers_dropdown:
+                self.handle_powers_dropdown(event.ui_element)
             #self.print_pelt_attributes()  # for testing purposes
 
     def handle_dropdown_change(self, dropdown, attribute):
@@ -635,6 +654,73 @@ class CustomizeCatScreen(Screens):
         self.previous_scar_selection[dropdown] = selected_option
 
         self.make_cat_sprite()
+        
+    def handle_powers_dropdown(self, dropdown):
+        selected_option = dropdown.selected_option[1]
+        previous_selection = "none"
+        if self.the_cat.awakened:
+            previous_selection = self.the_cat.awakened["type"]
+            
+        if previous_selection != "none" and previous_selection in ["guide","esper","enhanced esper"]:
+            self.the_cat.awakened = None
+        if selected_option != "none":
+            self.generate_ability(power_type = selected_option)
+        self.make_cat_sprite()
+            
+    
+    def generate_ability(self, power_type = "esper"):
+        if os.path.exists('resources/dicts/esper.json'):
+            with open('resources/dicts/esper.json') as read_file:
+                powers_dict = ujson.loads(read_file.read())
+                
+        power_type = power_type.lower()
+        template = {
+            "type": power_type,
+            "class": "C",
+            "ability": "none",
+            "desc": "none"
+            }
+        strength = randint(1,10)
+        if strength == 10:
+            template["class"] = "S"
+        elif strength > 7:
+            template["class"] = "A"
+        elif strength > 4:
+            template["class"] = "B"
+        
+        if power_type in ["esper", "enhanced esper"]:
+            power = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+            template["desc"] = choice(powers_dict[power][template["class"]])
+            template["ability"] = power
+            if power_type == "enhanced esper":
+                strength = randint(1,10)
+                class2 = "C"
+                if strength == 10:
+                    class2 = "S"
+                elif strength > 7:
+                    class2 = "A"
+                elif strength > 4:
+                    class2 = "B"
+                power2 = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+                desc2 = choice(powers_dict[power2][class2])
+                
+                classes = [template["class"], class2]
+                abilities = [template["ability"], power2]
+                while template["desc"] == desc2:
+                   desc2 = choice(powers_dict[power2][class2])
+                powers = [template["desc"], desc2]
+                
+                template["class"] = classes
+                template["ability"] = abilities
+                template["desc"] = powers
+        self.the_cat.awakened = template
+
 
     def handle_sprites_for_pelt_length(self, previous_length):
         # check if pelt length has changed from or to long
@@ -834,7 +920,7 @@ class CustomizeCatScreen(Screens):
             self.white_patches_label, self.vitiligo_label, self.points_label, self.white_patches_tint_label,
             self.tint_label, self.skin_label, self.eye_colour1_label, self.eye_colour2_label, self.heterochromia_text,
             self.reset_message, self.pose_label, self.reverse_label, self.accessory_label, self.scar_message,
-            self.scar1_label, self.scar2_label, self.scar3_label, self.scar4_label
+            self.scar1_label, self.scar2_label, self.scar3_label, self.scar4_label, self.powers_label
         ]
         for label in labels:
             label.kill()
@@ -855,7 +941,7 @@ class CustomizeCatScreen(Screens):
             self.vitiligo_dropdown,
             self.points_dropdown, self.skin_dropdown, self.white_patches_tint_dropdown, self.tint_dropdown,
             self.eye_colour1_dropdown, self.eye_colour2_dropdown, self.accessory_dropdown,
-            self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown, self.scar4_dropdown
+            self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown, self.scar4_dropdown, self.powers_dropdown
         ]
         for dropdown in dropdowns:
             dropdown.kill()

@@ -284,6 +284,9 @@
         "colours": {"normal_border": "#2F2918", "dark_bg": "#AC9D72"}
     },
     "#game_over_window": {"prototype": "#window_base_theme"},
+    "#guiding_window": {
+        "prototype": "#window_base_theme"
+    },
     "#save_check_window": {"prototype": "#window_base_theme"},
     "#notif_window": {"prototype": "#window_base_theme"},
     "#filter_window": {"prototype": "#window_base_theme"},

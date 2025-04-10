@@ -124,7 +124,7 @@ class Sprites:
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead',
-            'eyes', 'eyes2', 'skin', 'eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
+            'eyes', 'eyes2', 'skin', 'skin_magic','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
             'scars', 'missingscars', 'wild', 
             'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
@@ -449,10 +449,21 @@ class Sprites:
             ['DARK', 'DARKGREY', 'GREY', 'DARKSALMON', 'SALMON', 'PEACH'],
             ['DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
         ]
+        
+        skin_colors_magic = [
+            ['FLAMES', 'BUBBLES', 'FLOWERS', 'LIGHT1', 'SPARKLES', 'INK'],
+            ['MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES', 'INK2', 'THUNDERSTORM'],
+            ['LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2']
+        ]
 
         for row, colors in enumerate(skin_colors):
             for col, color in enumerate(colors):
                 self.make_group('skin', (col, row), f"skin{color}")
+        
+        for row, colors in enumerate(skin_colors_magic):
+            for col, color in enumerate(colors):
+                self.make_group('skin_magic', (col, row), f"skin_magic{color}")
+
 
         self.load_scars()
         self.load_symbols()
