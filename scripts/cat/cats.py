@@ -3580,7 +3580,7 @@ class Cat:
         powers_text = ""
         if self.awakened:
             if self.awakened["type"] in ["esper", "guide"]:
-                awakened_text = self.awakened["class"] + "-class " + self.awakened["type"] + "\n"
+                awakened_text = self.awakened["class"] + "-class " + self.awakened["type"]
                 if self.awakened["type"] == "esper":
                     powers_text += "power: " + self.awakened["ability"]
             else:
