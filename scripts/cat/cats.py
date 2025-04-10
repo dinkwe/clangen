@@ -3582,7 +3582,7 @@ class Cat:
             if self.awakened["type"] in ["esper", "guide"]:
                 awakened_text = self.awakened["class"] + "-class " + self.awakened["type"] + "\n"
                 if self.awakened["type"] == "esper":
-                    powers_text += "power: " + self.awakened["ability"] + "\n"
+                    powers_text += "power: " + self.awakened["ability"]
             else:
                 class1 = self.awakened["class"][0]
                 class2 = self.awakened["class"][1]
@@ -3593,7 +3593,7 @@ class Cat:
                     total_class = class2
                 elif class1 == "A" and class2 in ["S"]:
                     total_class = class2
-                awakened_text = total_class + "-class " + self.awakened["type"] + "\n"
+                awakened_text = total_class + "-class " + self.awakened["type"]
                 powers_text += "powers: " + self.awakened["ability"][0] + " and " +  self.awakened["ability"][1] + "\n"
 
         if make_clan:
@@ -3610,24 +3610,40 @@ class Cat:
                     self.skills.skill_string(),
                     pronoun_text,
                     awakened_text,
+                    "\n",
                     powers_text
                 ]
             )
         elif patrol:
-            return "<br>".join(
-                [
-                    i18n.t(f"general.{self.status.lower()}", count=1),
-                    i18n.t(f"cat.personality.{self.personality.trait}"),
-                    self.skills.skill_string(short=True),
-                    i18n.t(f"cat.skills.{self.experience_level}")
-                    + (
-                        f" ({str(self.experience)})\n"
-                        if game.clan.clan_settings["showxp"]
-                        else "\n"
-                    ),
-                    awakened_text
-                ]
-            )
+            if self.awakened:
+                return "<br>".join(
+                    [
+                        i18n.t(f"general.{self.status.lower()}", count=1),
+                        i18n.t(f"cat.personality.{self.personality.trait}"),
+                        self.skills.skill_string(short=True),
+                        awakened_text,
+                        i18n.t(f"cat.skills.{self.experience_level}")
+                        + (
+                            f" ({str(self.experience)})\n"
+                            if game.clan.clan_settings["showxp"]
+                            else "\n"
+                        ),
+                    ]
+                )
+            else:
+                return "<br>".join(
+                    [
+                        i18n.t(f"general.{self.status.lower()}", count=1),
+                        i18n.t(f"cat.personality.{self.personality.trait}"),
+                        self.skills.skill_string(short=True),
+                        i18n.t(f"cat.skills.{self.experience_level}")
+                        + (
+                            f" ({str(self.experience)})\n"
+                            if game.clan.clan_settings["showxp"]
+                            else "\n"
+                        ),
+                    ]
+                )
         elif relationship:
             return "\n".join(
                 [
