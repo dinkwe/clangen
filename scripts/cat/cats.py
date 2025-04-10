@@ -617,10 +617,26 @@ class Cat:
         Loads the correct pronouns for the loaded language.
         :return: List of dicts for the cat's pronouns
         """
+        queer_list = ["intersex", "intergender", "trans male", "trans female","nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+        enby_masc = [ "demiboy", "genderfaun", "trans masc"]
+        enby_fem = ["demigirl", "genderfae", "trans femme"]
+        
+        she_him = randint(1,3)
+        neo_chance = 25
+        if self.genderalign in queer_list:
+            neo_chance = 10
+        neos = randint(1,neo_chance)
+        
         locale = i18n.config.get("locale")
         value = self._pronouns.get(locale)
         if value is None:
             self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            if self.genderalign in enby_masc and she_him < 3:
+                self._pronouns[locale] += pronouns.get_new_pronouns("male")
+            elif self.genderalign in enby_fem and she_him < 3:
+                self._pronouns[locale] += pronouns.get_new_pronouns("female")
+            elif neos == 1:
+                self._pronouns[locale] += pronouns.get_new_pronouns("neos")
             value = self._pronouns[locale]
         return value
 
