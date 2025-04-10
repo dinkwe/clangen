@@ -424,7 +424,7 @@ class Cat:
                 ):
                     self.age = key_age
                     
-    def generate_ability(self):
+    def generate_ability(self, enhanced = False):
         if os.path.exists('resources/dicts/esper.json'):
             with open('resources/dicts/esper.json') as read_file:
                 powers_dict = ujson.loads(read_file.read())
@@ -443,7 +443,7 @@ class Cat:
             template["class"] = "B"
             
         guide_or_esp = randint(1,2)
-        if guide_or_esp == 1:
+        if not enhanced and guide_or_esp == 1:
             template["type"] = "guide"
         else:
             power = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
@@ -622,7 +622,7 @@ class Cat:
         enby_fem = ["demigirl", "genderfae", "trans femme"]
         
         she_him = randint(1,3)
-        neo_chance = 25
+        neo_chance = 20
         if self.genderalign in queer_list:
             neo_chance = 10
         neos = randint(1,neo_chance)
