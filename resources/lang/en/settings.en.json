@@ -113,7 +113,9 @@
         "dissociation": "Allow content with dissociation from trauma.",
         "dissociation_tooltip": "This toggle enables cats to experience dissociation from trauma. This does not include mild dissociative symptoms from attention and memory disorders.",
         "intrusive_thoughts":"Allow content with intrusive thoughts.",
-        "intrusive_thoughts_tooltips": "This toggle enables to experience intrusive thoughts such as depressive hopelessness and homidical ideation."
-            
+        "intrusive_thoughts_tooltip": "This toggle enables to experience intrusive thoughts such as depressive hopelessness and homidical ideation.",
+        "plural names": "Allow plural cats to choose collective names",
+        "higher_disabled_med_rates": "Higher med/mediator odds for cats with permanent conditions",
+        "pregnancy turmoil": "Allows cats to have events like postpartum and false pregnancies."
     }
 }

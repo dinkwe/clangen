@@ -81,6 +81,16 @@
             "Allow warriors and elders to choose to become mediators",
             "Warriors and elders will have a chance to become mediators upon timeskip.",
             false
+        ],
+        "plural names": [
+            "Allow plural cats to choose collective names",
+            "Adult plural cats will have a chance to choose a collective name upon timeskip.",
+            false
+        ],
+        "higher_disabled_med_rates": [
+            "Higher med/mediator odds for cats with permanent conditions",
+            "Cats with permanent conditions will be 2 times more likely to become a medicine cat or mediator apprentice when they hit 6 moons old. This does not effect the chance to become a mediator later in life, if the setting is on.",
+            false
         ]
     },
     "relation": {
@@ -117,7 +127,12 @@
             "Allow first cousins to be mates and have romantic interactions",
             "Allows cats with the same grandparents but different parents to become mates.",
             false
-        ]
+        ],
+		"pregnancy turmoil": [
+			"Allow negative pregnancy events",
+			"Allows cats to have events like postpartum and false pregnancies.",
+			false
+		]
     },
     "freshkill_tactics":{
         "by-status":[

@@ -166,6 +166,7 @@ class Game:
 
     _ = []
     _.append(_settings["general"])
+    _.append(_settings["triggers"])
 
     for cat in _:  # Add all the settings to the settings dictionary
         for setting_name, inf in cat.items():

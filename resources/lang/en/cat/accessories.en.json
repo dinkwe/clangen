@@ -2012,6 +2012,116 @@
     "zero": "golden earrings",
     "many": "golden earrings",
     "one": "golden earrings"
-        }
+        },
+"MOSSBLANKIE": {
+    "zero": "moss blanket",
+    "many": "patches of moss",
+    "one": "a patch of moss"
+  },
+"MOUSE": {
+    "zero": "mouse",
+    "many": "mice",
+    "one": "a mouse"
+  },
+  "BONE": {
+    "zero": "rubber bone",
+    "many": "rubber bones",
+    "one": "a rubber bone"
+  },
+  "DISFLAG": {
+    "zero": "disability pride flag",
+    "many": "disability pride flags",
+    "one": "a disability pride flag"
+  },
+  "ZEBFLAG": {
+    "zero": "zebra pride flag",
+    "many": "zebra pride flags",
+    "one": "a zebra pride flag"
+  },
+  "AUTISMFLAG": {
+    "zero": "autism pride flag",
+    "many": "autism pride flags",
+    "one": "an autism pride flag"
+  },
+  "CRIMSONBOOT": {
+    "zero": "set of crimson booties",
+    "many": "sets of crimson booties",
+    "one": "a set of crimson booties"
+  },
+  "BLUEBOOT": {
+    "zero": "set of blue booties",
+    "many": "sets of blue booties",
+    "one": "a set of blue booties"
+  },
+  "CYANBOOT": {
+    "zero": "set of cyan booties",
+    "many": "sets of cyan booties",
+    "one": "a set of cyan booties"
+  },
+  "YELLOWBOOT": {
+    "zero": "set of yellow booties",
+    "many": "sets of yellow booties",
+    "one": "a set of yellow booties"
+  },
+  "LIMEBOOT": {
+    "zero": "set of lime booties",
+    "many": "sets of lime booties",
+    "one": "a set of lime booties"
+  },
+  "GREENBOOT": {
+    "zero": "set of green booties",
+    "many": "sets of green booties",
+    "one": "a set of green booties"
+  },
+  "REDBOOT": {
+    "zero": "set of red booties",
+    "many": "sets of red booties",
+    "one": "a set of red booties"
+  },
+  "RAINBOWBOOT": {
+    "zero": "set of rainbow booties",
+    "many": "sets of rainbow booties",
+    "one": "a set of rainbow booties"
+  },
+  "BLACKBOOT": {
+    "zero": "set of black booties",
+    "many": "sets of black booties",
+    "one": "a set of black booties"
+  },
+  "BROWNBOOT": {
+    "zero": "set of brown booties",
+    "many": "sets of brown booties",
+    "one": "a set of brown booties"
+  },
+  "WHITEBOOT": {
+    "zero": "set of white booties",
+    "many": "sets of white booties",
+    "one": "a set of white booties"
+  },
+  "PINKBOOT": {
+    "zero": "set of pink booties",
+    "many": "sets of pink booties",
+    "one": "a set of pink booties"
+  },
+  "PURPLEBOOT": {
+    "zero": "set of purple booties",
+    "many": "sets of purple booties",
+    "one": "a set of purple booties"
+  },
+  "MULTIBOOT": {
+    "zero": "set of lilac booties",
+    "many": "sets of lilac booties",
+    "one": "a set of lilac booties"
+  },
+  "INDIGOBOOT": {
+    "zero": "set of indigo booties",
+    "many": "sets of indigo booties",
+    "one": "a set of indigo booties"
+  },
+  "WHEELS": {
+    "zero": "cat wheelchair",
+    "many": "cat wheelchairs",
+    "one": "a cat wheelchair"
+  }
     }
 }
