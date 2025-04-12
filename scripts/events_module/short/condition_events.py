@@ -331,6 +331,8 @@ class Condition_Events:
                     text=event_string,
                     main_cat=cat
                 )
+                event_string = Condition_Events.change_condition_name(event_string)
+
 
         # if an event happened, then add event to cur_event_list and save death if it happened.
         if event_string:
@@ -440,25 +442,23 @@ class Condition_Events:
 
         # dict of possible physical conditions that can be acquired from relevant scars
         scar_to_condition = {
-            "THREE": ["one bad eye", "failing eyesight"],
-            "FOUR": ["weak leg"],
-            "LEFTEAR": ["partial hearing loss"],
-            "RIGHTEAR": ["partial hearing loss"],
+            "LEGBITE": ["weak leg", "bad knee"],
+            "THREE": ["one bad eye"],
+            "NOPAW": ["lost a leg"],
+            "TOETRAP": ["weak leg"],
+            "NOTAIL": ["lost their tail"],
+            "HALFTAIL": ["lost their tail"],
+            "MANLEG": ["weak leg", "twisted leg", "bad knee"],
+            "BRIGHTHEART": ["one bad eye"],
             "NOLEFTEAR": ["partial hearing loss"],
             "NORIGHTEAR": ["partial hearing loss"],
             "NOEAR": ["partial hearing loss", "deaf"],
-            "NOPAW": ["lost a leg"],
-            "NOTAIL": ["lost their tail"],
-            "HALFTAIL": ["lost their tail"],
-            "BRIGHTHEART": ["one bad eye"],
-            "LEFTBLIND": ["one bad eye", "failing eyesight"],
-            "RIGHTBLIND": ["one bad eye", "failing eyesight"],
-            "BOTHBLIND": ["failing eyesight", "blind"],
-            "MANLEG": ["weak leg", "twisted leg"],
+            "LEFTBLIND": ["one bad eye"],
+            "RIGHTBLIND": ["one bad eye"],
+            "BOTHBLIND": ["blind"],
             "RATBITE": ["weak leg"],
-            "LEGBITE": ["weak leg"],
-            "TOETRAP": ["weak leg"],
-            "HINDLEG": ["weak leg"],
+            "DECLAWED": ["declawed"],
+            "RASH": ["constant rash"],
         }
 
         scarless_conditions = [
@@ -475,8 +475,49 @@ class Condition_Events:
             "constantly dizzy",
             "recurring shock",
             "lasting grief",
-            "wobbly cat syndrome", "cleft palate",
-            "persistent headaches", "testosterone deficiency", "excess testosterone", "aneuploidy", "mosaicism", "chimerism"
+            "persistent headaches",
+            "comet spirit",
+            "weighted heart",
+            "starwalker",
+            "obsessive mind",
+            "antisocial",
+            "anxiety",
+            "constant roaming pain",
+            "thunderous spirit",
+            "otherworldly mind",
+            "kitten regressor",
+            "puppy regressor",
+            "snow vision",
+            "echoing shock",
+            "irritable bowels",
+            "loose body",
+            "longcough",
+            "burning light",
+            "disrupted senses",
+            "constant nightmares",
+            "jellyfish joints",
+            "lazy eye",
+            "shattered soul",
+            "budding spirit",
+            "fractured spirit",
+            "pcos",
+            "infertile",
+            "excess testosterone",
+            "aneuploidy",
+            "testosterone deficiency",
+            "chimerism",
+            "mosaicism",
+            "curved spine",
+            "jumbled mind",
+            "counting fog",
+            "spirited heart",
+            "puzzled heart",
+            "face blindness",
+            "parrot chatter",
+            "selective mutism",
+            "frequent fainting",
+            "flooded paws",
+            "wobbly cat syndrome", "cleft palate"
         ]
 
         got_condition = False
@@ -536,16 +577,32 @@ class Condition_Events:
         cat.healed_condition = False
         event_list = []
         illness_progression = {
-            "running nose": "whitecough",
-            "kittencough": "whitecough",
-            "whitecough": "greencough",
+            "running nose": ["whitecough", "silvercough"],
+            "kittencough": "silvercough",
+            "whitecough": ["silvercough", "greencough"],
+            "silvercough": "greencough",
             "greencough": "yellowcough",
             "yellowcough": "redcough",
             "an infected wound": "a festering wound",
             "heat exhaustion": "heat stroke",
-            "stomachache": "diarrhea",
+            "stomachache": ["diarrhea", "constipation"],
             "grief stricken": "lasting grief",
-        }
+            "nightmares": "constant nightmares",
+            "anxiety attack": "panic attack",
+            "panic attack": ["shock", "paranoia"],
+            "sleeplessness": "ongoing sleeplessness",
+            "ticks": ["tick bites", "severe tick bites"],
+            "nest wetting": "night dirtmaking",
+            "verbal shutdown": "mute",
+            "tics": "tic attack",
+            "nausea": "stomachache",
+            "paranoia": "delusions",
+            "hallucinations" : "hostile hallucinations",
+            "hostile hallucinations": "psychotic episode",
+            "delusions": "psychotic episode",
+            "psychotic episode": "ongoing psychosis",
+            "ongoing psychosis": ["otherwordly mind", "obsessive mind", "thunderous spirit"],
+            }
         Condition_Events.rebuild_strings()
         # ---------------------------------------------------------------------------- #
         #                         handle currently sick cats                           #
@@ -618,6 +675,7 @@ class Condition_Events:
                 random_index = int(random.random() * len(possible_string_list))
                 event = possible_string_list[random_index]
                 event = event_text_adjust(Cat, event, main_cat=cat)
+                event = Condition_Events.change_condition_name(event)
                 event_list.append(event)
                 game.herb_events_list.append(event)
 
@@ -696,6 +754,7 @@ class Condition_Events:
                     )
 
                 event = event_text_adjust(Cat, event, main_cat=cat)
+                event = Condition_Events.change_condition_name(event)
 
                 if cat.status == "leader":
                     event = event + " " + get_leader_life_notice()
@@ -739,7 +798,7 @@ class Condition_Events:
                         )
 
                 event = event_text_adjust(Cat, event, main_cat=cat)
-
+                event = Condition_Events.change_condition_name(event)
                 game.herb_events_list.append(event)
 
                 History.remove_possible_history(cat, injury)
@@ -954,6 +1013,10 @@ class Condition_Events:
                 event = event_text_adjust(
                     Cat, event, main_cat=cat, random_cat=med_cat
                 )  # adjust the text
+                if game.settings["allow_triggers"]:
+                    if game.settings["misdiagnosis"] and cat.permanent_condition[condition]["misdiagnosis"] is not False:
+                        event = event.replace(condition, cat.permanent_condition[condition]["misdiagnosis"])
+                event = Condition_Events.change_condition_name(event)
                 event_list.append(event)
                 if med_cat:
                     cat_dict["r_c"] = med_cat
@@ -977,6 +1040,62 @@ class Condition_Events:
                 Single_Event(event_string, event_types, [cat.ID], cat_dict=cat_dict)
             )
         return
+    
+    @staticmethod
+    def change_condition_name(text):
+        dad_names = {
+            "a starwalker": "autistic",
+            "an obsessive mind": "OCD",
+            "a weighted heart": "depression",
+            "a comet spirit": "ADHD",
+            "constant roaming pain": "fibromyalgia",
+            "ongoing sleeplessness": "chronic insomnia",
+            "{VERB/m_c/'re/'s} a body biter": " {VERB/m_c/have/has} a body-focused repetitive disorder",
+            "a thunderous spirit": "BPD",
+            "an otherworldly mind": "schizophrenia",
+            "snow vision": "visual snow",
+            "kitten regressor": "age regressor",
+            "puppy regressor": "pet regressor",
+            "irritable bowels": "IBS",
+            "jellyfish joints": "HSD",
+            "loose body": "hEDS",
+            "burning light": "chronic light sensitivity",
+            "wait out the burn": "wait out the sensitivity",
+            "jumbled noise": "auditory processing disorder",
+            "some disrupted senses": "sensory processing disorder",
+            "constant rash": "eczema",
+            "a confused body": "tourette's",
+            "has falling paws": "orthostatic hypotension",
+            "with falling paws": "orthostatic hypotension",
+            "shattered soul": "system",
+            "budding spirit": "system",
+            "a curved spine": "scoliosis",
+            "a jumbled mind": "dyslexia",
+            "counting fog": "dyscalculia",
+            "a spirited heart": "hyperempathetic",
+            "is a puzzled heart": "has low empathy",
+            "be a puzzled heart": "have low empathy",
+            "parrot chatter": "echolalia",
+            "frequent fainting": "vasovagal syncope",
+            "flooded paws": "POTS",
+            "bad knee": "meniscus tear",
+
+            "sunblindness": "light sensitivity",
+
+            "seasonal lethargy": "seasonal depression",
+            "lethargy": "depression",
+            "sleeplessness": "insomnia",
+            "ear buzzing": "tinnitus",
+            "kittenspace": "littlespace",
+            "puppyspace": "petspace"
+        }
+        if not game.settings["warriorified names"]:
+            for con in dad_names:
+                if con in text:
+                    text = text.replace(con, dad_names.get(con))
+
+        return text
+
 
     @staticmethod
     def determine_retirement(cat, triggered):
@@ -1106,7 +1225,15 @@ class Condition_Events:
                 # check if the new risk is a previous stage of a current illness
                 skip = False
                 if risk["name"] in progression:
-                    if progression[risk["name"]] in dictionary:
+                    if isinstance(progression[risk["name"]],list):
+                        for risk in progression[risk["name"]]:
+                            if risk in dictionary:
+                                skip = True
+                    elif progression[risk["name"]] in dictionary:
+                        skip = True
+                
+                if not game.clan.clan_settings["pregnancy turmoil"]:
+                    if risk['name'] == "turmoiled litter":
                         skip = True
                 # if it is, then break instead of giving the risk
                 if skip is True:

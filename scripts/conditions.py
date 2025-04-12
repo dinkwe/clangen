@@ -239,21 +239,25 @@ class PermanentCondition:
                  name,
                  severity,
                  moons_until,
+                 moon_start,
                  congenital='never',
                  mortality=0,
                  risks=None,
                  illness_infectiousness=None,
                  herbs=None,
-                 event_triggered=False):
+                 event_triggered=False,
+                 misdiagnosis=False):
         self.name = name
         self.severity = severity
         self.congenital = congenital
         self.moons_until = moons_until
+        self.moon_start = moon_start
         self.mortality = mortality
         self.risks = risks
         self.illness_infectiousness = illness_infectiousness
         self.herbs = herbs if herbs else []
         self.new = event_triggered
+        self.misdiagnosis = misdiagnosis
 
         self.current_mortality = mortality
 
