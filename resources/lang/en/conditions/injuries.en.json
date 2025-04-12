@@ -40,6 +40,21 @@
         "bee sting": "bee sting",
         "headache": "headache",
         "severe headache": "severe headache",
-        "pregnant": "pregnant"
+        "pregnant": "pregnant",
+        "faux pregnant": "faux pregnant",
+        "ashcough": "ashcough",
+        "nosebleed": "nosebleed",
+        "severe tick bites": "severe tick bites",
+        "knee locking": "knee locking",
+        "fainting": "fainting",
+        "fatigue": "fatigue",
+        "understimulation": "understimulation",
+        "overstimulation": "overstimulation",
+        "earache": "earache",
+        "sunblindness": "sunblindness",
+        "wrenched claws": "wrenched claws",
+        "acute pain": "acute pain",
+        "rash": "rash",
+        "sound headache": "sound headache"
     }
 }

@@ -16,6 +16,11 @@
         }
     ],
     "general": {
+        "warriorified names": [
+            "Use warriors names for the new conditions",
+            "IE: use starwalker instead of autism.",
+            true
+        ],
         "dark mode": [
             "Dark mode",
             "Camp backgrounds will match with the mode: nighttime for dark mode and daytime for light mode.",
@@ -79,6 +84,47 @@
         "they them default": [
             "Use they/them as default pronouns",
             "If this setting is on new cats will generate with they/them pronouns, regardless of gender.",
+            false
+        ]
+    },"triggers": {
+        "allow_triggers": [
+            "Allow triggering content.",
+            "If this setting is disabled, all other trigger toggles will be ignored. Changing this setting mid-game may cause certain conditions to crash.",
+            false
+        ],
+        "misdiagnosis": [
+            "Allow cats to be incorrectly diagnosed.",
+            "When enabled, cats can be given the wrong diagnosis. The correct diagnosis is still visible in the cat's conditions file.",
+            false
+        ],
+        "iatrogenic_disorders": [
+            "Allow cats to have conditions induced by medicical interference.",
+            "This toggle requires misdiagnosis to be enabled.",
+            false
+        ],
+        "eating_disorders": [
+            "Allow content with eating disorders",
+            "This toggle enables cats to experience eating disorders",
+            false
+        ],
+        "self_harm": [
+            "Allow content with non-suicidal self harm.",
+            "This toggle enables cats to experience self harm. This does not include suicide or attempts.",
+            false
+        ],
+        "psychosis": [
+            "Allow content with psychosis.",
+            "This toggle enables cats to experience psychotic symptoms such as paranoia, delusions, and intense hallucinations.",
+            false
+        ],
+        "dissociation": [
+            "Allow content with dissociation from trauma.",
+            "This toggle enables cats to experience dissociation from trauma. This does not include mild dissociative symptoms from attention and memory disorders.",
+            false
+        ],
+        "intrusive_thoughts": [
+            "Allow content with intrusive thoughts.",
+            "This toggle enables to experience intrusive thoughts such as depressive hopelessness and homidical ideation.",
             false
         ]
     },

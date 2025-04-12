@@ -40,5 +40,103 @@
     ],
     "starving": [
         "m_c is starving."
-    ]
+    ],
+    "anxiety attack": [
+    "m_c has gotten worked up into an anxiety attack.",
+	"With all the stress weighing on {PRONOUN/m_c/poss} mind, m_c has gotten an anxiety attack."
+  ],
+  "stimming": [
+    "m_c has started stimming.",
+	"m_c has been stimming a lot more than usual recently.",
+	"The Clan is happy to see m_c stimming more."
+  ],
+  "zoomies": [
+    "m_c has gotten the zoomies!",
+	"m_c is driving camp wild because of {PRONOUN/m_c/poss} zooming around.",
+	"It appears as though m_c has the zoomies!"
+  ],
+  "sleeplessness": [
+    "m_c has been unable to get any sleep.",
+	"This past moon, it's been difficult for m_c to sleep.",
+	"m_c is having trouble sleeping properly."
+  ],
+  "burn out": [
+    "m_c has gotten burnt out.",
+	"m_c is suffering from some burn out.",
+	"m_c is experiencing some burn out."
+  ],
+  "ear buzzing": [
+    "m_c's ears won't stop ringing, no matter what {PRONOUN/m_c/subject} {VERB/m_c/do/does}.",
+	"m_c's ears just won't stop buzzing.",
+	"Poor m_c feels like {PRONOUN/m_c/subject} {VERB/m_c/have/has} a fly or something stuck in {PRONOUN/m_c/poss} ears."
+  ],
+  "nest wetting": [
+    "m_c is experiencing some nest wetting."
+  ],
+  "night dirtmaking": [
+    "m_c is experiencing some night dirtmaking."
+  ],
+  "kittenspace": [
+    "Recently, m_c has been acting a bit differently than usual. It seems like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gone into kittenspace.",
+	"m_c has been acting a little bit differently than usual - much younger and more reliant on {PRONOUN/m_c/poss} Clanmates. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'ve/'s} gone into kittenspace"
+  ],
+  "puppyspace": [
+    "Recently, m_c has been acting a bit differently than usual. It seems like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gone into puppyspace."
+  ],
+  "seasonal lethargy": [
+    "m_c has been experiencing some seasonal lethargy lately.",
+	"This past season has weighed heavily on m_c, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} experiencing some seasonal lethargy.",
+	"It looks like m_c has seasonal lethargy."
+  ],
+  "nightmares": [
+    "m_c has been experiencing frequent nightmares lately.",
+	"m_c has been struggling recently with nightmares",
+	"This past moon, m_c has been plagued with nightmares."
+  ],
+  "brain fog": [
+   "m_c is experiencing some brain fog.",
+   "m_c has some brain fog."
+  ],
+  "amnesia": [
+    "m_c can't understand why r_c is so upset with {PRONOUN/m_c/object}, only to learn {PRONOUN/m_c/subject} said something awful- that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} remember at all.",
+    "m_c has a hard time remembering what happened these past few moons. {PRONOUN/m_c/subject/CAP} have a vague idea of what happened, but all the details are gone.",
+    "m_c swears that one of {PRONOUN/m_c/poss} clanmates was a kit yesterday. How can a few moons pass in just a moment?"
+  ],
+  "derealization": [
+    "m_c keeps spacing out for longer and longer periods. Nothing feels real anymore.",
+    "m_c keeps confusing dreams and reality, as both feel equally fake.",
+    "m_c knows {PRONOUN/m_c/subject} woke up this morning, but {PRONOUN/m_c/subject} still {VERB/m_c/feel/feels} trapped in a dream.",
+    "For m_c, everything seems especially hazy lately. Is any of this even real?"
+  ],
+  "depersonalization": [
+    "m_c keeps double checking {PRONOUN/m_c/poss} paws, worried that they might belong to another cat.",
+    "m_c keeps spacing out, feeling as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} floating above {PRONOUN/m_c/poss} own body.",
+    "Other cats keep asking why m_c is acting so different from {PRONOUN/m_c/poss} usual self. m_c doesn't understand who {PRONOUN/m_c/poss} 'usual self' is supposed to be."
+  ],
+  "harmful stims": [
+    "m_c confesses that {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} scratching at {PRONOUN/m_c/poss} own fur when overwhelmed.",
+    "r_c catches m_c biting {PRONOUN/m_c/self} repeatedly whenever emotions run high.",
+    "m_c's stims are different from those of other cats: they leave damage behind.",
+    "m_c admits to r_c that the only way {PRONOUN/m_c/subject} can calm down is by hurting {PRONOUN/m_c/self}."
+  ],
+  "hostile hallucinations": [
+    "m_c feels like some cat is watching {PRONOUN/m_c/object} wherever they go. {PRONOUN/m_c/subject/CAP} {VERB/m_c/struggle/struggles} to leave camp without shaking in fear.",
+    "m_c keeps hearing voices threatening to hurt {PRONOUN/m_c/object} and {PRONOUN/m_c/poss} loved ones.",
+    "m_c sees angry faces in the shadows and monsters in the forest. {PRONOUN/m_c/subject/cap} {VERB/m_c/refuse/refuses} to leave the camp alone."
+  ],
+  "delusions": [
+    "m_c is absolutely certain that an outsider is following {PRONOUN/m_c/object} wherever they go and insists {PRONOUN/m_c/subject} {VERB/m_c/need/needs} protection.",
+    "m_c scoffs when r_c offers herbs to calm {PRONOUN/m_c/object} down. Can't {PRONOUN/r_c/subject} tell that m_c has been chosen by StarClan to save all the Clans?",
+    "m_c comes crying into the medicine den, insisting that {PRONOUN/m_c/poss} teeth are falling out, even after repeated assurances that they're not.",
+    "m_c is certain that {PRONOUN/m_c/poss} Clanmates despise {PRONOUN/m_c/object}. {PRONOUN/m_c/poss/CAP} fur prickles when a Clanmate mentions that {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} different."
+  ],
+  "psychotic episode": [
+    "m_c refuses to see r_c, citing a series of events that never happened. {PRONOUNS/m_c/poss/CAP} erratic behavior may be a sign of psychosis.",
+    "m_c rambles about visions of StarClan and the end of the world, despite {PRONOUN/m_c/poss} Clanmates' reassurance.",
+    "m_c insists to {PRONOUN/m_c/poss} Clanmates that {PRONOUN/m_c/subject} can read minds - and that {PRONOUN/m_c/subject} {VERB/m_c/know/knows} some of them are plotting against {PRONOUN/m_c/object}."   
+  ],
+  "ongoing psychosis": [
+    "Despite interventions, m_c's psychotic symptoms have only deepened.",
+    "Attempts to calm m_c have been unsuccessful - {PRONOUN/m_c/subject} is suffering from ongoing psychosis."
+  ]
 }

@@ -2162,6 +2162,14 @@ def event_text_adjust(
     # main_cat
     if "m_c" in text:
         if main_cat:
+            cat_name = str(main_cat.name)
+            if game.switches["cur_screen"] != "change gender screen":
+                if main_cat.is_plural():
+                    if main_cat.front:
+                        name = str(main_cat.front)
+                        if len(main_cat.alters) > 0:
+                            if name != cat_name:
+                                cat_name = name + " (" + str(main_cat.name) 
             replace_dict["m_c"] = (str(main_cat.name), choice(main_cat.pronouns))
 
     # patrol_lead
@@ -2845,6 +2853,27 @@ def generate_sprite(
                                 sprites.sprites["acc_wild" + accessory + cat_sprite],
                                 (0, 0),
                             )
+                        elif accessory in cat.pelt.booties:
+                            new_sprite.blit(
+                                sprites.sprites['booties' + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.wheels:
+                            new_sprite.blit(
+                                sprites.sprites['wheels' + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.toy_accessories:
+                            new_sprite.blit(
+                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.blankie_accessories:
+                            new_sprite.blit(
+                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.flag_accessories:
+                            new_sprite.blit(
+                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
+                            )
+
                         elif accessory in cat.pelt.collars:
                             new_sprite.blit(
                                 sprites.sprites["collars" + accessory + cat_sprite], (0, 0)

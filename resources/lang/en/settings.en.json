@@ -1,6 +1,8 @@
 {
     "en": {
         "dark mode": "Dark mode",
+        "warriorified names": "Use warriors names for the new conditions",
+        "warriorified names_tooltip": "IE: use starwalker instead of autism.",
         "dark mode_tooltip": "Camp backgrounds will match with the mode: nighttime for dark mode and daytime for light mode.",
         "fullscreen scaling": "Ignore fullscreen scaling rules",
         "fullscreen scaling_tooltip": "If enabled, fullscreen will display as large as possible (toggle fullscreen to update). This may include visual artifacts.",
@@ -95,6 +97,23 @@
         "raid other clans": "Raiding Other Clans",
         "raid other clans_tooltip": "Your warriors begin crossing borders for resources. Prey and herbs will greatly increase each moonskip, but injuries and illnesses will increase and the relationship with other Clans decrease. You will be able to choose which Clans you target.",
         "hoarding": "Hoarding Resources",
-        "hoarding_tooltip": "Your warriors begin stockpiling as many resources as they can get their paws on, regardless of their own safety. Prey and herbs will increase each moonskip, but injuries and illnesses will also increase."
+        "hoarding_tooltip": "Your warriors begin stockpiling as many resources as they can get their paws on, regardless of their own safety. Prey and herbs will increase each moonskip, but injuries and illnesses will also increase.",
+        "allow_triggers": "Allow triggering content.",
+        "allow_triggers_tooltip": "If this setting is disabled, all other trigger toggles will be ignored. Changing this setting mid-game may cause certain conditions to crash.",
+        "misdiagnosis_tooltip":"When enabled, cats can be given the wrong diagnosis. The correct diagnosis is still visible in the cat's conditions file.",
+        "misdiagnosis": "Allow cats to be incorrectly diagnosed.",
+        "iatrogenic_disorders": "Allow cats to have conditions induced by medicical interference.",
+        "iatrogenic_disorders_tooltip": "This toggle requires misdiagnosis to be enabled.",
+        "eating_disorders": "Allow content with eating disorders",
+        "eating_disorders_tooltip": "This toggle enables cats to experience eating disorders",
+        "self_harm": "Allow content with non-suicidal self harm.",
+        "self_harm_tooltip": "This toggle enables cats to experience self harm. This does not include suicide or attempts.",
+        "psychosis": "Allow content with psychosis.",
+        "psychosis_tooltip": "This toggle enables cats to experience psychotic symptoms such as paranoia, delusions, and intense hallucinations.",
+        "dissociation": "Allow content with dissociation from trauma.",
+        "dissociation_tooltip": "This toggle enables cats to experience dissociation from trauma. This does not include mild dissociative symptoms from attention and memory disorders.",
+        "intrusive_thoughts":"Allow content with intrusive thoughts.",
+        "intrusive_thoughts_tooltips": "This toggle enables to experience intrusive thoughts such as depressive hopelessness and homidical ideation."
+            
     }
 }

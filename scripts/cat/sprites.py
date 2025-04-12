@@ -123,7 +123,7 @@ class Sprites:
         del width, height  # unneeded
 
         for x in [
-            'lineart', 'lineartdf', 'lineartdead',
+            'lineart', 'lineartdf', 'lineartdead','blep', 'booties', 'wheels', 'disabilityaccs', 'disabilityscars',
             'eyes', 'eyes2', 'skin', 'eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
             'scars', 'missingscars', 'wild', 
             'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2',
@@ -644,6 +644,19 @@ class Sprites:
             ["GREENS", "RAINBONS", "BLACKS", "SPIKESS", "WHITES"],
             ["PINKS", "PURPLES", "MULTIS", "INDIGOS"]
         ]
+        
+        disabilityaccs_data = [
+            ["BALL", "MOUSE", "MOSSBLANKIE", "BONE"],
+            ["AUTISMFLAG", "DISFLAG", "ZEBFLAG"]
+        ]
+
+        booties_data = [
+            ["CRIMSONBOOT", "BLUEBOOT", "YELLOWBOOT", "CYANBOOT", "REDBOOT", "LIMEBOOT"],
+            ["GREENBOOT", "RAINBOWBOOT", "BLACKBOOT", "BROWNBOOT", "WHITEBOOT"],
+            ["PINKBOOT", "PURPLEBOOT", "MULTIBOOT", "INDIGOBOOT"]
+        ]
+        
+        wheels_data = [["WHEELS"]]
 
         # medcatherbs
         for row, herbs in enumerate(medcatherbs_data):
@@ -673,6 +686,21 @@ class Sprites:
             for col, bowcollar in enumerate(bowcollars):
                 self.make_group('bowcollars', (col, row), f'collars{bowcollar}')
 
+        # dismod accessories
+        for row, disabilityaccs in enumerate(disabilityaccs_data):
+            for col, disabilityacc in enumerate(disabilityaccs):
+                self.make_group('disabilityaccs', (col, row), f'acc_dismod{disabilityacc}')
+
+        # booties added
+        for row, bootiesaccs in enumerate(booties_data):
+            for col, bootiesacc in enumerate(bootiesaccs):
+                self.make_group('booties', (col, row), f'booties{bootiesacc}')
+                
+        # wheels added
+        for row, wheelsaccs in enumerate(wheels_data):
+            for col, wheelsacc in enumerate(wheelsaccs):
+                self.make_group('wheels', (col, row), f'wheels{wheelsacc}')
+        
         # nyloncollars
         for row, nyloncollars in enumerate(nyloncollars_data):
             for col, nyloncollar in enumerate(nyloncollars):
