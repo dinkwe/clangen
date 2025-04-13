@@ -125,6 +125,96 @@
             "self": "voidself",
             "conju": 2,
             "gender": 0
+        },
+        "14": {
+           "subject": "fae",
+            "object": "faer",
+            "poss": "faer",
+            "inposs": "faers",
+            "self": "faeself",
+            "conju": 2,
+            "gender": 0
+        },
+        "15": {
+           "subject": "bat",
+            "object": "bat",
+            "poss": "bats",
+            "inposs": "bats",
+            "self": "batself",
+            "conju": 2,
+            "gender": 0
+        },
+        "16": {
+           "subject": "bea",
+            "object": "beam",
+            "poss": "beams",
+            "inposs": "beams",
+            "self": "beamself",
+            "conju": 2,
+            "gender": 0
+        },
+        "17": {
+           "subject": "chir",
+            "object": "chirp",
+            "poss": "chirps",
+            "inposs": "chirps",
+            "self": "chirpself",
+            "conju": 2,
+            "gender": 0
+        },
+        "18": {
+           "subject": "claw",
+            "object": "claw",
+            "poss": "claws",
+            "inposs": "claws",
+            "self": "clawself",
+            "conju": 2,
+            "gender": 0
+        },
+        "19": {
+           "subject": "clo",
+            "object": "cloud",
+            "poss": "clouds",
+            "inposs": "clouds",
+            "self": "cloudself",
+            "conju": 2,
+            "gender": 0
+        },
+        "20": {
+           "subject": "lea",
+            "object": "leaf",
+            "poss": "leafs",
+            "inposs": "leaves",
+             "self": "leafself",
+            "conju": 2,
+            "gender": 0
+        },
+        "21": {
+          "subject": "purr",
+            "object": "purr",
+            "poss": "purrs",
+            "inposs": "purrs",
+            "self": "purrself",
+            "conju": 2,
+            "gender": 0
+        },
+        "22": {
+           "subject": "ro",
+            "object": "rose",
+            "poss": "roses",
+            "inposs": "roses",
+            "self": "roseself",
+            "conju": 2,
+            "gender": 0
+        },
+        "23": {
+           "subject": "star",
+            "object": "star",
+            "poss": "stars",
+            "inposs": "stars",
+            "self": "starself",
+            "conju": 2,
+            "gender": 0
         }
     }
 }

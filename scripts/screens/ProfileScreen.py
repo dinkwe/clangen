@@ -256,17 +256,14 @@ class ProfileScreen(Screens):
                 ChangeCatName(self.the_cat)
             elif event.ui_element == self.specify_gender_button:
                 self.change_screen("change gender screen")
-            # when button is pressed...
             elif event.ui_element == self.cis_trans_button:
-                nonbiney_list = ['nonbinary', 'genderfluid', 'demigirl', 'demiboy', 'genderfae', 'genderfaun', 'bigender', 'genderqueer', 'agender', '???', "deminonbinary", "trigender", "genderflux", "polygender"]
                 # if the cat is anything besides m/f/transm/transf then turn them back to cis
-                if self.the_cat.genderalign not in [
-                    "female",
-                    "trans female",
-                    "male",
-                    "trans male",
-                    "intersex"
-                ]:
+                nonbiney_list = ["nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+                enby_masc = ["trans male" , "demiboy", "genderfaun", "trans masc"]
+                enby_fem = ["trans female" , "demigirl", "genderfae", "trans femme"]
+                oriented_enby = enby_masc + enby_fem
+                oriented_all = oriented_enby + ["female", "male", "intersex", "intergender"]
+                if self.the_cat.genderalign not in oriented_all:
                     self.the_cat.genderalign = self.the_cat.gender
                 elif (
                         self.the_cat.gender == "male"
@@ -280,19 +277,31 @@ class ProfileScreen(Screens):
                     self.the_cat.genderalign = self.the_cat.gender
 
                 # if the cat is cis (gender & gender align are the same) then set them to trans
+                elif (
+                        self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intersex"
+                ):
+                    self.the_cat.genderalign = "intergender"
+                elif (
+                        self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intergender"
+                ):
+                    self.the_cat.genderalign = choice(["trans male", choice(enby_masc)])
+                elif (
+                        self.the_cat.gender == "intersex" and self.the_cat.genderalign in enby_masc
+                ):
+                    self.the_cat.genderalign = choice(["trans female", choice(enby_fem)])
                 # cis males -> trans female first
                 elif (
                         self.the_cat.gender == "male" and self.the_cat.genderalign == "male"
                 ):
-                    self.the_cat.genderalign = "trans female"
+                    self.the_cat.genderalign = choice(["trans female", choice(enby_fem)])
                 # cis females -> trans male
                 elif (
                         self.the_cat.gender == "female"
                         and self.the_cat.genderalign == "female"
                 ):
-                    self.the_cat.genderalign = "trans male"
+                    self.the_cat.genderalign = choice(["trans male", choice(enby_masc)])
                 # if the cat is trans then set them to nonbinary
-                elif self.the_cat.genderalign in ["trans female", "trans male", "intersex"]:
+                elif self.the_cat.genderalign in oriented_enby or self.the_cat.genderalign == "intergender":
                     self.the_cat.genderalign = choice(nonbiney_list)
                 # pronoun handler
                 self.the_cat.pronouns = get_new_pronouns(self.the_cat.genderalign)
@@ -2334,6 +2343,10 @@ class ProfileScreen(Screens):
 
         elif self.open_tab == "personal":
             # Button to trans or cis the cats.
+            nonbiney_list = ["nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+            enby_masc = ["trans male" , "demiboy", "genderfaun", "trans masc"]
+            enby_fem = ["trans female" , "demigirl", "genderfae", "trans femme"]
+            oriented_enby = enby_masc + enby_fem
             if self.the_cat.gender == "male" and self.the_cat.genderalign == "male":
                 self.cis_trans_button.set_text(
                     "screens.profile.change_gender_transfemale"
@@ -2344,7 +2357,25 @@ class ProfileScreen(Screens):
                 self.cis_trans_button.set_text(
                     "screens.profile.change_gender_transmale"
                 )
-            elif self.the_cat.genderalign in ["trans female", "trans male"]:
+            elif (
+                    self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intersex"
+            ):
+                self.cis_trans_button.set_text(
+                    "screens.profile.change_gender_intergender"
+                )
+            elif (
+                    self.the_cat.gender == "intersex" and self.the_cat.genderalign == "intergender"
+            ):
+                self.cis_trans_button.set_text(
+                    "screens.profile.change_gender_transmale"
+                )
+            elif (
+                    self.the_cat.gender == "intersex" and self.the_cat.genderalign in enby_masc
+            ):
+                self.cis_trans_button.set_text(
+                    "screens.profile.change_gender_transfemale"
+                )
+            elif self.the_cat.genderalign in oriented_enby:
                 self.cis_trans_button.set_text(
                     "screens.profile.change_gender_nonbinary"
                 )
@@ -2353,7 +2384,7 @@ class ProfileScreen(Screens):
                 "trans female",
                 "male",
                 "trans male",
-                'intersex',
+                "intergender"
             ]:
                 self.cis_trans_button.set_text("screens.profile.change_gender_cis")
             elif self.the_cat.gender == "male" and self.the_cat.genderalign == "female":

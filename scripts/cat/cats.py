@@ -622,10 +622,13 @@ class Cat:
         enby_fem = ["demigirl", "genderfae", "trans femme"]
         
         she_him = randint(1,3)
-        neo_chance = 20
+        neo_chance = 25
+        second_set = 20
         if self.genderalign in queer_list:
             neo_chance = 10
+            second_set = 5
         neos = randint(1,neo_chance)
+        seconds = randint(1,second_set)
         
         locale = i18n.config.get("locale")
         value = self._pronouns.get(locale)
@@ -637,7 +640,17 @@ class Cat:
                 self._pronouns[locale] += pronouns.get_new_pronouns("female")
             elif neos == 1:
                 self._pronouns[locale] += pronouns.get_new_pronouns("neos")
+            if seconds == 1:
+                pronoun_gender = randint(1,10)
+                if pronoun_gender < 6:
+                    #add he, she or they
+                    self._pronouns[locale] += pronouns.get_new_pronouns(choice(["male","female","nonbinary"]))
+                else:
+                    #add neos
+                    self._pronouns[locale] += pronouns.get_new_pronouns("neos")
+                
             value = self._pronouns[locale]
+                    
         return value
 
     @pronouns.setter

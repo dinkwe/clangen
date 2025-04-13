@@ -282,9 +282,27 @@ class Pelt:
         "PINKS", "PURPLES", "MULTIS", "INDIGOS",
         "CRIMSONH", "BLUEH", "YELLOWH", "CYANH", "REDH", "LIMEH",
         "GREENH", "RAINBOWH", "BLACKH", "SPIKESH", "WHITEH", "PINKH",
-        "PURPLEH", "MULTIH", "INDIGOH"
+        "PURPLEH", "MULTIH", "INDIGOH",
+        "CRIMSONBOO", "MAGENTABOO", "PINKBOO", "BLOODORANGEBOO", "ORANGEBOO", "YELLOWBOO",
+        "LIMEBOO", "DARKGREENBOO", "GREENBOO", "TEALBOO", "LIGHTBLUEBOO", "BLUEBOO",
+        "DARKBLUEBOO", "LIGHTPURPLEBOO", "DARKPURPLEBOO", "VIBRANTPURPLEBOO", "PINKREDBOO",
+        "WHITEBOO", "LIGHTGRAYBOO", "GRAYBOO", "BROWNBOO", "BLACKBOO"
         
     ]
+    colorsplash_accessories = ["CSYELLOWHORN", "CSORANGEHORN", "CSGREENHORN", "CSFROSTHORN", "CSSILVERHORN", "CSCYANHORN",
+                               "CSMAROONHORN", "CSVIOLETHORN", "CSINDIGOHORN", "CSBLUEHORN", "CSBLACKHORN", "CSLIMEHORN",
+                               "CSGOLDHORN", "CSMOSSHORN", "CSBROWNHORN", "CSYELLOWKITSUNE", "CSORANGEKITSUNE", "CSGREENKITSUNE",
+                               "CSFROSTKITSUNE", "CSSILVERKITSUNE", "CSCYANKITSUNE","CSMAROONKITSUNE", "CSVIOLETKITSUNE", "CSINDIGOKITSUNE",
+                               "CSBLUEKITSUNE", "CSBLACKKITSUNE", "CSLIMEKITSUNE", "CSGOLDKITSUNE", "CSMOSSKITSUNE", "CSBROWNKITSUNE",
+                               "CSYELLOWMERMAID", "CSORANGEMERMAID", "CSGREENMERMAID", "CSFROSTMERMAID", "CSSILVERMERMAID", "CSCYANMERMAID",
+                               "CSMAROONMERMAID", "CSVIOLETMERMAID", "CSINDIGOMERMAID", "CSBLUEMERMAID", "CSBLACKMERMAID", "CSLIMEMERMAID",
+                               "CSGOLDMERMAID", "CSMOSSMERMAID", "CSBROWNMERMAID"]
+    
+    randomaccessories = ["DOGWOOD", "TREESTAR", "RACCOON LEAF", "WHITE RACCOON LEAF", "CHERRY BLOSSOM", "DAISY BLOOM",
+            "FEATHERS", "RED ROSE", "WHITE ROSE", "PEBBLE", "PEBBLE COLLECTION", "GOLDEN FLOWER",
+            "DANDELIONS", "DANDELION PUFFS", "DICE", "GOLDEN EARRINGS"
+                    ]
+
     flower_accessories = ["DAISY", "DIANTHUS", "BLEEDING HEARTS", "FRANGIPANI", "BLUE GLORY",
                      "CATNIP FLOWER", "BLANKET FLOWER", "ALLIUM", "LACELEAF",
                       "PURPLE GLORY", "YELLOW PRIMROSE", "HESPERIS",
@@ -317,6 +335,9 @@ class Pelt:
     fruit_accessories = ["OGRASPBERRY", "BLACKBERRY", "GOLDEN RASPBERRY", "CHERRY", "YEW"
                     ]
 
+    sailormoon = ["MOON", "MERCURY", "MARS", "JUPITER", "VENUS", "TUXEDO MASK",
+                  "URANUS", "NEPTUNE", "PLUTO", "SATURN", "MINI MOON", "CRYSTAL BALL"
+                    ]
     crafted_accessories = ["WILLOWBARK BAG", "CLAY DAISY POT", "CLAY AMANITA POT", "CLAY BROWNCAP POT", "BIRD SKULL", "LEAF BOW"
                     ]
     tail2_accessories = ["SEAWEED", "DAISY CORSAGE"
@@ -430,7 +451,25 @@ class Pelt:
         "TORMENTIL",
         "BRIGHTEYE",
         "LAVENDERWREATH",
-        "YARROW"
+        "YARROW",
+        "MOON",
+        "MERCURY",
+        "MARS",
+        "JUPITER",
+        "VENUS",
+        "URANUS",
+        "NEPTUNE",
+        "PLUTO",
+        "SATURN",
+        "MINI MOON",
+        "CHERRY BLOSSOM",
+        "DAISY BLOOM",
+        "PEBBLE", 
+        "GOLDEN FLOWER",
+        "DANDELIONS",
+        "DANDELION PUFFS",
+        "DICE",
+        "GOLDEN EARRINGS"
     ]
 
     body_accessories = [
@@ -505,6 +544,10 @@ class Pelt:
         "CLAY DAISY POT",
         "CLAY AMANITA POT",
         "CLAY BROWNCAP POT",
+        "CRYSTAL BALL",
+        "TUXEDO MASK",
+        "RACCOON LEAF",
+        "WHITE RACCOON LEAF"
     ]
 
     tail_accessories = [
@@ -617,6 +660,12 @@ class Pelt:
     
     skin_sprites_magic = ['FLAMES', 'FLOWERS', 'LIGHT1', 'SPARKLES', 'INK', 'MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES',
                     'INK2', 'THUNDERSTORM', 'LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2', 'BUBBLES']
+    
+    skin_sprites_elemental = ['FLAMES2', 'BUBBLES2', 'VINES', 'WIND', 'LIGHTNING', 'BLUEFLAMES', 'FROZEN', 'STONE', 'TREE',
+                    'PURPLESPARKS', 'PURPLEGLOW', 'SHADOW', 'YELLOWGLOW', 'FAEMANE', 'GREENGLOW', 'SHADOWBEAST', 'SPARKLES2', 'ROOTS']
+    
+    skin_sprites_bingle = ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW', 'THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'UNFINISHED1', 'CLOUDS', 'UNFINISHED2',
+                    'NULL7', 'NULL8', 'NULL9', 'NULL10', 'NULL11', 'NULL12', 'NULL13', 'NULL14', 'NULL15']
 
     """Holds all appearance information for a cat. """
 

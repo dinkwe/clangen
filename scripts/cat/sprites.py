@@ -124,10 +124,10 @@ class Sprites:
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead',
-            'eyes', 'eyes2', 'skin', 'skin_magic','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
+            'eyes', 'eyes2', 'skin', 'skin_magic', 'skin_elemental', 'skin_bingle','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
             'scars', 'missingscars', 'wild', 
             'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2',
-            'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
+            'collars', 'bellcollars', 'bowcollars', 'nyloncollars', 'colorsplash_horn', 'colorsplash_kitsune', 'colorsplash_mermaid',
             'singlecolours', 'speckledcolours', 'tabbycolours', 'bengalcolours', 'marbledcolours',
             'rosettecolours', 'smokecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours',
             'sokokecolours', 'agouticolours', 'singlestripecolours', 'maskedcolours',
@@ -151,7 +151,8 @@ class Sprites:
             'stersokokecolours', "french_scarves", "ties", 'sillysokokecolours', 'dancesokokecolours', 'mimisokokecolours',
             'sterspeckledcolours', 'sillyspeckledcolours', 'dancespeckledcolours', 'mimispeckledcolours',
             'stertabbycolours', 'sillytabbycolours', 'dancetabbycolours', 'mimitabbycolours',
-            'stertickedcolours', 'sillytickedcolours', 'dancetickedcolours', 'mimitickedcolours'
+            'stertickedcolours', 'sillytickedcolours', 'dancetickedcolours', 'mimitickedcolours',
+            'boosbandanas_accessories', 'sailormoon', 'randomaccessories'
         ]:
             if "lineart" in x and (game.config["fun"]["april_fools"] or is_today(SpecialDate.APRIL_FOOLS)):
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -455,6 +456,17 @@ class Sprites:
             ['MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES', 'INK2', 'THUNDERSTORM'],
             ['LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2']
         ]
+        skin_colors_elemental = [
+            ['FLAMES2', 'BUBBLES2', 'VINES', 'WIND', 'LIGHTNING', 'BLUEFLAMES'],
+            ['FROZEN', 'STONE', 'TREE', 'PURPLESPARKS', 'PURPLEGLOW', 'SHADOW'],
+            ['YELLOWGLOW', 'FAEMANE', 'GREENGLOW', 'SHADOWBEAST', 'SPARKLES2', 'ROOTS']
+        ]
+        
+        skin_colors_bingle = [
+            ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW', 'THIRDEYE', 'CRYSTALS', 'FOXTAIL'],
+            ['UNFINISHED1', 'CLOUDS', 'UNFINISHED2','NULL7', 'NULL8', 'NULL9'],
+            ['NULL10', 'NULL11', 'NULL12', 'NULL13', 'NULL14', 'NULL15']
+        ]
 
         for row, colors in enumerate(skin_colors):
             for col, color in enumerate(colors):
@@ -464,6 +476,13 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('skin_magic', (col, row), f"skin_magic{color}")
 
+        for row, colors in enumerate(skin_colors_elemental):
+            for col, color in enumerate(colors):
+                self.make_group('skin_elemental', (col, row), f"skin_elemental{color}")
+        
+        for row, colors in enumerate(skin_colors_bingle):
+            for col, color in enumerate(colors):
+                self.make_group('skin_bingle', (col, row), f"skin_bingle{color}")
 
         self.load_scars()
         self.load_symbols()
@@ -542,6 +561,24 @@ class Sprites:
             ["GREENNYLON", "RAINBOWNYLON", "BLACKNYLON", "SPIKESNYLON", "WHITENYLON"],
             ["PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON"]
         ]
+        
+        colorsplash_horn_data = [
+            ["CSYELLOWHORN", "CSORANGEHORN", "CSGREENHORN", "CSFROSTHORN", "CSSILVERHORN", "CSCYANHORN"],
+            ["CSMAROONHORN", "CSVIOLETHORN", "CSINDIGOHORN", "CSBLUEHORN", "CSBLACKHORN"],
+            ["CSLIMEHORN", "CSGOLDHORN", "CSMOSSHORN", "CSBROWNHORN"]
+        ]
+        
+        colorsplash_kitsune_data = [
+            ["CSYELLOWKITSUNE", "CSORANGEKITSUNE", "CSGREENKITSUNE", "CSFROSTKITSUNE", "CSSILVERKITSUNE", "CSCYANKITSUNE"],
+            ["CSMAROONKITSUNE", "CSVIOLETKITSUNE", "CSINDIGOKITSUNE", "CSBLUEKITSUNE", "CSBLACKKITSUNE"],
+            ["CSLIMEKITSUNE", "CSGOLDKITSUNE", "CSMOSSKITSUNE", "CSBROWNKITSUNE"]
+        ]
+        
+        colorsplash_mermaid_data = [
+            ["CSYELLOWMERMAID", "CSORANGEMERMAID", "CSGREENMERMAID", "CSFROSTMERMAID", "CSSILVERMERMAID", "CSCYANMERMAID"],
+            ["CSMAROONMERMAID", "CSVIOLETMERMAID", "CSINDIGOMERMAID", "CSBLUEMERMAID", "CSBLACKMERMAID"],
+            ["CSLIMEMERMAID", "CSGOLDMERMAID", "CSMOSSMERMAID", "CSBROWNMERMAID"]
+        ]
 
         plant2_data = [
             ["CLOVER", "STICK", "PUMPKIN", "MOSS", "IVY", "ACORN", "MOSS PELT", "REEDS", "BAMBOO"]
@@ -588,6 +625,11 @@ class Sprites:
              "RAT SKULL", "TEETH COLLAR", "ROE SKULL"],
             ["BIRD SKULL1", "RIBS", "FISH BONES"]
         ]
+        
+        boos_data = [["CRIMSONBOO", "MAGENTABOO", "PINKBOO", "BLOODORANGEBOO", "ORANGEBOO", "YELLOWBOO"],
+                    ["LIMEBOO", "DARKGREENBOO", "GREENBOO", "TEALBOO", "LIGHTBLUEBOO", "BLUEBOO"],
+                    ["DARKBLUEBOO", "LIGHTPURPLEBOO", "DARKPURPLEBOO", "VIBRANTPURPLEBOO", "PINKREDBOO", "WHITEBOO"],
+                    ["LIGHTGRAYBOO", "GRAYBOO", "BROWNBOO", "BLACKBOO"]]
         
         butterflymoth_data = [
             ["PEACOCK BUTTERFLY", "DEATH HEAD HAWKMOTH", "GARDEN TIGER MOTH", "ATLAS MOTH", "CECOROPIA MOTH", "WHITE ERMINE MOTH",
@@ -638,6 +680,18 @@ class Sprites:
             ["GREENS", "RAINBONS", "BLACKS", "SPIKESS", "WHITES"],
             ["PINKS", "PURPLES", "MULTIS", "INDIGOS"]
         ]
+        
+        sailormoon_data = [
+            ["MOON", "MERCURY", "MARS", "JUPITER", "VENUS", "TUXEDO MASK"],
+            ["URANUS", "NEPTUNE", "PLUTO", "SATURN", "MINI MOON", "CRYSTAL BALL"]
+        ]
+
+        random_data = [
+            ["DOGWOOD", "TREESTAR", "RACCOON LEAF", "WHITE RACCOON LEAF", "CHERRY BLOSSOM", "DAISY BLOOM"],
+            ["FEATHERS", "RED ROSE", "WHITE ROSE", "PEBBLE", "PEBBLE COLLECTION", "GOLDEN FLOWER"],
+            ["DANDELIONS", "DANDELION PUFFS", "DICE", "GOLDEN EARRINGS"]
+        ]
+
 
         # medcatherbs
         for row, herbs in enumerate(medcatherbs_data):
@@ -671,6 +725,21 @@ class Sprites:
         for row, nyloncollars in enumerate(nyloncollars_data):
             for col, nyloncollar in enumerate(nyloncollars):
                 self.make_group('nyloncollars', (col, row), f'collars{nyloncollar}')
+                
+        # colorsplash horn
+        for row, horncollars in enumerate(colorsplash_horn_data):
+            for col, horncollar in enumerate(horncollars):
+                self.make_group('colorsplash_horn', (col, row), f'acc_colorsplash{horncollar}')
+        
+        # colorsplash kitsune
+        for row, kitsunecollars in enumerate(colorsplash_kitsune_data):
+            for col, kitsunecollar in enumerate(kitsunecollars):
+                self.make_group('colorsplash_kitsune', (col, row), f'acc_colorsplash{kitsunecollar}')
+        
+        # colorsplash mermaid
+        for row, mermaidcollars in enumerate(colorsplash_mermaid_data):
+            for col, mermaidcollar in enumerate(mermaidcollars):
+                self.make_group('colorsplash_mermaid', (col, row), f'acc_colorsplash{mermaidcollar}')
 
         # ohdan's accessories :3
         for row, plant2_accessories in enumerate(plant2_data):
@@ -751,6 +820,21 @@ class Sprites:
         for row, sterflowers in enumerate(ster_data):
             for col, sterflower in enumerate(sterflowers):
                 self.make_group("sterflowers", (col, row), f"acc_ster{sterflower}")
+                
+        # boosbandanas
+        for row, boosbandanas_accessories in enumerate(boos_data):
+            for col, boosbandana in enumerate(boosbandanas_accessories):
+                self.make_group("boosbandanas_accessories", (col, row), f"collars{boosbandana}")
+                
+        # sailor moon
+        for row, sailormoon in enumerate(sailormoon_data):
+            for col, sailormoonacc in enumerate(sailormoon):
+                self.make_group("sailormoon", (col, row), f"acc_sailor{sailormoonacc}")
+        # random
+        for row, randomaccessories in enumerate(random_data):
+            for col, randomaccessory in enumerate(randomaccessories):
+                self.make_group("randomaccessories", (col, row), f"acc_random{randomaccessory}")
+
     def load_symbols(self):
         """
         loads clan symbols
