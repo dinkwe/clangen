@@ -358,7 +358,19 @@ class Cat:
             elif self.awakened["type"] == "enhanced esper":
                 self.pelt.skin = choice(powers_dict[self.awakened["ability"][0]]["skin"])
         
-
+        magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
+                       "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
+                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked",
+                       "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
+                       "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
+                       "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
+        if not self.awakened and self.pelt.name in magiccolors:
+            self.pelt.name.replace('CS', '')
+        elif self.awakened and self.pelt.name not in magiccolors:
+            colorful_chance = randint(1,4)
+            if colorful_chance == 1:
+                self.pelt.name = choice(magiccolors)
+        
         # Private Sprite
         self._sprite = None
 
