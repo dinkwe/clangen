@@ -342,6 +342,8 @@ class Pelt:
                     ]
     tail2_accessories = ["SEAWEED", "DAISY CORSAGE"
                     ]
+    chime_accessories = ["SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS"]
+    lantern_accessories = ["LANTERN"]
     head_accessories = [
         "MOTH WINGS",
         "ROSY MOTH WINGS",
@@ -469,7 +471,8 @@ class Pelt:
         "DANDELIONS",
         "DANDELION PUFFS",
         "DICE",
-        "GOLDEN EARRINGS"
+        "GOLDEN EARRINGS",
+        "SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS"
     ]
 
     body_accessories = [
@@ -547,7 +550,8 @@ class Pelt:
         "CRYSTAL BALL",
         "TUXEDO MASK",
         "RACCOON LEAF",
-        "WHITE RACCOON LEAF"
+        "WHITE RACCOON LEAF",
+        "LANTERN"
     ]
 
     tail_accessories = [

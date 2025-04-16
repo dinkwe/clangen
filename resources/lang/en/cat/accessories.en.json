@@ -2237,7 +2237,32 @@
     "zero": "golden earrings",
     "many": "golden earrings",
     "one": "golden earrings"
-        }
+        },
+"SILVER MOON": {
+    "zero": "silver star chimes",
+    "many": "silver star chimes",
+    "one": "silver star chimes"
+        },
+"GOLD STAR": {
+    "zero": "gold star chimes",
+    "many": "gold star chimes",
+    "one": "gold star chimes"
+        },
+"GOLD MOON": {
+    "zero": "gold moon chimes",
+    "many": "gold moon chimes",
+    "one": "gold moon chimes"
+        },
+"MOON AND STARS": {
+    "zero": "silver and gold chimes",
+    "many": "silver and gold chimes",
+    "one": "silver and gold chimes"
+        },
+"LANTERN": {
+    "zero": "lantern",
+    "many": "lanterns",
+    "one": "lantern"
+}
 
     }
 }

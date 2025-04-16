@@ -111,55 +111,76 @@ class CustomizeCatScreen(Screens):
         self.next_cat_button = None
 
         self.pelt_names = list(Pelt.sprites_names.keys())
+        self.pelt_names.sort()
         self.pelt_name_label = None
         self.pelt_name_dropdown = None
 
         self.pelt_colours = copy(Pelt.pelt_colours)
+        self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
+        self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch
+        self.white_patches.sort()
+        self.white_patches.insert(0, "None")
+        self.white_patches_label = None
+        self.white_patches_dropdown = None
+        
+        self.pelt_colours.sort()
         self.pelt_colour_label = None
         self.pelt_colour_dropdown = None
 
         self.patterns = copy(Pelt.tortiepatterns)
+        self.patterns.sort()
         self.pattern_label = None
         self.pattern_dropdown = None
 
         self.tortie_bases = copy(Pelt.tortiebases)
+        self.tortie_bases.sort()
         self.tortie_base_label = None
         self.tortie_base_dropdown = None
 
         self.tortie_colours = copy(Pelt.pelt_colours)
+        self.tortie_colours.sort()
         self.tortie_colour_label = None
         self.tortie_colour_dropdown = None
 
         self.tortie_patterns = copy(Pelt.tortiepatterns)
+        self.tortie_patterns.sort()
         self.tortie_pattern_label = None
         self.tortie_pattern_dropdown = None
 
         self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
         self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch
+        self.white_patches.sort()
         self.white_patches.insert(0, "None")
         self.white_patches_label = None
         self.white_patches_dropdown = None
 
         self.vitiligo_patterns = copy(Pelt.vit)
+        self.vitiligo_patterns.sort()
         self.vitiligo_patterns.insert(0, "None")
         self.vitiligo_label = None
         self.vitiligo_dropdown = None
 
         self.points_markings = copy(Pelt.point_markings)
+        self.points_markings.sort()
         self.points_markings.insert(0, "None")
         self.points_label = None
         self.points_dropdown = None
 
-        self.white_patches_tints = ["None"] + [tint for tint in list(sprites.white_patches_tints["tint_colours"].keys()) if tint != "none"]
+        self.white_patches_tints =[tint for tint in list(sprites.white_patches_tints["tint_colours"].keys()) if tint != "none"]
+        self.white_patches_tints.sort()
+        self.white_patches_tints.insert(0, "None")
         self.white_patches_tint_label = None
         self.white_patches_tint_dropdown = None
 
-        self.tints = ["None"] + [tint for tint in list(sprites.cat_tints["tint_colours"].keys()) +
+        self.tints = [tint for tint in list(sprites.cat_tints["tint_colours"].keys()) +
                       list(sprites.cat_tints["dilute_tint_colours"].keys()) if tint != "none"]
+        self.tints.insert(0, "None")
+        self.tints.sort()
         self.tint_label = None
         self.tint_dropdown = None
 
         self.skins = copy(Pelt.skin_sprites)
+        self.skins.sort()
         self.skin_label = None
         self.skin_dropdown = None
 
@@ -167,6 +188,7 @@ class CustomizeCatScreen(Screens):
         self.reset_button = None
 
         self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
+        self.eye_colours.sort()
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None
         self.heterochromia_text = None
@@ -187,7 +209,7 @@ class CustomizeCatScreen(Screens):
         self.pose_left_button = None
 
         self.accessories = list(
-            dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.bows_accessories + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.wild_accessories + Pelt.tail_accessories + Pelt.collars + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories + Pelt.randomaccessories + Pelt.sailormoon))
+            dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.bows_accessories + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.wild_accessories + Pelt.tail_accessories + Pelt.collars + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories + Pelt.randomaccessories + Pelt.sailormoon + Pelt.chime_accessories + Pelt.lantern_accessories))
         self.accessories.sort()
         self.accessories.insert(0, "None")
         self.accessory_label = None

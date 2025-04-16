@@ -2849,7 +2849,7 @@ def generate_sprite(
                                 sprites.sprites["acc_colorsplash" + accessory + cat_sprite],
                                 (0, 0),
                             )  
-                        if accessory in cat.pelt.plant_accessories:
+                        elif accessory in cat.pelt.plant_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_herbs" + accessory + cat_sprite],
                                 (0, 0),
@@ -2926,6 +2926,14 @@ def generate_sprite(
                         elif accessory in cat.pelt.randomaccessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_random" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.chime_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_chime" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.lantern_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_lantern" + accessory + cat_sprite], (0, 0)
                             )
         # Apply fading fog
         if (

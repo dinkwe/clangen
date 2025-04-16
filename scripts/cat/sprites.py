@@ -152,7 +152,7 @@ class Sprites:
             'sterspeckledcolours', 'sillyspeckledcolours', 'dancespeckledcolours', 'mimispeckledcolours',
             'stertabbycolours', 'sillytabbycolours', 'dancetabbycolours', 'mimitabbycolours',
             'stertickedcolours', 'sillytickedcolours', 'dancetickedcolours', 'mimitickedcolours',
-            'boosbandanas_accessories', 'sailormoon', 'randomaccessories'
+            'boosbandanas_accessories', 'sailormoon', 'randomaccessories', 'star_chimes', 'lantern'
         ]:
             if "lineart" in x and (game.config["fun"]["april_fools"] or is_today(SpecialDate.APRIL_FOOLS)):
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -691,7 +691,9 @@ class Sprites:
             ["FEATHERS", "RED ROSE", "WHITE ROSE", "PEBBLE", "PEBBLE COLLECTION", "GOLDEN FLOWER"],
             ["DANDELIONS", "DANDELION PUFFS", "DICE", "GOLDEN EARRINGS"]
         ]
-
+        
+        chime_data = [["SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS"]]
+        lantern_data = [["LANTERN"]]
 
         # medcatherbs
         for row, herbs in enumerate(medcatherbs_data):
@@ -834,6 +836,17 @@ class Sprites:
         for row, randomaccessories in enumerate(random_data):
             for col, randomaccessory in enumerate(randomaccessories):
                 self.make_group("randomaccessories", (col, row), f"acc_random{randomaccessory}")
+        
+        # chimes
+        for row, chimes in enumerate(chime_data):
+            for col, chimeaccessory in enumerate(chimes):
+                self.make_group("star_chimes", (col, row), f"acc_chime{chimeaccessory}")
+        
+        # lantern
+        for row, lanterns in enumerate(lantern_data):
+            for col, lantern in enumerate(lanterns):
+                self.make_group("lantern", (col, row), f"acc_lantern{lantern}")
+
 
     def load_symbols(self):
         """
