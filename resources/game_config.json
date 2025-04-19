@@ -187,7 +187,12 @@
 		"direct_inheritance": 15,
 		"wildcard_tortie": 9,
 		"vit_chance": 8,
-		"random_point_chance": 5
+		"random_point_chance": 5,
+		"multiple_pronouns_chance": 20, 
+		"neopronoun_chance": 30,
+		"comment": [
+			"neopronoun_chance refers to the chance that a cats FIRST set of pronouns will be neopronouns"
+		]
 	},
 	"cat_name_controls": {
 		"always_name_after_appearance": false,
