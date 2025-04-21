@@ -829,7 +829,7 @@ class CustomizeCatScreen(Screens):
                     dropdown.kill()
 
                 self.the_cat.pelt.pattern = self.patterns[0]
-                 magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
+                magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
                        "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
                        "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked","CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
                        "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
