@@ -100,6 +100,10 @@
             "one": "mate",
             "many": "mates"
         },
+        "bestie": {
+            "one": "best friend",
+            "many": "best friends"
+        },
         "she-cat": "she-cat",
         "tom": "tom",
         "cat": "cat",
@@ -172,6 +176,20 @@
             "many": "mates: %{mates}"
         },
         "mate_extra": {
+            "one": "1 other",
+            "many": "%{count} others"
+        },
+        "has_a_bestie": "has a best friend",
+        "cats_bestie": "%{name}'s best friend",
+        "bestie_none": "best friend: none",
+        "bestie_living": "(living)",
+        "bestie_dead": "(dead)",
+        "bestie_away": "(away)",
+        "bestie_label": {
+            "one": "best friend: %{besties}",
+            "many": "best friend: %{besties}"
+        },
+        "bestie_extra": {
             "one": "1 other",
             "many": "%{count} others"
         },

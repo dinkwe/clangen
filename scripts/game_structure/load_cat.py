@@ -289,6 +289,16 @@ def json_load():
             new_cat.previous_mates = (
                 cat["previous_mates"] if "previous_mates" in cat else []
             )
+            if "bestie" in cat:
+                new_cat.bestie = cat["bestie"] if type(cat["bestie"]) is list else [cat["bestie"]]
+                if None in new_cat.bestie:
+                    new_cat.mate = [i for i in new_cat.bestie if i is not None]
+                new_cat.previous_besties = (
+                    cat["previous_besties"] if "previous_besties" in cat else []
+                )
+            else:
+                new_cat.bestie = []
+                new_cat.previous_besties = []
             new_cat.dead = cat["dead"]
             new_cat.dead_for = cat["dead_moons"]
             new_cat.experience = cat["experience"]

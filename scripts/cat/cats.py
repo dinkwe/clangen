@@ -186,7 +186,9 @@ class Cat:
         self.former_apprentices = []
         self.relationships = {}
         self.mate = []
+        self.bestie = []
         self.previous_mates = []
+        self.previous_besties = []
         self._pronouns: Dict[str, List[Dict[str, Union[str, int]]]] = {}
         self.placement = None
         self.example = example
@@ -398,6 +400,7 @@ class Cat:
         self.parent2 = None
         self.adoptive_parents = []
         self.mate = []
+        self.bestie = []
         self.status = status
         self._pronouns = {}  # Needs to be set as a dict
         self.moons = moons
@@ -2711,6 +2714,30 @@ class Cat:
             not is_former_mentor
             or game.clan.clan_settings["romantic with former mentor"]
         )
+    
+    def is_potential_bestie(
+        self,
+        other_cat: Cat
+    ):
+        """
+        Checks if this cat is potential mate for the other cat.
+        There are no restrictions if the current cat already has a mate or not (this allows poly-mates).
+        """
+
+        # just to be sure, check if it is not the same cat
+        if self.ID == other_cat.ID:
+            return False
+
+        # check dead cats
+        if self.dead != other_cat.dead:
+            return False
+        
+        #Current bestie
+        if other_cat.ID in self.bestie or self.ID in other_cat.bestie:
+            return False
+
+        
+        return True
 
     def unset_mate(self, other_cat: Cat, breakup: bool = False, fight: bool = False):
         """Unset the mate from both self and other_cat"""
@@ -2806,6 +2833,40 @@ class Cat:
                 other_cat.relationships[self.ID].mates = True
             other_relationship = other_cat.relationships[self.ID]
             other_relationship.romantic_love += 20
+            other_relationship.comfortable += 20
+            other_relationship.trust += 10
+            other_relationship.mates = True
+    
+    def set_bestie(self, other_cat: Cat):
+        """Sets up a mate relationship between self and other_cat."""
+        if other_cat.ID not in self.bestie:
+            self.bestie.append(other_cat.ID)
+        if self.ID not in other_cat.bestie:
+            other_cat.bestie.append(self.ID)
+        
+        # If the current bestie was in the previous mate list, remove them.
+        if other_cat.ID in self.previous_besties:
+            self.previous_besties.remove(other_cat.ID)
+        if self.ID in other_cat.previous_besties:
+            other_cat.previous_besties.remove(self.ID)
+        
+        # Set starting relationship values
+        if not self.dead:
+            if other_cat.ID not in self.relationships:
+                self.create_one_relationship(other_cat)
+                self.relationships[other_cat.ID].mates = True
+            self_relationship = self.relationships[other_cat.ID]
+            self_relationship.platonic_like += 20
+            self_relationship.comfortable += 20
+            self_relationship.trust += 10
+            self_relationship.mates = True
+
+        if not other_cat.dead:
+            if self.ID not in other_cat.relationships:
+                other_cat.create_one_relationship(self)
+                other_cat.relationships[self.ID].mates = True
+            other_relationship = other_cat.relationships[self.ID]
+            other_relationship.platonic_like += 20
             other_relationship.comfortable += 20
             other_relationship.trust += 10
             other_relationship.mates = True
@@ -3024,20 +3085,38 @@ class Cat:
                         cat_to = self.all_cats.get(rel["cat_to_id"])
                         if cat_to is None or rel["cat_to_id"] == self.ID:
                             continue
-                        new_rel = Relationship(
-                            cat_from=self,
-                            cat_to=cat_to,
-                            mates=rel["mates"] or False,
-                            family=rel["family"] or False,
-                            romantic_love=(rel["romantic_love"] or 0),
-                            platonic_like=(rel["platonic_like"] or 0),
-                            dislike=rel["dislike"] or 0,
-                            admiration=rel["admiration"] or 0,
-                            comfortable=rel["comfortable"] or 0,
-                            jealousy=rel["jealousy"] or 0,
-                            trust=rel["trust"] or 0,
-                            log=rel["log"],
-                        )
+                        if "besties" in rel:    
+                            new_rel = Relationship(
+                                cat_from=self,
+                                cat_to=cat_to,
+                                mates=rel["mates"] or False,
+                                besties=rel["besties"] or False,
+                                family=rel["family"] or False,
+                                romantic_love=(rel["romantic_love"] or 0),
+                                platonic_like=(rel["platonic_like"] or 0),
+                                dislike=rel["dislike"] or 0,
+                                admiration=rel["admiration"] or 0,
+                                comfortable=rel["comfortable"] or 0,
+                                jealousy=rel["jealousy"] or 0,
+                                trust=rel["trust"] or 0,
+                                log=rel["log"],
+                            )
+                        else:
+                            new_rel = Relationship(
+                                cat_from=self,
+                                cat_to=cat_to,
+                                mates=rel["mates"] or False,
+                                besties=False,
+                                family=rel["family"] or False,
+                                romantic_love=(rel["romantic_love"] or 0),
+                                platonic_like=(rel["platonic_like"] or 0),
+                                dislike=rel["dislike"] or 0,
+                                admiration=rel["admiration"] or 0,
+                                comfortable=rel["comfortable"] or 0,
+                                jealousy=rel["jealousy"] or 0,
+                                trust=rel["trust"] or 0,
+                                log=rel["log"],
+                            )
                         self.relationships[rel["cat_to_id"]] = new_rel
             except:
                 print(
@@ -3738,7 +3817,9 @@ class Cat:
                 ),
                 "patrol_with_mentor": (self.patrol_with_mentor or 0),
                 "mate": self.mate,
+                "bestie": self.bestie,
                 "previous_mates": self.previous_mates,
+                "previous_besties": self.previous_besties,
                 "dead": self.dead,
                 "paralyzed": self.pelt.paralyzed,
                 "no_kits": self.no_kits,

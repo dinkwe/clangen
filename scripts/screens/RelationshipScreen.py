@@ -296,14 +296,14 @@ class RelationshipScreen(Screens):
         )
 
         self.switch_focus_button = UIImageButton(
-            ui_scale(pygame.Rect((32, 245), (136, 30))),
+            ui_scale(pygame.Rect((32, 255), (136, 30))),
             "",
             object_id="#switch_focus_button",
             container=self.selected_cat_container,
         )
         self.switch_focus_button.disable()
         self.view_profile_button = UIImageButton(
-            ui_scale(pygame.Rect((32, 275), (136, 30))),
+            ui_scale(pygame.Rect((32, 285), (136, 30))),
             "",
             object_id="#view_profile_button",
             container=self.selected_cat_container,
@@ -311,7 +311,7 @@ class RelationshipScreen(Screens):
         self.view_profile_button.disable()
 
         self.log_icon = UISurfaceImageButton(
-            ui_scale(pygame.Rect((169, 258), (34, 34))),
+            ui_scale(pygame.Rect((169, 268), (34, 34))),
             Icon.NOTEPAD,
             get_button_dict(ButtonStyles.ICON, (34, 34)),
             object_id="@buttonstyles_icon",
@@ -491,6 +491,20 @@ class RelationshipScreen(Screens):
                     ),
                     container=self.selected_cat_container,
                 )
+            elif len(self.the_cat.bestie) > 0 and self.inspect_cat.ID in self.the_cat.bestie:
+                self.inspect_cat_elements["bestie"] = pygame_gui.elements.UIImage(
+                    ui_scale(pygame.Rect((8, 8), (7, 20))),
+                    pygame.transform.scale(
+                        image_cache.load_image(
+                            "resources/images/alert_mark.png"
+                        ).convert_alpha(),
+                        ui_scale_dimensions((22, 20)),
+                    ),
+                    container=self.selected_cat_container,
+                )
+                related = self.the_cat.is_related(
+                    self.inspect_cat, game.clan.clan_settings["first cousin mates"]
+                )
             else:
                 # Family Dot
                 related = self.the_cat.is_related(
@@ -574,9 +588,22 @@ class RelationshipScreen(Screens):
             elif (
                 len(self.the_cat.mate) > 0 and self.inspect_cat.ID in self.the_cat.mate
             ):
-                col2.append(i18n.t("general.has_a_mate", name=self.the_cat.name))
+                col2.append(i18n.t("general.cats_mate", name=self.the_cat.name))
             else:
                 col2.append(i18n.t("general.mate_none"))
+            
+            # bestie
+            if (
+                len(self.inspect_cat.bestie) > 0
+                and self.the_cat.ID not in self.inspect_cat.bestie
+            ):
+                col2.append(i18n.t("general.has_a_bestie"))
+            elif (
+                len(self.the_cat.bestie) > 0 and self.inspect_cat.ID in self.the_cat.bestie
+            ):
+                col2.append(i18n.t("general.cats_bestie", name=self.the_cat.name))
+            else:
+                col2.append(i18n.t("general.bestie_none"))
 
             # Relation info:
             if related:
@@ -773,6 +800,10 @@ class RelationshipScreen(Screens):
         )
 
         related = False
+        if game.clan.clan_settings["first cousin mates"]:
+                check_cousins = False
+        else:
+                check_cousins = the_relationship.cat_to.is_cousin(self.the_cat)
         # MATE
         if (
             len(self.the_cat.mate) > 0
@@ -786,13 +817,33 @@ class RelationshipScreen(Screens):
                     "resources/images/heart_big.png"
                 ).convert_alpha(),
             )
+        elif (
+            len(self.the_cat.bestie) > 0
+            and the_relationship.cat_to.ID in self.the_cat.bestie
+        ):
+            self.relation_list_elements[
+                "besie_icon" + str(i)
+            ] = pygame_gui.elements.UIImage(
+                ui_scale(pygame.Rect((pos_x + 5, pos_y + 5), (3, 10))),
+                image_cache.load_image(
+                    "resources/images/alert_mark.png"
+                ).convert_alpha(),
+            )
+            
+            if (
+                the_relationship.cat_to.is_uncle_aunt(self.the_cat)
+                or self.the_cat.is_uncle_aunt(the_relationship.cat_to)
+                or the_relationship.cat_to.is_grandparent(self.the_cat)
+                or self.the_cat.is_grandparent(the_relationship.cat_to)
+                or the_relationship.cat_to.is_parent(self.the_cat)
+                or self.the_cat.is_parent(the_relationship.cat_to)
+                or the_relationship.cat_to.is_sibling(self.the_cat)
+                or check_cousins
+            ):
+                related = True
         else:
             # FAMILY DOT
             # Only show family dot on cousins if first cousin mates are disabled.
-            if game.clan.clan_settings["first cousin mates"]:
-                check_cousins = False
-            else:
-                check_cousins = the_relationship.cat_to.is_cousin(self.the_cat)
 
             if (
                 the_relationship.cat_to.is_uncle_aunt(self.the_cat)

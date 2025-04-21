@@ -241,6 +241,8 @@ class ProfileScreen(Screens):
                 self.change_screen("relationship screen")
             elif event.ui_element == self.choose_mate_button:
                 self.change_screen("choose mate screen")
+            elif event.ui_element == self.choose_bestie_button:
+                self.change_screen("choose bestie screen")
             elif event.ui_element == self.change_adoptive_parent_button:
                 self.change_screen("choose adoptive parent screen")
 
@@ -954,6 +956,43 @@ class ProfileScreen(Screens):
 
             output += i18n.t(
                 "general.mate_label", count=len(mate_names), mates=mate_block
+            )
+        
+        if len(the_cat.bestie) > 0:
+            output += "\n"
+
+            bestie_names = []
+            # Grab the names of only the first two, since that's all we will display
+            for _b in the_cat.bestie[:2]:
+                bestie_ob = Cat.fetch_cat(_b)
+                if not isinstance(bestie_ob, Cat):
+                    continue
+                if bestie_ob.dead != self.the_cat.dead:
+                    if the_cat.dead:
+                        former_indicate = "general.bestie_living"
+                    else:
+                        former_indicate = "general.bestie_dead"
+
+                    bestie_names.append(f"{str(bestie_ob.name)} {i18n.t(former_indicate)}")
+                elif bestie_ob.outside != self.the_cat.outside:
+                    bestie_names.append(
+                        f"{str(bestie_ob.name)} {i18n.t('general.bestie_away')}"
+                    )
+                else:
+                    bestie_names.append(f"{str(bestie_ob.name)}")
+
+            bestie_block = ", ".join(bestie_names)
+
+            if len(the_cat.bestie) > 2:
+                bestie_block = i18n.t(
+                    "utility.items",
+                    count=2,
+                    item1=bestie_block,
+                    item2=i18n.t("general.bestie_extra", count=len(the_cat.bestie) - 2),
+                )
+
+            output += i18n.t(
+                "general.bestie_label", count=len(bestie_names), besties=bestie_block
             )
 
         if not the_cat.dead:
@@ -2172,6 +2211,14 @@ class ProfileScreen(Screens):
                 starting_height=2,
                 manager=MANAGER,
             )
+            self.choose_bestie_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((50, 558), (172, 36))),
+                "screens.profile.bestie",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
+                starting_height=2,
+                manager=MANAGER,
+            )
             self.update_disabled_buttons_and_text()
 
     def toggle_roles_tab(self):
@@ -2328,6 +2375,11 @@ class ProfileScreen(Screens):
                 self.choose_mate_button.disable()
             else:
                 self.choose_mate_button.enable()
+            
+            if (self.the_cat.exiled or self.the_cat.outside):
+                self.choose_bestie_button.disable()
+            else:
+                self.choose_bestie_button.enable()
 
         # Roles Tab
         elif self.open_tab == "roles":
@@ -2566,6 +2618,7 @@ class ProfileScreen(Screens):
             self.see_relationships_button.kill()
             self.choose_mate_button.kill()
             self.change_adoptive_parent_button.kill()
+            self.choose_bestie_button.kill()
         elif self.open_tab == "roles":
             self.manage_roles.kill()
             self.change_mentor_button.kill()

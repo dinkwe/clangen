@@ -829,7 +829,13 @@ class CustomizeCatScreen(Screens):
                     dropdown.kill()
 
                 self.the_cat.pelt.pattern = self.patterns[0]
-                if previous_pelt_name in ['SingleColour', 'TwoColour']:
+                 magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
+                       "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
+                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked","CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
+                       "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
+                       "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
+
+                if previous_pelt_name in ['SingleColour', 'TwoColour'] or previous_pelt_name in magiccolors:
                     self.the_cat.pelt.tortiebase = "single"
                 else:
                     self.the_cat.pelt.tortiebase = previous_pelt_name.lower()

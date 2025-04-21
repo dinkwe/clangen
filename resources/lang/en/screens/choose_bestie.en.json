@@ -1,0 +1,10 @@
+{
+    "en": {
+        "heading": "Choose a best friend for %{name}",
+        "info": "If a cat has a best friend, they will have a higher chance of positive interactions. Best friends will not change without player input. Potential best friends are listed below! The lines connecting the two cats may give a hint on their compatibility with one another, and any existing platonic feelings will be shown with small hearts.",
+        "potential": "Potential Best Friends",
+        "current": "Best Friends",
+        "set_bestie": "Officially BFFs!",
+        "unset_bestie": "Break It Up"
+    }
+}
