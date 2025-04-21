@@ -475,7 +475,7 @@ class Patrol:
 
         if (
             patrol.pl_trait_constraints
-            and self.patrol_leader.personality.trait not in patrol.pl_trait_constraints
+            and (self.patrol_leader.personality.trait not in patrol.pl_trait_constraints or self.patrol_leader.personality.trait2 not in patrol.pl_trait_constraints)
         ):
             return False
 
@@ -779,6 +779,16 @@ class Patrol:
                 ]
 
             if kitty.personality.trait in fail_outcome.stat_trait:
+                success_chance += game.config["patrol_generation"][
+                    "fail_stat_cat_modifier"
+                ]
+            
+            if kitty.personality.trait2 in success_outcome.stat_trait:
+                success_chance += game.config["patrol_generation"][
+                    "win_stat_cat_modifier"
+                ]
+
+            if kitty.personality.trait2 in fail_outcome.stat_trait:
                 success_chance += game.config["patrol_generation"][
                     "fail_stat_cat_modifier"
                 ]

@@ -174,7 +174,7 @@ class Cat:
         self.age = None
         self.skills = CatSkills(skill_dict=skill_dict)
         self.personality = Personality(
-            trait="troublesome", lawful=0, aggress=0, stable=0, social=0
+            trait="troublesome", trait2="strange", lawful=0, aggress=0, stable=0, social=0
         )
         self.parent1 = parent1
         self.parent2 = parent2
@@ -352,7 +352,8 @@ class Cat:
                     powers_dict = ujson.loads(read_file.read())
             if self.awakened["type"] == "guide":
                 #powerless shows twice bc we want it to be twice as common. visible guides
-                self.pelt.skin = choice(["POWERLESS1", "POWERLESS2","POWERLESS1", "POWERLESS2", "MIST","LIGHT1", "SPARKLES"])
+                self.pelt.skin = choice(['LIGHTPURPLE', 'BLUE', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                         'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"])
             elif self.awakened["type"] == "esper":
                 self.pelt.skin = choice(powers_dict[self.awakened["ability"]]["skin"])
             elif self.awakened["type"] == "enhanced esper":
@@ -633,12 +634,12 @@ class Cat:
         enby_masc = [ "demiboy", "genderfaun", "trans masc"]
         enby_fem = ["demigirl", "genderfae", "trans femme"]
         
-        she_him = randint(1,3)
-        neo_chance = 25
-        second_set = 20
+        she_him = randint(1,5)
+        neo_chance = game.config["cat_generation"]["neopronoun_chance"]
+        second_set = game.config["cat_generation"]["multiple_pronouns_chance"]
         if self.genderalign in queer_list:
-            neo_chance = 10
-            second_set = 5
+            neo_chance = int(neo_chance/2)
+            second_set = int(second_set/4)
         neos = randint(1,neo_chance)
         seconds = randint(1,second_set)
         
@@ -646,9 +647,9 @@ class Cat:
         value = self._pronouns.get(locale)
         if value is None:
             self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
-            if self.genderalign in enby_masc and she_him < 3:
+            if self.genderalign in enby_masc and she_him < 4:
                 self._pronouns[locale] += pronouns.get_new_pronouns("male")
-            elif self.genderalign in enby_fem and she_him < 3:
+            elif self.genderalign in enby_fem and she_him < 4:
                 self._pronouns[locale] += pronouns.get_new_pronouns("female")
             elif neos == 1:
                 self._pronouns[locale] += pronouns.get_new_pronouns("neos")
@@ -661,8 +662,11 @@ class Cat:
                     #add neos
                     self._pronouns[locale] += pronouns.get_new_pronouns("neos")
                 
+            if len(self._pronouns[locale]) > 1:
+                if self._pronouns[locale][0]["subject"] == self._pronouns[locale][1]["subject"]:
+                    self._pronouns[locale] = [self._pronouns[locale][0]]
+                    print(self._pronouns[locale])
             value = self._pronouns[locale]
-                    
         return value
 
     @pronouns.setter
@@ -794,7 +798,9 @@ class Cat:
         self.exiled = True
         self.outside = True
         self.status = "exiled"
-        if self.personality.trait == "vengeful":
+        bitter_traits = ["vengeful", "bloodthirsty", "cunning", "intense", "destructive", "spiteful",
+                         "remorseless", "antagonistic", "malicious", "sadistic"]
+        if self.personality.trait in bitter_traits or self.personality.trait2 in bitter_traits:
             self.thought = "Swears their revenge for being exiled"
         else:
             self.thought = "Is shocked that they have been exiled"
@@ -885,7 +891,7 @@ class Cat:
                 for x in very_high_values:
                     possible_strings.extend(
                         self.generate_events.possible_death_reactions(
-                            family_relation, x, cat.personality.trait, body_status
+                            family_relation, x, choice([cat.personality.trait,cat.personality.trait2]), body_status
                         )
                     )
 
@@ -978,7 +984,7 @@ class Cat:
                 for x in high_values:
                     possible_strings.extend(
                         self.generate_events.possible_death_reactions(
-                            family_relation, x, cat.personality.trait, body_status
+                            family_relation, x, choice([cat.personality.trait,cat.personality.trait2]), body_status
                         )
                     )
 
@@ -3621,6 +3627,10 @@ class Cat:
                 awakened_text = total_class + "-class " + self.awakened["type"]
                 powers_text += "powers: " + self.awakened["ability"][0] + " and " +  self.awakened["ability"][1] + "\n"
 
+        trait_text = i18n.t(f"cat.personality.{self.personality.trait}")
+        if self.personality.trait != self.personality.trait2:
+            trait_text += " & " + i18n.t(f"cat.personality.{self.personality.trait2}")
+
         if make_clan:
             return "\n".join(
                 [
@@ -3631,7 +3641,7 @@ class Cat:
                         else "general.kitten_profile",
                         count=1,
                     ),
-                    i18n.t(f"cat.personality.{self.personality.trait}"),
+                    trait_text,
                     self.skills.skill_string(),
                     pronoun_text,
                     awakened_text,
@@ -3644,7 +3654,7 @@ class Cat:
                 return "<br>".join(
                     [
                         i18n.t(f"general.{self.status.lower()}", count=1),
-                        i18n.t(f"cat.personality.{self.personality.trait}"),
+                        trait_text,
                         self.skills.skill_string(short=True),
                         awakened_text,
                         i18n.t(f"cat.skills.{self.experience_level}")
@@ -3659,7 +3669,7 @@ class Cat:
                 return "<br>".join(
                     [
                         i18n.t(f"general.{self.status.lower()}", count=1),
-                        i18n.t(f"cat.personality.{self.personality.trait}"),
+                        trait_text,
                         self.skills.skill_string(short=True),
                         i18n.t(f"cat.skills.{self.experience_level}")
                         + (
@@ -3674,7 +3684,7 @@ class Cat:
                 [
                     i18n.t("general.moons_age", count=self.moons),
                     self.genderalign,
-                    i18n.t(f"cat.personality.{self.personality.trait}"),
+                    trait_text,
                 ]
             )
 
@@ -3683,7 +3693,7 @@ class Cat:
                 i18n.t("general.moons_age", count=self.moons),
                 i18n.t(f"general.{self.status.lower()}", count=1),
                 self.genderalign,
-                i18n.t(f"cat.personality.{self.personality.trait}"),
+                trait_text,
             ]
         )
     def get_save_dict(self, faded=False):
@@ -3717,6 +3727,7 @@ class Cat:
                 "backstory": self.backstory or None,
                 "moons": self.moons,
                 "trait": self.personality.trait,
+                "trait2": self.personality.trait2,
                 "facets": self.personality.get_facet_string(),
                 "parent1": self.parent1,
                 "parent2": self.parent2,

@@ -1309,6 +1309,15 @@ class Events:
                         chance = int(chance / 7.125)
                     elif has_med:
                         chance = int(chance * 2.22)
+                    
+                    skills_string = str(cat.skills)
+                    med_skills = ["TEACHER", "CLEVER", "STAR", "DELIVERER", "HERBALIST", "HISTORIAN",
+                                  "PRODIGY", "VET", "SCHOLAR", "THINKER", "MEMORY", "GARDENER",
+                                  "HEALER", "LORE"]
+                    
+                    for skill in med_skills:
+                        if skill in skills_string:
+                            chance = int(chance/1.5)
 
                     if cat.personality.trait in [
                         "careful",
@@ -1316,8 +1325,28 @@ class Events:
                         "loving",
                         "wise",
                         "faithful",
+                        #more traits
+                        "dedicated",
+                        "forgiving",
+                        "nurturing",
+                        "gentle",
+                        "warm",
+                        "patient",
+                        "scholarly",
+                        "nerdy",
+                        "methodical",
+                        "teacherly"
                     ]:
                         chance = int(chance / 1.3)
+                        
+                    elif cat.personality.trait in [
+                        "bloodthirsty",
+                        "absent-minded",
+                        "distracted",
+                        "destructive"
+                        
+                    ]:
+                        chance = int(chance * 1.5)
                     if cat.is_disabled():
                         chance = int(chance / 2)
 
@@ -1347,12 +1376,34 @@ class Events:
                                 break
 
                         chance = game.config["roles"]["mediator_app_chance"]
+                        
+                        skills_string = str(cat.skills)
+                        media_skills = ["TEACHER", "CLEVER", "SPEAKER", "MEDIATOR", "INSIGHTFUL", "KIT", "HISTORIAN",
+                                        "PATIENT", "INNOVATOR", "MATCHMAKER", "COOPERATIVE", "MUSICVIBES", "AURAVIBES",
+                                        "GIFTGIVER", "LANGUAGE", "THINKER", "SONG"]
+                    
+                        for skill in media_skills:
+                            if skill in skills_string:
+                                chance = int(chance/1.5)
+                                
                         if cat.personality.trait in [
                             "charismatic",
                             "loving",
                             "responsible",
                             "wise",
                             "thoughtful",
+                            #more traits
+                            "scheming",
+                            "calculating",
+                            "teacherly",
+                            "civil",
+                            "sympathetic",
+                            "polite",
+                            "flirty",
+                            "manipulative",
+                            "talkative",
+                            "cooperative",
+                            "philosophical"
                         ]:
                             chance = int(chance / 1.5)
                         if cat.is_disabled():

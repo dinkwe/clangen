@@ -2822,8 +2822,11 @@ def generate_sprite(
         elif cat.pelt.skin in ['FLAMES', 'FLOWERS', 'LIGHT1', 'SPARKLES', 'INK', 'MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES',
                     'INK2', 'THUNDERSTORM', 'LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2', 'BUBBLES']:
             new_sprite.blit(sprites.sprites["skin_magic" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS']:
+        elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS', "BATWINGS", "SPOOKYCRYSTALS", "TRANSCLOUDS", 'MAGEGIFT']:
             new_sprite.blit(sprites.sprites["skin_bingle" + cat.pelt.skin + cat_sprite], (0, 0))
+        elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                         'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
+            new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
         else:
             new_sprite.blit(sprites.sprites["skin_elemental" + cat.pelt.skin + cat_sprite], (0, 0))
         if not scars_hidden:

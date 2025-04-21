@@ -1075,7 +1075,11 @@ class ProfileScreen(Screens):
             output += "\n"
 
         # CHARACTER TRAIT
-        output += i18n.t(f"cat.personality.{the_cat.personality.trait}")
+        trait_text = i18n.t(f"cat.personality.{the_cat.personality.trait}")
+        if the_cat.personality.trait != the_cat.personality.trait2:
+            trait_text += " & " + i18n.t(f"cat.personality.{the_cat.personality.trait2}")
+            
+        output += trait_text
         # NEWLINE ----------
         output += "\n"
 

@@ -129,6 +129,7 @@ class CustomizeCatScreen(Screens):
 
         self.patterns = copy(Pelt.tortiepatterns)
         self.patterns.sort()
+        self.patterns.insert(0, "None")
         self.pattern_label = None
         self.pattern_dropdown = None
 
@@ -319,9 +320,10 @@ class CustomizeCatScreen(Screens):
                        "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
                        "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
                        "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
-        if not self.the_cat.awakened and 'CSAgouti' in self.pelt_names:
-            for item in self.pelt_names:
-                if item in magiccolors:
+        
+        if not self.the_cat.awakened:
+            for item in magiccolors:
+                if item in self.pelt_names:
                     self.pelt_names.remove(item)
         elif self.the_cat.awakened and 'CSAgouti' not in self.pelt_names:
             self.pelt_names +=magiccolors
@@ -359,7 +361,7 @@ class CustomizeCatScreen(Screens):
         self.tint_dropdown = create_dropdown((480, 360), (135, 40), create_options_list(self.tints, "lower"),
                                              get_selected_option(self.the_cat.pelt.tint, "lower"))
         if self.the_cat.awakened and 'FLAMES' not in self.skins:
-            magic_skin_temp = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL','CLOUDS']
+            magic_skin_temp = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + copy(Pelt.skin_sprites_math) + ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL','CLOUDS', 'BATWINGS', 'TRANSCLOUDS','SPOOKYCRYSTALS', 'MAGEGIFT']
             magic_skin_temp.sort()
             self.skins += magic_skin_temp
         elif not self.the_cat.awakened and 'FLAMES' in self.skins:
@@ -608,7 +610,11 @@ class CustomizeCatScreen(Screens):
 
         # convert to list
         if attribute == "pattern":
-            if isinstance(self.the_cat.pelt.pattern, list):
+            if selected_option == "NONE":
+                self.the_cat.pelt.pattern = None
+            elif self.the_cat.pelt.pattern is None:
+                self.the_cat.pelt.pattern = [selected_option]
+            elif isinstance(self.the_cat.pelt.pattern, list):
                 self.the_cat.pelt.pattern.append(selected_option)
             else:
                 self.the_cat.pelt.pattern = [selected_option]

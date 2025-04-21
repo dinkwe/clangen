@@ -296,9 +296,9 @@ def _check_cat_trait(cat, traits: list, not_traits: list) -> bool:
     cat_trait = cat.personality.trait
     allowed = False
 
-    if traits and cat_trait not in traits:
+    if traits and (cat_trait not in traits or cat_trait2 not in traits):
         return False
-    if not_traits and cat_trait in not_traits:
+    if not_traits and (cat_trait in not_traits or cat_trait2 in not_traits):
         return False
     return True
 

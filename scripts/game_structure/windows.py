@@ -94,7 +94,7 @@ class GuideEsper(UIWindow):
             container=self,
         )
         self.guide_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((-25, 300), (73, 30))),
+            ui_scale(pygame.Rect((-75, 300), (73, 30))),
             "guide",
             get_button_dict(ButtonStyles.SQUOVAL, (73, 30)),
             object_id="@buttonstyles_squoval",
@@ -122,18 +122,21 @@ class GuideEsper(UIWindow):
             container=self,
         )
         print(self.get_valid_guides())
-        self.all_potential_guides = self.chunks(self.get_valid_guides(), 12)
+        self.all_potential_guides = self.chunks(self.get_valid_guides(), 10)
         
-        self.potential_next_page = UIImageButton(
-            ui_scale(pygame.Rect((100, 100), (68, 68))),
-            "",
-            object_id="#arrow_right_button",
+        self.potential_next_page = UISurfaceImageButton(
+            ui_scale(pygame.Rect((365, 300), (34, 34))),
+            Icon.ARROW_RIGHT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
             container=self,
         )
-        self.potential_last_page = UIImageButton(
-            ui_scale(pygame.Rect((100, 100), (68, 68))),
-            "",
-            object_id="#arrow_left_button",
+
+        self.potential_last_page = UISurfaceImageButton(
+            ui_scale(pygame.Rect((195,300), (34, 34))),
+            Icon.ARROW_LEFT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
             container=self,
         )
         
@@ -149,6 +152,7 @@ class GuideEsper(UIWindow):
             and i.status not in ["kitten", "newborn"]
             and i.is_awakened()
             and i.awakened["type"] == "guide"
+            and not i.outside
         ]
         return valid_guides
     
@@ -170,7 +174,7 @@ class GuideEsper(UIWindow):
         if total_pages <= 1:
             self.potential_last_page.disable()
             self.potential_next_page.disable()
-        elif self.potential_mates_page >= total_pages - 1:
+        elif self.potential_guides_page >= total_pages - 1:
             self.potential_last_page.enable()
             self.potential_next_page.disable()
         elif self.potential_guides_page <= 0:
@@ -183,7 +187,7 @@ class GuideEsper(UIWindow):
         text = f"{self.potential_guides_page + 1} / {max(1, total_pages)}"
         if not self.potential_page_display:
             self.potential_page_display = pygame_gui.elements.UILabel(
-                ui_scale(pygame.Rect((240, 250), (204, 48))),
+                ui_scale(pygame.Rect((195, 260), (204, 48))),
                 text,
                 container=self,
                 object_id=get_text_box_theme(
@@ -199,7 +203,7 @@ class GuideEsper(UIWindow):
             display_cats = []
 
         pos_x = 20
-        pos_y = 40
+        pos_y = 60
         i = 0
 
         for _off in display_cats:
@@ -336,10 +340,10 @@ class GuideEsper(UIWindow):
                 self.attempt_guiding()
             elif event.ui_element == self.potential_last_page:
                 self.potential_guides_page -= 1
-                self.update_potential_guides_container_page
+                self.update_potential_guides_container_page()
             elif event.ui_element == self.potential_next_page:
                 self.potential_guides_page += 1
-                self.update_potential_guides_container_page
+                self.update_potential_guides_container_page()
         return super().process_event(event)
 
 class SymbolFilterWindow(UIWindow):

@@ -430,6 +430,10 @@ class SkillPath(Enum):
                 SkillPath.STAR,
                 SkillPath.HEALER,
                 SkillPath.DARK,
+                SkillPath.PRODIGY,
+                SkillPath.VET,
+                SkillPath.LANGUAGE,
+                SkillPath.PYRO
             ]
             if i not in exclude
         ]
@@ -754,16 +758,24 @@ class CatSkills:
         primary_points: int = 0,
         secondary_path: SkillPath = None,
         secondary_points: int = 0,
+        tertiary_path: SkillPath = None,
+        tertiary_points: int = 0,
         hidden_skill: HiddenSkillEnum = None,
         interest_only=False,
     ):
 
         if skill_dict:
+            #print(skill_dict)
             self.primary = Skill.generate_from_save_string(skill_dict["primary"])
             self.secondary = Skill.generate_from_save_string(skill_dict["secondary"])
             self.hidden = (
                 HiddenSkillEnum[skill_dict["hidden"]] if skill_dict["hidden"] else None
             )
+            #convert old saves
+            if len(skill_dict) == 4:
+                self.tertiary = Skill.generate_from_save_string(skill_dict["tertiary"])
+            else:
+                self.tertiary = None
         else:
             if primary_path:
                 self.primary = Skill(primary_path, primary_points, interest_only)
@@ -773,11 +785,16 @@ class CatSkills:
                 self.secondary = Skill(secondary_path, secondary_points, interest_only)
             else:
                 self.secondary = None
+                
+            if tertiary_path:
+                self.tertiary = Skill(tertiary_path, tertiary_points, interest_only)
+            else:
+                self.tertiary = None
 
             self.hidden = hidden_skill
 
     def __repr__(self) -> str:
-        return f"<CatSkills: Primary: |{self.primary}|, Secondary: |{self.secondary}|, Hidden: |{self.hidden}|>"
+        return f"<CatSkills: Primary: |{self.primary}|, Secondary: |{self.secondary}|, Tertiary: |{self.tertiary}|, Hidden: |{self.hidden}|>"
 
     @staticmethod
     def generate_new_catskills(status, moons, hidden_skill: HiddenSkillEnum = None):
@@ -796,23 +813,39 @@ class CatSkills:
                 new_skill.secondary = Skill.get_random_skill(
                     point_tier=1, interest_only=True, exclude=new_skill.primary.path
                 )
+            if new_skill.secondary and random.randint(1, 5) == 1:
+                new_skill.tertiary = Skill.get_random_skill(
+                    point_tier=1, interest_only=True, exclude=new_skill.secondary.path
+                )
+                if new_skill.tertiary == new_skill.primary:
+                    new_skill.tertiary = None
         else:
             primary_tier = 1
             secondary_tier = 1
+            tertiary_tier = 1
             if moons < 50:
                 primary_tier += random.randint(0, 1)
                 secondary_tier += random.randint(0, 1)
+                tertiary_tier += random.randint(0, 1)
             elif moons < 100:
                 primary_tier += random.randint(0, 2)
                 secondary_tier += random.randint(0, 1)
+                tertiary_tier += random.randint(0, 1)
             elif moons < 150:
                 primary_tier += random.randint(1, 2)
                 secondary_tier += random.randint(0, 1)
+                tertiary_tier += random.randint(0, 1)
             new_skill.primary = Skill.get_random_skill(point_tier=primary_tier)
             if random.randint(1, 2) == 1:
                 new_skill.secondary = Skill.get_random_skill(
                     point_tier=secondary_tier, exclude=new_skill.primary.path
                 )
+            if new_skill.secondary and random.randint(1, 4) == 1:
+                new_skill.tertiary = Skill.get_random_skill(
+                    point_tier=secondary_tier, exclude=new_skill.secondary.path
+                )
+                if new_skill.tertiary == new_skill.primary:
+                    new_skill.tertiary = None
 
         return new_skill
 
@@ -820,27 +853,32 @@ class CatSkills:
         return {
             "primary": self.primary.get_save_string() if self.primary else None,
             "secondary": self.secondary.get_save_string() if self.secondary else None,
+            "tertiary": self.tertiary.get_save_string() if self.tertiary else None,
             "hidden": self.hidden.name if self.hidden else None,
         }
 
     def skill_string(self, short=False):
-        output = []
+        output = ""
 
         if short:
             if self.primary:
-                output.append(self.primary.get_short_skill())
-            if self.secondary:
-                output.append(self.secondary.get_short_skill())
+                output +=(self.primary.get_short_skill())
+            if self.secondary and self.tertiary:
+                output += ", " +(self.secondary.get_short_skill()) + " & " + (self.tertiary.get_short_skill())
+            elif self.secondary:
+                output += " & " + (self.secondary.get_short_skill())
         else:
             if self.primary:
-                output.append(self.primary.skill)
-            if self.secondary:
-                output.append(self.secondary.skill)
+                output += (self.primary.skill)
+            if self.secondary and self.tertiary:
+                output += ", " + (self.secondary.skill) + " & " + self.tertiary.skill
+            elif self.secondary:
+                output += " & " + (self.secondary.skill)
 
         if not output:
             return "???"
 
-        return " & ".join(output)
+        return output
 
     def mentor_influence(self, mentor):
         """Handles mentor influence on the cat's skill
@@ -867,26 +905,27 @@ class CatSkills:
             if self.secondary and mentor_tags
             else False
         )
+        can_tertiary = (
+            bool(CatSkills.influence_flags[self.tertiary.path] & mentor_tags)
+            if self.tertiary and mentor_tags
+            else False
+        )
 
         # If nothing can be effected, just return as well.
-        if not (can_primary or can_secondary):
+        if not (can_primary or can_secondary or can_tertiary):
             return
 
         amount_effect = random.randint(1, 4)
 
-        if can_primary and can_secondary:
-            if random.randint(1, 2) == 1:
+        if can_primary:
                 self.primary.points += amount_effect
                 path = self.primary.path
-            else:
-                self.secondary.points += amount_effect
-                path = self.secondary.path
-        elif can_primary:
+        elif can_secondary:
             self.primary.points += amount_effect
             path = self.primary.path
         else:
-            self.secondary.points += amount_effect
-            path = self.secondary.path
+            self.tertiary.points += amount_effect
+            path = self.tertiary.path
 
         return mentor.ID, path, amount_effect
 
@@ -929,21 +968,41 @@ class CatSkills:
         if not (the_cat.outside or the_cat.exiled):
             if the_cat.status == "kitten":
                 # Check to see if the cat gains a secondary
+                if not self.secondary and not int(random.random() * 11):
+                    # if there's no secondary skill, try to give one!
+                    self.secondary = Skill.get_random_skill(
+                        points=0, interest_only=True, exclude=self.primary.path
+                    )
+                
                 if not self.secondary and not int(random.random() * 22):
                     # if there's no secondary skill, try to give one!
                     self.secondary = Skill.get_random_skill(
                         points=0, interest_only=True, exclude=self.primary.path
                     )
+                
+                if self.secondary and not self.tertiary and not int(random.random() * 22):
+                    # if there'sao secondary skill, try to give tertiary one!
+                    self.tertiary = Skill.get_random_skill(
+                        points=0, interest_only=True, exclude=self.secondary.path
+                    )
 
                 # if the the_cat has skills, check if they get any points this moon
                 if not int(random.random() * 4):
                     amount_effect = random.randint(1, 4)
-                    if self.primary and self.secondary:
-                        if random.randint(1, 2) == 1:
+                    if self.primary and self.secondary and self.tertiary:
+                        which_one = random.randint(1,3)
+                        if which_one == 1:
+                            self.primary.points += amount_effect
+                        elif which_one ==3:
+                            self.tertiary.points += amount_effect
+                        else:
+                            self.secondary.points += amount_effect
+                    elif self.primary and self.secondary:
+                        if random.randint(1,2) == 1:
                             self.primary.points += amount_effect
                         else:
                             self.secondary.points += amount_effect
-                    elif self.primary:
+                    else:
                         self.primary.points += amount_effect
 
             elif "apprentice" in the_cat.status:
@@ -952,6 +1011,13 @@ class CatSkills:
                     # if there's no secondary skill, try to give one!
                     self.secondary = Skill.get_random_skill(
                         points=0, interest_only=True, exclude=self.primary.path
+                    )
+                
+                # Check to see if the cat gains a tertiary
+                if not self.tertiary and self.secondary and not int(random.random() * 22):
+                    # if there's no secondary skill, try to give one!
+                    self.tertiary = Skill.get_random_skill(
+                        points=0, interest_only=True, exclude=self.secondary.path
                     )
 
                 # Check if they get any points this moon
@@ -971,6 +1037,8 @@ class CatSkills:
                 self.primary.interest_only = False
                 if self.secondary:
                     self.secondary.interest_only = False
+                if self.tertiary:
+                    self.tertiary.interest_only = False
 
                 chance = max(1, 160 - the_cat.moons)
                 if not int(
@@ -1015,6 +1083,8 @@ class CatSkills:
                 self.primary.interest_only = False
                 if self.secondary:
                     self.secondary.interest_only = False
+                if self.tertiary:
+                    self.tertiary.interest_only = False
 
     def meets_skill_requirement(
         self, path: Union[str, SkillPath, HiddenSkillEnum], min_tier: int = 0
@@ -1047,6 +1117,10 @@ class CatSkills:
 
             if self.secondary:
                 if path == self.secondary.path and self.secondary.tier >= min_tier:
+                    return True
+                
+            if self.tertiary:
+                if path == self.tertiary.path and self.tertiary.tier >= min_tier:
                     return True
 
         return False

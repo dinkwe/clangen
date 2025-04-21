@@ -19,6 +19,7 @@ class Personality:
     def __init__(
             self,
             trait: str = None,
+            trait2: str = None,
             kit_trait: bool = False,
             lawful: int = None,
             social: int = None,
@@ -35,6 +36,7 @@ class Personality:
         self._aggress = 0
         self._stable = 0
         self.trait = None
+        self.trait2 = None
         self.kit = kit_trait  # If true, use kit trait. If False, use normal traits.
 
         if self.kit:
@@ -43,10 +45,15 @@ class Personality:
             trait_type_dict = Personality.trait_ranges["normal_traits"]
 
         _tr = None
+        _tr2 = None
         if trait and trait in trait_type_dict:
             # Trait-given init
             self.trait = trait
             _tr = trait_type_dict[self.trait]
+        
+        if trait2 and trait2 in trait_type_dict:
+            self.trait2 = trait2
+            _tr2 = trait_type_dict[self.trait2]
 
         # Set Facet Values
         # The priority of is:
@@ -88,8 +95,11 @@ class Personality:
             )
 
         # If trait is still empty, or if the trait is not valid with the facets, change it.
-        if not self.trait or not self.is_trait_valid():
-            self.choose_trait()
+        if not self.trait and not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        
+        if not self.trait2 and not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
     def __repr__(self) -> str:
         """For debugging"""
@@ -127,8 +137,10 @@ class Personality:
     def lawfulness(self, new_val):
         """Do not use property in init"""
         self._law = Personality.adjust_to_range(new_val)
-        if not self.is_trait_valid():
-            self.choose_trait()
+        if not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        if not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
     @property
     def sociability(self):
@@ -138,8 +150,10 @@ class Personality:
     def sociability(self, new_val):
         """Do not use property in init"""
         self._social = Personality.adjust_to_range(new_val)
-        if not self.is_trait_valid():
-            self.choose_trait()
+        if not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        if not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
     @property
     def aggression(self):
@@ -149,8 +163,10 @@ class Personality:
     def aggression(self, new_val):
         """Do not use property in init"""
         self._aggress = Personality.adjust_to_range(new_val)
-        if not self.is_trait_valid():
-            self.choose_trait()
+        if not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        if not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
     @property
     def stability(self):
@@ -160,8 +176,10 @@ class Personality:
     def stability(self, new_val):
         """Do not use property in init"""
         self._stable = Personality.adjust_to_range(new_val)
-        if not self.is_trait_valid():
-            self.choose_trait()
+        if not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        if not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
     # ---------------------------------------------------------------------------- #
     #                               METHODS                                        #
@@ -181,10 +199,12 @@ class Personality:
     def set_kit(self, kit: bool):
         """Switch the trait-type. True for kit, False for normal"""
         self.kit = kit
-        if not self.is_trait_valid():
-            self.choose_trait()
+        if not self.is_trait_valid(self.trait):
+            self.trait = self.choose_trait()
+        if not self.is_trait_valid(self.trait2):
+            self.trait2 = self.choose_trait()
 
-    def is_trait_valid(self) -> bool:
+    def is_trait_valid(self, checking_trait) -> bool:
         """Return True if the current facets fit the trait ranges, false
         if it doesn't. Also returns false if the trait is not in the trait dict."""
 
@@ -193,10 +213,10 @@ class Personality:
         else:
             trait_type_dict = Personality.trait_ranges["normal_traits"]
 
-        if self.trait not in trait_type_dict:
+        if checking_trait not in trait_type_dict:
             return False
 
-        trait_range = trait_type_dict[self.trait]
+        trait_range = trait_type_dict[checking_trait]
 
         if not (
                 trait_range["lawfulness"][0]
@@ -245,9 +265,9 @@ class Personality:
             possible_traits.append(trait)
 
         if possible_traits:
-            self.trait = choice(possible_traits)
+            return choice(possible_traits)
         else:
-            self.trait = "strange"
+            return "strange"
 
     def facet_wobble(self, facet_max=5):
         """Makes a small adjustment to all the facets, and redetermines trait if needed."""
