@@ -90,6 +90,9 @@ class ClanScreen(Screens):
                 self.change_screen("warrior den screen")
             if event.ui_element == self.leader_den_label:
                 self.change_screen("leader den screen")
+            
+            if event.ui_element == self.nursery_label:
+                self.change_screen("caretaker screen")
 
         elif event.type == pygame.KEYDOWN and game.settings["keybinds"]:
             if event.key == pygame.K_RIGHT:
@@ -224,7 +227,6 @@ class ClanScreen(Screens):
             get_button_dict(ButtonStyles.ROUNDED_RECT, (80, 28)),
             object_id=ObjectID(class_id="@buttonstyles_rounded_rect", object_id=None),
         )
-        self.nursery_label.disable()
 
         self.clearing_label = UISurfaceImageButton(
             ui_scale(pygame.Rect(self.layout["clearing"], (81, 28))),
@@ -474,7 +476,7 @@ class ClanScreen(Screens):
                 else:
                     continue
 
-            if Cat.all_cats[x].status in ["apprentice", "mediator apprentice"]:
+            if Cat.all_cats[x].status in ["apprentice", "mediator apprentice", "denkeeper apprentice", "messenger apprentice"]:
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [1, 50, 1, 1, 100, 100, 1]
                 )
@@ -487,7 +489,7 @@ class ClanScreen(Screens):
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [1, 1, 2000, 1, 1, 1, 1]
                 )
-            elif Cat.all_cats[x].status == "kitten":
+            elif Cat.all_cats[x].status == "kitten" or Cat.all_cats[x].status == "caretaker" or Cat.all_cats[x].status == "caretaker apprentice":
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [60, 8, 1, 1, 1, 1, 1]
                 )
@@ -495,7 +497,7 @@ class ClanScreen(Screens):
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [20, 20, 20, 400, 1, 1, 1]
                 )
-            elif Cat.all_cats[x].status in ["warrior", "mediator"]:
+            elif Cat.all_cats[x].status in ["warrior", "mediator", "messenger", "denkeeper"]:
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [1, 1, 1, 1, 1, 60, 60]
                 )

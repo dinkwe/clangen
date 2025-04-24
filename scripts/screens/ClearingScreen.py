@@ -4,6 +4,8 @@ import i18n
 import pygame
 import pygame_gui
 import ujson
+import random
+from random import randint
 
 from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game
@@ -18,6 +20,7 @@ from scripts.utility import (
     ui_scale,
     shorten_text_to_fit,
     ui_scale_dimensions,
+    get_alive_status_cats
 )
 from .Screens import Screens
 from scripts.events_module.short.condition_events import Condition_Events
@@ -67,6 +70,7 @@ class ClearingScreen(Screens):
         self.tactic_boxes = {}
         self.additional_text = {}
         self.checkboxes = {}
+        self.denkeeper = None
 
         self.cat_tab_open = self.hungry_tab
         self.tab_list = self.hungry_cats
@@ -231,21 +235,21 @@ class ClearingScreen(Screens):
             manager=MANAGER,
         )
         self.feed_all_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((625, 300), (160, 30))),
+            ui_scale(pygame.Rect((625, 275), (160, 30))),
             "screens.clearing.feed_all_hungry",
             get_button_dict(ButtonStyles.SQUOVAL, (160, 30)),
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
         )
         self.feed_one_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((650, 300), (111, 30))),
+            ui_scale(pygame.Rect((650, 275), (111, 30))),
             "screens.clearing.feed_one",
             get_button_dict(ButtonStyles.SQUOVAL, (115, 30)),
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
         )
         self.feed_max_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((648, 335), (115, 30))),
+            ui_scale(pygame.Rect((648, 315), (115, 30))),
             "screens.clearing.feed_max",
             get_button_dict(ButtonStyles.SQUOVAL, (115, 30)),
             object_id="@buttonstyles_squoval",
@@ -256,7 +260,7 @@ class ClearingScreen(Screens):
         self.feed_max_button.hide()
 
         self.help_button = UIImageButton(
-            ui_scale(pygame.Rect((725, 25), (34, 34))),
+            ui_scale(pygame.Rect((725, 635), (34, 34))),
             "",
             object_id="#help_button",
             manager=MANAGER,
@@ -479,20 +483,20 @@ class ClearingScreen(Screens):
         name = str(self.focus_cat_object.name)
         short_name = shorten_text_to_fit(name, 165, 15)
         self.focus_name = pygame_gui.elements.ui_label.UILabel(
-            ui_scale(pygame.Rect((585, 75), (225, 30))),
+            ui_scale(pygame.Rect((585, 50), (225, 30))),
             short_name,
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
             manager=MANAGER,
         )
         self.focus_info = UITextBoxTweaked(
             "",
-            ui_scale(pygame.Rect((625, 95), (150, 120))),
+            ui_scale(pygame.Rect((625, 70), (150, 120))),
             object_id=get_text_box_theme("#text_box_22_horizcenter"),
             line_spacing=1,
             manager=MANAGER,
         )
         self.focus_cat = UISpriteButton(
-            ui_scale(pygame.Rect((625, 145), (150, 150))),
+            ui_scale(pygame.Rect((625, 120), (150, 150))),
             self.focus_cat_object.sprite,
             cat_object=self.focus_cat_object,
             manager=MANAGER,
@@ -608,13 +612,17 @@ class ClearingScreen(Screens):
             self.info_messages.kill()
         self.info_messages = UITextBoxTweaked(
             "",
-            ui_scale(pygame.Rect((108, 310), (550, 80))),
+            ui_scale(pygame.Rect((108, 250), (550, 160))),
             object_id=get_text_box_theme("#text_box_30_horizcenter_vertcenter"),
             line_spacing=1,
         )
 
         information_display = []
 
+        current_denkeepers = []
+        for cat in Cat.all_cats_list:
+            if cat.status in ["denkeeper", "denkeeper apprentice"]:
+                current_denkeepers.append(cat)
         current_prey_amount = game.clan.freshkill_pile.total_amount
         needed_amount = game.clan.freshkill_pile.amount_food_needed()
         warrior_need = game.prey_config["prey_requirement"]["warrior"]
@@ -622,7 +630,8 @@ class ClearingScreen(Screens):
         general_text = i18n.t(
             "screens.clearing.prey_amount_info", warrior_amount=warrior_amount
         )
-
+        
+        denkeeper_text = "There are no denkeepers in the clan."
         concern_text = "This should not appear."
         if current_prey_amount == 0:
             concern_text = i18n.t("screens.clearing.prey_amount_none")
@@ -642,9 +651,28 @@ class ClearingScreen(Screens):
         elif needed_amount * 2.5 < current_prey_amount:
             concern_text = i18n.t("screens.clearing.prey_amount_very_high")
             self.pile_size = "#freshkill_pile_full"
-
+        
+        
+        if len(current_denkeepers) > 0:
+            keepers = get_alive_status_cats(
+            Cat, ["denkeeper", "denkeeper apprentice"], sort=True
+            )
+            if len(current_denkeepers) == 1:
+                denkeeper_text = str(keepers[0].name) + " is managing the prey pile."
+            elif len(current_denkeepers) == 2:
+                denkeeper_text = str(keepers[0].name) + " and " + str(keepers[1].name) +" are managing the prey pile."
+            else:
+                denkeeper_text = str(keepers[0].name) + " and the other denkeepers are managing the prey pile."
+            
+            self.denkeeper = UISpriteButton(
+                ui_scale(pygame.Rect((35, 135), (150, 150))),
+                current_denkeepers[0].sprite,
+                cat_object=cat,
+                manager=MANAGER,
+            )
         information_display.append(general_text)
         information_display.append(concern_text)
+        information_display.append(denkeeper_text)
         self.info_messages.set_text("<br>".join(information_display))
 
         if self.pile_base:
@@ -657,7 +685,7 @@ class ClearingScreen(Screens):
             needed_amount=needed_amount,
         )
         self.pile_base = UIImageButton(
-            ui_scale(pygame.Rect((250, 25), (300, 300))),
+            ui_scale(pygame.Rect((250, 15), (300, 300))),
             "",
             object_id=self.pile_size,
             tool_tip_text=hover_display,
@@ -698,6 +726,8 @@ class ClearingScreen(Screens):
         self.delete_checkboxes()
         if self.focus_cat:
             self.focus_cat.kill()
+        if self.denkeeper:
+            self.denkeeper.kill()
 
     def chunks(self, L, n):
         return [L[x : x + n] for x in range(0, len(L), n)]

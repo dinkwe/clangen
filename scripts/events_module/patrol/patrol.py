@@ -157,8 +157,7 @@ class Patrol:
         """
         for cat in patrol_cats:
             self.patrol_cats.append(cat)
-
-            if cat.status == "apprentice" or cat.status == "medicine cat apprentice":
+            if cat.status in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]:
                 self.patrol_apprentices.append(cat)
 
             self.patrol_status_list.append(cat.status)
@@ -169,20 +168,20 @@ class Patrol:
                 self.patrol_statuses[cat.status] = 1
 
             # Combined patrol_statuses catagories
-            if cat.status in ("medicine cat", "medicine cat apprentice"):
+            if cat.status in ("medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"):
                 if "healer cats" in self.patrol_statuses:
                     self.patrol_statuses["healer cats"] += 1
                 else:
                     self.patrol_statuses["healer cats"] = 1
 
-            if cat.status in ("apprentice", "medicine cat apprentice"):
+            if cat.status in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]:
                 if "all apprentices" in self.patrol_statuses:
                     self.patrol_statuses["all apprentices"] += 1
                 else:
                     self.patrol_statuses["all apprentices"] = 1
 
             if (
-                cat.status in ("warrior", "deputy", "leader")
+                cat.status in ("warrior", "deputy", "leader", "denkeeper", "messenger")
                 and cat.age != CatAgeEnum.ADOLESCENT
             ):
                 if "normal adult" in self.patrol_statuses:
@@ -791,6 +790,16 @@ class Patrol:
             if kitty.personality.trait2 in fail_outcome.stat_trait:
                 success_chance += game.config["patrol_generation"][
                     "fail_stat_cat_modifier"
+                ]
+            
+            if kitty.status in ["messenger", "messenger apprentice"]:
+                success_chance += game.config["patrol_generation"][
+                    "win_stat_cat_modifier"
+                ]
+            
+            if kitty.status in ["denkeeper", "denkeeper apprentice"]:
+                success_chance += game.config["patrol_generation"][
+                    "win_stat_cat_modifier"
                 ]
 
             skill_updates += f"{kitty.name} updated chance to {success_chance} | "

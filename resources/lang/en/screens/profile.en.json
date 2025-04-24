@@ -21,6 +21,7 @@
         "exile_tooltip": "This cannot be reversed.",
         "exile_guide_tooltip": "Changing where this cat resides will change where your Clan goes after death.",
         "kill_cat": "kill cat",
+        "reincarnate": "reincarnate",
         "kill_cat_tooltip": "This will open a confirmation window and allow you to input a death reason",
         "destroy_accessory": "destroy accessory",
         "adoptive_parents": "adoptive parents",

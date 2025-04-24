@@ -1,0 +1,39 @@
+[
+    {
+        "id": "caretaker_app_gen",
+        "thoughts": [
+            "Is carefully checking the nursery for thorns",
+            "Wonders if being a warrior would have been more fun",
+            "Is studying herbs that help during kitting",
+            "Is making new nests"
+        ]
+    },
+    {
+        "id": "caretaker_app_to_alive_kits",
+        "thoughts": [
+            "Had to fix an argument between the kits... again",
+            "Enjoys watching over the kits",
+            "Is telling r_c a fantastical story",
+            "Makes sure r_c doesn't sneak out of the nursery again!"
+        ],
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "caretaker_app_alive_mediator",
+        "thoughts": [
+            "Is amazed at how patient r_c is",
+            "Is following in r_c's pawsteps"
+        ],
+        "random_status_constraint": [
+            "caretaker"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    }
+]

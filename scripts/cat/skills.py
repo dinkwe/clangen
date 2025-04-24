@@ -856,6 +856,16 @@ class CatSkills:
             "tertiary": self.tertiary.get_save_string() if self.tertiary else None,
             "hidden": self.hidden.name if self.hidden else None,
         }
+    def gain_new_skill_as_kit(self, skill_string, tier):
+        skill_save = skill_string
+        skill_save += ",1,False"
+        temp = Skill.generate_from_save_string(skill_save)
+        if tier == "secondary" and self.secondary == None:
+            if temp != self.primary:
+                self.secondary = temp
+        elif tier == "tertiary" and self.tertiary == None:
+            if temp != self.primary and temp != self.secondary:
+                self.tertiary = temp
 
     def skill_string(self, short=False):
         output = ""

@@ -5,6 +5,9 @@
     "apprentice": "paw",
     "medicine cat apprentice": "paw",
     "mediator apprentice": "paw",
+    "caretaker apprentice": "paw",
+    "messenger apprentice": "paw",
+    "denkeeper apprentice": "paw",
     "leader": "star"
     },
   "normal_suffixes" : [

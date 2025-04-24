@@ -16,6 +16,7 @@ from .ListScreen import ListScreen
 from .MakeClanScreen import MakeClanScreen
 from .MedDenScreen import MedDenScreen
 from .MediationScreen import MediationScreen
+from .CaretakerScreen import CaretakerScreen
 from .PatrolScreen import PatrolScreen
 from .ProfileScreen import ProfileScreen
 from .RelationshipScreen import RelationshipScreen
@@ -84,6 +85,8 @@ class AllScreens:
     relationship_screen = RelationshipScreen("relationship screen")
     family_tree_screen = FamilyTreeScreen("family tree screen")
     mediation_screen = MediationScreen("mediation screen")
+    
+    caretaker_screen = CaretakerScreen("caretaker screen")
     change_gender_screen = ChangeGenderScreen("change gender screen")
 
     @classmethod
@@ -122,5 +125,6 @@ class AllScreens:
         )
         cls.relationship_screen = RelationshipScreen("relationship screen")
         cls.family_tree_screen = FamilyTreeScreen("family tree screen")
+        cls.caretaker_screen = CaretakerScreen("caretaker screen")
         cls.mediation_screen = MediationScreen("mediation screen")
         cls.change_gender_screen = ChangeGenderScreen("change gender screen")

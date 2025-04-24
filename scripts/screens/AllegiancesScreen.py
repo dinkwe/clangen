@@ -137,6 +137,9 @@ class AllegiancesScreen(Screens):
         living_apprentices = []
         living_kits = []
         living_elders = []
+        living_messengers = []
+        living_caretakers = []
+        living_denkeepers = []
         for cat in living_cats:
             if cat.status == "medicine cat":
                 living_meds.append(cat)
@@ -148,8 +151,17 @@ class AllegiancesScreen(Screens):
                 "apprentice",
                 "medicine cat apprentice",
                 "mediator apprentice",
+                "caretaker apprentice",
+                "messenger apprentice",
+                "denkeeper apprentice"
             ]:
                 living_apprentices.append(cat)
+            elif cat.status == "caretaker":
+                living_caretakers.append(cat)
+            elif cat.status == "denkeeper":
+                living_denkeepers.append(cat)
+            elif cat.status == "messenger":
+                living_messengers.append(cat)
             elif cat.status in ["kitten", "newborn"]:
                 living_kits.append(cat)
             elif cat.status == "elder":
@@ -218,6 +230,31 @@ class AllegiancesScreen(Screens):
             _box[1] = "\n".join([self.generate_one_entry(i) for i in living_warriors])
             outputs.append(_box)
 
+        # other Box:
+        if living_caretakers:
+            _box = ["", ""]
+            _box[
+                0
+            ] = f"<b><u>{i18n.t('general.caretaker', count=len(living_caretakers)).upper()}</u></b>"
+
+            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_caretakers])
+            outputs.append(_box)
+        if living_denkeepers:
+            _box = ["", ""]
+            _box[
+                0
+            ] = f"<b><u>{i18n.t('general.denkeeper', count=len(living_denkeepers)).upper()}</u></b>"
+
+            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_denkeepers])
+            outputs.append(_box)
+        if living_messengers:
+            _box = ["", ""]
+            _box[
+                0
+            ] = f"<b><u>{i18n.t('general.messenger', count=len(living_messengers)).upper()}</u></b>"
+
+            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_messengers])
+            outputs.append(_box)
         # Apprentice Box:
         if living_apprentices:
             _box = ["", ""]

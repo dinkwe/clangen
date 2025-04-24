@@ -76,6 +76,15 @@ class RoleScreen(Screens):
             elif event.ui_element == self.switch_mediator:
                 self.the_cat.status_change("mediator", resort=True)
                 self.update_selected_cat()
+            elif event.ui_element == self.switch_caretaker:
+                self.the_cat.status_change("caretaker", resort=True)
+                self.update_selected_cat()
+            elif event.ui_element == self.switch_denkeeper:
+                self.the_cat.status_change("denkeeper", resort=True)
+                self.update_selected_cat()
+            elif event.ui_element == self.switch_messenger:
+                self.the_cat.status_change("messenger", resort=True)
+                self.update_selected_cat()
             elif event.ui_element == self.switch_warrior_app:
                 self.the_cat.status_change("apprentice", resort=True)
                 self.update_selected_cat()
@@ -84,6 +93,15 @@ class RoleScreen(Screens):
                 self.update_selected_cat()
             elif event.ui_element == self.switch_mediator_app:
                 self.the_cat.status_change("mediator apprentice", resort=True)
+                self.update_selected_cat()
+            elif event.ui_element == self.switch_caretaker_app:
+                self.the_cat.status_change("caretaker apprentice", resort=True)
+                self.update_selected_cat()
+            elif event.ui_element == self.switch_denkeeper_app:
+                self.the_cat.status_change("denkeeper apprentice", resort=True)
+                self.update_selected_cat()
+            elif event.ui_element == self.switch_messenger_app:
+                self.the_cat.status_change("messenger apprentice", resort=True)
                 self.update_selected_cat()
 
         elif event.type == pygame.KEYDOWN and game.settings["keybinds"]:
@@ -186,6 +204,27 @@ class RoleScreen(Screens):
             object_id="@buttonstyles_ladder_middle",
             anchors={"top_target": self.switch_med_cat},
         )
+        self.switch_caretaker = UISurfaceImageButton(
+            ui_scale(pygame.Rect((402, 0), (172, 36))),
+            "screens.role.switch_caretaker",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_mediator},
+        )
+        self.switch_denkeeper = UISurfaceImageButton(
+            ui_scale(pygame.Rect((402, 0), (172, 36))),
+            "screens.role.switch_denkeeper",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_caretaker},
+        )
+        self.switch_messenger = UISurfaceImageButton(
+            ui_scale(pygame.Rect((402, 0), (172, 36))),
+            "screens.role.switch_messenger",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_denkeeper},
+        )
 
         # In-TRAINING ROLES:
         self.switch_warrior_app = UISurfaceImageButton(
@@ -212,6 +251,33 @@ class RoleScreen(Screens):
             get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 52)),
             object_id="@buttonstyles_ladder_middle",
             anchors={"top_target": self.switch_med_app},
+            text_is_multiline=True,
+            text_layer_object_id="@buttonstyles_ladder_multiline",
+        )
+        self.switch_caretaker_app = UISurfaceImageButton(
+            ui_scale(pygame.Rect((579, 0), (172, 52))),
+            "screens.role.switch_caretaker_app",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 52)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_mediator_app},
+            text_is_multiline=True,
+            text_layer_object_id="@buttonstyles_ladder_multiline",
+        )
+        self.switch_denkeeper_app = UISurfaceImageButton(
+            ui_scale(pygame.Rect((579, 0), (172, 52))),
+            "screens.role.switch_denkeeper_app",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 52)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_caretaker_app},
+            text_is_multiline=True,
+            text_layer_object_id="@buttonstyles_ladder_multiline",
+        )
+        self.switch_messenger_app = UISurfaceImageButton(
+            ui_scale(pygame.Rect((579, 0), (172, 52))),
+            "screens.role.switch_messenger_app",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 52)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.switch_denkeeper_app},
             text_is_multiline=True,
             text_layer_object_id="@buttonstyles_ladder_multiline",
         )
@@ -242,10 +308,13 @@ class RoleScreen(Screens):
             short_name,
             object_id=get_text_box_theme("#text_box_30"),
         )
-
+        
+        trait_text = i18n.t(f"cat.personality.{self.the_cat.personality.trait}")
+        if self.the_cat.personality.trait != self.the_cat.personality.trait2:
+            trait_text += " & " + i18n.t(f"cat.personality.{self.the_cat.personality.trait2}")
         text = [
             "<b>" + i18n.t(f"general.{self.the_cat.status}", count=1) + "</b>",
-            i18n.t(f"cat.personality.{self.the_cat.personality.trait}"),
+            trait_text,
             i18n.t("general.moons_age", count=self.the_cat.moons)
             + "  |  "
             + self.the_cat.genderalign,
@@ -304,6 +373,12 @@ class RoleScreen(Screens):
             "kitten": "kit_icon.png",
             "newborn": "kit_icon.png",
             "elder": "elder_icon.png",
+            "caretaker": "care_icon.png",
+            "caretaker apprentice": "care_app_icon.png",
+            "messenger": "messenger_icon.png",
+            "messenger apprentice": "messenger_app_icon.png",
+            "denkeeper": "denkeeper_icon.png",
+            "denkeeper apprentice": "denkeeper_app_icon.png",
         }
 
         if self.the_cat.status in paths:
@@ -338,196 +413,115 @@ class RoleScreen(Screens):
             deputy_invalid = game.clan.deputy.dead or game.clan.deputy.outside
         else:
             deputy_invalid = True
+            
+        #start by disabling all
+        self.promote_leader.disable()
+        self.promote_deputy.disable()
+        
+        self.switch_warrior.disable()
+        self.switch_med_cat.disable()
+        self.switch_mediator.disable()
+        self.switch_caretaker.disable()
+        self.switch_messenger.disable()
+        self.switch_denkeeper.disable()
+        self.retire.disable()
+        
+        self.switch_med_app.disable()
+        self.switch_warrior_app.disable()
+        self.switch_mediator_app.disable()
+        self.switch_caretaker_app.disable()
+        self.switch_messenger_app.disable()
+        self.switch_denkeeper_app.disable()
 
-        if self.the_cat.status == "apprentice":
-            # LEADERSHIP
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.disable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
-            self.retire.disable()
-
-            # In-TRAINING ROLES:
+        #first check for training
+        if self.the_cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice"]:
+            
+            #ENABLE ALL TRAININGS
             self.switch_med_app.enable()
-            self.switch_warrior_app.disable()
+            self.switch_warrior_app.enable()
             self.switch_mediator_app.enable()
-        elif self.the_cat.status == "warrior":
-            # LEADERSHIP
+            self.switch_caretaker_app.enable()
+            self.switch_messenger_app.enable()
+            self.switch_denkeeper_app.enable()
+            
+            if self.the_cat.status == "apprentice":
+                self.switch_warrior_app.disable()
+            elif self.the_cat.status == "medicine cat apprentice":
+                self.switch_med_app.disable()
+            elif self.the_cat.status == "mediator apprentice":
+                self.switch_mediator_app.disable()
+            elif self.the_cat.status == "caretaker apprentice":
+                self.switch_caretaker_app.disable()
+            elif self.the_cat.status == "messenger apprentice":
+                self.switch_messenger_app.disable()
+            elif self.the_cat.status == "denkeeper apprentice":
+                self.switch_denkeeper_app.disable()
+                
+        #now we check for leader/deputy eligible roles
+        elif self.the_cat.status in ["elder","warrior", "mediator", "messenger", "caretaker", "denkeeper"]:
             if leader_invalid:
                 self.promote_leader.enable()
-            else:
-                self.promote_leader.disable()
 
             if deputy_invalid:
                 self.promote_deputy.enable()
-            else:
-                self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.disable()
+            
+            self.switch_warrior.enable()
             self.switch_med_cat.enable()
             self.switch_mediator.enable()
+            self.switch_caretaker.enable()
+            self.switch_messenger.enable()
+            self.switch_denkeeper.enable()
             self.retire.enable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
-        elif self.the_cat.status == "deputy":
-            if leader_invalid:
-                self.promote_leader.enable()
-            else:
-                self.promote_leader.disable()
-
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.enable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
-            self.retire.enable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
+            
+            if self.the_cat.status == "elder":
+                self.retire.disable()
+            elif self.the_cat.status == "warrior":
+                self.switch_warrior.disable()
+            elif self.the_cat.status == "mediator":
+                self.switch_mediator.disable()
+            elif self.the_cat.status == "caretaker":
+                self.switch_caretaker.disable()
+            elif self.the_cat.status == "messenger":
+                self.switch_messenger.disable()
+            elif self.the_cat.status == "denkeeper":
+                self.switch_denkeeper.disable()
+        
         elif self.the_cat.status == "medicine cat":
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
             self.switch_warrior.enable()
-            self.switch_med_cat.disable()
             self.switch_mediator.enable()
+            self.switch_caretaker.enable()
+            self.switch_messenger.enable()
+            self.switch_denkeeper.enable()
             self.retire.enable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
-        elif self.the_cat.status == "mediator":
+        
+        elif self.the_cat.status == "deputy":
+            self.switch_warrior.enable()
+            self.retire.enable()
+            
             if leader_invalid:
                 self.promote_leader.enable()
-            else:
-                self.promote_leader.disable()
-
-            if deputy_invalid:
-                self.promote_deputy.enable()
-            else:
-                self.promote_deputy.disable()
-
-            self.switch_warrior.enable()
-            self.switch_med_cat.enable()
-            self.switch_mediator.disable()
-            self.retire.enable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
-        elif self.the_cat.status == "elder":
-            if leader_invalid:
-                self.promote_leader.enable()
-            else:
-                self.promote_leader.disable()
-
-            if deputy_invalid:
-                self.promote_deputy.enable()
-            else:
-                self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.enable()
-            self.switch_med_cat.enable()
-            self.switch_mediator.enable()
-            self.retire.disable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
-        elif self.the_cat.status == "medicine cat apprentice":
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.disable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
-            self.retire.disable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.enable()
-            self.switch_mediator_app.enable()
-        elif self.the_cat.status == "mediator apprentice":
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.disable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
-            self.retire.disable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.enable()
-            self.switch_warrior_app.enable()
-            self.switch_mediator_app.disable()
+                
         elif self.the_cat.status == "leader":
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
             self.switch_warrior.enable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
             self.retire.enable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
-        else:
-            self.promote_leader.disable()
-            self.promote_deputy.disable()
-
-            # ADULT CAT ROLES
-            self.switch_warrior.disable()
-            self.switch_med_cat.disable()
-            self.switch_mediator.disable()
-            self.retire.disable()
-
-            # In-TRAINING ROLES:
-            self.switch_med_app.disable()
-            self.switch_warrior_app.disable()
-            self.switch_mediator_app.disable()
+            
 
     def get_role_blurb(self):
-        if self.the_cat.status == "warrior":
-            output = "screens.role.blurb_warrior"
-        elif self.the_cat.status == "leader":
-            output = "screens.role.blurb_leader"
-        elif self.the_cat.status == "deputy":
-            output = "screens.role.blurb_deputy"
+        #the one word fellas are easily
+        if self.the_cat.status in ["warrior", "leader", "deputy", "elder" "kitten", "newborn", "apprentice",  "caretaker", "denkeeper", "messenger"]:
+            output = "screens.role.blurb_" + self.the_cat.status
         elif self.the_cat.status == "medicine cat":
             output = "screens.role.blurb_medicine_cat"
-        elif self.the_cat.status == "mediator":
-            output = "screens.role.blurb_mediator"
-        elif self.the_cat.status == "elder":
-            output = "screens.role.blurb_elder"
-        elif self.the_cat.status == "apprentice":
-            output = "screens.role.blurb_apprentice"
         elif self.the_cat.status == "medicine cat apprentice":
             output = "screens.role.blurb_medcat_app"
         elif self.the_cat.status == "mediator apprentice":
             output = "screens.role.blurb_mediator_app"
-        elif self.the_cat.status == "kitten":
-            output = "screens.role.blurb_kitten"
-        elif self.the_cat.status == "newborn":
-            output = "screens.role.blurb_newborn"
+        elif self.the_cat.status == "messenger apprentice":
+            output = "screens.role.blurb_messenger_app"
+        elif self.the_cat.status == "denkeeper apprentice":
+            output = "screens.role.blurb_denkeeper_app"
+        elif self.the_cat.status == "caretaker apprentice":
+            output = "screens.role.blurb_caretaker_app"
         else:
             output = "screens.role.blurb_unknown"
 
@@ -548,6 +542,12 @@ class RoleScreen(Screens):
         del self.promote_deputy
         self.switch_warrior.kill()
         del self.switch_warrior
+        self.switch_messenger.kill()
+        del self.switch_messenger
+        self.switch_caretaker.kill()
+        del self.switch_caretaker
+        self.switch_denkeeper.kill()
+        del self.switch_denkeeper
         self.switch_med_cat.kill()
         del self.switch_med_cat
         self.switch_mediator.kill()
@@ -560,6 +560,12 @@ class RoleScreen(Screens):
         del self.switch_warrior_app
         self.switch_mediator_app.kill()
         del self.switch_mediator_app
+        self.switch_messenger_app.kill()
+        del self.switch_messenger_app
+        self.switch_caretaker_app.kill()
+        del self.switch_caretaker_app
+        self.switch_denkeeper_app.kill()
+        del self.switch_denkeeper_app
         self.blurb_background.kill()
         del self.blurb_background
 

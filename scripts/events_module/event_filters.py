@@ -95,7 +95,7 @@ def event_for_tags(tags: list, cat, other_cat=None) -> bool:
             if rank == "apps":
                 if not get_alive_status_cats(
                         cat,
-                        ["apprentice", "medicine cat apprentice", "mediator apprentice"]):
+                        ["apprentice", "medicine cat apprentice", "mediator apprentice", "caretaker apprentice", "messenger apprentice", "denkeeper apprentice"]):
                     return False
                 else:
                     continue

@@ -81,6 +81,21 @@
             "Allow warriors and elders to choose to become mediators",
             "Warriors and elders will have a chance to become mediators upon timeskip.",
             false
+        ],
+        "become_messenger": [
+            "Allow warriors and elders to choose to become messenger",
+            "Warriors and elders will have a chance to become messengers upon timeskip.",
+            false
+        ],
+        "become_denkeeper": [
+            "Allow warriors and elders to choose to become denkeeper",
+            "Warriors and elders will have a chance to become denkeepers upon timeskip.",
+            false
+        ],
+        "become_caretaker": [
+            "Allow warriors and elders to choose to become caretaker",
+            "Warriors and elders will have a chance to become caretakers upon timeskip.",
+            false
         ]
     },
     "relation": {

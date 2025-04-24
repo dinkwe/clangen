@@ -168,7 +168,16 @@ class FreshkillPile:
         needed_prey += sum(
             [PREY_REQUIREMENT[cat.status] for cat in living_kits if not cat.outside]
         )
-
+        #reduce needed_prey via denkeepers
+        for cat in living_cats:
+                if cat.status == "denkeeper":
+                    #a grandmaster denkeeper can knock out 7.5% of needed prey
+                    needed_prey -= (cat.experience/200 * (needed_prey/30))
+                elif cat.status == "denkeeper apprentice":
+                    needed_prey -= (cat.experience/200 * (needed_prey/60))
+        
+        if needed_prey < 0:
+            needed_prey=0
         self.needed_prey = needed_prey
 
     def time_skip(self, living_cats: list, event_list: list) -> None:

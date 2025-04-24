@@ -199,6 +199,11 @@ class ProfileScreen(Screens):
                     and event.ui_element == self.profile_elements["mediation"]
             ):
                 self.change_screen("mediation screen")
+            elif (
+                    "care" in self.profile_elements
+                    and event.ui_element == self.profile_elements["care"]
+            ):
+                self.change_screen("caretaker screen")
             elif event.ui_element == self.profile_elements["favourite_button"]:
                 self.the_cat.favourite = not self.the_cat.favourite
                 self.profile_elements["favourite_button"].change_object_id(
@@ -338,6 +343,11 @@ class ProfileScreen(Screens):
                             "Is distraught after being sent to the Place of No Stars"
                         )
 
+                self.clear_profile()
+                self.build_profile()
+                self.update_disabled_buttons_and_text()
+            elif event.ui_element == self.reincarnate_button:     
+                self.the_cat.get_reincarnation()
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
@@ -708,6 +718,15 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["mediation"].disable()
+        elif self.the_cat.status in ["caretaker", "caretaker apprentice"]:
+            self.profile_elements["care"] = UIImageButton(
+                ui_scale(pygame.Rect((383, 110), (34, 34))),
+                "",
+                object_id="#care_button",
+                manager=MANAGER,
+            )
+            if self.the_cat.dead or self.the_cat.outside:
+                self.profile_elements["care"].disable()
 
     def generate_column1(self, the_cat):
         """Generate the left column information"""
@@ -768,6 +787,11 @@ class ProfileScreen(Screens):
             )
             # NEWLINE ----------
 
+        #reincarnation
+        if the_cat.past_life:
+            output += "\n" + "reincarnation of " + str(Cat.fetch_cat(the_cat.past_life).name)
+        if the_cat.reincarnation:
+            output += "\n" + "reincarnated as " + str(Cat.fetch_cat(the_cat.reincarnation).name)
         # PARENTS
         all_parents = [Cat.fetch_cat(i) for i in the_cat.get_parents()]
         if all_parents:
@@ -2339,6 +2363,14 @@ class ProfileScreen(Screens):
                 starting_height=2,
                 manager=MANAGER,
             )
+            self.reincarnate_button = UIImageButton(
+                ui_scale(pygame.Rect((578, 0), (172, 36))),
+                "screens.profile.reincarnate",
+                object_id="#kill_cat_button",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={"top_target": self.kill_cat_button},
+            )
             self.destroy_accessory_button = UISurfaceImageButton(
                 ui_scale(pygame.Rect((578, 0), (172, 36))),
                 "screens.profile.destroy_accessory",
@@ -2346,7 +2378,7 @@ class ProfileScreen(Screens):
                 object_id="@buttonstyles_ladder_bottom",
                 starting_height=2,
                 manager=MANAGER,
-                anchors={"top_target": self.kill_cat_button},
+                anchors={"top_target": self.reincarnate_button},
             )
 
             # These are a placeholders, to be killed and recreated in self.update_disabled_buttons_and_text().
@@ -2474,7 +2506,10 @@ class ProfileScreen(Screens):
                 manager=MANAGER,
             )
             text = "screens.profile.exile"
+            self.reincarnate_button.disable()
             if self.the_cat.dead:
+                if not self.the_cat.reincarnation:
+                    self.reincarnate_button.enable()
                 text = "screens.profile.exile_df"
                 layer = self.df
                 if self.the_cat.df:
@@ -2630,6 +2665,7 @@ class ProfileScreen(Screens):
                 self.cis_trans_button.kill()
         elif self.open_tab == "dangerous":
             self.kill_cat_button.kill()
+            self.reincarnate_button.kill()
             self.exile_cat_button.kill()
             if hasattr(self, "exile_layer"):
                 self.exile_layer.kill()

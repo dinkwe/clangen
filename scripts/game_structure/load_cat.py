@@ -69,6 +69,12 @@ def json_load():
                 status=cat["status"],
                 parent1=cat["parent1"],
                 parent2=cat["parent2"],
+                past_life=(
+                    cat["past_life"] if "past_life" in cat else False
+                ),
+                reincarnation=(
+                    cat["reincarnation"] if "reincarnation" in cat else False
+                ),
                 moons=cat["moons"],
                 eye_colour=cat["eye_colour"],
                 loading_cat=True,

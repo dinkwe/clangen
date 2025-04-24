@@ -71,7 +71,12 @@
 
         "outsider1": "m_c was born outside of a Clan.",
         "outsider2": "m_c was born outside of a Clan, but at {PRONOUN/m_c/poss} birth one parent was a member of a Clan.",
-        "outsider3": "m_c was born outside of a Clan, while {PRONOUN/m_c/poss} parent was lost."
+        "outsider3": "m_c was born outside of a Clan, while {PRONOUN/m_c/poss} parent was lost.",
+
+        
+        "reincarnation_starclan": "m_c was born again by StarClan's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
+        "reincarnation_df": "m_c was born again by the Dark Forest's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
+        "reincarnation_unknown": "m_c was born again after wandering as a spirit. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in."
   },
 
   "backstory_display": {
@@ -85,7 +90,8 @@
     "outsider_backstories": "formerly an outsider",
     "former_clancat_backstories": "originally from another Clan",
     "orphaned_backstories": "orphaned",
-    "abandoned_backstories": "abandoned"
+    "abandoned_backstories": "abandoned",
+    "reincarnation_backstories": "reincarnated"
   },
 
   "backstory_categories": {
@@ -124,6 +130,9 @@
     ],
     "outsider_backstories": [
       "outsider1", "outsider2", "outsider3"
+    ],
+    "reincarnation_backstories": [
+      "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"
     ]
   },
 

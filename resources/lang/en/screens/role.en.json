@@ -20,6 +20,18 @@
         "blurb_mediator_app": "%{name} is a <b>mediator apprentice</b>, training to become a full mediator. Mediators are in charge of handling disagreements both within the Clan and between Clans. Mediator apprentices are often chosen for their quick thinking and steady personality. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
         "blurb_kitten": "%{name} is a <b>kitten</b>. All cats below the age of six moons are considered kits. Kits are prohibited from leaving camp in order to protect them from the dangers of the wild. Although they don't have any official duties in the Clan, they are expected to learn the legends and traditions of their Clan. They are protected by every cat in the Clan and always eat first. Kits usually take the suffix \"-kit\".",
         "blurb_newborn": "%{name} is a <b>newborn kitten</b>. All cats below the age of six moons are considered kits. Kits are prohibited from leaving camp in order to protect them from the dangers of the wild. Although they don't have any official duties in the Clan, they are expected to learn the legends and traditions of their Clan. They are protected by every cat in the Clan and always eat first. Kits usually take the suffix \"-kit\".",
-        "blurb_unknown": "%{name} has an unknown rank. I guess they want to make their own way in life!"
+        "blurb_unknown": "%{name} has an unknown rank. I guess they want to make their own way in life!",
+        "switch_messenger": "switch to messenger",
+        "blurb_messenger": "%{name} is a <b>messenger</b>. Messengers are responsible for carrying news between Clans, as well as coordinating during emergencies. Some messengers train as apprentices to serve their Clan, while others may choose to become messengers later in life.",
+        "switch_caretaker": "switch to caretaker",
+        "blurb_caretaker": "%{name} is a <b>caretaker</b>. Caretakers are responsible for watching over kits until they are old enough to be apprentices. Some caretakers train as apprentices to serve their Clan, while others may choose to become caretakers later in life.",
+        "switch_denkeeper": "switch to denkeeper",
+        "blurb_denkeeper": "%{name} is a <b>denkeeper</b>. Denkeepers are responsible for managing the camp itself: monitoring the prey pile, rebuilding dens, etc. Some denkeepers train as apprentices to serve their Clan, while others may choose to become denkeepers later in life.",
+        "switch_caretaker_app": "switch to caretaker\napprentice",
+        "blurb_caretaker_app": "%{name} is a <b>caretaker apprentice</b>, training to become a full caretaker. Caretakers are responsbile for caring for kits. Caretaker apprentices are often chosen for their kindness and responsibility. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
+        "switch_messenger_app": "switch to messenger\napprentice",
+        "blurb_messenger_app": "%{name} is a <b>messenger apprentice</b>, training to become a full messenger. Messengers carry news across borders and send out alerts during emergencies. Messengers apprentices are often chosen for their speed and coordination. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
+        "switch_denkeeper_app": "switch to denkeeper\napprentice",
+        "blurb_denkeeper_app": "%{name} is a <b>denkeeper apprentice</b>, training to become a full denkeeper. Denkeepers manage the camp itself, reinforcing dens and keeping track of the prey pile. Denkeepers apprentices are often chosen for their dedication and responsibility. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. "
     }
 }

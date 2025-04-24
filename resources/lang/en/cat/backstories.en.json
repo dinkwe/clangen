@@ -71,7 +71,11 @@
         "former_clancat_backstories": "originally from another Clan",
         "orphaned_backstories": "orphaned",
         "abandoned_backstories": "abandoned",
+        "reincarnation_backstories": "reincarnated",
         "beginning_clanborn": "{PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} born on moon %{birth_moon} during %{birth_season}.",
-        "beginning_cotc": "{PRONOUN/m_c/subject/CAP} joined the Clan on moon %{moon} at the age of %{join_age}."
+        "beginning_cotc": "{PRONOUN/m_c/subject/CAP} joined the Clan on moon %{moon} at the age of %{join_age}.",
+        "reincarnation_starclan": "m_c was born again by StarClan's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
+        "reincarnation_df": "m_c was born again by the Dark Forest's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
+        "reincarnation_unknown": "m_c was born again after wandering as a spirit. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in."
     }
 }

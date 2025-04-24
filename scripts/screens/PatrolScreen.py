@@ -92,6 +92,23 @@ class PatrolScreen(Screens):
             # self.change_screen('list screen')
 
     def handle_choose_cats_events(self, event):
+        #do we have denkeepers or messengers
+        yay_messengers = False
+        yay_denkeepers = False
+        if any(
+                    (
+                        cat.status in ["messenger", "messenger apprentice"]
+                        for cat in self.current_patrol
+                    )
+                ):
+                    yay_messengers = True
+        elif any(
+                    (
+                        cat.status in ["denkeeper", "denkeeper apprentice"]
+                        for cat in self.current_patrol
+                    )
+                ):
+                    yay_denkeepers = True
         if event.ui_element == self.elements["random"]:
             if self.able_cats:
                 self.selected_cat = choice(self.able_cats)
@@ -119,22 +136,43 @@ class PatrolScreen(Screens):
             if self.selected_cat in self.current_patrol:
                 self.current_patrol.remove(self.selected_cat)
             else:
-                self.current_patrol.append(self.selected_cat)
+                #messengers cannot patrol with denkeepers
+                if self.selected_cat.status in ["denkeeper", "denkeeper apprentice"] and yay_messengers:
+                        print("denkeepers cannot patrol borders!")
+                elif self.selected_cat.status in ["messenger", "messenger apprentice"] and yay_denkeepers:
+                        print("messengers cannot hunt!")
+                else:
+                    self.current_patrol.append(self.selected_cat)
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements["add_one"]:
             if len(self.current_patrol) < 6:
+                able_temp = []
+                if yay_messengers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                    ]
+                elif yay_denkeepers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["messenger", "messenger apprentice"]
+                    ]
+                else:
+                    able_temp = self.able_cats
                 if not game.clan.clan_settings["random med cat"]:
                     able_no_med = [
                         cat
-                        for cat in self.able_cats
-                        if cat.status not in ["medicine cat", "medicine cat apprentice"]
+                        for cat in able_temp
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
                     ]
                     if len(able_no_med) == 0:
-                        able_no_med = self.able_cats
+                        able_no_med = able_temp
                     self.selected_cat = choice(able_no_med)
                 else:
-                    if self.able_cats:
+                    if able_temp:
                         self.selected_cat = choice(self.able_cats)
                     else:
                         print(
@@ -146,32 +184,62 @@ class PatrolScreen(Screens):
             self.update_button()
         elif event.ui_element == self.elements["add_three"]:
             if len(self.current_patrol) <= 3:
+                able_temp = []
+                if yay_messengers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                    ]
+                elif yay_denkeepers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["messenger", "messenger apprentice"]
+                    ]
+                else:
+                    able_temp = self.able_cats
                 if not game.clan.clan_settings["random med cat"]:
                     able_no_med = [
                         cat
-                        for cat in self.able_cats
-                        if cat.status not in ["medicine cat", "medicine cat apprentice"]
+                        for cat in able_temp
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
                     ]
                     if len(able_no_med) < 3:
-                        able_no_med = self.able_cats
+                        able_no_med = able_temp
                     self.current_patrol += sample(able_no_med, k=3)
                 else:
-                    self.current_patrol += sample(self.able_cats, k=3)
+                    self.current_patrol += sample(able_temp, k=3)
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements["add_six"]:
             if len(self.current_patrol) == 0:
+                able_temp = []
+                if yay_messengers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                    ]
+                elif yay_denkeepers:
+                    able_temp = [
+                        cat
+                        for cat in self.able_cats
+                        if cat.status not in ["messenger", "messenger apprentice"]
+                    ]
+                else:
+                    able_temp = self.able_cats
                 if not game.clan.clan_settings["random med cat"]:
                     able_no_med = [
                         cat
-                        for cat in self.able_cats
-                        if cat.status not in ["medicine cat", "medicine cat apprentice"]
+                        for cat in able_temp
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
                     ]
                     if len(able_no_med) < 6:
-                        able_no_med = self.able_cats
+                        able_no_med = able_temp
                     self.current_patrol += sample(able_no_med, k=6)
                 else:
-                    self.current_patrol += sample(self.able_cats, k=6)
+                    self.current_patrol += sample(able_temp, k=6)
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements["remove_all"]:
@@ -397,6 +465,22 @@ class PatrolScreen(Screens):
                     manager=MANAGER,
                     anchors={"centerx": "centerx"},
                 )
+            
+            if self.selected_cat != None:
+                if self.selected_cat.status in ["denkeeper", "denkeeper apprentice"] and any(
+                    (
+                        cat.status in ["messenger", "messenger apprentice"]
+                        for cat in self.current_patrol
+                    )
+                ):
+                    self.elements["add_remove_cat"].disable()
+                elif self.selected_cat.status in ["messenger", "messenger apprentice"] and any(
+                    (
+                        cat.status in ["denkeeper", "denkeeper apprentice"]
+                        for cat in self.current_patrol
+                    )
+                ):
+                    self.elements["add_remove_cat"].disable()
 
             # Update start patrol button
             if not self.current_patrol:
@@ -411,17 +495,34 @@ class PatrolScreen(Screens):
             self.elements["add_six"].enable()
             self.elements["random"].enable()
 
-            # making sure meds don't get the option for other patrols
+            # making sure meds and caretakers don't get the option for other patrols
             if any(
                 (
-                    cat.status in ["medicine cat", "medicine cat apprentice"]
+                    cat.status in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
                     for cat in self.current_patrol
                 )
             ):
                 self.patrol_type = "med"
+            # making sure messengers don't get the option for other patrols UNLESS theres a med
+            elif any(
+                (
+                    cat.status in ["messenger", "messenger apprentice"]
+                    for cat in self.current_patrol
+                )
+            ):
+                self.patrol_type = "border"
+            # making sure denkeepers don't get the option for other patrols UNLESS theres a med
+            elif any(
+                (
+                    cat.status in ["denkeeper", "denkeeper apprentice"]
+                    for cat in self.current_patrol
+                )
+            ):
+                self.patrol_type = "hunting"
             else:
                 if self.patrol_type == "med":
                     self.patrol_type = "general"
+            
 
             self.elements["paw"].enable()
             self.elements["mouse"].enable()
@@ -854,7 +955,6 @@ class PatrolScreen(Screens):
                 and x.skills.secondary.get_short_skill() not in skills
             ):
                 skills.append(x.skills.secondary.get_short_skill())
-            
             if (
                 x.skills.tertiary
                 and x.skills.tertiary.get_short_skill() not in skills
@@ -1287,7 +1387,7 @@ class PatrolScreen(Screens):
             # Draw mentor or apprentice
             relation = "should not display"
             if (
-                self.selected_cat.status in ["medicine cat apprentice", "apprentice"]
+                self.selected_cat.status in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]
                 or self.selected_cat.apprentice != []
             ):
                 self.elements["app_mentor_frame"] = pygame_gui.elements.UIImage(
@@ -1298,7 +1398,7 @@ class PatrolScreen(Screens):
 
                 if (
                     self.selected_cat.status
-                    in ["medicine cat apprentice", "apprentice"]
+                    in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]
                     and self.selected_cat.mentor is not None
                 ):
                     self.app_mentor = Cat.fetch_cat(self.selected_cat.mentor)

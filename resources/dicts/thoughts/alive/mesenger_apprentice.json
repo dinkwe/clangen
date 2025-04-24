@@ -1,0 +1,41 @@
+[
+    {
+        "id": "messenger_apprentice_gen",
+        "thoughts": [
+            "Is enjoying learning about being a messenger",
+            "wants to be the fastest cat in the Clan",
+            "Is stretching {PRONOUN/m_c/poss} limbs in preparation for a run",
+            "Feels pride for {PRONOUN/m_c/poss} work",
+            "Wonders if being a warrior would have been more fun",
+            "Just came back from delivering new to another Clan",
+            "Informs the Clan about a badger sighting near the border",
+            "Wonders if {PRONOUN/m_c/subject} would've been a better messenger if {PRONOUN/m_c/subject} had wings"
+        ]
+    },
+    {
+        "id": "mediator_to_alive_leader",
+        "thoughts": [
+            "Is running errands for r_c",
+            "Is delivering an important message from one clan leader to another"
+        ],
+        "random_status_constraint": [
+            "leader"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "mediator_app_alive_mediator",
+        "thoughts": [
+            "Is amazed at how well fast r_c is",
+            "Is following in r_c's pawsteps"
+        ],
+        "random_status_constraint": [
+            "messenger"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    }
+]

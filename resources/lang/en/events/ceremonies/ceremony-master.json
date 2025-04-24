@@ -45,7 +45,10 @@
       "careful",
       "insecure",
       "nervous",
-      "gloomy"
+      "gloomy",
+      "fearful",
+      "anxious",
+      "sensitive"
     ],
     "m_c carefully touches noses with {PRONOUN/m_c/poss} new mentor (mentor), looking quite intimidated and nervous."
   ],
@@ -68,7 +71,9 @@
       "competitive",
       "cunning",
       "sincere",
-      "flamboyant"
+      "flamboyant",
+      "dynamic",
+      "dramatic"
     ],
     "m_c excitedly touches noses with {PRONOUN/m_c/poss} new mentor (mentor), looking quite eager to start training."
   ],
@@ -86,7 +91,8 @@
       "competitive",
       "cunning",
       "sincere",
-      "flamboyant"
+      "flamboyant",
+      "dedicated"
     ],
     "m_c strides up to {PRONOUN/m_c/poss} new mentor, looking very proud and excited to be apprenticed to (mentor)."
   ],
@@ -107,7 +113,8 @@
       "strange",
       "troublesome",
       "oblivious",
-      "flamboyant"
+      "flamboyant",
+      "youthful"
     ],
     "In {PRONOUN/m_c/poss} eagerness, m_c accidentally shoves {PRONOUN/m_c/poss} nose into (mentor)'s so hard that (mentor) flinches back in surprise. m_c sheepishly apologizes and the two have a good laugh about it."
   ],
@@ -122,7 +129,9 @@
       "insecure",
       "nervous",
       "thoughtful",
-      "gloomy"
+      "gloomy",
+      "anxious",
+      "clumsy"
     ],
     "(mentor) sees how nervous m_c is and whispers a quiet encouragement to {PRONOUN/m_c/object} as they touch noses, promising to be a good mentor to {PRONOUN/m_c/object}."
   ],
@@ -159,7 +168,9 @@
       "sneaky",
       "strict",
       "wise",
-      "cunning"
+      "cunning",
+      "sadistic",
+      "cool"
     ],
     "m_c remains calm as {PRONOUN/m_c/subject} {VERB/m_c/touch/touches} noses with (mentor), but {PRONOUN/m_c/poss} twitching tail gives away how excited {PRONOUN/m_c/subject} truly {VERB/m_c/are/is}."
   ],
@@ -201,7 +212,9 @@
       "strict",
       "vengeful",
       "wise",
-      "cunning"
+      "cunning",
+      "scheming",
+      "cool"
     ],
     "m_c sits up straighter as {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} called forward to be made an apprentice. While {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to look calm and collected, {PRONOUN/m_c/subject} still {VERB/m_c/tremble/trembles} a bit as {PRONOUN/m_c/subject} {VERB/m_c/touch/touches} noses with (mentor)."
   ],
@@ -222,7 +235,10 @@
       "grumpy",
       "oblivious",
       "flamboyant",
-      "rebellious"
+      "rebellious",
+      "youthful",
+      "idealistic",
+      "opinionated"
     ],
     "Almost immediately after m_c touches noses with (mentor), {PRONOUN/m_c/subject} {VERB/m_c/start/starts} asking about when they're going to go out and explore the territory."
   ],
@@ -245,7 +261,8 @@
       "arrogant",
       "competitive",
       "flamboyant",
-      "rebellious"
+      "rebellious",
+      "annoying"
     ],
     "m_c fidgets impatiently beside (mentor) as {PRONOUN/m_c/subject} {VERB/m_c/wait/waits} for the meeting to end. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} finally an apprentice! {PRONOUN/m_c/subject/CAP} {VERB/m_c/want/wants} to hurry up, get out there and go, go, go!"
   ],
@@ -338,7 +355,10 @@
       "vengeful",
       "arrogant",
       "grumpy",
-      "rebellious"
+      "rebellious",
+      "cool",
+      "annoying",
+      "selfish"
     ],
     "As m_c touches noses with (mentor), {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} that {PRONOUN/(mentor)/subject}'ll be a cool mentor that won't assign boring tasks. Anything but gathering moss or tick duty!"
   ],
@@ -355,7 +375,8 @@
       "daring",
       "fierce",
       "playful",
-      "sincere"
+      "sincere",
+      "passionate"
     ],
     "(old_name) sits in front of the Clan with pride, {PRONOUN/m_c/poss} tiny heart beating so fast {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} it might explode! {PRONOUN/m_c/subject/CAP} very excitedly {VERB/m_c/touch/touches} noses with (mentor), happy to start {PRONOUN/m_c/poss} apprenticeship."
   ],
@@ -378,7 +399,13 @@
       "strange",
       "strict",
       "wise",
-      "thoughtful"
+      "thoughtful",
+      "sentimental",
+      "soft",
+      "benevolent",
+      "gentle",
+      "tidy",
+      "organized"
     ],
     "Surprising (mentor), the first thing that m_c does after {PRONOUN/m_c/poss} apprentice ceremony is gather moss, just to make sure everyone has fresh bedding."
   ],
@@ -400,7 +427,9 @@
       "righteous",
       "strict",
       "wise",
-      "thoughtful"
+      "thoughtful",
+      "genuine",
+      "sentimental"
     ],
     "m_c touches noses with (mentor) and hopes that {PRONOUN/m_c/subject}'ll get to hunt first, so {PRONOUN/m_c/subject} can make sure the Clan is fed."
   ],
@@ -490,7 +519,9 @@
       "arrogant",
       "competitive",
       "oblivious",
-      "flamboyant"
+      "flamboyant",
+      "cool",
+      "destructive"
     ],
     "As m_c touches noses with (mentor), {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} {PRONOUN/m_c/subject}'ll get to do something that will really impress the Clan on {PRONOUN/m_c/poss} first day. Maybe {PRONOUN/m_c/subject} could catch a big, fat rabbit? Or chase off a fox! That'll show the Clan {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} the best apprentice anyone's ever seen!"
   ],
@@ -511,7 +542,11 @@
       "vengeful",
       "arrogant",
       "competitive",
-      "grumpy"
+      "grumpy",
+      "sadistic",
+      "venomous",
+      "devious",
+      "cruel"
     ],
     "m_c sits excitedly beside (mentor) as the meeting ends and hopes {PRONOUN/m_c/subject}'ll be doing something exciting like battle training first. {PRONOUN/m_c/poss/CAP} claws are itching to tear at something."
   ],
@@ -1189,6 +1224,180 @@
     ],
     "Though m_c doesn't even grin as {PROUNOUN/m_c/subject} {VERB/m_c/touch/touches} {PRONOUN/m_c/poss} nose to (mentor)'s, a small glimmer of excitement flickers in {PRONOUN/m_c/poss} chest."
   ], 
+  "care_app_0": [
+    [
+      "caretaker apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c decides to serve {PRONOUN/m_c/poss} Clan as a caretaker. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} delighted to begin training. "
+  ], 
+  "care_app_1": [
+    [
+      "caretaker apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Now more than ever, m_c realizes the Clan is in need of a caretaker. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to step up to the task."
+  ],
+  "care_app_2": [
+    [
+      "caretaker apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is far more interested in helping kits than fighting enemies. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to become a caretaker."
+  ],
+  "care_app_3": [
+    [
+      "caretaker apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "thoughtful",
+      "compassionate",
+      "nurturing",
+      "gentle",
+      "warm"
+    ],
+    "Impressed by {PRONOUN/m_c/poss} kindness, (mentor) chooses m_c as the Clan's new caretaker apprentice."
+  ],
+  "care_app_4": [
+    [
+      "caretaker apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has taken to following (mentor) around during {PRONOUN/(mentor)/poss} daily duties, fascinated by the life of a caretaker. (mentor) is happy to train {PRONOUN/m_c/object}. "
+  ], 
+  "den_app_0": [
+    [
+      "denkeeper apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c decides to serve {PRONOUN/m_c/poss} Clan as a denkeeper. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} delighted to begin training. "
+  ], 
+  "den_app_1": [
+    [
+      "caretaker apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Now more than ever, m_c realizes the Clan is in need of a denkeeper. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to step up to the task."
+  ], 
+  "den_app_2": [
+    [
+      "denkeeper apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Even as a kit, m_c insisted on helping around the camp. It's no surprise when {PRONOUN/m_c/subject} {VERB/m_c/choose/chooses} the path of a denkeeper."
+  ], 
+  "den_app_3": [
+    [
+      "denkeeper apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "strict",
+      "tidy",
+      "polished",
+      "organized"
+    ],
+    "Impressed by {PRONOUN/m_c/poss} orderliness, (mentor) chooses m_c as the Clan's new denkeeper apprentice."
+  ],
+  "den_app_4": [
+    [
+      "denkeeper apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has taken to following (mentor) around during {PRONOUN/(mentor)/poss} daily duties, fascinated by the life of a denkeeper. (mentor) is happy to train {PRONOUN/m_c/object}. "
+  ],
+  "mess_app_0": [
+    [
+      "messenger apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c decides to serve {PRONOUN/m_c/poss} Clan as a messenger. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} delighted to begin training. "
+  ], 
+  "mess_app_1": [
+    [
+      "messenger apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Now more than ever, m_c realizes the Clan is in need of a messenger. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to step up to the task."
+  ], 
+  "mess_app_2": [
+    [
+      "messenger apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c loves zooming around the camp more than any other kit! It's no surprise when {PRONOUN/m_c/subject} {VERB/m_c/choose/chooses} the path of a messenger."
+  ], 
+  "mess_app_3": [
+    [
+      "denkeeper apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "sneaky",
+      "punctual",
+      "escapist"
+    ],
+    "Impressed by {PRONOUN/m_c/poss} agility, (mentor) chooses m_c as the Clan's new denkeeper apprentice."
+  ],
+  "mess_app_4": [
+    [
+      "denkeeper apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has taken to following (mentor) around during {PRONOUN/(mentor)/poss} daily duties, fascinated by the life of a messenger. (mentor) is happy to train {PRONOUN/m_c/object}. "
+  ],
   "mediator_app_0": [
     [
       "mediator apprentice",
@@ -2879,7 +3088,8 @@
       "strange",
       "thoughtful",
       "wise",
-      "sincere"
+      "sincere",
+      "sentimental"
     ],
     "As (old_name) steps forward to take up the mantle of m_c, {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} the wind ruffle through {PRONOUN/m_c/poss} fur, like a touch of approval. {PRONOUN/m_c/subject/CAP} {VERB/m_c/wonder/wonders} if dead_par1 would approve of the r_h m_c is honored for."
   ],
@@ -2950,7 +3160,9 @@
       "nervous",
       "calm",
       "careful",
-      "gloomy"
+      "gloomy",
+      "anxious",
+      "pessimistic"
     ],
     "As l_n calls c_n together, (old_name) desperately suppresses {PRONOUN/m_c/poss} shivers. What if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not ready? What if this is a mistake? But hearing p1 yowl frantically to p2 to hurry up helps (old_name) find reserves of calm. {PRONOUN/m_c/subject/CAP} {VERB/m_c/belong/belongs} here, and stepping up to be honored for {PRONOUN/m_c/poss} r_h with the name m_c fills {PRONOUN/m_c/object} with confidence."
   ],
@@ -2967,7 +3179,10 @@
       "calm",
       "careful",
       "thoughtful",
-      "sincere"
+      "sincere",
+      "nurturing",
+      "genuine",
+      "sensitive"
     ],
     "As p1 and p2 fuss, erasing each others' efforts at licking (old_name)'s fur flat, (old_name) purrs. Surrounded by {PRONOUN/m_c/poss} parents, l_n names {PRONOUN/m_c/object} m_c for the r_h {PRONOUN/m_c/subject} {VERB/m_c/have/has} shown in {PRONOUN/m_c/poss} training, welcoming {PRONOUN/m_c/object} to take {PRONOUN/m_c/poss} place as a full warrior of c_n."
   ],
@@ -3005,7 +3220,9 @@
       "righteous",
       "arrogant",
       "competitive",
-      "flamboyant"
+      "flamboyant",
+      "scheming",
+      "dramatic"
     ],
     "(old_name) has thrown {PRONOUN/m_c/self} at every challenge in {PRONOUN/m_c/poss} path, and l_n notes {PRONOUN/m_c/subject} {VERB/m_c/have/has} the r_h of a tiger, may it serve {PRONOUN/m_c/object} well. It's time for (old_name) to take both {PRONOUN/m_c/poss} place as an adult of c_n, and {PRONOUN/m_c/poss} full name of m_c."
   ],
@@ -3019,7 +3236,8 @@
       "general_backstory",
       "oblivious",
       "calm",
-      "wise"
+      "wise",
+      "tranquil"
     ],
     "As the Clan yowls m_c's new warrior name {PRONOUN/m_c/subject} {VERB/m_c/smile/smiles} and {VERB/m_c/nod/nods}, pleased but not overcome. l_n jumps down to congratulate {PRONOUN/m_c/object}. As their heads press together, l_n whispers that a balanced sense of self and r_h will serve m_c well."
   ],
@@ -3032,7 +3250,11 @@
       "yes_leader",
       "general_backstory",
       "strict",
-      "responsible"
+      "responsible",
+      "logical",
+      "idealistic",
+      "sincere",
+      "methodical"
     ],
     "With c_n gathered for celebration, l_n highlights (old_name)'s r_h, {PRONOUN/m_c/poss} dedication to truth, and the Warrior Code. It is for this that l_n names {PRONOUN/m_c/object} m_c, welcoming {PRONOUN/m_c/object} as a full warrior of c_n."
   ],
@@ -3046,7 +3268,10 @@
       "general_backstory",
       "charismatic",
       "responsible",
-      "careful"
+      "careful",
+      "tidy",
+      "witty",
+      "genuine"
     ],
     "The poise, decorum, and r_h (old_name) acts with are a credit to c_n, l_n meows. (old_name) tries to live up to such pretty words, but all {PRONOUN/m_c/subject} can focus on are the ringing yowls of m_c as {PRONOUN/m_c/poss} new warrior name echos around camp."
   ],
@@ -3060,7 +3285,8 @@
       "general_backstory",
       "childish",
       "oblivious",
-      "insecure"
+      "insecure",
+      "annoying"
     ],
     "l_n calls c_n to attention. They are gathered here to celebrate the hard work, persistence, and r_h of c_n's newest warrior. (old_name)'s jaw drops as {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} summoned forward, and {PRONOUN/m_c/subject} {VERB/m_c/sit/sits}, disbelieving but thrilled, as l_n grants {PRONOUN/m_c/object} the name m_c and cheers break out."
   ],
@@ -3087,7 +3313,8 @@
       "yes_leader",
       "general_backstory",
       "ambitious",
-      "confident"
+      "confident",
+      "passionate"
     ],
     "l_n calls (old_name) forward, honoring {PRONOUN/m_c/poss} r_h with the name m_c. One day, it'll be m_c's power to grant names to the warriors of c_n. This marks the first completed goal on that quest."
   ],
@@ -3102,7 +3329,9 @@
       "troublesome",
       "rebellious",
       "daring",
-      "adventurous"
+      "adventurous",
+      "emotional",
+      "destructive"
     ],
     "(old_name) can't help the way {PRONOUN/m_c/poss} tail lashes, excitement bubbling over into bouncy energy as the Clan gathers. l_n mentions {PRONOUN/m_c/poss} r_h, but what (old_name) cares about is the <i>name</i>. m_c means liberty, means control over {PRONOUN/m_c/poss} own life, means the freedom to wander and hunt on {PRONOUN/m_c/poss} own, nothing holding {PRONOUN/m_c/object} back. {PRONOUN/m_c/subject/CAP} can't wait!"
   ],
@@ -3117,7 +3346,8 @@
       "competitive",
       "flamboyant",
       "charismatic",
-      "righteous"
+      "righteous",
+      "selfish"
     ],
     "Hearing l_n speak about {PRONOUN/m_c/poss} r_h in front of all the Clan, seeing (previous_mentor)'s approving nod, p1's eyes shining with pride, p2 purring loud enough to choke on the sound, it all comes together into a moment of brilliant recognition and celebration as m_c takes on {PRONOUN/m_c/poss} warrior name."
   ],
@@ -3132,7 +3362,8 @@
       "grumpy",
       "gloomy",
       "cold",
-      "strange"
+      "strange",
+      "anxious"
     ],
     "Even at {PRONOUN/m_c/poss} own naming ceremony, m_c doesn't love being the center of attention, the tip of {PRONOUN/m_c/poss} tail twitching with unease. But {PRONOUN/m_c/subject} still {VERB/m_c/accept/accepts} (previous_mentor)'s congratulations and {PRONOUN/m_c/poss} parents' proud purrs, smiling slightly when l_n praises {PRONOUN/m_c/poss} r_h."
   ],
@@ -3159,7 +3390,12 @@
       "loyal",
       "faithful",
       "sincere",
-      "loving"
+      "loving",
+      "benevolent",
+      "gentle",
+      "sentimental",
+      "delicate",
+      "nurturing"
     ],
     "As l_n exults (old_name)'s r_h, (old_name) quietly tucks {PRONOUN/m_c/poss} head against (previous_mentor)'s shoulder, deeply respectful. It feels unreal to receive {PRONOUN/m_c/poss} full name, and m_c will still be coming to (previous_mentor) for advice for many moons in the future."
   ],
@@ -3174,10 +3410,85 @@
       "fierce",
       "bloodthirsty",
       "vengeful",
-      "loyal"
+      "loyal",
+      "venomous",
+      "cruel",
+      "antagonistic"
     ],
     "Together (old_name) and (previous_mentor) have torn claws and taken names, and as (old_name) is honored for {PRONOUN/m_c/poss} r_h and named m_c, they're not planning on stopping any time soon!"
   ],
+  "caretaker_0": [
+    [
+      "caretaker",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "(old_name) has proven {PRONOUN/m_c/self} skilled at caring for kits. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the name m_c, and the Clan honors {PRONOUN/m_c/poss} new caretaker."
+  ],
+  "caretaker_1": [
+    [
+      "caretaker",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is welcomed as a fully trained caretaker of the Clan."
+  ],
+  "denkeeper_0": [
+    [
+      "denkeeper",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "(old_name) has proven {PRONOUN/m_c/self} skilled at managing the Clan's camp. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the name m_c, and the Clan honors {PRONOUN/m_c/poss} new denkeeper."
+  ],
+  "denkeeper_1": [
+    [
+      "denkeeper",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is welcomed as a fully trained denkeeper of the Clan."
+  ], 
+  "messenger_0": [
+    [
+      "messenger",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "(old_name) has proven {PRONOUN/m_c/self} skilled at delivering news and travelling across the territory. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the name m_c, and the Clan honors {PRONOUN/m_c/poss} new messenger."
+  ],
+  "messenger_1": [
+    [
+      "messenger",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is welcomed as a fully trained messenger of the Clan."
+  ], 
   "mediator_0": [
     [
       "mediator",
@@ -3360,7 +3671,9 @@
       "rebellious",
       "sneaky",
       "shameless",
-      "charismatic"
+      "charismatic",
+      "flirty",
+      "sassy"
     ],
     "m_c grins through the celebration of {PRONOUN/m_c/poss} retirement, looking forward to being the gossipiest elder on this side of the rising sun."
   ],
@@ -3374,7 +3687,10 @@
       "responsible",
       "ambitious",
       "strict",
-      "insecure"
+      "insecure",
+      "anxious",
+      "delicate",
+      "complex"
     ],
     "m_c stops {PRONOUN/m_c/poss} tail from twitching as {PRONOUN/m_c/poss} retirement is announced. {PRONOUN/m_c/subject/CAP} {VERB/m_c/know/knows} c_n will be fine without {PRONOUN/m_c/object} on the front lines, {PRONOUN/m_c/subject} {VERB/m_c/know/knows} this is the right time to relax {PRONOUN/m_c/poss} claws and let {PRONOUN/m_c/poss} responsibilities fall from {PRONOUN/m_c/poss} paws, but... it's hard, letting go."
   ],
@@ -3388,7 +3704,10 @@
       "gloomy",
       "nervous",
       "lonesome",
-      "insecure"
+      "insecure",
+      "anxious",
+      "fearful",
+      "distracted"
     ],
     "m_c takes a deep breath, and tries to see the celebration of {PRONOUN/m_c/poss} retirement as a compliment, not an exile to the elders' den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/know/knows} it isn't meant that way."
   ],

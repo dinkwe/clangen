@@ -356,18 +356,26 @@ class PatrolOutcome:
             if "app" in self.can_have_stat and kitty.status not in [
                 "apprentice",
                 "medicine cat apprentice",
+                "caretaker apprentice",
+                "messenger apprentice",
+                "denkeeper apprentice"
             ]:
                 continue
 
             if "adult" in self.can_have_stat and kitty.status in [
                 "apprentice",
                 "medicine cat apprentice",
+                "caretaker apprentice",
+                "messenger apprentice",
+                "denkeeper apprentice"
             ]:
                 continue
 
             if "healer" in self.can_have_stat and kitty.status not in [
                 "medicine cat",
                 "medicine cat apprentice",
+                "caretaker",
+                "caretaker apprentice"
             ]:
                 continue
 

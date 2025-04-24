@@ -72,7 +72,13 @@ class Cat:
     rank_sort_order = [
         "newborn",
         "kitten",
+        "caretaker apprentice",
+        "caretaker",
         "elder",
+        "messenger apprentice",
+        "messenger",
+        "denkeeper apprentice",
+        "denkeeper",
         "apprentice",
         "warrior",
         "mediator apprentice",
@@ -120,6 +126,8 @@ class Cat:
         backstory="clanborn",
         parent1=None,
         parent2=None,
+        past_life = None,
+        reincarnation = None,
         adoptive_parents=None,
         suffix=None,
         specsuffix_hidden=False,
@@ -178,6 +186,8 @@ class Cat:
         )
         self.parent1 = parent1
         self.parent2 = parent2
+        self.past_life = past_life
+        self.reincarnation = reincarnation
         self.adoptive_parents = adoptive_parents if adoptive_parents else []
         self.pelt = pelt if pelt else Pelt()
         self.former_mentor = []
@@ -277,6 +287,9 @@ class Cat:
                 "apprentice",
                 "mediator apprentice",
                 "medicine cat apprentice",
+                "messenger apprentice",
+                "denkeeper apprentice",
+                "caretaker apprentice"
             ]:
                 self.age = CatAgeEnum.ADOLESCENT
             else:
@@ -501,12 +514,15 @@ class Cat:
         if self.parent1 is not None:
             par1 = Cat.fetch_cat(self.parent1)
             if par1.awakened:
-                prob_awake -= 2
+                prob_awake = int(prob_awake/2)
             
         if self.parent2 is not None:
             par2 = Cat.fetch_cat(self.parent2)
             if par2.awakened:
-                prob_awake -= 2
+                prob_awake = int(prob_awake/2)
+        
+        if prob_awake < 1:
+            prob_awake = 1
         
         awakened_chance = randint(1,prob_awake)
         if awakened_chance == 1:
@@ -1127,7 +1143,8 @@ class Cat:
     def rank_change_traits_skill(self, mentor):
         """Updates trait and skill upon ceremony"""
 
-        if self.status in ["warrior", "medicine cat", "mediator"]:
+        
+        if self.status in ["warrior", "medicine cat", "mediator", "messenger", "denkeeper", "caretaker"]:
             # Give a couple doses of mentor influence:
             if mentor:
                 max_influence = randint(0, 2)
@@ -1752,6 +1769,9 @@ class Cat:
             "apprentice",
             "mediator apprentice",
             "medicine cat apprentice",
+            "messenger apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice"
         ]:
             self.update_mentor()
 
@@ -2078,6 +2098,22 @@ class Cat:
     #                                  conditions                                  #
     # ---------------------------------------------------------------------------- #
 
+    def get_reincarnation(self):
+        backstory = "reincarnation_starclan"
+        if self.df:
+            backstory = "reincarnation_df"
+        elif self.outside or self.exiled:
+            backstory = "reincarnation_unknown"
+        reincarnation = Cat(parent1 = self.ID, parent2 = self.ID, prefix = self.name.prefix, status = "newborn", moons = 0, backstory=backstory, gender=self.gender, past_life = self.ID)
+        game.clan.add_cat(reincarnation)
+        #we use self as both parents to increase similarity, but obviously
+        #we dont want that to stay as the parents LOL
+        reincarnation.parent1 = None
+        reincarnation.parent2 = None
+        History.add_beginning(reincarnation, clan_born=False)
+        reincarnation.past_life = self.ID
+        self.reincarnation = reincarnation.ID
+    
     def get_ill(self, name, event_triggered=False, lethal=True, severity="default"):
         """Add an illness to this cat.
 
@@ -2393,7 +2429,7 @@ class Cat:
         if self.moons > 6 and self.status in [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice",
+            "mediator apprentice", "denkeeper apprentice", "messenger apprentice", "caretaker apprentice"
         ]:
             _ment = Cat.fetch_cat(self.mentor) if self.mentor else None
             self.status_change(
@@ -2424,7 +2460,11 @@ class Cat:
 
     def contact_with_ill_cat(self, cat: Cat):
         """handles if one cat had contact with an ill cat"""
-
+        
+        current_denkeepers = []
+        for cat in Cat.all_cats_list:
+            if cat.status in ["denkeeper", "denkeeper apprentice"]:
+                current_denkeepers.append(cat)
         infectious_illnesses = []
         if self.is_ill() or cat is None or not cat.is_ill():
             return
@@ -2457,7 +2497,9 @@ class Cat:
                             chance of {illness_name} infection to {rate}"
                         )
                         rate = 1
-
+            if len(current_denkeepers) > 0:
+                for keeper in current_denkeepers:
+                    rate = int(rate* 1.5)
             if not random() * rate:
                 text = f"{self.name} had contact with {cat.name} and now has {illness_name}."
                 # game.health_events_list.append(text)
@@ -2556,7 +2598,21 @@ class Cat:
             and potential_mentor.status != "mediator"
         ):
             return False
-
+        if (
+            self.status == "caretaker apprentice"
+            and potential_mentor.status != "caretaker"
+        ):
+            return False
+        if (
+            self.status == "messenger apprentice"
+            and potential_mentor.status != "messenger"
+        ):
+            return False
+        if (
+            self.status == "denkeeper apprentice"
+            and potential_mentor.status != "denkeeper"
+        ):
+            return False
         # If not an app, don't need a mentor
         if "apprentice" not in self.status:
             return False
@@ -2604,7 +2660,7 @@ class Cat:
             or self.outside
             or self.exiled
             or self.status
-            not in ["apprentice", "mediator apprentice", "medicine cat apprentice"]
+            not in ["apprentice", "mediator apprentice", "medicine cat apprentice","messenger apprentice", "caretaker apprentice", "denkeeper apprentice"]
         )
         if illegible_for_mentor:
             self.__remove_mentor()
@@ -3786,6 +3842,8 @@ class Cat:
                 "dead_for": self.dead_for,
                 "parent1": self.parent1,
                 "parent2": self.parent2,
+                "past_life": self.past_life,
+                "reincarnation": self.reincarnation,
                 "adoptive_parents": self.adoptive_parents,
                 "df": self.df,
                 "faded_offspring": self.faded_offspring,
@@ -3810,6 +3868,8 @@ class Cat:
                 "facets": self.personality.get_facet_string(),
                 "parent1": self.parent1,
                 "parent2": self.parent2,
+                "past_life": self.past_life,
+                "reincarnation": self.reincarnation,
                 "adoptive_parents": self.adoptive_parents,
                 "mentor": self.mentor or None,
                 "former_mentor": (
