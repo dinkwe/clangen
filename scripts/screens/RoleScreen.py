@@ -508,7 +508,7 @@ class RoleScreen(Screens):
 
     def get_role_blurb(self):
         #the one word fellas are easily
-        if self.the_cat.status in ["warrior", "leader", "deputy", "elder" "kitten", "newborn", "apprentice",  "caretaker", "denkeeper", "messenger"]:
+        if self.the_cat.status in ["warrior", "leader", "deputy", "elder", "mediator","kitten", "newborn", "apprentice",  "caretaker", "denkeeper", "messenger"]:
             output = "screens.role.blurb_" + self.the_cat.status
         elif self.the_cat.status == "medicine cat":
             output = "screens.role.blurb_medicine_cat"

@@ -227,6 +227,13 @@ class ClanScreen(Screens):
             get_button_dict(ButtonStyles.ROUNDED_RECT, (80, 28)),
             object_id=ObjectID(class_id="@buttonstyles_rounded_rect", object_id=None),
         )
+        nursery_enable = False
+        for cat in Cat.all_cats_list:
+            if cat.status in ["caretaker", "caretaker apprentice"]:
+                nursery_enable = True
+                break
+        if not nursery_enable:
+            self.nursery_label.disable()
 
         self.clearing_label = UISurfaceImageButton(
             ui_scale(pygame.Rect(self.layout["clearing"], (81, 28))),

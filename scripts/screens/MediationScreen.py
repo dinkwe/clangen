@@ -478,11 +478,11 @@ class MediationScreen(Screens):
             gender_icon = image_cache.load_image(
                 "resources/images/male_big.png"
             ).convert_alpha()
-        elif cat.gender == "intersex" and self.inspect_cat.genderalign == "trans female":
+        elif cat.gender == "intersex" and cat.genderalign == "trans female":
                 gender_icon = image_cache.load_image(
                     "resources/images/transfem_intersex_big.png"
                 ).convert_alpha()
-        elif cat.gender == "intersex" and self.inspect_cat.genderalign == "trans male":
+        elif cat.gender == "intersex" and cat.genderalign == "trans male":
                 gender_icon = image_cache.load_image(
                     "resources/images/transmasc_intersex_big.png"
                 ).convert_alpha()
