@@ -67,5 +67,22 @@
             "medicine cat",
             "medicine cat apprentice"
         ]
+    },
+    {
+        "id": "messenger_to_alive_adult_active_cat",
+        "thoughts": [
+            "Has some important news for r_c"
+        ],
+        "random_status_constraint": [
+            "warrior",
+            "medicine cat",
+            "caretaker",
+            "denkeeper",
+            "deputy",
+            "leader"
+        ],
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

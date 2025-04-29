@@ -16,10 +16,33 @@
             "Had to fix an argument between the kits... again",
             "Enjoys watching over the kits",
             "Is telling r_c a fantastical story",
-            "Makes sure r_c doesn't sneak out of the nursery again!"
+            "Makes sure r_c doesn't sneak out of the nursery again!",
+            "Has the kits help in sweeping dead leaves out of the den",
+            "Races around camp with all the kits hot on {PRONOUN/m_c/poss} tail!",
+            "Has been slain by the mighty r_c in a heroic battle for the camp!",
+            "Bats around smooth pebbles for the kits to chase after",
+            "Hides a mouse in camp for the kits to scent out",
+            "Introduces r_c to new prey items",
+            "Yowls in fake pain as r_C chomps down on {PRONOUN/m_c/poss} tail!",
+            "Gives a badger ride to all the kits at once!",
+            "Picks scales off a fish and puts them on r_c",
+            "Is covered in mud and leaves after playing with the kits in the rain",
+            "Splashes through a puddle to show the kits it isn't scary"
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "caretaker_to_elder",
+        "thoughts": [
+            "Works with r_c to make up a new story to tell kits"
+        ],
+        "random_status_constraint": [
+            "elder"
         ],
         "random_living_status": [
             "living"

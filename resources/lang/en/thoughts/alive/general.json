@@ -424,7 +424,10 @@
             "Fantasizes about being able to breathe underwater so {PRONOUN/m_c/subject} can explore a lake"
         ],
         "main_trait_constraint": [
-            "adventurous"
+            "adventurous",
+            "dynamic",
+            "spontainious",
+            "energetic"
         ]
     },
     {
@@ -439,7 +442,10 @@
             "kitten"
         ],
         "main_trait_constraint": [
-            "adventurous"
+            "adventurous",
+            "dynamic",
+            "spontainious",
+            "energetic"
         ],
         "random_living_status": [
             "living"
@@ -454,7 +460,10 @@
             "leader"
         ],
         "main_trait_constraint": [
-            "adventurous"
+            "adventurous",
+            "dynamic",
+            "spontainious",
+            "energetic"
         ],
         "random_living_status": [
             "living"
@@ -471,7 +480,17 @@
             "charismatic",
             "childish",
             "cunning",
-            "playful"
+            "playful",
+            "dynamic",
+            "spontainious",
+            "energetic",
+            "enthusiastic",
+            "silly",
+            "hyper",
+            "chaotic",
+            "scheming",
+            "whimsical",
+            "youthful"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -482,7 +501,13 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "denkeeper apprentice",
+            "denkeeper",
+            "caretaker",
+            "caretaker apprentice",
+            "messenger",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "kitten",
@@ -512,7 +537,11 @@
             "Encourages every cat to help fortify the dens"
         ],
         "main_trait_constraint": [
-            "ambitious"
+            "ambitious",
+            "moralistic",
+            "leaderly",
+            "high-minded",
+            "dedicated"
         ]
     },
     {
@@ -521,7 +550,11 @@
             "Envies the deputy's position"
         ],
         "main_trait_constraint": [
-            "ambitious"
+            "ambitious",
+            "devious",
+            "scheming",
+            "power-hungry",
+            "spiteful"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -530,7 +563,13 @@
             "warrior",
             "medicine cat",
             "mediator",
-            "elder"
+            "elder",
+            "denkeeper apprentice",
+            "denkeeper",
+            "caretaker",
+            "caretaker apprentice",
+            "messenger",
+            "messenger apprentice"
         ]
     },
     {
@@ -543,7 +582,11 @@
             "Tells r_c {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been doing a wonderful job leading"
         ],
         "main_trait_constraint": [
-            "ambitious"
+            "ambitious",
+            "devious",
+            "scheming",
+            "power-hungry",
+            "spiteful"
         ],
         "random_status_constraint": [
             "leader"
@@ -569,7 +612,10 @@
             "Is pretty sure {PRONOUN/m_c/subject} could take on a patrol full of rogues"
         ],
         "main_trait_constraint": [
-            "arrogant"
+            "arrogant",
+            "aloof",
+            "superficial",
+            "hypocrite"
         ]
     },
     {
@@ -600,7 +646,10 @@
             "Would kill any cat that posed a threat to c_n"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+            "sadistic",
+            "cruel",
+            "antagonistic"
         ]
     },
     {
@@ -609,7 +658,10 @@
             "Draws blood during battle training and coldly says it was an accident"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+            "sadistic",
+            "cruel",
+            "antagonistic"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -626,7 +678,10 @@
             "Thinks the Clan leader should punish traitors more harshly"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+            "sadistic",
+            "cruel",
+            "antagonistic"
         ],
         "random_status_constraint": [
             "leader"
@@ -650,7 +705,11 @@
             "Snatches up a piece of prey right out from under {PRONOUN/m_c/poss} Clanmate's nose"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ]
     },
     {
@@ -659,7 +718,11 @@
             "Charges forward during a border patrol, eager and unafraid"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -674,7 +737,11 @@
             "Promises the kits {PRONOUN/m_c/subject}'ll protect them when the time comes"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ],
         "random_status_constraint": [
             "newborn",
@@ -690,7 +757,11 @@
             "Bravely offers to help r_c pick herbs from a dangerous spot"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ],
         "random_status_constraint": [
             "medicine cat",
@@ -728,7 +799,13 @@
             "Listens to the harmony of birdsong"
         ],
         "main_trait_constraint": [
-            "calm"
+            "calm",
+            "cooperative",
+            "honest",
+            "sentimental",
+            "tranquil",
+            "relaxed",
+            "patient"
         ]
     },
     {
@@ -737,7 +814,13 @@
             "Is unable to be scared, no matter how much the kits try"
         ],
         "main_trait_constraint": [
-            "calm"
+            "calm",
+            "cooperative",
+            "honest",
+            "sentimental",
+            "tranquil",
+            "relaxed",
+            "patient"
         ],
         "random_status_constraint": [
             "kitten"
@@ -766,7 +849,11 @@
             "Volunteers to guard the camp tonight"
         ],
         "main_trait_constraint": [
-            "careful"
+            "careful",
+            "fearful",
+            "anxious",
+            "vulnerable",
+            "soft"
         ]
     },
     {
@@ -775,7 +862,10 @@
             "Is chiding a younger cat for being so reckless"
         ],
         "main_trait_constraint": [
-            "careful"
+            "careful",
+            "fearful",
+            "anxious",
+            "vulnerable"
         ],
         "main_status_constraint": [
             "warrior",
@@ -803,7 +893,11 @@
             "Reminds the medicine cat to take breaks"
         ],
         "main_trait_constraint": [
-            "careful"
+            "careful",
+            "fearful",
+            "anxious",
+            "vulnerable",
+            "soft"
         ],
         "random_status_constraint": [
             "medicine cat",
@@ -847,7 +941,13 @@
             "Just wants to be alone, for once"
         ],
         "main_trait_constraint": [
-            "charismatic"
+            "charismatic",
+            "flirty",
+            "manipulative",
+            "chummy",
+            "polished",
+            "fancy",
+            "superficial"
         ]
     },
     {
@@ -862,7 +962,14 @@
         "main_trait_constraint": [
             "charismatic",
             "cunning",
-            "sneaky"
+            "sneaky",
+            "whimsical",
+            "youthful",
+            "devious",
+            "cryptic",
+            "silly",
+            "chummy",
+            "annoying"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -908,7 +1015,11 @@
             "Chases a fly around camp, nearly crashing into r_c"
         ],
         "main_trait_constraint": [
-            "childish"
+            "childish",
+            "youthful",
+            "silly",
+            "whimsical",
+            "cheeky"
         ]
     },
     {
@@ -923,7 +1034,11 @@
         ],
         "main_trait_constraint": [
             "childish",
-            "playful"
+            "playful",
+            "youthful",
+            "silly",
+            "whimsical",
+            "cheeky"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -945,7 +1060,11 @@
         ],
         "main_trait_constraint": [
             "childish",
-            "playful"
+            "playful",
+            "youthful",
+            "silly",
+            "whimsical",
+            "cheeky"
         ],
         "random_living_status": [
             "living"
@@ -973,7 +1092,13 @@
             "Wishes {PRONOUN/m_c/poss} Clanmates weren't so mouse-brained"
         ],
         "main_trait_constraint": [
-            "cold"
+            "cold",
+            "blunt",
+            "reserved",
+            "logical",
+            "pessimistic",
+            "dry",
+            "passive-aggressive"
         ]
     },
     {
@@ -982,7 +1107,13 @@
             "Thinks the leader should be harsher on codebreakers"
         ],
         "main_trait_constraint": [
-            "cold"
+            "cold",
+            "blunt",
+            "reserved",
+            "logical",
+            "pessimistic",
+            "dry",
+            "passive-aggressive"
         ],
         "random_status_constraint": [
             "leader"
@@ -1006,14 +1137,26 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"],
+            "elder",
+            "denkeeper",
+            "messenger",
+            "caretaker"],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "caretaker apprentice",
+            "denkeeper apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "cold"
+            "cold",
+            "blunt",
+            "reserved",
+            "logical",
+            "pessimistic",
+            "dry",
+            "passive-aggressive"
         ],
         "random_living_status": [
             "living"
@@ -1056,7 +1199,13 @@
             "Purrs contently at the thought of {PRONOUN/m_c/poss} Clanmates being happy"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ]
     },
     {
@@ -1067,7 +1216,13 @@
             "Lines the elders' nests with downy feathers"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -1094,7 +1249,13 @@
             "Tells the kits they're getting so big and strong!"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ],
         "random_status_constraint": [
             "kitten"
@@ -1110,7 +1271,13 @@
             "Listens patiently to all the woes of an apprentice"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ],
         "main_status_constraint": [
             "warrior",
@@ -1139,7 +1306,13 @@
             "medicine cat"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -1176,7 +1349,10 @@
             "Wants to wrestle just for fun"
         ],
         "main_trait_constraint": [
-            "competitive"
+            "competitive",
+            "envious",
+            "hypocrite",
+            "alert"
         ]
     },
     {
@@ -1198,7 +1374,11 @@
             "Asks for extra work, sure that {PRONOUN/m_c/subject} can handle it"
         ],
         "main_trait_constraint": [
-            "confident"
+            "confident",
+            "self-reliant",
+            "strong",
+            "hardworking",
+            "leaderly"
         ]
     },
     {
@@ -1219,7 +1399,11 @@
             "deputy",
             "leader" ],
             "main_trait_constraint": [
-                "confident"
+                "confident",
+                "self-reliant",
+                "strong",
+                "hardworking",
+                "leaderly"
             ]
     },
     {
@@ -1237,7 +1421,12 @@
             "Swindles {PRONOUN/m_c/poss} way into an extra piece of fresh-kill"
         ],
         "main_trait_constraint": [
-            "cunning"
+            "cunning",
+            "scheming",
+            "devious",
+            "cryptic",
+            "calculating",
+            "fox-hearted"
         ]
     },
     {
@@ -1261,7 +1450,13 @@
             "Isn't afraid of anything"
         ],
         "main_trait_constraint": [
-            "daring"
+            "daring",
+            "intense",
+            "chaotic",
+            "moody",
+            "messy",
+            "forceful",
+            "strong"
         ]
     },
     {
@@ -1282,7 +1477,13 @@
             "Encourages {PRONOUN/m_c/poss} friends to trust in their beliefs"
         ],
         "main_trait_constraint": [
-            "faithful"
+            "faithful",
+            "unfoolable",
+            "polished",
+            "philosophical",
+            "folksy",
+            "peaceful",
+            "elegant"
         ]
     },
     {
@@ -1291,7 +1492,13 @@
             "Urges a kit to follow {PRONOUN/r_c/poss} own beliefs"
         ],
         "main_trait_constraint": [
-            "faithful"
+            "faithful",
+            "unfoolable",
+            "polished",
+            "philosophical",
+            "folksy",
+            "peaceful",
+            "elegant"
         ],
         "random_status_constraint": [
             "kitten"
@@ -1322,7 +1529,14 @@
             "Is ready to defend c_n to the death"
         ],
         "main_trait_constraint": [
-            "fierce"
+            "fierce",
+            "strong",
+            "intense",
+            "arguementative",
+            "forceful",
+            "remorseless",
+            "cruel",
+            "scary"
         ]
     },
     {
@@ -1350,7 +1564,13 @@
             "Gives out grooming tips to {PRONOUN/m_c/poss} Clanmates"
         ],
         "main_trait_constraint": [
-            "flamboyant"
+            "flamboyant",
+            "flirty",
+            "elegant",
+            "fancy",
+            "romantic",
+            "aloof",
+            "superficial"
         ]
     },
     {
@@ -1374,7 +1594,15 @@
             "Doesn't want to bother {PRONOUN/m_c/poss} Clanmates with {PRONOUN/m_c/poss} problems"
         ],
         "main_trait_constraint": [
-            "gloomy"
+            "gloomy",
+            "anxious",
+            "regretful",
+            "moody",
+            "macabre",
+            "grim",
+            "cryptic",
+            "weak-willed",
+            "vulnerable"
         ]
     },
     {
@@ -1401,7 +1629,13 @@
             "Wishes {PRONOUN/m_c/subject} could just have a bit of peace"
         ],
         "main_trait_constraint": [
-            "grumpy"
+            "grumpy",
+            "angry",
+            "reactive",
+            "disgusted",
+            "opinionated",
+            "moody",
+            "emotional"
         ]
     },
     {
@@ -1430,7 +1664,12 @@
             "Tries to downplay {PRONOUN/m_c/poss} Clanmates' accomplishments"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "insecure",
+            "anxious",
+            "coward",
+            "regretful",
+            "grim",
+            "private"
         ]
     },
     {
@@ -1443,10 +1682,19 @@
             "apprentice",
             "warrior",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper",
+            "messenger",
+            "denkeeper apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "insecure",
+            "anxious",
+            "coward",
+            "regretful",
+            "grim",
+            "private"
         ]
     },
     {
@@ -1459,7 +1707,12 @@
             "nervous",
             "shy",
             "skittish",
-            "self-conscious"
+            "self-conscious",
+            "anxious",
+            "confused",
+            "coward",
+            "fearful",
+            "sensitive"
         ],
         "season": [
             "Newleaf",
@@ -1500,7 +1753,13 @@
             "Is surprised to find {PRONOUN/m_c/self} enjoying r_c's company"
         ],
         "main_trait_constraint": [
-            "lonesome"
+            "lonesome",
+            "stoic",
+            "reserved",
+            "cryptic",
+            "macabre",
+            "sentimental",
+            "old-fashioned"
         ]
     },
     {
@@ -1517,10 +1776,22 @@
             "medicine cat",
             "medicine cat apprentice",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper apprentice",
+            "denkeeper",
+            "messenger apprentice",
+            "messenger",
+            "caretaker apprentice",
+            "caretaker"
         ],
         "main_trait_constraint": [
-            "lonesome"
+            "lonesome",
+            "stoic",
+            "reserved",
+            "cryptic",
+            "macabre",
+            "sentimental",
+            "old-fashioned"
         ]
     },
     {
@@ -1548,7 +1819,18 @@
             "Brings r_c {PRONOUN/r_c/poss} favorite prey"
         ],
         "main_trait_constraint": [
-            "loving"
+            "loving",
+            "supportive",
+            "cooperative",
+            "bubbly",
+            "cheerful",
+            "generous",
+            "gracious",
+            "nurturing",
+            "optimistic",
+            "warm",
+            "sympathetic",
+            "idealistic"
         ]
     },
     {
@@ -1566,15 +1848,32 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "denkeeper",
+            "messenger",
+            "caretaker"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "messenger apprentice",
+            "caretaker apprentice"
         ],
         "main_trait_constraint": [
-            "loving"
+            "loving",
+            "supportive",
+            "cooperative",
+            "bubbly",
+            "cheerful",
+            "generous",
+            "gracious",
+            "nurturing",
+            "optimistic",
+            "warm",
+            "sympathetic",
+            "idealistic"
         ],
         "random_living_status": [
             "living"
@@ -1590,7 +1889,18 @@
             "medicine cat"
         ],
         "main_trait_constraint": [
-            "loving"
+            "loving",
+            "supportive",
+            "cooperative",
+            "bubbly",
+            "cheerful",
+            "generous",
+            "gracious",
+            "nurturing",
+            "optimistic",
+            "warm",
+            "sympathetic",
+            "idealistic"
         ],
         "random_living_status": [
             "living"
@@ -1626,10 +1936,24 @@
             "medicine cat",
             "mediator",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "loyal"
+            "loyal",
+            "punctual",
+            "civil",
+            "principled",
+            "logical",
+            "supportive",
+            "dedicated",
+            "leaderly",
+            "stable"
         ],
         "random_living_status": [
             "living"
@@ -1641,7 +1965,15 @@
             "Feels a deep respect for the Clan's elders"
         ],
         "main_trait_constraint": [
-            "loyal"
+            "loyal",
+            "punctual",
+            "civil",
+            "principled",
+            "logical",
+            "supportive",
+            "dedicated",
+            "leaderly",
+            "stable"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -1649,7 +1981,13 @@
             "medicine cat",
             "medicine cat apprentice",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "elder"
@@ -1684,7 +2022,11 @@
             "Has {PRONOUN/m_c/poss} fur spiked up for no apparent reason"
         ],
         "main_trait_constraint": [
-            "nervous"
+            "nervous",
+            "moody",
+            "anxious",
+            "fearful",
+            "confused"
         ]
     },
     {
@@ -1699,10 +2041,16 @@
             "apprentice",
             "warrior",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper apprentice",
+            "denkeeper"
         ],
         "main_trait_constraint": [
-            "nervous"
+            "nervous",
+            "moody",
+            "anxious",
+            "fearful",
+            "confused"
         ]
         },
     {
@@ -1736,7 +2084,15 @@
             "Makes up a silly story to amuse r_c"
         ],
         "main_trait_constraint": [
-            "playful"
+            "playful",
+            "silly",
+            "bubbly",
+            "energetic",
+            "goofy",
+            "hyper",
+            "cheerful",
+            "cheeky",
+            "creative"
         ]
     },
     {
@@ -1752,7 +2108,15 @@
             "leader"
         ],
         "main_trait_constraint": [
-            "playful"
+            "playful",
+            "silly",
+            "bubbly",
+            "energetic",
+            "goofy",
+            "hyper",
+            "cheerful",
+            "cheeky",
+            "creative"
         ]
     },
     {
@@ -1772,7 +2136,14 @@
             "Wonders if {PRONOUN/m_c/poss} Clanmates would back {PRONOUN/m_c/object} up"
         ],
         "main_trait_constraint": [
-            "rebellious"
+            "rebellious",
+            "chaotic",
+            "opinionated",
+            "reactive",
+            "questioning",
+            "unpredictable",
+            "selfish",
+            "arguementative"
         ]
     },
     {
@@ -1782,7 +2153,14 @@
             "Demands to know whether a Clanmate agrees more with the leader or with {PRONOUN/m_c/object}"
         ],
         "main_trait_constraint": [
-            "rebellious"
+            "rebellious",
+            "chaotic",
+            "opinionated",
+            "reactive",
+            "questioning",
+            "unpredictable",
+            "selfish",
+            "arguementative"
         ],
         "random_status_constraint": [
             "leader"
@@ -1799,7 +2177,14 @@
             "Is being scolded for {PRONOUN/m_c/poss} rebellious actions"
         ],
         "main_trait_constraint": [
-            "rebellious"
+            "rebellious",
+            "chaotic",
+            "opinionated",
+            "reactive",
+            "questioning",
+            "unpredictable",
+            "selfish",
+            "arguementative"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -1809,7 +2194,13 @@
             "medicine cat",
             "mediator",
             "deputy",
-            "elder"
+            "elder",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "deputy",
@@ -1838,7 +2229,17 @@
             "Always makes a plan before launching into action"
         ],
         "main_trait_constraint": [
-            "responsible"
+            "responsible",
+            "organized",
+            "tidy",
+            "civil",
+            "principled",
+            "serious",
+            "moralistic",
+            "perfectionist",
+            "ritualistic",
+            "methodical",
+            "hardworking"
         ]
     },
     {
@@ -1848,7 +2249,17 @@
             "Asks r_c if {PRONOUN/r_c/subject} {VERB/r_c/need/needs} a break from training"
         ],
         "main_trait_constraint": [
-            "responsible"
+            "responsible",
+            "organized",
+            "tidy",
+            "civil",
+            "principled",
+            "serious",
+            "moralistic",
+            "perfectionist",
+            "ritualistic",
+            "methodical",
+            "hardworking"
         ],
         "main_status_constraint": [
             "warrior",
@@ -1856,10 +2267,16 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "caretaker",
+            "denkeeper",
+            "messenger"
         ],
         "random_status_constraint": [
-            "apprentice"
+            "apprentice",
+            "caretaker apprentice",
+            "denkeeper apprentice",
+            "messenger apprentice"
         ],
         "random_living_status": [
             "living"
@@ -1872,7 +2289,17 @@
             "Is teaching r_c the importance of following the code"
         ],
         "main_trait_constraint": [
-            "responsible"
+            "responsible",
+            "organized",
+            "tidy",
+            "civil",
+            "principled",
+            "serious",
+            "moralistic",
+            "perfectionist",
+            "ritualistic",
+            "methodical",
+            "hardworking"
         ],
         "random_status_constraint":[
             "kitten"
@@ -1893,7 +2320,13 @@
             "Is appalled at a Clanmate blatantly lying" 
         ],
         "main_trait_constraint": [
-            "righteous"
+            "righteous",
+            "honest",
+            "judgmental",
+            "serious",
+            "perfectionist",
+            "self-reliant",
+            "moralistic"
         ]
     },
     {
@@ -1902,7 +2335,13 @@
             "Teaches the kits about morals until they all fall asleep"
         ],
         "main_trait_constraint": [
-            "righteous"
+            "righteous",
+            "honest",
+            "judgmental",
+            "serious",
+            "perfectionist",
+            "self-reliant",
+            "moralistic"
         ],
         "random_status_constraint":[
             "kitten"
@@ -1940,7 +2379,15 @@
             "Retells r_c's story as if it happened to {PRONOUN/m_c/object}"
         ],
         "main_trait_constraint": [
-            "shameless"
+            "shameless",
+            "annoying",
+            "obnoxious",
+            "selfish",
+            "lazy",
+            "uncaring",
+            "messy",
+            "unreliable",
+            "greedy"
         ]
     },
     {
@@ -1953,10 +2400,24 @@
             "apprentice",
             "warrior",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "shameless"
+            "shameless",
+            "annoying",
+            "obnoxious",
+            "selfish",
+            "lazy",
+            "uncaring",
+            "messy",
+            "unreliable",
+            "greedy"
         ]
     },
     {
@@ -1976,7 +2437,11 @@
             "Catches r_c in a lie"
         ],
         "main_trait_constraint": [
-            "sincere"
+            "sincere",
+            "honest",
+            "transparent",
+            "forgiving",
+            "open"
         ]
     },
     {
@@ -2024,7 +2489,13 @@
             "Stirs up trouble between two Clanmates"
         ],
         "main_trait_constraint": [
-            "strange"
+            "strange",
+            "cryptic",
+            "macabre",
+            "quirky",
+            "suspicious",
+            "devious",
+            "distracted"
         ]
     },
     {
@@ -2053,7 +2524,10 @@
             "Lies easily and confidently to r_c"
         ],
         "main_trait_constraint": [
-            "sneaky"
+            "sneaky",
+            "escapist",
+            "private",
+            "deceitful"
         ]
     },
     {
@@ -2077,7 +2551,17 @@
             "Can't believe r_c thinks moving the border a mouse-length wouldn't matter"
         ],
         "main_trait_constraint": [
-            "strict"
+            "strict",
+            "serious",
+            "principled",
+            "stable",
+            "polished",
+            "old-fashioned",
+            "reserved",
+            "punctual",
+            "perfectionist",
+            "tidy",
+            "organized"
         ]
     },
     {
@@ -2093,15 +2577,31 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "denkeeper",
+            "caretaker",
+            "messenger"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "caretaker apprentice",
+            "denkeeper apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "strict"
+            "strict",
+            "serious",
+            "principled",
+            "stable",
+            "polished",
+            "old-fashioned",
+            "reserved",
+            "punctual",
+            "perfectionist",
+            "tidy",
+            "organized"
         ],
         "random_living_status": [
             "living"
@@ -2116,7 +2616,17 @@
             "deputy"
         ],
         "main_trait_constraint": [
-            "strict"
+            "strict",
+            "serious",
+            "principled",
+            "stable",
+            "polished",
+            "old-fashioned",
+            "reserved",
+            "punctual",
+            "perfectionist",
+            "tidy",
+            "organized"
         ],
         "random_living_status": [
             "living"
@@ -2143,10 +2653,22 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "thoughtful"
+            "thoughtful",
+            "polite",
+            "delicate",
+            "sentimental",
+            "tolerant",
+            "patient",
+            "sappy"
         ],
         "random_living_status": [
             "living"
@@ -2166,7 +2688,13 @@
             "elder"
         ],
         "main_trait_constraint": [
-            "thoughtful"
+            "thoughtful",
+            "polite",
+            "delicate",
+            "sentimental",
+            "tolerant",
+            "patient",
+            "sappy"
         ],
         "random_status_constraint": [
             "apprentice"
@@ -2188,7 +2716,13 @@
             "leader"
         ],
         "main_trait_constraint": [
-            "thoughtful"
+            "thoughtful",
+            "polite",
+            "delicate",
+            "sentimental",
+            "tolerant",
+            "patient",
+            "sappy"
         ],
         "random_status_constraint": [
             "medicine cat"
@@ -2223,7 +2757,12 @@
             "Gossips all day"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "troublesome",
+            "selfish",
+            "scheming",
+            "hypocrite",
+            "sassy",
+            "fox-hearted"
         ]
     },
     {
@@ -2237,7 +2776,12 @@
             "medicine cat apprentice"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "troublesome",
+            "selfish",
+            "scheming",
+            "hypocrite",
+            "sassy",
+            "fox-hearted"
         ],
         "random_living_status": [
             "living"
@@ -2254,15 +2798,26 @@
             "mediator",
             "deputy",
             "leader",
-            "elder"
+            "elder",
+            "caretaker",
+            "denkeeper",
+            "messenger"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "caretaker apprentice",
+            "messenger apprentice",
+            "denkeeper apprentice"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "troublesome",
+            "selfish",
+            "scheming",
+            "hypocrite",
+            "sassy",
+            "fox-hearted"
         ],
         "random_living_status": [
             "living"
@@ -2289,7 +2844,17 @@
             "Considers forgiving {PRONOUN/m_c/poss} enemies, then perishes the thought"
         ],
         "main_trait_constraint": [
-            "vengeful"
+            "vengeful",
+            "cryptic",
+            "scary",
+            "grim",
+            "venomous",
+            "sadistic",
+            "scheming",
+            "secretive",
+            "power-hungry",
+            "mysterious",
+            "remorseless"
         ]
     },
     {
@@ -2313,7 +2878,11 @@
             "Sighs, watching {PRONOUN/m_c/poss} Clanmates argue over a misunderstanding"
         ],
         "main_trait_constraint": [
-            "wise"
+            "wise",
+            "tranquil",
+            "sentimental",
+            "elegant",
+            "philosophical"
         ]
     },
     {
@@ -2325,7 +2894,11 @@
             "kitten"
         ],
         "main_trait_constraint": [
-            "wise"
+            "wise",
+            "tranquil",
+            "sentimental",
+            "elegant",
+            "philosophical"
         ],
         "random_living_status": [
             "living"
@@ -2341,10 +2914,17 @@
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "wise"
+            "wise",
+            "tranquil",
+            "sentimental",
+            "elegant",
+            "philosophical"
         ],
         "random_living_status": [
             "living"
@@ -2363,13 +2943,23 @@
             "medicine cat",
             "mediator",
             "deputy",
-            "leader"
+            "leader",
+            "denkeeper",
+            "caretaker",
+            "messenger",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "elder"
         ],
         "main_trait_constraint": [
-            "wise"
+            "wise",
+            "tranquil",
+            "sentimental",
+            "elegant",
+            "philosophical"
         ],
         "random_living_status": [
             "living"
@@ -3386,10 +3976,20 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "adventurous"
+            "adventurous",
+            "bubbly",
+            "cheerful",
+            "creative",
+            "youthful",
+            "leaderly",
+            "dynamic",
+            "farsighted"
         ]
     },
     {
@@ -3407,10 +4007,17 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "ambitious"
+            "ambitious",
+            "moralistic",
+            "leaderly",
+            "high-minded",
+            "dedicated"
         ]
     },
     {
@@ -3424,10 +4031,16 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "bloodthirsty"
+            "bloodthirsty",
+            "sadistic",
+            "cruel",
+            "antagonistic"
         ]
     },
     {
@@ -3439,10 +4052,17 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ]
     },
     {
@@ -3453,10 +4073,17 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "bold"
+            "bold",
+            "cool",
+            "intense",
+            "strong",
+            "obnoxious"
         ],
         "random_status_constraint": [
             "leader"
@@ -3473,15 +4100,27 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "calm"
+            "calm",
+            "cooperative",
+            "honest",
+            "sentimental",
+            "tranquil",
+            "relaxed",
+            "patient"
         ],
         "random_living_status": [
             "living"
@@ -3496,10 +4135,17 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "careful"
+            "careful",
+            "fearful",
+            "anxious",
+            "vulnerable",
+            "soft"
         ]
     },
     {
@@ -3512,15 +4158,27 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "charismatic"
+            "charismatic",
+            "flirty",
+            "manipulative",
+            "chummy",
+            "polished",
+            "fancy",
+            "superficial"
         ]
     },
     {
@@ -3531,15 +4189,25 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "childish"
+            "childish",
+            "youthful",
+            "silly",
+            "whimsical",
+            "cheeky"
         ]
     },
     {
@@ -3551,10 +4219,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "cold"
+            "cold",
+            "blunt",
+            "reserved",
+            "logical",
+            "pessimistic",
+            "dry",
+            "passive-aggressive"
         ]
     },
     {
@@ -3567,10 +4244,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ]
     },
     {
@@ -3584,15 +4270,27 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "compassionate"
+            "compassionate",
+            "sappy",
+            "bubbly",
+            "folksy",
+            "generous",
+            "sentimental",
+            "warm"
         ],
         "random_living_status": [
             "living"
@@ -3609,10 +4307,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "daring"
+            "daring",
+            "intense",
+            "chaotic",
+            "moody",
+            "messy",
+            "forceful",
+            "strong"
         ]
     },
     {
@@ -3628,10 +4335,18 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "insecure",
+            "anxious",
+            "coward",
+            "regretful",
+            "grim",
+            "private"
         ]
     },
     {
@@ -3641,10 +4356,18 @@
         ],
         "main_status_constraint": [
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "insecure",
+            "anxious",
+            "coward",
+            "regretful",
+            "grim",
+            "private"
         ]
     },
     {
@@ -3657,10 +4380,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "lonesome"
+            "lonesome",
+            "stoic",
+            "reserved",
+            "cryptic",
+            "macabre",
+            "sentimental",
+            "old-fashioned"
         ]
     },
     {
@@ -3674,10 +4406,24 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "loving"
+            "loving",
+            "supportive",
+            "cooperative",
+            "bubbly",
+            "cheerful",
+            "generous",
+            "gracious",
+            "nurturing",
+            "optimistic",
+            "warm",
+            "sympathetic",
+            "idealistic"
         ],
         "random_status_constraint": [
             "apprentice",
@@ -3694,10 +4440,21 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "loyal"
+            "loyal",
+            "punctual",
+            "civil",
+            "principled",
+            "logical",
+            "supportive",
+            "dedicated",
+            "leaderly",
+            "stable"
         ]
     },
     {
@@ -3716,10 +4473,17 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "nervous"
+            "nervous",
+            "moody",
+            "anxious",
+            "fearful",
+            "confused"
         ]
     },
     {
@@ -3732,10 +4496,21 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "playful"
+            "playful",
+            "silly",
+            "bubbly",
+            "energetic",
+            "goofy",
+            "hyper",
+            "cheerful",
+            "cheeky",
+            "creative"
         ]
     },
     {
@@ -3752,10 +4527,23 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "responsible"
+            "responsible",
+            "organized",
+            "tidy",
+            "civil",
+            "principled",
+            "serious",
+            "moralistic",
+            "perfectionist",
+            "ritualistic",
+            "methodical",
+            "hardworking"
         ]
     },
     {
@@ -3767,10 +4555,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "righteous"
+            "righteous",
+            "honest",
+            "judgmental",
+            "serious",
+            "perfectionist",
+            "self-reliant",
+            "moralistic"
         ]
     },
     {
@@ -3781,10 +4578,21 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "shameless"
+            "shameless",
+            "annoying",
+            "obnoxious",
+            "selfish",
+            "lazy",
+            "uncaring",
+            "messy",
+            "unreliable",
+            "greedy"
         ]
     },
     {
@@ -3798,10 +4606,16 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "sneaky"
+            "sneaky",
+            "escapist",
+            "private",
+            "deceitful"
         ]
     },
     {
@@ -3815,10 +4629,19 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "strange"
+            "strange",
+            "cryptic",
+            "macabre",
+            "quirky",
+            "suspicious",
+            "devious",
+            "distracted"
         ]
     },
     {
@@ -3830,10 +4653,23 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "strict"
+            "strict",
+            "serious",
+            "principled",
+            "stable",
+            "polished",
+            "old-fashioned",
+            "reserved",
+            "punctual",
+            "perfectionist",
+            "tidy",
+            "organized"
         ]
     },
     {
@@ -3849,10 +4685,18 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "troublesome",
+            "selfish",
+            "scheming",
+            "hypocrite",
+            "sassy",
+            "fox-hearted"
         ]
     },
     {
@@ -3864,15 +4708,31 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "vengeful"
+            "vengeful",
+            "cryptic",
+            "scary",
+            "grim",
+            "venomous",
+            "sadistic",
+            "scheming",
+            "secretive",
+            "power-hungry",
+            "mysterious",
+            "remorseless"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_living_status": [
             "living"
@@ -3888,15 +4748,25 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_trait_constraint": [
-            "wise"
+            "wise",
+            "tranquil",
+            "sentimental",
+            "elegant",
+            "philosophical"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_living_status": [
             "living"
@@ -3912,7 +4782,10 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_skill_constraint": [
             "STAR,1"
@@ -3929,7 +4802,10 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "elder"
@@ -3947,7 +4823,10 @@
         "main_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "leader",
@@ -3968,7 +4847,10 @@
         ],
         "main_status_constraint": [
             "apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "medicine cat",
@@ -3986,12 +4868,18 @@
         "main_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice"
+            "mediator apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_living_status": [
             "starclan"
@@ -4015,7 +4903,10 @@
         "main_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_status_constraint": [
             "kitten"
@@ -4036,7 +4927,10 @@
         "main_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_backstory_constraint": [
             "rogue1",
@@ -4057,7 +4951,10 @@
         "main_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_backstory_constraint": [
             "rogue1",
@@ -4084,7 +4981,10 @@
         "main_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "main_backstory_constraint": [
             "rogue1",
@@ -4097,7 +4997,10 @@
         "random_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "medicine cat apprentice",
+            "denkeeper apprentice",
+            "caretaker apprentice",
+            "messenger apprentice"
         ],
         "random_living_status": [
             "living"

@@ -7,7 +7,7 @@
             "Counts the prey pile for the fourth time",
             "Wonders if certain herbs might make prey taste better",
             "Is worried about a storm damaging the nursery",
-            "Is drafting an emerency plan in case of a fire",
+            "Is drafting an emergency plan in case of a fire",
             "Is padding back and forth across the camp",
             "Is helping to reinforce the nursery walls",
             "Is helping to reinforce the camp walls",
@@ -33,7 +33,10 @@
             "Clears branches out of camp after strong winds",
             "Fetches wet moss for a sick clanmate",
             "Feels worn out after reinforcing the warriors den against drafts",
-            "Uses {PRONOUN/m_c/poss} tail to sweep away fallen leaves"
+            "Uses {PRONOUN/m_c/poss} tail to sweep away fallen leaves",
+            "Sorts out stale prey for the freshkill pile",
+            "Sniffs worriedly at some stagnant water in camp",
+            "Stacks rocks along the edge of camp in neat rows"
         ]
     },
     {
@@ -41,7 +44,8 @@
         "thoughts": [
             "Instructs the kits what to do in case of an emergency",
             "Spends all day trying to wrangle the kits out of the way so {PRONOUN/m_c/subject} can repair the nursery",
-            "Teaches r_c how to weave brambles"
+            "Teaches r_c how to weave brambles",
+            "Watches kits splash in mud puddles and sighs inwardly about the mess"
         ],
         "random_status_constraint": [
             "kitten"
@@ -70,16 +74,21 @@
         ]
     },
     {
-        "id": "denkeeper_to_warrior",
+        "id": "denkeeper_to_workers",
         "thoughts": [
-            "Asks for help gathering gravel for an upcoming rainstorm"
+            "Asks for help gathering gravel for an upcoming rainstorm",
+            "Asks r_c for help moving some fallen rocks",
+            "Offers to share prey with a Clanmate eating alone",
+            "Picks the best moss for r_c"
         ],
         "random_status_constraint": [
             "warrior",
             "deputy",
             "denkeeper",
             "apprentice",
-            "denkeeper apprentice"
+            "denkeeper apprentice",
+            "messenger apprentice",
+            "messenger"
         ],
         "random_living_status": [
             "living"
@@ -92,6 +101,32 @@
         ],
         "random_status_constraint": [
             "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "denkeeper_to_leadership",
+        "thoughts": [
+            "Asks r_c to assign a patrol to move a large rock teetering over camp"
+        ],
+        "random_status_constraint": [
+            "deputy",
+            "leader"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "denkeeper_to_meddie",
+        "thoughts": [
+            "Pesters r_c to let {PRONOUN/m_c/object} sort the herb storage"
+        ],
+        "random_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
         ],
         "random_living_status": [
             "living"
