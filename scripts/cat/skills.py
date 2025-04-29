@@ -815,10 +815,8 @@ class CatSkills:
                 )
             if new_skill.secondary and random.randint(1, 5) == 1:
                 new_skill.tertiary = Skill.get_random_skill(
-                    point_tier=1, interest_only=True, exclude=new_skill.secondary.path
+                    point_tier=1, interest_only=True, exclude=[new_skill.secondary.path,new_skill.primary.path]
                 )
-                if new_skill.tertiary == new_skill.primary:
-                    new_skill.tertiary = None
         else:
             primary_tier = 1
             secondary_tier = 1
@@ -842,10 +840,8 @@ class CatSkills:
                 )
             if new_skill.secondary and random.randint(1, 4) == 1:
                 new_skill.tertiary = Skill.get_random_skill(
-                    point_tier=secondary_tier, exclude=new_skill.secondary.path
+                    point_tier=secondary_tier, exclude=[new_skill.secondary.path,new_skill.primary.path]
                 )
-                if new_skill.tertiary == new_skill.primary:
-                    new_skill.tertiary = None
 
         return new_skill
 
@@ -993,7 +989,7 @@ class CatSkills:
                 if self.secondary and not self.tertiary and not int(random.random() * 22):
                     # if there'sao secondary skill, try to give tertiary one!
                     self.tertiary = Skill.get_random_skill(
-                        points=0, interest_only=True, exclude=self.secondary.path
+                        points=0, interest_only=True, exclude=[self.secondary.path,self.primary.path]
                     )
 
                 # if the the_cat has skills, check if they get any points this moon

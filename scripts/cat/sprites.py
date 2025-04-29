@@ -647,7 +647,7 @@ class Sprites:
         boos_data = [["CRIMSONBOO", "MAGENTABOO", "PINKBOO", "BLOODORANGEBOO", "ORANGEBOO", "YELLOWBOO"],
                     ["LIMEBOO", "DARKGREENBOO", "GREENBOO", "TEALBOO", "LIGHTBLUEBOO", "BLUEBOO"],
                     ["DARKBLUEBOO", "LIGHTPURPLEBOO", "DARKPURPLEBOO", "VIBRANTPURPLEBOO", "PINKREDBOO", "WHITEBOO"],
-                    ["LIGHTGRAYBOO", "GRAYBOO", "BROWNBOO", "BLACKBOO"]]
+                    ["LIGHTGRAYBOO", "GRAYBOO", "BLACKBOO", "BROWNBOO"]]
         
         butterflymoth_data = [
             ["PEACOCK BUTTERFLY", "DEATH HEAD HAWKMOTH", "GARDEN TIGER MOTH", "ATLAS MOTH", "CECOROPIA MOTH", "WHITE ERMINE MOTH",
@@ -695,7 +695,7 @@ class Sprites:
      
         french_scarves_data = [
             ["CRIMSONS", "BLUES", "YELLOWS", "CYANS", "ORANGES", "LIMES"],
-            ["GREENS", "RAINBONS", "BLACKS", "SPIKESS", "WHITES"],
+            ["GREENS", "RAINBOWS", "BLACKS", "SPIKESS", "WHITES"],
             ["PINKS", "PURPLES", "MULTIS", "INDIGOS"]
         ]
         
