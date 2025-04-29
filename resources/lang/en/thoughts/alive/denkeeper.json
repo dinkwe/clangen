@@ -27,7 +27,13 @@
             "Decorates the camp wall with twigs and berries",
             "Is worried about drainage in case of flash floods",
             "Places comfortable moss for guarding warriors to sit on",
-            "Tries adding some herbs to prey to improve the flavor"
+            "Tries adding some herbs to prey to improve the flavor",
+            "Digs a new drainage ditch around camp",
+            "Works a particularly sharp bramble into the outside of the nursery",
+            "Clears branches out of camp after strong winds",
+            "Fetches wet moss for a sick clanmate",
+            "Feels worn out after reinforcing the warriors den against drafts",
+            "Uses {PRONOUN/m_c/poss} tail to sweep away fallen leaves"
         ]
     },
     {
@@ -35,10 +41,57 @@
         "thoughts": [
             "Instructs the kits what to do in case of an emergency",
             "Spends all day trying to wrangle the kits out of the way so {PRONOUN/m_c/subject} can repair the nursery",
-            "is teaching r_c how to weave brambles"
+            "Teaches r_c how to weave brambles"
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "denkeeper_to_apprentice_anytype",
+        "thoughts": [
+            "Instructs the apprentices what to do in case of an emergency",
+            "Teaches r_c how to weave brambles",
+            "Teaches r_c how to redirect the flow of water",
+            "Advises the apprentices to avoid tall trees during thunderstorms"
+        ],
+        "random_status_constraint": [
+            "apprentice",
+            "denkeeper apprentice",
+            "messenger apprentice",
+            "medicine cat apprentice",
+            "caretaker apprentice"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "denkeeper_to_warrior",
+        "thoughts": [
+            "Asks for help gathering gravel for an upcoming rainstorm"
+        ],
+        "random_status_constraint": [
+            "warrior",
+            "deputy",
+            "denkeeper",
+            "apprentice",
+            "denkeeper apprentice"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "denkeeper_to_elder",
+        "thoughts": [
+            "Hunts down extra cushy moss for the elders after r_c complains"
+        ],
+        "random_status_constraint": [
+            "elder"
         ],
         "random_living_status": [
             "living"
