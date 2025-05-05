@@ -611,7 +611,7 @@ class CustomizeStatsScreen(Screens):
             self.the_cat.pelt.fur_texture = selected_option
         if dropdown == self.height_dropdown:
             self.the_cat.pelt.height = selected_option
-        if dropdown == self.gender_dropdown:
+        if dropdown == self.build_dropdown:
             self.the_cat.pelt.build = selected_option
         
         if dropdown == self.permanent_condition_dropdown:
