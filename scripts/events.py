@@ -2140,6 +2140,9 @@ class Events:
         random_cat = get_random_moon_cat(
             Cat, cat, parent_child_modifier=True, mentor_app_modifier=True
         )
+        
+        if cat.dead:
+            return
 
         # chance to kill leader: 1/50 by default
         if (

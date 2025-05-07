@@ -135,7 +135,17 @@ class Pelt:
         'Monarch': 'monarch',
         'Oceloid': 'oceloid',
         'PinstripeTabby': 'pinstripetabby',
-        'Snowflake': 'snowflake'
+        'Snowflake': 'snowflake',
+        'Dot': 'dot',
+        'Caliisokoke': 'caliisokoke',
+        'Caliispeckled': 'caliispeckled',
+        'Kintsugi': 'kintsugi',
+        'Dotfade': 'dotfade',
+        'Circletabby': 'circletabby',
+        'Colourpoint': 'colourpoint',
+        'Lynxpoint': 'lynxpoint',
+        'Ncrestedcaracara': 'ncrestedcaracara',
+        'Birchtabby': 'birchtabby'
     }
     
     #ATTRIBUTES, including non-pelt related
@@ -651,16 +661,24 @@ class Pelt:
     tabbies = ["Tabby", "Ticked", "Mackerel", "Stermackerel", "Sillymackerel", "Dancemackerel", "Mimimackerel", 
                "Classic", "Sterclassic", "Sillyclassic", "Danceclassic", "Mimiclassic",
                "Sokoke", "Stersokoke", "Sillysokoke", "Dancesokoke", "Mimisokoke",
-               "Agouti", "Steragouti", "Sillyagouti", "Danceagouti", "Mimiagouti", "Royal", "Brindle", "GhostTabby", "PinstripeTabby"]
+               "Agouti", "Steragouti", "Sillyagouti", "Danceagouti", "Mimiagouti", "Royal", "Brindle", "GhostTabby", "PinstripeTabby",
+               "Caliisokoke", "Circletabby", "Birchtabby"]
+    
     spotted = ["Speckled", "Sterspeckled", "Sillyspeckled", "Dancespeckled", "Mimispeckled", 
                "Rosette", "Sterrosette", "Sillyrosette", "Dancerosette", "Mimirosette", 
                "Lynx", "Bobcat", "Spots", "Merle"]
+    
     plain = ["SingleColour", "SterSingle", "SillySingle", "DanceSingle", "MimiSingle",
              "TwoColour", "Smoke", "Stersmoke", "Sillysmoke", "Dancesmoke", "Mimismoke",
-             "Singlestripe", "Sterstripe", "Dancestripe", "Sillystripe", "Mimistripe", "Smokepoint", "Doberman"]
+             "Singlestripe", "Sterstripe", "Dancestripe", "Sillystripe", "Mimistripe",
+             "Smokepoint", "Doberman", "Dot", "Caliispeckled", "Dotfade", "Stain", "Colourpoint"]
+    
     exotic = ["Bengal", "Sterbengal", "Sillybengal", "Dancebengal", "Mimibengal", 
               "Marbled", "Stermarbled", "Sillymarbled", "Dancemarbled", "Mimimarbled",
-              "Masked", "Stermasked", "Sillymasked", "Dancemasked", "Mimimasked", "Maned", "Ocelot", "Cheetah", "Wildcat", "Wolf", "Finleappatches", "Dalmatian", "Abyssinian", "Clouded", "Snowflake", "Oceloid", "Monarch"]
+              "Masked", "Stermasked", "Sillymasked", "Dancemasked", "Mimimasked", "Maned", "Ocelot",
+              "Cheetah", "Wildcat", "Wolf", "Finleappatches", "Dalmatian", "Abyssinian", "Clouded", "Snowflake", "Oceloid", "Monarch",
+              "Kintsugi", "Lynxpoint", "Ncrestedcaracara"]
+    
     torties = ["Tortie", "Calico"]
     
     magic = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",

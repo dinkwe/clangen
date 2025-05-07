@@ -233,7 +233,7 @@ def get_random_moon_cat(
         if mentor_app_modifier:
             if (
                     main_cat.status
-                    in ["apprentice", "mediator apprentice", "medicine cat apprentice"]
+                    in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice"]
                     and main_cat.mentor
                     and not int(random() * 3)
             ):
@@ -381,6 +381,9 @@ def create_new_cat_block(
                     "apprentice",
                     "medicine cat apprentice",
                     "mediator apprentice",
+                    "messenger apprentice",
+                    "denkeeper apprentice",
+                    "caretaker apprentice"
                 ]:
                     print("Can't give apprentices mates")
                     continue
@@ -435,6 +438,12 @@ def create_new_cat_block(
             "mediator",
             "medicine cat apprentice",
             "medicine cat",
+            "caretaker",
+            "caretaker apprentice",
+            "messenger",
+            "messenger apprentice",
+            "denkeeper",
+            "denkeeper apprentice"
         ]:
             status = match.group(1)
             break
@@ -462,12 +471,12 @@ def create_new_cat_block(
             break
 
     if status and not age:
-        if status in ["apprentice", "mediator apprentice", "medicine cat apprentice"]:
+        if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice"]:
             age = randint(
                 Cat.age_moons[CatAgeEnum.ADOLESCENT][0],
                 Cat.age_moons[CatAgeEnum.ADOLESCENT][1],
             )
-        elif status in ["warrior", "mediator", "medicine cat"]:
+        elif status in ["warrior", "mediator", "medicine cat", "caretaker", "denkeeper", "messenger"]:
             age = randint(
                 Cat.age_moons["young adult"][0], Cat.age_moons["senior adult"][1]
             )
