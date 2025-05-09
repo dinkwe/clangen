@@ -1003,7 +1003,7 @@ class CatSkills:
                 # Check to see if the cat gains a secondary
                 if not self.secondary and not int(random.random() * 11):
                     # if there's no secondary skill, try to give one!
-                    tempexclude=new_skill.primary.path
+                    tempexclude=self.primary.path
                     if self.primary.path in [SkillPath.NIGHT, SkillPath.DAY]:
                         tempexclude = [SkillPath.NIGHT, SkillPath.DAY]
                     self.secondary = Skill.get_random_skill(
