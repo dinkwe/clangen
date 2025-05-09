@@ -128,6 +128,10 @@
             "one": "best friend",
             "many": "best friends"
         },
+        "enemy": {
+            "one": "enemy",
+            "many": "enemies"
+        },
         "she-cat": "she-cat",
         "tom": "tom",
         "cat": "cat",
@@ -214,6 +218,20 @@
             "many": "best friend: %{besties}"
         },
         "bestie_extra": {
+            "one": "1 other",
+            "many": "%{count} others"
+        },
+        "has_a_enemy": "has an enemy",
+        "cats_enemy": "%{name}'s enemy",
+        "enemy_none": "enemy: none",
+        "enemy_living": "(living)",
+        "enemy_dead": "(dead)",
+        "enemy_away": "(away)",
+        "enemy_label": {
+            "one": "enemy: %{enemies}",
+            "many": "enemies: %{enemies}"
+        },
+        "enemye_extra": {
             "one": "1 other",
             "many": "%{count} others"
         },

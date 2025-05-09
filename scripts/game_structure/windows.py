@@ -2364,6 +2364,13 @@ class ChangeCatToggles(UIWindow):
             object_id="#text_box_30_horizleft_pad_0_8",
             container=self,
         )
+        
+        self.text_5 = pygame_gui.elements.UITextBox(
+            "windows.immortality",
+            ui_scale(pygame.Rect(55, 125, -1, 32)),
+            object_id="#text_box_30_horizleft_pad_0_8",
+            container=self,
+        )
 
         # Text
 
@@ -2429,6 +2436,16 @@ class ChangeCatToggles(UIWindow):
             else "@unchecked_checkbox",
             tool_tip_text="windows.prevent_romance_tooltip",
         )
+        # Cause we could be immortals, immortals
+        self.checkboxes["immortality"] = UIImageButton(
+            ui_scale(pygame.Rect((22, 125), (34, 34))),
+            "",
+            container=self,
+            object_id="@checked_checkbox"
+            if self.the_cat.immortality
+            else "@unchecked_checkbox",
+            tool_tip_text="windows.immortality_tooltip",
+        )
 
     def process_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
@@ -2447,6 +2464,9 @@ class ChangeCatToggles(UIWindow):
                 self.refresh_checkboxes()
             elif event.ui_element == self.checkboxes["prevent_mates"]:
                 self.the_cat.no_mates = not self.the_cat.no_mates
+                self.refresh_checkboxes()
+            elif event.ui_element == self.checkboxes["immortality"]:
+                self.the_cat.immortality = not self.the_cat.immortality
                 self.refresh_checkboxes()
 
         return super().process_event(event)

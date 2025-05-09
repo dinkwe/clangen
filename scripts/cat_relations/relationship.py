@@ -30,6 +30,7 @@ class Relationship:
         cat_to,
         mates=False,
         besties=False,
+        enemies=False,
         family=False,
         romantic_love=0,
         platonic_like=0,
@@ -46,6 +47,7 @@ class Relationship:
         self.cat_to = cat_to
         self.mates = mates
         self.besties = besties
+        self.enemies = enemies
         self.family = family
         self.opposite_relationship = (
             None  # link to opposite relationship will be created later
@@ -91,9 +93,10 @@ class Relationship:
         # update relationship
         if self.cat_to.ID in self.cat_from.mate:
             self.mates = True
-        
         if self.cat_to.ID in self.cat_from.bestie:
             self.besties = True
+        if self.cat_to.ID in self.cat_from.enemy:
+            self.enemies = True
 
         # check if opposite_relationship is here, otherwise creates it
         if self.opposite_relationship is None:
@@ -430,9 +433,11 @@ class Relationship:
         # increase the chance of a romantic interaction if they are already mates
         if self.mates:
             value_weights["romantic"] += 1
-        
         if self.besties:
             value_weights["platonic"] += 1
+        if self.enemies:
+            value_weights["dislike"] += 1
+            value_weights["jealousy"] += 1
 
         # create the list of choices
         types = []

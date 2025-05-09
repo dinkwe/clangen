@@ -1,0 +1,10 @@
+{
+    "en": {
+        "heading": "Choose an enemy for %{name}",
+        "info": "If a cat has an enemy, they will have a higher chance of negative interactions (including murder). Enemies will not change without player input. Potential enemies are listed below! The lines connecting the two cats may give a hint on their compatibility with one another, and any existing hatred will be shown with small hearts.",
+        "potential": "Potential Enemies",
+        "current": "Enemies",
+        "set_enemy": "Rivalry declared!",
+        "unset_enemy": "Declare truce"
+    }
+}

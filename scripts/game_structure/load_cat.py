@@ -305,6 +305,16 @@ def json_load():
             else:
                 new_cat.bestie = []
                 new_cat.previous_besties = []
+            if "enemy" in cat:
+                new_cat.enemy = cat["enemy"] if type(cat["enemy"]) is list else [cat["enemy"]]
+                if None in new_cat.enemy:
+                    new_cat.enemy = [i for i in new_cat.enemy if i is not None]
+                new_cat.previous_enemies = (
+                    cat["previous_enemies"] if "previous_enemies" in cat else []
+                )
+            else:
+                new_cat.enemy = []
+                new_cat.previous_enemies = []
             new_cat.dead = cat["dead"]
             new_cat.dead_for = cat["dead_moons"]
             new_cat.experience = cat["experience"]
@@ -318,6 +328,9 @@ def json_load():
             )
             new_cat.prevent_fading = (
                 cat["prevent_fading"] if "prevent_fading" in cat else False
+            )
+            new_cat.immortality = (
+                cat["immortality"] if "immortality" in cat else False
             )
             new_cat.favourite = cat["favourite"] if "favourite" in cat else False
 

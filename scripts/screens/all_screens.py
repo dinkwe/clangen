@@ -6,6 +6,7 @@ from .ChangeGenderScreen import ChangeGenderScreen
 from .ChooseAdoptiveParentScreen import ChooseAdoptiveParentScreen
 from .ChooseMateScreen import ChooseMateScreen
 from .ChooseBestieScreen import ChooseBestieScreen
+from .ChooseEnemyScreen import ChooseEnemyScreen
 from .ChooseMentorScreen import ChooseMentorScreen
 from .ClanScreen import ClanScreen
 from .ClanSettingsScreen import ClanSettingsScreen
@@ -80,6 +81,7 @@ class AllScreens:
 
     choose_mate_screen = ChooseMateScreen("choose mate screen")
     choose_bestie_screen = ChooseBestieScreen("choose bestie screen")
+    choose_bestie_screen = ChooseEnemyScreen("choose enemy screen")
     choose_mentor_screen = ChooseMentorScreen("choose mentor screen")
     choose_adoptive_parent_screen = ChooseAdoptiveParentScreen(
         "choose adoptive parent screen"
@@ -87,7 +89,6 @@ class AllScreens:
     relationship_screen = RelationshipScreen("relationship screen")
     family_tree_screen = FamilyTreeScreen("family tree screen")
     mediation_screen = MediationScreen("mediation screen")
-    
     caretaker_screen = CaretakerScreen("caretaker screen")
     change_gender_screen = ChangeGenderScreen("change gender screen")
 
@@ -97,8 +98,8 @@ class AllScreens:
         cls.profile_screen = ProfileScreen("profile screen")
         cls.ceremony_screen = CeremonyScreen("ceremony screen")
         cls.role_screen = RoleScreen("role screen")
-        cls.customize_stats_screen = CustomizeStatsScreen("customize stats screen")
         cls.customize_cat_screen = CustomizeCatScreen("customize cat screen")
+        cls.customize_stats_screen = CustomizeStatsScreen("customize stats screen")
         cls.sprite_inspect_screen = SpriteInspectScreen("sprite inspect screen")
 
         cls.make_clan_screen = MakeClanScreen("make clan screen")
@@ -121,11 +122,13 @@ class AllScreens:
         cls.patrol_screen = PatrolScreen("patrol screen")
 
         cls.choose_mate_screen = ChooseMateScreen("choose mate screen")
-        cls.choose_bestie_screen = ChooseBestieScreen("choose bestie screen")
         cls.choose_mentor_screen = ChooseMentorScreen("choose mentor screen")
         cls.choose_adoptive_parent_screen = ChooseAdoptiveParentScreen(
             "choose adoptive parent screen"
         )
+        cls.choose_bestie_screen = ChooseBestieScreen("choose bestie screen")
+        cls.choose_enemy_screen = ChooseEnemyScreen("choose enemy screen")
+        
         cls.relationship_screen = RelationshipScreen("relationship screen")
         cls.family_tree_screen = FamilyTreeScreen("family tree screen")
         cls.caretaker_screen = CaretakerScreen("caretaker screen")
