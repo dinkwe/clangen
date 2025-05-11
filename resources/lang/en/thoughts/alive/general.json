@@ -6641,5 +6641,52 @@
             "ARTISAN,1",
             "DISGUISE,1"
         ]
+    },
+    {
+        "id": "agile_to_kit",
+        "thoughts": [
+            "Is skillfully kits in a game of chase"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "main_skill_constraint": [
+            "AGILE,1"
+        ]
+    },
+    {
+        "id": "agile_skill_gen",
+        "thoughts": [
+            "Nimbly darts through the territory",
+            "Practices doing parkour moves around camp"
+        ],
+        "main_skill_constraint": [
+            "AGILE,1"
+        ]
+    },
+    {
+        "id": "animalmagnet_skill_gen",
+        "thoughts": [
+            "Waits patiently for prey to come to {PRONOUN/m_c/object}",
+            "Wonders why {PRONOUN/m_c/poss} patrols always seem to encounter predators"
+        ],
+        "main_skill_constraint": [
+            "ANIMALMAGNET,1"
+        ]
+    },
+    {
+        "id": "animallover_skill_gen",
+        "thoughts": [
+            "Is nursing a fledgling bird back to health",
+            "Wishes {PRONOUN/m_c/subject} could safely transport a fish to camp"
+        ],
+        "main_skill_constraint": [
+            "VET,1",
+            "ANIMALTAKER,1",
+            "ANIMALMAGNET,1"
+        ]
     }
 ]
