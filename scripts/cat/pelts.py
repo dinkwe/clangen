@@ -1697,9 +1697,13 @@ class Pelt:
                 color_tints = []
 
             while self.tint in base_tints:
+                if self.tint not in base_tints:
+                    break
                 base_tints.remove(self.tint)
             while self.tint in color_tints:
-                base_tints.remove(self.tint)
+                if self.tint not in color_tints:
+                    break
+                color_tints.remove(self.tint)
 
             if (base_tints or color_tints) and random.randint(1, 10) == 1:
                 self.tortie_tint = choice(base_tints + color_tints)

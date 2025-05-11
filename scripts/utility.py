@@ -2764,26 +2764,34 @@ def generate_sprite(
                     tortie_pattern = cat.pelt.tortiepattern
 
             for pattern in cat.pelt.pattern:
-                if cat.pelt.tortie_tint != "none" and cat.pelt.tortie_tint in sprites.cat_tints["tint_colours"]:
-                    patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
-                    patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+                if cat.pelt.tortie_tint != "none":
+                    if cat.pelt.tortie_tint in sprites.cat_tints["tint_colours"]:
+                        patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
 
-                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                    tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tortie_tint]))
-                    patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+                        tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                        tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tortie_tint]))
+                        patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
 
-                    # Add patches onto cat.
-                    new_sprite.blit(patches, (0, 0))
-                elif cat.pelt.tint != "none" and cat.pelt.tint in sprites.cat_tints["tint_colours"]:
-                    patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
-                    patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+                        patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
 
-                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
-                    tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tint]))
-                    patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+                        # Add patches onto cat.
+                        new_sprite.blit(patches, (0, 0))
+                    elif cat.pelt.tortie_tint in sprites.cat_tints["dilute_tint_colours"]:
+                        patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
 
-                    # Add patches onto cat.
-                    new_sprite.blit(patches, (0, 0))
+                        tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                        tint.fill(tuple(sprites.cat_tints["tint_colours"][cat.pelt.tortie_tint]))
+                        patches.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
+
+                        patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+
+                        # Add patches onto cat.
+                        new_sprite.blit(patches, (0, 0))
+                    else:
+                        patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
+                        patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+                        # Add patches onto cat.
+                        new_sprite.blit(patches, (0, 0))
                 else:
                     patches = sprites.sprites[tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
                     patches.blit(sprites.sprites["tortiemask" + pattern + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
