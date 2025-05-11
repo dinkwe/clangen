@@ -6609,5 +6609,37 @@
         "relationship_constraint": [
             "enemies"
         ]
+    },
+    {
+        "id": "bones_skill_gen",
+        "thoughts": [
+            "Is excited to find a raccoon skull with all of its teeth!",
+            "Asks a Clanmate if {PRONOUN/m_c/subject} can have their prey scraps",
+            "Wishes {PRONOUN/m_c/subject} could have a cat skull in {PRONOUN/m_c/poss} collection",
+            "Suggests making nests out of prey fur instead of plants",
+            "Is bummed to find out another Clanmate threw out the prey bones {PRONOUN/m_c/subject} had been saving"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "main_skill_constraint": [
+            "BONES,1"
+        ]
+    },
+    {
+        "id": "acc_skills_gen",
+        "thoughts": [
+            "Wonders if {PRONOUN/m_c/subject} could make an accessory using deathberries",
+            "Considers accessorizing",
+            "Suggests a new accessory for r_c"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "main_skill_constraint": [
+            "DECORATOR,1",
+            "ARTISAN,1",
+            "DISGUISE,1"
+        ]
     }
 ]

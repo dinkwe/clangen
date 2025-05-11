@@ -135,7 +135,7 @@ class CustomizeStatsScreen(Screens):
                        "ANIMALTAKER", "ANIMALMAGNET", "VET", "AURAVIBES", "HIDER", "STARGAZER", "GIFTGIVER", "HYDRO", "DISGUISE", "LANGUAGE", "TREASURE",
                        "SCHOLAR", "THINKER", "COMFORTER", "CLEAN", "SONG", "TUNNELER", "ARTISAN", "EXPLORER", "CHEF", "DETECTIVE", "BOOKMAKER", "ASSIST",
                        "MEMORY", "AGILE", "DECORATOR", "WAKEFUL", "GARDENER", "PROPHET", "DREAM", "DARK", "HEALER", "LORE", "KIT", "INSIGHTFUL", "MEDIATOR",
-                       "SWIMMER", "RUNNER", "HUNTER", "DAY", "NIGHT"]
+                       "SWIMMER", "RUNNER", "HUNTER", "DAY", "NIGHT", "LUCK", "STRONG", "BUG", "BONES"]
         self.skill_strings_dict = {
                 "TEACHER": SkillPath.TEACHER,
                 "FIGHTER": SkillPath.FIGHTER,
@@ -213,7 +213,11 @@ class CustomizeStatsScreen(Screens):
                 "RUNNER": SkillPath.RUNNER,
                 "HUNTER": SkillPath.HUNTER,
                 "DAY": SkillPath.DAY,
-                "NIGHT": SkillPath.NIGHT
+                "NIGHT": SkillPath.NIGHT,
+                "LUCK": SkillPath.LUCK,
+                "STRONG": SkillPath.STRONG,
+                "BUG": SkillPath.BUG,
+                "BONES": SkillPath.BONES
             }
         self.skills.sort()
         self.skills.insert(0, "None")
