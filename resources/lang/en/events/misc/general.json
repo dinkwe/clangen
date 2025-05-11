@@ -6099,5 +6099,103 @@
         "medicine cat"
       ]
     }
+  },
+  {
+    "event_id": "gen_treasure_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c spends some time digging up items around the Twoleg place and comes back with a new treasure in {PRONOUN/m_c/poss} paws!",
+    "new_accessory": ["STUFF", "CRAFTED","COLLAR"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["TREASURE,1"]
+    }
+  },
+  {
+    "event_id": "gen_bone_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c spends the afternoon cleaning and degreasing {PRONOUN/m_c/poss} newest find: a pristine acc_singular.",
+    "new_accessory": ["BONES"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["BONES,1"]
+    }
+  },
+  {
+    "event_id": "gen_bug_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c is used to chasing after bugs, but is delighted when one decides to follow {PRONOUN/m_c/object} back to camp!",
+    "new_accessory": ["ALIVEINSECT"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["BUG,1"]
+    }
+  },
+  {
+    "event_id": "gen_bug_skill_accessories2",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c carefully prepares {PRONOUN/m_c/poss} new acc_singular, making sure not to damage the insect's wings.",
+    "new_accessory": ["DEADINSECT","BUTTERFLIES"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["BUG,1"]
+    }
+  },
+  {
+    "event_id": "gen_plant_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c decides to keep a beautiful acc_singular {PRONOUN/m_c/subject} found when exploring a nearby flowerbed!",
+    "new_accessory": ["PLANT","PLANT2"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["HERBALIST,1","GARDENER,1"]
+    }
+  },
+  {
+    "event_id": "gen_crafting_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "m_c proudly shows off the acc_singular that {PRONOUN/m_c/subject} spent the last moon crafting!",
+    "new_accessory": ["CRAFTED"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["DECORATOR,1","ARTISAN,1"]
+    }
+  },
+  {
+    "event_id": "gen_animal_skill_accessories",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["accessory"],
+    "tags": ["skill_trait_required"],
+    "weight": 5,
+    "event_text":  "No cat is surprised when m_c pads into camp with an eager acc_singular right behind {PRONOUN/m_c/object).",
+    "new_accessory": ["SMALLANIMAL"],
+    "m_c": {
+        "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
+        "skill": ["ANIMALMAGNET,1","VET,1","ANIMALTAKER,1"]
+    }
   }
 ]

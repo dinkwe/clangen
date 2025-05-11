@@ -30,7 +30,9 @@
                 "text": "Blissfully avoiding any self-reflection, r_c decides {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing a fantastic job and that it's worthless to ever consider otherwise.",
                 "stat_trait": [
                     "oblivious",
-                    "confident"
+                    "confident",
+                    "selfish",
+                    "aloof"
                 ],
                 "exp": 15,
                 "weight": 20
@@ -83,7 +85,8 @@
                 "stat_trait": [
                     "gloomy",
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious"
                 ]
             },
             {
@@ -91,7 +94,8 @@
                 "stat_trait": [
                     "gloomy",
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious"
                 ],
                 "exp": 15,
                 "weight": 20
@@ -103,14 +107,21 @@
                     "strict",
                     "fierce",
                     "righteous",
-                    "cold"
+                    "cold",
+                    "stable",
+                    "energetic",
+                    "hardworking",
+                    "passionate",
+                    "cool",
+                    "self-reliant",
+                    "intense"
                 ],
                 "exp": 15,
                 "weight": 20
             },
             {
                 "text": "No - this is exactly what {PRONOUN/s_c/subject} {VERB/s_c/need/needs} to work on. s_c acknowledges the feeling, letting it pass around {PRONOUN/r_c/object} like water flowing over a stone, not letting it pull {PRONOUN/s_c/object} in or consume {PRONOUN/s_c/object}. {PRONOUN/s_c/subject/CAP}{VERB/s_c/'re/'s} determined to be more independent.",
-                "stat_skill": ["CLEVER,1"],
+                "stat_skill": ["CLEVER,1","INNOVATOR,1","THINKER,1","SCHOLAR,1"],
                 "exp": 15,
                 "weight": 20
             }
@@ -129,7 +140,11 @@
                     "bold",
                     "daring",
                     "arrogant",
-                    "troublesome"
+                    "troublesome",
+                    "selfish",
+                    "aloof",
+                    "spiteful",
+                    "moody"
                 ]
             },
             {
@@ -138,7 +153,8 @@
                 "weight": 20,
                 "stat_trait": [
                     "lonesome",
-                    "childish"
+                    "childish",
+                    "anxious"
                 ]
             }
         ]
@@ -215,7 +231,12 @@
                     "thoughtful",
                     "wise",
                     "sincere",
-                    "loyal"
+                    "loyal",
+                    "nurturing",
+                    "chummy",
+                    "teacherly",
+                    "warm",
+                    "elegant"
                 ],
                 "relationships": [
                     {
@@ -256,7 +277,9 @@
                 "weight": 20,
                 "stat_trait": [
                     "ambitious",
-                    "grumpy"
+                    "grumpy",
+                    "moody",
+                    "snobbish"
                 ],
                 "can_have_stat": ["r_c"],
                 "relationships": [
@@ -281,7 +304,10 @@
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "cold"
+                    "cold",
+                    "venomous",
+                    "fox-hearted",
+                    "blunt"
                 ],
                 "relationships": [
                     {
@@ -305,7 +331,9 @@
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "arrogant"
+                    "arrogant",
+                    "aloof",
+                    "blunt"
                 ],
                 "relationships": [
                     {
@@ -379,7 +407,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "bubbly",
+                    "nurturing",
+                    "warm",
+                    "sentimental",
+                    "enthusiastic",
+                    "fair"
                 ],
                 "relationships": [
                     {
@@ -396,7 +430,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_skill": [
-                    "LORE,2"
+                    "LORE,2","HISTORIAN,2"
                 ],
                 "relationships": [
                     {
@@ -429,7 +463,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_skill": [
-                    "STORY,2"
+                    "STORY,2","HISTORIAN,2"
                 ],
                 "relationships": [
                     {
@@ -590,7 +624,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "bubbly",
+                    "nurturing",
+                    "warm",
+                    "sentimental",
+                    "enthusiastic",
+                    "fair"
                 ],
                 "relationships": [
                     {
@@ -685,7 +725,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "bubbly",
+                    "nurturing",
+                    "warm",
+                    "sentimental",
+                    "enthusiastic",
+                    "fair"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -772,7 +818,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "bubbly",
+                    "nurturing",
+                    "warm",
+                    "sentimental",
+                    "enthusiastic",
+                    "fair"
                 ],
                 "can_have_stat": ["adult"],
                 "relationships": [
@@ -874,7 +926,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "bubbly",
+                    "nurturing",
+                    "warm",
+                    "sentimental",
+                    "enthusiastic",
+                    "fair"
                 ],
                 "can_have_stat": ["adult"],
                 "relationships": [
@@ -921,7 +979,7 @@
                 "text": "Settling down in the sunlight, p_l launches into an assessment of app1's progress: praising, critiquing, pointing out where {PRONOUN/app1/subject} {VERB/app1/need/needs} to improve. Strangely, p_l's kit doesn't seem thrilled with the topic.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["cold", "ambitious"],
+                "stat_trait": ["cold", "ambitious", "blunt", "fox-hearted", "cruel"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -997,7 +1055,12 @@
                     "sincere",
                     "cold",
                     "calm",
-                    "strict"
+                    "strict",
+                    "reliable",
+                    "self-reliant",
+                    "perfectionist",
+                    "methodical",
+                    "serious"
                 ],
                 "relationships": [
                     {
@@ -1017,7 +1080,10 @@
                 "stat_trait": [
                     "faithful",
                     "sincere",
-                    "loyal"
+                    "loyal",
+                    "protective",
+                    "nurturing",
+                    "leaderly"
                 ],
                 "relationships": [
                     {
@@ -1051,7 +1117,11 @@
                 "stat_trait": [
                     "daring",
                     "adventurous",
-                    "troublesome"
+                    "troublesome",
+                    "energetic",
+                    "fun-loving",
+                    "chaotic",
+                    "creative"
                 ],
                 "relationships": [
                     {
@@ -1102,7 +1172,11 @@
                     "insecure",
                     "childish",
                     "compassionate",
-                    "gloomy"
+                    "gloomy",
+                    "anxious",
+                    "unreliable",
+                    "overthinker",
+                    "coward"
                 ],
                 "relationships": [
                     {
@@ -1129,7 +1203,14 @@
                 "stat_trait": [
                     "shameless",
                     "flamboyant",
-                    "cunning"
+                    "cunning",
+                    "fox-hearted",
+                    "sassy",
+                    "snobbish",
+                    "secretive",
+                    "scheming",
+                    "venomous",
+                    "sadistic"
                 ],
                 "relationships": [
                     {
@@ -1178,7 +1259,11 @@
                     "daring",
                     "adventurous",
                     "troublesome",
-                    "rebellious"
+                    "rebellious",
+                    "energetic",
+                    "fun-loving",
+                    "chaotic",
+                    "creative"
                 ],
                 "injury": [
                     {
@@ -1247,7 +1332,11 @@
                 "stat_skill": [
                     "CLEVER,2",
                     "TEACHER,1",
-                    "INSIGHTFUL,1"
+                    "INSIGHTFUL,1",
+                    "SCHOLAR,2",
+                    "LEADERSHIP,1",
+                    "PRODIGY,1",
+                    "THINKER,2"
                 ],
                 "relationships": [
                     {
@@ -1283,12 +1372,21 @@
                     "loyal",
                     "faithful",
                     "sincere",
-                    "thoughtful"
+                    "thoughtful",
+                    "protective",
+                    "nurturing",
+                    "leaderly",
+                    "warm",
+                    "elegant",
+                    "tranquil"
                 ],
                 "stat_skill": [
                     "SPEAKER,2",
                     "MEDIATOR,1",
-                    "INSIGHTFUL,3"
+                    "INSIGHTFUL,3",
+                    "LEADERSHIP,1",
+                    "COOPERATIVE,1",
+                    "PATIENT,3"
                 ],
                 "relationships": [
                     {
@@ -1324,12 +1422,18 @@
                     "arrogant",
                     "rebellious",
                     "grumpy",
-                    "cunning"
+                    "cunning",
+                    "scheming",
+                    "calculating",
+                    "suspcious"
                 ],
                 "stat_skill": [
                     "SPEAKER,2",
                     "MEDIATOR,1",
-                    "INSIGHTFUL,3"
+                    "INSIGHTFUL,3",
+                    "LEADERSHIP,1",
+                    "COOPERATIVE,1",
+                    "PATIENT,3"
                 ],
                 "relationships": [
                     {
@@ -1354,7 +1458,10 @@
                 "weight": 20,
                 "can_have_stat":["not_pl_rc"],
                 "stat_trait": [
-                    "charismatic"
+                    "charismatic",
+                    "folksy",
+                    "hypnotic",
+                    "persuasive"
                 ],
                 "relationships": [
                     {
@@ -1388,7 +1495,15 @@
                 "stat_trait": [
                     "calm",
                     "careful",
-                    "wise"
+                    "wise",
+                    "tranquil",
+                    "honest",
+                    "sappy",
+                    "sentimental",
+                    "nurturing",
+                    "tolerant",
+                    "teacherly",
+                    "philosophical"
                 ],
                 "relationships": [
                     {
@@ -1443,7 +1558,8 @@
                 "weight": 20,
                 "can_have_stat":["any"],
                 "stat_skill": [
-                    "FIGHTER,3"
+                    "FIGHTER,3",
+                    "STRONG,3"
                 ],
                 "relationships": [
                     {
@@ -1464,7 +1580,11 @@
                     "righteous",
                     "cold",
                     "insecure",
-                    "oblivious"
+                    "oblivious",
+                    "principled",
+                    "aloof",
+                    "perfectionist",
+                    "principled"
                 ],
                 "relationships": [
                     {
@@ -1493,7 +1613,12 @@
                     "arrogant",
                     "rebellious",
                     "grumpy",
-                    "cunning"
+                    "cunning",
+                    "moody",
+                    "greedy",
+                    "coward",
+                    "manipulative",
+                    "scheming"
                 ],
                 "relationships": [
                     {
@@ -1518,7 +1643,10 @@
                 "weight": 20,
                 "can_have_stat":["not_pl_rc"],
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "dry",
+                    "angry",
+                    "aloof"
                 ],
                 "relationships": [
                     {
@@ -1557,7 +1685,12 @@
                 "weight": 20,
                 "can_have_stat":["not_pl_rc"],
                 "stat_trait": [
-                    "gloomy"
+                    "gloomy",
+                    "grim",
+                    "cryptic",
+                    "moody",
+                    "disgusted",
+                    "regretful"
                 ],
                 "relationships": [
                     {
@@ -1643,7 +1776,9 @@
                 "weight": 20,
                 "can_have_stat":["p_l"],
                 "stat_skill": [
-                    "TEACHER,2"
+                    "TEACHER,2",
+                    "COOPERATIVE,3",
+                    "LEADERSHIP,2"
                 ],
                 "relationships": [
                     {
@@ -1684,7 +1819,13 @@
                 "stat_trait": [
                     "playful",
                     "childish",
-                    "shameless"
+                    "shameless",
+                    "bubbly",
+                    "silly",
+                    "fun-loving",
+                    "flirty",
+                    "folksy",
+                    "quirky"
                 ],
                 "relationships": [
                     {
@@ -1734,7 +1875,11 @@
                     "righteous",
                     "responsible",
                     "strict",
-                    "lonesome"
+                    "lonesome",
+                    "methodical",
+                    "power-hungry",
+                    "calculating",
+                    "stoic"
                 ],
                 "relationships": [
                     {
@@ -1777,7 +1922,12 @@
                     "arrogant",
                     "ambitious",
                     "bloodthirsty",
-                    "vengeful"
+                    "vengeful",
+                    "fox-hearted",
+                    "sadistic",
+                    "scheming",
+                    "opinionated",
+                    "scary"
                 ],
                 "relationships": [
                     {
@@ -1812,7 +1962,15 @@
                     "wise",
                     "thoughtful",
                     "calm",
-                    "careful"
+                    "careful",
+                    "tranquil",
+                    "nurturing",
+                    "generous",
+                    "gracious",
+                    "elegant",
+                    "fancy",
+                    "polite",
+                    "peaceful"
                 ],
                 "relationships": [
                     {
@@ -1854,7 +2012,9 @@
                     "compassionate",
                     "charismatic",
                     "loving",
-                    "sincere"
+                    "sincere",
+                    "nurturing",
+                    "supportive"
                 ],
                 "relationships": [
                     {
@@ -1895,7 +2055,11 @@
                 "stat_trait": [
                     "nervous",
                     "insecure",
-                    "gloomy"
+                    "gloomy",
+                    "anxious",
+                    "dependant",
+                    "emotional",
+                    "coward"
                 ],
                 "relationships": [
                     {
@@ -1943,7 +2107,12 @@
                 "weight": 20,
                 "can_have_stat":["p_l"],
                 "stat_trait": [
-                    "strange"
+                    "strange",
+                    "cryptic",
+                    "grim",
+                    "macabre",
+                    "fox-hearted",
+                    "whimsical"
                 ],
                 "relationships": [
                     {
@@ -1961,7 +2130,10 @@
                 "weight": 20,
                 "can_have_stat":["p_l"],
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "angry",
+                    "moody",
+                    "aloof"
                 ],
                 "relationships": [
                     {
@@ -2040,7 +2212,7 @@
                 "text": "Talking everyone down, p_l encourages the patrol to focus on their work collecting nesting material.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["SPEAKER,2"],
+                "stat_skill": ["SPEAKER,2","COOPERATIVE,2","PATIENT,2"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -2068,7 +2240,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "nurturing",
+                    "warm",
+                    "supportive",
+                    "leaderly",
+                    "teacherly",
+                    "benevolent"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2123,7 +2301,14 @@
                     "shameless",
                     "strict",
                     "troublesome",
-                    "vengeful"
+                    "vengeful",
+                    "blunt",
+                    "sadistic",
+                    "sassy",
+                    "venomous",
+                    "cruel",
+                    "charmless",
+                    "angry"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2153,7 +2338,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "nurturing",
+                    "warm",
+                    "supportive",
+                    "leaderly",
+                    "teacherly",
+                    "benevolent"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2247,7 +2438,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "nurturing",
+                    "warm",
+                    "supportive",
+                    "leaderly",
+                    "teacherly",
+                    "benevolent"
                 ],
                 "can_have_stat": ["adult"],
                 "relationships": [
@@ -2272,7 +2469,13 @@
                     "shameless",
                     "strict",
                     "troublesome",
-                    "vengeful"
+                    "vengeful",
+                    "moody",
+                    "blunt",
+                    "venomous",
+                    "airy",
+                    "argumentative",
+                    "spiteful"
                 ],
                 "can_have_stat": ["adult", "p_l"],
                 "relationships": [
@@ -2313,7 +2516,13 @@
                     "shameless",
                     "strict",
                     "troublesome",
-                    "vengeful"
+                    "vengeful",
+                    "moody",
+                    "blunt",
+                    "venomous",
+                    "airy",
+                    "argumentative",
+                    "spiteful"
                 ],
                 "can_have_stat": ["adult"],
                 "relationships": [
@@ -2334,9 +2543,14 @@
                     "compassionate",
                     "faithful",
                     "loving",
-                    "responsible",
-                    "thoughtful",
-                    "wise"
+                    "bubbly",
+                    "nurturing",
+                    "sappy",
+                    "sentimental",
+                    "folksy",
+                    "relaxed",
+                    "generous",
+                    "self-pitying"
                 ],
                 "can_have_stat": ["adult"],
                 "relationships": [
@@ -2417,7 +2631,7 @@
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
-                "stat_skill": ["SPEAKER,1"],
+                "stat_skill": ["SPEAKER,1","LEADERSHIP,1"],
                 "relationships": [
                     {
                         "cats_to": ["s_c"],
@@ -2440,7 +2654,7 @@
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
-                "stat_skill": ["MEDIATOR,1"],
+                "stat_skill": ["MEDIATOR,1","COOPERATIVE,1","SPEAKER,1"],
                 "relationships": [
                     {
                         "cats_to": ["s_c"],
@@ -2463,7 +2677,7 @@
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
-                "stat_skill": ["CLEVER,1"],
+                "stat_skill": ["CLEVER,1","DETECTIVE,1","PRODIGY,1"],
                 "relationships": [
                     {
                         "cats_to": ["s_c"],
@@ -2486,7 +2700,7 @@
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
-                "stat_skill": ["INSIGHTFUL,1"],
+                "stat_skill": ["INSIGHTFUL,1","LEADERSHIP,1","PRODIGY,1"],
                 "relationships": [
                     {
                         "cats_to": ["s_c"],
@@ -2509,7 +2723,7 @@
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
-                "stat_skill": ["TEACHER,1"],
+                "stat_skill": ["TEACHER,1","PATIENT,2"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -2534,7 +2748,12 @@
                 "stat_trait": [
                     "calm",
                     "careful",
-                    "cold"
+                    "cold",
+                    "blunt",
+                    "fox-hearted",
+                    "calculating",
+                    "stoic",
+                    "uncaring"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2559,7 +2778,11 @@
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
-                    "charismatic"
+                    "charismatic",
+                    "flirty",
+                    "bubbly",
+                    "persuasive",
+                    "witty"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2614,7 +2837,18 @@
                     "shameless",
                     "strict",
                     "troublesome",
-                    "vengeful"
+                    "vengeful",
+                    "uncaring",
+                    "blunt",
+                    "sadistic",
+                    "antagonistic",
+                    "venomous",
+                    "incisive",
+                    "serious",
+                    "monotone",
+                    "malicious",
+                    "argumentative",
+                    "cruel"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2644,7 +2878,11 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "warm",
+                    "nurturing",
+                    "generous",
+                    "patient"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -2729,7 +2967,7 @@
                 "text": "s_c chooses to train with r_c, and the spiritual warrior gently guides the conversation. r_c feels deeply privileged and far more at peace after confiding in {PRONOUN/s_c/object}.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["faithful"],
+                "stat_trait": ["faithful", "elegant", "tranquil", "philosophical", "honest", "transparent"],
                 "stat_skill": ["STAR,2"],
                 "relationships": [
                     {
@@ -2821,7 +3059,7 @@
             },
             {
                 "text": "s_c often feels like StarClan walks with {PRONOUN/s_c/object}, and this is just another instance on the path. {PRONOUN/s_c/subject/CAP} {VERB/s_c/use/uses} the solo patrol to collect {PRONOUN/s_c/poss} thoughts, and by the time {PRONOUN/s_c/subject} {VERB/s_c/pad/pads} home with a hard day's training done, {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} ready for the next step {PRONOUN/s_c/poss} vision hinted at.",
-                "stat_trait": ["faithful"],
+                "stat_trait": ["faithful", "elegant", "tranquil", "philosophical", "honest", "transparent"],
                 "stat_skill": ["STAR,2"],
                 "exp": 20,
                 "weight": 20
@@ -3002,7 +3240,7 @@
                 "text": "s_c cannot relate to the frankly nightmarish scenes app1 has been tormented by, but {PRONOUN/s_c/subject} can't believe {PRONOUN/s_c/poss} Clanmate has been going through so much without anybody noticing. Wrapping {PRONOUN/s_c/poss} tail around app1's shoulders, {PRONOUN/s_c/subject} tell app1 this will all be alright - {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} going to make sure that app1 doesn't have to shoulder this burden alone.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["calm", "compassionate", "faithful", "strange"],
+                "stat_trait": ["calm", "compassionate", "faithful", "strange", "warm", "nurturing", "delicate", "sentimental", "forgiving", "appreciative", "vulnerable"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -3048,7 +3286,7 @@
                 "text": "Visions! From StarClan, perhaps? app1 should be thrilled, not upset, and s_c sweeps past {PRONOUN/app1/object}, telling app1 just how {PRONOUN/app1/subject} should use this unexpected ability.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["ambitious", "cold", "righteous"],
+                "stat_trait": ["ambitious", "cold", "righteous", "venomous","scheming", "selfish", "crude", "resentful", "envious"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -3217,7 +3455,14 @@
                     "confident",
                     "playful",
                     "shameless",
-                    "strange"
+                    "strange",
+                    "folksy",
+                    "emotional",
+                    "nurturing",
+                    "fun-loving",
+                    "bubbly",
+                    "silly",
+                    "goofy"
                 ],
                 "can_have_stat": ["app1", "app"],
                 "relationships": [
@@ -3272,7 +3517,10 @@
                     "confident",
                     "fierce",
                     "insecure",
-                    "troublesome"
+                    "troublesome",
+                    "cruel",
+                    "sadistic",
+                    "resentful"
                 ],
                 "can_have_stat": ["app1", "app"],
                 "relationships": [
@@ -3330,7 +3578,13 @@
                     "playful",
                     "righteous",
                     "arrogant",
-                    "oblivious"
+                    "oblivious",
+                    "aloof",
+                    "selfish",
+                    "amoral",
+                    "absent-minded",
+                    "carefree",
+                    "misguided"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3348,7 +3602,14 @@
                     "nervous",
                     "sneaky",
                     "strange",
-                    "sincere"
+                    "sincere",
+                    "leaderly",
+                    "stoic",
+                    "nerdy",
+                    "logical",
+                    "fair",
+                    "responsible",
+                    "reserved"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3366,7 +3627,18 @@
                     "troublesome",
                     "vengeful",
                     "cunning",
-                    "grumpy"
+                    "grumpy",
+                    "self-pitying",
+                    "moody",
+                    "suspicious",
+                    "spiteful",
+                    "wrongful",
+                    "arrogant",
+                    "remorseless",
+                    "sadistic",
+                    "greedy",
+                    "cheeky",
+                    "dramatic"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3381,7 +3653,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "warm",
+                    "nurturing",
+                    "sappy",
+                    "sentimental",
+                    "appreciative",
+                    "fancy"
                 ],
                 "can_have_stat": ["app"]
             }
@@ -3404,7 +3682,11 @@
                     "loyal",
                     "nervous",
                     "sneaky",
-                    "strange"
+                    "strange",
+                    "anxious",
+                    "cryptic",
+                    "suspcious",
+                    "mysterious"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3420,7 +3702,12 @@
                     "confident",
                     "daring",
                     "playful",
-                    "righteous"
+                    "righteous",
+                    "selfish",
+                    "arrogant",
+                    "cheeky",
+                    "fox-hearted",
+                    "crude"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3434,7 +3721,13 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "warm",
+                    "nurturing",
+                    "sappy",
+                    "sentimental",
+                    "appreciative",
+                    "fancy"
                 ],
                 "can_have_stat": ["app"]
             },
@@ -3450,7 +3743,18 @@
                     "shameless",
                     "strict",
                     "troublesome",
-                    "vengeful"
+                    "vengeful",
+                    "self-pitying",
+                    "moody",
+                    "suspicious",
+                    "spiteful",
+                    "wrongful",
+                    "arrogant",
+                    "remorseless",
+                    "sadistic",
+                    "greedy",
+                    "cheeky",
+                    "dramatic"
                 ],
                 "can_have_stat": ["app"]
             }
@@ -3533,7 +3837,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a Clanmate's fall, and working on treading exactly in each other's pawsteps.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,2"],
+                "stat_skill": ["TEACHER,2","LEADERSHIP,1","PATIENT,3","COOPERATIVE,2"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -3562,7 +3866,7 @@
                 "text": "p_l puts s_c in charge of calling out the instructions for the imaginary camp-defense they're all practicing, and s_c not only does a wonderful job, but invents a couple surprises in the training scenario that have the cats cursing in surprise at the time and purring in appreciation afterwards.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["SPEAKER,1"],
+                "stat_skill": ["SPEAKER,1","LEADERSHIP,1"],
                 "can_have_stat": ["r_c"],
                 "relationships": [
                     {
@@ -3592,7 +3896,7 @@
                 "text": "s_c spots p_l and r_c - both of them in the middle of exchanging meows that might as well be barks to the other, halfway to an argument - and slips between them, explaining to both what the other intends.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["MEDIATOR,1"],
+                "stat_skill": ["MEDIATOR,1","COOPERATIVE,1"],
                 "can_have_stat": ["not_pl_rc"],
                 "relationships": [
                     {
@@ -3622,7 +3926,7 @@
                 "text": "s_c suggests they form two teams to fight each other - claws sheathed, of course. p_l takes {PRONOUN/s_c/object} up on the good idea!",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1"],
+                "stat_skill": ["CLEVER,1","INNOVATOR,1"],
                 "can_have_stat": ["r_c"],
                 "relationships": [
                     {
@@ -3645,7 +3949,7 @@
                 "text": "Quietly, s_c takes p_l aside and suggests how best to group cats who don't normally work together. It's a valuable perspective to consider, and one p_l takes into consideration for the team exercises.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["INSIGHTFUL,1"],
+                "stat_skill": ["INSIGHTFUL,1","LEADERSHIP,1"],
                 "can_have_stat": ["r_c"],
                 "relationships": [
                     {
@@ -3675,7 +3979,7 @@
                 "text": "Just as they're starting, p_l puts a paw wrong and goes down hard. s_c rushes in and checks {PRONOUN/p_l/object} over, firmly instructing p_l to stay on the sidelines. p_l sits the rest of the session out and avoids further injury, yowling encouragement and instructions to {PRONOUN/p_l/poss} Clanmates.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["HEALER,1"],
+                "stat_skill": ["HEALER,1","VET,1","ASSIST,1"],
                 "can_have_stat": ["r_c"],
                 "injury": [
                     {
@@ -3731,7 +4035,10 @@
                 "weight": 20,
                 "stat_trait": [
                     "arrogant",
-                    "ambitious"
+                    "ambitious",
+                    "wrongful",
+                    "questioning",
+                    "dramatic"
                 ],
                 "can_have_stat": ["r_c"],
                 "relationships": [
@@ -3817,7 +4124,9 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "moody",
+                    "resentful"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3843,7 +4152,10 @@
                 "weight": 40,
                 "stat_trait": [
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "fearful",
+                    "coward"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3862,7 +4174,11 @@
                 "weight": 40,
                 "stat_trait": [
                     "playful",
-                    "childish"
+                    "childish",
+                    "cheeky",
+                    "bubbly",
+                    "silly",
+                    "goofy"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3889,7 +4205,11 @@
                 "stat_trait": [
                     "shameless",
                     "rebellious",
-                    "troublesome"
+                    "troublesome",
+                    "selfish",
+                    "aloof",
+                    "cheeky",
+                    "carefree"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3914,7 +4234,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "sincere"
+                    "sincere", "honest", "sincere", "transparent"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3939,7 +4259,9 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "competitive"
+                    "competitive",
+                    "argumentative",
+                    "energetic"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3964,7 +4286,11 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "lonesome"
+                    "lonesome",
+                    "cryptic",
+                    "strange",
+                    "grim",
+                    "macabre"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -3988,7 +4314,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice mirroring each other, until by the end of the afternoon they can almost act as one cat.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1"],
+                "stat_skill": ["TEACHER,1","LEADERSHIP,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -4117,7 +4443,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a Clanmate's fall, and working on treading exactly in each other's pawsteps.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,2"],
+                "stat_skill": ["TEACHER,2","LEADERSHIP,2"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -4193,7 +4519,10 @@
                 "weight": 20,
                 "stat_trait": [
                     "arrogant",
-                    "ambitious"
+                    "ambitious",
+                    "selfish",
+                    "aloof",
+                    "incisive"
                 ],
                 "can_have_stat": ["r_c"],
                 "relationships": [
@@ -4289,7 +4618,12 @@
                 "stat_trait": [
                     "thoughtful",
                     "careful",
-                    "wise"
+                    "wise",
+                    "patient",
+                    "tranquil",
+                    "elegant",
+                    "generous",
+                    "nurturing"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -4318,7 +4652,13 @@
                     "confident",
                     "daring",
                     "bold",
-                    "adventurous"
+                    "adventurous",
+                    "heroic",
+                    "hearty",
+                    "forceful",
+                    "dramatic",
+                    "fatalistic",
+                    "incisive"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -4335,7 +4675,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice mirroring each other, until by the end of the afternoon they can almost act as one cat. The warrior praises how quickly app1 picks it up, and the apprentice comes back to camp fluffed up with pride.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,2"],
+                "stat_skill": ["TEACHER,2","LEADERSHIP,2"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -4445,7 +4785,7 @@
                 "text": "s_c notices the apprentices'... <i>enthusiasm</i> and gently redirects them. They end up having a marvelous afternoon, feeling mature and just as skilled as the warriors around them.",
                 "exp": 20,
                 "weight": 30,
-                "stat_skill": ["TEACHER,2"],
+                "stat_skill": ["TEACHER,2","LEADERSHIP,2"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -4521,7 +4861,9 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "moody",
+                    "grim"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4547,7 +4889,12 @@
                 "weight": 40,
                 "stat_trait": [
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "fearful",
+                    "clumsy",
+                    "coward",
+                    "frustrated"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4566,7 +4913,14 @@
                 "weight": 40,
                 "stat_trait": [
                     "playful",
-                    "childish"
+                    "childish",
+                    "silly",
+                    "goofy",
+                    "bubbly",
+                    "absent-minded",
+                    "carefree",
+                    "spontainious",
+                    "youthful"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4591,7 +4945,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "sincere"
+                    "sincere", "honest", "transparent"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4616,7 +4970,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "competitive"
+                    "competitive", "hardworking"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4641,7 +4995,11 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "lonesome"
+                    "lonesome",
+                    "cryptic",
+                    "strange",
+                    "grim",
+                    "macabre"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4731,7 +5089,11 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "angry",
+                    "moody",
+                    "grim",
+                    "resentful"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4757,7 +5119,12 @@
                 "weight": 40,
                 "stat_trait": [
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "fearful",
+                    "clumsy",
+                    "coward",
+                    "frustrated"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4776,7 +5143,14 @@
                 "weight": 40,
                 "stat_trait": [
                     "playful",
-                    "childish"
+                    "childish",
+                    "silly",
+                    "goofy",
+                    "bubbly",
+                    "absent-minded",
+                    "carefree",
+                    "spontainious",
+                    "youthful"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4801,7 +5175,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "sincere"
+                    "sincere", "honest", "transparent", "elegant"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4826,7 +5200,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "competitive"
+                    "competitive", "hardworking", "enthusiastic"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4851,7 +5225,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "lonesome"
+                    "lonesome", "grim"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4936,7 +5310,7 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy", "angry", "moody", "stoic"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4962,7 +5336,12 @@
                 "weight": 40,
                 "stat_trait": [
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "fearful",
+                    "clumsy",
+                    "coward",
+                    "frustrated"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -4981,7 +5360,11 @@
                 "weight": 40,
                 "stat_trait": [
                     "playful",
-                    "childish"
+                    "childish",
+                    "goofy",
+                    "silly",
+                    "bubbly",
+                    "quirky"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5006,7 +5389,11 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "sincere"
+                    "sincere",
+                    "honest",
+                    "transparent",
+                    "polite",
+                    "reserved"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5116,7 +5503,12 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "grumpy"
+                    "grumpy",
+                    "moody",
+                    "angry",
+                    "wrongful",
+                    "dry",
+                    "sensitive"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5142,7 +5534,13 @@
                 "weight": 40,
                 "stat_trait": [
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "self-pitying",
+                    "sensitive",
+                    "innocent",
+                    "clumsy",
+                    "misguided"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5168,7 +5566,11 @@
                 "weight": 40,
                 "stat_trait": [
                     "playful",
-                    "childish"
+                    "childish",
+                    "silly",
+                    "bubbly",
+                    "goofy",
+                    "annoying"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5193,7 +5595,12 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "sincere"
+                    "sincere",
+                    "honest",
+                    "transparent",
+                    "private",
+                    "punctual",
+                    "civil"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5218,7 +5625,10 @@
                 "exp": 20,
                 "weight": 40,
                 "stat_trait": [
-                    "lonesome"
+                    "lonesome",
+                    "self-pitying",
+                    "vague",
+                    "moody"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5336,7 +5746,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing their stalking on each other, sharing tips about different terrain types, and discussing prey varieties.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "HUNTER,1"],
+                "stat_skill": ["TEACHER,1", "HUNTER,1","LEADERSHIP,2","EXPLORER,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -5382,7 +5792,11 @@
                 "weight": 30,
                 "stat_trait": [
                     "childish",
-                    "playful"
+                    "playful",
+                    "silly",
+                    "bubbly",
+                    "goofy",
+                    "annoying"
                 ],
                 "can_have_stat": ["r_c"],
                 "relationships": [
@@ -5491,7 +5905,17 @@
                 "stat_trait": [
                     "loyal",
                     "faithful",
-                    "sincere"
+                    "sincere",
+                    "honest",
+                    "sentimental",
+                    "moralistic",
+                    "scholarly",
+                    "ritualistic",
+                    "cool",
+                    "practical",
+                    "reserved",
+                    "fair",
+                    "stoic"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5518,7 +5942,13 @@
                 "stat_trait": [
                     "flamboyant",
                     "shameless",
-                    "playful"
+                    "playful",
+                    "chaotic",
+                    "optimistic",
+                    "silly",
+                    "whimsical",
+                    "loud",
+                    "passionate"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5544,7 +5974,13 @@
                 "weight": 20,
                 "stat_trait": [
                     "cunning",
-                    "sneaky"
+                    "sneaky",
+                    "secretive",
+                    "escapist",
+                    "logical",
+                    "calculating",
+                    "fox-hearted",
+                    "private"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5571,7 +6007,13 @@
                 "stat_trait": [
                     "fierce",
                     "bloodthirsty",
-                    "competitive"
+                    "competitive",
+                    "strong",
+                    "sadistic",
+                    "power-hungry",
+                    "cruel",
+                    "destructive",
+                    "remorseless"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -5595,7 +6037,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice how to bring down prey together, their confidence in each other growing.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "HUNTER,1"],
+                "stat_skill": ["TEACHER,1", "HUNTER,1","LEADERSHIP,1"],
                 "can_have_stat":["any"],
                 "relationships": [
                     {
@@ -5752,7 +6194,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing stalking each other, sharing tips about different terrain types, and discussing prey varieties.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "HUNTER,1"],
+                "stat_skill": ["TEACHER,1", "HUNTER,1","LEADERSHIP,1","EXPLORER,1","HIDER,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -5770,7 +6212,8 @@
                 "weight": 30,
                 "stat_trait": [
                     "sneaky",
-                    "cunning"
+                    "cunning",
+                    "escapist"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -5801,7 +6244,10 @@
                     "competitive",
                     "confident",
                     "flamboyant",
-                    "shameless"
+                    "shameless",
+                    "dramatic",
+                    "loud",
+                    "passionate"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -5832,7 +6278,11 @@
                     "sincere",
                     "strict",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "transparent",
+                    "honest",
+                    "stable",
+                    "principled"
                 ],
                 "can_have_stat": ["app1"],
                 "relationships": [
@@ -5948,7 +6398,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice taking down prey together, their confidence in their team hunting growing. The warrior praises how quickly app1 picks it up, and the apprentice comes back to camp fluffed up with pride.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "HUNTER,1"],
+                "stat_skill": ["TEACHER,1", "HUNTER,1","LEADERSHIP,1","EXPLORER,1","HIDER,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -6029,7 +6479,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing stalking each other, sharing tips about different terrain types, and discussing prey varieties.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "HUNTER,1"],
+                "stat_skill": ["TEACHER,1", "HUNTER,1","LEADERSHIP,1","EXPLORER,1","HIDER,1","CHEF,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -6094,7 +6544,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing trips, twists, and tumbles.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "FIGHTER,1"],
+                "stat_skill": ["TEACHER,1", "FIGHTER,1","LEADERSHIP,1","STRONG,1","AGILE,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -6156,7 +6606,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice how to weave around an opponent, feeling more and more confident in their teamwork.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "FIGHTER,1"],
+                "stat_skill": ["TEACHER,1", "FIGHTER,1","AGILE,1","HIDER,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -6222,7 +6672,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing trips, twists, and tumbles.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "FIGHTER,1"],
+                "stat_skill": ["TEACHER,1", "FIGHTER,1","AGILE,1","HIDER,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -6288,7 +6738,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice how to weave around an opponent, feeling more and more confident in their teamwork. The warrior praises how quickly app1 picks it up, and the apprentice comes back to camp fluffed up with pride.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "FIGHTER,1"],
+                "stat_skill": ["TEACHER,1", "FIGHTER,1","AGILE,1","HIDER,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -6355,7 +6805,7 @@
                 "text": "s_c takes charge and coordinates exercises for the training patrol. Soon cats are practicing trips, twists, and tumbles.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["TEACHER,1", "FIGHTER,1"],
+                "stat_skill": ["TEACHER,1", "FIGHTER,1","AGILE,1","HIDER,1"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -6434,7 +6884,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice how to bring down prey together, their confidence and admiration for each other growing.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["HUNTER,1"],
+                "stat_skill": ["HUNTER,1","STRONG,1","LEADERSHIP,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -6503,7 +6953,7 @@
                 "text": "s_c takes charge and coordinates exercises for the duo. They practice how to weave around an opponent, feeling more and more confident in their teamwork.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["FIGHTER,1"],
+                "stat_skill": ["FIGHTER,1","STRONG,1"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -6572,7 +7022,7 @@
                 "text": "s_c knows just what to do, and the smile on r_c's face when {PRONOUN/s_c/subject} {VERB/s_c/present/presents} {PRONOUN/s_c/poss} solution makes all the effort of solving it worth it.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1"],
+                "stat_skill": ["CLEVER,1","INNOVATOR,1","DETECTIVE,1"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -6642,7 +7092,7 @@
                 "text": "s_c talks about how choosing the right words can sometimes feel impossible. But that it's always better to try than to never talk at all, and talking things out can create wonderful connections.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["SPEAKER,1"],
+                "stat_skill": ["SPEAKER,1","COOPERATIVE,1"],
                 "can_have_stat": ["p_l"],
                 "relationships": [
                     {
@@ -6791,7 +7241,7 @@
                 "text": "s_c knows how hard it is, feeling the pull of the ancestors watching over {PRONOUN/s_c/object}. With r_c, {PRONOUN/s_c/subject} {VERB/s_c/go/goes} to a quiet area near camp and show {PRONOUN/r_c/object} how to breathe, to feel connected to the world around {PRONOUN/r_c/object} and let {PRONOUN/r_c/poss} worries evaporate from {PRONOUN/r_c/poss} pelt.",
                 "exp": 10,
                 "weight": 20,
-                "stat_trait": ["faithful", "wise"],
+                "stat_trait": ["faithful", "wise", "serious"],
                 "stat_skill": ["STAR,2"],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -6894,7 +7344,14 @@
                     "daring",
                     "troublesome",
                     "playful",
-                    "childish"
+                    "childish",
+                    "annoying",
+                    "dramatic",
+                    "dynamic",
+                    "whimsical",
+                    "chaotic",
+                    "energetic",
+                    "hyper"
                 ],
                 "injury": [
                     {
@@ -7873,7 +8330,18 @@
                     "shameless",
                     "competitive",
                     "oblivious",
-                    "flamboyant"
+                    "flamboyant",
+                    "bubbly",
+                    "hyper",
+                    "chaotic",
+                    "whimsical",
+                    "youthful",
+                    "enthusiastic",
+                    "silly",
+                    "spontainious",
+                    "optimistic",
+                    "quirky"
+
                 ],
                 "relationships": [
                     {
@@ -7925,7 +8393,14 @@
                     "strict",
                     "arrogant",
                     "grumpy",
-                    "gloomy"
+                    "gloomy",
+                    "selfish",
+                    "self-pitying",
+                    "moody",
+                    "blunt",
+                    "stoic",
+                    "judgmental",
+                    "passive-aggressive"
                 ],
                 "relationships": [
                     {
@@ -8021,7 +8496,15 @@
                     "loving",
                     "loyal",
                     "wise",
-                    "sincere"
+                    "sincere",
+                    "nurturing",
+                    "warm",
+                    "sympathetic",
+                    "sappy",
+                    "passionate",
+                    "soft",
+                    "gentle",
+                    "delicate"
                 ],
                 "can_have_stat": ["app"],
                 "relationships": [
@@ -8103,7 +8586,17 @@
                     "cold",
                     "arrogant",
                     "competitive",
-                    "rebellious"
+                    "rebellious",
+                    "wrongful",
+                    "devious",
+                    "opinionated",
+                    "emotional",
+                    "annoying",
+                    "unpredictable",
+                    "pessimistic",
+                    "distracted",
+                    "incisive",
+                    "sensitive"
                 ],
                 "can_have_stat": ["app"],
                 "injury": [
@@ -8207,7 +8700,15 @@
                     "loving",
                     "loyal",
                     "wise",
-                    "sincere"
+                    "sincere",
+                    "nurturing",
+                    "warm",
+                    "sympathetic",
+                    "sappy",
+                    "passionate",
+                    "soft",
+                    "gentle",
+                    "delicate"
                 ],
                 "can_have_stat": ["app"],
                 "relationships": [
@@ -8289,7 +8790,17 @@
                     "cold",
                     "arrogant",
                     "competitive",
-                    "rebellious"
+                    "rebellious",
+                    "wrongful",
+                    "devious",
+                    "opinionated",
+                    "emotional",
+                    "annoying",
+                    "unpredictable",
+                    "pessimistic",
+                    "distracted",
+                    "incisive",
+                    "sensitive"
                 ],
                 "can_have_stat": ["app"],
                 "injury": [
@@ -8589,7 +9100,16 @@
                         "stat_trait": [
                             "thoughtful",
                             "wise",
-                            "cunning"
+                            "cunning",
+                            "witty",
+                            "genuine",
+                            "macabre",
+                            "farsighted",
+                            "enigmatic",
+                            "overimaginative",
+                            "high-minded",
+                            "free-thinking",
+                            "overthinker"
                         ],
                         "relationships": [
                                 {
@@ -8624,7 +9144,12 @@
                                 "lonesome",
                                 "gloomy",
                                 "compassionate",
-                                "sincere"
+                                "sincere",
+                                "sympathetic",
+                                "appreciative",
+                                "vulnerable",
+                                "serious",
+                                "sensitive"
                             ],
                             "relationships": [
                                     {
@@ -8658,7 +9183,14 @@
                                 "stat_trait": [
                                     "troublesome",
                                     "arrogant",
-                                    "confident"
+                                    "confident",
+                                    "crude",
+                                    "blunt",
+                                    "annoying",
+                                    "strong",
+                                    "selfish",
+                                    "envious",
+                                    "remorseless"
                                 ],
                                 "relationships": [
                                         {
@@ -8733,7 +9265,13 @@
                         "confident",
                         "cold",
                         "childish",
-                        "shameless"
+                        "shameless",
+                        "annoying",
+                        "passive-aggressive",
+                        "aloof",
+                        "sassy",
+                        "incisive",
+                        "dramatic"
                     ],
                     "relationships": [
                         {
@@ -8759,7 +9297,11 @@
                     "can_have_stat": ["app"],
                     "stat_trait": [
                         "nervous",
-                        "insecure"
+                        "insecure",
+                        "anxious",
+                        "coward",
+                        "fearful",
+                        "questioning"
                     ],
                     "relationships": [
                         {
@@ -8832,7 +9374,12 @@
                         "bloodthirsty",
                         "vengeful",
                         "strict",
-                        "righteous"
+                        "righteous",
+                        "sadistic",
+                        "obnoxious",
+                        "sassy",
+                        "venomous",
+                        "dramatic"
                     ],
                     "relationships": [
                             {
@@ -8860,7 +9407,11 @@
                     "stat_trait": [
                         "compassionate",
                         "loving",
-                        "faithful"
+                        "faithful",
+                        "passionate",
+                        "nurturing",
+                        "polite",
+                        "elegant"
                     ],
                     "relationships": [
                             {
@@ -8892,7 +9443,12 @@
                         "ambitious",
                         "bloodthirsty",
                         "fierce",
-                        "vengeful"
+                        "vengeful",
+                        "sadistic",
+                        "strong",
+                        "moody",
+                        "dramatic",
+                        "fox-hearted"
                     ],
                     "relationships": [
                             {
@@ -9997,12 +10553,22 @@
                     "careful",
                     "cunning",
                     "responsible",
-                    "wise"
+                    "wise",
+                    "scholarly",
+                    "teacherly",
+                    "creative",
+                    "free-thinking",
+                    "nerdy",
+                    "farsighted"
                 ],
                 "stat_skill": [
                     "CLEVER,1",
                     "INSIGHTFUL,1",
-                    "SENSE,1"
+                    "SENSE,1",
+                    "DETECTIVE,1",
+                    "VIBES,1",
+                    "PRODIGY,1",
+                    "EXPLORER,1"
                 ]
             },
             {
@@ -10036,7 +10602,13 @@
                     "cold",
                     "strict",
                     "grumpy",
-                    "fierce"
+                    "fierce",
+                    "moody",
+                    "angry",
+                    "reactive",
+                    "loud",
+                    "power-hungry",
+                    "sadistic"
                 ]
             },
             {
@@ -10047,7 +10619,11 @@
                     "troublesome",
                     "childish",
                     "playful",
-                    "shameless"
+                    "shameless",
+                    "reactice",
+                    "chaotic",
+                    "enthusiastic",
+                    "intense"
                 ]
             }
         ]
@@ -10164,7 +10740,7 @@
                 "text": "app1 knows that app2 isn't well-liked in the den for {PRONOUN/app2/poss} attitude. However, {PRONOUN/app1/subject} {VERB/app1/do/does}n't think app2 is a bad cat. {PRONOUN/app2/subject/CAP} just {VERB/app2/need/needs} someone to believe in {PRONOUN/app2/object}. Well, let app1 be that someone. {PRONOUN/app1/subject/CAP} agrees with app2. app2 is skeptically surprised by app1's vote of confidence but is happy to lead the patrol. app1 comes home with enough prey for the queens and elders and is rewarded with a nod from {PRONOUN/app1/poss} mentor.",
                 "exp": 15,
                 "weight": 20,
-                "stat_skill": ["SENSE,0", "MEDIATOR,0"],
+                "stat_skill": ["SENSE,0", "MEDIATOR,0","ASSIST,0"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -10186,7 +10762,7 @@
                 "text": "app1 can't let app2 have all the glory. {PRONOUN/app1/subject/CAP} {VERB/app1/suggest/suggests} a good place to hunt that can show off the patrol's teamwork. Even app2 says that teamwork in a Clan is important. Everyone follows app1 and is shocked when they are instantly greeted with a running hare. Catching it is easy, and the apprentices share amused purrs.",
                 "exp": 15,
                 "weight": 20,
-                "stat_trait": ["ambitious", "competitive"],
+                "stat_trait": ["ambitious", "competitive", "passionate"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -10257,7 +10833,7 @@
                 "text": "app1 tries hard to resist the urge to scratch app2's confidence away. How dare {PRONOUN/app2/subject} try to show off during {PRONOUN/app1/poss} assessment? Unfortunately, it's a losing battle. app1 just can't hold {PRONOUN/app1/self} back anymore as {PRONOUN/app1/subject} {VERB/app1/listen/listens} to app2 brag about why {PRONOUN/app2/subject} should be leader. app1 leaps onto {PRONOUN/app2/object}, and they tussle on the ground. The mentors rush out of hiding to break up the fight and chide the apprentices for their foolishness.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["bloodthirsty"],
+                "stat_trait": ["bloodthirsty", "sadistic"],
                 "injury": [
                     {
                         "cats": ["patrol"],
@@ -10354,7 +10930,7 @@
                 "exp": 15,
                 "weight": 20,
                 "can_have_stat": ["app1"],
-                "stat_skill": ["RUNNER,0", "CLEVER,0"],
+                "stat_skill": ["RUNNER,0", "CLEVER,0","HIDER,0","AGILE,0"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -10377,7 +10953,7 @@
                 "exp": 15,
                 "weight": 20,
                 "can_have_stat": ["app1"],
-                "stat_trait": ["sneaky", "cunning", "cold"],
+                "stat_trait": ["sneaky", "cunning", "cold", "scheming", "calculating", "fox-hearted"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -10448,7 +11024,7 @@
                 "exp": 0,
                 "weight": 20,
                 "can_have_stat": ["app1"],
-                "stat_trait": ["nervous", "insecure", "oblivious"],
+                "stat_trait": ["nervous", "insecure", "oblivious", "anxious", "sensitive", "coward", "fearful"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -10491,7 +11067,7 @@
                 "text": "s_c waits for app1 to calm down. Once {PRONOUN/app1/subject} can listen, s_c tells {PRONOUN/app1/object} a secret: no warrior has ever felt like a warrior. Not even s_c. app1 will always just be app1, s_c says, but don't be afraid. {PRONOUN/app1/subject/CAP} <i>must</i> be {PRONOUN/app1/self} before {PRONOUN/app1/subject} {VERB/app1/are/is} a warrior. That is what c_n truly needs. app1.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["loving", "compassionate", "wise", "calm", "thoughtful", "faithful", "loyal", "sincere", "righteous"],
+                "stat_trait": ["loving", "compassionate", "wise", "calm", "thoughtful", "faithful", "loyal", "sincere", "righteous", "gentle", "warm", "sympathetic", "honest", "sappy", "idealistic", "optimistic", "forgiving", "gracious", "fair", "old-fashioned"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10505,7 +11081,7 @@
                 "text": "app1 sniffles alone for a few moments before facing {PRONOUN/app1/poss} mentor. app1's eyes widen at s_c standing over {PRONOUN/app1/object} with flattened ears and bristling fur. <i>That</i> is weakness. c_n, and more importantly, s_c will not tolerate weakness. Get back into training, app1, and do not let s_c see you act in this way again.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["bloodthirsty","vengeful","arrogant","troublesome"],
+                "stat_trait": ["bloodthirsty","vengeful","arrogant","troublesome", "blunt", "sadistic", "fox-hearted"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10525,7 +11101,7 @@
                 "text": "s_c's whiskers twitch in annoyance at this childish outburst. If app1 doesn't <i>want</i> to be a warrior, that's fine by s_c. {PRONOUN/p_l/subject/CAP}'ll be in the training grounds, waiting to train the greatest warrior c_n's ever seen. {PRONOUN/s_c/subject/CAP} {VERB/s_c/walk/walks} away from app1, and a hidden smile dashes across {PRONOUN/s_c/poss} muzzle as {PRONOUN/s_c/subject} {VERB/s_c/hear/hears} app1 start to chase after {PRONOUN/s_c/object}.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["cold","strict","grumpy","lonesome","gloomy"],
+                "stat_trait": ["cold","strict","grumpy","lonesome","gloomy", "stoic", "blunt", "scheming", "aloof", "sarcastic"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10539,7 +11115,7 @@
                 "text": "s_c lashes {PRONOUN/s_c/poss} tail. Of course app1 will never be a warrior if {PRONOUN/app1/subject} {VERB/app1/think/thinks} like <i>that.</i> c_n doesn't want warriors who think like <i>that.</i> Half of glory, {PRONOUN/s_c/subject} {VERB/p_l/explain/explains}, is believing you deserve it. s_c challenges app1: focus on <i>that</i>. When s_c and app1 return to the training grounds, the other trainees notice app1 fighting with a newfound vigor.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["fierce","bold","confident","competitive","ambitious","rebellious","daring","adventurous","cunning"],
+                "stat_trait": ["fierce","bold","confident","competitive","ambitious","rebellious","daring","adventurous","cunning", "sassy", "intense", "scary", "forceful"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10553,7 +11129,7 @@
                 "text": "s_c's heart lurches seeing the apprentice so low. Could s_c have done something to make app1 feel this way? Wordlessly, s_c sits close to app1, wrapping {PRONOUN/p_l/poss} tail around {PRONOUN/app1/object}. s_c purrs in reassurance until app1 purrs back, eyes shining with gratitude. ",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["insecure","nervous","oblivious","careful","responsible"],
+                "stat_trait": ["insecure","nervous","oblivious","careful","responsible", "sympathetic", "sentimental", "confused"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10568,7 +11144,7 @@
                 "text": "s_c shifts awkwardly at app1's side until {PRONOUN/s_c/subject} can't stand the silence any longer. s_c drops into a crouch and nudges app1 with {PRONOUN/s_c/poss} paw. app1 looks back, confused as s_c keeps bouncing and poking at {PRONOUN/s_c/object} with a goofy expression on {PRONOUN/s_c/poss} face, until app1 gives in. The warrior and apprentice play like kits, and the smile on app1's face says {PRONOUN/app1/subject}{VERB/app1/'ve/'s} forgotten all about {PRONOUN/app1/poss} doubt.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["charismatic","flamboyant","playful","childish","shameless","strange","sneaky"],
+                "stat_trait": ["charismatic","flamboyant","playful","childish","shameless","strange","sneaky", "youthful", "whimsical", "silly", "goofy"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10630,7 +11206,7 @@
             {
                 "text": "s_c leaps into the air, twisting {PRONOUN/s_c/poss} body at the right time, and flawlessly pinning app2 to the ground. Even p_l is impressed, but app2 in particular is giving s_c an awe-struck look.",
                 "exp": 10,
-		"stat_skill": ["FIGHTER,0"],
+		"stat_skill": ["FIGHTER,0","STRONG,0"],
                 "can_have_stat": ["app1"],
                 "relationships": [
                     {
@@ -10661,7 +11237,7 @@
                 "text": "Leaping towards s_c, with a flick of {PRONOUN/app1/poss} tail app1 twists in the air and... falls flat on {PRONOUN/app1/poss} face. Still, it makes s_c giggle, so {PRONOUN/app1/subject} {VERB/app1/suppose/supposes} that's a win?",
                 "exp": 0,
                 "can_have_stat": ["app2"],
-                "stat_trait": ["childish", "playful", "shameless", "strange"],
+                "stat_trait": ["childish", "playful", "shameless", "strange", "youthful", "silly", "goofy","hyper", "chaotic", "quirky", "dramatic", "bubbly"],
                 "relationships": [
                     {
                         "cats_to": ["app2"],
@@ -10684,7 +11260,7 @@
                 "text": "Impressed by app1's battle move, s_c flashes {PRONOUN/app1/object} a daring grin, challenging {PRONOUN/app1/object} to a duel. The two spend the rest of the training session sparring together.",
                 "exp": 10,
                 "can_have_stat": ["app2"],
-                "stat_trait": ["ambitious", "arrogant", "bloodthirsty", "competitive", "confident", "daring", "fierce", "flamboyant"],
+                "stat_trait": ["ambitious", "arrogant", "bloodthirsty", "competitive", "confident", "daring", "fierce", "flamboyant", "reactive", "angry", "power-hungry", "forceful", "heroic", "obnoxious", "frustrated", "passionate", "dramatic"],
                 "relationships": [
                     {
                         "cats_to": ["app2"],
@@ -10707,7 +11283,7 @@
                 "text": "It's not a perfect rendition of the battle move, but s_c is flattered by the attempt to impress {PRONOUN/s_c/object} anyway. Honestly, {PRONOUN/s_c/subject} hadn't expected anycat to take any notice of {PRONOUN/s_c/object}... and {PRONOUN/s_c/subject} {VERB/s_c/have/has} to admit, it's a nice feeling.",
                 "exp": 10,
                 "can_have_stat": ["app2"],
-                "stat_trait": ["gloomy", "grumpy", "insecure", "lonesome", "nervous", "strange"],
+                "stat_trait": ["gloomy", "grumpy", "insecure", "lonesome", "nervous", "strange", "bizarre","grim","cryptic","macabre","sensitive","confused","clumsy","coward"],
                 "relationships": [
                     {
                         "cats_to": ["app2"],
@@ -10752,7 +11328,7 @@
             {
                 "text": "As app1 leaps into the air, {PRONOUN/app1/subject} {VERB/app1/flick/flicks} {PRONOUN/app1/poss} tail a little too early, sprawling out onto the ground when {PRONOUN/app1/subject} lands. To make it worse, s_c proceeds to perform an utterly flawless rendition of the move. app1 really, <i>really</i> wishes a fox would come swallow {PRONOUN/app1/object} up around about now.",
                 "exp": 0,
-		"stat_skill": ["FIGHTER,0"],
+		"stat_skill": ["FIGHTER,0","STRONG,0"],
                 "can_have_stat": ["app2"],
                 "relationships": [
                     {
@@ -10806,7 +11382,7 @@
     {
                 "text": "Mistiming {PRONOUN/app1/poss} jump, app1 ends up sprawled on the ground after his failed battle move. Even worse, {PRONOUN/app1/subject} {VERB/app1/catch/catches} sight of s_c rolling {PRONOUN/app2/poss} eyes on the sidelines.",
                 "exp": 0,
-		        "stat_trait": ["arrogant", "bloodthirsty", "cold", "competitive", "cunning", "fierce", "gloomy", "grumpy", "vengeful"],
+		        "stat_trait": ["arrogant", "bloodthirsty", "cold", "competitive", "cunning", "fierce", "gloomy", "grumpy", "vengeful", "envious", "disgusted","spiteful", "remorseless", "fox-hearted","unreliable", "angry","strong","frustrated","messy"],
                 "can_have_stat": ["app2"],
                 "relationships": [
                     {
@@ -10827,7 +11403,7 @@
      {
                 "text": "Though s_c reassures app1 {PRONOUN/app1/poss} battle move was great, app1 can tell {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} just being kind. Honestly, app1 wished {PRONOUN/s_c/subject}'d just call {PRONOUN/app1/object} a mousebrain.",
                 "exp": 0,
-		        "stat_trait": ["calm", "careful", "compassionate", "loving", "insecure", "nervous", "thoughtful"],
+		        "stat_trait": ["calm", "careful", "compassionate", "loving", "insecure", "nervous", "thoughtful", "anxious", "judgmental","moody"],
                 "can_have_stat": ["app2"],
                 "relationships": [
                     {
@@ -10882,7 +11458,7 @@
             {
                 "text": "Frowning, s_c sternly asks app1 if {PRONOUN/app1/subject}'d refuse to fight the kittypet if they trespassed, just because {PRONOUN/app1/subject}'d had a conversation with them? app1 quickly replies that {PRONOUN/app1/subject} would fight them, and s_c nods in approval - so long as app1 is willing to challenge the kittypet if they trespass onto c_n territory, that was all that mattered.",
                 "exp": 10,
-		"stat_trait": ["bloodthirsty", "bold", "cold", "daring", "fierce", "grumpy", "strict", "vengeful"],
+		"stat_trait": ["bloodthirsty", "bold", "cold", "daring", "fierce", "grumpy", "strict", "vengeful", "blunt", "forceful","greedy","scheming","fox-hearted","sadistic","argumentative","spiteful","remorseless"],
                 "can_have_stat": ["p_l"],
                 "relationships": [
                     {
@@ -10899,7 +11475,7 @@
                 "text": "s_c sits down next to app1, explaining that, while talking to cats outside of c_n was okay, app1 had to remember they weren't friends. app1's loyalty must always be to c_n. app1 nods, promising that {PRONOUN/app1/subject}'d always put c_n before everything else.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["ambitious", "loyal", "responsible", "righteous", "wise"],
+                "stat_trait": ["ambitious", "loyal", "responsible", "righteous", "wise", "hardworking", "mysterious", "philosophical"],
                 "relationships": [
                     {
                         "cats_to": ["app2"],
@@ -10914,7 +11490,7 @@
                 "text": "s_c reassures app1 that having friends outside of c_n was okay, so long as {PRONOUN/app1/poss} loyalty was to c_n first and foremost. Relieved, app1 promices that it is, and thanks s_c.",
                 "exp": 10,
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["compassionate", "loving", "sincere", "thoughtful"],
+                "stat_trait": ["compassionate", "loving", "sincere", "thoughtful", "gentle","warm", "nurturing", "optimistic"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -10974,7 +11550,7 @@
                 "text": "Angered, s_c snaps that if app1 wants to be friends with a soft kittypet, {PRONOUN/app1/subject} could go become one - c_n didn't need cats like that.",
                 "exp": 0,
 	        "can_have_stat": ["p_l"],
-                "stat_trait": ["bloodthirsty", "cold", "grumpy", "fierce", "vengeful"],
+                "stat_trait": ["bloodthirsty", "cold", "grumpy", "fierce", "vengeful", "angry", "sadistic", "frustrated", "forceful", "moody"],
 
                 "relationships": [
                     {
@@ -11011,7 +11587,7 @@
            {
                "text": "s_c explains that one day, c_n might be taken over by a tyrannical ruler! True and loyal c_n warriors will have to be powerful enough to keep c_n safe. p_l supposes that's possible and agrees to show {PRONOUN/s_c/object} some advanced moves.",
                "exp": 10,
-                "stat_trait": ["troublesome", "rebellious", "cunning", "careful", "childish" ],
+                "stat_trait": ["troublesome", "rebellious", "cunning", "careful", "childish", "youthful", "faithless", "reactive", "dramatic" ],
                "can_have_stat": ["app1"],
                "relationships": [
                    {
@@ -11028,7 +11604,7 @@
                "text": "s_c explains that sometimes, {PRONOUN/s_c/subject} {VERB/s_c/like/likes} to wander the territory alone. What if {PRONOUN/s_c/subject} {VERB/s_c/run/runs} into a predator or a gang of rogues? p_l reminds s_c that {PRONOUN/s_c/subject} should always ask permission before leaving camp alone, but agrees to teach {PRONOUN/s_c/object} a few moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-               "stat_trait": ["lonesome"],
+               "stat_trait": ["lonesome", "macabre", "bizarre", "grim", "cryptic"],
                "relationships": [
                    {
                        "cats_to": ["app2"],
@@ -11043,7 +11619,7 @@
                "text": "s_c explains that {PRONOUN/s_c/subject} may one day be in a life or death situation and need to kill. p_l eyes {PRONOUN/s_c/object}, wondering if s_c might secretly be looking forward to that day, but nevertheless agrees to show {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-               "stat_trait": ["bloodthirsty", "fierce", "cold", "vengeful"],
+               "stat_trait": ["bloodthirsty", "fierce", "cold", "vengeful", "sadistic", "power-hungry", "strong", "destructive", "devious", "frustrated"],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11058,7 +11634,7 @@
                "text": "Maintaining {PRONOUN/s_c/poss} serious expression, s_c explains that {PRONOUN/s_c/subject} {VERB/s_c/need/needs} to get big and strong so {PRONOUN/s_c/subject} can give the best badger rides ever! p_l purrs and agrees to practice some advanced moves with {PRONOUN/s_c/object}.",
                "exp": 10,
                "can_have_stat": ["p_l"],
-                "stat_trait": [ "childish", "playful" ],
+                "stat_trait": [ "childish", "playful", "youthful", "hyper", "silly", "fun-loving" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11073,7 +11649,7 @@
                "text": "s_c admits that sometimes {PRONOUN/s_c/subject} {VERB/s_c/feel/feels} the pressure of being loved and relied on by so many cats. If {PRONOUN/s_c/subject} knew {PRONOUN/s_c/subject} could protect {PRONOUN/s_c/poss} Clanmates, s_c would feel a lot better. p_l agrees to help, touched by {PRONOUN/s_c/poss} reasoning.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "charismatic", "loving", "loyal", "responsible", "compassionate" ],
+                "stat_trait": [ "charismatic", "loving", "loyal", "responsible", "compassionate", "hypnotic", "folksy", "cool", "soft", "sentimental", "supportive" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11088,7 +11664,7 @@
                "text": "p_l asks {PRONOUN/s_c/object} why {PRONOUN/s_c/subject} {VERB/s_c/want/wants} to learn such advanced battle moves. s_c looks at {PRONOUN/p_l/object} like that's a mouse-brained question - {PRONOUN/s_c/subject} {VERB/s_c/want/wants} to be the best, obviously! p_l purrs and agrees to show {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "bold", "daring", "insecure", "confident", "arrogant", "ambitious" ],
+                "stat_trait": [ "bold", "daring", "insecure", "confident", "arrogant", "ambitious", "frustrated", "incisive", "strong", "forceful", "remorseless" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11116,7 +11692,7 @@
                "text": "s_c confesses {PRONOUN/s_c/poss} fear that one day, all of c_n will be in danger, and only {PRONOUN/s_c/subject} will be able to save them. p_l comforts s_c and assures {PRONOUN/s_c/object} that c_n will stand together against any threat. Feeling reassured, s_c asks if p_l will teach {PRONOUN/s_c/object} some moves anyway - for fun.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "insecure", "nervous", "gloomy", "loving" ],
+                "stat_trait": [ "insecure", "nervous", "gloomy", "loving", "anxious", "fearful", "sympathetic" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11131,7 +11707,7 @@
                "text": "s_c's passion surprises p_l when {PRONOUN/s_c/subject} {VERB/s_c/declare/declares} that {PRONOUN/s_c/subject} {VERB/s_c/want/wants} to be able to defend those that cannot defend themselves - kits, elders, every cat in c_n, and even those beyond their borders. p_l agrees to show s_c some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "righteous", "faithful", "thoughtful", "sincere", "loving" ],
+                "stat_trait": [ "righteous", "faithful", "thoughtful", "sincere", "loving", "hearty", "principled", "old-fashioned", "protective", "open", "vulnerable"],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11146,7 +11722,7 @@
                "text": "s_c explains that doing good and upholding the code is always going to be a struggle against evil and rule-breakers. {PRONOUN/s_c/subject/CAP} {VERB/app1/need/needs} to be powerful to enforce the code. p_l agrees to teach {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "righteous", "strict" ],
+                "stat_trait": [ "righteous", "strict", "self-reliant", "civil", "serious", "punctual", "reserved", "tidy", "perfectionist", "practical", "stoic" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11161,7 +11737,7 @@
                "text": "s_c describes a future where {PRONOUN/s_c/subject} might be alone in the territory, or even beyond the border, and might need to take care of {PRONOUN/s_c/self}. p_l reassures s_c that this is unlikely to happen to {PRONOUN/s_c/object} any time soon, but agrees to show {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "adventurous", "nervous", "lonesome" ],
+                "stat_trait": [ "adventurous", "nervous", "lonesome", "anxious", "confused", "overthinker", "nerdy" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11176,7 +11752,7 @@
                "text": "s_c tells p_l that the better {PRONOUN/s_c/subject} can fight, the better {PRONOUN/s_c/subject}'ll be able to protect {PRONOUN/s_c/self}. p_l nods and advises {PRONOUN/s_c/object} to use these moves only when {PRONOUN/s_c/poss} life is in danger before they begin the training session.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "calm", "careful", "thoughtful", "responsible", "sincere" ],
+                "stat_trait": [ "calm", "careful", "thoughtful", "responsible", "sincere", "protective", "leaderly", "stoic" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11191,7 +11767,7 @@
                "text": "s_c exclaims that {PRONOUN/s_c/subject} {VERB/s_c/want/wants} to be the <i>best</i>, better than any other Clanmate or rogue or loner or <i>anyone</i>. s_c wants to win every fight {PRONOUN/s_c/subject} {VERB/s_c/are/is} ever in, including spars. p_l snorts and agrees to help s_c achieve these lofty ambitions.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "competitive", "shameless", "flamboyant", "arrogant", "ambitious" ],
+                "stat_trait": [ "competitive", "shameless", "flamboyant", "arrogant", "ambitious", "selfish", "loud", "forceful" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11206,7 +11782,7 @@
                "text": "s_c shrugs and comments with an air of nonchalance that sometimes a cat needs to be their own back up... if that cat is the sort of cat that gets into trouble a lot. p_l narrows {PRONOUN/p_l/poss} eyes and agrees that getting into trouble can lead to consequences. All the same, {PRONOUN/p_l/subject} {VERB/p_l/agree/agrees} to teach {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "troublesome", "rebellious", "sneaky", "cunning" ],
+                "stat_trait": [ "troublesome", "rebellious", "sneaky", "cunning", "escapist", "fox-hearted", "scheming", "calculating" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11221,7 +11797,7 @@
                "text": "s_c explains that if {PRONOUN/s_c/poss} shadow ever challenges {PRONOUN/s_c/object} to a fight, {PRONOUN/s_c/subject} {VERB/s_c/need/needs} to learn some moves that the shadow doesn't know. p_l squints a bit at {PRONOUN/s_c/poss} logic, but appreciates s_c's desire to learn and agrees to focus on advanced moves today.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "strange" ],
+                "stat_trait": [ "strange", "bizarre", "grim", "macabre" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11236,7 +11812,7 @@
                "text": "A cold flame lights in s_c's eyes as {PRONOUN/s_c/subject} {VERB/s_c/explain/explains} that {PRONOUN/s_c/subject} may need to take {PRONOUN/s_c/poss} revenge on an enemy, one day. p_l isn't sure what to make of that rationale, but agrees that s_c is probably ready for advanced battle training.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "vengeful" ],
+                "stat_trait": [ "vengeful", "sadistic" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11251,7 +11827,7 @@
                "text": "p_l asks why s_c is set on learning advanced moves all of a sudden. s_c merely says that it is difficult to say what the future must hold, and {PRONOUN/s_c/subject} {VERB/s_c/want/wants} to prepare for all possibilities. p_l agrees and shows {PRONOUN/s_c/object} some moves.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "wise", "thoughtful", "sincere", "careful" ],
+                "stat_trait": [ "wise", "thoughtful", "sincere", "careful", "sappy", "sentimental", "sensitive", "private"],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11266,7 +11842,7 @@
                "text": "p_l asks why s_c is set on learning advanced moves all of a sudden. s_c grouches that it's {PRONOUN/p_l/poss} job to show {PRONOUN/s_c/object} how to fight, so why is {PRONOUN/p_l/subject} acting like this is a strange request? p_l shrugs and agrees.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "grumpy" ],
+                "stat_trait": [ "grumpy", "moody" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11281,7 +11857,7 @@
                "text": "s_c suggests that p_l finally show {PRONOUN/s_c/object} how to get underneath an opponent and claw their belly. p_l points out that they covered that in battle training just a few sunrises ago. s_c blinks, then asks if they can go over it again. p_l sighs and agrees.",
                "exp": 10,
                "can_have_stat": ["app1"],
-                "stat_trait": [ "oblivious" ],
+                "stat_trait": [ "oblivious", "enigmatic", "absent-minded" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11296,7 +11872,7 @@
                "text": "s_c asks app1 why {PRONOUN/app1/subject}{VERB/app1/'re/'s} interested in advanced techniques. app1 replies that s_c is one of the best fighters in the Clan - of course {PRONOUN/app1/subject} {VERB/app1/want/wants} to learn from {PRONOUN/s_c/object}! s_c is flattered and agrees to show {PRONOUN/app1/object} {PRONOUN/s_c/poss} tricks.",
                "exp": 10,
                "can_have_stat": ["p_l"],
-                "stat_skill": [ "FIGHTER,2" ],
+                "stat_skill": [ "FIGHTER,2","STRONG,2" ],
                "relationships": [
                    {
                        "cats_to": ["p_l"],
@@ -11404,8 +11980,6 @@
             "text": "p_l waggles {PRONOUN/p_l/poss} haunches and dares r_c and s_c to come at {PRONOUN/p_l/object}. The three cats tussle until r_c distracts p_l with a sheathed strike to {PRONOUN/p_l/poss} ear, and s_c pins {PRONOUN/p_l/object} down. They congratulate each other as they head back to camp.",
             "exp": 5,
         "weight": 20,
-        "stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
-        "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
                     "cats_to": ["patrol"],
@@ -11421,8 +11995,6 @@
     "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. Though s_c does {PRONOUN/s_c/poss} best, {PRONOUN/s_c/subject} {VERB/s_c/do/does}n't stand much of a chance against two of {PRONOUN/s_c/poss} Clanmates.",
     "exp": 5,
 "weight": 20,
-"stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
-    "can_have_stat": ["not_pl_rc"],
     "relationships": [
 {
             "cats_to": ["patrol"],
@@ -11438,8 +12010,6 @@
     "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. s_c tries to keep {PRONOUN/s_c/poss} eyes on both {PRONOUN/s_c/poss} Clanmates at once, but p_l and r_c find a rhythm together, and s_c can't keep up. After the match, p_l and r_c agree they'll have to try some of these moves in a future skirmish.",
     "exp": 5,
 "weight": 20,
-"stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
-    "can_have_stat": ["not_pl_rc"],
     "relationships": [
 {
             "cats_to": ["patrol"],
@@ -11462,7 +12032,7 @@
 	"text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. s_c agrees, puffing out {PRONOUN/s_c/poss} chest and crouching low. When p_l and r_c pounce, s_c dodges aside as quick as a rabbit and swipes at p_l, then leaps out of the way of r_c's strike. p_l and r_c best {PRONOUN/s_c/object} eventually, but s_c makes them work for it.",
 	"exp": 10,
     "weight": 40,
-    "stat_trait": [ "bloodthirsty", "arrogant", "ambitious", "confident", "sneaky", "cunning", "fierce", "competitive" ],
+    "stat_trait": [ "bloodthirsty", "arrogant", "ambitious", "confident", "sneaky", "cunning", "fierce", "competitive", "fox-hearted", "calculating","reactive","thievish","forceful", "scheming", "destructive", "incisive","cruel" ],
     "can_have_stat": ["not_pl_rc"],
 	"relationships": [
 {
@@ -11486,8 +12056,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. When p_l and r_c pounce, s_c shocks them by springing forward and knocking p_l off {PRONOUN/p_l/poss} paws. Before {PRONOUN/p_l/subject} can scramble to {PRONOUN/p_l/poss} feet, s_c whirls around, shoulders r_c off balance, and pins {PRONOUN/r_c/object} down. p_l and r_c exchange shocked and impressed glances from their backs on the ground.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "bloodthirsty", "adventurous", "arrogant", "ambitious", "confident", "fierce", "competitive" ],
-            "stat_skill": [ "FIGHTER,2"],
+            "stat_trait": [ "bloodthirsty", "adventurous", "arrogant", "ambitious", "confident", "fierce", "competitive", "sadistic", "strong", "forceful", "sadistic" ],
+            "stat_skill": [ "FIGHTER,2","STRONG,2"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11511,8 +12081,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. No matter how hard r_c and p_l try to flank s_c, {PRONOUN/s_c/subject} {VERB/s_c/move/moves} fast and fluid like moving water. {PRONOUN/s_c/subject/CAP} {VERB/s_c/seem/seems} to know where they'll strike before they do, wearing them down until r_c and p_l admit defeat, panting and impressed.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "wise", "thoughtful", "calm", "careful", "lonesome" ],
-            "stat_skill": [ "FIGHTER,2"],
+            "stat_trait": [ "wise", "thoughtful", "calm", "careful", "lonesome", "escapist", "witty", "dedicated", "cool" ],
+            "stat_skill": [ "FIGHTER,2","STRONG,2"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11536,8 +12106,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. Just as r_c gathers {PRONOUN/r_c/poss} haunches to pounce on s_c, s_c exclaims that a fox is right behind r_c! As p_l and r_c scramble out of the way, s_c swipes at their fleeing tails. After all, p_l didn't specify {PRONOUN/s_c/subject} had to fight fair.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "cunning", "sneaky", "shameless", "flamboyant", "charismatic", "daring", "bold" ],
-            "stat_skill": [ "FIGHTER,1"],
+            "stat_trait": [ "cunning", "sneaky", "shameless", "flamboyant", "charismatic", "daring", "bold", "escapist", "creative", "sentient" ],
+            "stat_skill": [ "FIGHTER,1","STRONG,1","LEADERSHIP,1"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11561,8 +12131,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. As the three of them tussle, p_l and r_c discover that s_c knows them better than either of them realized - {PRONOUN/s_c/subject} {VERB/s_c/anticipate/anticipates} their every move, knocking away their strikes easily.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "charismatic", "loving", "compassionate", "loyal", "faithful", "cunning", "thoughtful", "sincere" ],
-            "stat_skill": [ "FIGHTER,2"],
+            "stat_trait": [ "charismatic", "loving", "compassionate", "loyal", "faithful", "cunning", "thoughtful", "sincere", "calculating", "scheming", "creative", "logical" ],
+            "stat_skill": [ "FIGHTER,2","STRONG,2", "PRODIGY,2"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11586,8 +12156,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. They rarely see their Clanmate come alive the way {PRONOUN/s_c/subject} {VERB/s_c/do/does} in a fight. r_c and p_l circle s_c, but they can't catch {PRONOUN/s_c/object} off-guard. Eventually, r_c makes a hasty move, and s_c pins {PRONOUN/r_c/object}.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "cunning", "sneaky", "cold", "lonesome", "grumpy", "gloomy", "strict", "strange", "insecure", "nervous" ],
-            "stat_skill": [ "FIGHTER,2"],
+            "stat_trait": [ "cunning", "sneaky", "cold", "lonesome", "grumpy", "gloomy", "strict", "strange", "insecure", "nervous", "escapist", "secretive", "devious" ],
+            "stat_skill": [ "FIGHTER,2","STRONG,2","PRODIGY,2"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11611,8 +12181,8 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. s_c warily agrees, but {PRONOUN/s_c/subject} {VERB/s_c/have/has} nothing to worry about. Even outnumbered, s_c proves {PRONOUN/s_c/poss} talent in battle, and r_c and p_l heap praise on {PRONOUN/s_c/object} after the bout.",
             "exp": 10,
             "weight": 40,
-            "stat_trait": [ "gloomy", "lonesome", "insecure", "nervous" ],
-            "stat_skill": [ "FIGHTER,2"],
+            "stat_trait": [ "gloomy", "lonesome", "insecure", "nervous", "anxious", "misguided", "self-pitying", "delicate", "coward", "vulnerable", "regretful" ],
+            "stat_skill": [ "FIGHTER,2","STRONG,3"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11636,7 +12206,7 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. No matter how hard r_c and p_l try to flank s_c, {PRONOUN/s_c/subject} always {VERB/s_c/seem/seems} to know where they'll strike before they do, wearing them down until r_c and p_l admit defeat, panting and impressed. s_c smiles secretively.",
             "exp": 10,
             "weight": 40,
-            "stat_skill": [ "CLAIRVOYANT,1"],
+            "stat_skill": [ "CLAIRVOYANT,1","PRODIGY,1"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11662,7 +12232,7 @@
             "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. s_c immediately begins whining that it's unfair, so p_l groans and calls off the whole idea. They can all find hunting patrols to join instead.",
             "exp": 0,
             "weight": 40,
-            "stat_trait": [ "childish"],
+            "stat_trait": [ "childish", "youthful", "chaotic", "messy", "dramatic"],
             "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
@@ -11686,10 +12256,6 @@
         "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. As soon as they attack, s_c turns tail and sprints off. When p_l calls {PRONOUN/s_c/object} back, confused, {PRONOUn/s_c/subject} {VERB/s_c/explain/explains} that's what {PRONOUN/s_c/subject}'d do if {PRONOUN/s_c/subject} were outnumbered in a fight. p_l sighs.",
         "exp": 0,
         "weight": 40,
-        "stat_trait": [ 
-        "troublesome", "lonesome", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "confident", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"
-    ],
-        "can_have_stat": ["not_pl_rc"],
         "relationships": [
     {
                 "cats_to": [ "s_c" ],
@@ -11705,10 +12271,6 @@
             "text": "p_l and r_c team up against s_c and thrash {PRONOUN/s_c/object} easily. While p_l and r_c congratulate each other, s_c silently stews over this unfair, unbalanced training exercise. {PRONOUN/s_c/poss/CAP} Clanmates don't notice {PRONOUN/s_c/poss} bad mood, which only makes {PRONOUN/s_c/object} more irritable.",
             "exp": 0,
             "weight": 20,
-            "stat_trait": [ 
-            "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"
-        ],
-            "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
                     "cats_to": [ "p_l", "r_c" ],
@@ -11732,7 +12294,7 @@
                 "exp": 0,
                 "weight": 10,
                 "stat_trait": [ 
-                "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "bold", "daring", "righteous", "insecure", "strict", "ambitious", "confident", "adventurous", "faithful", "loyal", "shameless", "sneaky", "strange", "vengeful", "arrogant", "competitive", "grumpy", "gloomy", "sincere", "flamboyant", "rebellious"
+                "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "bold", "daring", "righteous", "insecure", "strict", "ambitious", "confident", "adventurous", "faithful", "loyal", "shameless", "sneaky", "strange", "vengeful", "arrogant", "competitive", "grumpy", "gloomy", "sincere", "flamboyant", "rebellious", "cruel", "devious", "selfish", "fox-hearted", "argumentative", "obnoxious", "annoying", "emotional", "dramatic", "dynamic"
             ],
                 "can_have_stat": ["not_pl_rc"],
                 "relationships": [
@@ -11779,10 +12341,6 @@
                 "text": "p_l and r_c team up against s_c, and everything goes well until s_c shoves p_l off {PRONOUN/s_c/object} a little too vigorously and p_l yelps in pain as {PRONOUN/p_l/subject} {VERB/p_l/hit/hits} the ground. Then r_c and s_c team up - to help p_l limp back to camp.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": [ 
-                "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "bold", "daring", "righteous", "insecure", "strict", "ambitious", "confident", "adventurous", "faithful", "loyal", "shameless", "sneaky", "strange", "vengeful", "arrogant", "competitive", "grumpy", "gloomy", "sincere", "flamboyant", "rebellious"
-            ],
-                "can_have_stat": ["not_pl_rc"],
             "injury": [
                 {
                     "cats": [ "p_l" ],

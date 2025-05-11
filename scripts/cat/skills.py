@@ -416,6 +416,11 @@ class SkillPath(Enum):
     )
     DAY = ("naps at night", "early bird", "sun watcher", "day warrior")
     NIGHT = ("naps during the day", "night owl", "moon watcher", "night warrior")
+    
+    LUCK = ("finds four leaf clovers", "unusually lucky", "extremely lucky", "dodges disasters")
+    STRONG = ("tackles other cats", "breaks rocks", "crushes prey bones", "strong as a lion")
+    BUG = ("chases ladybugs", "bug catcher", "bug collector", "bee keeper")
+    BONES = ("plays with prey scraps", "bone cleaner", "bone collector", "expert taxidermist")
 
     @staticmethod
     def get_random(exclude: list = ()):
@@ -551,7 +556,11 @@ class Skill:
         SkillPath.VET: "animal helper",
         SkillPath.ANIMALMAGNET: "animal attractor",
         SkillPath.DAY: "diurnal",
-        SkillPath.NIGHT: "nocturnal"
+        SkillPath.NIGHT: "nocturnal",
+        SkillPath.LUCK: "lucky",
+        SkillPath.STRONG: "strength",
+        SkillPath.BUG: "bug collecting",
+        SkillPath.BONES: "taxidermy"
     }
 
     def __init__(self, path: SkillPath, points: int = 0, interest_only: bool = False):
@@ -755,6 +764,10 @@ class CatSkills:
         SkillPath.IMMUNE: SkillTypeFlag.OBSERVANT,
         SkillPath.DAY: SkillTypeFlag.OBSERVANT,
         SkillPath.NIGHT: SkillTypeFlag.OBSERVANT,
+        SkillPath.LUCK: SkillTypeFlag.OBSERVANT,
+        SkillPath.STRONG: SkillTypeFlag.STRONG,
+        SkillPath.BUG: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT,
+        SkillPath.BONES: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT
     }
 
     # pylint: enable=unsupported-binary-operation

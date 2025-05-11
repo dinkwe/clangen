@@ -1954,6 +1954,16 @@ class Events:
             chance += acc_chances["multiple_acc_modifier"]
         if self.ceremony_accessory:
             chance += acc_chances["ceremony_modifier"]
+        
+        skills_string = str(cat.skills)
+        acc_skills = ["BONES", "BUG", "LUCK", "GARDENER", "TREASURE", "EXPLORER", "ARTISAN", "DECORATOR"]
+        skill_present = False
+        for skill in acc_skills:
+            if skill in skills_string:
+                skill_present = True
+                break
+        if skill_present:
+            chance += acc_chances["skill_acc_modifier"]
 
         # increase chance of acc if the cat had a ceremony
         if chance <= 0:

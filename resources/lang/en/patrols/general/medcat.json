@@ -77,7 +77,33 @@
                     "loving",
                     "responsible",
                     "thoughtful",
-                    "wise"
+                    "wise",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -99,7 +125,12 @@
                     "CLEVER,1",
                     "INSIGHTFUL,1",
                     "SENSE,1",
-                    "HEALER,1"
+                    "HEALER,1",
+                    "HERBALIST,1",
+                    "PRODIGY,1",
+                    "EXPLORER,1",
+                    "NAVIGATOR,1",
+                    "TREASURE,1"
                 ],
                 "relationships": [
                     {
@@ -118,7 +149,15 @@
                 "stat_trait": [
                     "childish",
                     "playful",
-                    "charismatic"
+                    "charismatic",
+                    "bubbly",
+                    "youthful",
+                    "whimsical",
+                    "quirky",
+                    "easy-going",
+                    "silly",
+                    "goofy",
+                    "annoying"
                 ],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -143,7 +182,35 @@
                     "responsible",
                     "thoughtful",
                     "wise",
-                    "calm"
+                    "calm",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic",
+                    "tranquil",
+                    "civil"
                 ],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -167,7 +234,17 @@
                     "strict",
                     "confident",
                     "adventurous",
-                    "competitive"
+                    "competitive",
+                    "hardworking",
+                    "dedicated",
+                    "moralistic",
+                    "perfectionist",
+                    "punctual",
+                    "cool",
+                    "dramatic",
+                    "principled",
+                    "strong",
+                    "enthusiastic"
                 ],
                 "herbs": ["random_herbs", "daisy"],
                 "relationships": [
@@ -220,7 +297,12 @@
                     "nervous",
                     "insecure",
                     "shameless",
-                    "oblivious"
+                    "oblivious",
+                    "absent-minded",
+                    "anxious",
+                    "confused",
+                    "envious",
+                    "coward"
                 ],
                 "relationships": [
                     {
@@ -246,7 +328,15 @@
                     "shameless",
                     "arrogant",
                     "grumpy",
-                    "oblivious"
+                    "oblivious",
+                    "selfish",
+                    "envious",
+                    "fox-hearted",
+                    "angry",
+                    "moody",
+                    "annoying",
+                    "malicious",
+                    "cruel"
                 ],
                 "relationships": [
                     {
@@ -297,7 +387,12 @@
                     "HEALER,1",
                     "CLEVER,1",
                     "SENSE,1",
-                    "INSIGHTFUL,1"
+                    "INSIGHTFUL,1",
+                    "HERBALIST,1",
+                    "PRODIGY,1",
+                    "EXPLORER,1",
+                    "NAVIGATOR,1",
+                    "TREASURE,1"
                 ],
                 "herbs": ["many_herbs", "random_herbs"]
             },
@@ -326,7 +421,33 @@
                     "loyal",
                     "responsible",
                     "wise",
-                    "sincere"
+                    "sincere",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "herbs": ["random_herbs"]
             }
@@ -351,7 +472,13 @@
                     "playful",
                     "strange",
                     "oblivious",
-                    "shameless"
+                    "shameless",
+                    "youthful",
+                    "absent-minded",
+                    "unreliable",
+                    "chummy",
+                    "casual",
+                    "forgetful"
                 ]
             },
             {
@@ -367,7 +494,16 @@
                     "sneaky",
                     "grumpy",
                     "cunning",
-                    "oblivious"
+                    "oblivious",
+                    "moody",
+                    "dramatic",
+                    "snobbish",
+                    "uncaring",
+                    "hypocrite",
+                    "self-pitying",
+                    "emotional",
+                    "annoying",
+                    "envious"
                 ]
             }
         ]
@@ -490,7 +626,7 @@
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],
-                "stat_trait": ["loving", "wise", "compassionate"],
+                "stat_trait": ["loving", "wise", "compassionate", "warm", "nurturing", "gentle", "benevolent"],
                 "can_have_stat": ["p_l"],
                 "relationships": [
                     {
@@ -520,7 +656,17 @@
                     "daring",
                     "righteous",
                     "confident",
-                    "responsible"
+                    "responsible",
+                    "hardworking",
+                    "enthusiastic",
+                    "hearty",
+                    "intense",
+                    "leaderly",
+                    "incorruptible",
+                    "serious",
+                    "principled",
+                    "self-reliant",
+                    "dedicated"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -539,7 +685,8 @@
                 "weight": 20,
                 "stat_skill": [
                     "DREAM,1",
-                    "STAR,2"
+                    "STAR,2",
+                    "GHOST,3"
                 ],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -605,7 +752,14 @@
                     "oblivious",
                     "daring",
                     "bold",
-                    "flamboyant"
+                    "flamboyant",
+                    "anxious",
+                    "hypocrite",
+                    "coward",
+                    "fearful",
+                    "regretful",
+                    "sensitive",
+                    "vulnerable"
                 ],
                 "relationships": [
                     {
@@ -635,7 +789,7 @@
                 "text": "s_c watches r_c with undisguised envy, desperately wishing {PRONOUN/s_c/subject} {VERB/s_c/were/was} the one to receive the vision. Looking back nervously, r_c withdraws from the group, dismissing the dream as unimportant.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["ambitious", "insecure"],
+                "stat_trait": ["ambitious", "insecure", "envious", "selfish"],
                 "relationships": [
                     {
                         "cats_to": ["s_c"],
@@ -667,7 +821,17 @@
                     "strict",
                     "competitive",
                     "rebellious",
-                    "arrogant"
+                    "arrogant",
+                    "blunt",
+                    "sarcastic",
+                    "monotone",
+                    "crude",
+                    "scary",
+                    "cryptic",
+                    "macabre",
+                    "grim",
+                    "disgusted",
+                    "thoughtless"
                 ],
                 "relationships": [
                     {
@@ -692,7 +856,8 @@
                 "weight": 20,
                 "stat_skill": [
                     "DREAM,1",
-                    "STAR,2"
+                    "STAR,2",
+                    "GHOST,3"
                 ],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -750,7 +915,9 @@
                 "stat_trait": [
                     "faithful",
                     "strange",
-                    "wise"
+                    "wise",
+                    "cryptic",
+                    "dedicated"
                 ],
                 "herbs": ["cobwebs"]
             },
@@ -765,7 +932,11 @@
                     "daring",
                     "righteous",
                     "ambitious",
-                    "responsible"
+                    "responsible",
+                    "dramatic",
+                    "destructive",
+                    "spontainious",
+                    "chaotic"
                 ]
             }
         ],
@@ -804,14 +975,18 @@
                     "nervous",
                     "insecure",
                     "gloomy",
-                    "oblivious"
+                    "oblivious",
+                    "coward",
+                    "self-pitying",
+                    "spiteful",
+                    "confused"
                 ]
             },
             {
                 "text": "s_c often feels like StarClan walks with {PRONOUN/s_c/object}, and this is just another instance on the path. However, as s_c reflects on the vision, {PRONOUN/s_c/subject} {VERB/s_c/find/finds} that {PRONOUN/s_c/subject} can't decipher the meaning.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["faithful",
+                "stat_trait": ["faithful", "cryptic",
                     "strange",
                     "wise"]
             },
@@ -902,7 +1077,7 @@
                 "weight": 20,
                 "art":"gen_train_talkingMA",
                 "herbs": ["random_herbs"],
-                "stat_skill": ["DREAM,1", "STAR,2"],
+                "stat_skill": ["DREAM,1", "STAR,2", "GHOST,2", "UNKNOWN,2", "PRODIGY,2"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -938,7 +1113,33 @@
                     "loving",
                     "wise",
                     "compassionate",
-                    "thoughtful"
+                    "thoughtful",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -963,7 +1164,12 @@
                     "daring",
                     "righteous",
                     "confident",
-                    "responsible"
+                    "responsible",
+                    "dedicated",
+                    "hardworking",
+                    "opinionated",
+                    "passionate",
+                    "incisive"
                 ],
                 "can_have_stat": ["p_l"],
                 "relationships": [
@@ -1068,7 +1274,16 @@
                     "bold",
                     "daring",
                     "shameless",
-                    "oblivious"
+                    "oblivious",
+                    "anxious",
+                    "coward",
+                    "fearful",
+                    "cryptic",
+                    "macabre",
+                    "bizarre",
+                    "misguided",
+                    "vague",
+                    "sentient"
                 ],
                 "relationships": [
                     {
@@ -1087,7 +1302,10 @@
                 "stat_trait": [
                     "ambitious", 
                     "insecure", 
-                    "vengeful"
+                    "vengeful",
+                    "envious",
+                    "misguided",
+                    "self-pitying"
                 ],
                 "relationships": [
                     {
@@ -1120,7 +1338,18 @@
                     "strict",
                     "competitive",
                     "rebellious",
-                    "arrogant"
+                    "arrogant",
+                    "fox-hearted",
+                    "blunt",
+                    "cruel",
+                    "selfish",
+                    "passive-aggressive",
+                    "pessimistic",
+                    "dry",
+                    "spiteful",
+                    "remorseless",
+                    "intense",
+                    "power-hungry"
                 ],
                 "relationships": [
                     {
@@ -1191,7 +1420,7 @@
                 "text": "With the familiarity brought by {PRONOUN/s_c/poss} connection to StarClan, s_c turns to the ghost haunting {PRONOUN/s_c/poss} path, meeting {PRONOUN/s_c/poss} star-walking ancestor with a purr and quiet confidence.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,2", "STAR,2"],
+                "stat_skill": ["CLAIRVOYANT,2", "STAR,2", "GHOST,2", "SENSE,3", "UNKNOWN,2"],
                 "herbs": ["random_herbs"]
             },
             {
@@ -1202,7 +1431,9 @@
                 "stat_trait":[
                     "lonesome",
                     "nervous",
-                    "insecure"
+                    "insecure",
+                    "anxious",
+                    "fearful"
                 ]                
             },
             {
@@ -1213,7 +1444,11 @@
                 "stat_trait":[
                     "childish",
                     "playful",
-                    "loving"
+                    "loving",
+                    "bubbly",
+                    "open",
+                    "silly",
+                    "warm"
                 ]                
             }
         ],
@@ -1233,7 +1468,7 @@
                 "exp": 0,
                 "weight": 20,
                 "art": "med_cat_looking_up",
-                "stat_trait": ["bloodthirsty", "vengeful", "sneaky", "cold", "arrogant"]
+                "stat_trait": ["bloodthirsty", "vengeful", "sneaky", "cold", "arrogant", "sadistic", "cruel", "destructive", "venomous"]
             },
             {
                 "text": "The connection wavers, and as quickly as the feeling of company appears, it vanishes. p_l let out a small sigh, gaze turning upwards, did StarClan not want to speak with {PRONOUN/p_l/object}?",
@@ -1323,7 +1558,7 @@
                 "text": "With the familiarity brought by {PRONOUN/s_c/poss} connection to StarClan, s_c turns to the ghost haunting {PRONOUN/s_c/poss} path, meeting {PRONOUN/s_c/poss} star-walking ancestor with a purr and quiet confidence.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,2", "STAR,2"],
+                "stat_skill": ["CLAIRVOYANT,2", "STAR,2", "GHOST,2", "SENSE,3", "UNKNOWN,2"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -1357,7 +1592,7 @@
                 "weight": 20,
                 "art": "med_cat_looking_up",
                 "can_have_stat": ["p_l"],
-                "stat_trait": ["bloodthirsty", "vengeful", "sneaky"],
+                "stat_trait": ["bloodthirsty", "vengeful", "sneaky", "cruel", "fatalistic","judgmental"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -1453,7 +1688,7 @@
                 "text": "app1 turns to the ghost with a smile, but the StarClan cat meets {PRONOUN/app1/poss} eyes with fire in their gaze. StarClan is unhappy with {PRONOUN/app1/object}, and things must change. app1 cowers in front of them, wishing {PRONOUN/app1/subject} {VERB/app1/were/was} anywhere else.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["bloodthirsty", "vengeful", "sneaky"]
+                "stat_trait": ["bloodthirsty", "vengeful", "sneaky", "cruel", "fatalistic","judgmental"]
             }
         ],
         "antag_fail_outcomes": [
@@ -1534,7 +1769,7 @@
                 "text": "With the familiarity brought by {PRONOUN/s_c/poss} connection to StarClan, s_c turns to the ghost haunting {PRONOUN/s_c/poss} path, meeting {PRONOUN/s_c/poss} star-walking ancestor with a purr and quiet confidence. app1 watches with eyes as round and dark as the new moon.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,2"],
+                "stat_skill": ["CLAIRVOYANT,2", "GHOST,2", "SENSE,3", "UNKNOWN,2", "STAR,2"],
                 "can_have_stat": ["adult"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -1568,7 +1803,7 @@
                 "exp": 0,
                 "weight": 20,
                 "art": "gen_cat_looking_up1",
-                "stat_trait": ["bloodthirsty", "vengeful", "sneaky"],
+                "stat_trait": ["bloodthirsty", "vengeful", "sneaky", "cruel", "fatalistic","judgmental"],
                 "can_have_stat": ["adult"],
                 "relationships": [
                     {
@@ -1658,7 +1893,7 @@
                 "text": "p_l had seen before how connected r_c was to StarClan, and began telling {PRONOUN/r_c/object} more than {PRONOUN/p_l/subject} would have told any other Clan cat about their ancestors. p_l and r_c spend much of their patrol gathering herbs and discussing the hard-hitting questions on prophecies and StarClan's gifts.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["LORE,1", "STAR,1"],
+                "stat_skill": ["LORE,1", "STAR,1", "HISTORIAN,1", "BOOKMAKER,1", "PRODIGY,1"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -1727,7 +1962,7 @@
                 "text": "p_l knows why this bothers s_c so much. Being a medicine cat gives p_l a connection to StarClan and allows {PRONOUN/p_l/object} to understand how {PRONOUN/p_l/poss} legacy would be told again and again to kits in the future. But p_l does {PRONOUN/p_l/poss} best to ease s_c's worries. To c_n, s_c would be a legend worth remembering one day. s_c brightens up at that remark, and the two go back to their herb hunt.",
                 "exp": 10,
                 "weight": 20,
-                "stat_trait": ["ambitious", "bloodthirsty", "insecure"],
+                "stat_trait": ["ambitious", "bloodthirsty", "insecure", "cruel", "frustrated", "forceful", "envious"],
                 "herbs": ["random_herbs"],
                 "can_have_stat": ["r_c"],
                 "relationships": [
@@ -1812,7 +2047,7 @@
                 "text": "As the cats walk and chat, s_c begins to lag behind. r_c looks back to ask {PRONOUN/s_c/object} what's up, and spots {PRONOUN/s_c/object} veering down a side path. r_c motions for the others as {PRONOUN/r_c/subject} {VERB/r_c/follow/follows}, finding s_c purring loudly at the sight of a huge herb patch! There's far more than the patrol can carry, and {PRONOUN/r_c/subject} {VERB/r_c/know/knows} this will keep the Clan healthy for ages.",
                 "exp": 30,
                 "weight": 20,
-                "stat_skill": ["SENSE,2", "CLEVER,2"],
+                "stat_skill": ["SENSE,2", "CLEVER,2", "HERBALIST,2", "EXPLORER,2", "NAVIGATOR,2", "TRACKER,2", "PRODIGY,2", "GARDENER,2"],
                 "herbs": ["many_herbs", "random_herbs"],
                 "relationships": [
                     {
@@ -2042,7 +2277,7 @@
                 "exp": 20,
                 "weight": 20,
                 "art": "gen_app_siblings",
-                "stat_trait": ["loving"],
+                "stat_trait": ["loving", "nurturing", "warm", "benevolent"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2076,7 +2311,7 @@
                 "exp": 0,
                 "weight": 20,
                 "art": "gen_train_patrolapprenticesessionfail",
-                "stat_trait": ["lonesome", "insecure"],
+                "stat_trait": ["lonesome", "insecure", "anxious", "fearful"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -2143,7 +2378,7 @@
                 "text": "As s_c and r_c walk together, s_c finds {PRONOUN/s_c/poss} eyes drawn to an almost-unnoticeable gap between stones. Something about it feels important, so {PRONOUN/s_c/subject} {VERB/s_c/decide/decides} to investigate - a little patch of herbs hides within! r_c gushes with praise, telling s_c how amazing {PRONOUN/s_c/subject} {VERB/s_c/are/is} for noticing something so small, which sends a flush of pride through s_c's pelt.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["SENSE,2"],
+                "stat_skill": ["SENSE,2", "EXPLORER,2", "TREASURE,2"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2159,7 +2394,7 @@
                 "text": "s_c seems a little distracted, deep in thought about something. When r_c asks what's up, s_c blinks slowly at {PRONOUN/r_c/object} before confessing how much {PRONOUN/s_c/subject} {VERB/s_c/miss/misses} spending time together. They burrow their noses into each other's pelts and purr, soaking in the moment and their love for each other before continuing on, promising to spend more time together. ",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["loving"],
+                "stat_trait": ["loving", "warm", "benevolent", "nurturing"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2191,7 +2426,7 @@
                 "text": "s_c seems a little distracted, deep in thought about something. When r_c asks what's up, s_c blinks slowly at {PRONOUN/r_c/object} before confessing how much {PRONOUN/s_c/subject} {VERB/s_c/miss/misses} spending time together. r_c tries to comfort {PRONOUN/s_c/object}, but s_c shakes {PRONOUN/s_c/poss} head, knowing that no matter what {PRONOUN/r_c/subject} {VERB/r_c/say/says}, their roles are just too different. Both cats are too upset to gather herbs.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["lonesome", "insecure"],
+                "stat_trait": ["lonesome", "insecure", "anxious", "fearful"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -2288,7 +2523,7 @@
                 "text": "s_c sits down and motions for app1 to join {PRONOUN/s_c/object}, looking at {PRONOUN/app1/object} inquisitively. app1 tentatively explains that {PRONOUN/app1/subject}{VERB/app1/'re/'s} curious about herbs but {VERB/app1/are/is} worried that desire to learn is detrimental to {PRONOUN/app1/poss} progress as a warrior. s_c reassures {PRONOUN/app1/object} that nobody would think less of {PRONOUN/app1/object} for that, and it's good to know the basics. s_c promises to teach {PRONOUN/app1/object} when they get back to camp.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["compassionate", "wise"],
+                "stat_trait": ["compassionate", "wise", "idealistic", "optimistic", "scholarly", "teacherly"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2352,7 +2587,7 @@
                 "text": "s_c sits down and motions for app1 to join {PRONOUN/p_l/object}, looking at {PRONOUN/app1/object} inquisitively. app1 tentatively explains that {PRONOUN/app1/subject}{VERB/app1/'re/'s} curious about where kits come from. s_c takes a breath before answering, gently telling app1 that {PRONOUN/s_c/subject} {VERB/s_c/understand/understands} {PRONOUN/app1/poss} curiosity, but this might not be the right place and time. app1 is disappointed but understands.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["compassionate", "thoughtful", "loving"],
+                "stat_trait": ["compassionate", "thoughtful", "loving", "idealistic", "optimistic", "scholarly", "teacherly", "gentle"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2383,7 +2618,7 @@
                 "text": "s_c sits down and motions for app1 to join {PRONOUN/s_c/object}, looking at {PRONOUN/app1/object} inquisitively. app1 practically bursts with questions, asking about scars and wounds and how much blood has s_c seen and what was it like? s_c takes a breath and explains why that's not appropriate to ask. app1 has the decency to look a little ashamed, quietly getting back to work.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["calm", "responsible", "compassionate", "wise", "thoughtful"],
+                "stat_trait": ["calm", "responsible", "compassionate", "wise", "thoughtful", "gentle", "tranquil", "teacherly", "civil"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2415,7 +2650,7 @@
                 "text": "app1 tries a few times to strike up conversation, but s_c barely acknowledges {PRONOUN/app1/object} at all. When {PRONOUN/s_c/subject} finally {VERB/s_c/do/does} answer back, it's to snap at the younger cat to stay focused and stop distracting {PRONOUN/s_c/object}. app1 draws {PRONOUN/app1/poss} ears back and looks away. The two cats studiously refuse to interact the rest of the patrol, returning to camp with no herbs.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["cold", "strict", "arrogant"],
+                "stat_trait": ["cold", "strict", "arrogant", "blunt", "logical", "self-reliant", "methodical", "dry", "aloof"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -2528,7 +2763,7 @@
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],
-                "stat_skill": ["STORY,1", "LORE,1"],
+                "stat_skill": ["STORY,1", "LORE,1", "HISTORIAN,1", "BOOKMAKER,1", "MEMORY,1", "SCHOLAR,1"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -2665,7 +2900,7 @@
                 "weight": 20,
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
-                "stat_trait": ["strict", "cold", "responsible"],
+                "stat_trait": ["strict", "cold", "responsible", "moody", "grumpy", "blunt"],
                 "relationships": [
                     {
                         "cats_to": ["p_l"],
@@ -2779,7 +3014,7 @@
                 "text": "s_c and app2 banter as they scan around their surroundings for any sightings of herb bushes. When they do spot a bush, s_c playfully nudges app2 toward it, letting {PRONOUN/app2/object} get ahead.",
                 "exp": 10,
                 "weight": 20,
-                "stat_trait": ["playful", "loving"],
+                "stat_trait": ["playful", "loving", "bubbly", "talkative", "casual"],
                 "herbs": ["random_herbs"],
                 "relationships": [
                     {
@@ -2827,7 +3062,7 @@
                 "exp": 0,
                 "weight": 20,
                 "can_have_stat":["app2"],
-                "stat_trait": ["shameless", "troublesome"],
+                "stat_trait": ["shameless", "troublesome", "loud", "annoying", "hyper", "chaotic"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -2925,7 +3160,7 @@
                 "exp": 0,
                 "weight": 20,
                 "art": "gen_train_argueMM",
-                "stat_trait": ["strict", "childish", "troublesome"],
+                "stat_trait": ["strict", "childish", "troublesome", "lazy", "judgmental", "argumentative", "passive-aggressive", "sarcastic"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -3281,7 +3516,12 @@
                     "SENSE,2",
                     "OMEN,2",
                     "STAR,2",
-                    "LORE,2"
+                    "LORE,2",
+                    "GHOST,2",
+                    "UNKNOWN,2",
+                    "PRODIGY,2",
+                    "SCHOLAR,2",
+                    "DETECTIVE,2"
                 ]
             }
         ],
@@ -3354,7 +3594,7 @@
                 "text": "The patrol continues on as normal, but when p_l returns to the medicine cat den later that day, {PRONOUN/p_l/subject} {VERB/p_l/find/finds} something special waiting for {PRONOUN/p_l/object} in {PRONOUN/p_l/poss} nest.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["HUNTER,1", "SENSE,2"],
+                "stat_skill": ["HUNTER,1", "SENSE,2", "EXPLORER,1", "NAVIGATOR,1", "GIFTGIVER,1"],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3375,7 +3615,33 @@
                 "stat_trait": [
                     "compassionate",
                     "loving",
-                    "thoughtful"
+                    "thoughtful",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
@@ -3459,7 +3725,7 @@
                 "text": "The patrol continues on as normal, but when p_l returns to the medicine cat den later that day, {PRONOUN/p_l/subject} {VERB/p_l/find/finds} something special waiting for {PRONOUN/p_l/object} in {PRONOUN/p_l/poss} nest.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["HUNTER,1", "SENSE,2"],
+                "stat_skill": ["HUNTER,1", "SENSE,2", "EXPLORER,1", "NAVIGATOR,1", "GIFTGIVER,1"],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3480,7 +3746,33 @@
                 "stat_trait": [
                     "compassionate",
                     "loving",
-                    "thoughtful"
+                    "thoughtful",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
@@ -3566,7 +3858,7 @@
                 "text": "The patrol continues on as normal, but when r_c returns to camp later that day, {PRONOUN/r_c/subject} {VERB/r_c/find/finds} something special waiting for {PRONOUN/r_c/object} in {PRONOUN/r_c/poss} nest.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["HUNTER,1", "SENSE,2"],
+                "stat_skill": ["HUNTER,1", "SENSE,2", "EXPLORER,1", "NAVIGATOR,1", "GIFTGIVER,1"],
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3587,7 +3879,33 @@
                 "stat_trait": [
                     "compassionate",
                     "loving",
-                    "thoughtful"
+                    "thoughtful",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
                 ],
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
@@ -3649,7 +3967,15 @@
                 "shameless", 
                 "troublesome", 
                 "adventurous", 
-                "rebellious"
+                "rebellious",
+                "annoying",
+                "reactive",
+                "youthful",
+                "chaotic",
+                "goofy",
+                "whimsical",
+                "spontainious",
+                "passionate"
             ],
 		        "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
@@ -3675,18 +4001,46 @@
                 "exp": 20,
                 "weight": 20,
 		        "stat_trait": [
-                "compassionate", 
-                "loving", 
-                "insecure", 
-                "nervous", 
-                "sincere", 
-                "careful", 
-                "wise", 
-                "calm", 
-                "thoughtful", 
-                "faithful", 
-                "righteous", 
-                "responsible"
+                    "compassionate", 
+                    "loving", 
+                    "insecure", 
+                    "nervous", 
+                    "sincere", 
+                    "careful", 
+                    "wise", 
+                    "calm", 
+                    "thoughtful", 
+                    "faithful", 
+                    "righteous", 
+                    "responsible",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
+            
+            
             ],
 		        "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
@@ -3758,7 +4112,7 @@
                 "text": "Fine, s_c tells app1. Medicine cats had to work hard to learn the skills they needed - if app1 didn't want to spend moons memorising herbs, trying {PRONOUN/app1/poss} best and making mistakes, then {PRONOUN/app1/subject} should go find an easier role. Walking away from app1, s_c is pleased to hear the apprentice eagerly bounding after {PRONOUN/s_c/object}.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["ambitious", "bold", "cold", "competitive", "cunning", "daring", "fierce", "grumpy", "strict", "strange", "sneaky", "lonesome"],
+                "stat_trait": ["ambitious", "bold", "cold", "competitive", "cunning", "daring", "fierce", "grumpy", "strict", "strange", "sneaky", "lonesome", "angry", "moody", "fox-hearted", "envious", "reactive", "unreliable", "unpredictable", "antagonistic", "malicious", "sassy"],
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3782,7 +4136,7 @@
                 "text": "Tail lashing, s_c snaps that {PRONOUN/s_c/subject} didn't train app1 just for them to give up. s_c had <i>chosen</i> app1 to be {PRONOUN/s_c/poss} apprentice, so app1 better pull {PRONOUN/app1/self} together and deal with it! Snapped out of {PRONOUN/app1/poss} gloom, app1 looks at {PRONOUN/app1/poss} intelligent, imposing mentor, and realises {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} right - s_c wouldn't have chosen just anycat to be {PRONOUN/s_c/poss} apprentice. s_c knew app1 could be a great medicine cat, and now app1 realised it, too.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["arrogant", "bloodthirsty", "confident", "gloomy", "vengeful", "sneaky"],
+                "stat_trait": ["arrogant", "bloodthirsty", "confident", "gloomy", "vengeful", "sneaky", "manipulative", "judgmental", "cruel", "argumentative", "snobbish", "remorseless", "disgusted"],
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3806,7 +4160,7 @@
                 "text": "s_c gasps in over-exaggerated shock - is someone doubting the most awesome, smart, and brilliant apprentice in c_n?! app1 can't help but smile as s_c continues {PRONOUN/s_c/poss} flabbergasted performance, soon devolving into full-on laughter.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["charismatic", "flamboyant", "childish", "playful"],
+                "stat_trait": ["charismatic", "flamboyant", "childish", "playful", "bubbly", "youthful", "silly", "overimaginative", "persuasive", "talkative", "goofy", "cheeky"],
                 "can_have_stat": ["p_l"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3869,20 +4223,46 @@
                 "exp": 20,
                 "weight": 20,
 		        "stat_trait": [
-                "calm", 
-                "charismatic", 
-                "compassionate", 
-                "faithful", 
-                "insecure", 
-                "loving", 
-                "loyal", 
-                "nervous", 
-                "responsible", 
-                "righteous", 
-                "sincere", 
-                "thoughtful", 
-                "wise", 
-                "careful"
+                    "calm", 
+                    "charismatic", 
+                    "compassionate", 
+                    "faithful", 
+                    "insecure", 
+                    "loving", 
+                    "loyal", 
+                    "nervous", 
+                    "responsible", 
+                    "righteous", 
+                    "sincere", 
+                    "thoughtful", 
+                    "wise", 
+                    "careful",
+                    "nurturing",
+                    "warm",
+                    "dedicated",
+                    "soft",
+                    "idealistic",
+                    "organized",
+                    "reliable",
+                    "teacherly",
+                    "patient",
+                    "delicate",
+                    "tolerant",
+                    "benevolent",
+                    "genuine",
+                    "cooperative",
+                    "sentimental",
+                    "peaceful",
+                    "honest",
+                    "elegant",
+                    "appreciative",
+                    "generous",
+                    "protective",
+                    "gracious",
+                    "romantic",
+                    "cheerful",
+                    "hearty",
+                    "sympathetic"
             ],
 		        "can_have_stat": ["r_c"],
                 "herbs": ["mullein"],
@@ -3908,7 +4288,7 @@
                 "text": "s_c purrs, brushing {PRONOUN/s_c/poss} pelt against p_l's - s_c may not be the most talkative cat, but {PRONOUN/s_c/subject} {VERB/s_c/want/wants} p_l to know that {PRONOUN/s_c/subject} {VERB/s_c/appreciate/appreciates} p_l's presence. p_l purrs back, draping {PRONOUN/p_l/poss} tail across {PRONOUN/p_l/poss} parent's shoulders and continuing the patrol in a comfortable silence.",
                 "exp": 20,
                 "weight": 20,
-		        "stat_trait": ["calm", "gloomy", "grumpy", "strange", "lonesome"],
+		        "stat_trait": ["calm", "gloomy", "grumpy", "strange", "lonesome", "monotone", "serious", "private", "sleepy"],
 		        "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3932,7 +4312,7 @@
                 "text": "Though s_c may not always understand the path of a medicine cat, {PRONOUN/s_c/subject} wants p_l to know that {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} proud of {PRONOUN/p_l/object} anyway, and is glad p_l is happy in {PRONOUN/p_l/poss} role. Surprised - but appreciative - of the reassurance, p_l smiles and promises s_c that just because they walk different paths doesn't mean {PRONOUN/p_l/subject}'ll stop needing s_c.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["ambitious", "adventurous", "arrogant", "bloodthirsty", "bold", "daring", "confident", "cold", "cunning", "daring", "fierce", "oblivious", "shameless", "sneaky", "strict", "vengeful"],
+                "stat_trait": ["ambitious", "adventurous", "arrogant", "bloodthirsty", "bold", "daring", "confident", "cold", "cunning", "daring", "fierce", "oblivious", "shameless", "sneaky", "strict", "vengeful", "cruel", "serious", "principled", "opinionated", "mysterious", "intense", "leaderly", "remorseless", "calculating", "forceful", "fair", "stoic", "enthusiastic", "forceful", "scary"],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -3978,7 +4358,7 @@
                 "text": "s_c suddenly pauses, brightly suggesting a game for them to play - every time they see a herb, p_l had to teach s_c it's uses, and, at the end of the patrol, p_l could give {PRONOUN/s_c/object} a quiz. If s_c got more than half the questions right, {PRONOUN/s_c/subject} {VERB/s_c/win/wins}! Pleased at the opportunity to both impart {PRONOUN/p_l/poss} herbal knowledge and spend time with {PRONOUN/p_l/poss} parent, the patrol seems to fly by all too quickly, with both cats having a great time.",
                 "exp": 20,
                 "weight": 20,
-                "stat_trait": ["childish", "competitive", "flamboyant", "playful", "troublesome"],
+                "stat_trait": ["childish", "competitive", "flamboyant", "playful", "troublesome", "bubbly", "silly", "goofy", "enthusiastic", "quirky"],
                 "can_have_stat": ["r_c"],
                 "herbs": ["random_herbs"],
                 "relationships": [
@@ -4069,7 +4449,7 @@
                 "exp": 10,
                 "weight": 40,
                 "can_have_stat": ["healer"],
-                "stat_trait": ["arrogant"],
+                "stat_trait": ["arrogant", "spiteful","cruel"],
                 "herbs": ["random_herbs"],
                 "relationship": [
                     {
@@ -4092,7 +4472,7 @@
                 "exp": 10,
                 "weight": 40,
                 "can_have_stat": ["healer"],
-                "stat_trait": [ "loyal", "strict", "responsible", "righteous" ],
+                "stat_trait": [ "loyal", "strict", "responsible", "righteous", "dedicated", "stoic", "passive-aggressive", "reserved", "disgusted", "judgmental", "snobbish" ],
                 "herbs": ["random_herbs"],
                 "relationship": [
                     {
@@ -4147,7 +4527,7 @@
                 "text": "Come on, s_c persuades {PRONOUN/p_l/object}. Just one little look? A look isn't harming any cat. No cat's gotten poisoned from <i>looking</i> at deathberries, right? p_l caves and shows s_c the way to the deathberry bush, but neither apprentice manages to actually gather any of the herbs they were looking for along the way.",
                 "exp": 0,
                 "weight": 40,
-                "stat_trait": [ "charismatic", "cunning" ],
+                "stat_trait": [ "charismatic", "cunning", "persuasive", "cool", "manipulative", "scheming", "devious" ],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4163,7 +4543,7 @@
                 "text": "p_l agrees hesitantly, darting looks back at app2 as {PRONOUN/p_l/subject} {VERB/p_l/lead/leads} {PRONOUN/app2/object} to the bushes. The glistening red berries reflect in app2's eyes, obscuring whatever thoughts might be swirling within. p_l shivers and suggests they get back to camp before any cat notices they're in the wrong part of the territory.",
                 "exp": 0,
                 "weight": 40,
-                "stat_skill": [ "DARK,1", "GHOST,1"],
+                "stat_skill": [ "DARK,1", "GHOST,1", "UNKNOWN,1"],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4179,7 +4559,7 @@
                 "text": "p_l agrees hesitantly, darting looks back at app2 as {PRONOUN/p_l/subject} {VERB/p_l/lead/leads} {PRONOUN/app2/object} to the bushes. The glistening red berries reflect in app2's eyes, obscuring whatever thoughts might be swirling within. p_l shivers and suggests they get back to camp before any cat notices they're in the wrong part of the territory.",
                 "exp": 0,
                 "weight": 40,
-                "stat_trait": [ "bloodthirsty", "cold", "vengeful" ],
+                "stat_trait": [ "bloodthirsty", "cold", "vengeful", "sadistic", "cruel", "uncaring" ],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4195,7 +4575,7 @@
                 "text": "p_l hesitates, and app2 cocks {PRONOUN/app2/poss} head at p_l. Is p_l a mouse-heart? Scared of a few little berries? p_l snaps back that {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} no mouse-heart... and somehow ends up leading app2 to the patch of deathberries. Curiosity satisfied, app2 loses any interest in helping p_l gather herbs.",
                 "exp": 0,
                 "weight": 40,
-                "stat_trait": [ "fierce", "troublesome", "rebellious", "bold", "daring", "arrogant", "shameless", "adventurous" ],
+                "stat_trait": [ "fierce", "troublesome", "rebellious", "bold", "daring", "arrogant", "shameless", "adventurous", "sensitive", "fearful", "forceful", "frustrated", "misguided" ],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4219,8 +4599,8 @@
                 "text": "p_l tentatively leads app2 to the deathberry bush, and is relieved when app2 takes in the sight with the appropriate awe and respect. {PRONOUN/app2/subject/CAP} {VERB/app2/ask/asks} if p_l ever uses deathberries in healing. p_l shudders. That kind of healing is more advanced than where {PRONOUN/p_l/subject} {VERB/p_l/are/is} in {PRONOUN/p_l/poss} training. They may have wasted the time they were meant to use herb-gathering, but p_l has a new appreciation for app2's maturity.",
                 "exp": 0,
                 "weight": 40,
-                "stat_skill": [ "INSIGHTFUL,1", "HEALER,1" ],
-                "can_have_stat": [ "r_c" ],
+                "stat_skill": [ "INSIGHTFUL,1", "HEALER,1", "HERBALIST,1", "GARDENER,1", "SCHOLAR,1" ],
+                "can_have_stat": [ "app2" ],
                 "relationship": [
                     {
                         "cat_to": [ "app2" ],
@@ -4243,7 +4623,7 @@
                 "text": "p_l tentatively leads app2 to the deathberry bush, and is relieved when app2 takes in the sight with the appropriate awe and respect. {PRONOUN/app2/subject/CAP} {VERB/app2/ask/asks} if p_l ever uses deathberries in healing. p_l shudders. That kind of healing is more advanced than where {PRONOUN/p_l/subject} {VERB/p_l/are/is} in {PRONOUN/p_l/poss} training. They may have wasted the time they were meant to use herb-gathering, but p_l has a new appreciation for app2's maturity.",
                 "exp": 0,
                 "weight": 40,
-                "stat_trait": [ "thoughtful", "wise", "calm", "sincere" ],
+                "stat_trait": [ "thoughtful", "wise", "calm", "sincere", "tranquil", "philosophical", "polished", "dedicated", "organized" ],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4267,8 +4647,8 @@
                 "text": "p_l is unsettled by the request, but leads {PRONOUN/app2/object} to the deathberry bushes anyway. When {PRONOUN/p_l/subject} {VERB/p_l/look/looks} back, p_l is startled to see app2's fur bushed out and {PRONOUN/app2/poss} eyes wide, staring at the berries. app2's a talented fighter, but none of {PRONOUN/app2/poss} skills can protect {PRONOUN/app2/object} from the threat of poison. With this insight into {PRONOUN/p_l/poss} Clanmate gained, p_l leads {PRONOUN/app2/object} away.",
                 "exp": 0,
                 "weight": 40,
-                "stat_trait": [ "fierce", "competitive", "ambitious", "bold", "daring", "bloodthirsty" ],
-                "stat_skill": [ "FIGHTER,1"],
+                "stat_trait": [ "fierce", "competitive", "ambitious", "bold", "daring", "bloodthirsty", "cruel", "sadistic", "venomous", "scary", "reactive" ],
+                "stat_skill": [ "FIGHTER,1", "STRONG,1"],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
@@ -4284,7 +4664,7 @@
                 "text": "p_l knows app2 probably doesn't have any nefarious plans in mind, so {PRONOUN/p_l/subject} {VERB/p_l/lead/leads} {PRONOUN/app2/object} to where the yew grows. To p_l's horror, app2 cheerfully announces {PRONOUN/app2/subject}{VERB/app2/'ve/'s} always been curious how they'd taste, and plucks a few berries with {PRONOUN/app2/poss} mouth. p_l tackles {PRONOUN/app2/object}, forcing {PRONOUN/app2/object} to spit them out right away, and takes {PRONOUN/app2/object} back to camp for immediate medical attention.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": [ "childish" ],
+                "stat_trait": [ "childish", "bubbly", "absent-minded" ],
                 "can_have_stat": [ "r_c" ],
                 "relationship": [
                     {
