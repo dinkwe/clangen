@@ -2790,11 +2790,22 @@ def generate_sprite(
             )
 
         # draw eyes & scars1
-        eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
+                 'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
+        if cat.pelt.eye_colour in neos_eyes:
+            eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        else: 
+            eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+            
         if cat.pelt.eye_colour2 != None:
-            eyes.blit(
-                sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
-            )
+            if cat.pelt.eye_colour2 in neos_eyes:
+                eyes.blit(
+                    sprites.sprites["neos_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
+                )
+            else:
+                eyes.blit(
+                    sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
+                )
         new_sprite.blit(eyes, (0, 0))
 
         if not scars_hidden:

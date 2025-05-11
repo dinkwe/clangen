@@ -377,6 +377,14 @@ class Cat:
             elif self.awakened["type"] == "enhanced esper":
                 self.pelt.skin = choice(powers_dict[self.awakened["ability"][0]]["skin"])
         
+        neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
+                 'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
+        neon_eyes_chance = 10
+        if self.awakened and self.awakened["type"] == "guide":
+            neon_eyes_chance = 4
+        if randint(1,neon_eyes_chance) == 1:
+            self.pelt.eye_colour = choice(neos_eyes)
+        
         magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
                        "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
                        "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked",

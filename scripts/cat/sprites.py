@@ -126,7 +126,7 @@ class Sprites:
             'lineart', 'lineartdf', 'lineartdead',
             'eyes', 'eyes2', 'skin', 'skin_magic', 'skin_elemental', 'skin_bingle','skin_mathkangaroo','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
             'scars', 'missingscars', 'wild', 
-            'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2',
+            'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2', 'neos_eyes', 'neos_eyes2',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars', 'colorsplash_horn', 'colorsplash_kitsune', 'colorsplash_mermaid',
             'singlecolours', 'speckledcolours', 'tabbycolours', 'bengalcolours', 'marbledcolours',
             'rosettecolours', 'smokecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours',
@@ -213,6 +213,9 @@ class Sprites:
              'NEON GREEN', 'SEA'],
             ['DISCORD', 'AUTUMN LEAF', 'RUBY', 'PHANTOM', 'RIVER MOSS', 'WICKED']
         ]
+        
+        neos_eyes = [['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN'],
+                 ['NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']]
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
@@ -248,6 +251,11 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('eyesvivid', (col, row), f'eyes{color}')
                 self.make_group('vivid2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(neos_eyes):
+            for col, color in enumerate(colors):
+                self.make_group('neos_eyes', (col, row), f'neos_eyes{color}')
+                self.make_group('neos_eyes2', (col, row), f'neos_eyes2{color}')
 
         # Define white patches
         white_patches = [

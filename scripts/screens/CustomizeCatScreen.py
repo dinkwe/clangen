@@ -369,6 +369,12 @@ class CustomizeCatScreen(Screens):
 
         self.skin_dropdown = create_dropdown((640, 360), (135, 40), create_options_list(self.skins, "upper"),
                                              get_selected_option(self.the_cat.pelt.skin, "upper"))
+        
+        if self.the_cat.awakened and 'Neo fire' not in self.eye_colours:
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
+        elif not self.the_cat.awakened and 'Neo fire' in self.eye_colours:
+            self.eye_colours =  [colour.capitalize() for colour in copy(Pelt.eye_colours)]
+            
         self.eye_colour1_dropdown = create_dropdown((320, 445), (135, 40),
                                                     create_options_list(self.eye_colours, "upper"),
                                                     get_selected_option(self.the_cat.pelt.eye_colour, "upper"))
