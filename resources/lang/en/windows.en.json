@@ -84,7 +84,7 @@
         "prevent_retirement_tooltip_no": "Prevent cat from retiring automatically.",
         "prevent_romance": "Limit romantic interactions and mate changes",
         "prevent_romance_tooltip": "Prevent cat from automatically taking a mate, breaking up, or having romantic interactions with non-mates.",
-        "immortality": "Prevent aging and death.",
+        "immortality": "Prevent aging and death",
         "immortality_tooltip": "Makes cat completely immortal. Does not prevent injuries/illnesses.",
         "change_focus": "Change Focus",
         "focus_prompt": "<b>Which Clans will you target?</b>",

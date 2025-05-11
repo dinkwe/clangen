@@ -227,10 +227,7 @@ class CustomizeCatScreen(Screens):
         self.scar4_label = None
         self.scar4_dropdown = None
         
-        self.powers = ["none", "esper", "guide", "enhanced esper"]
-        self.powers_label = None
-        self.powers_dropdown = None
-
+        
     # prints attributes for testing
     #def print_pelt_attributes(self):
         #print("\n*** PELT START ***")
@@ -291,7 +288,9 @@ class CustomizeCatScreen(Screens):
         self.scar3_label = create_text_box("scar 3", (346, 580), (135, 40), "#text_box_22_horizleft")
         self.scar4_label = create_text_box("scar 4", (496, 580), (135, 40), "#text_box_22_horizleft")
         
-        self.powers_label = create_text_box("powers", (646, 580), (135, 40), "#text_box_22_horizleft")
+        #tortie tints
+        
+        self.tortie_tints_label = create_text_box("tortie tint", (646, 580), (135, 40), "#text_box_22_horizleft")
         """------------------------------------------------------------------------------------------------------------#
         #                                              LABEL SETUP END                                                 #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -398,11 +397,8 @@ class CustomizeCatScreen(Screens):
         self.scar4_dropdown = create_dropdown((492, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars[3:], "upper"), "dropup")
         
-        powers = "none"
-        if self.the_cat.awakened:
-            powers = self.the_cat.awakened["type"]
-        self.powers_dropdown = create_dropdown((642, 605), (135, 40), create_options_list(self.powers, "upper"),
-                                              get_selected_option(powers, "upper"), "dropup")
+        self.tortie_tint_dropdown = create_dropdown((640, 605), (135, 40), create_options_list(self.tints, "upper"),
+                                             get_selected_option(self.the_cat.pelt.tortie_tint, "upper"), "dropup")
         """------------------------------------------------------------------------------------------------------------#
         #                                              DROPDOWN SETUP END                                              #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -444,6 +440,7 @@ class CustomizeCatScreen(Screens):
             self.tortie_base_dropdown.disable()
             self.tortie_colour_dropdown.disable()
             self.tortie_pattern_dropdown.disable()
+            self.tortie_tint_dropdown.disable()
 
     def setup_white_patches_tint(self):
         if self.the_cat.pelt.white_patches is None and self.the_cat.pelt.points is None:
@@ -484,6 +481,7 @@ class CustomizeCatScreen(Screens):
             "tortiebase": self.the_cat.pelt.tortiebase,
             "tortiecolour": self.the_cat.pelt.tortiecolour,
             "tortiepattern": self.the_cat.pelt.tortiepattern,
+            "tortie_tint": self.the_cat.pelt.tortie_tint,
             "white_patches": self.the_cat.pelt.white_patches,
             "vitiligo": self.the_cat.pelt.vitiligo,
             "points": self.the_cat.pelt.points,
@@ -607,8 +605,9 @@ class CustomizeCatScreen(Screens):
             elif event.ui_element in [self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown,
                                       self.scar4_dropdown]:
                 self.handle_scar_dropdown(event.ui_element)
-            elif event.ui_element == self.powers_dropdown:
-                self.handle_powers_dropdown(event.ui_element)
+            elif event.ui_element == self.tortie_tint_dropdown:
+                self.the_cat.pelt.tortie_tint = self.tortie_tint_dropdown.selected_option[1].lower()
+                self.make_cat_sprite()
             #self.print_pelt_attributes()  # for testing purposes
 
     def handle_dropdown_change(self, dropdown, attribute):
@@ -713,72 +712,6 @@ class CustomizeCatScreen(Screens):
 
         self.make_cat_sprite()
         
-    def handle_powers_dropdown(self, dropdown):
-        selected_option = dropdown.selected_option[1]
-        previous_selection = "none"
-        if self.the_cat.awakened:
-            previous_selection = self.the_cat.awakened["type"]
-            
-        if previous_selection != "none" and previous_selection in ["guide","esper","enhanced esper"]:
-            self.the_cat.awakened = None
-        if selected_option != "none":
-            self.generate_ability(power_type = selected_option)
-        self.make_cat_sprite()
-            
-    
-    def generate_ability(self, power_type = "esper"):
-        if os.path.exists('resources/dicts/esper.json'):
-            with open('resources/dicts/esper.json') as read_file:
-                powers_dict = ujson.loads(read_file.read())
-                
-        power_type = power_type.lower()
-        template = {
-            "type": power_type,
-            "class": "C",
-            "ability": "none",
-            "desc": "none"
-            }
-        strength = randint(1,10)
-        if strength == 10:
-            template["class"] = "S"
-        elif strength > 7:
-            template["class"] = "A"
-        elif strength > 4:
-            template["class"] = "B"
-        
-        if power_type in ["esper", "enhanced esper"]:
-            power = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
-                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
-                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
-                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
-            template["desc"] = choice(powers_dict[power][template["class"]])
-            template["ability"] = power
-            if power_type == "enhanced esper":
-                strength = randint(1,10)
-                class2 = "C"
-                if strength == 10:
-                    class2 = "S"
-                elif strength > 7:
-                    class2 = "A"
-                elif strength > 4:
-                    class2 = "B"
-                power2 = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
-                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
-                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
-                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
-                desc2 = choice(powers_dict[power2][class2])
-                
-                classes = [template["class"], class2]
-                abilities = [template["ability"], power2]
-                while template["desc"] == desc2:
-                   desc2 = choice(powers_dict[power2][class2])
-                powers = [template["desc"], desc2]
-                
-                template["class"] = classes
-                template["ability"] = abilities
-                template["desc"] = powers
-        self.the_cat.awakened = template
-
 
     def handle_sprites_for_pelt_length(self, previous_length):
         # check if pelt length has changed from or to long
@@ -827,7 +760,8 @@ class CustomizeCatScreen(Screens):
             self.pattern_dropdown,
             self.tortie_base_dropdown,
             self.tortie_colour_dropdown,
-            self.tortie_pattern_dropdown
+            self.tortie_pattern_dropdown,
+            self.tortie_tint_dropdown
         ]
         if new_pelt_name in ["Calico", "Tortie"]:
             if previous_pelt_name not in ["Calico", "Tortie"]:
@@ -862,6 +796,8 @@ class CustomizeCatScreen(Screens):
                                                                create_options_list(self.tortie_bases, "lower"),
                                                                get_selected_option(self.the_cat.pelt.tortiepattern,
                                                                                    "lower"))
+                self.tortie_tint_dropdown = create_dropdown((640, 605), (135, 40), create_options_list(self.tints, "upper"),
+                                             get_selected_option(self.the_cat.pelt.tortie_tint, "upper"), "dropup")
 
                 for dropdown in dropdowns:
                     dropdown.enable()
@@ -873,14 +809,17 @@ class CustomizeCatScreen(Screens):
             self.tortie_base_dropdown = create_dropdown((320, 200), (135, 40), "None", "None")
             self.tortie_colour_dropdown = create_dropdown((480, 200), (135, 40), "None", "None")
             self.tortie_pattern_dropdown = create_dropdown((640, 200), (135, 40), "None", "None")
+            self.tortie_tint_dropdown = create_dropdown((640, 605), (135, 40), "None", "None")
 
             self.the_cat.pelt.pattern = None
             self.the_cat.pelt.tortiebase = None
             self.the_cat.pelt.tortiecolour = None
             self.the_cat.pelt.tortiepattern = None
+            
+            self.the_cat.pelt.tortie_tint = "none"
 
             for dropdown in [self.pattern_dropdown, self.tortie_base_dropdown, self.tortie_colour_dropdown,
-                             self.tortie_pattern_dropdown]:
+                             self.tortie_pattern_dropdown, self.tortie_tint_dropdown]:
                 dropdown.disable()
 
     def check_white_patches_tint(self):
@@ -984,7 +923,7 @@ class CustomizeCatScreen(Screens):
             self.white_patches_label, self.vitiligo_label, self.points_label, self.white_patches_tint_label,
             self.tint_label, self.skin_label, self.eye_colour1_label, self.eye_colour2_label, self.heterochromia_text,
             self.reset_message, self.pose_label, self.reverse_label, self.accessory_label, self.scar_message,
-            self.scar1_label, self.scar2_label, self.scar3_label, self.scar4_label, self.powers_label
+            self.scar1_label, self.scar2_label, self.scar3_label, self.scar4_label, self.tortie_tints_label 
         ]
         for label in labels:
             label.kill()
@@ -1005,7 +944,7 @@ class CustomizeCatScreen(Screens):
             self.vitiligo_dropdown,
             self.points_dropdown, self.skin_dropdown, self.white_patches_tint_dropdown, self.tint_dropdown,
             self.eye_colour1_dropdown, self.eye_colour2_dropdown, self.accessory_dropdown,
-            self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown, self.scar4_dropdown, self.powers_dropdown
+            self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown, self.scar4_dropdown, self.tortie_tint_dropdown
         ]
         for dropdown in dropdowns:
             dropdown.kill()

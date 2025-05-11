@@ -11,7 +11,11 @@
             "Waits by the border for a patrol escort",
             "Paces nervously near the camp entrance",
             "Flops over, exhausted from a long run to a distant Clan",
-            "Gossips about another Clan's choice in prey"
+            "Gossips about another Clan's choice in prey",
+            "Licks {PRONOUN/m_c/poss} paws after a long trip",
+            "Races laps around camp to improve {PRONOUN/m_c/poss} endurance",
+            "Prays that there will be no messages to deliver today...",
+            "Brings bad news about a roaming dog"
         ]
     },
     {
@@ -32,7 +36,8 @@
         "id": "messenger_to_alive_deputy",
         "thoughts": [
             "Is running errands for r_c",
-            "Is taking an important message from r_c to another Clan"
+            "Is taking an important message from r_c to another Clan",
+            "Asks the deputy for an escort due to fox scent by the border"
         ],
         "random_status_constraint": [
             "deputy"

@@ -36,7 +36,10 @@
             "Uses {PRONOUN/m_c/poss} tail to sweep away fallen leaves",
             "Sorts out stale prey for the freshkill pile",
             "Sniffs worriedly at some stagnant water in camp",
-            "Stacks rocks along the edge of camp in neat rows"
+            "Stacks rocks along the edge of camp in neat rows",
+            "Picks pebbles out of bedding",
+            "Digs holes for fresh water in camp",
+            "Btes thorns off of the brambles on the inner walls of camp"
         ]
     },
     {
@@ -127,6 +130,28 @@
         "random_status_constraint": [
             "medicine cat",
             "medicine cat apprentice"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "neat_denkeeper",
+        "thoughts": [
+            "Laps aggressively at a filthy Clanmate",
+            "Tells r_c for the final time {PRONOUN/m_c/subject} can't keep FROGS in {PRONOUN/m_c/poss} nest!"
+        ],
+        "main_trait_constraint": [
+            "organized",
+            "perfectionist",
+            "tidy",
+            "principled",
+            "snobbish",
+            "moralistic",
+            "grumpy",
+            "moody",
+            "righteous",
+            "practical"
         ],
         "random_living_status": [
             "living"
