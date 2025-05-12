@@ -137,6 +137,11 @@ def json_load():
                 cat["trait"] = "fun-loving"
             if "accessories" in cat:
                 cat["accessory"] = cat.pop("accessories")
+                
+            if cat["white_patches"]:
+                if "HALF" in cat["white_patches"]:
+                     cat["white_patches"].remove("HALF")
+                     cat["white_patches"].append("ERAHALF")
 
             new_cat.pelt = Pelt(
                 name=cat["pelt_name"],
