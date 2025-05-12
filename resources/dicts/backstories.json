@@ -9,6 +9,9 @@
         "outsider_roots1": "m_c was born into the Clan, but one of {PRONOUN/m_c/poss} parents is an outsider that belongs to no Clan.",
         "outsider_roots2": "m_c was born outside the Clan, but came to live in the Clan with {PRONOUN/m_c/poss} parent at a young age.",
 
+        "tribe_roots1": "m_c was born into the Clan, but one of {PRONOUN/m_c/poss} parents is from a Tribe.",
+        "tribe_roots2": "m_c was born into a Tribe, but came to live in the Clan with {PRONOUN/m_c/poss} parent at a young age.",
+
         "loner1": "m_c joined the Clan by choice after living life as a loner.",
         "loner2": "m_c used to live in a barn, but mostly stayed away from Twolegs. {PRONOUN/m_c/subject/CAP} decided Clan life might be an interesting change of pace.",
         "loner3": "m_c wandered the world, aimless and free, but always alone.",
@@ -32,6 +35,11 @@
         "otherclan2": "m_c was unhappy in {PRONOUN/m_c/poss} old Clan and decided to come here instead.",
         "otherclan3": "m_c's Clan stayed with the Clan after a disaster struck {PRONOUN/m_c/poss} old one, and decided to stay after the rest of {PRONOUN/m_c/poss} Clan returned home.",
         "otherclan4": "m_c grew up in another Clan, but chose to leave that life and join the Clan {PRONOUN/m_c/subject} now {VERB/m_c/live/lives} in.",
+
+        "tribe1": "m_c was born into a Tribe, but came to this Clan by choice.",
+        "tribe2": "m_c was unhappy in {PRONOUN/m_c/poss} old Tribe and decided to come here instead.",
+        "tribe3": "m_c's Tribe stayed with the Clan after a disaster struck {PRONOUN/m_c/poss} old one, and decided to stay after the rest of {PRONOUN/m_c/poss} Tribe returned home.",
+        "tribe4": "m_c grew up in another Tribe, but chose to leave that life and join the Clan instead.",
 
 
         "disgraced1": "m_c was cast out of {PRONOUN/m_c/poss} old Clan for some transgression that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not keen on talking about.",
@@ -73,7 +81,16 @@
         "outsider2": "m_c was born outside of a Clan, but at {PRONOUN/m_c/poss} birth one parent was a member of a Clan.",
         "outsider3": "m_c was born outside of a Clan, while {PRONOUN/m_c/poss} parent was lost.",
 
-        
+        "animal1":"m_c was taken in as a kit into a dog pack and raised as one of their own, until eventually stumbling into the Clan.",
+        "animal2":"m_c was taken in as a kit by some bobcats and raised as one of their own, until finding other cats and realzing {PRONOUN/m_c/subject} {VERB/m_c/were/was} not a bocat.",
+        "animal3":"m_c was taken in as a kit by some servals and raised as one of their own, until finding other cats and realzing {PRONOUN/m_c/subject} {VERB/m_c/were/was} not a serval.",
+        "animal4":"m_c was taken in as a kit by some caracals and raised as one of their own, until finding other cats and realzing {PRONOUN/m_c/subject} {VERB/m_c/were/was} not a caracal.",
+        "animal5":"m_c was taken in as a kit by some lynxes and raised as one of their own, until finding other cats and realzing {PRONOUN/m_c/subject} {VERB/m_c/were/was} not a lynx.",
+        "animal6":"m_c was taken in as a kit into a coyote pack and raised as one of their own, until eventually stumbling into the Clan.",
+
+        "half_cat1": "m_c is half-serval, but decided to live amongst cats instead and joined the Clan.",
+        "half_cat2": "m_c is half-leopard cat, but decided to live amongst cats instead and joined the Clan.",
+
         "reincarnation_starclan": "m_c was born again by StarClan's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
         "reincarnation_df": "m_c was born again by the Dark Forest's will. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in.",
         "reincarnation_unknown": "m_c was born again after wandering as a spirit. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} found by the Clan and taken in."
@@ -83,6 +100,7 @@
     "clan_founder_backstories": "Clan founder",
     "clanborn_backstories": "Clanborn",
     "outsider_roots_backstories": "outsider roots",
+    "tribe_roots_backstories": "tribe roots",
     "half_clan_backstories": "half-Clan",
     "loner_backstories": "formerly a loner",
     "rogue_backstories": "formerly a rogue",
@@ -91,7 +109,9 @@
     "former_clancat_backstories": "originally from another Clan",
     "orphaned_backstories": "orphaned",
     "abandoned_backstories": "abandoned",
-    "reincarnation_backstories": "reincarnated"
+    "reincarnation_backstories": "reincarnated",
+    "tribe_backstories": "formally a Tribe member",
+    "animal_backstories": "raised by animals"
   },
 
   "backstory_categories": {
@@ -103,6 +123,9 @@
     ],
     "outsider_roots_backstories": [
       "outsider_roots1", "outsider_roots2"
+    ],
+    "tribe_roots_backstories": [
+      "tribe_roots1", "tribe_roots2"
     ],
     "half_clan_backstories": [
       "halfclan1", "halfclan2"
@@ -133,6 +156,12 @@
     ],
     "reincarnation_backstories": [
       "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"
+    ],
+    "tribe_backstories": [
+      "tribe1","tribe2", "tribe3", "tribe4"
+    ],
+    "animal_backstories": [
+      "animal1","animal2", "animal3", "animal4", "animal5", "animal6", "half_cat1", "half_cat2"
     ]
   },
 

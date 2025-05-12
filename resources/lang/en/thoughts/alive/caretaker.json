@@ -85,5 +85,25 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "paralyzed_caretaker_to_kits",
+        "thoughts": [
+            "Tirelessly answers the questions about {PRONOUN/m_c/poss} back legs",
+            "Doesn't notice a kit bitng on {PRONOUN/m_c/poss} tail",
+            "Purrs as r_c kneads at a spasm in {PRONOUN/m_c/poss} back leg",
+            "Sanps at a kit to stop hiding under {PRONOUN/m_c/poss} tail"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

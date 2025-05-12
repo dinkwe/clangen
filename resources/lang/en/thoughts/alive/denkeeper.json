@@ -156,5 +156,23 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "paralyzed_caretaker_to_kits",
+        "thoughts": [
+            "Accidentally drags {PRONOUN/m_c/poss} back half through a freshly made nest",
+            "Clears sharp rocks from the center of camp so {PRONOUN/m_c/subject} can roam around safely",
+            "Asks r_c for help reaching some brambles from the top of a den",
+            "Snaps at r_c that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need help and to PLEASE stop offering",
+            "Soaks {PRONOUN/m_c/poss} sore paws in a cool puddle"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

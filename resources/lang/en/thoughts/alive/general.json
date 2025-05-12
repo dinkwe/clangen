@@ -5296,7 +5296,13 @@
             "Snaps at r_c for trying to 'help' {PRONOUN/m_c/object} with something {PRONOUN/m_c/subject} can do just fine",
             "Feels comforted by r_c's words about how strong {PRONOUN/m_c/subject} {VERB/m_c/are/is}",
             "Snaps that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not 'strong', {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} just alive",
-            "Bristles at the pity from {PRONOUN/m_c/poss} Clanmates"
+            "Bristles at the pity from {PRONOUN/m_c/poss} Clanmates",
+            "Is holding down an apprentice with a single front paw!",
+            "Does push-ups to strengthen {PRONOUN/m_c/poss} font half",
+            "Races past r_c, yelling that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} too slow!",
+            "Grumbles about collecting dead leaves in {PRONOUN/m_c/poss} tail",
+            "Didn't notice a bramble stuck in {PRONOUN/m_c/poss} tail until a Clanmate pointed it out",
+            "Accidentally lays {PRONOUN/m_c/poss} back half in a puddle"
         ],
         "perm_conditions": {
             "m_c": [

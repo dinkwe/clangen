@@ -62,5 +62,22 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "paralyzed_caretaker_to_kits",
+        "thoughts": [
+            "Repeats a long message under {PRONOUN/m_c/poss} breath",
+            "Looks forward to a leisurely stroll to an ally Clan",
+            "Resents being sent to the far side of the territory for a frivolous message",
+            "Complains that r_c is slower than {PRONOUN/m_c/subject} {VERB/m_c/are/is}"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

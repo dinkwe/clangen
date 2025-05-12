@@ -260,7 +260,8 @@ class CustomizeStatsScreen(Screens):
                             "otherclan2", "otherclan3", "otherclan4", "otherclan5", "disgraced1", "disgraced2", "disgraced3", "retired_leader", "medicine_cat", "ostracized_warrior",
                             "refugee1", "refugee2", "refugee3", "refugee4", "refugee5", "refugee6", "tragedy_survivor1", "tragedy_survivor2", "tragedy_survivor3", "tragedy_survivor4",
                             "wandering_healer1", "wandering_healer2", "guided1", "guided2", "guided3", "guided4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5",
-                            "orphaned6", "outsider1", "outsider2", "outsider3", "unknown", "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"]
+                            "orphaned6", "outsider1", "outsider2", "outsider3", "unknown", "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown", "animal1", "animal2",
+                            "animal3", "animal4", "animal5", "animal6", "half_cat1", "half_cat2", "tribe1", "tribe2", "tribe3", "tribe4"]
         self.backstories.sort()
         self.backstory_label = None
         
