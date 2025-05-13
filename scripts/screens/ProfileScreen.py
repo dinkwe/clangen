@@ -1066,7 +1066,7 @@ class ProfileScreen(Screens):
                     else:
                         former_indicate = "general.enemy_dead"
 
-                    enemy_names.append(f"{str(enemy.name)} {i18n.t(former_indicate)}")
+                    enemy_names.append(f"{str(enemy_ob.name)} {i18n.t(former_indicate)}")
                 elif enemy_ob.outside != self.the_cat.outside:
                     enemy_names.append(
                         f"{str(enemy_ob.name)} {i18n.t('general.enemy_away')}"
