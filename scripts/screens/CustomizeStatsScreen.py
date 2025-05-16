@@ -303,6 +303,10 @@ class CustomizeStatsScreen(Screens):
         self.ability1_dropdown = None
         self.ability2_label = None
         self.ability2_dropdown = None
+        
+        self.fave_markers = ["default", "moon", "star"]
+        self.fave_label = None
+        self.fave_dropdown = None
 
     def screen_switches(self):
         super().screen_switches()
@@ -362,20 +366,7 @@ class CustomizeStatsScreen(Screens):
         self.ability2_label = create_text_box("ability2", (640, 580), (135, 40), "#text_box_22_horizleft")
         self.class_label = create_text_box("class", (640, 500), (135, 40), "#text_box_22_horizleft")
         self.ability1_label = create_text_box("ability1", (480, 580), (135, 40), "#text_box_22_horizleft")
-        #self.eye_colour1_label = create_text_box("eye colour 1", (320, 420), (135, 40), "#text_box_22_horizleft")
-        #self.heterochromia_text = create_text_box("heterochromia", (495, 451), (135, 40), "#text_box_26_horizcenter")
-        #self.eye_colour2_label = create_text_box("eye colour 2", (640, 420), (135, 40), "#text_box_22_horizleft")
-        #self.accessory_label = create_text_box("accessory", (568, 500), (135, 40), "#text_box_22_horizleft")
-        #self.pose_label = create_text_box("pose", (406, 500), (110, 40), "#text_box_22_horizleft")
-        #self.reverse_label = create_text_box("reverse", (52, 500), (135, 40), "#text_box_22_horizleft")
-        #self.scar_message = create_text_box("Adding/removing scars will not affect a cat's conditions or history.",
-                                            #(52, 650), (500, 40), "#text_box_26_horizleft")
-        #self.scar1_label = create_text_box("scar 1", (46, 580), (135, 40), "#text_box_22_horizleft")
-        #self.scar2_label = create_text_box("scar 2", (196, 580), (135, 40), "#text_box_22_horizleft")
-        #self.scar3_label = create_text_box("scar 3", (346, 580), (135, 40), "#text_box_22_horizleft")
-        #self.scar4_label = create_text_box("scar 4", (496, 580), (135, 40), "#text_box_22_horizleft")
-        
-        #self.powers_label = create_text_box("powers", (646, 580), (135, 40), "#text_box_22_horizleft")
+        self.fave_label = create_text_box("favorite marker", (320, 500), (135, 40), "#text_box_22_horizleft")
         """------------------------------------------------------------------------------------------------------------#
         #                                              LABEL SETUP END                                                 #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -499,6 +490,21 @@ class CustomizeStatsScreen(Screens):
             self.ability2_dropdown.disable()
         elif self.the_cat.awakened["type"] == "esper":
             self.ability2_dropdown.disable()
+            
+        fave_status = "None"
+        if self.the_cat.favourite:
+            if self.the_cat.favourite_moon:
+                fave_status = "moon"
+            elif self.the_cat.favourite_star:
+                fave_status = "star"
+            else:
+                fave_status = "default"
+                
+        self.fave_dropdown = create_dropdown((320, 525), (135, 40), create_options_list(self.fave_markers, "upper"),
+                                             get_selected_option(fave_status, "upper"))
+
+        if not self.the_cat.favourite:
+            self.fave_dropdown.disable()
         """------------------------------------------------------------------------------------------------------------#
         #                                              DROPDOWN SETUP END                                              #
         # ------------------------------------------------------------------------------------------------------------"""
@@ -704,6 +710,17 @@ class CustomizeStatsScreen(Screens):
                     self.the_cat.awakened["class"] = selected_option
                     if self.the_cat.awakened["type"] == "esper":
                         self.the_cat.awakened["desc"] = choice(powers_dict[self.the_cat.awakened["ability"]][selected_option])
+            elif event.ui_element == self.fave_dropdown:
+                selected_option = self.fave_dropdown.selected_option[1].lower()
+                if selected_option == "default":
+                    self.the_cat.favourite_star = False
+                    self.the_cat.favourite_moon = False
+                elif selected_option == "moon":
+                    self.the_cat.favourite_star = False
+                    self.the_cat.favourite_moon = True
+                elif selected_option == "star":
+                    self.the_cat.favourite_star = True
+                    self.the_cat.favourite_moon = False
             #self.print_pelt_attributes()  # for testing purposes
                 
     
@@ -844,7 +861,7 @@ class CustomizeStatsScreen(Screens):
             self.permanent_condition_label, self.trait1_label, self.trait2_label, self.skill1_label, self.skill2_label, self.skill3_label,
             self.fur_texture_label, self.build_label, self.height_label, self.backstory_label, self.gender_label, self.powers_label,
             self.reset_message, self.reset_facets_message, self.heal_message, self.ability1_label, self.ability2_label,
-            self.class_label
+            self.class_label, self.fave_label
         ]
         for label in labels:
             label.kill()
@@ -862,7 +879,7 @@ class CustomizeStatsScreen(Screens):
             self.permanent_condition_dropdown, self.trait1_dropdown, self.trait2_dropdown, self.skill1_dropdown, self.skill2_dropdown, self.skill3_dropdown,
             self.fur_texture_dropdown, self.build_dropdown, self.height_dropdown, self.backstory_dropdown, self.gender_dropdown, self.physical_trait1_dropdown,
             self.physical_trait2_dropdown, self.physical_trait3_dropdown, self.physical_trait4_dropdown, self.powers_dropdown, self.ability1_dropdown,
-            self.ability2_dropdown, self.class_dropdown
+            self.ability2_dropdown, self.class_dropdown, self.fave_dropdown
         ]
         for dropdown in dropdowns:
             dropdown.kill()

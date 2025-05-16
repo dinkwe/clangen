@@ -360,7 +360,7 @@ class CustomizeCatScreen(Screens):
         self.tint_dropdown = create_dropdown((480, 360), (135, 40), create_options_list(self.tints, "lower"),
                                              get_selected_option(self.the_cat.pelt.tint, "lower"))
         if self.the_cat.awakened and 'FLAMES' not in self.skins:
-            magic_skin_temp = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + copy(Pelt.skin_sprites_math) +  copy(Pelt.skin_sprites_bingle)
+            magic_skin_temp = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + copy(Pelt.skin_sprites_math) +  copy(Pelt.skin_sprites_bingle)  + ['SHADOWSELF']
             magic_skin_temp.sort()
             self.skins += magic_skin_temp
         elif not self.the_cat.awakened and 'FLAMES' in self.skins:
@@ -373,6 +373,7 @@ class CustomizeCatScreen(Screens):
             self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
         elif not self.the_cat.awakened and 'Neo fire' in self.eye_colours:
             self.eye_colours =  [colour.capitalize() for colour in copy(Pelt.eye_colours)]
+            self.eye_colours.sort()
             
         self.eye_colour1_dropdown = create_dropdown((320, 445), (135, 40),
                                                     create_options_list(self.eye_colours, "upper"),

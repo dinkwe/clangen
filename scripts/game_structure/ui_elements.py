@@ -14,6 +14,7 @@ from pygame_gui.core.utility import translate
 from pygame_gui.elements import UIAutoResizingContainer
 
 from scripts.game_structure import image_cache
+from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game
 from scripts.utility import (
     ui_scale,
@@ -1179,8 +1180,18 @@ class UICatListDisplay(UIContainer):
             pygame.image.load(f"resources/images/fav_marker.png").convert_alpha(),
             ui_scale_dimensions((50, 50)),
         )
+        self._favor_circle_moon = pygame.transform.scale(
+            pygame.image.load(f"resources/images/fav_marker_moon.png").convert_alpha(),
+            ui_scale_dimensions((50, 50)),
+        )
+        self._favor_circle_star = pygame.transform.scale(
+            pygame.image.load(f"resources/images/fav_marker_star.png").convert_alpha(),
+            ui_scale_dimensions((50, 50)),
+        )
         if game.settings["dark mode"]:
             self._favor_circle.set_alpha(150)
+            self._favor_circle_moon.set_alpha(150)
+            self._favor_circle_star.set_alpha(150)
 
         self.generate_grid()
 
@@ -1290,7 +1301,7 @@ class UICatListDisplay(UIContainer):
             fav_indexes = [
                 display_cats.index(cat) for cat in display_cats if cat.favourite
             ]
-            [self.create_favor_indicator(i, self.boxes[i]) for i in fav_indexes]
+            [self.create_favor_indicator(i, self.boxes[i], display_cats) for i in fav_indexes]
 
         # CAT SPRITE
         [
@@ -1330,15 +1341,35 @@ class UICatListDisplay(UIContainer):
             },
         )
 
-    def create_favor_indicator(self, i, container):
-        self.favor_indicator[f"favor{i}"] = pygame_gui.elements.UIImage(
-            ui_scale(pygame.Rect((0, 15), (50, 50))),
-            self._favor_circle,
-            object_id=f"favor_circle{i}",
-            container=container,
-            starting_height=1,
-            anchors={"centerx": "centerx"},
-        )
+    def create_favor_indicator(self, i, container, display_list):
+        kitty = display_list[i]
+        if kitty.favourite_moon:
+            self.favor_indicator[f"favor{i}"] = pygame_gui.elements.UIImage(
+                ui_scale(pygame.Rect((0, 15), (50, 50))),
+                self._favor_circle_moon,
+                object_id=f"favor_circle_moon{i}",
+                container=container,
+                starting_height=1,
+                anchors={"centerx": "centerx"},
+            )
+        elif kitty.favourite_star:
+            self.favor_indicator[f"favor{i}"] = pygame_gui.elements.UIImage(
+                ui_scale(pygame.Rect((0, 15), (50, 50))),
+                self._favor_circle_star,
+                object_id=f"favor_circle_star{i}",
+                container=container,
+                starting_height=1,
+                anchors={"centerx": "centerx"},
+            )
+        else:
+            self.favor_indicator[f"favor{i}"] = pygame_gui.elements.UIImage(
+                ui_scale(pygame.Rect((0, 15), (50, 50))),
+                self._favor_circle,
+                object_id=f"favor_circle{i}",
+                container=container,
+                starting_height=1,
+                anchors={"centerx": "centerx"},
+            )
 
     def _update_arrow_buttons(self):
         """

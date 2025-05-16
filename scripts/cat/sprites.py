@@ -124,7 +124,7 @@ class Sprites:
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead',
-            'eyes', 'eyes2', 'skin', 'skin_magic', 'skin_elemental', 'skin_bingle','skin_mathkangaroo','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
+            'eyes', 'eyes2', 'skin', 'skin_magic', 'skin_elemental', 'skin_bingle', 'skin_bingle2','skin_mathkangaroo','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
             'scars', 'missingscars', 'wild', 
             'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2', 'neos_eyes', 'neos_eyes2',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars', 'colorsplash_horn', 'colorsplash_kitsune', 'colorsplash_mermaid',
@@ -489,6 +489,12 @@ class Sprites:
             ['SPARROWGIFT', 'DOVEWINGS', 'ANTLERS', 'BLUECORALCHIMERA', 'ICECRYSTALS', 'BLACKFOX']
         ]
         
+        skin_colors_bingle2 = [
+            ['SHADOWSELF', '000', '001', '002', '003', '004'],
+            ['005', '006', '007','008', '009', '010'],
+            ['011', '012', '013', '014', '015', '016']
+        ]
+        
         skin_colors_math = [
             ['LIGHTPURPLE', 'BLUE', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED'],
             ['BRIGHTPINK', 'BRIGHTORANGE','MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE'],
@@ -510,6 +516,10 @@ class Sprites:
         for row, colors in enumerate(skin_colors_bingle):
             for col, color in enumerate(colors):
                 self.make_group('skin_bingle', (col, row), f"skin_bingle{color}")
+                
+        for row, colors in enumerate(skin_colors_bingle2):
+            for col, color in enumerate(colors):
+                self.make_group('skin_bingle2', (col, row), f"skin_bingle2{color}")
                 
         for row, colors in enumerate(skin_colors_math):
             for col, color in enumerate(colors):
