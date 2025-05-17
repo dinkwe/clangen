@@ -243,7 +243,7 @@ class CustomizeStatsScreen(Screens):
                        "stable", "strong", "fox-hearted", "sympathetic", "macabre", "civil", "teacherly", "tolerant", "unfoolable", "witty", "youthful", "enigmatic",
                        "ordinary", "private", "loud", "questioning", "predictable", "airy", "anxious", "argumentative", "bizarre", "blunt", "calculating", "crude", "deceitful",
                        "cruel", "devious", "messy", "opinionated", "overimaginative", "power-hungry", "quirky", "reactive", "resentful", "regretful", "ritualistic", "selfish",
-                       "sadistic", "scheming", "sloppy", "suspicious", "thievish", "transparent", "vague", "venomous", "envious"]
+                       "sadistic", "scheming", "sloppy", "suspicious", "thievish", "transparent", "vague", "venomous", "envious", "humorous"]
         self.adult_traits.sort()
         self.kit_traits = ["troublesome", "lonesome", "impulsive", "bullying", "attention-seeker", "daydreamer", "dreary", "abrupt", "solemn", "wishful", "indecisive",
                            "entitled", "distrusting", "charming", "nervous", "quiet", "insecure", "sweet", "goody-no-claws", "chaotic", "nosy", "moody", "nasty", "silly",

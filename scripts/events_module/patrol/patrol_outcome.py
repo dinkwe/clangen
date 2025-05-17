@@ -456,7 +456,7 @@ class PatrolOutcome:
 
         if gained_exp or app_exp:
             for cat in patrol.patrol_cats:
-                if cat.status in ["apprentice", "medicine cat apprentice"]:
+                if cat.status in ["apprentice", "medicine cat apprentice", "caretaker apprentice", "denkeeper apprentice", "messenger apprentice"]:
                     cat.experience = cat.experience + app_exp
                 else:
                     cat.experience = cat.experience + gained_exp
@@ -568,10 +568,11 @@ class PatrolOutcome:
                     if kitty.awakened["type"] in ["esper", "enhanced esper"]:
                         rampage_chance = randint(1,6)
                         if rampage_chance == 1:
-                            kitty.get_ill("rampaging")
-                            results.append(f"{kitty.name} is rampaging!")
-                            num_rampage += 1
-                            print("RAMPAGE!")
+                            if kitty not in self.dead_cats:
+                                kitty.get_ill("rampaging")
+                                results.append(f"{kitty.name} is rampaging!")
+                                num_rampage += 1
+                                print("RAMPAGE!")
 
         if not self.injury:
             if num_rampage == 0:
