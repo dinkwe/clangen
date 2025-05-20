@@ -556,6 +556,62 @@ class Events:
                     )
                 )
                 cat.status_change("mediator")
+    
+    def denkeeper_events(self, cat):
+        """Check for denkeeper events"""
+
+        if game.clan.clan_settings["become_denkeeper"]:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_denkeeper_chances"]
+            if cat.status in _ and not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        event_text_adjust(
+                            Cat, i18n.t("hardcoded.event_denkeeper_app"), main_cat=cat
+                        ),
+                        "ceremony",
+                        cat.ID,
+                    )
+                )
+                cat.status_change("denkeeper")
+    def caretaker_events(self, cat):
+        """Check for caretaker events"""
+
+        if game.clan.clan_settings["become_caretaker"]:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_caretaker_chances"]
+            if cat.status in _ and not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        event_text_adjust(
+                            Cat, i18n.t("hardcoded.event_caretaker_app"), main_cat=cat
+                        ),
+                        "ceremony",
+                        cat.ID,
+                    )
+                )
+                cat.status_change("caretaker")
+    
+    def messenger_events(self, cat):
+        """Check for messenger events"""
+
+        if game.clan.clan_settings["become_messenger"]:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_messenger_chances"]
+            if cat.status in _ and not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        event_text_adjust(
+                            Cat, i18n.t("hardcoded.event_messenger_app"), main_cat=cat
+                        ),
+                        "ceremony",
+                        cat.ID,
+                    )
+                )
+                cat.status_change("messenger")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""
@@ -1001,6 +1057,9 @@ class Events:
 
         # Handle Mediator Events
         # TODO: this is not a great way to handle them, ideally they should be converted to ShortEvent format
+        self.mediator_events(cat)
+        self.caretaker_events(cat)
+        self.denkeeper_events(cat)
         self.mediator_events(cat)
 
         # handle nutrition amount

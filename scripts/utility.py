@@ -2894,7 +2894,7 @@ def generate_sprite(
         elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
                          'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
             new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['SHADOWSELF']:
+        elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE']:
             new_sprite.blit(sprites.sprites["skin_bingle2" + cat.pelt.skin + cat_sprite], (0, 0))
         else:
             new_sprite.blit(sprites.sprites["skin_elemental" + cat.pelt.skin + cat_sprite], (0, 0))

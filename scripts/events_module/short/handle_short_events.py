@@ -486,24 +486,23 @@ class HandleShortEvents:
 
         # kill cats
         for cat in dead_list:
-            if "birth_death" not in self.types:
-                self.types.append("birth_death")
+            if not cat.dead:
+                if "birth_death" not in self.types:
+                    self.types.append("birth_death")
 
-            if cat.status == "leader":
-                if "all_lives" in self.chosen_event.tags:
-                    game.clan.leader_lives -= 10
-                elif "some_lives" in self.chosen_event.tags:
-                    game.clan.leader_lives -= random.randrange(
-                        2, self.current_lives - 1
-                    )
-                else:
-                    game.clan.leader_lives -= 1
-
-                cat.die(body)
-                self.additional_event_text = get_leader_life_notice()
+                if cat.status == "leader":
+                    if "all_lives" in self.chosen_event.tags:
+                        game.clan.leader_lives -= 10
+                    elif "some_lives" in self.chosen_event.tags:
+                        game.clan.leader_lives -= random.randrange(
+                            2, self.current_lives - 1
+                        )
+                    else:
+                        game.clan.leader_lives -= 1
 
             else:
-                cat.die(body)
+                if not cat.dead:
+                    cat.die(body)
 
     def handle_mass_death(self):
         """

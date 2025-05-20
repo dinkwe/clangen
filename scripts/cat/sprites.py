@@ -490,7 +490,7 @@ class Sprites:
         ]
         
         skin_colors_bingle2 = [
-            ['SHADOWSELF', '000', '001', '002', '003', '004'],
+            ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE'],
             ['005', '006', '007','008', '009', '010'],
             ['011', '012', '013', '014', '015', '016']
         ]

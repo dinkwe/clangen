@@ -115,7 +115,8 @@ class CustomizeStatsScreen(Screens):
             "wasting disease",
             "blind",
             "failing eyesight",
-            "one bad eye",
+            "seizure prone",
+            "allergies",
             "partial hearing loss",
             "deaf",
             "constant joint pain",
@@ -470,6 +471,10 @@ class CustomizeStatsScreen(Screens):
                                               get_selected_option(powers, "upper"), "dropup")
         self.class_dropdown = create_dropdown((640, 525), (135, 40), create_options_list(self.classes, "upper"),
                                               get_selected_option(powerclass, "upper"), "dropup")
+        self.class_dropdown.disable()
+        if self.the_cat.awakened:
+            self.class_dropdown.enable()
+            
         ability1 = "none"
         ability2 = "none"
         if self.the_cat.awakened:

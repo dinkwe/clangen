@@ -247,7 +247,12 @@ def event_for_cat(cat_info: dict, cat, cat_group: list = None, event_id: str = N
     for func in func_lookup:
         if not func_lookup[func]:
             return False
-
+        
+    if "dies" in cat_info:
+        alive_dead = cat_info.get("dies", [])
+        if alive_dead and cat.dead:
+            return False
+        
     if cat_info.get("relationship_status", []):
         if not filter_relationship_type(
                 group=cat_group,
