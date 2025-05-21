@@ -604,6 +604,8 @@ def create_new_cat_block(
                     chosen_cat.name.give_suffix(
                         pelt=chosen_cat.pelt,
                         biome=game.clan.biome,
+                        secondary_biome=game.clan.secondary_biome,
+                        biome_weights=game.clan.biome_weights,
                         tortiepattern=chosen_cat.pelt.tortiepattern,
                     )
                 else:  # completely new name
@@ -611,10 +613,14 @@ def create_new_cat_block(
                         eyes=chosen_cat.pelt.eye_colour,
                         colour=chosen_cat.pelt.colour,
                         biome=game.clan.biome,
+                        secondary_biome=game.clan.secondary_biome,
+                        biome_weights=game.clan.biome_weights
                     )
                     chosen_cat.name.give_suffix(
                         pelt=chosen_cat.pelt.colour,
                         biome=game.clan.biome,
+                        secondary_biome=game.clan.secondary_biome,
+                        biome_weights=game.clan.biome_weights,
                         tortiepattern=chosen_cat.pelt.tortiepattern,
                     )
 
@@ -927,10 +933,10 @@ def create_new_cat(
         # chance to give the new cat a permanent condition, higher chance for found kits and litters
         if kit or litter:
             chance = int(
-                game.config["cat_generation"]["base_permanent_condition"] / 11.25
+                game.config["cat_generation"]["base_permanent_condition"] / 2
             )
         else:
-            chance = game.config["cat_generation"]["base_permanent_condition"] + 10
+            chance = game.config["cat_generation"]["base_permanent_condition"] + 2
         if not int(random() * chance):
             possible_conditions = []
             for condition in PERMANENT:
@@ -946,15 +952,15 @@ def create_new_cat(
                     continue
                 possible_conditions.append(condition)
             if "excess testosterone" in possible_conditions:
-                    possible_conditions.remove("excess testosterone")
+                possible_conditions.remove("excess testosterone")
             if "testosterone deficiency" in possible_conditions:
-                    possible_conditions.remove("testosterone deficiency")
+                possible_conditions.remove("testosterone deficiency")
             if "chimerism" in possible_conditions:
-                    possible_conditions.remove("chimerism")
+                possible_conditions.remove("chimerism")
             if "mosaicism" in possible_conditions:
-                    possible_conditions.remove("mosaicism")
+                possible_conditions.remove("mosaicism")
             if "aneuploidy" in possible_conditions:
-                    possible_conditions.remove("aneuploidy")
+                possible_conditions.remove("aneuploidy")
             if possible_conditions:
                     chosen_condition = choice(possible_conditions)
 
@@ -1908,7 +1914,20 @@ def get_special_snippet_list(
     (i.e. ["hate", "fear", "dread"] becomes "hate, fear, and dread") - Default is True
     :return: a list of the chosen items from chosen_list or a formatted string if format is True
     """
-    biome = game.clan.biome.casefold()
+
+    chosen_biome = game.clan.biome
+    if game.clan.secondary_biome != game.clan.biome:
+        if game.clan.biome_weights == "Equal":
+            chosen_biome = random.choice([game.clan.biome, game.clan.secondary_biome])
+        elif game.clan.biome_weights == "Third":
+            chosen_biome = random.choice([game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+        elif game.clan.biome_weights == "Fourth":
+            chosen_biome = random.choice(
+                [game.clan.biome, game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+        else:
+            chosen_biome = game.clan.biome
+
+    biome = chosen_biome.casefold()
     global SNIPPETS
     if langs["snippet"] != i18n.config.get("locale"):
         langs["snippet"] = i18n.config.get("locale")
@@ -2221,14 +2240,15 @@ def event_text_adjust(
 
     # new_cats (include pre version)
     if "n_c" in text:
-        for i, cat_list in enumerate(new_cats):
-            if len(new_cats) > 1:
-                pronoun = localization.get_new_pronouns("default plural")[0]
-            else:
-                pronoun = choice(cat_list[0].pronouns)
+        if new_cats:
+            for i, cat_list in enumerate(new_cats):
+                if len(new_cats) > 1:
+                    pronoun = localization.get_new_pronouns("default plural")[0]
+                else:
+                    pronoun = choice(cat_list[0].pronouns)
 
-            replace_dict[f"n_c:{i}"] = (str(cat_list[0].name), pronoun)
-            replace_dict[f"n_c_pre:{i}"] = (str(cat_list[0].name.prefix), pronoun)
+                replace_dict[f"n_c:{i}"] = (str(cat_list[0].name), pronoun)
+                replace_dict[f"n_c_pre:{i}"] = (str(cat_list[0].name.prefix), pronoun)
 
     # mur_c (murdered cat for reveals)
     if "mur_c" in text:
@@ -2246,7 +2266,11 @@ def event_text_adjust(
 
     # med_name
     if "med_name" in text:
-        med = choice(get_alive_status_cats(Cat, ["medicine cat"], working=True))
+        meds = get_alive_status_cats(Cat, ["medicine cat"], working=True)
+        if len(meds) == 0:
+            med = choice(get_alive_status_cats(Cat, ["medicine cat","medicine cat apprentice"], working=True))
+        else:
+            med = choice(meds)
         replace_dict["med_name"] = (str(med.name), choice(med.pronouns))
 
     # assign all names and pronouns
@@ -2712,6 +2736,7 @@ def generate_sprite(
                     ],
                 (0, 0),
             )
+
             # TINTS
             if (
                     cat.pelt.tint != "none"
@@ -2730,14 +2755,13 @@ def generate_sprite(
                 tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
                 tint.fill(tuple(sprites.cat_tints["dilute_tint_colours"][cat.pelt.tint]))
                 new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
-            
         else:
             # Base Coat
             new_sprite.blit(
                 sprites.sprites[cat.pelt.tortiebase + cat.pelt.colour + cat_sprite],
                 (0, 0),
             )
-            
+
             # TINTS
             if (
                     cat.pelt.tint != "none"
@@ -2757,11 +2781,11 @@ def generate_sprite(
                 tint.fill(tuple(sprites.cat_tints["dilute_tint_colours"][cat.pelt.tint]))
                 new_sprite.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_ADD)
 
-                # Create the patch image
+            # Create the patch image
             if cat.pelt.tortiepattern == "Single":
-                    tortie_pattern = "SingleColour"
+                tortie_pattern = "SingleColour"
             else:
-                    tortie_pattern = cat.pelt.tortiepattern
+                tortie_pattern = cat.pelt.tortiepattern
 
             for pattern in cat.pelt.pattern:
                 if cat.pelt.tortie_tint != "none":
@@ -2798,7 +2822,6 @@ def generate_sprite(
                     # Add patches onto cat.
                     new_sprite.blit(patches, (0, 0))
 
-
          # draw white patches
         if cat.pelt.white_patches:
             for white in cat.pelt.white_patches:
@@ -2832,18 +2855,36 @@ def generate_sprite(
             new_sprite.blit(points, (0, 0))
 
         if cat.pelt.vitiligo:
-            new_sprite.blit(
-                sprites.sprites["white" + cat.pelt.vitiligo + cat_sprite], (0, 0)
-            )
+            if game.settings["vit tint"]:
+                vitiligo = sprites.sprites["white" + cat.pelt.vitiligo + cat_sprite].copy()
+                if (
+                        cat.pelt.white_patches_tint != "none"
+                        and cat.pelt.white_patches_tint
+                        in sprites.white_patches_tints["tint_colours"]
+                ):
+                    tint = pygame.Surface((sprites.size, sprites.size)).convert_alpha()
+                    tint.fill(
+                        tuple(
+                            sprites.white_patches_tints["tint_colours"][
+                                cat.pelt.white_patches_tint
+                            ]
+                        )
+                    )
+                    vitiligo.blit(tint, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+                new_sprite.blit(vitiligo, (0, 0))
+            else:
+                new_sprite.blit(
+                    sprites.sprites["white" + cat.pelt.vitiligo + cat_sprite], (0, 0)
+                )
 
         # draw eyes & scars1
         neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
                  'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
         if cat.pelt.eye_colour in neos_eyes:
             eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        else: 
+        else:
             eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-            
+
         if cat.pelt.eye_colour2 != None:
             if cat.pelt.eye_colour2 in neos_eyes:
                 eyes.blit(
@@ -2889,15 +2930,17 @@ def generate_sprite(
         elif cat.pelt.skin in ['FLAMES', 'FLOWERS', 'LIGHT1', 'SPARKLES', 'INK', 'MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES',
                     'INK2', 'THUNDERSTORM', 'LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2', 'BUBBLES']:
             new_sprite.blit(sprites.sprites["skin_magic" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS', "BATWINGS", "SPOOKYCRYSTALS", "TRANSCLOUDS", 'MAGEGIFT', 'DEVILWINGS', 'SPARROWGIFT','DOVEWINGS', 'ANTLERS', 'BLUECORALCHIMERA', 'ICECRYSTALS', 'BLACKFOX']:
+        elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS', "BATWINGS", "SPOOKYCRYSTALS", "TRANSCLOUDS", 'MAGEGIFT', 'DEVILWINGS', 'SPARROWGIFT', 'DOVEWINGS', 'ANTLERS', 'BLUECORALCHIMERA', 'ICECRYSTALS', 'BLACKFOX']:
             new_sprite.blit(sprites.sprites["skin_bingle" + cat.pelt.skin + cat_sprite], (0, 0))
         elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
                          'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
             new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
         elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE']:
             new_sprite.blit(sprites.sprites["skin_bingle2" + cat.pelt.skin + cat_sprite], (0, 0))
+
         else:
             new_sprite.blit(sprites.sprites["skin_elemental" + cat.pelt.skin + cat_sprite], (0, 0))
+       
         if not scars_hidden:
             for scar in cat.pelt.scars:
                 if scar in cat.pelt.scars2:
@@ -2924,6 +2967,11 @@ def generate_sprite(
                         elif accessory in cat.pelt.plant_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_herbs" + accessory + cat_sprite],
+                                (0, 0),
+                            )
+                        elif accessory in cat.pelt.chime_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_chime" + accessory + cat_sprite],
                                 (0, 0),
                             )
                         elif accessory in cat.pelt.wild_accessories:
@@ -2975,6 +3023,7 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_aliveInsect" + accessory + cat_sprite], (0, 0)
                             )
+                        
                         elif accessory in cat.pelt.fruit_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_fruit" + accessory + cat_sprite], (0, 0)
@@ -2998,14 +3047,6 @@ def generate_sprite(
                         elif accessory in cat.pelt.randomaccessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_random" + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.chime_accessories:
-                            new_sprite.blit(
-                                sprites.sprites["acc_chime" + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.lantern_accessories:
-                            new_sprite.blit(
-                                sprites.sprites["acc_lantern" + accessory + cat_sprite], (0, 0)
                             )
                         elif accessory in cat.pelt.beetle_accessories:
                             new_sprite.blit(

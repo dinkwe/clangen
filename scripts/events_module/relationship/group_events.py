@@ -89,7 +89,19 @@ class GroupEvents:
         ]
 
         # get some filters premisses
-        biome = str(game.clan.biome).casefold()
+
+        chosen_biome = game.clan.biome
+        if game.clan.secondary_biome != game.clan.biome:
+            if game.clan.biome_weights == "Equal":
+                chosen_biome = choice([game.clan.biome, game.clan.secondary_biome])
+            elif game.clan.biome_weights == "Third":
+                chosen_biome = choice([game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+            elif game.clan.biome_weights == "Fourth":
+                chosen_biome = choice([game.clan.biome, game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+            else:
+                chosen_biome = game.clan.biome
+
+        biome = str(chosen_biome).casefold()
         season = str(game.clan.current_season).casefold()
 
         # start filter for main cat / basic checks

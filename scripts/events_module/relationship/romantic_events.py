@@ -182,7 +182,20 @@ class RomanticEvents:
         )
         filtered_interactions = []
         _season = [str(game.clan.current_season).casefold(), "Any", "any"]
-        _biome = [str(game.clan.biome).casefold(), "Any", "any"]
+
+        chosen_biome = game.clan.biome
+        if game.clan.secondary_biome != game.clan.biome:
+            if game.clan.biome_weights == "Equal":
+                chosen_biome = random.choice([game.clan.biome, game.clan.secondary_biome])
+            elif game.clan.biome_weights == "Third":
+                chosen_biome = random.choice([game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+            elif game.clan.biome_weights == "Fourth":
+                chosen_biome = random.choice(
+                    [game.clan.biome, game.clan.biome, game.clan.biome, game.clan.secondary_biome])
+            else:
+                chosen_biome = game.clan.biome
+
+        _biome = [str(chosen_biome).casefold(), "Any", "any"]
         for interaction in possible_interactions:
             in_tags = [i for i in interaction.biome if i not in _biome]
             if len(in_tags) > 0:
@@ -508,10 +521,9 @@ class RomanticEvents:
             relationship_from.romantic_love -= 15
             relationship_to.comfortable -= 10
             relationship_from.comfortable -= 10
-            
+
         if not RomanticEvents.BREAKUP_STRINGS:
             RomanticEvents.rebuild_dicts()
-
         text = choice(RomanticEvents.BREAKUP_STRINGS[breakup_type])
         text = event_text_adjust(Cat, text, main_cat=cat_from, random_cat=cat_to)
         game.cur_events_list.append(

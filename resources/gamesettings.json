@@ -46,6 +46,11 @@
             "This will add a shading layer onto the cat sprites.",
             false
         ],
+        "vit tint": [
+            "Tinted vitiligo",
+            "Tints a cat's vitiligo with their white patch tint.",
+            false
+        ],
         "gore": [
             "Allow mild gore and blood in patrol artwork",
             "Mild gore and blood will be allowed in the artwork displayed alongside patrols.",

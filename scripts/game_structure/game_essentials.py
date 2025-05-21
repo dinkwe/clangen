@@ -117,6 +117,8 @@ class Game:
         "change_suffix": "",
         "name_cat": None,
         "biome": None,
+        "secondary_biome": None,
+        "biome_weights": None,
         "camp_bg": None,
         "language": "en",
         "options_tab": None,

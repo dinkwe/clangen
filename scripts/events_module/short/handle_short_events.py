@@ -128,7 +128,8 @@ class HandleShortEvents:
             event_type = "death"
         elif event_type == "health":
             event_type = "injury"
-        possible_short_events = GenerateEvents.possible_short_events(event_type)
+        possible_short_events, biome = GenerateEvents.possible_short_events(event_type)
+        # print(biome + " one")
 
         final_events = GenerateEvents.filter_possible_short_events(
             Cat_class=Cat,
@@ -139,6 +140,7 @@ class HandleShortEvents:
             freshkill_active=FRESHKILL_EVENT_ACTIVE,
             freshkill_trigger_factor=FRESHKILL_EVENT_TRIGGER_FACTOR,
             sub_types=self.sub_types,
+            biome=biome
         )
 
         if isinstance(game.config["event_generation"]["debug_ensure_event_id"], str):
@@ -157,8 +159,8 @@ class HandleShortEvents:
                     break
             if not found:
                 # this print is very spammy, but can be helpful if unsure why a debug event isn't triggering
-                # print(f"debug_ensure_event_id: {game.config['event_generation']['debug_ensure_event_id']} "
-                #      f"was not possible for {self.main_cat.name}.  {self.main_cat.name} was looking for a {event_type}: {self.sub_types} event")
+                print(f"debug_ensure_event_id: {game.config['event_generation']['debug_ensure_event_id']} "
+                      f"was not possible for {self.main_cat.name}.  {self.main_cat.name} was looking for a {event_type}: {self.sub_types} event")
                 pass
         # ---------------------------------------------------------------------------- #
         #                               do the event                                   #
@@ -413,10 +415,14 @@ class HandleShortEvents:
             acc_list.extend(pelts.crafted_accessories)
         if "TAIL2" in possible_accs:
             acc_list.extend(pelts.tail2_accessories)
+        if "SAILOR" in possible_accs:
+            acc_list.extend(pelts.sailormoon)
+        if "RANDOM" in possible_accs:
+            acc_list.extend(pelts.randomaccessories)
 
         for acc in possible_accs:
             if acc not in ["WILD", "PLANT", "COLLAR", "FLOWER", "CRAFTED", "PLANT2", "SMALLANIMAL", "DEADINSECT",
-                           "ALIVEINSECT", "FRUIT", "SNAKE", "TAIL2","BONE", "BUTTERFLIES", "STUFF", "BOWS"]:
+                           "ALIVEINSECT", "FRUIT", "SNAKE", "TAIL2","BONE", "BUTTERFLIES", "STUFF", "BOWS", "RANDOM", "SAILORMOON"]:
                 acc_list.append(acc)
 
         if hasattr(self.main_cat.pelt, "scars"):
@@ -500,8 +506,10 @@ class HandleShortEvents:
                     else:
                         game.clan.leader_lives -= 1
 
-            else:
-                if not cat.dead:
+                    cat.die(body)
+                    self.additional_event_text = get_leader_life_notice()
+
+                else:
                     cat.die(body)
 
     def handle_mass_death(self):
@@ -832,6 +840,7 @@ class HandleShortEvents:
 
         # adjust entire herb store
         if supply_type == "all_herb":
+            # print(herb_supply.entire_supply.copy())
             for herb, count in herb_supply.entire_supply.copy():
                 herb_list.append(herb)
                 if adjustment == "reduce_full":

@@ -9,6 +9,8 @@ class SingleInteraction:
         self,
         interact_id,
         biome=None,
+        secondary_biome=None,
+        biome_weights=None,
         season=None,
         intensity="medium",
         interactions=None,
@@ -28,6 +30,8 @@ class SingleInteraction:
         self.id = interact_id
         self.intensity = intensity
         self.biome = biome if biome else ["Any"]
+        self.secondary_biome = secondary_biome if secondary_biome else ["Any"]
+        self.biome_weights = biome_weights if biome_weights else ["Equal"]
         self.season = season if season else ["Any"]
         self.interactions = (
             interactions
@@ -68,6 +72,8 @@ class GroupInteraction:
         self,
         interact_id,
         biome=None,
+        secondary_biome=None,
+        biome_weights=None,
         season=None,
         intensity="medium",
         cat_amount=None,
@@ -85,6 +91,8 @@ class GroupInteraction:
         self.id = interact_id
         self.intensity = intensity
         self.biome = biome if biome else ["Any"]
+        self.secondary_biome = secondary_biome if secondary_biome else ["Any"]
+        self.biome_weights = biome_weights if biome_weights else ["Equal"]
         self.season = season if season else ["Any"]
         self.cat_amount = cat_amount
         self.interactions = (
@@ -298,6 +306,8 @@ def create_interaction(inter_list) -> list:
             SingleInteraction(
                 interact_id=inter["id"],
                 biome=inter["biome"] if "biome" in inter else ["Any"],
+                secondary_biome=inter["secondary_biome"] if "secondary_biome" in inter else ["Any"],
+                biome_weights=inter["biome_weights"] if "biome_weights" in inter else ["Equal"],
                 season=inter["season"] if "season" in inter else ["Any"],
                 intensity=inter["intensity"] if "intensity" in inter else "medium",
                 interactions=inter["interactions"] if "interactions" in inter else None,
@@ -363,6 +373,8 @@ def create_group_interaction(inter_list) -> list:
             GroupInteraction(
                 interact_id=inter["id"],
                 biome=inter["biome"] if "biome" in inter else ["Any"],
+                secondary_biome=inter["secondary_biome"] if "secondary_biome" in inter else ["Any"],
+                biome_weights=inter["biome_weights"] if "biome_weights" in inter else ["Equal"],
                 season=inter["season"] if "season" in inter else ["Any"],
                 cat_amount=inter["cat_amount"] if "cat_amount" in inter else None,
                 intensity=inter["intensity"] if "intensity" in inter else "medium",

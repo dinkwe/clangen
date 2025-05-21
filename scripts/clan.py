@@ -96,6 +96,8 @@ class Clan:
         deputy=None,
         medicine_cat=None,
         biome="Forest",
+        secondary_biome="Forest",
+        biome_weights="Equal",
         camp_bg=None,
         symbol=None,
         game_mode="classic",
@@ -129,6 +131,8 @@ class Clan:
         self.instructor = None
         # This is the first cat in starclan, to "guide" the other dead cats there.
         self.biome = biome
+        self.secondary_biome = secondary_biome
+        self.biome_weights = biome_weights
         self.camp_bg = camp_bg
         self.chosen_symbol = symbol
         self.game_mode = game_mode
@@ -474,6 +478,8 @@ class Clan:
             "clanname": self.name,
             "clanage": self.age,
             "biome": self.biome,
+            "secondary_biome": self.secondary_biome,
+            "biome_weights": self.biome_weights,
             "camp_bg": self.camp_bg,
             "clan_symbol": self.chosen_symbol,
             "gamemode": self.game_mode,
@@ -853,6 +859,16 @@ class Clan:
             game.clan.chosen_symbol = clan_data["clan_symbol"]
         else:
             game.clan.chosen_symbol = clan_symbol_sprite(game.clan, return_string=True)
+
+        # check for secondary biome values
+        if "secondary_biome" in clan_data:
+            game.clan.secondary_biome = clan_data["secondary_biome"]
+        else:
+            game.clan.secondary_biome = clan_data["biome"]
+        if "biome_weights" in clan_data:
+            game.clan.biome_weights = clan_data["biome_weights"]
+        else:
+            game.clan.biome_weights = "Equal"
 
         if "other_clans" in clan_data:
             for other_clan in clan_data["other_clans"]:

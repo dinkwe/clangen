@@ -2166,6 +2166,8 @@ class MakeClanScreen(Screens):
             deputy=self.deputy,
             medicine_cat=self.med_cat,
             biome=self.biome_selected,
+            secondary_biome=self.biome_selected,
+            biome_weights="Equal",
             camp_bg=convert_camp[self.selected_camp_tab],
             symbol=self.symbol_selected,
             game_mode=self.game_mode,

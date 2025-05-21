@@ -2,6 +2,8 @@ import re
 
 import ujson
 
+import random
+
 from scripts.game_structure.game_essentials import game
 from scripts.special_dates import get_special_date, contains_special_date_tag
 from scripts.utility import (
@@ -9,12 +11,17 @@ from scripts.utility import (
     filter_relationship_type,
 )
 
-def event_for_location(locations: list) -> bool:
+
+def event_for_location(locations: list, biome: str) -> bool:
     """
     checks if the clan is within the given locations
     """
     if "any" in locations:
         return True
+    """
+    else:
+        print(biome + ", " + str(locations) + " two")
+    """
 
     for place in locations:
         if ":" in place:
@@ -25,10 +32,10 @@ def event_for_location(locations: list) -> bool:
             req_biome = place
             req_camps = ["any"]
 
-        if req_biome == game.clan.biome.lower():
-            if "any" in req_camps or game.clan.camp_bg in req_camps:
+        if req_biome == biome.lower():
+            if "any" in req_camps or (game.clan.camp_bg in req_camps and biome == game.clan.biome):
                 return True
-        return False
+    return False
 
 
 def event_for_season(seasons: list) -> bool:
@@ -241,18 +248,19 @@ def event_for_cat(cat_info: dict, cat, cat_group: list = None, event_id: str = N
         "trait": _check_cat_trait(cat, cat_info.get("trait", []), cat_info.get("not_trait", [])),
         "skills": _check_cat_skills(cat, cat_info.get("skill", []), cat_info.get("not_skill", [])),
         "backstory": _check_cat_backstory(cat, cat_info.get("backstory", [])),
-        "gender": _check_cat_gender(cat, cat_info.get("gender", []))
+        "gender": _check_cat_gender(cat, cat_info.get("gender", [])),
+        # "dead": _check_cat_dead(cat, alive_dead),
     }
 
     for func in func_lookup:
         if not func_lookup[func]:
             return False
-        
+
     if "dies" in cat_info:
         alive_dead = cat_info.get("dies", [])
         if alive_dead and cat.dead:
             return False
-        
+
     if cat_info.get("relationship_status", []):
         if not filter_relationship_type(
                 group=cat_group,
@@ -372,6 +380,15 @@ def _check_cat_gender(cat, genders: list) -> bool:
         return True
 
     if cat.gender in genders:
+        return True
+
+    return False
+
+def _check_cat_dead(cat, alive_dead: bool) -> bool:
+    """
+        checks if cat has the correct gender
+        """
+    if not cat.dead and alive_dead:
         return True
 
     return False
