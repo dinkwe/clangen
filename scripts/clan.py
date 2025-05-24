@@ -53,6 +53,11 @@ class Clan:
         "leader",
         "elder",
         "mediator",
+        "caretaker",
+        "denkeeper",
+        "gardener",
+        "messenger",
+        "storyteller"
         "general",
     ]
 
@@ -215,14 +220,36 @@ class Clan:
             status=choice(
                 [
                     "apprentice",
+                    "apprentice",
                     "mediator apprentice",
                     "medicine cat apprentice",
+                    "caretaker apprentice",
+                    "caretaker",
+                    "denkeeper apprentice",
+                    "denkeeper",
+                    "gardener",
+                    "gardener apprentice",
+                    "messenger",
+                    "messenger apprentice",
+                    "storyteller",
+                    "storyteller apprentice"
+                    "warrior",
+                    "warrior",
                     "warrior",
                     "medicine cat",
+                    "medicine cat",
+                    "medicine cat",
+                    "leader",
+                    "leader",
                     "leader",
                     "mediator",
+                    "mediator",
+                    "mediator",
+                    "deputy",
+                    "deputy",
                     "deputy",
                     "elder",
+                    "elder"
                 ]
             ),
         )

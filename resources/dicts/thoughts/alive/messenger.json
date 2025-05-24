@@ -7,18 +7,75 @@
             "Wonders if being a warrior would have been more fun",
             "Just came back from delivering new to another Clan",
             "Informs the Clan about a badger sighting near the border",
-            "Wonders if {PRONOUN/m_c/subject} would've been a better messenger if {PRONOUN/m_c/subject} had wings"
+            "Wonders if {PRONOUN/m_c/subject} would've been a better messenger if {PRONOUN/m_c/subject} had wings",
+            "Waits by the border for a patrol escort",
+            "Paces nervously near the camp entrance",
+            "Flops over, exhausted from a long run to a distant Clan",
+            "Gossips about another Clan's choice in prey",
+            "Licks {PRONOUN/m_c/poss} paws after a long trip",
+            "Races laps around camp to improve {PRONOUN/m_c/poss} endurance",
+            "Prays that there will be no messages to deliver today...",
+            "Brings bad news about a roaming dog"
         ]
     },
     {
-        "id": "mediator_to_alive_leader",
+        "id": "messenger_to_alive_leader",
         "thoughts": [
             "Is running errands for r_c",
-            "Is delivering an important message from one clan leader to another"
+            "Is delivering an important message from one Clan leader to another",
+            "Is taking an important message from r_c to another Clan"
         ],
         "random_status_constraint": [
             "leader"
         ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "messenger_to_alive_deputy",
+        "thoughts": [
+            "Is running errands for r_c",
+            "Is taking an important message from r_c to another Clan",
+            "Asks the deputy for an escort due to fox scent by the border"
+        ],
+        "random_status_constraint": [
+            "deputy"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "messenger_to_alive_adult_active_cat",
+        "thoughts": [
+            "Has some important news for r_c"
+        ],
+        "random_status_constraint": [
+            "warrior",
+            "medicine cat",
+            "caretaker",
+            "denkeeper",
+            "deputy",
+            "leader"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "paralyzed_caretaker_to_kits",
+        "thoughts": [
+            "Repeats a long message under {PRONOUN/m_c/poss} breath",
+            "Looks forward to a leisurely stroll to an ally Clan",
+            "Resents being sent to the far side of the territory for a frivolous message",
+            "Complains that r_c is slower than {PRONOUN/m_c/subject} {VERB/m_c/are/is}"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
         "random_living_status": [
             "living"
         ]

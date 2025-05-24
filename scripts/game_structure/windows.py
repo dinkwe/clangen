@@ -260,7 +260,7 @@ class GuideEsper(UIWindow):
     
     def calculate_resonance(self,cat):
         buff = 0
-        if cat.status in ["medicine cat", "mediator", "medicine cat apprentice", "mediator apprentice"]:
+        if cat.status in ["medicine cat", "mediator", "medicine cat apprentice", "mediator apprentice", "caretaker", "caretaker apprentice"]:
             buff += 1
         buff += self.calculate_rank_difference(self.the_cat, cat)
         #print(cat.ID)

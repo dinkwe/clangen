@@ -406,21 +406,28 @@ class HerbSupply:
         # CLEVER finds greater quantity of herbs
         primary = med_cat.skills.primary.path
         secondary = None
+        tertiary = None
+
         if med_cat.skills.secondary:
             secondary = med_cat.skills.secondary.path
         amount_modifier = 1
         quantity_modifier = 1
 
-        if primary == SkillPath.SENSE:
+        if primary == SkillPath.SENSE or primary == SkillPath.GARDENER:
             amount_modifier = game.config["clan_resources"]["herbs"]["primary_sense"]
-        elif primary == SkillPath.CLEVER:
+        elif primary == SkillPath.CLEVER or primary == SkillPath.HERBALIST:
             quantity_modifier = game.config["clan_resources"]["herbs"]["primary_clever"]
 
-        if secondary == SkillPath.SENSE:
+        if secondary == SkillPath.SENSE or secondary == SkillPath.GARDENER:
             amount_modifier = game.config["clan_resources"]["herbs"]["secondary_sense"]
-        elif secondary == SkillPath.CLEVER:
+        elif secondary == SkillPath.CLEVER or secondary == SkillPath.HERBALIST:
             quantity_modifier = game.config["clan_resources"]["herbs"]["secondary_clever"]
 
+        if tertiary == SkillPath.SENSE or tertiary == SkillPath.GARDENER:
+            amount_modifier = game.config["clan_resources"]["herbs"]["secondary_sense"]
+        elif tertiary == SkillPath.CLEVER or tertiary == SkillPath.HERBALIST:
+            quantity_modifier = game.config["clan_resources"]["herbs"]["secondary_clever"]
+            
         # list of the herbs, sorted by most need
         herb_list = self.sorted_by_need
 

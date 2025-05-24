@@ -1389,7 +1389,7 @@
   ],
   "mess_app_4": [
     [
-      "denkeeper apprentice",
+      "messenger apprentice",
       "yes_mentor",
       "general_parents",
       "general_leader",
@@ -3726,5 +3726,169 @@
       "sincere"
     ],
     "m_c sits with a puffed out pelt of pride, hearing c_n celebrate {PRONOUN/m_c/poss} achievements. Retiring means trusting younger, fresher cats to take up the fight to keep c_n safe, but {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done the best {PRONOUN/m_c/subject} could've to pass on {PRONOUN/m_c/poss} lessons."
+  ],
+  "garden_app_0": [
+    [
+      "gardener apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c decides to serve {PRONOUN/m_c/poss} Clan as a gardener. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} delighted to begin training. "
+  ],  
+  "garden_app_1": [
+    [
+      "gardener apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Now more than ever, m_c realizes the Clan is in need of a gardener. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to step up to the task."
+  ], 
+  "garden_app_2": [
+    [
+      "gardener apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Even as a kit, m_c insisted on exploring the herb stores. It's no surprise when {PRONOUN/m_c/subject} {VERB/m_c/choose/chooses} the path of a gardener."
+  ], 
+  "garden_app_3": [
+    [
+      "gardener apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "strict",
+      "tidy",
+      "polished",
+      "organized"
+    ],
+    "Impressed by {PRONOUN/m_c/poss} dedication to learning, (mentor) chooses m_c as the Clan's new gardener apprentice."
+  ],
+  "garden_app_4": [
+    [
+      "gardener apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has taken to following (mentor) around during {PRONOUN/(mentor)/poss} daily duties, fascinated by the life of a gardener. (mentor) is happy to train {PRONOUN/m_c/object}. "
+  ],
+  "story_app_0": [
+    [
+      "storyteller apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c decides to serve {PRONOUN/m_c/poss} Clan as a storyteller. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} delighted to begin training. "
+  ],  
+  "story_app_1": [
+    [
+      "storyteller apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Now more than ever, m_c realizes the Clan is in need of a storyteller. {PRONOUN/m_c/subject/CAP} {VERB/m_c/decide/decides} to step up to the task."
+  ], 
+  "story_app_2": [
+    [
+      "storyteller apprentice",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "Even as a kit, m_c loved telling tall tales and listening to the elders It's no surprise when {PRONOUN/m_c/subject} {VERB/m_c/choose/chooses} the path of a storyteller."
+  ], 
+  "story_app_3": [
+    [
+      "storyteller apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "strict",
+      "tidy",
+      "polished",
+      "organized"
+    ],
+    "Impressed by {PRONOUN/m_c/poss} dedication to history, (mentor) chooses m_c as the Clan's new storyteller apprentice."
+  ],
+  "story_app_4": [
+    [
+      "storyteller apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has taken to following (mentor) around during {PRONOUN/(mentor)/poss} daily duties, fascinated by the life of a storyteller. (mentor) is happy to train {PRONOUN/m_c/object}. "
+  ],
+  "gardener_0": [
+    [
+      "gardener",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "(old_name) has proven {PRONOUN/m_c/self} skilled at growing herbs and tending to plants. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the name m_c, and the Clan honors {PRONOUN/m_c/poss} new gardener."
+  ],
+  "gardener_1": [
+    [
+      "gardener",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is welcomed as a fully trained gardener of the Clan."
+  ],
+  "storyteller_0": [
+    [
+      "storyteller",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "(old_name) has proven {PRONOUN/m_c/self} skilled at documenting the stories of the Clan. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the name m_c, and the Clan honors {PRONOUN/m_c/poss} new storyteller."
+  ],
+  "storyteller_1": [
+    [
+      "storyteller",
+      "prepared",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c is welcomed as a fully trained storyteller of the Clan."
   ]
 }

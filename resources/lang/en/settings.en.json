@@ -103,6 +103,10 @@
         "become_caretaker": "Allow warriors and elders to choose to become caretakers",
         "become_caretaker_tooltip": "Warriors and elders will have a chance to become caretakers upon moonskip.",
         "vit tint": "Tinted vitiligo",
-        "vit tint_tooltip": "Tints a cat's vitiligo with their white patch tint."
+        "vit tint_tooltip": "Tints a cat's vitiligo with their white patch tint.",
+         "become_gardener": "Allow warriors and elders to choose to become gardeners",
+        "become_gardener_tooltip": "Warriors and elders will have a chance to become gardeners upon moonskip.",
+        "become_storyteller": "Allow warriors and elders to choose to become storytellers",
+        "become_storyteller_tooltip": "Warriors and elders will have a chance to become storytellers upon moonskip."
     }
 }

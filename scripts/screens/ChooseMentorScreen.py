@@ -439,7 +439,7 @@ class ChooseMentorScreen(Screens):
             self.next_cat,
             self.previous_cat,
         ) = self.the_cat.determine_next_and_previous_cats(
-            filter_func = (lambda cat: cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice"])
+            filter_func = (lambda cat: cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "caretaker apprentice", "denkeeper apprentice", "gardener apprentice", "messenger apprentice", "storyteller apprentice"])
         )
 
         self.next_cat_button.disable() if self.next_cat == 0 else self.next_cat_button.enable()
@@ -635,6 +635,7 @@ class ChooseMentorScreen(Screens):
         ]
         valid_warrior_mentors = []
         invalid_warrior_mentors = []
+
         potential_medcat_mentors = [
             cat
             for cat in Cat.all_cats_list
@@ -642,6 +643,7 @@ class ChooseMentorScreen(Screens):
         ]
         valid_medcat_mentors = []
         invalid_medcat_mentors = []
+
         potential_mediator_mentors = [
             cat
             for cat in Cat.all_cats_list
@@ -649,6 +651,46 @@ class ChooseMentorScreen(Screens):
         ]
         valid_mediator_mentors = []
         invalid_mediator_mentors = []
+
+        potential_denkeeper_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.outside) and cat.status == "denkeeper"
+        ]
+        valid_denkeeper_mentors = []
+        invalid_denkeeper_mentors = []
+
+        potential_caretaker_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.outside) and cat.status == "caretaker"
+        ]
+        valid_caretaker_mentors = []
+        invalid_caretaker_mentors = []
+
+        potential_gardener_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.outside) and cat.status == "gardener"
+        ]
+        valid_gardener_mentors = []
+        invalid_gardener_mentors = []
+
+        potential_messenger_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.outside) and cat.status == "messenger"
+        ]
+        valid_messenger_mentors = []
+        invalid_messenger_mentors = []
+
+        potential_storyteller_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.outside) and cat.status == "storyteller"
+        ]
+        valid_storyteller_mentors = []
+        invalid_storyteller_mentors = []
 
         if self.the_cat.status == "apprentice":
             for cat in potential_warrior_mentors:
@@ -707,7 +749,102 @@ class ChooseMentorScreen(Screens):
                 if is_valid:
                     valid_mediator_mentors.append(cat)
 
-            return potential_mediator_mentors
+            return valid_mediator_mentors
+        
+        elif self.the_cat.status == "caretaker apprentice":
+            for cat in potential_caretaker_mentors:
+                # Assume cat is valid initially
+                is_valid = True
+
+                # Check for no former apprentices filter
+                if self.show_only_no_former_app_mentors and cat.former_apprentices:
+                    is_valid = False
+
+                # Check for no current apprentices filter
+                if self.show_only_no_current_app_mentors and cat.apprentice:
+                    is_valid = False
+
+                # Add to valid or invalid list based on checks
+                if is_valid:
+                    valid_caretaker_mentors.append(cat)
+
+            return valid_caretaker_mentors
+        
+        elif self.the_cat.status == "denkeeper apprentice":
+            for cat in potential_denkeeper_mentors:
+                # Assume cat is valid initially
+                is_valid = True
+
+                # Check for no former apprentices filter
+                if self.show_only_no_former_app_mentors and cat.former_apprentices:
+                    is_valid = False
+
+                # Check for no current apprentices filter
+                if self.show_only_no_current_app_mentors and cat.apprentice:
+                    is_valid = False
+
+                # Add to valid or invalid list based on checks
+                if is_valid:
+                    valid_denkeeper_mentors.append(cat)
+
+            return valid_denkeeper_mentors
+        
+        elif self.the_cat.status == "gardener apprentice":
+            for cat in potential_gardener_mentors:
+                # Assume cat is valid initially
+                is_valid = True
+
+                # Check for no former apprentices filter
+                if self.show_only_no_former_app_mentors and cat.former_apprentices:
+                    is_valid = False
+
+                # Check for no current apprentices filter
+                if self.show_only_no_current_app_mentors and cat.apprentice:
+                    is_valid = False
+
+                # Add to valid or invalid list based on checks
+                if is_valid:
+                    valid_gardener_mentors.append(cat)
+
+            return valid_gardener_mentors
+        
+        elif self.the_cat.status == "messenger apprentice":
+            for cat in potential_messenger_mentors:
+                # Assume cat is valid initially
+                is_valid = True
+
+                # Check for no former apprentices filter
+                if self.show_only_no_former_app_mentors and cat.former_apprentices:
+                    is_valid = False
+
+                # Check for no current apprentices filter
+                if self.show_only_no_current_app_mentors and cat.apprentice:
+                    is_valid = False
+
+                # Add to valid or invalid list based on checks
+                if is_valid:
+                    valid_messenger_mentors.append(cat)
+
+            return valid_messenger_mentors
+        
+        elif self.the_cat.status == "storyteller apprentice":
+            for cat in potential_storyteller_mentors:
+                # Assume cat is valid initially
+                is_valid = True
+
+                # Check for no former apprentices filter
+                if self.show_only_no_former_app_mentors and cat.former_apprentices:
+                    is_valid = False
+
+                # Check for no current apprentices filter
+                if self.show_only_no_current_app_mentors and cat.apprentice:
+                    is_valid = False
+
+                # Add to valid or invalid list based on checks
+                if is_valid:
+                    valid_storyteller_mentors.append(cat)
+
+            return valid_storyteller_mentors
         return []
 
     def on_use(self):

@@ -388,6 +388,16 @@ class ClanSettingsScreen(Screens):
         med_cat_apprentices = 0
         mediator_apprentices = 0
         mediators = 0
+        caretaker_apprentices = 0
+        caretakers = 0
+        denkeeper_apprentices = 0
+        denkeepers = 0
+        gardener_apprentices = 0
+        gardeners = 0
+        messenger_apprentices = 0
+        messengers = 0
+        storyteller_apprentices = 0
+        storytellers = 0
         elders = 0
         kits = 0
         cats_outside = 0
@@ -425,6 +435,26 @@ class ClanSettingsScreen(Screens):
                 mediator_apprentices += 1
             elif cat.status == "mediator":
                 mediators += 1
+            elif cat.status == "caretaker apprentice":
+                caretaker_apprentices += 1
+            elif cat.status == "caretaker":
+                caretakers += 1
+            elif cat.status == "denkeeper apprentice":
+                denkeeper_apprentices += 1
+            elif cat.status == "denkeeper":
+                denkeepers += 1
+            elif cat.status == "gardener apprentice":
+                gardener_apprentices += 1
+            elif cat.status == "gardener":
+                gardeners += 1
+            elif cat.status == "messenger apprentice":
+                messenger_apprentices += 1
+            elif cat.status == "messenger":
+                messengers += 1
+            elif cat.status == "storyteller apprentice":
+                storyteller_apprentices += 1
+            elif cat.status == "storyteller":
+                storytellers += 1
             elif cat.status == "elder":
                 elders += 1
             elif cat.status in ("newborn", "kitten"):
@@ -445,6 +475,16 @@ class ClanSettingsScreen(Screens):
                 "apps": str(warrior_apprentices),
                 "mediators": str(mediators),
                 "mediatorapps": str(mediator_apprentices),
+                "caretakers": str(caretakers),
+                "caretakerapps": str(caretaker_apprentices),
+                "denkeepers": str(denkeepers),
+                "denkeeperapps": str(denkeeper_apprentices),
+                "gardeners": str(gardeners),
+                "gardenerapps": str(gardener_apprentices),
+                "messengers": str(messengers),
+                "messengerapps": str(messenger_apprentices),
+                "storytellers": str(storytellers),
+                "storytellerapps": str(storyteller_apprentices),
                 "elders": str(elders),
                 "kits": str(kits),
                 "faded": str(faded_cats),

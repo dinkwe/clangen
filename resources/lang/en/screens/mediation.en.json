@@ -22,6 +22,10 @@
         "care_cant_work": "This caretaker can't work this moon. ",
         "care_already_worked": "This caretaker has already worked this moon. ",
         "output_sabotage_failed": "Sabotage Failed!\n",
-        "output_mediate_failed": "Mediate Failed!\n"
+        "output_mediate_failed": "Mediate Failed!\n",
+        "story_cant_work": "This storyteller can't work this moon. ",
+        "story_already_worked": "This storyteller has already worked this moon. ",
+        "gar_cant_work": "This gardener can't work this moon. ",
+        "gar_already_worked": "This gardener has already worked this moon. "
     }
 }

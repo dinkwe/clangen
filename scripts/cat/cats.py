@@ -75,14 +75,18 @@ class Cat:
         "caretaker apprentice",
         "caretaker",
         "elder",
+        "apprentice",
+        "warrior",
+        "storyteller apprentice",
+        "storyteller",
         "messenger apprentice",
         "messenger",
         "denkeeper apprentice",
         "denkeeper",
-        "apprentice",
-        "warrior",
         "mediator apprentice",
         "mediator",
+        "gardener apprentice",
+        "gardener",
         "medicine cat apprentice",
         "medicine cat",
         "deputy",
@@ -295,7 +299,9 @@ class Cat:
                 "medicine cat apprentice",
                 "messenger apprentice",
                 "denkeeper apprentice",
-                "caretaker apprentice"
+                "caretaker apprentice",
+                "gardener apprentice",
+                "storyteller apprentice"
             ]:
                 self.age = CatAgeEnum.ADOLESCENT
             else:
@@ -1173,7 +1179,7 @@ class Cat:
         """Updates trait and skill upon ceremony"""
 
         
-        if self.status in ["warrior", "medicine cat", "mediator", "messenger", "denkeeper", "caretaker"]:
+        if self.status in ["warrior", "medicine cat", "mediator", "messenger", "denkeeper", "caretaker", "storyteller", "gardener"]:
             # Give a couple doses of mentor influence:
             if mentor:
                 max_influence = randint(0, 2)
@@ -1801,7 +1807,9 @@ class Cat:
             "medicine cat apprentice",
             "messenger apprentice",
             "denkeeper apprentice",
-            "caretaker apprentice"
+            "caretaker apprentice",
+            "gardener apprentice",
+            "storyteller apprentice"
         ]:
             self.update_mentor()
 
@@ -2461,7 +2469,9 @@ class Cat:
         if self.moons > 6 and self.status in [
             "apprentice",
             "medicine cat apprentice",
-            "mediator apprentice", "denkeeper apprentice", "messenger apprentice", "caretaker apprentice"
+            "mediator apprentice", "denkeeper apprentice", "messenger apprentice", "caretaker apprentice",
+            "gardener apprentice",
+            "storyteller apprentice"
         ]:
             _ment = Cat.fetch_cat(self.mentor) if self.mentor else None
             self.status_change(
@@ -2593,8 +2603,9 @@ class Cat:
                 self.illnesses = rel_data.get("illnesses", {})
                 self.injuries = rel_data.get("injuries", {})
                 self.permanent_condition = rel_data.get("permanent conditions", {})
-                if rel_data["awakened"]["type"] in ["esper", "guide", "enhanced esper"]:
-                    self.awakened = rel_data["awakened"]
+                if "awakened" in rel_data:
+                    if rel_data["awakened"]["type"] in ["esper", "guide", "enhanced esper"]:
+                        self.awakened = rel_data["awakened"]
 
             if "paralyzed" in self.permanent_condition and not self.pelt.paralyzed:
                 self.pelt.paralyzed = True
@@ -2645,6 +2656,17 @@ class Cat:
             and potential_mentor.status != "denkeeper"
         ):
             return False
+        if (
+            self.status == "gardener apprentice"
+            and potential_mentor.status != "gardener"
+        ):
+            return False
+        
+        if (
+            self.status == "storyteller apprentice"
+            and potential_mentor.status != "storyteller"
+        ):
+            return False
         # If not an app, don't need a mentor
         if "apprentice" not in self.status:
             return False
@@ -2692,7 +2714,7 @@ class Cat:
             or self.outside
             or self.exiled
             or self.status
-            not in ["apprentice", "mediator apprentice", "medicine cat apprentice","messenger apprentice", "caretaker apprentice", "denkeeper apprentice"]
+            not in ["apprentice", "mediator apprentice", "medicine cat apprentice","messenger apprentice", "caretaker apprentice", "denkeeper apprentice","gardener apprentice","storyteller apprentice"]
         )
         if illegible_for_mentor:
             self.__remove_mentor()

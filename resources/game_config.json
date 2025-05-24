@@ -251,12 +251,24 @@
 		"become_messenger_chances": {
 			"warrior": 5000,
 			"elder": 400
-		},"caretaker_app_chance": 50,
+		},
+		"caretaker_app_chance": 50,
 		"become_caretaker_chances": {
 			"warrior": 5000,
 			"elder": 400
-		},"denkeeper_app_chance": 50,
+		},
+		"denkeeper_app_chance": 50,
 		"become_denkeeper_chances": {
+			"warrior": 5000,
+			"elder": 400
+		},
+		"gardener_app_chance": 50,
+		"become_gardener_chances": {
+			"warrior": 5000,
+			"elder": 400
+		},
+		"storyteller_app_chance": 50,
+		"become_storyteller_chances": {
 			"warrior": 5000,
 			"elder": 400
 		}
@@ -341,7 +353,9 @@
 			"mediator apprentice": 25,
 			"messenger apprentice": 25,
 			"caretaker apprentice": 25,
-			"denkeeper apprentice": 25
+			"denkeeper apprentice": 25,
+			"gardener apprentice": 25,
+			"storyteller apprentice": 25
 		},
 		"min_graduating_age": 10
 	},

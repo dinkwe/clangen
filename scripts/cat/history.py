@@ -320,6 +320,12 @@ class History:
             SkillPath.ANIMALTAKER: ["befriending wilfelife"],
             SkillPath.VET: ["caring for injured creatures"],
             SkillPath.ANIMALMAGNET: ["attracting animals"],
+            SkillPath.DAY: ["being diurnal"],
+            SkillPath.NIGHT: ["being nocturnal"],
+            SkillPath.LUCK: ["being lucky"],
+            SkillPath.BONES: ["cleaning bones"],
+            SkillPath.BUG: ["catching bugs"],
+            SkillPath.STRONG: ["building muscles"]
         }
 
         for _ment in cat.history.mentor_influence["skill"]:

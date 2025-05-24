@@ -1,7 +1,7 @@
 {
     "pyrokinesis": {
         "power": "can manipulate and control fire",
-        "skin":["FLAMES","FLAMES2", "SMOKE", "MAGMA"],
+        "skin":["FLAMES","FLAMES2", "SMOKE", "MAGMA", "FIRETAIL", "BLUEFIRETAIL"],
         "C": [
             "can create small flames",
             "can spark fires with a paw",
@@ -60,7 +60,7 @@
     },
     "cyrokinesis": {
         "power": "can manipulate and control ice",
-        "skin":["MIST","SPARKLES", "FROZEN", "FROSTGLOW", "CRYSTALS"],
+        "skin":["MIST","SPARKLES", "FROZEN", "FROSTGLOW", "ICECRYSTALS", "CLOUDS"],
         "C": [
             "is ice cold to the touch",
             "sneezes snowflakes"
@@ -82,7 +82,7 @@
     },
     "geokinesis": {
         "power": "can manipulate and control rocks",
-        "skin":["CRYSTALS","ROOTS","MAGMA", "STONE"],
+        "skin":["CRYSTALS","ROOTS","MAGMA", "STONE", "SPOOKYCRYSTALS"],
         "C": [
             "can summon and control pebbles",
             "can control sand"
@@ -109,7 +109,7 @@
     },
     "aerokinesis": {
         "power": "can manipulate and control wind",
-        "skin":["LIGHT1", "MIST", "THUNDERSTORM", "FAEMANE", "WIND"],
+        "skin":["LIGHT1", "MIST", "THUNDERSTORM", "FAEMANE", "WIND", "CLOUDS"],
         "C": [
             "can control small gusts of wind",
             "purifies the surrounding air"
@@ -135,7 +135,7 @@
     },
     "illusions": {
         "power": "can create illusions",
-        "skin":["INK", "INK2", "SPARKLES", "PURPLEFLAMES", "SKELETON", "SHADOWBEAST"],
+        "skin":["INK", "INK2", "SPARKLES", "PURPLEFLAMES", "SKELETON", "SHADOWBEAST", "SHADOWSELF"],
         "C": [
             "can make illusions targetting one sense",
             "can make small illusions",
@@ -158,7 +158,7 @@
     },
     "shapeshifting": {
         "power": "can transform into other animals",
-        "skin":["FLESH", "SKELETON", "SHADOWBEAST", "INK","INK2", "FAEMANE","GREENCHIMERA", "CORALCHIMERA", "FOXTAIL"],
+        "skin":["FLESH", "SKELETON", "SHADOWBEAST", "INK","INK2", "ANTLERS","GREENCHIMERA", "CORALCHIMERA", "FOXTAIL", "BATWINGS", "BLACKFOX", "SNOWFOX"],
         "C": [
            "can change fur color at will",
            "can change eye color at will",
@@ -298,7 +298,7 @@
     },
     "chimera": {
         "power": "has body part(s) of a different animal",
-        "skin":["FLESH", "SKELETON", "INK", "INK2", "SHADOWBEAST", "GREENCHIMERA", "CORALCHIMERA", "FOXTAIL"],
+        "skin":["FLESH", "SKELETON", "INK", "SPARROWGIFT", "SHADOWBEAST", "GREENCHIMERA", "CORALCHIMERA", "FOXTAIL", "BATWINGS", "DEVILWINGS", "BLUECORALCHIMERA", "ANTLERS", "KITSUNE", "SNOWFOX", "BLACKFOX"],
         "C": [
             "has lizard eyes",
             "has a fox tail",
@@ -339,7 +339,7 @@
     },
     "invisibility": {
         "power": "can turn invisible",
-        "skin":["MIST", "LIGHT1", "SPARKLES", "SPARKLES2", "BLUEFLAMES", "FROSTGLOW"],
+        "skin":["MIST", "LIGHT1", "SPARKLES", "SPARKLES2", "BLUEFLAMES", "FROSTGLOW", "BLUEFIRETAIL", "SHADOWSELF"],
         "C": [
             "can become translucent",
             "appears to be blurry"
@@ -382,7 +382,7 @@
     },
     "mind control": {
         "power": "can control the minds of others",
-        "skin":["INK", "INK2", "PURPLEFLAMES", "SHADOWBEAST"],
+        "skin":["INK", "INK2", "PURPLEFLAMES", "SHADOWBEAST", "SHADOWSELF"],
         "C": [
             "can influence the feelings of others",
             "is supernaturally charismatic",
@@ -484,7 +484,7 @@
     },
     "light manipulation":{
         "power": "can control light and shadows",
-        "skin":["THUNDERSTORM", "LIGHT1", "LIGHT2", "PURPLEFLAMES", "INK", "INK2","LIGHTNING", "YELLOWGLOW","SHADOWBEAST", "SHADOW"],
+        "skin":["THUNDERSTORM", "LIGHT1", "LIGHT2", "PURPLEFLAMES", "INK", "INK2","LIGHTNING", "YELLOWGLOW","SHADOWBEAST", "SHADOW", "SHADOWSELF"],
         "C": [
             "glows in the dark",
             "can create elaborate shadow puppets",
@@ -510,7 +510,7 @@
     },
     "beast speak": {
         "power": "can communicate with other animals",
-        "skin":["FLESH", "INK", "INK2", "SPARKLES", "FLOWERS", "DEATHBERRIES", "SHADOWBEAST"],
+        "skin":["FLESH", "INK", "INK2", "SPARKLES", "FLOWERS", "DEATHBERRIES", "SHADOWBEAST", "SHADOWSELF"],
         "C": [
             "can sense the emotions of non-cats",
             "can hear the voices of other species"

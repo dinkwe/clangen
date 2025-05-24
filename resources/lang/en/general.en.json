@@ -45,6 +45,14 @@
             "one": "denkeeper",
             "many": "denkeepers"
         },
+        "gardener": {
+            "one": "gardener",
+            "many": "gardeners"
+        },
+        "storyteller": {
+            "one": "storyteller",
+            "many": "storytellers"
+        },
         "apprentice": {
             "one": "apprentice",
             "many": "apprentices"
@@ -68,6 +76,14 @@
         "denkeeper apprentice": {
             "one": "denkeeper apprentice",
             "many": "denkeeper apprentices"
+        },
+        "gardener apprentice": {
+            "one": "gardener apprentice",
+            "many": "gardener apprentices"
+        },
+        "storyteller apprentice": {
+            "one": "storyteller apprentice",
+            "many": "storyteller apprentices"
         },
         "queen": {
             "one": "queen",

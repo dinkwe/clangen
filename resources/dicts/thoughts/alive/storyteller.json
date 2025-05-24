@@ -1,0 +1,12 @@
+[
+    {
+        "id": "storyteller_gen",
+        "thoughts": [
+            "Practices singing a ballad",
+            "Comes up with a fun poem on the spot",
+            "Recites an ancient tale",
+            "Tells a scary story",
+            "Wonders if the next storyteller will tell stories about {PRONOUN/m_c/object}"
+        ]
+    }
+]

@@ -5,7 +5,12 @@
             "Is carefully checking the nursery for thorns",
             "Wonders if being a warrior would have been more fun",
             "Is studying herbs that help during kitting",
-            "Is making new nests"
+            "Is making new nests",
+            "Is daydreaming about having a mate and kits someday",
+            "Had quite the adventure today",
+            "Is struggling to come to terms with what 'being a caretaker' entails",
+            "Is trying to gently correct a Clanmate who is very wrong about something",
+            "Pressed against a cat who looked like {PRONOUN/r_c/subject} needed a bit of support"
         ]
     },
     {
@@ -14,7 +19,18 @@
             "Had to fix an argument between the kits... again",
             "Enjoys watching over the kits",
             "Is telling r_c a fantastical story",
-            "Makes sure r_c doesn't sneak out of the nursery again!"
+            "Makes sure r_c doesn't sneak out of the nursery again!",
+            "Has the kits help in sweeping dead leaves out of the den",
+            "Races around camp with all the kits hot on {PRONOUN/m_c/poss} tail!",
+            "Has been slain by the mighty r_c in a heroic battle for the camp!",
+            "Bats around smooth pebbles for the kits to chase after",
+            "Hides a mouse in camp for the kits to scent out",
+            "Introduces r_c to new prey items",
+            "Yowls in fake pain as r_C chomps down on {PRONOUN/m_c/poss} tail!",
+            "Gives a badger ride to all the kits at once!",
+            "Picks scales off a fish and puts them on r_c",
+            "Is covered in mud and leaves after playing with the kits in the rain",
+            "Splashes through a puddle to show the kits it isn't scary"
         ],
         "random_status_constraint": [
             "kitten"
@@ -24,7 +40,7 @@
         ]
     },
     {
-        "id": "caretaker_app_alive_mediator",
+        "id": "caretaker_app_alive_caretaker",
         "thoughts": [
             "Is amazed at how patient r_c is",
             "Is following in r_c's pawsteps"
@@ -34,6 +50,36 @@
         ],
         "random_living_status": [
             "living"
+        ]
+    },
+    {
+        "id": "caretaker_apprentice_to_medcat",
+        "thoughts": [
+            "Can't get the taste of herbs out of {PRONOUN/m_c/poss} mouth after helping r_c",
+            "Is gagging after helping r_c",
+            "Glances at r_c tending to herbs and feels thankful to have chosen the path of a warrior",
+            "Hates the strong stench of herbs",
+            "Is swallowing a remark after being told to take something nasty",
+            "Gasps for air after leaving the medicine cat den",
+            "Is listening to r_c discuss the intricacies of StarClan",
+            "Feels puzzled after asking r_c about StarClan",
+            "Is tuning out during r_c's lecture about dangerous herbs",
+            "Listens intently during r_c's lecture about dangerous herbs",
+            "Spots an herb r_c talked about and reports it",
+            "Is trying not to groan whenever r_c goes on another tangent about herbs",
+            "Asks r_c about the worst wounds {PRONOUN/r_c/subject} {VERB/r_c/have/has} seen",
+            "Is sore after training and asks r_c for advice",
+            "Was tasked with helping r_c for the day",
+            "Can't imagine what it is like to be in r_c's paws",
+            "Wonders how r_c can handle having so many lives rely on {PRONOUN/r_c/object}",
+            "Is curious how plants of all things can heal wounds"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
         ]
     }
 ]

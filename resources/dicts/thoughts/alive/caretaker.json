@@ -5,7 +5,9 @@
             "Is carefully checking the nursery for thorns",
             "Wonders if being a warrior would have been more fun",
             "Is studying herbs that help during kitting",
-            "Is making new nests"
+            "Is making new nests",
+            "Is trying to gently correct a Clanmate who is very wrong about something",
+            "Pressed against a cat who looked like {PRONOUN/r_c/subject} needed a bit of support"
         ]
     },
     {
@@ -14,8 +16,89 @@
             "Had to fix an argument between the kits... again",
             "Enjoys watching over the kits",
             "Is telling r_c a fantastical story",
-            "Makes sure r_c doesn't sneak out of the nursery again!"
+            "Makes sure r_c doesn't sneak out of the nursery again!",
+            "Has the kits help in sweeping dead leaves out of the den",
+            "Races around camp with all the kits hot on {PRONOUN/m_c/poss} tail!",
+            "Has been slain by the mighty r_c in a heroic battle for the camp!",
+            "Bats around smooth pebbles for the kits to chase after",
+            "Hides a mouse in camp for the kits to scent out",
+            "Introduces r_c to new prey items",
+            "Yowls in fake pain as r_C chomps down on {PRONOUN/m_c/poss} tail!",
+            "Gives a badger ride to all the kits at once!",
+            "Picks scales off a fish and puts them on r_c",
+            "Is covered in mud and leaves after playing with the kits in the rain",
+            "Splashes through a puddle to show the kits it isn't scary",
+            "Rolls moss into balls for the kits",
+            "Collects pinecones for the kits to play with"
         ],
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "caretaker_to_elder",
+        "thoughts": [
+            "Works with r_c to make up a new story to tell kits"
+        ],
+        "random_status_constraint": [
+            "elder"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "clumsy_caretaker_to_kits",
+        "thoughts": [
+            "Accidentally treads on a kit's tail!",
+            "Trips over a kit annd goes sprawling, making the kit laugh",
+            "Nearly sits on a kit"
+        ],
+        "random_status_constraint": [
+            "kitten",
+            "newborn"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "main_trait_constraint":[
+            "clumsy",
+            "childish",
+            "sleepy",
+            "insecure",
+            "anxious",
+            "distracted",
+            "absent-minded"
+        ]
+    },
+    {
+        "id": "caretaker_to_apprentice",
+        "thoughts": [
+            "Scolds r_c for scaring the kits with ghost stories"
+        ],
+        "random_status_constraint": [
+            "apprentice"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "paralyzed_caretaker_to_kits",
+        "thoughts": [
+            "Tirelessly answers the questions about {PRONOUN/m_c/poss} back legs",
+            "Doesn't notice a kit bitng on {PRONOUN/m_c/poss} tail",
+            "Purrs as r_c kneads at a spasm in {PRONOUN/m_c/poss} back leg",
+            "Sanps at a kit to stop hiding under {PRONOUN/m_c/poss} tail"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "paralyzed"
+            ]
+        },
         "random_status_constraint": [
             "kitten"
         ],

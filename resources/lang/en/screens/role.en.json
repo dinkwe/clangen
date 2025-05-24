@@ -32,6 +32,15 @@
         "switch_messenger_app": "switch to messenger\napprentice",
         "blurb_messenger_app": "%{name} is a <b>messenger apprentice</b>, training to become a full messenger. Messengers carry news across borders and send out alerts during emergencies. Messengers apprentices are often chosen for their speed and coordination. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
         "switch_denkeeper_app": "switch to denkeeper\napprentice",
-        "blurb_denkeeper_app": "%{name} is a <b>denkeeper apprentice</b>, training to become a full denkeeper. Denkeepers manage the camp itself, reinforcing dens and keeping track of the prey pile. Denkeepers apprentices are often chosen for their dedication and responsibility. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. "
+        "blurb_denkeeper_app": "%{name} is a <b>denkeeper apprentice</b>, training to become a full denkeeper. Denkeepers manage the camp itself, reinforcing dens and keeping track of the prey pile. Denkeepers apprentices are often chosen for their dedication and responsibility. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
+        "switch_gardener": "switch to gardener",
+        "blurb_gardener": "%{name} is a <b>gardener</b>. Gardeners help grow herbs and plants for the Clan. Some gardeners train as apprentices to serve their Clan, while others may choose to become gardeners later in life.",
+        "switch_storyteller": "switch to storyteller",
+        "blurb_storyteller": "%{name} is a <b>storyteller</b>. Storytellers document the history of the Clan and teach the next generations through the arts. Some storytellers train as apprentices to serve their Clan, while others may choose to become storytellers later in life.",
+        "switch_gardener_app": "switch to gardener\napprentice",
+        "blurb_gardener_app": "%{name} is a <b>gardener apprentice</b>, training to become a full gardener. Gardeners are in charge of growing and managing herbs and plants. Gardener apprentices are often chosen for their memory and affinity for plants. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. ",
+        "switch_storyteller_app": "switch to storyteller\napprentice",
+        "blurb_storyteller_app": "%{name} is a <b>storyteller apprentice</b>, training to become a full storyteller. Storytellers are in charge of documenting and reciting Clan history. Storyteller apprentices are often chosen for their artistry and dedication. Apprentices usually take the suffix \"-paw\", to represent the path their paws take towards adulthood. "
+        
     }
 }

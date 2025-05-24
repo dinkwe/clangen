@@ -166,7 +166,7 @@ class PatrolScreen(Screens):
                     able_no_med = [
                         cat
                         for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
                     ]
                     if len(able_no_med) == 0:
                         able_no_med = able_temp
@@ -203,7 +203,7 @@ class PatrolScreen(Screens):
                     able_no_med = [
                         cat
                         for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
                     ]
                     if len(able_no_med) < 3:
                         able_no_med = able_temp
@@ -233,7 +233,7 @@ class PatrolScreen(Screens):
                     able_no_med = [
                         cat
                         for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
+                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
                     ]
                     if len(able_no_med) < 6:
                         able_no_med = able_temp
@@ -498,7 +498,7 @@ class PatrolScreen(Screens):
             # making sure meds and caretakers don't get the option for other patrols
             if any(
                 (
-                    cat.status in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice"]
+                    cat.status in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
                     for cat in self.current_patrol
                 )
             ):
@@ -563,7 +563,7 @@ class PatrolScreen(Screens):
             able_no_med = [
                 cat
                 for cat in self.able_cats
-                if cat.status not in ["medicine cat", "medicine cat apprentice"]
+                if cat.status not in ["medicine cat", "medicine cat apprentice", "gardener", "gardener apprentice", "caretaker", "caretaker apprentice"]
             ]
             if game.clan.clan_settings["random med cat"]:
                 able_no_med = self.able_cats
@@ -1096,7 +1096,7 @@ class PatrolScreen(Screens):
                 and the_cat.in_camp
                 and the_cat.ID not in game.patrolled
                 and the_cat.status
-                not in ["elder", "kitten", "mediator", "mediator apprentice"]
+                not in ["elder", "kitten", "mediator", "mediator apprentice", "storyteller", "storyteller apprentice"]
                 and not the_cat.outside
                 and the_cat not in self.current_patrol
                 and not the_cat.not_working()

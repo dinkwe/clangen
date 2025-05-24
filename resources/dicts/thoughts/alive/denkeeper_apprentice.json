@@ -7,7 +7,81 @@
             "Counts the prey pile for the fourth time",
             "Wonders if certain herbs might make prey taste better",
             "Is worried about a storm damaging the nursery",
-            "Is drafting an emerency plan in case of a fire"
+            "Is drafting an emergency plan in case of a fire",
+            "Is padding back and forth across the camp",
+            "Is helping to reinforce the nursery walls",
+            "Is helping to reinforce the camp walls",
+            "Is patching up a hole in the camp wall",
+            "Is helping to reinforce the walls of the elders' den",
+            "Is tidying up some stray moss that blew into the clearing",
+            "Is repairing one of the camp walls",
+            "Suggests burying some prey for leafbare",
+            "Wants to run some fire drills after a close call",
+            "Sniffing for smoke after a recent lightning strike",
+            "Is on alert after seeing some dark clouds on the horizon",
+            "Weaves a few spare nests",
+            "Considers how to expand the nursery",
+            "Patches a draft in the warriors' den",
+            "Adds thorns and thistles to the camp wall",
+            "Molds a bird out of moss for fun",
+            "Decorates the camp wall with twigs and berries",
+            "Is worried about drainage in case of flash floods",
+            "Places comfortable moss for guarding warriors to sit on",
+            "Tries adding some herbs to prey to improve the flavor",
+            "Digs a new drainage ditch around camp",
+            "Works a particularly sharp bramble into the outside of the nursery",
+            "Clears branches out of camp after strong winds",
+            "Fetches wet moss for a sick clanmate",
+            "Feels worn out after reinforcing the warriors den against drafts",
+            "Uses {PRONOUN/m_c/poss} tail to sweep away fallen leaves",
+            "Sorts out stale prey for the freshkill pile",
+            "Sniffs worriedly at some stagnant water in camp",
+            "Stacks rocks along the edge of camp in neat rows"
+        ]
+    },
+    {
+        "id": "denkeeper_apprentice_to_medcat",
+        "thoughts": [
+            "Can't get the taste of herbs out of {PRONOUN/m_c/poss} mouth after helping r_c",
+            "Is gagging after helping r_c",
+            "Glances at r_c tending to herbs and feels thankful to have chosen the path of a warrior",
+            "Hates the strong stench of herbs",
+            "Is swallowing a remark after being told to take something nasty",
+            "Gasps for air after leaving the medicine cat den",
+            "Is listening to r_c discuss the intricacies of StarClan",
+            "Feels puzzled after asking r_c about StarClan",
+            "Is tuning out during r_c's lecture about dangerous herbs",
+            "Listens intently during r_c's lecture about dangerous herbs",
+            "Spots an herb r_c talked about and reports it",
+            "Is trying not to groan whenever r_c goes on another tangent about herbs",
+            "Asks r_c about the worst wounds {PRONOUN/r_c/subject} {VERB/r_c/have/has} seen",
+            "Is sore after training and asks r_c for advice",
+            "Was tasked with helping r_c for the day",
+            "Can't imagine what it is like to be in r_c's paws",
+            "Wonders how r_c can handle having so many lives rely on {PRONOUN/r_c/object}",
+            "Is curious how plants of all things can heal wounds"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
+        ]
+    },
+    {
+        "id": "denkeeper_to_alivekits",
+        "thoughts": [
+            "Instructs the kits what to do in case of an emergency",
+            "Spends all day trying to wrangle the kits out of the way so {PRONOUN/m_c/subject} can repair the nursery",
+            "Teaches r_c how to weave brambles",
+            "Watches kits splash in mud puddles and sighs inwardly about the mess"
+        ],
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     }
 ]

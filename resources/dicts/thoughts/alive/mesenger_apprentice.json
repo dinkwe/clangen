@@ -37,5 +37,52 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "messenger_apprentice_to_medcat",
+        "thoughts": [
+            "Can't get the taste of herbs out of {PRONOUN/m_c/poss} mouth after helping r_c",
+            "Is gagging after helping r_c",
+            "Glances at r_c tending to herbs and feels thankful to have chosen the path of a warrior",
+            "Hates the strong stench of herbs",
+            "Is swallowing a remark after being told to take something nasty",
+            "Gasps for air after leaving the medicine cat den",
+            "Is listening to r_c discuss the intricacies of StarClan",
+            "Feels puzzled after asking r_c about StarClan",
+            "Is tuning out during r_c's lecture about dangerous herbs",
+            "Listens intently during r_c's lecture about dangerous herbs",
+            "Spots an herb r_c talked about and reports it",
+            "Is trying not to groan whenever r_c goes on another tangent about herbs",
+            "Asks r_c about the worst wounds {PRONOUN/r_c/subject} {VERB/r_c/have/has} seen",
+            "Is sore after training and asks r_c for advice",
+            "Was tasked with helping r_c for the day",
+            "Can't imagine what it is like to be in r_c's paws",
+            "Wonders how r_c can handle having so many lives rely on {PRONOUN/r_c/object}",
+            "Is curious how plants of all things can heal wounds"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
+        ]
+    },
+    {
+        "id": "messenger_to_alive_adult_active_cat",
+        "thoughts": [
+            "Has some important news for r_c"
+        ],
+        "random_status_constraint": [
+            "warrior",
+            "medicine cat",
+            "caretaker",
+            "denkeeper",
+            "deputy",
+            "leader"
+        ],
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

@@ -207,6 +207,16 @@ class ProfileScreen(Screens):
                     and event.ui_element == self.profile_elements["care"]
             ):
                 self.change_screen("caretaker screen")
+            elif (
+                    "story" in self.profile_elements
+                    and event.ui_element == self.profile_elements["story"]
+            ):
+                self.change_screen("storyteller screen")
+            elif (
+                    "garden" in self.profile_elements
+                    and event.ui_element == self.profile_elements["garden"]
+            ):
+                self.change_screen("gardener screen")
             elif event.ui_element == self.profile_elements["favourite_button"]:
                 self.the_cat.favourite = not self.the_cat.favourite
                 self.profile_elements["favourite_button"].change_object_id(
@@ -746,6 +756,25 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["care"].disable()
+        elif self.the_cat.status in ["gardener", "gardener apprentice"]:
+            self.profile_elements["garden"] = UIImageButton(
+                ui_scale(pygame.Rect((383, 110), (34, 34))),
+                "",
+                object_id="#garden_button",
+                manager=MANAGER,
+            )
+            if self.the_cat.dead or self.the_cat.outside:
+                self.profile_elements["garden"].disable()
+        
+        elif self.the_cat.status in ["storyteller", "storyteller apprentice"]:
+            self.profile_elements["story"] = UIImageButton(
+                ui_scale(pygame.Rect((383, 110), (34, 34))),
+                "",
+                object_id="#story_button",
+                manager=MANAGER,
+            )
+            if self.the_cat.dead or self.the_cat.outside:
+                self.profile_elements["story"].disable()
 
     def generate_column1(self, the_cat):
         """Generate the left column information"""
@@ -1645,7 +1674,9 @@ class ProfileScreen(Screens):
             "mediator apprentice",
             "caretaker apprentice",
             "denkeeper apprentice",
-            "messenger apprentice"
+            "messenger apprentice",
+            "gardener apprentice",
+            "storyteller apprentice"
         ]:
             influence_history = i18n.t("cat.history.training_app")
         else:
@@ -2506,7 +2537,7 @@ class ProfileScreen(Screens):
                 self.manage_roles.enable()
             if (
                     self.the_cat.status
-                    not in ["apprentice", "medicine cat apprentice", "mediator apprentice"]
+                    not in ["apprentice", "medicine cat apprentice", "mediator apprentice", "caretaker apprentice", "denkeeper apprentice", "gardener apprentice", "messenger apprentice", "storyteller apprentice"]
                     or self.the_cat.dead
                     or self.the_cat.outside
             ):

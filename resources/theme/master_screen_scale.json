@@ -1297,6 +1297,38 @@
             }
         }
     },
+    "#garden_button": {
+        "images": {
+            "normal_image": {
+                "path": "resources\/images\/buttons\/garden.png"
+            },
+            "hovered_image": {
+                "path": "resources\/images\/buttons\/garden_hover.png"
+            },
+            "selected_image": {
+                "path": "resources\/images\/buttons\/garden_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources\/images\/buttons\/garden_unavailable.png"
+            }
+        }
+    },
+    "#story_button": {
+        "images": {
+            "normal_image": {
+                "path": "resources\/images\/buttons\/story.png"
+            },
+            "hovered_image": {
+                "path": "resources\/images\/buttons\/story_hover.png"
+            },
+            "selected_image": {
+                "path": "resources\/images\/buttons\/story_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources\/images\/buttons\/story_unavailable.png"
+            }
+        }
+    },
     "#med_den_log_button": {
         "images": {
             "normal_image": {

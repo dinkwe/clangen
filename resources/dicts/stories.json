@@ -1,0 +1,41 @@
+{
+    "notes": [
+        "m_c refers to storyteller. r_c refers to the cat the story is about!!"
+    ],
+    "heroism": [
+        "m_c tells a heroic story about r_c.",
+        "m_c tells a story about how r_c fought off a fox.",
+        "m_c tells a story about how r_c fought off a pack of rogues.",
+        "m_c tells a story about how r_c saved a kit.",
+        "m_c sings a ballad about r_c's heroism.",
+        "m_c decorates the camp walls with images of r_c helping others.",
+        "m_c recites a poem about how r_c protected an injured cat.",
+        "m_c tells a story about how r_c helped a lost kittypet."
+    ],
+    "scary": [
+        "m_c tells a scary story about r_c.",
+        "m_c tells a story about how r_c crushed the bones of {PRONOUN/r_c/poss} prey.",
+        "m_c whispers a tale of how sharp r_c's claws are."
+    ],
+    "caution": [
+        "m_c tells a cautionary story about r_c.",
+        "m_c uses r_c's misadventures as the springboard for cautionary tales.",
+        "m_c warns other cats to be careful around foxes, using r_c's close-call as an example."
+    ],
+    "love": [
+        "m_c tells a love story about r_c.",
+        "m_c tells a heartful tale about r_c's quest for love.",
+        "m_c sings a song inspired by r_c's past romantic endeavors."
+    ],
+    "acceptance": [
+        "m_c tells a story about acceptance featuring r_c.",
+        "m_c sings a ballad about r_c's respect for outsiders.",
+        "m_c tells a story about r_c's kindness towards other Clans."
+    ],
+    "triumph": [
+        "m_c tells a story about r_c's triumphs.",
+        "m_c tells a story about how r_c drove a rogue away from the Clan border.",
+        "m_c recites a poem about how r_c scared kittypets away from the Clan border.",
+        "m_c sings a ballad about r_c's border fights with rival Clans."
+    ]
+}

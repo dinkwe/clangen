@@ -8,6 +8,8 @@
     "caretaker apprentice": "paw",
     "messenger apprentice": "paw",
     "denkeeper apprentice": "paw",
+    "gardener apprentice": "paw",
+    "storyteller apprentice": "paw",
     "leader": "star"
     },
   "normal_suffixes" : [

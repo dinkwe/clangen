@@ -51,14 +51,14 @@ class CaretakerScreen(Screens):
                               "TIME", "ASSIST","COOPERATIVE"]
         self.physical_skills = ["FIGHTER", "GUARDIAN", "CLIMBER","HUNTER", "TRACKER","TUNNELER",
                                 "EXPLORER", "FISHER", "NAVIGATOR","HIDER", "CAMP", "STEALTHY",
-                                "MESSENGER"]
+                                "MESSENGER", "STRONG"]
         self.spirit_skills = ["STAR", "CLAIRVOYANT","OMEN", "GHOST", "DARK", "PROPHET", "DREAM",
                               "UNKNOWN", "LEADERSHIP", "VIBES", "AURAVIBES","COMFORTER", "PRODIGY",
-                              "ANIMAL MAGNET"]
+                              "ANIMAL MAGNET","LUCK"]
         self.activity_skills = ["HYDRO", "CLEAN", "SONG", "ARTISAN", "CHEF", "DETECTIVE", "BOOKMAKER",
                                 "DECORATOR", "DELIVERER", "ANIMALTAKER", "VET","MATCHMAKER", "STARGAZER",
                                 "WAKEFUL", "GARDENER","PYRO", "HERBALIST", "DISGUISE", "TREASURE", "HEALER",
-                                "KIT","SLEEPER", "WEATHER", "IMMUNE", "MUSICVIBES","GIFTGIVER"]
+                                "KIT","SLEEPER", "WEATHER", "IMMUNE", "MUSICVIBES","GIFTGIVER", "BONES", "BUG"]
 
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:

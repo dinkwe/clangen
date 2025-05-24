@@ -233,7 +233,7 @@ def get_random_moon_cat(
         if mentor_app_modifier:
             if (
                     main_cat.status
-                    in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice"]
+                    in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice", "gardener apprentice", "storyteller apprentice"]
                     and main_cat.mentor
                     and not int(random() * 3)
             ):
@@ -383,7 +383,9 @@ def create_new_cat_block(
                     "mediator apprentice",
                     "messenger apprentice",
                     "denkeeper apprentice",
-                    "caretaker apprentice"
+                    "caretaker apprentice",
+                    "gardener apprentice",
+                    "storyteller apprentice"
                 ]:
                     print("Can't give apprentices mates")
                     continue
@@ -443,7 +445,11 @@ def create_new_cat_block(
             "messenger",
             "messenger apprentice",
             "denkeeper",
-            "denkeeper apprentice"
+            "denkeeper apprentice",
+            "gardener",
+            "gardener apprentice",
+            "storyteller",
+            "storyteller apprentice"
         ]:
             status = match.group(1)
             break
@@ -471,12 +477,12 @@ def create_new_cat_block(
             break
 
     if status and not age:
-        if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice"]:
+        if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "denkeeper apprentice", "caretaker apprentice", "messenger apprentice", "storyteller apprentice", "gardener apprentice"]:
             age = randint(
                 Cat.age_moons[CatAgeEnum.ADOLESCENT][0],
                 Cat.age_moons[CatAgeEnum.ADOLESCENT][1],
             )
-        elif status in ["warrior", "mediator", "medicine cat", "caretaker", "denkeeper", "messenger"]:
+        elif status in ["warrior", "mediator", "medicine cat", "caretaker", "denkeeper", "messenger", "gardener", "storyteller"]:
             age = randint(
                 Cat.age_moons["young adult"][0], Cat.age_moons["senior adult"][1]
             )
@@ -2935,7 +2941,7 @@ def generate_sprite(
         elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
                          'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
             new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE']:
+        elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE']:
             new_sprite.blit(sprites.sprites["skin_bingle2" + cat.pelt.skin + cat_sprite], (0, 0))
 
         else:
