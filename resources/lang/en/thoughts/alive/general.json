@@ -6607,7 +6607,14 @@
         "id": "gen_enemy",
         "thoughts":[
             "Wishes r_c would run away to another Clan",
-            "Wishes r_c would be exiled"
+            "Wishes r_c would be exiled",
+            "Is glaring at r_c from the shadows of camp",
+            "Spreads a nasty rumor about r_c",
+            "Hisses rigtht in r_c's face!",
+            "Trips r_c with {PRONOUN/m_c/poss} tail and acts innocent after",
+            "Steals the piece of prey r_c was eyeing",
+            "'Accidentally' unsheaths {PRONOUN/m_c/poss} claws around r_c",
+            "'Jokes' about pushing r_c off a cliff"
         ],
         "random_living_status": [
             "living"
