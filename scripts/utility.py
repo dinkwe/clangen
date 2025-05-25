@@ -2886,8 +2886,18 @@ def generate_sprite(
         # draw eyes & scars1
         neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
                  'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
+        
+        flutter_eyes = ['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS',
+                 'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
+    
+        lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
+                 'LAMP ORANGE', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDEGREEN']
         if cat.pelt.eye_colour in neos_eyes:
             eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in flutter_eyes:
+            eyes = sprites.sprites["flutter_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in lamp_eyes:
+            eyes = sprites.sprites["lamp_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         else:
             eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
 
@@ -2922,12 +2932,27 @@ def generate_sprite(
             )
             new_sprite.blit(sprites.sprites["lighting" + cat_sprite], (0, 0))
 
-        if not dead:
-            new_sprite.blit(sprites.sprites["lines" + cat_sprite], (0, 0))
-        elif cat.df:
-            new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
-        elif dead:
-            new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
+        if cat.pelt.eye_colour in flutter_eyes:
+            if not dead:
+                new_sprite.blit(sprites.sprites["flutter_lines" + cat_sprite], (0, 0))
+            elif cat.df:
+                new_sprite.blit(sprites.sprites["flutter_lineartdf" + cat_sprite], (0, 0))
+            elif dead:
+                new_sprite.blit(sprites.sprites["flutter_lineartdead" + cat_sprite], (0, 0))
+        elif cat.pelt.eye_colour in lamp_eyes:
+            if not dead:
+                new_sprite.blit(sprites.sprites["lamp_lines" + cat_sprite], (0, 0))
+            elif cat.df:
+                new_sprite.blit(sprites.sprites["lamp_lineartdf" + cat_sprite], (0, 0))
+            elif dead:
+                new_sprite.blit(sprites.sprites["lamp_lineartdead" + cat_sprite], (0, 0))
+        else:
+            if not dead:
+                new_sprite.blit(sprites.sprites["lines" + cat_sprite], (0, 0))
+            elif cat.df:
+                new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
+            elif dead:
+                new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
         if cat.pelt.skin in ['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
@@ -3061,6 +3086,11 @@ def generate_sprite(
                         elif accessory in cat.pelt.beetle_feathers:
                             new_sprite.blit(
                                 sprites.sprites["acc_beetlefeathers" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.lantern_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_lantern" + accessory + cat_sprite],
+                                (0, 0),
                             )
         # Apply fading fog
         if (

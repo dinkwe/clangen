@@ -193,6 +193,8 @@ class CustomizeCatScreen(Screens):
 
         self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
         self.eye_colours.sort()
+        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.flutter_eyes)]
+        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.lamp_eyes)]
         self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None

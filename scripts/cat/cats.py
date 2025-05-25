@@ -395,10 +395,20 @@ class Cat:
         neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
                  'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
         neon_eyes_chance = 10
+        flutter_eyes = ['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS',
+                 'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
+    
+        lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
+                 'LAMP ORANGE', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDEGREEN']
+        
         if self.awakened and self.awakened["type"] == "guide":
             neon_eyes_chance = 4
         if self.awakened and randint(1,neon_eyes_chance) == 1:
             self.pelt.eye_colour = choice(neos_eyes)
+        elif self.awakened and randint(1,20) == 1:
+            self.pelt.eye_colour = choice(flutter_eyes)
+        elif self.awakened and randint(1,20) == 1:
+            self.pelt.eye_colour = choice(lamp_eyes)
         
         magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
                        "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
@@ -415,21 +425,51 @@ class Cat:
              "MeteorSpeckled", "MeteorAgouti", "MeteorSokoke", "MeteorRosette", "MeteorSmoke",
              "MeteorSinglestripe", "MeteorMarbled", "MeteorBengal", "MeteorMasked"]
         
+        magiccolorshive = ["HiveSingle", "HiveTabby", "HiveTicked", "HiveMackerel", "HiveClassic",
+             "HiveSpeckled", "HiveAgouti", "HiveSokoke", "HiveRosette", "HiveSmoke",
+             "HiveSinglestripe", "HiveMarbled", "HiveBengal", "HiveMasked"]
+        
+        magiccolorspepper = ["PepperSingle", "PepperTabby", "PepperTicked", "PepperMackerel", "PepperClassic",
+             "PepperSpeckled", "PepperAgouti", "PepperSokoke", "PepperRosette", "PepperSmoke",
+             "PepperSinglestripe", "PepperMarbled", "PepperBengal"]
+        
         if not self.awakened and self.pelt.name in magiccolors:
             self.pelt.name.replace('CS', '')
         if not self.awakened and self.pelt.name in magiccolorskris:
             self.pelt.name.replace('Kris', '')
         if not self.awakened and self.pelt.name in magiccolorsmeteor:
             self.pelt.name.replace('Meteor', '')
+        if not self.awakened and self.pelt.name in magiccolorshive:
+            self.pelt.name.replace('Hive', '')
+        if not self.awakened and self.pelt.name in magiccolorspepper:
+            self.pelt.name.replace('Pepper', '')
         
-        allmagic = magiccolors + magiccolorskris + magiccolorsmeteor
+        allmagic = magiccolors + magiccolorskris + magiccolorsmeteor + magiccolorshive + magiccolorspepper
         if self.awakened and self.pelt.name not in allmagic:
-            if randint(1,4) == 1:
-                colorful_chance = randint(1,4)
+            if randint(1,3) == 1:
+                colorful_chance = randint(1,7)
                 if colorful_chance == 1:
                     self.pelt.name = choice(magiccolorskris)
                 elif colorful_chance == 2:
                     self.pelt.name = choice(magiccolorsmeteor)
+                elif colorful_chance == 3:
+                    self.pelt.name = choice(magiccolorshive)
+                elif colorful_chance == 4:
+                    self.pelt.name = choice(magiccolorspepper)
+                else:
+                    self.pelt.name = choice(magiccolors)
+        elif self.pelt.name not in allmagic:
+            if randint(1,20) == 1:
+                colorful_chance = randint(1,7)
+                if colorful_chance == 1:
+                    self.pelt.name = choice(magiccolorskris)
+                elif colorful_chance == 2 or colorful_chance == 5:
+                    self.pelt.name = choice(magiccolorsmeteor)
+                elif colorful_chance == 3:
+                    self.pelt.name = choice(magiccolorshive)
+                elif colorful_chance == 4:
+                    self.pelt.name = choice(magiccolorspepper)
+
                 else:
                     self.pelt.name = choice(magiccolors)
         
