@@ -406,12 +406,32 @@ class Cat:
                        "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
                        "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
                        "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
+
+        magiccolorskris = ["KrisSingle", "KrisTabby", "KrisTicked", "KrisMackerel", "KrisClassic",
+                       "KrisSpeckled", "KrisAgouti", "KrisSokoke", "KrisRosette", "KrisSmoke",
+                       "KrisSinglestripe", "KrisMarbled", "KrisBengal", "KrisMasked"]
+        
+        magiccolorsmeteor = ["MeteorSingle", "MeteorTabby", "MeteorTicked", "MeteorMackerel", "MeteorClassic",
+             "MeteorSpeckled", "MeteorAgouti", "MeteorSokoke", "MeteorRosette", "MeteorSmoke",
+             "MeteorSinglestripe", "MeteorMarbled", "MeteorBengal", "MeteorMasked"]
+        
         if not self.awakened and self.pelt.name in magiccolors:
             self.pelt.name.replace('CS', '')
-        elif self.awakened and self.pelt.name not in magiccolors:
-            colorful_chance = randint(1,4)
-            if colorful_chance == 1:
-                self.pelt.name = choice(magiccolors)
+        if not self.awakened and self.pelt.name in magiccolorskris:
+            self.pelt.name.replace('Kris', '')
+        if not self.awakened and self.pelt.name in magiccolorsmeteor:
+            self.pelt.name.replace('Meteor', '')
+        
+        allmagic = magiccolors + magiccolorskris + magiccolorsmeteor
+        if self.awakened and self.pelt.name not in allmagic:
+            if randint(1,4) == 1:
+                colorful_chance = randint(1,4)
+                if colorful_chance == 1:
+                    self.pelt.name = choice(magiccolorskris)
+                elif colorful_chance == 2:
+                    self.pelt.name = choice(magiccolorsmeteor)
+                else:
+                    self.pelt.name = choice(magiccolors)
         
         # Private Sprite
         self._sprite = None

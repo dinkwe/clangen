@@ -182,6 +182,9 @@ class CustomizeCatScreen(Screens):
 
         self.skins = copy(Pelt.skin_sprites)
         self.skins.sort()
+        magic_skins = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + copy(Pelt.skin_sprites_math) + copy(Pelt.skin_sprites_bingle) + ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE']
+        magic_skins.sort()
+        self.skins += magic_skins
         self.skin_label = None
         self.skin_dropdown = None
 
@@ -190,6 +193,7 @@ class CustomizeCatScreen(Screens):
 
         self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
         self.eye_colours.sort()
+        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None
         self.heterochromia_text = None
@@ -212,6 +216,7 @@ class CustomizeCatScreen(Screens):
         self.accessories = list(
             dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.bows_accessories + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.wild_accessories + Pelt.tail_accessories + Pelt.collars + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories + Pelt.randomaccessories + Pelt.sailormoon + Pelt.chime_accessories + Pelt.lantern_accessories + Pelt.beetle_feathers + Pelt.beetle_accessories))
         self.accessories.sort()
+        self.accessories += copy(Pelt.colorsplash_accessories)
         self.accessories.insert(0, "None")
         self.accessory_label = None
         self.accessory_dropdown = None
@@ -313,20 +318,7 @@ class CustomizeCatScreen(Screens):
         """------------------------------------------------------------------------------------------------------------#
         #                                              DROPDOWN SETUP START                                            #
         # ------------------------------------------------------------------------------------------------------------"""
-        magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
-                       "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
-                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked",
-                       "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
-                       "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
-                       "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
-        
-        if not self.the_cat.awakened:
-            for item in magiccolors:
-                if item in self.pelt_names:
-                    self.pelt_names.remove(item)
-        elif self.the_cat.awakened and 'CSAgouti' not in self.pelt_names:
-            self.pelt_names +=magiccolors
-        
+                
         self.pelt_name_dropdown = create_dropdown((320, 125), (135, 40),
                                                   create_options_list(self.pelt_names, "capitalize"),
                                                   get_selected_option(self.the_cat.pelt.name, "capitalize"))
@@ -359,12 +351,6 @@ class CustomizeCatScreen(Screens):
                                                                                "lower"))
         self.tint_dropdown = create_dropdown((480, 360), (135, 40), create_options_list(self.tints, "lower"),
                                              get_selected_option(self.the_cat.pelt.tint, "lower"))
-        if self.the_cat.awakened and 'FLAMES' not in self.skins:
-            magic_skin_temp = copy(Pelt.skin_sprites_magic) + copy(Pelt.skin_sprites_elemental) + copy(Pelt.skin_sprites_math) +  copy(Pelt.skin_sprites_bingle)  + ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE']
-            magic_skin_temp.sort()
-            self.skins += magic_skin_temp
-        elif not self.the_cat.awakened and 'FLAMES' in self.skins:
-            self.skins = copy(Pelt.skin_sprites)
 
         self.skin_dropdown = create_dropdown((640, 360), (135, 40), create_options_list(self.skins, "upper"),
                                              get_selected_option(self.the_cat.pelt.skin, "upper"))
@@ -383,8 +369,7 @@ class CustomizeCatScreen(Screens):
                                                         get_selected_option(self.the_cat.pelt.eye_colour2,
                                                                             "upper") if self.the_cat.pelt.eye_colour2 else get_selected_option(
                                                             self.the_cat.pelt.eye_colour, "upper")))
-        if self.the_cat.awakened and 'CSYELLOWHORN' not in self.accessories:
-            self.accessories += copy(Pelt.colorsplash_accessories)
+
         self.accessory_dropdown = create_dropdown((568, 525), (180, 40), create_options_list(self.accessories, "upper"),
                                                   get_selected_option(self.the_cat.pelt.accessory, "upper"), "dropup")
 
