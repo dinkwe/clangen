@@ -2891,13 +2891,18 @@ def generate_sprite(
                  'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
     
         lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
-                 'LAMP ORANGE', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDEGREEN']
+                 'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
+        angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
+                 'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
+        
         if cat.pelt.eye_colour in neos_eyes:
             eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         elif cat.pelt.eye_colour in flutter_eyes:
             eyes = sprites.sprites["flutter_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         elif cat.pelt.eye_colour in lamp_eyes:
             eyes = sprites.sprites["lamp_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in angel_eyes:
+            eyes = sprites.sprites["angel_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         else:
             eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
 
@@ -2906,6 +2911,12 @@ def generate_sprite(
                 eyes.blit(
                     sprites.sprites["neos_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
                 )
+            elif cat.pelt.eye_colour2 in flutter_eyes:
+                eyes.blit(sprites.sprites["flutter_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in lamp_eyes:
+                eyes.blit(sprites.sprites["lamp_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in angel_eyes:
+                eyes.blit(sprites.sprites["angel_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
             else:
                 eyes.blit(
                     sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0)
@@ -3091,6 +3102,14 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_lantern" + accessory + cat_sprite],
                                 (0, 0),
+                            )
+                        elif accessory in cat.pelt.neckerchiefs:
+                            new_sprite.blit(
+                                sprites.sprites["acc_neckerchief" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.witchhats:
+                            new_sprite.blit(
+                                sprites.sprites["acc_witchhat" + accessory + cat_sprite], (0, 0)
                             )
         # Apply fading fog
         if (

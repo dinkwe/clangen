@@ -23,6 +23,9 @@ class Pelt:
         'MeteorSingle': 'meteorsingle',
         'HiveSingle': 'hivesingle',
         'PepperSingle': 'peppersingle',
+        'HetaSingle': 'hetasingle',
+        'PastelSingle': 'pastelsingle',
+        'SparkleSingle': 'sparklesingle',
         'TwoColour': 'single',
         'Tabby': 'tabby',
         'Stertabby': 'stertabby',
@@ -35,6 +38,9 @@ class Pelt:
         'MeteorTabby': 'meteortabby',
         'HiveTabby': 'hivetabby',
         'PepperTabby': 'peppertabby',
+        'HetaTabby': 'hetatabby',
+        'PastelTabby': 'pasteltabby',
+        'SparkleTabby': 'sparkletabby',
         'Marbled': 'marbled',
         'Stermarbled': 'stermarbled',
         'Sillymarbled': 'sillymarbled',
@@ -46,6 +52,9 @@ class Pelt:
         'MeteorMarbled': 'meteormarbled',
         'HiveMarbled': 'hivemarbled',
         'PepperMarbled': 'peppermarbled',
+        'HetaMarbled': 'hetamarbled',
+        'PastelMarbled': 'pastelmarbled',
+        'SparkleMarbled': 'sparklemarbled',
         'Rosette': 'rosette',
         'Sterrosette': 'sterrosette',
         'Sillyrosette': 'sillyrosette',
@@ -57,6 +66,9 @@ class Pelt:
         'MeteorRosette': 'meteorrosette',
         'HiveRosette': 'hiverosette',
         'PepperRosette': 'pepperrosette',
+        'HetaRosette': 'hetarosette',
+        'PastelRosette': 'pastelrosette',
+        'SparkleRosette': 'sparklerosette',
         'Smoke': 'smoke',
         'Stersmoke': 'stersmoke',
         'Sillysmoke': 'sillysmoke',
@@ -68,6 +80,9 @@ class Pelt:
         'MeteorSmoke': 'meteorsmoke',
         'HiveSmoke': 'hivesmoke',
         'PepperSmoke': 'peppersmoke',
+        'HetaSmoke': 'hetasmoke',
+        'PastelSmoke': 'pastelsmoke',
+        'SparkleSmoke': 'sparklesmoke',
         'Ticked': 'ticked',
         'Sterticked': 'sterticked',
         'Sillyticked': 'sillyticked',
@@ -79,6 +94,9 @@ class Pelt:
         'MeteorTicked': 'meteorticked',
         'HiveTicked': 'hiveticked',
         'PepperTicked': 'pepperticked',
+        'HetaTicked': 'hetasingle',
+        'PastelTicked': 'pastelticked',
+        'SparkleTicked': 'sparkleticked',
         'Speckled': 'speckled',
         'Sterspeckled': 'sterspeckled',
         'Sillyspeckled': 'sillyspeckled',
@@ -90,6 +108,9 @@ class Pelt:
         'MeteorSpeckled': 'meteorspeckled',
         'HiveSpeckled': 'hivespeckled',
         'PepperSpeckled': 'pepperspeckled',
+        'HetaSpeckled': 'hetaspeckled',
+        'PastelSpeckled': 'pastelspeckled',
+        'SparkleSpeckled': 'sparklespeckled',
         'Bengal': 'bengal',
         'Sterbengal': 'sterbengal',
         'Sillybengal': 'sillybengal',
@@ -101,6 +122,9 @@ class Pelt:
         'MeteorBengal': 'meteorbengal',
         'HiveBengal': 'hivebengal',
         'PepperBengal': 'pepperbengal',
+        'HetaBengal': 'hetabengal',
+        'PastelBengal': 'pastelbengal',
+        'SparkleBengal': 'sparklebengal',
         'Mackerel': 'mackerel',
         'Stermackerel': 'stermackerel',
         'Sillymackerel': 'sillymackerel',
@@ -112,6 +136,9 @@ class Pelt:
         'MeteorMackerel': 'meteormackerel',
         'HiveMackerel': 'hivemackerel',
         'PepperMackerel': 'peppermackerel',
+        'HetaMackerel': 'hetamackerel',
+        'PastelMackerel': 'pastelmackerel',
+        'SparkleMackerel': 'sparklemackerel',
         'Classic': 'classic',
         'Sterclassic': 'sterclassic',
         'Sillyclassic': 'sillyclassic',
@@ -123,6 +150,9 @@ class Pelt:
         'MeteorClassic': 'meteorclassic',
         'HiveClassic': 'hiveclassic',
         'PepperClassic': 'pepperclassic',
+        'HetaClassic': 'hetaclassic',
+        'PastelClassic': 'pastelclassic',
+        'SparkleClassic': 'sparkleclassic',
         'Sokoke': 'sokoke',
         'Stersokoke': 'stersokoke',
         'Sillysokoke': 'sillysokoke',
@@ -134,6 +164,9 @@ class Pelt:
         'MeteorSokoke': 'meteorsokoke',
         'HiveSokoke': 'hivesokoke',
         'PepperSokoke': 'peppersokoke',
+        'HetaSokoke': 'hetasokoke',
+        'PastelSokoke': 'pastelsokoke',
+        'SparkleSokoke': 'sparklesokoke',
         'Agouti': 'agouti',
         'CSAgouti': 'cs_agouti',
         'CS2Agouti': 'cs_agouti2',
@@ -141,6 +174,9 @@ class Pelt:
         'MeteorAgouti': 'meteoragouti',
         'HiveAgouti': 'hiveagouti',
         'PepperAgouti': 'pepperagouti',
+        'HetaAgouti': 'hetaagouti',
+        'PastelAgouti': 'pastelagouti',
+        'SparkleAgouti': 'sparkleagouti',
         'Singlestripe': 'singlestripe',
         'Sterstripe': 'sterstripe',
         'Sillystripe': 'sillystripe',
@@ -152,6 +188,9 @@ class Pelt:
         'MeteorSinglestripe': 'meteorsinglestripe',
         'HiveSinglestripe': 'hivesinglestripe',
         'PepperSinglestripe': 'peppersinglestripe',
+        'HetaSinglestripe': 'hetasinglestripe',
+        'PastelSinglestripe': 'pastelsinglestripe',
+        'SparkleSinglestripe': 'sparklesinglestripe',
         'Masked': 'masked',
         'Stermasked': 'stermasked',
         'Sillymasked': 'sillymasked',
@@ -162,6 +201,7 @@ class Pelt:
         'KrisMasked': 'krismasked',
         'MeteorMasked': 'meteormasked',
         'HiveMasked': 'hivemasked',
+        'SparkleMasked': 'sparklemasked',
         'Brindle': 'brindle',
         'Wolf': 'wolf',
         'Wildcat': 'wildcat',
@@ -277,7 +317,13 @@ class Pelt:
                    'hivesingle', 'hivetabby', 'hivebengal', 'hivemarbled', 'hiveticked','hivesmoke', 'hiverosette', 'hivespeckled', 'hivemackerel',
                    'hiveclassic', 'hivesokoke', 'hiveagouti', 'hivesinglestripe', 'hivemasked',
                    'peppersingle', 'peppertabby', 'pepperbengal', 'peppermarbled', 'pepperticked','peppersmoke', 'pepperrosette', 'pepperspeckled', 'peppermackerel',
-                   'pepperclassic', 'peppersokoke', 'pepperagouti', 'peppersinglestripe']
+                   'pepperclassic', 'peppersokoke', 'pepperagouti', 'peppersinglestripe',
+                   'hetasingle', 'hetatabby', 'hetabengal', 'hetamarbled', 'hetaticked','hetasmoke', 'hetarosette', 'hetaspeckled', 'hetamackerel',
+                   'hetaclassic', 'hetasokoke', 'hetaagouti', 'hetasinglestripe',
+                   'pastelsingle', 'pasteltabby', 'pastelbengal', 'pastelmarbled', 'pastelticked','pastelsmoke', 'pastelrosette', 'pastelspeckled', 'pastelmackerel',
+                   'pastelclassic', 'pastelsokoke', 'pastelagouti', 'pastelsinglestripe',
+                   'sparklesingle', 'sparkletabby', 'sparklebengal', 'sparklemarbled', 'sparkleticked','sparklesmoke', 'sparklerosette', 'sparklespeckled', 'sparklemackerel',
+                   'sparkleclassic', 'sparklesokoke', 'sparkleagouti', 'sparklesinglestripe', 'sparklemasked']
 
     pelt_length = ["short", "medium", "long"]
     #please dontjudge the eye_colours section
@@ -312,7 +358,10 @@ class Pelt:
                  'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
     
     lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
-                 'LAMP ORANGE', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDEGREEN']
+                 'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
+    
+    angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
+                 'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
     
     physical_trait_teeth = ['TEETHUPPER', 'TEETHSABRE', 'TEETHUNDERBITE', 'TEETHOVERBITE', 'TEETHHANG', 'TEETHJAGGED', 'TEETHTUSK', 'TEETHGONE', 'TEETHCHIPPED']
     physical_trait_ear_type = ['EARSMALL', 'EARBIG', 'EARTALL', 'EARPANTHER', 'EARWIDE', 'EARFLUFFY', "EARRABBIT", 'EARDROOPY']
@@ -377,15 +426,14 @@ class Pelt:
                           "BLUETAILED SKINK", "BLACKHEADED ORIOLE", "MILKSNAKE", "WORM FRIEND"]
     beetle_feathers = ["THRUSH FEATHERS", "GOLDFINCH FEATHERS", "DOVE FEATHERS", "PEACOCK FEATHERS", "HAWK FEATHERS",
                        "BLUE JAY FEATHERS", "ROBIN FEATHERS", "FIERY FEATHERS", "SUNSET FEATHERS", "SILVER FEATHERS"]
-    # dad accessories
-    toy_accessories = ["BALL", "MOUSE", "BONE"]
-    blankie_accessories = ["MOSSBLANKIE"]
-    flag_accessories = ["AUTISMFLAG", "DISFLAG", "ZEBFLAG"]
-    booties = [
-        "CRIMSONBOOT", "BLUEBOOT", "YELLOWBOOT", "CYANBOOT", "REDBOOT", "LIMEBOOT", "GREENBOOT",
-        "RAINBOWBOOT", "BLACKBOOT", "BROWNBOOT", "WHITEBOOT", "PINKBOOT", "PURPLEBOOT", "MULTIBOOT", "INDIGOBOOT"
-    ]
-    wheels = ["WHEELS"]
+    
+    neckerchiefs = ["WHITE NECKERCHIEF", "BABYBLUE NECKERCHIEF", "LIGHTPURPLE NECKERCHIEF", "BLUE NECKERCHIEF", "PURPLE NECKERCHIEF", "DARKPURPLE NECKERCHIEF",
+                    "LIGHTPINK NECKERCHIEF", "LIGHTYELLOW NECKERCHIEF", "PINK NECKERCHIEF", "ORANGE NECKERCHIEF", "RED NECKERCHIEF",
+                    "CYAN NECKERCHIEF", "YELLOWGREEN NECKERCHIEF", "TURQUOISE NECKERCHIEF", "GREEN NECKERCHIEF"]
+    
+    witchhats = ["WHITE WITCHHAT", "BABYBLUE WITCHHAT", "LIGHTPURPLE WITCHHAT", "BLUE WITCHHAT", "PURPLE WITCHHAT", "DARKPURPLE WITCHHAT",
+                    "LIGHTPINK WITCHHAT", "LIGHTYELLOW WITCHHAT", "PINK WITCHHAT", "ORANGE WITCHHAT", "RED WITCHHAT",
+                    "CYAN WITCHHAT", "YELLOWGREEN WITCHHAT", "TURQUOISE WITCHHAT", "GREEN WITCHHAT"]
     
     collars = [
         "CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME", "GREEN", "RAINBOW",
@@ -611,7 +659,10 @@ class Pelt:
         "DANDELION PUFFS",
         "DICE",
         "GOLDEN EARRINGS",
-        "SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS"
+        "SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS",
+        "WHITE WITCHHAT", "BABYBLUE WITCHHAT", "LIGHTPURPLE WITCHHAT", "BLUE WITCHHAT", "PURPLE WITCHHAT", "DARKPURPLE WITCHHAT",
+        "LIGHTPINK WITCHHAT", "LIGHTYELLOW WITCHHAT", "PINK WITCHHAT", "ORANGE WITCHHAT", "RED WITCHHAT",
+        "CYAN WITCHHAT", "YELLOWGREEN WITCHHAT", "TURQUOISE WITCHHAT", "GREEN WITCHHAT"
     ]
 
     body_accessories = [
@@ -700,9 +751,9 @@ class Pelt:
         "RACCOON LEAF",
         "WHITE RACCOON LEAF",
         "LANTERN",
-        "WHEELS", "BALL", "MOUSE", "BONE", "MOSSBLANKIE", "AUTISMFLAG", "DISFLAG", "ZEBFLAG",
-        "CRIMSONBOOT", "BLUEBOOT", "YELLOWBOOT", "CYANBOOT", "REDBOOT", "LIMEBOOT", "GREENBOOT",
-        "RAINBOWBOOT", "BLACKBOOT", "BROWNBOOT", "WHITEBOOT", "PINKBOOT", "PURPLEBOOT", "MULTIBOOT", "INDIGOBOOT"
+        "WHITE NECKERCHIEF", "BABYBLUE NECKERCHIEF", "LIGHTPURPLE NECKERCHIEF", "BLUE NECKERCHIEF", "PURPLE NECKERCHIEF", "DARKPURPLE NECKERCHIEF",
+        "LIGHTPINK NECKERCHIEF", "LIGHTYELLOW NECKERCHIEF", "PINK NECKERCHIEF", "ORANGE NECKERCHIEF", "RED NECKERCHIEF",
+        "CYAN NECKERCHIEF", "YELLOWGREEN NECKERCHIEF", "TURQUOISE NECKERCHIEF", "GREEN NECKERCHIEF"
     
     ]
 
@@ -796,7 +847,16 @@ class Pelt:
              "HiveSinglestripe", "HiveMarbled", "HiveBengal", "HiveMasked",
              "PepperSingle", "PepperTabby", "PepperTicked", "PepperMackerel", "PepperClassic",
              "PepperSpeckled", "PepperAgouti", "PepperSokoke", "PepperRosette", "PepperSmoke",
-             "PepperSinglestripe", "PepperMarbled", "PepperBengal"]
+             "PepperSinglestripe", "PepperMarbled", "PepperBengal",
+             "HetaSingle", "HetaTabby", "HetaTicked", "HetaMackerel", "HetaClassic",
+             "HetaSpeckled", "HetaAgouti", "HetaSokoke", "HetaRosette", "HetaSmoke",
+             "HetaSinglestripe", "HetaMarbled", "HetaBengal",
+             "PastelSingle", "PastelTabby", "PastelTicked", "PastelMackerel", "PastelClassic",
+             "PastelSpeckled", "PastelAgouti", "PastelSokoke", "PastelRosette", "PastelSmoke",
+             "PastelSinglestripe", "PastelMarbled", "PastelBengal",
+             "SparkleSingle", "SparkleTabby", "SparkleTicked", "SparkleMackerel", "SparkleClassic",
+             "SparkleSpeckled", "SparkleAgouti", "SparkleSokoke", "SparkleRosette", "SparkleSmoke",
+             "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked"]
     pelt_categories = [tabbies, spotted, plain, exotic, magic, torties]
 
     # SPRITE NAMES
