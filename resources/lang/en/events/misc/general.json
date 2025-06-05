@@ -74,7 +74,7 @@
     "m_c": {
       "age": ["any"],
       "status": ["any"],
-      "trait": ["vengeful", "uncaring", "unimaginative", "arguementative", "teacherly", "spontainious", "moody", "chaotic", "unpredictable", "unreliable", "goofy", "destructive", "righteous", "rebellious", "forceful", "troublesome", "bloodthirsty", "fierce", "cold"]
+      "trait": ["vengeful", "uncaring", "unimaginative", "argumentative", "teacherly", "spontainious", "moody", "chaotic", "unpredictable", "unreliable", "goofy", "destructive", "righteous", "rebellious", "forceful", "troublesome", "bloodthirsty", "fierce", "cold"]
     },
     "relationships": [
       {

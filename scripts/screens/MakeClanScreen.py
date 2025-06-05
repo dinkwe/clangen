@@ -1300,7 +1300,7 @@ class MakeClanScreen(Screens):
         """Get tooltip for cat. Tooltip displays name, sex, age group, and trait."""
         text = ""
         if cat.permanent_condition:
-           text += f"<br>has a permanent condtion!"
+           text += f"<br>has a permanent condition!"
         if cat.awakened:
             if cat.awakened["type"] in ["esper", "guide"]:
                 text += "\n" + cat.awakened["class"] + "-class " + cat.awakened["type"]

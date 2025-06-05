@@ -172,7 +172,8 @@ class Sprites:
             'pastelagouticolours', 'pastelbengalcolours', 'pastelclassiccolours', 'pastelmackerelcolours', 'pastelmarbledcolours', 'pastelrosettecolours',
             'pastelsinglecolours', 'pastelsinglestripecolours', 'pastelsmokecolours', 'pastelsokokecolours', 'pastelspeckledcolours', 'pasteltabbycolours','pasteltickedcolours',
             'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
-            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours'
+            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
+            'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours'
         ]:
             if "lineart" in x and (game.config["fun"]["april_fools"] or is_today(SpecialDate.APRIL_FOOLS)):
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -436,7 +437,8 @@ class Sprites:
             'pastelagouticolours', 'pastelbengalcolours', 'pastelclassiccolours', 'pastelmackerelcolours', 'pastelmarbledcolours', 'pastelrosettecolours',
             'pastelsinglecolours', 'pastelsinglestripecolours', 'pastelsmokecolours', 'pastelsokokecolours', 'pastelspeckledcolours', 'pasteltabbycolours','pasteltickedcolours',
             'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
-            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours'
+            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
+            'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours'
         ]
 
         for row, colors in enumerate(color_categories):

@@ -125,6 +125,7 @@ class Pelt:
         'HetaBengal': 'hetabengal',
         'PastelBengal': 'pastelbengal',
         'SparkleBengal': 'sparklebengal',
+        'PrideBengal': 'pridebengal',
         'Mackerel': 'mackerel',
         'Stermackerel': 'stermackerel',
         'Sillymackerel': 'sillymackerel',
@@ -139,6 +140,7 @@ class Pelt:
         'HetaMackerel': 'hetamackerel',
         'PastelMackerel': 'pastelmackerel',
         'SparkleMackerel': 'sparklemackerel',
+        'PrideMackerel': 'pridemackerel',
         'Classic': 'classic',
         'Sterclassic': 'sterclassic',
         'Sillyclassic': 'sillyclassic',
@@ -153,6 +155,7 @@ class Pelt:
         'HetaClassic': 'hetaclassic',
         'PastelClassic': 'pastelclassic',
         'SparkleClassic': 'sparkleclassic',
+        'PrideClassic': 'prideclassic',
         'Sokoke': 'sokoke',
         'Stersokoke': 'stersokoke',
         'Sillysokoke': 'sillysokoke',
@@ -177,6 +180,7 @@ class Pelt:
         'HetaAgouti': 'hetaagouti',
         'PastelAgouti': 'pastelagouti',
         'SparkleAgouti': 'sparkleagouti',
+        'PrideAgouti': 'prideagouti',
         'Singlestripe': 'singlestripe',
         'Sterstripe': 'sterstripe',
         'Sillystripe': 'sillystripe',
@@ -323,7 +327,8 @@ class Pelt:
                    'pastelsingle', 'pasteltabby', 'pastelbengal', 'pastelmarbled', 'pastelticked','pastelsmoke', 'pastelrosette', 'pastelspeckled', 'pastelmackerel',
                    'pastelclassic', 'pastelsokoke', 'pastelagouti', 'pastelsinglestripe',
                    'sparklesingle', 'sparkletabby', 'sparklebengal', 'sparklemarbled', 'sparkleticked','sparklesmoke', 'sparklerosette', 'sparklespeckled', 'sparklemackerel',
-                   'sparkleclassic', 'sparklesokoke', 'sparkleagouti', 'sparklesinglestripe', 'sparklemasked']
+                   'sparkleclassic', 'sparklesokoke', 'sparkleagouti', 'sparklesinglestripe', 'sparklemasked',
+                   'prideagouti','pridebengal', 'prideclassic', 'pridemackerel']
 
     pelt_length = ["short", "medium", "long"]
     #please dontjudge the eye_colours section
@@ -856,7 +861,8 @@ class Pelt:
              "PastelSinglestripe", "PastelMarbled", "PastelBengal",
              "SparkleSingle", "SparkleTabby", "SparkleTicked", "SparkleMackerel", "SparkleClassic",
              "SparkleSpeckled", "SparkleAgouti", "SparkleSokoke", "SparkleRosette", "SparkleSmoke",
-             "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked"]
+             "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked",
+             "PrideAgouti", "PrideBengal", 'PrideClassic', 'PrideMackerel']
     pelt_categories = [tabbies, spotted, plain, exotic, magic, torties]
 
     # SPRITE NAMES

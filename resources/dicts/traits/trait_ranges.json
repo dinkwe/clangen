@@ -1212,7 +1212,7 @@
             "aggression": [0, 4],
             "stability": [0, 5]
         },
-        "arguementative": {
+        "argumentative": {
             "lawfulness": [8, 16],
             "sociability": [2, 10],
             "aggression": [10, 16],
