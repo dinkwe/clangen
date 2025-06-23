@@ -7,6 +7,7 @@ import pygame
 import pygame_gui
 
 from scripts.cat.cats import Cat
+from scripts.cat.enums import CatAgeEnum
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
 from scripts.game_structure.ui_elements import (
@@ -115,6 +116,9 @@ class RoleScreen(Screens):
             elif event.ui_element == self.switch_storyteller_app:
                 self.the_cat.status_change("storyteller apprentice", resort=True)
                 self.update_selected_cat()
+            elif event.ui_element == self.rekit:
+                self.the_cat.status_change("kitten", resort=True)
+                self.update_selected_cat()
 
         elif event.type == pygame.KEYDOWN and game.settings["keybinds"]:
             if event.key == pygame.K_ESCAPE:
@@ -190,6 +194,13 @@ class RoleScreen(Screens):
             get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
             object_id="@buttonstyles_ladder_middle",
             anchors={"top_target": self.promote_deputy},
+        )
+        self.rekit = UISurfaceImageButton(
+            ui_scale(pygame.Rect((48, 0), (172, 36))),
+            "screens.role.rekit",
+            get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+            object_id="@buttonstyles_ladder_middle",
+            anchors={"top_target": self.retire},
         )
 
         # WARRIOR ROLES
@@ -477,6 +488,7 @@ class RoleScreen(Screens):
         self.switch_gardener.disable()
         self.switch_storyteller.disable()
         self.retire.disable()
+        self.rekit.disable()
         
         self.switch_med_app.disable()
         self.switch_warrior_app.disable()
@@ -499,24 +511,37 @@ class RoleScreen(Screens):
             self.switch_denkeeper_app.enable()
             self.switch_gardener_app.enable()
             self.switch_storyteller_app.enable()
+            self.rekit.enable()
             
             if self.the_cat.status == "apprentice":
-                self.switch_warrior_app.disable()
+                self.switch_warrior_app.disable(),self.switch_warrior.enable()
             elif self.the_cat.status == "medicine cat apprentice":
-                self.switch_med_app.disable()
+                self.switch_med_app.disable(),self.switch_med_cat.enable()
             elif self.the_cat.status == "mediator apprentice":
-                self.switch_mediator_app.disable()
+                self.switch_mediator_app.disable(),self.switch_mediator.enable()
             elif self.the_cat.status == "caretaker apprentice":
-                self.switch_caretaker_app.disable()
+                self.switch_caretaker_app.disable(),self.switch_caretaker.enable()
             elif self.the_cat.status == "messenger apprentice":
-                self.switch_messenger_app.disable()
+                self.switch_messenger_app.disable(),self.switch_messenger.enable()
             elif self.the_cat.status == "denkeeper apprentice":
-                self.switch_denkeeper_app.disable()
+                self.switch_denkeeper_app.disable(),self.switch_denkeeper.enable()
             elif self.the_cat.status == "gardener apprentice":
-                self.switch_gardener_app.disable()
+                self.switch_gardener_app.disable(),self.switch_gardener.enable()
             elif self.the_cat.status == "storyteller apprentice":
-                self.switch_storyteller_app.disable()
-                
+                self.switch_storyteller_app.disable(),self.switch_storyteller.enable()
+        #next we check if they're a kit
+        elif self.the_cat.status in ["kitten"]:
+            #ENABLE ALL TRAININGS
+            self.switch_med_app.enable()
+            self.switch_warrior_app.enable()
+            self.switch_mediator_app.enable()
+            self.switch_caretaker_app.enable()
+            self.switch_messenger_app.enable()
+            self.switch_denkeeper_app.enable()
+            self.switch_gardener_app.enable()
+            self.switch_storyteller_app.enable()
+            self.rekit.disable()
+    
         #now we check for leader/deputy eligible roles
         elif self.the_cat.status in ["elder","warrior", "mediator", "messenger", "caretaker", "denkeeper", "storyteller", "gardener"]:
             if leader_invalid:
@@ -534,6 +559,24 @@ class RoleScreen(Screens):
             self.switch_gardener.enable()
             self.switch_storyteller.enable()
             self.retire.enable()
+            self.rekit.disable()
+
+            #demote
+            if self.the_cat.age in ["adolescent","kitten","newborn"]:
+                if self.the_cat.status=="warrior":
+                    self.switch_warrior_app.enable()
+                if self.the_cat.status=="mediator":
+                    self.switch_mediator_app.enable()
+                if self.the_cat.status=="caretaker":
+                    self.switch_caretaker_app.enable()
+                if self.the_cat.status=="messenger":
+                    self.switch_messenger_app.enable()
+                if self.the_cat.status=="denkeeper":
+                    self.switch_denkeeper_app.enable()
+                if self.the_cat.status=="gardener":
+                    self.switch_gardener_app.enable()
+                if self.the_cat.status=="storyteller":
+                    self.switch_storyteller_app.enable()
             
             if self.the_cat.status == "elder":
                 self.retire.disable()
@@ -561,6 +604,9 @@ class RoleScreen(Screens):
             self.switch_storyteller.enable()
             self.switch_gardener.enable()
             self.retire.enable()
+            self.rekit.disable()
+            if self.the_cat.age in ["adolescent","kitten","newborn"]:
+                self.switch_med_app.enable()
         
         elif self.the_cat.status == "deputy":
             self.switch_warrior.enable()
@@ -646,6 +692,8 @@ class RoleScreen(Screens):
         del self.switch_caretaker_app
         self.switch_denkeeper_app.kill()
         del self.switch_denkeeper_app
+        self.rekit.kill()
+        del self.rekit
         self.blurb_background.kill()
         del self.blurb_background
 

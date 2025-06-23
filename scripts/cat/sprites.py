@@ -124,15 +124,15 @@ class Sprites:
 
         for x in [
             'lineart', 'lineartdf', 'lineartdead', 'flutter_lineart', 'flutter_lineartdf', 'flutter_lineartdead', 'lamp_lineart', 'lamp_lineartdf', 'lamp_lineartdead',
-            'eyes', 'eyes2', 'skin', 'skin_magic', 'skin_elemental', 'skin_bingle', 'skin_bingle2','skin_mathkangaroo','eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
-            'scars', 'missingscars', 'wild', 'eyes_wing', 'eyes2_halo', 'colorsplash_neckerchief', 'colorsplash_witchhat',
+            'eyes', 'eyes2', 'skin', 'skin_magic' , 'skin_elemental', 'skin_bingle', 'skin_bingle2', 'skin_mathkangaroo', 'eyesdark', 'dark2', 'eyesvivid', 'vivid2', 'towheeeyes', 'towheeeyes2',
+            'scars', 'missingscars', 'wild', 'eyes_wing', 'eyes2_halo', 'colorsplash_neckerchief', 'colorsplash_witchhat', 'skin_stain', 'skin_turtle', 'eyes_snail',
             'medcatherbs', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2', 'neos_eyes', 'neos_eyes2', 'lamp_eyes', 'flutter_eyes', 'flutter_eyes2',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars', 'colorsplash_horn', 'colorsplash_kitsune', 'colorsplash_mermaid',
             'singlecolours', 'speckledcolours', 'tabbycolours', 'bengalcolours', 'marbledcolours',
             'rosettecolours', 'smokecolours', 'tickedcolours', 'mackerelcolours', 'classiccolours',
             'sokokecolours', 'agouticolours', 'singlestripecolours', 'maskedcolours',
             'manedcolours',  'ocelotcolours', 'lynxcolours', 'abyssiniancolours', 'cloudedcolours', 'dobermancolours', 'ghosttabbycolours', 'merlecolours', 'monarchcolours', 'oceloidcolours', 'pinstripetabbycolours', 'snowflakecolours', 'royalcolours', 'bobcatcolours', 'cheetahcolours',
-            'shadersnewwhite', 'lightingnew',
+            'shadersnewwhite', 'lightingnew', 'pokemon',
             'whitepatches', 'minkswhite', 'voithexpatches', 'exoticwhitepatches','tortiepatchesmasks', 'minkstorties',
             'fademask', 'fadestarclan', 'fadedarkforest','bandanas', 'stainvoithex',
             'symbols', 'plant2_accessories', 'flower_accessories', 'snake_accessories', 'eragonatorite', 'eragonawp', 'eragonaeyes', 'eragonaeyes2',
@@ -152,12 +152,12 @@ class Sprites:
             'sterspeckledcolours', 'sillyspeckledcolours', 'dancespeckledcolours', 'mimispeckledcolours',
             'stertabbycolours', 'sillytabbycolours', 'dancetabbycolours', 'mimitabbycolours',
             'stertickedcolours', 'sillytickedcolours', 'dancetickedcolours', 'mimitickedcolours',
-            'boosbandanas_accessories', 'sailormoon', 'randomaccessories', 'star_chimes', 'lantern', 'beetle_accessories', 'beetle_feathers',
+            'boosbandanas_accessories', 'sailormoon', 'randomaccessories', 'star_chimes', 'lantern',
             'cs_agouticolours', 'cs_bengalcolours', 'cs_classiccolours', 'cs_mackerelcolours', 'cs_marbledcolours', 'cs_maskedcolours', 'cs_rosettecolours',
             'cs_singlecolours', 'cs_singlestripecolours', 'cs_smokecolours', 'cs_sokokecolours', 'cs_speckledcolours', 'cs_tabbycolours','cs_tickedcolours',
             'cs_agouti2colours', 'cs_bengal2colours', 'cs_classic2colours', 'cs_mackerel2colours', 'cs_marbled2colours', 'cs_masked2colours', 'cs_rosette2colours',
             'cs_single2colours', 'cs_singlestripe2colours', 'cs_smoke2colours', 'cs_sokoke2colours', 'cs_speckled2colours', 'cs_tabby2colours','cs_ticked2colours',
-            'caliisokokecolours', 'dotcolours', 
+            'beetle_accessories', 'beetle_feathers', 'caliisokokecolours', 'dotcolours', 
             'caliispeckledcolours', 'kintsugicolours', 'dotfadecolours', 'circletabbycolours', 'colourpointcolours', 'lynxpointcolours', 'ncrestedcaracaracolours', 'birchtabbycolours',
             'krisagouticolours', 'krisbengalcolours', 'krisclassiccolours', 'krismackerelcolours', 'krismarbledcolours', 'krismaskedcolours', 'krisrosettecolours',
             'krissinglecolours', 'krissinglestripecolours', 'krissmokecolours', 'krissokokecolours', 'krisspeckledcolours', 'kristabbycolours','kristickedcolours',
@@ -173,7 +173,11 @@ class Sprites:
             'pastelsinglecolours', 'pastelsinglestripecolours', 'pastelsmokecolours', 'pastelsokokecolours', 'pastelspeckledcolours', 'pasteltabbycolours','pasteltickedcolours',
             'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
             'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
-            'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours'
+            'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours',
+            'minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
+            'minecraftsinglecolours', 'minecraftsmokecolours','minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours',
+            'anjuagouticolours', 'anjubengalcolours', 'anjuclassiccolours', 'anjumackerelcolours', 'anjumarbledcolours', 'anjurosettecolours',
+            'anjusinglecolours', 'anjusmokecolours','anjusokokecolours', 'anjuspeckledcolours', 'anjutabbycolours', 'anjutickedcolours'
         ]:
             if "lineart" in x and (game.config["fun"]["april_fools"] or is_today(SpecialDate.APRIL_FOOLS)):
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -227,6 +231,20 @@ class Sprites:
             ['PEACH', 'DAFFODIL', 'MARIGOLD', 'BRASS', 'DARKAMBER', 'DAWN SKIES','MINT', 'CHARTREUSE', 'MEADOW', 'LEAF', 'LIGHT TURQUOISE', 'SAP',],
             ['ALBINISTIC', 'COBALT ORE', 'RAIN', 'CYAN DYE', 'PERIWINKLE PURPLE', 'ICY CRACK']
             ]
+        neos_eyes = [['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN'],
+                 ['NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']]
+        flutter_eyes = [['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS'],
+                 ['FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']]
+    
+        lamp_eyes = [['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD'],
+                 ['LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']]
+
+        angel_eyes = [['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD'],
+                 ['ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']]
+
+        snail_eyes = [['SNAIL YELLOW', 'SNAIL ORANGE', 'SNAIL HAZEL', 'SNAIL YELLOWGREEN', 'SNAIL GREEN', 'SNAIL BLUE', 'SNAIL DARKBLUE', 'SNAIL GRAY', 'SNAIL CYAN', 'SNAIL TURQUOISE', 'SNAIL PURPLE', 'SNAIL GOLD'],
+                 ['SNAIL COPPER', 'SNAIL MINT', 'SNAIL DARKBLUE2', 'SNAIL BLUE2', 'SNAIL BROWN', 'SNAIL SILVER', 'SNAIL LIGHTYELLOW', 'SNAIL DARKYELLOW', 'SNAIL GOLDENGREEN']]
+
         
         # Define era eye colors
         era_eye_colors = [
@@ -236,19 +254,7 @@ class Sprites:
              'NEON GREEN', 'SEA'],
             ['DISCORD', 'AUTUMN LEAF', 'RUBY', 'PHANTOM', 'RIVER MOSS', 'WICKED']
         ]
-        
-        neos_eyes = [['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN'],
-                 ['NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']]
-        
-        flutter_eyes = [['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS'],
-                 ['FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']]
-    
-        lamp_eyes = [['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD'],
-                 ['LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']]
-        
-        angel_eyes = [['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD'],
-                 ['ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']]
-        
+
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
                 self.make_group('eyes', (col, row), f'eyes{color}')
@@ -283,7 +289,7 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('eyesvivid', (col, row), f'eyes{color}')
                 self.make_group('vivid2', (col, row), f'eyes2{color}')
-        
+
         for row, colors in enumerate(neos_eyes):
             for col, color in enumerate(colors):
                 self.make_group('neos_eyes', (col, row), f'neos_eyes{color}')
@@ -298,11 +304,15 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('lamp_eyes', (col, row), f'lamp_eyes{color}')
                 self.make_group('lamp_eyes', (col, row), f'lamp_eyes2{color}')
-        
+                
         for row, colors in enumerate(angel_eyes):
             for col, color in enumerate(colors):
                 self.make_group('eyes_wing', (col, row), f'angel_eyes{color}')
                 self.make_group('eyes2_halo', (col, row), f'angel_eyes2{color}')
+                
+        for row, colors in enumerate(snail_eyes):
+            for col, color in enumerate(colors):
+                self.make_group('eyes_snail', (col, row), f'eyes_snail{color}')
 
         # Define white patches
         white_patches = [
@@ -350,7 +360,7 @@ class Sprites:
              'AKITA'],
             ['CHESSBORAD','ANT','CREAMV','BUNNY','MOJO','STAINSONE','STAINST',
               'HALFHEART','FRECKLESTHREE','KITTY'],
-            ['SUNRISE','HUSKY','STATNTHREE','ERAMASK', 'S','PAW','SWIFTPAW','BOOMSTAR','MIST','LEON'],
+            ['SUNRISE','HUSKY','STATNTHREE', 'ERAMASK', 'S','PAW','SWIFTPAW','BOOMSTAR','MIST','LEON'],
             ['LADY','LEGS','MEADOW', 'SALT','BAMBI','PRIMITVE','SKUNKSTRIPE','NEPTUNE','KARAPATITWO','CHAOS'],
             ['MOSCOW','ERAHALF','CAPETOWN','SUN','BANAN','PANDA','DOVE','PINTOTWO', 'SNOWSHOE','SKY'],
             ['MOONSTONE', 'DRIP', 'CRESCENT', 'ETERNAL', 'WINGTWO', 'STARBORN',  'SPIDERLEGS', 'APPEL', 'RUG', 'LUCKY'],
@@ -391,6 +401,16 @@ class Sprites:
             ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA'],
             ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
         ]
+        
+        minecraft_color_categories = [
+            ['ACACIALOG', 'BAMBOO', 'BIRCHLOG', 'CHERRYLOG', 'CRIMSONSTEM', 'DARKOAKLOG', 'JUNGLELOG', 'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'WARPEDSTEM'],
+            ['ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS', 'CRIMSONPLANKS', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS', 'SPRUCEPLANKS', 'WARPEDPLANKS'],
+            ['AMETHYST', 'BLACKGLAZEDTERRACOTTA', 'BLUEGLAZEDTERRACOTTA', 'BROWNGLAZEDTERRACOTTA', 'BROWN MUSHROOM', 'COPPER', 'CRYING OBSIDIAN', 'CYANGLAZEDTERRACOTTA', 'EXPOSEDCOPPER', 'GRAYGLAZEDTERRACOTTA', 'GREENGLAZEDTERRACOTTA'],
+            ['LIGHTBLUEGLAZED TERRACOTTA', 'LIGHTGRAYGLAZEDTERRACOTTA', 'LIMEGLAZEDTERRACOTTA', 'MAGENTAGLAZEDTERRACOTTA', 'MUSHROOMINSIDE', 'MUSHROOMSTEM', 'OBSIDIAN', 'ORANGEGLAZEDTERRACOTTA', 'OXIDIZEDCOPPER', 'PINKGLAZEDTERRACOTTA', 'PURPLEGLAZEDTERRACOTTA'],
+            ['PURPUR', 'QUARTZ', 'REDGLAZEDTERRACOTTA', 'REDMUSHROOM', 'WEATHEREDCOPPER', 'WHITEGLAZEDTERRACOTTA', 'YELLOWGLAZEDTERRACOTTA']
+        ]
+        
+        anju_color_categories = [['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']]
 
         color_types = [
             'singlecolours', 'tabbycolours', 'marbledcolours', 'rosettecolours',
@@ -439,13 +459,31 @@ class Sprites:
             'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
             'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
             'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours'
+
         ]
 
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
                     self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
-
+                    
+        minecraft_color_types = ['minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
+            'minecraftsinglecolours', 'minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours', 'minecraftsmokecolours']
+        anju_color_types = ['anjuagouticolours', 'anjubengalcolours', 'anjuclassiccolours', 'anjumackerelcolours', 'anjumarbledcolours', 'anjurosettecolours',
+            'anjusinglecolours', 'anjusokokecolours', 'anjuspeckledcolours', 'anjutabbycolours', 'anjutickedcolours', 'anjusmokecolours']
+        
+        for row, colors in enumerate(minecraft_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in minecraft_color_types:
+                    category = color_type[9:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(anju_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in anju_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
         # tortiepatchesmasks
         tortiepatchesmasks = [
             ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'HALF', 'STREAK', 'MASK', 'SMOKE'],
@@ -496,7 +534,7 @@ class Sprites:
             ['SHADOW', 'RAIN', 'MGLA', 'MOONLIGHT', 'MOUSE', 'SATURN', 'MARBLETORINE', 'AMBERTWO', 'PATTERN', 'MOSS'],
             ['MONKEY', 'BUMBLEBEE', 'KINTSUGITWO', 'STORM', 'CLASSICTORNIE', 'STRIPEONETORITE', 'MACKERELTORITE', 'AMBERTHREE', 'SHADE', 'GRAFFITI'],
             ['AGOUTITORIE', 'BENGALTORITE', 'TABBYTORITE', 'SOKKOKETORITE', 'SPECKLEDTORITE', 'TICKEDTORIE', 'MORRO', 'AMBERFOUR', 'DOG', 'ONESPOT'],
-            
+
            ]
        # toritemaskthree
         torite_mask_two2 = [
@@ -504,7 +542,7 @@ class Sprites:
              'AKITA'],
             ['CHESSBORAD','ANT','CREAMV','BUNNY','MOJO','STAINSONE','STAINST',
               'HALFHEART','FRECKLESTHREE','KITTY'],
-            ['SUNRISE','HUSKY','STATNTHREE','MASK', 'S','PAW','SWIFTPAW','BOOMSTAR','MIST','LEON'],
+            ['SUNRISE','HUSKY','STATNTHREE', 'ERAMASK', 'S','PAW','SWIFTPAW','BOOMSTAR','MIST','LEON'],
             ['LADY','LEGS','MEADOW', 'SALT','BAMBI','PRIMITVE','SKUNKSTRIPE','NEPTUNE','KARAPATITWO', 'CHAOS'],
             ['MOSCOW','ERAHALF','CAPETOWN','SUN','BANAN','PANDA','DOVE','PINTOTWO', 'SNOWSHOE','SKY'],
             ['MOONSTONE', 'DRIP', 'CRESCENT', 'ETERNAL', 'WINGTWO', 'STARBORN',  'SPIDERLEGS', 'APPEL', 'RUG', 'LUCKY'],
@@ -539,6 +577,7 @@ class Sprites:
             ['MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES', 'INK2', 'THUNDERSTORM'],
             ['LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2']
         ]
+        
         skin_colors_elemental = [
             ['FLAMES2', 'BUBBLES2', 'VINES', 'WIND', 'LIGHTNING', 'BLUEFLAMES'],
             ['FROZEN', 'STONE', 'TREE', 'PURPLESPARKS', 'PURPLEGLOW', 'SHADOW'],
@@ -556,12 +595,22 @@ class Sprites:
             ['FENNECKITSUNE', '006', '007','008', '009', '010'],
             ['011', '012', '013', '014', '015', '016']
         ]
-        
+
         skin_colors_math = [
-            ['LIGHTPURPLE', 'BLUE', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED'],
+            ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED'],
             ['BRIGHTPINK', 'BRIGHTORANGE','MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE'],
-            ['WHITE', 'BLACK', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']
+            ['WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']
         ]
+        
+        skin_colors_turtle = [
+            ['BLACKTURTLE', 'REDTURTLE','PINKTURTLE', 'DARKBROWNTURTLE', 'BROWNTURTLE', 'LIGHTBROWNTURTLE'],
+            ['DARKTURTLE', 'DARKGREYTURTLE', 'GREYTURTLE', 'DARKSALMONTURTLE','SALMONTURTLE', 'PEACHTURTLE'],
+            ['DARKMARBLEDTURTLE', 'MARBLEDTURTLE', 'LIGHTMARBLEDTURTLE', 'DARKBLUETURTLE', 'BLUETURTLE', 'LIGHTBLUETURTLE']]
+
+        skin_colors_stain = [
+            ['STAINDUST', 'STAINICEBLUE', 'STAININDIGO', 'STAINBLUE', 'STAINPURPLE', 'STAINDARKBLUE'],
+            ['STAINLIGHTPINK', 'STAINYELLOW', 'STAINPINK', 'STAINGOLD', 'STAINHOTPINK', 'STRAINDIRT'],
+            ['STAINCYAN', 'STAINLIME', 'STAINTURQUOISE', 'STAINGREEN', 'STAINBLUEGREEN', 'STAINPEACOCK']]
 
         for row, colors in enumerate(skin_colors):
             for col, color in enumerate(colors):
@@ -570,7 +619,7 @@ class Sprites:
         for row, colors in enumerate(skin_colors_magic):
             for col, color in enumerate(colors):
                 self.make_group('skin_magic', (col, row), f"skin_magic{color}")
-
+        
         for row, colors in enumerate(skin_colors_elemental):
             for col, color in enumerate(colors):
                 self.make_group('skin_elemental', (col, row), f"skin_elemental{color}")
@@ -578,14 +627,22 @@ class Sprites:
         for row, colors in enumerate(skin_colors_bingle):
             for col, color in enumerate(colors):
                 self.make_group('skin_bingle', (col, row), f"skin_bingle{color}")
-                
+
         for row, colors in enumerate(skin_colors_bingle2):
             for col, color in enumerate(colors):
                 self.make_group('skin_bingle2', (col, row), f"skin_bingle2{color}")
-                
+
         for row, colors in enumerate(skin_colors_math):
             for col, color in enumerate(colors):
                 self.make_group('skin_mathkangaroo', (col, row), f"skin_mathkangaroo{color}")
+                
+        for row, colors in enumerate(skin_colors_turtle):
+            for col, color in enumerate(colors):
+                self.make_group('skin_turtle', (col, row), f"skin_turtle{color}")
+                
+        for row, colors in enumerate(skin_colors_stain):
+            for col, color in enumerate(colors):
+                self.make_group('skin_stain', (col, row), f"skin_stain{color}")
 
         self.load_scars()
         self.load_symbols()
@@ -624,9 +681,10 @@ class Sprites:
         # accessories
         #to my beloved modders, im very sorry for reordering everything <333 -clay
         medcatherbs_data = [
-            ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "CATTAIL", "POPPY", "ORANGE POPPY", "CYAN POPPY", "WHITE POPPY", "PINK POPPY"],
-            ["BLUEBELLS", "LILY OF THE VALLEY", "SNAPDRAGON", "HERBS", "PETALS", "NETTLE", "HEATHER", "GORSE", "JUNIPER", "RASPBERRY", "LAVENDER"],
-            ["OAK LEAVES", "CATMINT", "MAPLE SEED", "LAUREL", "BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE", "CLOVERTAIL", "DAISYTAIL"]
+            ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "CATTAIL", "POPPY", "ORANGE POPPY", "CYAN POPPY", "WHITE POPPY", "PINK POPPY",],
+            ["BLUEBELLS", "LILY OF THE VALLEY", "SNAPDRAGON", "HERBS", "PETALS", "NETTLE", "HEATHER", "GORSE", "JUNIPER", "RASPBERRY", "LAVENDER",],
+            ["OAK LEAVES", "CATMINT", "MAPLE SEED", "LAUREL", "BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE", "CLOVERTAIL", "DAISYTAIL",],
+            ["WISTERIA2", "ROSE MALLOW", "PICKLEWEED", "GOLDEN CREEPING JENNY",],
         ]
         dryherbs_data = [
             ["DRY HERBS", "DRY CATMINT", "DRY NETTLES", "DRY LAURELS"]
@@ -664,6 +722,10 @@ class Sprites:
             ["GREENNYLON", "RAINBOWNYLON", "BLACKNYLON", "SPIKESNYLON", "WHITENYLON"],
             ["PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON"]
         ]
+
+        plant2_data = [
+            ["CLOVER", "STICK", "PUMPKIN", "MOSS", "IVY", "ACORN", "MOSS PELT", "REEDS", "BAMBOO"]
+        ]
         
         colorsplash_horn_data = [
             ["CSYELLOWHORN", "CSORANGEHORN", "CSGREENHORN", "CSFROSTHORN", "CSSILVERHORN", "CSCYANHORN"],
@@ -682,10 +744,29 @@ class Sprites:
             ["CSMAROONMERMAID", "CSVIOLETMERMAID", "CSINDIGOMERMAID", "CSBLUEMERMAID", "CSBLACKMERMAID"],
             ["CSLIMEMERMAID", "CSGOLDMERMAID", "CSMOSSMERMAID", "CSBROWNMERMAID"]
         ]
-
-        plant2_data = [
-            ["CLOVER", "STICK", "PUMPKIN", "MOSS", "IVY", "ACORN", "MOSS PELT", "REEDS", "BAMBOO"]
+        
+        beetle_accessories_data = [
+            ["FROG FRIEND", "MOUSE FRIEND", "BUNNY HAT", "SMILEY HAT", "PARTY HAT", "SANTA HAT"],
+            ["STICK FRIEND", "BAT WING SUIT", "PINK BOWTIE", "GRAY BOWTIE", "PINK SCARF"],
+            ["BLUETAILED SKINK", "BLACKHEADED ORIOLE", "MILKSNAKE", "WORM FRIEND"]
         ]
+
+        beetle_feathers_data = [
+            ["THRUSH FEATHERS", "GOLDFINCH FEATHERS", "DOVE FEATHERS", "PEACOCK FEATHERS", "HAWK FEATHERS", "BLUE JAY FEATHERS"],
+            ["ROBIN FEATHERS", "FIERY FEATHERS", "SUNSET FEATHERS", "SILVER FEATHERS"]
+            ]
+        
+        sailormoon_data = [
+            ["MOON", "MERCURY", "MARS", "JUPITER", "VENUS", "TUXEDO MASK"],
+            ["URANUS", "NEPTUNE", "PLUTO", "SATURN", "MINI MOON", "CRYSTAL BALL"]
+        ]
+
+        random_data = [
+            ["DOGWOOD", "TREESTAR", "RACCOON LEAF", "WHITE RACCOON LEAF", "CHERRY BLOSSOM", "DAISY BLOOM"],
+            ["FEATHERS", "RED ROSE", "WHITE ROSE", "PEBBLE", "PEBBLE COLLECTION", "GOLDEN FLOWER"],
+            ["DANDELIONS", "DANDELION PUFFS", "DICE", "GOLDEN EARRINGS"]
+        ]
+
 
         crafted_data = [
             ["WILLOWBARK BAG", "CLAY DAISY POT", "CLAY AMANITA POT", "CLAY BROWNCAP POT", "BIRD SKULL", "LEAF BOW"]
@@ -701,8 +782,13 @@ class Sprites:
         ]
 
         deadInsect_data = [
-            ["LUNAR MOTH", "ROSY MAPLE MOTH", "MONARCH BUTTERFLY", "DAPPLED MONARCH", "POLYPHEMUS MOTH", "MINT MOTH"]
+            ["LUNAR MOTH", "ROSY MAPLE MOTH", "OGMONARCH BUTTERFLY", "DAPPLED MONARCH", "POLYPHEMUS MOTH", "MINT MOTH"]
         ]
+        
+        boos_data = [["CRIMSONBOO", "MAGENTABOO", "PINKBOO", "BLOODORANGEBOO", "ORANGEBOO", "YELLOWBOO"],
+                    ["LIMEBOO", "DARKGREENBOO", "GREENBOO", "TEALBOO", "LIGHTBLUEBOO", "BLUEBOO"],
+                    ["DARKBLUEBOO", "LIGHTPURPLEBOO", "DARKPURPLEBOO", "VIBRANTPURPLEBOO", "PINKREDBOO", "WHITEBOO"],
+                    ["LIGHTGRAYBOO", "GRAYBOO", "BLACKBOO", "BROWNBOO"]]
 
         aliveInsect_data = [
             ["BROWN SNAIL", "RED SNAIL", "WORM", "BLUE SNAIL", "ZEBRA ISOPOD", "DUCKY ISOPOD", "DAIRY COW ISOPOD", "BEETLEJUICE ISOPOD", "BEE", "RED LADYBUG"],
@@ -728,11 +814,6 @@ class Sprites:
              "RAT SKULL", "TEETH COLLAR", "ROE SKULL"],
             ["BIRD SKULL1", "RIBS", "FISH BONES"]
         ]
-        
-        boos_data = [["CRIMSONBOO", "MAGENTABOO", "PINKBOO", "BLOODORANGEBOO", "ORANGEBOO", "YELLOWBOO"],
-                    ["LIMEBOO", "DARKGREENBOO", "GREENBOO", "TEALBOO", "LIGHTBLUEBOO", "BLUEBOO"],
-                    ["DARKBLUEBOO", "LIGHTPURPLEBOO", "DARKPURPLEBOO", "VIBRANTPURPLEBOO", "PINKREDBOO", "WHITEBOO"],
-                    ["LIGHTGRAYBOO", "GRAYBOO", "BLACKBOO", "BROWNBOO"]]
         
         butterflymoth_data = [
             ["PEACOCK BUTTERFLY", "DEATH HEAD HAWKMOTH", "GARDEN TIGER MOTH", "ATLAS MOTH", "CECOROPIA MOTH", "WHITE ERMINE MOTH",
@@ -784,27 +865,6 @@ class Sprites:
             ["PINKS", "PURPLES", "MULTIS", "INDIGOS"]
         ]
         
-        beetle_accessories_data = [
-            ["FROG FRIEND", "MOUSE FRIEND", "BUNNY HAT", "SMILEY HAT", "PARTY HAT", "SANTA HAT"],
-            ["STICK FRIEND", "BAT WING SUIT", "PINK BOWTIE", "GRAY BOWTIE", "PINK SCARF"],
-            ["BLUETAILED SKINK", "BLACKHEADED ORIOLE", "MILKSNAKE", "WORM FRIEND"]
-        ]
-
-        beetle_feathers_data = [
-            ["THRUSH FEATHERS", "GOLDFINCH FEATHERS", "DOVE FEATHERS", "PEACOCK FEATHERS", "HAWK FEATHERS", "BLUE JAY FEATHERS"],
-            ["ROBIN FEATHERS", "FIERY FEATHERS", "SUNSET FEATHERS", "SILVER FEATHERS"]
-            ]
-        
-        sailormoon_data = [
-            ["MOON", "MERCURY", "MARS", "JUPITER", "VENUS", "TUXEDO MASK"],
-            ["URANUS", "NEPTUNE", "PLUTO", "SATURN", "MINI MOON", "CRYSTAL BALL"]
-        ]
-
-        random_data = [
-            ["DOGWOOD", "TREESTAR", "RACCOON LEAF", "WHITE RACCOON LEAF", "CHERRY BLOSSOM", "DAISY BLOOM"],
-            ["FEATHERS", "RED ROSE", "WHITE ROSE", "PEBBLE", "PEBBLE COLLECTION", "GOLDEN FLOWER"],
-            ["DANDELIONS", "DANDELION PUFFS", "DICE", "GOLDEN EARRINGS"]
-        ]
         
         chime_data = [["SILVER MOON","GOLD STAR", "GOLD MOON", "MOON AND STARS"]]
         lantern_data = [["LANTERN"]]
@@ -816,6 +876,10 @@ class Sprites:
         witchhat_data = [["WHITE WITCHHAT", "BABYBLUE WITCHHAT", "LIGHTPURPLE WITCHHAT", "BLUE WITCHHAT", "PURPLE WITCHHAT", "DARKPURPLE WITCHHAT"],
                     ["LIGHTPINK WITCHHAT", "LIGHTYELLOW WITCHHAT", "PINK WITCHHAT", "ORANGE WITCHHAT", "RED WITCHHAT"],
                     ["CYAN WITCHHAT", "YELLOWGREEN WITCHHAT", "TURQUOISE WITCHHAT", "GREEN WITCHHAT"]]
+        
+        pokemon_data = [["PIKACHU", "SQUIRTLE", "CHARMANDER", "SPHEAL", "GROWLITHE", "BULBASAUR"],
+                    ["SENTRET", "SHAYMIN", "EMOLGA", "HISUI GROWLITHE", "ALOLAN VULPIX"],
+                    ["VULPIX", "LUXRAY", "ALTARIA", "AZUMARILL"]]
 
 
         # medcatherbs
@@ -850,21 +914,6 @@ class Sprites:
         for row, nyloncollars in enumerate(nyloncollars_data):
             for col, nyloncollar in enumerate(nyloncollars):
                 self.make_group('nyloncollars', (col, row), f'collars{nyloncollar}')
-                
-        # colorsplash horn
-        for row, horncollars in enumerate(colorsplash_horn_data):
-            for col, horncollar in enumerate(horncollars):
-                self.make_group('colorsplash_horn', (col, row), f'acc_colorsplash{horncollar}')
-        
-        # colorsplash kitsune
-        for row, kitsunecollars in enumerate(colorsplash_kitsune_data):
-            for col, kitsunecollar in enumerate(kitsunecollars):
-                self.make_group('colorsplash_kitsune', (col, row), f'acc_colorsplash{kitsunecollar}')
-        
-        # colorsplash mermaid
-        for row, mermaidcollars in enumerate(colorsplash_mermaid_data):
-            for col, mermaidcollar in enumerate(mermaidcollars):
-                self.make_group('colorsplash_mermaid', (col, row), f'acc_colorsplash{mermaidcollar}')
 
         # ohdan's accessories :3
         for row, plant2_accessories in enumerate(plant2_data):
@@ -920,6 +969,22 @@ class Sprites:
         for row, bandanas in enumerate(bandanas_data):
             for col, bandana in enumerate(bandanas):
                 self.make_group('bandanas', (col, row), f'collars{bandana}')
+        
+        # colorsplash horn
+        for row, horncollars in enumerate(colorsplash_horn_data):
+            for col, horncollar in enumerate(horncollars):
+                self.make_group('colorsplash_horn', (col, row), f'acc_colorsplash{horncollar}')
+        
+        # colorsplash kitsune
+        for row, kitsunecollars in enumerate(colorsplash_kitsune_data):
+            for col, kitsunecollar in enumerate(kitsunecollars):
+                self.make_group('colorsplash_kitsune', (col, row), f'acc_colorsplash{kitsunecollar}')
+        
+        # colorsplash mermaid
+        for row, mermaidcollars in enumerate(colorsplash_mermaid_data):
+            for col, mermaidcollar in enumerate(mermaidcollars):
+                self.make_group('colorsplash_mermaid', (col, row), f'acc_colorsplash{mermaidcollar}')
+                
         # harnesses
         for row, harnesses in enumerate(harnesses_data):
             for col, harness in enumerate(harnesses):
@@ -945,15 +1010,8 @@ class Sprites:
         for row, sterflowers in enumerate(ster_data):
             for col, sterflower in enumerate(sterflowers):
                 self.make_group("sterflowers", (col, row), f"acc_ster{sterflower}")
+
         
-        # beetles
-        for row, beetle_accessories in enumerate(beetle_accessories_data):
-            for col, beetleaccessory in enumerate(beetle_accessories):
-                self.make_group("beetle_accessories", (col, row), f"acc_beetle{beetleaccessory}")
-        for row, beetle_feathers in enumerate(beetle_feathers_data):
-            for col, beetlefeather in enumerate(beetle_feathers):
-                self.make_group("beetle_feathers", (col, row), f"acc_beetlefeathers{beetlefeather}")
-                
         # boosbandanas
         for row, boosbandanas_accessories in enumerate(boos_data):
             for col, boosbandana in enumerate(boosbandanas_accessories):
@@ -967,6 +1025,14 @@ class Sprites:
         for row, randomaccessories in enumerate(random_data):
             for col, randomaccessory in enumerate(randomaccessories):
                 self.make_group("randomaccessories", (col, row), f"acc_random{randomaccessory}")
+        
+        # beetles
+        for row, beetle_accessories in enumerate(beetle_accessories_data):
+            for col, beetleaccessory in enumerate(beetle_accessories):
+                self.make_group("beetle_accessories", (col, row), f"acc_beetle{beetleaccessory}")
+        for row, beetle_feathers in enumerate(beetle_feathers_data):
+            for col, beetlefeather in enumerate(beetle_feathers):
+                self.make_group("beetle_feathers", (col, row), f"acc_beetlefeathers{beetlefeather}")
         
         # chimes
         for row, chimes in enumerate(chime_data):
@@ -985,6 +1051,10 @@ class Sprites:
         for row, hats in enumerate(witchhat_data):
             for col, hat in enumerate(hats):
                 self.make_group("colorsplash_witchhat", (col, row), f"acc_witchhat{hat}")
+                
+        for row, mons in enumerate(pokemon_data):
+            for col, mon in enumerate(mons):
+                self.make_group("pokemon", (col, row), f"acc_pokemon{mon}")
 
 
     def load_symbols(self):

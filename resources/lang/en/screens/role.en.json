@@ -7,6 +7,7 @@
         "switch_warrior": "switch to warrior",
         "blurb_warrior": "%{name} is a <b>warrior</b>. Warriors are adult cats who feed and protect their Clan. They are trained to hunt and fight in addition to the ways of the Warrior Code. Warriors are essential to the survival of a Clan, and usually make up the bulk of its members.",
         "retire": "retire",
+        "rekit": "demote to kit",
         "blurb_elder": "%{name} is an <b>elder</b>. They have spent many moons serving their Clan, and have earned many moons of rest. Elders are essential to passing down the oral tradition of the Clan. Sometimes, cats may retire due to disability or injury. Whatever the circumstance of their retirement, elders are held in high esteem in the Clan and always eat before warriors and medicine cats. ",
         "switch_medicine_cat": "switch to medicine\ncat",
         "blurb_medicine_cat": "%{name} is a <b>medicine cat</b>. Medicine cats are the healers of the Clan. They treat injuries and illnesses with herbal remedies. Unlike warriors, medicine cats are not expected to hunt and fight for the Clan. In addition to their healing duties, medicine cats also have a special connection to StarClan. Every half-moon, they travel to their Clan's holy place to commune with StarClan.",

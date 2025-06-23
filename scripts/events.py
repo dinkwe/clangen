@@ -1481,9 +1481,6 @@ class Events:
                         
                     ]:
                         chance = int(chance * 1.5)
-                    
-                    if cat.is_disabled() and game.clan.clan_settings["higher_disabled_med_rates"]:
-                        chance = int(chance / 1.1)
 
 
                     if chance == 0:

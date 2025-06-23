@@ -2892,8 +2892,13 @@ def generate_sprite(
     
         lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
                  'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
+        
         angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
                  'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
+        
+        snail_eyes = ['SNAIL YELLOW', 'SNAIL ORANGE', 'SNAIL HAZEL', 'SNAIL YELLOWGREEN', 'SNAIL GREEN', 'SNAIL BLUE', 'SNAIL DARKBLUE', 'SNAIL GRAY', 'SNAIL CYAN', 'SNAIL TURQUOISE', 'SNAIL PURPLE', 'SNAIL GOLD',
+                 'SNAIL COPPER', 'SNAIL MINT', 'SNAIL DARKBLUE2', 'SNAIL BLUE2', 'SNAIL BROWN', 'SNAIL SILVER', 'SNAIL LIGHTYELLOW', 'SNAIL DARKYELLOW', 'SNAIL GOLDENGREEN']
+
         
         if cat.pelt.eye_colour in neos_eyes:
             eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
@@ -2903,6 +2908,8 @@ def generate_sprite(
             eyes = sprites.sprites["lamp_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         elif cat.pelt.eye_colour in angel_eyes:
             eyes = sprites.sprites["angel_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in snail_eyes:
+            eyes = sprites.sprites["eyes_snail" + cat.pelt.eye_colour + cat_sprite].copy()
         else:
             eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
 
@@ -2942,7 +2949,7 @@ def generate_sprite(
                 special_flags=pygame.BLEND_RGB_MULT,
             )
             new_sprite.blit(sprites.sprites["lighting" + cat_sprite], (0, 0))
-
+        
         if cat.pelt.eye_colour in flutter_eyes:
             if not dead:
                 new_sprite.blit(sprites.sprites["flutter_lines" + cat_sprite], (0, 0))
@@ -2964,8 +2971,21 @@ def generate_sprite(
                 new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
             elif dead:
                 new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
+            if cat.pelt.eye_colour in angel_eyes:
+                new_sprite.blit(eyes, (0, 0))
+            if cat.pelt.eye_colour in snail_eyes:
+                new_sprite.blit(eyes, (0, 0))
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN
+        
+        skin_sprites_turtle = ['BLACKTURTLE', 'PINKTURTLE', 'DARKBROWNTURTLE', 'BROWNTURTLE', 'LIGHTBROWNTURTLE', 'DARKTURTLE', 'DARKGREYTURTLE', 'GREYTURTLE', 'DARKSALMONTURTLE',
+                    'SALMONTURTLE', 'PEACHTURTLE', 'DARKMARBLEDTURTLE', 'MARBLEDTURTLE', 'LIGHTMARBLEDTURTLE', 'DARKBLUETURTLE', 'BLUETURTLE', 'LIGHTBLUETURTLE', 'REDTURTLE']
+
+        skin_sprites_stain = ['STAINDUST', 'STAINICEBLUE', 'STAININDIGO', 'STAINBLUE', 'STAINPURPLE', 'STAINDARKBLUE',
+                          'STAINLIGHTPINK', 'STAINYELLOW', 'STAINPINK', 'STAINGOLD', 'STAINHOTPINK', 'STRAINDIRT',
+                          'STAINCYAN', 'STAINLIME', 'STAINTURQUOISE', 'STAINGREEN', 'STAINBLUEGREEN', 'STAINPEACOCK']
+
+        
         if cat.pelt.skin in ['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
                     'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'RED']:
             new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
@@ -2974,12 +2994,15 @@ def generate_sprite(
             new_sprite.blit(sprites.sprites["skin_magic" + cat.pelt.skin + cat_sprite], (0, 0))
         elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS', "BATWINGS", "SPOOKYCRYSTALS", "TRANSCLOUDS", 'MAGEGIFT', 'DEVILWINGS', 'SPARROWGIFT', 'DOVEWINGS', 'ANTLERS', 'BLUECORALCHIMERA', 'ICECRYSTALS', 'BLACKFOX']:
             new_sprite.blit(sprites.sprites["skin_bingle" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+        elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE2', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
                          'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
             new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
         elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE']:
             new_sprite.blit(sprites.sprites["skin_bingle2" + cat.pelt.skin + cat_sprite], (0, 0))
-
+        elif cat.pelt.skin in skin_sprites_stain:
+            new_sprite.blit(sprites.sprites["skin_stain" + cat.pelt.skin + cat_sprite], (0, 0))
+        elif cat.pelt.skin in skin_sprites_turtle:
+            new_sprite.blit(sprites.sprites["skin_turtle" + cat.pelt.skin + cat_sprite], (0, 0))
         else:
             new_sprite.blit(sprites.sprites["skin_elemental" + cat.pelt.skin + cat_sprite], (0, 0))
        
@@ -3014,6 +3037,11 @@ def generate_sprite(
                         elif accessory in cat.pelt.chime_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_chime" + accessory + cat_sprite],
+                                (0, 0),
+                            )
+                        elif accessory in cat.pelt.lantern_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_lantern" + accessory + cat_sprite],
                                 (0, 0),
                             )
                         elif accessory in cat.pelt.wild_accessories:
@@ -3098,11 +3126,6 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_beetlefeathers" + accessory + cat_sprite], (0, 0)
                             )
-                        elif accessory in cat.pelt.lantern_accessories:
-                            new_sprite.blit(
-                                sprites.sprites["acc_lantern" + accessory + cat_sprite],
-                                (0, 0),
-                            )
                         elif accessory in cat.pelt.neckerchiefs:
                             new_sprite.blit(
                                 sprites.sprites["acc_neckerchief" + accessory + cat_sprite], (0, 0)
@@ -3110,6 +3133,10 @@ def generate_sprite(
                         elif accessory in cat.pelt.witchhats:
                             new_sprite.blit(
                                 sprites.sprites["acc_witchhat" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.pokemon_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_pokemon" + accessory + cat_sprite], (0, 0)
                             )
         # Apply fading fog
         if (

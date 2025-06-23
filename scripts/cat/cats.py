@@ -385,8 +385,13 @@ class Cat:
                     powers_dict = ujson.loads(read_file.read())
             if self.awakened["type"] == "guide":
                 #powerless shows twice bc we want it to be twice as common. visible guides
-                self.pelt.skin = choice(['LIGHTPURPLE', 'BLUE', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
-                         'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"])
+                self.pelt.skin = choice(['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                                        'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2",
+                                        'STAINDUST', 'STAINICEBLUE', 'STAININDIGO', 'STAINBLUE', 'STAINPURPLE', 'STAINDARKBLUE',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"
+                                        'STAINLIGHTPINK', 'STAINYELLOW', 'STAINPINK', 'STAINGOLD', 'STAINHOTPINK', 'STRAINDIRT',
+                                        'STAINCYAN', 'STAINLIME', 'STAINTURQUOISE', 'STAINGREEN', 'STAINBLUEGREEN', 'STAINPEACOCK',
+                                        'LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                                        'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"])
             elif self.awakened["type"] == "esper":
                 self.pelt.skin = choice(powers_dict[self.awakened["ability"]]["skin"])
             elif self.awakened["type"] == "enhanced esper":
@@ -417,8 +422,9 @@ class Cat:
         
         magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
                        "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
-                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked",
-                       "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
+                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked"]
+        
+        magiccolors2 = ["CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
                        "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
                        "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
 
@@ -450,8 +456,12 @@ class Cat:
              "SparkleSpeckled", "SparkleAgouti", "SparkleSokoke", "SparkleRosette", "SparkleSmoke",
              "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked"]
         
+        magiccolorspride = ["PrideAgouti", "PrideBengal", 'PrideClassic', 'PrideMackerel']
+        
         if not self.awakened and self.pelt.name in magiccolors:
             self.pelt.name.replace('CS', '')
+        if not self.awakened and self.pelt.name in magiccolors2:
+            self.pelt.name.replace('CS2', '')
         if not self.awakened and self.pelt.name in magiccolorskris:
             self.pelt.name.replace('Kris', '')
         if not self.awakened and self.pelt.name in magiccolorsmeteor:
@@ -466,42 +476,20 @@ class Cat:
             self.pelt.name.replace('Pastel', '')
         if not self.awakened and self.pelt.name in magiccolorssparkle:
             self.pelt.name.replace('Sparkle', '')
+        if not self.awakened and self.pelt.name in magiccolorspride:
+            self.pelt.name.replace('Pride', '')
         
-        allmagic = magiccolors + magiccolorskris + magiccolorsmeteor + magiccolorshive + magiccolorspepper + magiccolorsheta + magiccolorspastel + magiccolorssparkle
+        allmagic = magiccolors + magiccolors2 + magiccolorskris + magiccolorsmeteor + magiccolorshive + magiccolorspepper + magiccolorsheta + magiccolorspastel + magiccolorssparkle + magiccolorspride
+        magic_weighted = magiccolors + magiccolors2 + magiccolors + magiccolors2 + magiccolors + magiccolors2 + magiccolorskris + magiccolorsmeteor + magiccolorsmeteor + magiccolorshive + magiccolorspepper + magiccolorsheta + magiccolorspastel + magiccolorssparkle + magiccolorspride
+
         if self.awakened and self.pelt.name not in allmagic:
             if randint(1,3) == 1:
-                color_chance = randint(1,15)
-                if color_chance < 6:
-                    self.pelt.name = choice(magiccolors)
-                elif color_chance < 11:
-                    self.pelt.name = choice(magiccolorsmeteor)
-                elif color_chance == 11:
-                    self.pelt.name = choice(magiccolorshive)
-                elif color_chance == 12:
-                    self.pelt.name = choice(magiccolorskris)
-                elif color_chance == 13:
-                    self.pelt.name = choice(magiccolorsheta)
-                elif color_chance == 14:
-                    self.pelt.name = choice(magiccolorspastel)
-                elif color_chance == 15:
-                    self.pelt.name = choice(magiccolorssparkle)
-        elif self.pelt.name not in allmagic:
-            if randint(1,20) == 1:
-                color_chance = randint(1,15)
-                if color_chance < 6:
-                    self.pelt.name = choice(magiccolors)
-                elif color_chance < 11:
-                    self.pelt.name = choice(magiccolorsmeteor)
-                elif color_chance == 11:
-                    self.pelt.name = choice(magiccolorshive)
-                elif color_chance == 12:
-                    self.pelt.name = choice(magiccolorskris)
-                elif color_chance == 13:
-                    self.pelt.name = choice(magiccolorsheta)
-                elif color_chance == 14:
-                    self.pelt.name = choice(magiccolorspastel)
-                elif color_chance == 15:
-                    self.pelt.name = choice(magiccolorssparkle)
+                self.pelt.name = choice(magic_weighted)
+        
+        if self.pelt.name not in allmagic:
+            sparkle_chance = game.config["cat_generation"]["sparkle_chance"]
+            if randint(1,sparkle_chance) == 1:
+                self.pelt.name = choice(magic_weighted)
         
         # Private Sprite
         self._sprite = None
