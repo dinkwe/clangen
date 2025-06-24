@@ -558,11 +558,14 @@ class CustomizeStatsScreen(Screens):
         self.ability2_dropdown = create_dropdown((640, 605), (135, 40), create_options_list(self.abilities, "upper"),
                                               get_selected_option(ability2, "upper"), "dropup")
         
-        if not self.the_cat.awakened or self.the_cat.awakened["type"] == "guide":
-            self.ability1_dropdown.disable()
-            self.ability2_dropdown.disable()
-        elif self.the_cat.awakened["type"] == "esper":
-            self.ability2_dropdown.disable()
+        self.ability1_dropdown.disable()
+        self.ability2_dropdown.disable()
+        if self.the_cat.awakened:
+            if self.the_cat.awakened["type"] == "enhanced esper":
+                self.ability1_dropdown.enable()
+                self.ability2_dropdown.enable()
+            elif self.the_cat.awakened["type"] == "esper":
+                self.ability1_dropdown.enable()
             
         fave_status = "None"
         if self.the_cat.favourite:
@@ -617,7 +620,7 @@ class CustomizeStatsScreen(Screens):
             self.the_cat.awakened = None
         if selected_option != "none":
             self.generate_ability(power_type = selected_option)
-        self.make_cat_sprite()
+        self.update_ui_elements()
         
     def generate_ability(self, power_type = "esper"):
         if os.path.exists('resources/dicts/esper.json'):
@@ -763,12 +766,13 @@ class CustomizeStatsScreen(Screens):
                 self.handle_powers_dropdown(event.ui_element)
             elif event.ui_element == self.ability1_dropdown:
                 selected_option = self.ability1_dropdown.selected_option[1].lower()
-                if self.the_cat.awakened["type"] == "esper":
-                    self.the_cat.awakened["ability"] = selected_option
-                    self.the_cat.awakened["desc"] = choice(powers_dict[selected_option][self.the_cat.awakened["class"]])
-                elif self.the_cat.awakened["type"] == "enhanced esper":
-                    self.the_cat.awakened["ability"][0] = selected_option
-                    self.the_cat.awakened["desc"][0] = choice(powers_dict[selected_option][self.the_cat.awakened["class"]])
+                if self.the_cat.awakened["type"] in ["esper", "enhanced esper"]:
+                    if isinstance(the_cat.awakened["ability"], list):
+                            self.the_cat.awakened["ability"][0] = selected_option
+                            self.the_cat.awakened["desc"][0] = choice(powers_dict[selected_option][self.the_cat.awakened["class"]])
+                    else:
+                            self.the_cat.awakened["ability"] = selected_option
+                            self.the_cat.awakened["desc"] = choice(powers_dict[selected_option][self.the_cat.awakened["class"]])
                 self.update_ui_elements()
             elif event.ui_element == self.ability2_dropdown:
                 selected_option = self.ability1_dropdown.selected_option[1].lower()
@@ -934,15 +938,16 @@ class CustomizeStatsScreen(Screens):
             self.permanent_condition_label, self.trait1_label, self.trait2_label, self.skill1_label, self.skill2_label, self.skill3_label,
             self.fur_texture_label, self.build_label, self.height_label, self.backstory_label, self.gender_label, self.powers_label,
             self.reset_message, self.reset_facets_message, self.heal_message, self.ability1_label, self.ability2_label,
-            self.class_label, self.fave_label
+            self.class_label, self.fave_label,
+            self.physical_trait1_label, self.physical_trait2_label,
+            self.physical_trait3_label, self.physical_trait4_label
         ]
         for label in labels:
             label.kill()
 
     def kill_buttons(self):
         buttons = [
-            self.previous_cat_button, self.back_button, self.next_cat_button, self.reset_button,self.reset_facets_button, self.heal_button, self.physical_trait1_label, self.physical_trait2_label,
-            self.physical_trait3_label, self.physical_trait4_label, self.powers_label
+            self.previous_cat_button, self.back_button, self.next_cat_button, self.reset_button,self.reset_facets_button, self.heal_button
         ]
         for button in buttons:
             button.kill()
