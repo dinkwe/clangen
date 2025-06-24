@@ -244,7 +244,7 @@
             "many": "morpho butterfly wings",
             "one": "morpho butterfly"
         },
-        "MONARCH BUTTERFLY": {
+        "OGMONARCH BUTTERFLY": {
             "zero": "monarch butterfly wings",
             "many": "monarch butterfly wings",
             "one": "monarch butterfly"
@@ -665,7 +665,7 @@
             "many": "rosy maple moth wings",
             "one": "rosy maple moth wing"
         },
-        "MONARCH BUTTERFLY1": {
+        "MONARCH BUTTERFLY": {
             "zero": "monarch butterfly wings",
             "many": "monarch butterfly wings",
             "one": "monarch butterfly wing"
