@@ -278,6 +278,8 @@ class ProfileScreen(Screens):
                 ChangeCatName(self.the_cat)
             elif event.ui_element == self.specify_gender_button:
                 self.change_screen("change gender screen")
+            elif event.ui_element == self.predict_offspring_button:
+                self.change_screen("predict offspring screen")
             elif event.ui_element == self.cis_trans_button:
                 # if the cat is anything besides m/f/transm/transf then turn them back to cis
                 nonbiney_list = ["nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
@@ -2429,6 +2431,24 @@ class ProfileScreen(Screens):
                 manager=MANAGER,
                 anchors={"top_target": self.cis_trans_button},
             )
+            self.predict_offspring_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 0), (172, 36))),
+                "predict offspring",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={"top_target": self.specify_gender_button},
+            )
+            if (
+                    self.the_cat.age
+                    not in ["young adult", "adult", "senior adult", "senior"]
+                    or self.the_cat.exiled
+                    or self.the_cat.outside
+            ):
+                self.predict_offspring_button.disable()
+            else:
+                self.predict_offspring_button.enable()
             self.cat_toggles_button = UISurfaceImageButton(
                 ui_scale(pygame.Rect((402, 0), (172, 36))),
                 "screens.profile.toggles",
@@ -2436,7 +2456,7 @@ class ProfileScreen(Screens):
                 object_id="@buttonstyles_ladder_bottom",
                 starting_height=2,
                 manager=MANAGER,
-                anchors={"top_target": self.specify_gender_button},
+                anchors={"top_target": self.predict_offspring_button},
             )
 
             self.update_disabled_buttons_and_text()
@@ -2777,6 +2797,7 @@ class ProfileScreen(Screens):
         elif self.open_tab == "personal":
             self.change_name_button.kill()
             self.cat_toggles_button.kill()
+            self.predict_offspring_button.kill()
             self.specify_gender_button.kill()
             if self.cis_trans_button:
                 self.cis_trans_button.kill()

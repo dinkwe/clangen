@@ -31,6 +31,7 @@ from .SpriteInspectScreen import SpriteInspectScreen
 from .StartScreen import StartScreen
 from .SwitchClanScreen import SwitchClanScreen
 from .WarriorDenScreen import WarriorDenScreen
+from .PredictOffspringScreen import PredictOffspringScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -95,6 +96,7 @@ class AllScreens:
     gardener_screen = GardenerScreen("gardener screen")
     storyteller_screen = StorytellerScreen("storyteller screen")
     change_gender_screen = ChangeGenderScreen("change gender screen")
+    predict_offspring_screen = PredictOffspringScreen("predict offspring screen")
 
     @classmethod
     def rebuild_all_screens(cls):
@@ -140,3 +142,4 @@ class AllScreens:
         cls.storyteller_screen = StorytellerScreen("storyteller screen")
         cls.mediation_screen = MediationScreen("mediation screen")
         cls.change_gender_screen = ChangeGenderScreen("change gender screen")
+        cls.predict_offspring_screen = PredictOffspringScreen("predict offspring screen")
