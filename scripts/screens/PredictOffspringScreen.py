@@ -116,12 +116,11 @@ class PredictOffspringScreen(Screens):
                     self.selected_mate = self.selected_cat
                 else:
                     selected_option = selected_option.lower()
-                    selected_option = selected_option.capitalize()
                     
                     mate_index = self.possible_mates_names.index(selected_option)
                     self.selected_mate = self.possible_mates[mate_index-2]
                     self.selected_mate_elements["image"] = pygame_gui.elements.UIImage(
-                            ui_scale(pygame.Rect((550, 80), (150, 150))),
+                            ui_scale(pygame.Rect((540, 130), (150, 150))),
                             pygame.transform.scale(
                                 self.selected_mate.sprite, ui_scale_dimensions((150, 150))
                             ),
@@ -141,13 +140,13 @@ class PredictOffspringScreen(Screens):
         self.selected_cat = Cat.fetch_cat(game.switches["cat"])
         
         self.possible_mates_box = pygame_gui.elements.UIImage(
-            ui_scale(pygame.Rect((500, 50), (275, 250))),
+            ui_scale(pygame.Rect((490, 100), (275, 250))),
             get_box(BoxStyles.ROUNDED_BOX, (200, 250)),
         )
         self.possible_mates_box.disable()
         
         self.display_box = pygame_gui.elements.UIImage(
-            ui_scale(pygame.Rect((80, 350), (640, 250))),
+            ui_scale(pygame.Rect((80, 380), (640, 250))),
             get_box(BoxStyles.ROUNDED_BOX, (640, 250)),
         )
         self.display_box.disable()
@@ -161,20 +160,20 @@ class PredictOffspringScreen(Screens):
         
         self.possible_mates_names = ["None", "Reincarnation"]
         for cat in self.possible_mates:
-            self.possible_mates_names.append(str(cat.name))
+            self.possible_mates_names.append(str(cat.name).lower())
         
-        self.mate_dropdown = create_dropdown((560, 245), (155, 40), create_options_list(self.possible_mates_names, "upper"),
+        self.mate_dropdown = create_dropdown((555, 295), (155, 40), create_options_list(self.possible_mates_names, "upper"),
                                                 get_selected_option("None", "upper"))
         
         self.selected_cat_elements["selected_image"] = pygame_gui.elements.UIImage(
-                ui_scale(pygame.Rect((80, 100), (200, 200))),
+                ui_scale(pygame.Rect((70, 150), (200, 200))),
                 pygame.transform.scale(
                     self.selected_cat.sprite, ui_scale_dimensions((200, 200))
                 ),
         )
         
         self.predict_button = UISurfaceImageButton(
-            ui_scale(pygame.Rect((270, 250), (210, 60))),
+            ui_scale(pygame.Rect((260, 300), (210, 60))),
             "predict offspring",
             get_button_dict(ButtonStyles.SQUOVAL, (160, 30)),
             object_id="@buttonstyles_squoval",
@@ -182,7 +181,7 @@ class PredictOffspringScreen(Screens):
         )
         self.selected_mate = None
         
-        heading_rect = ui_scale(pygame.Rect((-10, 20), (400, -1)))
+        heading_rect = ui_scale(pygame.Rect((0, 20), (400, -1)))
         self.selected_cat_elements["heading"] = pygame_gui.elements.UITextBox(
             "Predict " + str(self.selected_cat.name) + "'s offspring",
             heading_rect,
@@ -193,7 +192,7 @@ class PredictOffspringScreen(Screens):
         )
         
         self.selected_cat_elements["label"] = pygame_gui.elements.UILabel(
-            ui_scale(pygame.Rect((540, 65), (200, 30))),
+            ui_scale(pygame.Rect((530, 110), (200, 30))),
             "Second Parent",
             object_id="#text_box_30_horizcenter",
         )
@@ -216,7 +215,7 @@ class PredictOffspringScreen(Screens):
         indey = 0
         for offspring in self.predicted_offspring:
             self.predicted_offspring_elements["offspring" + str(index) + str(indey)] = pygame_gui.elements.UIImage(
-                    ui_scale(pygame.Rect((105 + (index*120), 365 + indey), (100, 100))),
+                    ui_scale(pygame.Rect((105 + (index*120), 395 + indey), (100, 100))),
                     pygame.transform.scale(
                         offspring.sprite, ui_scale_dimensions((100, 100))
                     ),

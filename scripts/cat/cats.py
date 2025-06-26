@@ -590,13 +590,20 @@ class Cat:
         if self.awakened:
             template["type"] = "enhanced esper"
             classes = [self.awakened["class"], template["class"]]
-            abilities = [self.awakened["ability"], template["ability"]]
+            power2 = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+            abilities = [self.awakened["ability"], power2]
+            template["desc"] = choice(powers_dict[power2][template["class"]])
             while template["desc"] == self.awakened["desc"]:
-               template["desc"] = choice(powers_dict[power][template["class"]])
+               template["desc"] = choice(powers_dict[power2][template["class"]])
             powers = [self.awakened["desc"], template["desc"]]
+            
             template["class"] = classes
             template["ability"] = abilities
             template["desc"] = powers
+            
         self.awakened = template
 
     def init_generate_cat(self, skill_dict):

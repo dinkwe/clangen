@@ -767,7 +767,7 @@ class CustomizeStatsScreen(Screens):
             elif event.ui_element == self.ability1_dropdown:
                 selected_option = self.ability1_dropdown.selected_option[1].lower()
                 if self.the_cat.awakened["type"] in ["esper", "enhanced esper"]:
-                    if isinstance(the_cat.awakened["ability"], list):
+                    if isinstance(self.the_cat.awakened["ability"], list):
                             self.the_cat.awakened["ability"][0] = selected_option
                             self.the_cat.awakened["desc"][0] = choice(powers_dict[selected_option][self.the_cat.awakened["class"]])
                     else:

@@ -3026,8 +3026,7 @@ def generate_sprite(
                 for accessory in cat_accessories:
                     if accessory in getattr(Pelt, category):
                         if accessory in cat.pelt.colorsplash_accessories:
-                            if cat.awakened:
-                              new_sprite.blit(
+                            new_sprite.blit(
                                 sprites.sprites["acc_colorsplash" + accessory + cat_sprite],
                                 (0, 0),
                             )  
