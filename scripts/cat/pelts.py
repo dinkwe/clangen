@@ -1,5 +1,5 @@
 import random
-from random import choice
+from random import choice, randint
 from re import sub
 
 import i18n
@@ -13,208 +13,29 @@ from scripts.utility import adjust_list_text
 class Pelt:
     sprites_names = {
         'SingleColour': 'single',
-        'SterSingle': 'stersingle',
-        'SillySingle': 'sillysingle',
-        'DanceSingle': 'dancesingle',
-        'MimiSingle': 'mimisingle',
-        'CSSingle': 'cs_single',
-        'CS2Single': 'cs_single2',
-        'KrisSingle': 'krissingle',
-        'MeteorSingle': 'meteorsingle',
-        'HiveSingle': 'hivesingle',
-        'PepperSingle': 'peppersingle',
-        'HetaSingle': 'hetasingle',
-        'PastelSingle': 'pastelsingle',
-        'SparkleSingle': 'sparklesingle',
         'TwoColour': 'single',
         'Tabby': 'tabby',
-        'Stertabby': 'stertabby',
-        'Sillytabby': 'sillytabby',
-        'Dancetabby': 'dancetabby',
-        'Mimitabby': 'mimitabby',
-        'CSTabby': 'cs_tabby',
-        'CS2Tabby': 'cs_tabby2',
-        'KrisTabby': 'kristabby',
-        'MeteorTabby': 'meteortabby',
-        'HiveTabby': 'hivetabby',
-        'PepperTabby': 'peppertabby',
-        'HetaTabby': 'hetatabby',
-        'PastelTabby': 'pasteltabby',
-        'SparkleTabby': 'sparkletabby',
         'Marbled': 'marbled',
-        'Stermarbled': 'stermarbled',
-        'Sillymarbled': 'sillymarbled',
-        'Dancemarbled': 'dancemarbled',
-        'Mimimarbled': 'mimimarbled',
-        'CSMarbled': 'cs_marbled',
-        'CS2Marbled': 'cs_marbled2',
-        'KrisMarbled': 'krismarbled',
-        'MeteorMarbled': 'meteormarbled',
-        'HiveMarbled': 'hivemarbled',
-        'PepperMarbled': 'peppermarbled',
-        'HetaMarbled': 'hetamarbled',
-        'PastelMarbled': 'pastelmarbled',
-        'SparkleMarbled': 'sparklemarbled',
         'Rosette': 'rosette',
-        'Sterrosette': 'sterrosette',
-        'Sillyrosette': 'sillyrosette',
-        'Dancerosette': 'dancerosette',
-        'Mimirosette': 'mimirosette',
-        'CSRosette': 'cs_rosette',
-        'CS2Rosette': 'cs_rosette2',
-        'KrisRosette': 'krisrosette',
-        'MeteorRosette': 'meteorrosette',
-        'HiveRosette': 'hiverosette',
-        'PepperRosette': 'pepperrosette',
-        'HetaRosette': 'hetarosette',
-        'PastelRosette': 'pastelrosette',
-        'SparkleRosette': 'sparklerosette',
         'Smoke': 'smoke',
-        'Stersmoke': 'stersmoke',
-        'Sillysmoke': 'sillysmoke',
-        'Dancesmoke': 'dancesmoke',
-        'Mimismoke': 'mimismoke',
-        'CSSmoke': 'cs_smoke',
-        'CS2Smoke': 'cs_smoke2',
-        'KrisSmoke': 'krissmoke',
-        'MeteorSmoke': 'meteorsmoke',
-        'HiveSmoke': 'hivesmoke',
-        'PepperSmoke': 'peppersmoke',
-        'HetaSmoke': 'hetasmoke',
-        'PastelSmoke': 'pastelsmoke',
-        'SparkleSmoke': 'sparklesmoke',
         'Ticked': 'ticked',
-        'Sterticked': 'sterticked',
-        'Sillyticked': 'sillyticked',
-        'Danceticked': 'danceticked',
-        'Mimiticked': 'mimiticked',
-        'CSTicked': 'cs_ticked',
-        'CS2Ticked': 'cs_ticked2',
-        'KrisTicked': 'kristicked',
-        'MeteorTicked': 'meteorticked',
-        'HiveTicked': 'hiveticked',
-        'PepperTicked': 'pepperticked',
-        'HetaTicked': 'hetasingle',
-        'PastelTicked': 'pastelticked',
-        'SparkleTicked': 'sparkleticked',
         'Speckled': 'speckled',
-        'Sterspeckled': 'sterspeckled',
-        'Sillyspeckled': 'sillyspeckled',
-        'Dancespeckled': 'dancespeckled',
-        'Mimispeckled': 'mimispeckled',
-        'CSSpeckled': 'cs_speckled',
-        'CS2Speckled': 'cs_speckled2',
-        'KrisSpeckled': 'krisspeckled',
-        'MeteorSpeckled': 'meteorspeckled',
-        'HiveSpeckled': 'hivespeckled',
-        'PepperSpeckled': 'pepperspeckled',
-        'HetaSpeckled': 'hetaspeckled',
-        'PastelSpeckled': 'pastelspeckled',
-        'SparkleSpeckled': 'sparklespeckled',
         'Bengal': 'bengal',
-        'Sterbengal': 'sterbengal',
-        'Sillybengal': 'sillybengal',
-        'Dancebengal': 'dancebengal',
-        'Mimibengal': 'mimibengal',
-        'CSBengal': 'cs_bengal',
-        'CS2Bengal': 'cs_bengal2',
-        'KrisBengal': 'krisbengal',
-        'MeteorBengal': 'meteorbengal',
-        'HiveBengal': 'hivebengal',
-        'PepperBengal': 'pepperbengal',
-        'HetaBengal': 'hetabengal',
-        'PastelBengal': 'pastelbengal',
-        'SparkleBengal': 'sparklebengal',
         'PrideBengal': 'pridebengal',
         'Mackerel': 'mackerel',
-        'Stermackerel': 'stermackerel',
-        'Sillymackerel': 'sillymackerel',
-        'Dancemackerel': 'dancemackerel',
-        'Mimimackerel': 'mimimackerel',
-        'CSMackerel': 'cs_mackerel',
-        'CS2Mackerel': 'cs_mackerel2',
-        'KrisMackerel': 'krismackerel',
-        'MeteorMackerel': 'meteormackerel',
-        'HiveMackerel': 'hivemackerel',
-        'PepperMackerel': 'peppermackerel',
-        'HetaMackerel': 'hetamackerel',
-        'PastelMackerel': 'pastelmackerel',
-        'SparkleMackerel': 'sparklemackerel',
         'PrideMackerel': 'pridemackerel',
         'Classic': 'classic',
-        'Sterclassic': 'sterclassic',
-        'Sillyclassic': 'sillyclassic',
-        'Danceclassic': 'danceclassic',
-        'Mimiclassic': 'mimiclassic',
-        'CSClassic': 'cs_classic',
-        'CS2Classic': 'cs_classic2',
-        'KrisClassic': 'krisclassic',
-        'MeteorClassic': 'meteorclassic',
-        'HiveClassic': 'hiveclassic',
-        'PepperClassic': 'pepperclassic',
-        'HetaClassic': 'hetaclassic',
-        'PastelClassic': 'pastelclassic',
-        'SparkleClassic': 'sparkleclassic',
         'PrideClassic': 'prideclassic',
         'Sokoke': 'sokoke',
-        'Stersokoke': 'stersokoke',
-        'Sillysokoke': 'sillysokoke',
-        'Dancesokoke': 'dancesokoke',
-        'Mimisokoke': 'mimisokoke',
-        'CSSokoke': 'cs_sokoke',
-        'CS2Sokoke': 'cs_sokoke2',
-        'KrisSokoke': 'krissokoke',
-        'MeteorSokoke': 'meteorsokoke',
-        'HiveSokoke': 'hivesokoke',
-        'PepperSokoke': 'peppersokoke',
-        'HetaSokoke': 'hetasokoke',
-        'PastelSokoke': 'pastelsokoke',
-        'SparkleSokoke': 'sparklesokoke',
         'Agouti': 'agouti',
-        'CSAgouti': 'cs_agouti',
-        'CS2Agouti': 'cs_agouti2',
-        'KrisAgouti': 'krisagouti',
-        'MeteorAgouti': 'meteoragouti',
-        'HiveAgouti': 'hiveagouti',
-        'PepperAgouti': 'pepperagouti',
-        'HetaAgouti': 'hetaagouti',
-        'PastelAgouti': 'pastelagouti',
-        'SparkleAgouti': 'sparkleagouti',
         'PrideAgouti': 'prideagouti',
         'Singlestripe': 'singlestripe',
-        'Sterstripe': 'sterstripe',
-        'Sillystripe': 'sillystripe',
-        'Dancestripe': 'dancestripe',
-        'Mimistripe': 'mimistripe',
-        'CSSinglestripe': 'cs_singlestripe',
-        'CS2Singlestripe': 'cs_singlestripe2',
-        'KrisSinglestripe': 'krissinglestripe',
-        'MeteorSinglestripe': 'meteorsinglestripe',
-        'HiveSinglestripe': 'hivesinglestripe',
-        'PepperSinglestripe': 'peppersinglestripe',
-        'HetaSinglestripe': 'hetasinglestripe',
-        'PastelSinglestripe': 'pastelsinglestripe',
-        'SparkleSinglestripe': 'sparklesinglestripe',
         'Masked': 'masked',
-        'Stermasked': 'stermasked',
-        'Sillymasked': 'sillymasked',
-        'Dancemasked': 'dancemasked',
-        'Mimimasked': 'mimimasked',
-        'CSMasked': 'cs_masked',
-        'CS2Masked': 'cs_masked2',
-        'KrisMasked': 'krismasked',
-        'MeteorMasked': 'meteormasked',
-        'HiveMasked': 'hivemasked',
-        'SparkleMasked': 'sparklemasked',
         'Brindle': 'brindle',
         'Wolf': 'wolf',
         'Wildcat': 'wildcat',
         'Spots': 'spots',
         'Smokepoint': 'smokepoint',
-        'Steragouti': 'steragouti',
-        'Sillyagouti': 'sillyagouti',
-        'Danceagouti': 'danceagouti',
-        'Mimiagouti': 'mimiagouti',
         'Finleappatches': 'finleappatches',
         'Tortie': None,
         'Calico': None,
@@ -249,11 +70,13 @@ class Pelt:
 
     # ATTRIBUTES, including non-pelt related
     pelt_colours = [
-        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK',
+        'CREAM', 'PALEGINGER','GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA',
+        'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN','CHOCOLATE'
     ]
+
     
+    #sparkle cats
     minecraft_colors = [
             'ACACIALOG', 'BAMBOO', 'BIRCHLOG', 'CHERRYLOG', 'CRIMSONSTEM', 'DARKOAKLOG', 'JUNGLELOG', 'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'WARPEDSTEM',
             'ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS', 'CRIMSONPLANKS', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS', 'SPRUCEPLANKS', 'WARPEDPLANKS',
@@ -263,6 +86,89 @@ class Pelt:
     ]
         
     anju_colors = ['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']
+    
+    cs2_colors = [
+            'LIGHTLIME', 'PINKGREY', 'YELLOWBROWN', 'REDGREY', 'BLUEBROWN', 'GHOSTBROWN', 'BLACKPURPLE',
+            'BLUECREAM', 'PALEPINKPURPLE', 'ICEBLUE', 'BLUECS2', 'GREENBROWN', 'NAVYBLUE',
+            'PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'NAVYBROWN', 'MULBERRY'
+    ]
+    
+    cs_colors = [
+            'ICEWHITE', 'CRYSTAL', 'ORCHID', 'CERULEAN', 'GRAPE', 'GHOSTBLUE', 'BLACKBLUE',
+            'THISTLE', 'SUNYELLOW', 'BUBBLEGUM', 'REDSTAIN', 'ROSE', 'DUSKBROWN',
+            'FROZENSUN', 'GREENGOLD', 'OCEAN', 'TEAL', 'REDBLUE', 'TREE'
+    ]
+    
+    heta_colors = [
+        'REDHETA', 'ORANGEHETA', 'YELLOWHETA', 'NEONYELLOW', 'NEONGREEN', 'GREENHETA', 'MINTGREEN',
+        'DARKMINT', 'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA', 'INDIGOHETA',
+        'PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA'
+    ]
+    
+    hive_colors = [
+        'GREENH', 'TEALH', 'BLUEH', 'NAVYH', 'INDIGOH', 'PURPLEH', 'VIOLETH',
+        'PINKH', 'ROSEH','DARKPINKH', 'REDH', 'ORANGEH', 'GOLDH',
+        'PASTELPURPLEH', 'DARKGREENH', 'BROWN-PURPLE', 'YELLOWH', 'DARKMOSS','PURPLESWIRL'
+    ]
+    
+    kris_colors = [
+        'PINKCREAM', 'BLUEMINT', 'SUNSET', 'PINK-BLUE', 'INDIGOK', 'BLUEGHOSTK', 'PINKK',
+        'PASTELPINKBLUE', 'RUSTYGREEN','OURPLE', 'BLUE-YELLOW', 'BLUE-PURPLE', 'DARKSUNSET',
+        'BANANABERRY', 'BRIGHTBLUEK', 'SUNRISE', 'GREEN-NAVY', 'PINKSHADOW','REDK'
+    ]
+    
+    meteor_colors = [
+        'SILVERMETEOR', 'SILVERNAVY', 'CREAMSILVER', 'GREYSTAR', 'DARKGREYSTAR', 'BLACK-BROWN', 'BLUESPOTTED',
+        'CREAMMETEOR', 'PINK-WHITE','TANSPOTTED', 'REVERSESUN', 'WARM-BLUE', 'INDIGO-VIOLET',
+        'GREYMETEOR', 'ICESPOTTED', 'SHADOW', 'BLUE-EARTH', 'EARTHSPOTTED','BROWN-TAN'
+    ]
+    
+    pastel_colors = [
+        'PALEPINK-PURPLE', 'PALEGREY-PINK', 'PALEBLUE-YELLOW', 'PALEMINT-PURPLE', 'PALEGREEN-INDIGO', 'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE',
+        'PALEPURPLE-GOLD', 'PALECYAN-GOLD','PALEMINT-MAGENTA', 'PALEMINT-VIOLET', 'PALEGREEN-BLUE', 'PALEGREEN-NAVY',
+        'PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE', 'PALEYELLOWGREEN','PALEYELLOW-BLUE'
+    ]
+    
+    pepper_colors = [
+        'ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER', 'BLACKBLUEPEPPER',
+        'GOLDCREAM', 'GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED', 'NEONRED', 'REDBLACK',
+        'PALEBLUE-GOLD', 'INDIGOPEPPER', 'RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER'
+    ]
+    
+    sparkle_colors = [
+        'REDS', 'RED-ORANGES', 'DARKYELLOWS', 'GREENREDS', 'CYANPINKG', 'INDIGOREDS', 'REVERSERAINBOW',
+        'PINKREDS', 'RUSTYS','GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES',
+        'BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS','SUNNYS'
+    ]
+    
+    
+    #mega colors mod
+    
+    dance_colours = [
+        'LIGHTCINNAMON', 'CINNAMON', 'SILVERFAWN', 'DARKCINNAMON', 'DARKFAWN','FAWN', 'LIGHTFAWN',
+        'PALEFAWN', 'PALECREAM','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD',
+        'GOLD', 'LIGHTGOLD', 'SILVERCREAM', 'PALEGOLD', 'SUNSHINE','BRONZE'
+    ]
+    
+    silly_colours = [
+        'LIGHTLILAC', 'LILACSILLY', 'DARKLILAC', 'DARKASH', 'ASH', 'LIGHTASH', 'PALEASH',
+        'SILVERCINNAMON', 'SILVERRED','PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY',
+        'EBONY', 'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','PALECINNAMON'
+    ]
+    
+    ster_colours = [
+        'WHITESTER', 'PALEGREYSTER', 'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER', 'BLACKSTER', 'OBSIDIANSTER',
+        'GHOSTSTER', 'PALEBLUE','LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'SILVERCHOCOLATE',
+        'SILVERORANGE', 'DARKSLATE', 'SLATE', 'LIGHTSLATE', 'PALESLATE','PALELILAC'
+    ]
+    
+    mimi_colours = [
+        'COPPERMIMI', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE', 'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER',
+        'GINGERMIMI', 'DARKGINGERMIMI','SILVERGOLD', 'RUSSET', 'DARKRED', 'REDMIMI',
+        'LIGHTRED', 'PALERED', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE'
+    ]
+    
+    no_masked = heta_colors + minecraft_colors + anju_colors + pastel_colors + pepper_colors
     
     pelt_c_no_white = [
         'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
@@ -279,15 +185,15 @@ class Pelt:
                     'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE', 'CHIMERA', 'DAUB', 'EMBER', 'BLANKET',
                     'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'SMUDGED', 'DAPPLENIGHT', 'STREAK', 'MASK', 'CHEST', 'ARMTAIL', 'SMOKE', 'GRUMPYFACE',
                     'BRIE', 'BELOVED', 'BODY', 'SHILOH', 'FRECKLED', 'HEARTBEAT', 'MINKFULLWHITE', 'MINKANY', 'MINKTUXEDO', 'MINKLITTLE', 'MINKCOLOURPOINT', 'MINKVAN', 'MINKANYTWO',
-            'MINKMOON', 'MINKPHANTOM', 'MINKPOWDER', 'MINKBLEACHED', 'MINKSAVANNAH', 'MINKFADESPOTS', 'MINKPEBBLESHINE', 'MINKEXTRA', 'MINKONEEAR', 'MINKBROKEN', 'MINKLIGHTTUXEDO', 'MINKBUZZARDFANG', 'MINKRAGDOLL', 
-            'MINKLIGHTSONG', 'MINKVITILIGO', 'MINKBLACKSTAR', 'MINKPIEBALD', 'MINKCURVED', 'MINKPETAL', 'MINKSHIBAINU', 'MINKOWL', 'MINKTIP', 'MINKFANCY', 'MINKFRECKLES', 'MINKRINGTAIL', 'MINKHALFFACE', 'MINKPANTSTWO', 'MINKGOATEE', 'MINKVITILIGOTWO',
-            'MINKPAWS', 'MINKMITAINE', 'MINKBROKENBLAZE', 'MINKSCOURGE', 'MINKDIVA', 'MINKBEARD', 'MINKTAIL', 'MINKBLAZE', 'MINKPRINCE', 'MINKBIB', 'MINKVEE', 'MINKUNDERS', 'MINKHONEY',
-            'MINKFAROFA', 'MINKDAMIEN', 'MINKMISTER', 'MINKBELLY', 'MINKTAILTIP', 'MINKTOES', 'MINKTOPCOVER', 'MINKAPRON', 'MINKCAPSADDLE', 'MINKMASKMANTLE', 'MINKSQUEAKS', 'MINKSTAR', 'MINKTOESTAIL', 'MINKRAVENPAW',
-                'MINKPANTS', 'MINKREVERSEPANTS', 'MINKSKUNK', 'MINKKARPATI', 'MINKHALFWHITE', 'MINKAPPALOOSA', 'MINKDAPPLEPAW', 'MINKHEART', 'MINKLILTWO', 'MINKGLASS', 'MINKMOORISH', 'MINKSEPIAPOINT', 'MINKMINKPOINT', 'MINKSEALPOINT',
-            'MINKMAO', 'MINKLUNA', 'MINKCHESTSPECK', 'MINKWINGS', 'MINKPAINTED', 'MINKHEARTTWO', 'MINKWOODPECKER', 'MINKBOOTS', 'MINKMISS', 'MINKCOW', 'MINKCOWTWO', 'MINKBUB', 'MINKBOWTIE', 'MINKMUSTACHE', 'MINKREVERSEHEART',
-            'MINKSPARROW', 'MINKVEST', 'MINKLOVEBUG', 'MINKTRIXIE', 'MINKSAMMY', 'MINKSPARKLE', 'MINKRIGHTEAR', 'MINKLEFTEAR', 'MINKESTRELLA', 'MINKSHOOTINGSTAR', 'MINKEYESPOT', 'MINKREVERSEEYE',
-            'MINKFADEBELLY', 'MINKFRONT', 'MINKBLOSSOMSTEP', 'MINKPEBBLE', 'MINKTAILTWO', 'MINKBUDDY', 'MINKBACKSPOT', 'MINKEYEBAGS', 'MINKBULLSEYE', 'MINKFINN', 'MINKDIGIT', 'MINKKROPKA', 'MINKFCTWO', 'MINKFCONE', 'MINKMIA', 'MINKSCAR',
-            'MINKBUSTER', 'MINKSMOKEY', 'MINKHAWKBLAZE', 'MINKCAKE', 'MINKROSINA', 'MINKPRINCESS', 'MINKLOCKET', 'MINKBLAZEMASK', 'MINKTEARS', 'MINKDOUGIE', 'CHAOSONE', 'CHAOSTWO', 'CHAOSTHREE', 'CHAOSFOUR', 'ERROR', 'WAVE', 'PONINTTORITE', 'MASKTORITE', 'LITTLESTAR',
+                    'MINKMOON', 'MINKPHANTOM', 'MINKPOWDER', 'MINKBLEACHED', 'MINKSAVANNAH', 'MINKFADESPOTS', 'MINKPEBBLESHINE', 'MINKEXTRA', 'MINKONEEAR', 'MINKBROKEN', 'MINKLIGHTTUXEDO', 'MINKBUZZARDFANG', 'MINKRAGDOLL', 
+                    'MINKLIGHTSONG', 'MINKVITILIGO', 'MINKBLACKSTAR', 'MINKPIEBALD', 'MINKCURVED', 'MINKPETAL', 'MINKSHIBAINU', 'MINKOWL', 'MINKTIP', 'MINKFANCY', 'MINKFRECKLES', 'MINKRINGTAIL', 'MINKHALFFACE', 'MINKPANTSTWO', 'MINKGOATEE', 'MINKVITILIGOTWO',
+                    'MINKPAWS', 'MINKMITAINE', 'MINKBROKENBLAZE', 'MINKSCOURGE', 'MINKDIVA', 'MINKBEARD', 'MINKTAIL', 'MINKBLAZE', 'MINKPRINCE', 'MINKBIB', 'MINKVEE', 'MINKUNDERS', 'MINKHONEY',
+                    'MINKFAROFA', 'MINKDAMIEN', 'MINKMISTER', 'MINKBELLY', 'MINKTAILTIP', 'MINKTOES', 'MINKTOPCOVER', 'MINKAPRON', 'MINKCAPSADDLE', 'MINKMASKMANTLE', 'MINKSQUEAKS', 'MINKSTAR', 'MINKTOESTAIL', 'MINKRAVENPAW',
+                        'MINKPANTS', 'MINKREVERSEPANTS', 'MINKSKUNK', 'MINKKARPATI', 'MINKHALFWHITE', 'MINKAPPALOOSA', 'MINKDAPPLEPAW', 'MINKHEART', 'MINKLILTWO', 'MINKGLASS', 'MINKMOORISH', 'MINKSEPIAPOINT', 'MINKMINKPOINT', 'MINKSEALPOINT',
+                    'MINKMAO', 'MINKLUNA', 'MINKCHESTSPECK', 'MINKWINGS', 'MINKPAINTED', 'MINKHEARTTWO', 'MINKWOODPECKER', 'MINKBOOTS', 'MINKMISS', 'MINKCOW', 'MINKCOWTWO', 'MINKBUB', 'MINKBOWTIE', 'MINKMUSTACHE', 'MINKREVERSEHEART',
+                    'MINKSPARROW', 'MINKVEST', 'MINKLOVEBUG', 'MINKTRIXIE', 'MINKSAMMY', 'MINKSPARKLE', 'MINKRIGHTEAR', 'MINKLEFTEAR', 'MINKESTRELLA', 'MINKSHOOTINGSTAR', 'MINKEYESPOT', 'MINKREVERSEEYE',
+                    'MINKFADEBELLY', 'MINKFRONT', 'MINKBLOSSOMSTEP', 'MINKPEBBLE', 'MINKTAILTWO', 'MINKBUDDY', 'MINKBACKSPOT', 'MINKEYEBAGS', 'MINKBULLSEYE', 'MINKFINN', 'MINKDIGIT', 'MINKKROPKA', 'MINKFCTWO', 'MINKFCONE', 'MINKMIA', 'MINKSCAR',
+                    'MINKBUSTER', 'MINKSMOKEY', 'MINKHAWKBLAZE', 'MINKCAKE', 'MINKROSINA', 'MINKPRINCESS', 'MINKLOCKET', 'MINKBLAZEMASK', 'MINKTEARS', 'MINKDOUGIE', 'CHAOSONE', 'CHAOSTWO', 'CHAOSTHREE', 'CHAOSFOUR', 'ERROR', 'WAVE', 'PONINTTORITE', 'MASKTORITE', 'LITTLESTAR',
                       'TANBUNNY', 'STRIPES', 'PINITO',  'SKULL', 'SIGHT', 'BRINDLETORITE', 'SNOW', 'ROSETTESTORITE', 'AMBERONE',
                       'KINTSUGIONE', 'BENGALMASK', 'SHADOW', 'RAIN', 'MGLA', 'MOONLIGHT', 'MOUSE', 'SATURN', 'MARBLETORINE', 'AMBERTWO',
                       'PATTERN', 'MOSS',
@@ -307,42 +213,10 @@ class Pelt:
                    'bobcat', 'cheetah', 'dalmatian',
                    'wolf', 'brindle', 'spots', 'smokepoint',
                    'finleappatches', 'wildcat',
-                   'steragouti', 'sillyagouti', 'danceagouti', 'mimiagouti', 
-                   'sterbengal', 'sillybengal', 'dancebengal', 'mimibengal',
-                   'sterclassic', 'sillyclassic', 'danceclassic', 'mimiclassic',
-                   'stermackerel', 'sillymackerel', 'dancemackerel', 'mimimackerel',
-                   'stermarbled', 'sillymarbled', 'dancemarbled', 'mimimarbled',
-                   'stermasked', 'sillymasked', 'dancemasked', 'mimimasked',
-                   'sterrosette', 'sillyrosette', 'dancerosette', 'mimirosette',
-                   'stersingle', 'sillysingle', 'dancesingle', 'mimisingle',
-                   'sterstripe', 'sillystripe', 'dancestripe', 'mimistripe',
-                   'stersmoke', 'sillysmoke', 'dancesmoke', 'mimismoke',
-                   'stersokoke', 'sillysokoke', 'dancesokoke', 'mimisokoke',
-                   'sterspeckled', 'sillyspeckled', 'dancespeckled', 'mimispeckled',
-                   'stertabby', 'sillytabby', 'dancetabby', 'mimitabby',
-                   'sterticked', 'sillyticked', 'danceticked', 'mimiticked', 'abyssinian', 'clouded', 'doberman', 'ghosttabby', 'merle',
+                   'abyssinian', 'clouded', 'doberman', 'ghosttabby', 'merle',
                    'monarch', 'oceloid', 'pinstripetabby', 'snowflake',
-                   'cs_single', 'cs_tabby', 'cs_bengal', 'cs_marbled', 'cs_ticked', 'cs_smoke', 'cs_rosette', 'cs_speckled', 'cs_mackerel',
-                   'cs_classic', 'cs_sokoke', 'cs_agouti', 'cs_singlestripe', 'cs_masked',
-                   'cs_single2', 'cs_tabby2', 'cs_bengal2', 'cs_marbled2', 'cs_ticked2', 'cs_smoke2', 'cs_rosette2', 'cs_speckled2', 'cs_mackerel2',
-                   'cs_classic2', 'cs_sokoke2', 'cs_agouti2', 'cs_singlestripe2', 'cs_masked2', 'caliisokoke', 'caliispeckled', 'circletabby', 'birchtabby', 'dot', 'dotfade', 'kintsugi', 'colourpoint', 'lynxpoint', 'ncrestedcaracara',
-                   'krissingle', 'kristabby', 'krisbengal', 'krismarbled', 'kristicked','krissmoke', 'krisrosette', 'krisspeckled', 'krismackerel',
-                   'krisclassic', 'krissokoke', 'krisagouti', 'krissinglestripe', 'krismasked',
-                   'meteorsingle', 'meteortabby', 'meteorbengal', 'meteormarbled', 'meteorticked','meteorsmoke', 'meteorrosette', 'meteorspeckled', 'meteormackerel',
-                   'meteorclassic', 'meteorsokoke', 'meteoragouti', 'meteorsinglestripe', 'meteormasked',
-                   'hivesingle', 'hivetabby', 'hivebengal', 'hivemarbled', 'hiveticked','hivesmoke', 'hiverosette', 'hivespeckled', 'hivemackerel',
-                   'hiveclassic', 'hivesokoke', 'hiveagouti', 'hivesinglestripe', 'hivemasked',
-                   'peppersingle', 'peppertabby', 'pepperbengal', 'peppermarbled', 'pepperticked','peppersmoke', 'pepperrosette', 'pepperspeckled', 'peppermackerel',
-                   'pepperclassic', 'peppersokoke', 'pepperagouti', 'peppersinglestripe',
-                   'hetasingle', 'hetatabby', 'hetabengal', 'hetamarbled', 'hetaticked','hetasmoke', 'hetarosette', 'hetaspeckled', 'hetamackerel',
-                   'hetaclassic', 'hetasokoke', 'hetaagouti', 'hetasinglestripe',
-                   'pastelsingle', 'pasteltabby', 'pastelbengal', 'pastelmarbled', 'pastelticked','pastelsmoke', 'pastelrosette', 'pastelspeckled', 'pastelmackerel',
-                   'pastelclassic', 'pastelsokoke', 'pastelagouti', 'pastelsinglestripe',
-                   'sparklesingle', 'sparkletabby', 'sparklebengal', 'sparklemarbled', 'sparkleticked','sparklesmoke', 'sparklerosette', 'sparklespeckled', 'sparklemackerel',
-                   'sparkleclassic', 'sparklesokoke', 'sparkleagouti', 'sparklesinglestripe', 'sparklemasked',
+                   'caliisokoke', 'caliispeckled', 'circletabby', 'birchtabby', 'dot', 'dotfade', 'kintsugi', 'colourpoint', 'lynxpoint', 'ncrestedcaracara',
                    'prideagouti','pridebengal', 'prideclassic', 'pridemackerel'
-                   #'minecraftagouti', 'minecraftbengal', 'minecraftclassic', 'minecraftmackerel', 'minecraftmarbled', 'minecraftrosette',
-                   #'minecraftsingle', 'minecraftsokoke', 'minecraftspeckled', 'minecrafttabby', 'minecraftticked'
                    ]
 
     pelt_length = ["short", "medium", "long"]
@@ -361,16 +235,31 @@ class Pelt:
         'FERN', 'APPLE', 'MOSS', 'THICKET', 'PEACOCK', 'OLIVE','STORMY BLUE', 'DEPTHS', 'STORMY', 'TEAL', 'INDIGO', 'STEEL', 'PEACH', 'DAFFODIL', 'MARIGOLD', 'BRASS', 'DARKAMBER', 'DAWN SKIES','MINT',
         'CHARTREUSE', 'MEADOW', 'LEAF', 'LIGHT TURQUOISE', 'SAP', 'ALBINISTIC', 'COBALT ORE', 'RAIN', 'CYAN DYE', 'PERIWINKLE PURPLE', 'ICY CRACK', 'PINK', 'MORNING', 'DARK BROWN' , 'BAY', 'NEON GREEN', 'SEA', 'DISCORD',
         'AUTUMN LEAF', 'RUBY', 'PHANTOM', 'RIVER MOSS', 'WICKED', 'ORANGE']
-    yellow_eyes = ['BULLET', 'GREY SILVER', 'PEACH', 'LIGHT YELLOW', 'SAND', 'DAFFODIL', 'SUNSHINE', 'MUSTARD', 'MARIGOLD', 'GOLD ORE', 'BRONZE ORE', 'BRASS', 'FOSSILIZED AMBER', 'TIMBER', 'DARKAMBER', 'DUSKY', 'COPPER ORE', 'DAWN SKY','YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW', 'BRONZE', 'SILVER', 'ROSE', 'LIGHT FLAME', 'RED',
-                   'PUMPKIN', 'BROWN', 'CEDAR', 'DARK PINE', 'FALL', 'GOLD MOON', 'OXIDIZED', 'BERRY BANANA', 'WORMY', 'THUNDERBOLT',
-                   'VOLCANO', 'SEASHELL', 'PARADOX', 'BLESSING', 'VALENTINE', 'PALE BROWN', 'CRIMSON', 'MORNING',
-                   'BLACK', 'ROSE GOLD', 'DARK ROSE','DARK BROWN', 'MUDDY', 'RUSTY', 'ECLIPSE', 'BAY', 'DISCORD', "ORANGE",
-                   "AUTUMN LEAF"]
-    blue_eyes = ['BLUE SKY', 'STORMY BLUE', 'ALBINISTIC', 'OCEAN', 'DEPTHS', 'COBALT ORE', 'OVERCAST', 'STORMY', 'RAIN', 'AQUA', 'TEAL', 'CYAN DYE', 'IRIS', 'INDIGO', 'PERIWINKLE PURPLE', 'ROBIN', 'STEEL', 'DAWN SKIES','ICY CRACK','BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'SEAFOAM', 'CLOUDY', 'TURQUOISE',
-                 'RAINY', 'RUBY', 'LILAC', 'PERIWINKLE', 'BLACKBERRY', 'POND', 'COTTON CANDY', 'HALLOWEEN', 'LOBELIA', 'MIDNIGHT', 'MOONSTONE', 'SNOW', 'WICKED', 'PHANTOM',
-                 'DAWN SKY', 'TWILIGHT SKY', 'BLUE HAZEL', 'CURSE', 'FIREWORK', 'REVERSE SUNLITICE', 'ICY', 'VIOLET', 'PASTEL', 'WINTER ROSE', 'PASTEL LAVENDER', 'LAVENDER', 'PINK']
-    green_eyes = ['LICHEN', 'FERN', 'MINT', 'SPRING', 'APPLE', 'CHARTREUSE', 'LEAVES', 'MOSS', 'MEADOW', 'RIVER MOSS', 'TREE', 'THICKET', 'LEAF', 'EMERALD ORE', 'PEACOCK', 'LIGHT TURQUOISE', 'HAZELNUT', 'OLIVE', 'SAP', 'PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'ALGAE', 'SWAMP', 'AQUAMARINE', 'EARTH', 'DIRT', 'CHRISTMAS', 'FOREST FIRE',
-                  'LIME', 'LUCKY', 'DARK HAZEL', 'DARK TURQUOISE', 'AVOCADO', 'NEON GREEN', 'SEA', "ORANGE"]
+    
+    yellow_eyes = ['BULLET', 'GREY SILVER', 'PEACH', 'LIGHT YELLOW', 'SAND', 'DAFFODIL', 'SUNSHINE', 'MUSTARD',
+                   'MARIGOLD', 'GOLD ORE', 'BRONZE ORE', 'BRASS', 'FOSSILIZED AMBER', 'TIMBER','COPPER ORE',
+                   'DAWN SKY','YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW','BRONZE', 'SILVER',
+                   'ROSE', 'LIGHT FLAME','PUMPKIN', 'BROWN', 'DARK PINE', 'FALL', 'GOLD MOON', 'OXIDIZED', 'BERRY BANANA',
+                   'WORMY','THUNDERBOLT','PALE BROWN','MORNING','BLACK', 'ROSE GOLD','DARK BROWN', 'MUDDY', 'RUSTY',
+                   'BAY', 'DISCORD', "ORANGE","AUTUMN LEAF"]
+    
+    blue_eyes = ['BLUE SKY', 'STORMY BLUE', 'OCEAN', 'DEPTHS', 'COBALT ORE', 'OVERCAST', 'STORMY', 'RAIN', 'AQUA',
+                 'TEAL', 'CYAN DYE', 'IRIS', 'INDIGO','PERIWINKLE PURPLE', 'ROBIN', 'STEEL', 'DAWN SKIES','ICY CRACK',
+                 'BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'SEAFOAM', 'CLOUDY', 'TURQUOISE',
+                 'RAINY','POND', 'MIDNIGHT', 'MOONSTONE', 'SNOW', 'WICKED', 'PHANTOM',
+                 'DAWN SKY','BLUE HAZEL', 'CURSE', 'FIREWORK', 'REVERSE SUNLITICE', 'ICY', 'WINTER ROSE']
+    
+    green_eyes = ['LICHEN', 'FERN', 'MINT', 'SPRING', 'APPLE', 'CHARTREUSE', 'LEAVES', 'MOSS', 'MEADOW', 'RIVER MOSS',
+                  'TREE', 'THICKET', 'LEAF', 'EMERALD ORE', 'PEACOCK','LIGHT TURQUOISE', 'HAZELNUT', 'OLIVE', 'SAP',
+                  'PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'ALGAE', 'SWAMP', 'AQUAMARINE', 'EARTH', 'DIRT',
+                  'FOREST FIRE','LIME', 'LUCKY', 'DARK HAZEL', 'DARK TURQUOISE', 'AVOCADO', 'NEON GREEN', 'SEA']
+    
+    red_eyes = ["BLESSING", "CEDAR", "CHRISTMAS", "COTTON CANDY", "CRIMSON", "DARK ROSE", "DARKAMBER", "ECLIPSE",
+                "PINK", "RED", "ROSE", "RUBY", "SUNSET", "VALENTINE", "VOLCANO"]
+    
+    purple_eyes = ['ALBINISTIC', 'BLACKBERRY', 'DUSKY', 'HALLOWEEN', 'HEATHERBLUE', 'LAVENDER', 'LILAC', 'LOBELIA',
+                   'PARADOX', 'PASTEL', 'PASTEL LAVENDER', 'PERIWINKLE', 'SEASHELL', 'TWILIGHT SKY', 'VIOLET']
+    
     
     neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
                  'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
@@ -836,100 +725,203 @@ class Pelt:
     ]
 
     tabbies = [
-        "Tabby", "Stertabby", "Sillytabby", "Dancetabby", "Mimitabby",
-        "Ticked", "Sterticked", "Sillyticked", "Danceticked", "Mimiticked",
-        "Mackerel", "Stermackerel", "Sillymackerel", "Dancemackerel", "Mimimackerel",
-        "Classic", "Sterclassic", "Sillyclassic", "Danceclassic", "Mimiclassic",
-        "Sokoke", "Stersokoke", "Sillysokoke", "Dancesokoke", "Mimisokoke",
-        "Agouti", "Steragouti", "Sillyagouti", "Danceagouti", "Mimiagouti",
+        "Tabby","Ticked","Mackerel","Classic","Sokoke","Agouti",
+        "Tabby","Ticked","Mackerel","Classic","Sokoke","Agouti", #double base game pelts bc more colors 
         "Royal", "Brindle", "GhostTabby", "PinstripeTabby", "Caliisokoke", "Circletabby", "Birchtabby"
     ]
     spotted = [
-        "Speckled", "Sterspeckled", "Sillyspeckled", "Dancespeckled", "Mimispeckled",
-        "Rosette", "Sterrosette", "Sillyrosette", "Dancerosette", "Mimirosette",
+        "Speckled","Rosette", "Speckled","Rosette",
         "Lynx", "Bobcat", "Spots", "Merle", "Dot", "Caliispeckled", "Dotfade"
     ]
     plain = [
-        "SingleColour", "SterSingle", "SillySingle", "DanceSingle", "MimiSingle", "TwoColour",
-        "Smoke", "Stersmoke", "Sillysmoke", "Dancesmoke", "Mimismoke",
-        "Singlestripe", "Sterstripe", "Dancestripe", "Sillystripe", "Mimistripe",
+        "SingleColour", "Smoke", "Singlestripe", "SingleColour", "Smoke", "Singlestripe", 
         "Smokepoint", "Doberman", "Stain", "Colourpoint"
     ]
     exotic = [
-        "Bengal", "Sterbengal", "Sillybengal", "Dancebengal", "Mimibengal",
-        "Marbled", "Stermarbled", "Sillymarbled", "Dancemarbled", "Mimimarbled",
-        "Masked", "Stermasked", "Sillymasked", "Dancemasked", "Mimimasked",
+        "Bengal","Marbled","Masked", "Bengal","Marbled","Masked", 
         "Maned", "Ocelot", "Cheetah", "Wildcat", "Wolf", "Finleappatches", "Dalmatian", "Abyssinian", "Clouded",
         "Snowflake", "Oceloid", "Monarch", "Kintsugi", "Lynxpoint", "Ncrestedcaracara"
     ]
     torties = ["Tortie", "Calico"]
-    magic = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
-             "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
-             "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked",
-             "CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
-             "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
-             "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked",
-             "KrisSingle", "KrisTabby", "KrisTicked", "KrisMackerel", "KrisClassic",
-             "KrisSpeckled", "KrisAgouti", "KrisSokoke", "KrisRosette", "KrisSmoke",
-             "KrisSinglestripe", "KrisMarbled", "KrisBengal", "KrisMasked",
-             "MeteorSingle", "MeteorTabby", "MeteorTicked", "MeteorMackerel", "MeteorClassic",
-             "MeteorSpeckled", "MeteorAgouti", "MeteorSokoke", "MeteorRosette", "MeteorSmoke",
-             "MeteorSinglestripe", "MeteorMarbled", "MeteorBengal", "MeteorMasked",
-             "HiveSingle", "HiveTabby", "HiveTicked", "HiveMackerel", "HiveClassic",
-             "HiveSpeckled", "HiveAgouti", "HiveSokoke", "HiveRosette", "HiveSmoke",
-             "HiveSinglestripe", "HiveMarbled", "HiveBengal", "HiveMasked",
-             "PepperSingle", "PepperTabby", "PepperTicked", "PepperMackerel", "PepperClassic",
-             "PepperSpeckled", "PepperAgouti", "PepperSokoke", "PepperRosette", "PepperSmoke",
-             "PepperSinglestripe", "PepperMarbled", "PepperBengal",
-             "HetaSingle", "HetaTabby", "HetaTicked", "HetaMackerel", "HetaClassic",
-             "HetaSpeckled", "HetaAgouti", "HetaSokoke", "HetaRosette", "HetaSmoke",
-             "HetaSinglestripe", "HetaMarbled", "HetaBengal",
-             "PastelSingle", "PastelTabby", "PastelTicked", "PastelMackerel", "PastelClassic",
-             "PastelSpeckled", "PastelAgouti", "PastelSokoke", "PastelRosette", "PastelSmoke",
-             "PastelSinglestripe", "PastelMarbled", "PastelBengal",
-             "SparkleSingle", "SparkleTabby", "SparkleTicked", "SparkleMackerel", "SparkleClassic",
-             "SparkleSpeckled", "SparkleAgouti", "SparkleSokoke", "SparkleRosette", "SparkleSmoke",
-             "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked",
-             "PrideAgouti", "PrideBengal", 'PrideClassic', 'PrideMackerel',
-             #"MinecraftAgouti", "MinecraftBengal", "MinecraftClassic", "MinecratMackerel", "MinecraftMarbled",
-             #"MinecraftRosette", "MinecraftSingle", "MinecraftSinglestripe", "MinecraftSmoke", "MinecraftSokoke",
-             #"MinecraftSpeckled", "MinecraftTabby", "MinecraftTicked",
-             #"AnjuAgouti", "AnjuBengal", "AnjuClassic", "MinecratMackerel", "AnjuMarbled",
-             #"AnjuRosette", "AnjuSingle", "AnjuSinglestripe", "AnjuSmoke", "AnjuSokoke",
-             #"AnjuSpeckled", "AnjuTabby", "AnjuTicked"
-             ]
+    magic = ["PrideAgouti", "PrideBengal", 'PrideClassic', 'PrideMackerel']
     
     pelt_categories = [tabbies, spotted, plain, exotic, magic, torties]
 
     # SPRITE NAMES
     single_colours = [
-        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE',
+        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK',
+        'CREAM', 'PALEGINGER','GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA',
+        'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN','CHOCOLATE',
+        #minecraft
         'ACACIALOG', 'BAMBOO', 'BIRCHLOG', 'CHERRYLOG', 'CRIMSONSTEM', 'DARKOAKLOG', 'JUNGLELOG', 'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'WARPEDSTEM',
         'ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS', 'CRIMSONPLANKS', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS', 'SPRUCEPLANKS', 'WARPEDPLANKS',
         'AMETHYST', 'BLACKGLAZEDTERRACOTTA', 'BLUEGLAZEDTERRACOTTA', 'BROWNGLAZEDTERRACOTTA', 'BROWN MUSHROOM', 'COPPER', 'CRYING OBSIDIAN', 'CYANGLAZEDTERRACOTTA', 'EXPOSEDCOPPER', 'GRAYGLAZEDTERRACOTTA', 'GREENGLAZEDTERRACOTTA',
         'LIGHTBLUEGLAZED TERRACOTTA', 'LIGHTGRAYGLAZEDTERRACOTTA', 'LIMEGLAZEDTERRACOTTA', 'MAGENTAGLAZEDTERRACOTTA', 'MUSHROOMINSIDE', 'MUSHROOMSTEM', 'OBSIDIAN', 'ORANGEGLAZEDTERRACOTTA', 'OXIDIZEDCOPPER', 'PINKGLAZEDTERRACOTTA', 'PURPLEGLAZEDTERRACOTTA',
         'PURPUR', 'QUARTZ', 'REDGLAZEDTERRACOTTA', 'REDMUSHROOM', 'WEATHEREDCOPPER', 'WHITEGLAZEDTERRACOTTA', 'YELLOWGLAZEDTERRACOTTA',
-        'PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE'
+        #anju
+        'PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE',
+        #dance
+        'LIGHTCINNAMON', 'CINNAMON', 'SILVERFAWN', 'DARKCINNAMON', 'DARKFAWN','FAWN', 'LIGHTFAWN',
+        'PALEFAWN', 'PALECREAM','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD',
+        'GOLD', 'LIGHTGOLD', 'SILVERCREAM', 'PALEGOLD', 'SUNSHINE','BRONZE',
+        #mimi
+        'COPPERMIMI', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE', 'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER',
+        'GINGERMIMI', 'DARKGINGERMIMI','SILVERGOLD', 'RUSSET', 'DARKRED', 'REDMIMI',
+        'LIGHTRED', 'PALERED', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE',
+        #silly
+        'LIGHTLILAC', 'LILACSILLY', 'DARKLILAC', 'DARKASH', 'ASH', 'LIGHTASH', 'PALEASH',
+        'SILVERCINNAMON', 'SILVERRED','PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY',
+        'EBONY', 'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','PALECINNAMON'
+        #ster
+        'WHITESTER', 'PALEGREYSTER', 'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER', 'BLACKSTER', 'OBSIDIANSTER',
+        'GHOSTSTER', 'PALEBLUE','LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'SILVERCHOCOLATE',
+        'SILVERORANGE', 'DARKSLATE', 'SLATE', 'LIGHTSLATE', 'PALESLATE','PALELILAC',
+        #colorsplash
+        'LIGHTLIME', 'PINKGREY', 'YELLOWBROWN', 'REDGREY', 'BLUEBROWN', 'GHOSTBROWN', 'BLACKPURPLE',
+        'BLUECREAM', 'PALEPINKPURPLE', 'ICEBLUE', 'BLUECS2', 'GREENBROWN', 'NAVYBLUE',
+        'PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'NAVYBROWN', 'MULBERRY',
+        #heta rainbow cats
+        'REDHETA', 'ORANGEHETA', 'YELLOWHETA', 'NEONYELLOW', 'NEONGREEN', 'GREENHETA', 'MINTGREEN',
+        'DARKMINT', 'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA', 'INDIGOHETA',
+        'PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA',
+        #hive
+        'GREENH', 'TEALH', 'BLUEH', 'NAVYH', 'INDIGOH', 'PURPLEH', 'VIOLETH',
+        'PINKH', 'ROSEH','DARKPINKH', 'REDH', 'ORANGEH', 'GOLDH',
+        'PASTELPURPLEH', 'DARKGREENH', 'BROWN-PURPLE', 'YELLOWH', 'DARKMOSS','PURPLESWIRL'
+        #kris
+        'PINKCREAM', 'BLUEMINT', 'SUNSET', 'PINK-BLUE', 'INDIGOK', 'BLUEGHOSTK', 'PINKK',
+        'PASTELPINKBLUE', 'RUSTYGREEN','OURPLE', 'BLUE-YELLOW', 'BLUE-PURPLE', 'DARKSUNSET',
+        'BANANABERRY', 'BRIGHTBLUEK', 'SUNRISE', 'GREEN-NAVY', 'PINKSHADOW','REDK',
+        #meteor
+        'SILVERMETEOR', 'SILVERNAVY', 'CREAMSILVER', 'GREYSTAR', 'DARKGREYSTAR', 'BLACK-BROWN', 'BLUESPOTTED',
+        'CREAMMETEOR', 'PINK-WHITE','TANSPOTTED', 'REVERSESUN', 'WARM-BLUE', 'INDIGO-VIOLET',
+        'GREYMETEOR', 'ICESPOTTED', 'SHADOW', 'BLUE-EARTH', 'EARTHSPOTTED','BROWN-TAN',
+        #pastel
+        'PALEPINK-PURPLE', 'PALEGREY-PINK', 'PALEBLUE-YELLOW', 'PALEMINT-PURPLE', 'PALEGREEN-INDIGO', 'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE',
+        'PALEPURPLE-GOLD', 'PALECYAN-GOLD','PALEMINT-MAGENTA', 'PALEMINT-VIOLET', 'PALEGREEN-BLUE', 'PALEGREEN-NAVY',
+        'PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE', 'PALEYELLOWGREEN','PALEYELLOW-BLUE'
+        #pepper
+        'ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER', 'BLACKBLUEPEPPER',
+        'GOLDCREAM', 'GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED', 'NEONRED', 'REDBLACK',
+        'PALEBLUE-GOLD', 'INDIGOPEPPER', 'RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER'
+        #sparkle
+        'REDS', 'RED-ORANGES', 'DARKYELLOWS', 'GREENREDS', 'CYANPINKG', 'INDIGOREDS', 'REVERSERAINBOW',
+        'PINKREDS', 'RUSTYS','GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES',
+        'BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS','SUNNYS'
     ]
     
-    ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA','PINK', 'RED',
-                      'CHERRYLOG', 'CRIMSONSTEM', 'ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS',
-                      'CRIMSONPLANKS', 'COPPER', 'MAGENTAGLAZEDTERRACOTTA', 'PINKGLAZEDTERRACOTTA',
-                      'REDGLAZEDTERRACOTTA', 'REDMUSHROOM', 'YELLOWGLAZEDTERRACOTTA']
-    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK', 'ACACIALOG', 'BLACKGLAZEDTERRACOTTA', 'CRYING OBSIDIAN',
-                     'GRAYGLAZEDTERRACOTTA', 'OBSIDIAN']
-    white_colours = ['WHITE', 'PALEGREY', 'SILVER', 'BIRCHLOG', 'MUSHROOMSTEM', 'QUARTZ']
-    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE', 'DARKOAKLOG', 'JUNGLELOG',
-                     'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS',
-                     'SPRUCEPLANKS', 'BROWNGLAZEDTERRACOTTA', 'BROWN MUSHROOM', 'EXPOSEDCOPPER', 'MUSHROOMINSIDE']
-    blue_colours = ['LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE', 'BAMBOO', 'WARPEDSTEM', 'WARPEDPLANKS', 'AMETHYST',
-                    'CYANGLAZEDTERRACOTTA', 'GREENGLAZEDTERRACOTTA', 'LIGHTBLUEGLAZED TERRACOTTA', 'LIGHTGRAYGLAZEDTERRACOTTA',
-                    'LIMEGLAZEDTERRACOTTA', 'ORANGEGLAZEDTERRACOTTA', 'OXIDIZEDCOPPER', 'PURPLEGLAZEDTERRACOTTA', 'PURPUR',
-                    'WEATHEREDCOPPER', 'WHITEGLAZEDTERRACOTTA']
     
-    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours, blue_colours]
+    ##REALISTIC COLORS
+    ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA',
+                      'ACACIAPLANKS', 'BIRCHPLANKS','COPPER','REDGLAZEDTERRACOTTA',
+                      'SUNSHINE', 'BRONZE','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD',
+                      'GOLD', 'LIGHTGOLD', 'PALEGOLD', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE',
+                      'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER','GINGERMIMI', 'DARKGINGERMIMI',
+                      'RUSSET', 'DARKRED', 'REDMIMI','LIGHTRED', 'PALERED', 'SILVERGOLD',
+                      'SILVERORANGE', 'SILVERRED',
+                      'YELLOWBROWN',
+                      'BANANAS',
+                      'CREAMSILVER']
+    
+    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK',
+                     'ACACIALOG','GRAYGLAZEDTERRACOTTA',
+                     'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER','BLACKSTER', 'OBSIDIANSTER', 'GHOSTSTER',
+                     'LIGHTSLATE', 'SLATE', 'DARKSLATE', 'LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'LIGHTLILAC',
+                     'LILACSILLY', 'DARKLILAC', 'DARKASH', 'EBONY',
+                     'BLACKPURPLE', 'BLACKBLUE',
+                     'GREYSTAR', 'DARKGREYSTAR', 'GREYMETEOR']
+    
+    white_colours = ['WHITE', 'PALEGREY', 'SILVER',
+                     'BIRCHLOG', 'MUSHROOMSTEM', 'QUARTZ',
+                     'WHITESTER', 'PALEGREYSTER', 'PALESLATE', 'PALEBLUE', 'PALELILAC', 'PALEASH',
+                     'PALEFAWN', 'PALECREAM', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE',
+                     'SILVERFAWN', 'SILVERCREAM',
+                     'SILVERMETEOR']
+    
+    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE',
+                     'CHERRYLOG', 'DARKOAKLOG', 'JUNGLELOG','MANGROVELOG', 'OAKLOG', 'SPRUCELOG',
+                     'DARKOAKPLANKS', 'JUNGLEPLANKS', 'OAKPLANKS','SPRUCEPLANKS','BROWN MUSHROOM',
+                     'MUSHROOMINSIDE',
+                     'LIGHTASH', 'ASH', 'PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY',
+                     'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','LIGHTCINNAMON',
+                     'CINNAMON', 'PALECINNAMON', 'DARKCINNAMON', 'COPPERMIMI', 'DARKFAWN','FAWN', 'LIGHTFAWN',
+                     'SILVERCHOCOLATE', 'SILVERCINNAMON',
+                     'BLUEBROWN', 'GHOSTBROWN', 'NAVYBROWN', 'DUSKBROWN',
+                     'TANSPOTTED','EARTHSPOTTED','BROWN-TAN']
+    
+    #FANTASY COLORS
+    red_colors = ['PINK', 'RED',
+                  'CRIMSONSTEM', 'CHERRYPLANKS', 'PINKGLAZEDTERRACOTTA','REDMUSHROOM','MANGROVEPLANKS',
+                  'REDHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA',
+                  'PINKGREY', 'REDGREY', 'PALEPINKPURPLE', 'BUBBLEGUM', 'REDSTAIN', 'ROSE', 'REDBLUE',
+                  'REDS', 'RED-ORANGES', 'PINKREDS', 'RUSTYS', 'REDCYANS', 'BROWNREDS',
+                  'NEONRED', 'REDBLACK','RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER',
+                  'PALEGREY-PINK',
+                  'PINK-WHITE',
+                  'PINKCREAM','PINK-BLUE', 'PINKK', 'PASTELPINKBLUE','PINKSHADOW','REDK',
+                  'PINKH', 'ROSEH','DARKPINKH', 'REDH']
+    
+    orange_colors = ['EXPOSEDCOPPER', 'ORANGEGLAZEDTERRACOTTA',
+                     'ORANGEHETA',
+                     'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE',
+                     'CREAMMETEOR','REVERSESUN',
+                     'SUNSET', 'OURPLE', 'SUNRISE',
+                     'ORANGEH']
+    
+    yellow_colors = ['BAMBOOPLANKS', 'YELLOWGLAZEDTERRACOTTA',
+                     'YELLOWHETA', 'NEONYELLOW', 'SUNYELLOW', 'FROZENSUN',
+                     'DARKYELLOWS', 'SUNNYS',
+                     'GOLDCREAM','GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED',
+                     'PALEYELLOWGREEN','PALEYELLOW-BLUE', 'PALEPURPLE-GOLD', 'PALECYAN-GOLD',
+                     'PALEBLUE-YELLOW',
+                     'BANANABERRY',
+                     'GOLDH', 'YELLOWH']
+    
+    green_colors = ['LIGHTGREEN', 'GREEN',
+                    'BAMBOO', 'WARPEDSTEM', 'GREENGLAZEDTERRACOTTA','LIMEGLAZEDTERRACOTTA',
+                    'OXIDIZEDCOPPER','WEATHEREDCOPPER',
+                    'NEONGREEN', 'GREENHETA', 'MINTGREEN','DARKMINT',
+                    'LIGHTLIME', 'GREENBROWN', 'GREENGOLD', 'TREE',
+                    'GREENREDS', 'GREENORANGES', 'WHITEGREENS', 'GREENDARKREDS',
+                    'RUSTYGREEN','GREEN-NAVY',
+                    'GREENH', 'DARKGREENH', 'DARKMOSS']
+    
+    blue_colors = ['CYAN', 'BLUE',
+                   'WARPEDPLANKS','CYANGLAZEDTERRACOTTA', 'LIGHTBLUEGLAZED TERRACOTTA',
+                   'LIGHTGRAYGLAZEDTERRACOTTA','WHITEGLAZEDTERRACOTTA','BROWNGLAZEDTERRACOTTA',
+                   'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA',
+                   'BLUECREAM', 'ICEBLUE', 'CSBLUE2', 'NAVYBLUE', 'ICEWHITE', 'CERULEAN', 'GHOSTBLUE',
+                   'OCEAN', 'TEAL',
+                   'CYANPINKG', 'MINTBLUES', 'BLACKBLUES',
+                   'ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER',
+                   'PALEBLUE-GOLD',
+                   'PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE',
+                   'SILVERNAVY','BLACK-BROWN', 'BLUESPOTTED','ICESPOTTED','BLUE-EARTH',
+                   'BLUEMINT', 'BLUEGHOSTK', 'BLUE-YELLOW', 'BLUE-PURPLE', 'BRIGHTBLUEK',
+                   'TEALH', 'BLUEH', 'NAVYH']
+    
+    purple_colors = ['PURPLE',
+                     'CRIMSONPLANKS', 'AMETHYST','PURPLEGLAZEDTERRACOTTA', 'PURPUR',
+                     'INDIGOHETA','PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA',
+                     'PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'MULBERRY', 'GRAPE',
+                     'CRYSTAL', 'ORCHID', 'THISTLE',
+                     'INDIGOREDS',
+                     'INDIGOPEPPER',
+                     'PALEMINT-MAGENTA', 'PALEMINT-VIOLET','PALEPINK-PURPLE',
+                     'PALEMINT-PURPLE', 'PALEGREEN-INDIGO',
+                     'WARM-BLUE', 'INDIGO-VIOLET',
+                     'INDIGOK', 'DARKSUNSET',
+                     'INDIGOH', 'PURPLEH', 'VIOLETH','PASTELPURPLEH','BROWN-PURPLE', 'PURPLESWIRL']
+    
+    #not to be confused with black_coloUrs. ew british
+    black_colors = ['BLACKGLAZEDTERRACOTTA','CRYING OBSIDIAN','OBSIDIAN',
+                    'REVERSERAINBOW', 'RAINBOW',
+                    'BLACKBLUEPEPPER',
+                    'SHADOW']
+    
+    
+    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours,
+                         red_colors, orange_colors, yellow_colors, green_colors, blue_colors, purple_colors, black_colors]
     eye_sprites = [
         'YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 
         'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 'GREENYELLOW', 'BRONZE', 'SILVER', 'ROSE',
@@ -1092,8 +1084,6 @@ class Pelt:
     @staticmethod
     def generate_new_pelt(gender: str, parents: tuple = (), age: str = "adult"):
         new_pelt = Pelt()
-        
-        
         pelt_white = new_pelt.init_pattern_color(parents, gender)
         new_pelt.init_white_patches(pelt_white, parents)
         new_pelt.init_sprite()
@@ -1108,6 +1098,440 @@ class Pelt:
     def check_and_convert(self, convert_dict):
         """Checks for old-type properties for the appearance-related properties
         that are stored in Pelt, and converts them. To be run when loading a cat in. """
+        
+        #converting modded pelt colors from categories to colors. oh god
+        cs2_dict = {
+                'WHITE': 'LIGHTLIME',
+                'PALEGREY': 'PINKGREY',
+                'SILVER': 'YELLOWBROWN',
+                'GREY': 'REDGREY',
+                'DARKGREY': 'BLUEBROWN',
+                'GHOST': 'GHOSTBROWN',
+                'BLACK': 'BLACKPURPLE',
+                'CREAM': 'BLUECREAM',
+                'PALEGINGER': 'PALEPINKPURPLE',
+                'GOLDEN': 'ICEBLUE',
+                'GINGER': 'BLUECS2',
+                'DARKGINGER': 'GREENBROWN',
+                'SIENNA': 'NAVYBLUE',
+                'LIGHTBROWN': 'PURPLECREAM',
+                'LILAC': 'INDIGOBLUSH',
+                'BROWN': 'VIOLETBLUSH',
+                'GOLDEN-BROWN': 'MAGENTA',
+                'DARKBROWN': 'NAVYBROWN',
+                'CHOCOLATE': 'MULBERRY'
+            }
+        cs_dict = {
+                'WHITE': 'ICEWHITE',
+                'PALEGREY': 'CRYSTAL',
+                'SILVER': 'ORCHID',
+                'GREY': 'CERULEAN',
+                'DARKGREY': 'GRAPE',
+                'GHOST': 'GHOSTBLUE',
+                'BLACK': 'BLACKBLUE',
+                'CREAM': 'THISTLE',
+                'PALEGINGER': 'SUNYELLOW',
+                'GOLDEN': 'BUBBLEGUM',
+                'GINGER': 'REDSTAIN',
+                'DARKGINGER': 'ROSE',
+                'SIENNA': 'DUSKBROWN',
+                'LIGHTBROWN': 'FROZENSUN',
+                'LILAC': 'GREENGOLD',
+                'BROWN': 'OCEAN',
+                'GOLDEN-BROWN': 'TEAL',
+                'DARKBROWN': 'REDBLUE',
+                'CHOCOLATE': 'TREE'
+            }
+        heta_dict = {
+                'WHITE': 'REDHETA',
+                'PALEGREY': 'ORANGEHETA',
+                'SILVER': 'YELLOWHETA',
+                'GREY': 'NEONYELLOW',
+                'DARKGREY': 'NEONGREEN',
+                'GHOST': 'GREENHETA',
+                'BLACK': 'MINTGREEN',
+                'CREAM': 'DARKMINT',
+                'PALEGINGER': 'NEONTEAL',
+                'GOLDEN': 'CYANHETA',
+                'GINGER': 'BLUEHETA',
+                'DARKGINGER': 'NAVYHETA',
+                'SIENNA': 'INDIGOHETA',
+                'LIGHTBROWN': 'PURPLEHETA',
+                'LILAC': 'VIOLETHETA',
+                'BROWN': 'MAGENTAHETA',
+                'GOLDEN-BROWN': 'PINKHETA',
+                'DARKBROWN': 'SCARLETPINK',
+                'CHOCOLATE': 'DARKREDHETA'
+            }
+        dance_dict = {
+                'WHITE': 'LIGHTCINNAMON',
+                'PALEGREY': 'CINNAMON',
+                'SILVER': 'SILVERFAWN',
+                'GREY': 'DARKCINNAMON',
+                'DARKGREY': 'DARKFAWN',
+                'GHOST': 'FAWN',
+                'BLACK': 'LIGHTFAWN',
+                'CREAM': 'PALEFAWN',
+                'PALEGINGER': 'PALECREAM',
+                'GOLDEN': 'LIGHTCREAM',
+                'GINGER': 'DANCECREAM',
+                'DARKGINGER': 'DARKCREAM',
+                'SIENNA': 'DARKGOLD',
+                'LIGHTBROWN': 'GOLD',
+                'LILAC': 'LIGHTGOLD',
+                'BROWN': 'SILVERCREAM',
+                'GOLDEN-BROWN': 'PALEGOLD',
+                'DARKBROWN': 'SUNSHINE',
+                'CHOCOLATE': 'BRONZE'
+            }
+        silly_dict = {
+                'WHITE': 'LIGHTLILAC',
+                'PALEGREY': 'LILACSILLY',
+                'SILVER': 'DARKLILAC',
+                'GREY': 'DARKASH',
+                'DARKGREY': 'ASH',
+                'GHOST': 'LIGHTASH',
+                'BLACK': 'PALEASH',
+                'CREAM': 'SILVERCINNAMON',
+                'PALEGINGER': 'SILVERRED',
+                'GOLDEN': 'PALEBROWN',
+                'GINGER': 'LIGHTBROWNSILLY',
+                'DARKGINGER': 'BROWNSILLY',
+                'SIENNA': 'DARKBROWNSILLY',
+                'LIGHTBROWN': 'EBONY',
+                'LILAC': 'DARKCHOCOLATE',
+                'BROWN': 'CHOCOLATESILLY',
+                'GOLDEN-BROWN': 'LIGHTCHOCOLATE',
+                'DARKBROWN': 'PALECHOCOLATE',
+                'CHOCOLATE': 'PALECINNAMON'
+            }
+        ster_dict = {
+                'WHITE': 'WHITESTER',
+                'PALEGREY': 'PALEGREYSTER',
+                'SILVER': 'LIGHTGREY',
+                'GREY': 'GREYSTER',
+                'DARKGREY': 'DARKGREYSTER',
+                'GHOST': 'BLACKSTER',
+                'BLACK': 'OBSIDIANSTER',
+                'CREAM': 'GHOSTSTER',
+                'PALEGINGER': 'PALEBLUE',
+                'GOLDEN': 'LIGHTBLUE',
+                'GINGER': 'BLUESTER',
+                'DARKGINGER': 'DARKBLUE',
+                'SIENNA': 'SILVERCHOCOLATE',
+                'LIGHTBROWN': 'SILVERORANGE',
+                'LILAC': 'DARKSLATE',
+                'BROWN': 'SLATE',
+                'GOLDEN-BROWN': 'LIGHTSLATE',
+                'DARKBROWN': 'PALESLATE',
+                'CHOCOLATE': 'PALELILAC'
+            }
+        mimi_dict = {
+                'WHITE': 'COPPERMIMI',
+                'PALEGREY': 'DARKORANGE',
+                'SILVER': 'ORANGE',
+                'GREY': 'LIGHTORANGE',
+                'DARKGREY': 'PALEORANGE',
+                'GHOST': 'PALEGINGERMIMI',
+                'BLACK': 'LIGHTGINGER',
+                'CREAM': 'GINGERMIMI',
+                'PALEGINGER': 'DARKGINGERMIMI',
+                'GOLDEN': 'SILVERGOLD',
+                'GINGER': 'RUSSET',
+                'DARKGINGER': 'DARKRED',
+                'SIENNA': 'REDMIMI',
+                'LIGHTBROWN': 'LIGHTRED',
+                'LILAC': 'PALERED',
+                'BROWN': 'SILVERMIMI',
+                'GOLDEN-BROWN': 'SILVERGREY',
+                'DARKBROWN': 'SILVERBLUE',
+                'CHOCOLATE': 'SILVERSLATE'
+            }
+        hive_dict = {
+                'WHITE': 'GREENH',
+                'PALEGREY': 'TEALH',
+                'SILVER': 'BLUEH',
+                'GREY': 'NAVYH',
+                'DARKGREY': 'INDIGOH',
+                'GHOST': 'PURPLEH',
+                'BLACK': 'VIOLETH',
+                'CREAM': 'PINKH',
+                'PALEGINGER': 'ROSEH',
+                'GOLDEN': 'DARKPINKH',
+                'GINGER': 'REDH',
+                'DARKGINGER': 'ORANGEH',
+                'SIENNA': 'GOLDH',
+                'LIGHTBROWN': 'PASTELPURPLEH',
+                'LILAC': 'DARKGREENH',
+                'BROWN': 'BROWN-PURPLE',
+                'GOLDEN-BROWN': 'YELLOWH',
+                'DARKBROWN': 'DARKMOSS',
+                'CHOCOLATE': 'PURPLESWIRL'
+            }
+        kris_dict = {
+                'WHITE': 'PINKCREAM',
+                'PALEGREY': 'BLUEMINT',
+                'SILVER': 'SUNSET',
+                'GREY': 'PINK-BLUE',
+                'DARKGREY': 'INDIGOK',
+                'GHOST': 'BLUEGHOSTK',
+                'BLACK': 'PINKK',
+                'CREAM': 'PASTELPINKBLUE',
+                'PALEGINGER': 'RUSTYGREEN',
+                'GOLDEN': 'OURPLE',
+                'GINGER': 'BLUE-YELLOW',
+                'DARKGINGER': 'BLUE-PURPLE',
+                'SIENNA': 'DARKSUNSET',
+                'LIGHTBROWN': 'BANANABERRY',
+                'LILAC': 'BRIGHTBLUEK',
+                'BROWN': 'SUNRISE',
+                'GOLDEN-BROWN': 'GREEN-NAVY',
+                'DARKBROWN': 'PINKSHADOW',
+                'CHOCOLATE': 'REDK'
+            }
+        meteor_dict = {
+                'WHITE': 'SILVERMETEOR',
+                'PALEGREY': 'SILVERNAVY',
+                'SILVER': 'CREAMSILVER',
+                'GREY': 'GREYSTAR',
+                'DARKGREY': 'DARKGREYSTAR',
+                'GHOST': 'BLACK-BROWN',
+                'BLACK': 'BLUESPOTTED',
+                'CREAM': 'CREAMMETEOR',
+                'PALEGINGER': 'PINK-WHITE',
+                'GOLDEN': 'TANSPOTTED',
+                'GINGER': 'REVERSESUN',
+                'DARKGINGER': 'WARM-BLUE',
+                'SIENNA': 'INDIGO-VIOLET',
+                'LIGHTBROWN': 'GREYMETEOR',
+                'LILAC': 'ICESPOTTED',
+                'BROWN': 'SHADOW',
+                'GOLDEN-BROWN': 'BLUE-EARTH',
+                'DARKBROWN': 'EARTHSPOTTED',
+                'CHOCOLATE': 'BROWN-TAN'
+            }
+        pastel_dict = {
+                'WHITE': 'PALEPINK-PURPLE',
+                'PALEGREY': 'PALEGREY-PINK',
+                'SILVER': 'PALEBLUE-YELLOW',
+                'GREY': 'PALEMINT-PURPLE',
+                'DARKGREY': 'PALEGREEN-INDIGO',
+                'GHOST': 'PALEYELLOW-INDIGO',
+                'BLACK': 'PALEORANGE-BLUE',
+                'CREAM': 'PALEPURPLE-GOLD',
+                'PALEGINGER': 'PALECYAN-GOLD',
+                'GOLDEN': 'PALEMINT-MAGENTA',
+                'GINGER': 'PALEMINT-VIOLET',
+                'DARKGINGER': 'PALEGREEN-BLUE',
+                'SIENNA': 'PALEGREEN-NAVY',
+                'LIGHTBROWN': 'PALEBLUE-INDIGO',
+                'LILAC': 'PALECYAN-PURPLE',
+                'BROWN': 'PALECYAN-NAVY',
+                'GOLDEN-BROWN': 'PALECYAN-BLUE',
+                'DARKBROWN': 'PALEYELLOWGREEN',
+                'CHOCOLATE': 'PALEYELLOW-BLUE'
+            }
+        pepper_dict = {
+                'WHITE': 'ICEPEPPER',
+                'PALEGREY': 'CYANPEPPER',
+                'SILVER': 'BLUEPEPPER',
+                'GREY': 'OCEANPEPPER',
+                'DARKGREY': 'DARKBLUEPEPPER',
+                'GHOST': 'BLUEGHOSTPEPPER',
+                'BLACK': 'BLACKBLUEPEPPER',
+                'CREAM': 'GOLDCREAM',
+                'PALEGINGER': 'GOLDPEPPER',
+                'GOLDEN': 'YELLOW-RED',
+                'GINGER': 'BRIGHTYELLOW-RED',
+                'DARKGINGER': 'NEONRED',
+                'SIENNA': 'REDBLACK',
+                'LIGHTBROWN': 'PALEBLUE-GOLD',
+                'LILAC': 'INDIGOPEPPER',
+                'BROWN': 'RUSTBLUEPEPPER',
+                'GOLDEN-BROWN': 'REDPEPPER',
+                'DARKBROWN': 'REDBLUEBLACK',
+                'CHOCOLATE': 'SCARLETPEPPER'
+            }
+        sparkle_dict = {
+                'WHITE': 'REDS',
+                'PALEGREY': 'RED-ORANGES',
+                'SILVER': 'DARKYELLOWS',
+                'GREY': 'GREENREDS',
+                'DARKGREY': 'CYANPINKG',
+                'GHOST': 'INDIGOREDS',
+                'BLACK': 'REVERSERAINBOW',
+                'CREAM': 'PINKREDS',
+                'PALEGINGER': 'RUSTYS',
+                'GOLDEN': 'GREENORANGES',
+                'GINGER': 'REDCYANS',
+                'DARKGINGER': 'MINTBLUES',
+                'SIENNA': 'BLACKBLUES',
+                'LIGHTBROWN': 'BANANAS',
+                'LILAC': 'WHITEGREENS',
+                'BROWN': 'BROWNREDS',
+                'GOLDEN-BROWN': 'RAINBOW',
+                'DARKBROWN': 'GREENDARKREDS',
+                'CHOCOLATE': 'SUNNYS'
+            }
+        
+        if "Ster" in self.name:
+            self.name = self.name[4:]
+            self.name = self.name.capitalize()
+            self.colour = ster_dict[self.colour]
+        if "Silly" in self.name:
+            self.name = self.name[5:]
+            self.name = self.name.capitalize()
+            self.colour = silly_dict[self.colour]
+        if "Dance" in self.name:
+            self.name = self.name[5:]
+            self.name = self.name.capitalize()
+            self.colour = dance_dict[self.colour]
+        if "Mimi" in self.name:
+            self.name = self.name[4:]
+            self.name = self.name.capitalize()
+            self.colour = mimi_dict[self.colour]
+        if "CS2" in self.name:
+            self.name = self.name[3:]
+            self.name = self.name.capitalize()
+            self.colour = cs2_dict[self.colour]
+        if "CS" in self.name:
+            self.name = self.name[2:]
+            self.name = self.name.capitalize()
+            self.colour = cs_dict[self.colour]
+        if "Heta" in self.name:
+            self.name = self.name[4:]
+            self.name = self.name.capitalize()
+            self.colour = heta_dict[self.colour]
+        if "Hive" in self.name:
+            self.name = self.name[4:]
+            self.name = self.name.capitalize()
+            self.colour = hive_dict[self.colour]
+        if "Kris" in self.name:
+            self.name = self.name[4:]
+            self.name = self.name.capitalize()
+            self.colour = kris_dict[self.colour]
+        if "Meteor" in self.name:
+            self.name = self.name[6:]
+            self.name = self.name.capitalize()
+            self.colour = meteor_dict[self.colour]
+        if "Pastel" in self.name:
+            self.name = self.name[6]
+            self.name = self.name.capitalize()
+            self.colour = pastel_dict[self.colour]
+        if "Pepper" in self.name:
+            self.name = self.name[6:]
+            self.name = self.name.capitalize()
+            self.colour = pepper_dict[self.colour]
+        if "Sparkle" in self.name:
+            self.name = self.name[7:]
+            self.name = self.name.capitalize()
+            self.colour = sparkle_dict[self.colour]
+        
+        
+        if self.name == "Stripe":
+            self.name = "Singlestripe"
+        if self.name == "Single":
+            self.name = "SingleColour"
+            
+        if self.name in ["Tortie", "Calico"]:
+            if "ster" in self.tortiebase:
+                self.tortiebase = self.tortiebase[4:]
+                self.colour = ster_dict[self.colour]
+            if "ster" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[4:]
+                self.tortiecolour = ster_dict[self.tortiecolour]
+                
+            if "dance" in self.tortiebase:
+                self.tortiebase = self.tortiebase[5:]
+                self.colour = dance_dict[self.colour]
+            if "dance" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[5:]
+                self.tortiecolour = dance_dict[self.tortiecolour]
+            
+            if "silly" in self.tortiebase:
+                self.tortiebase = self.tortiebase[5:]
+                self.colour = silly_dict[self.colour]
+            if "silly" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[5:]
+                self.tortiecolour = silly_dict[self.tortiecolour]
+                
+            if "mimi" in self.tortiebase:
+                self.tortiebase = self.tortiebase[4:]
+                self.colour = mimi_dict[self.colour]
+            if "mimi" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[4:]
+                self.tortiecolour = mimi_dict[self.tortiecolour]
+                
+            if "cs_" in self.tortiebase and "2" in self.tortiebase:
+                self.tortiebase = self.tortiebase[3:]
+                self.tortiebase = self.tortiebase.replace('2','')
+                self.colour = cs2_dict[self.colour]
+            if "cs_" in self.tortiepattern and "2" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[3:]
+                self.tortiepattern = self.tortiepattern.replace('2','')
+                self.tortiecolour = cs2_dict[self.tortiecolour]
+            
+            if "cs_" in self.tortiebase:
+                self.tortiebase = self.tortiebase[3:]
+                self.colour = cs_dict[self.colour]
+            if "cs_" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[3:]
+                self.tortiecolour = cs_dict[self.tortiecolour]
+            
+            if "kris" in self.tortiebase:
+                self.tortiebase = self.tortiebase[4:]
+                self.colour = kris_dict[self.colour]
+            if "kris" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[4:]
+                self.tortiecolour = kris_dict[self.tortiecolour]
+                
+            if "heta" in self.tortiebase:
+                self.tortiebase = self.tortiebase[4:]
+                self.colour = heta_dict[self.colour]
+            if "heta" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[4:]
+                self.tortiecolour = heta_dict[self.tortiecolour]
+            
+            if "hive" in self.tortiebase:
+                self.tortiebase = self.tortiebase[4:]
+                self.colour = hive_dict[self.colour]
+            if "hive" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[4:]
+                self.tortiecolour = hive_dict[self.tortiecolour]
+                
+            if "meteor" in self.tortiebase:
+                self.tortiebase = self.tortiebase[6:]
+                self.colour = meteor_dict[self.colour]
+            if "meteor" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[6:]
+                self.tortiecolour = meteor_dict[self.tortiecolour]
+                
+            if "pastel" in self.tortiebase:
+                self.tortiebase = self.tortiebase[6:]
+                self.colour = pastel_dict[self.colour]
+            if "pastel" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[6:]
+                self.tortiecolour = pastel_dict[self.tortiecolour]
+            
+            if "pepper" in self.tortiebase:
+                self.tortiebase = self.tortiebase[6:]
+                self.colour = pepper_dict[self.colour]
+            if "pepper" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[6:]
+                self.tortiecolour = pepper_dict[self.tortiecolour]
+            
+            if "sparkle" in self.tortiebase:
+                self.tortiebase = self.tortiebase[7:]
+                self.colour = sparkle_dict[self.colour]
+            if "sparkle" in self.tortiepattern:
+                self.tortiepattern = self.tortiepattern[7:]
+                self.tortiecolour = sparkle_dict[self.tortiecolour]
+                
+            if self.tortiepattern == "stripe":
+                self.tortiepattern = "singlestripe"
+            if self.tortiebase == "stripe":
+                self.tortiebase = "singlestripe"
+        
         
         # First, convert from some old names that may be in white_patches. 
         if self.white_patches == 'POINTMARK':
@@ -1209,7 +1633,14 @@ class Pelt:
         if not parents:
             self.eye_colour = choice(Pelt.eye_colours)
         else:
-            self.eye_colour = choice([i.pelt.eye_colour for i in parents] + [choice(Pelt.eye_colours)])
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes]
+            similar_colors = []
+            for i in parents:
+                for colour in colour_wheel[:]:
+                    if i.pelt.eye_colour in colour:
+                        for color in colour:
+                            similar_colors.append(color)
+            self.eye_colour = choice([i.pelt.eye_colour for i in parents] +[choice(similar_colors)] +[choice(similar_colors)] + [choice(Pelt.eye_colours)])
 
         # White patches must be initalized before eye color.
         num = game.config["cat_generation"]["base_heterochromia"]
@@ -1230,7 +1661,7 @@ class Pelt:
             num = 1
 
         if not random.randint(0, num):
-            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes]
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes]
             for colour in colour_wheel[:]:
                 if self.eye_colour in colour:
                     colour_wheel.remove(colour) # removes the selected list from the options
@@ -1354,47 +1785,60 @@ class Pelt:
         # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
         base_game_pelts = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Speckled",
                            "Rosette", "SingleColour", "Smoke", "Singlestripe", "Bengal", "Marbled"]
-        base_game_colors = ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-                            'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-                            'CHOCOLATE']
-        
-        
-        weights = [0, 0, 0, 0, 0]
+        base_game_pelts_masked = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Speckled",
+                           "Rosette", "SingleColour", "Smoke", "Singlestripe", "Bengal", "Marbled", "Masked"]
+                
+        #colour_categories = [ginger_colours, black_colours, white_colours, brown_colours,
+        #red_colors, orange_colors, yellow_colors, green_colors, blue_colors, purple_colors, black_colors]
+
+        weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.ginger_colours:
-                add_weight = (40, 0, 0, 10, 0)
+                add_weight = (40, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0)
             elif p_ in Pelt.black_colours:
-                add_weight = (0, 40, 2, 5, 2)
+                add_weight = (0, 40, 2, 5, 2, 0, 0, 0, 0, 0, 0)
             elif p_ in Pelt.white_colours:
-                add_weight = (0, 5, 40, 0, 0)
+                add_weight = (0, 5, 40, 0, 0, 0, 0, 0, 0, 0, 0)
             elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35, 0)
-            elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35, 0)
+                add_weight = (10, 5, 0, 35, 0, 0, 0, 0, 0, 0, 0)
+            elif p_ in Pelt.red_colors:
+                add_weight = (30, 0, 0, 20, 50, 40, 15, 0, 0, 20, 0)
+            elif p_ in Pelt.orange_colors:
+                add_weight = (20, 0, 0, 35, 30, 50, 30, 0, 0, 0, 0)
+            elif p_ in Pelt.yellow_colors:
+                add_weight = (30, 0, 0, 15, 5, 25, 50, 25, 0, 0, 0)
+            elif p_ in Pelt.green_colors:
+                add_weight = (0, 0, 0, 10, 0, 0, 30, 50, 30, 10, 0)
+            elif p_ in Pelt.blue_colors:
+                add_weight = (0, 25, 0, 0, 0, 0, 0, 30, 50, 30, 25)
+            elif p_ in Pelt.purple_colors:
+                add_weight = (5, 10, 0, 0, 20, 0, 0, 0, 30, 50, 30)
+            elif p_ in Pelt.black_colors:
+                add_weight = (0, 40, 2, 2, 0, 0, 0, 0, 3, 3, 50)
             elif p_ is None:
-                add_weight = (40, 40, 40, 40, 40)
+                add_weight = (40, 40, 40, 40, 40, 0, 0, 0, 0, 0, 0)
             else:
-                add_weight = (0, 0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
 
             # A quick check to make sure all the weights aren't 0
             if all([x == 0 for x in weights]):
-                weights = [1, 1, 1, 1, 1]
+                weights = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
         chosen_pelt_color = choice(
             random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
         )
+        #print('INIT COLOR: ' + chosen_pelt_color)
         
-        if chosen_pelt not in base_game_pelts:
-            while chosen_pelt_color not in base_game_colors:
-                chosen_pelt_color = choice(
-                    random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
-                )
-        #if somehow it escapes the while loop
-        if chosen_pelt not in base_game_pelts and chosen_pelt_color not in base_game_colors:
-            chosen_pelt_color = 'GOLDEN'
+        if chosen_pelt not in base_game_pelts_masked:
+            chosen_pelt_color = choice(Pelt.pelt_colours)
+        elif chosen_pelt == "Masked":
+            if chosen_pelt_color in Pelt.no_masked:
+               chosen_pelt_color = choice(Pelt.pelt_colours) 
+        
+        #print('FINAL COLOR: ' + chosen_pelt_color)
             
 
         # ------------------------------------------------------------------------------------------------------------#
@@ -1451,6 +1895,7 @@ class Pelt:
         # SET THE PELT
         self.name = chosen_pelt
         self.colour = chosen_pelt_color
+        #print("setting pelt to " + self.colour)
         self.length = chosen_pelt_length
         self.tortiebase = chosen_tortie_base  # This will be none if the cat isn't a tortie.
         return chosen_white
@@ -1461,12 +1906,10 @@ class Pelt:
         # ------------------------------------------------------------------------------------------------------------#
         base_game_pelts = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Speckled",
                            "Rosette", "SingleColour", "Smoke", "Singlestripe", "Bengal", "Marbled"]
-        base_game_colors = ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-                            'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-                            'CHOCOLATE']
+        
         # Determine pelt.
         chosen_pelt = choice(
-            random.choices(Pelt.pelt_categories, weights=(35, 20, 30, 15, 0,0), k=1)[0]
+            random.choices(Pelt.pelt_categories, weights=(35, 20, 30, 15, 1, 1), k=1)[0]
         )
 
         # Tortie chance
@@ -1490,23 +1933,38 @@ class Pelt:
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
-
-        chosen_pelt_color = choice(
-            random.choices(Pelt.colour_categories, k=1)[0]
-        )
+        sparkle_chance = game.config["cat_generation"]["sparkle_chance"]
+        if randint(1,sparkle_chance) == 1:
+            chosen_pelt_color = choice(
+                random.choices(Pelt.colour_categories, k=1)[0]
+            )
+        else:
+            chosen_pelt_color = choice(Pelt.pelt_colours)
         
-        if chosen_pelt not in base_game_pelts:
-            while chosen_pelt_color not in base_game_colors:
+        if chosen_pelt == 'Masked':
+            while chosen_pelt_color in Pelt.no_masked:
                 chosen_pelt_color = choice(
                     random.choices(Pelt.colour_categories, k=1)[0]
                 )
+        elif chosen_pelt not in base_game_pelts:
+            while chosen_pelt_color not in Pelt.pelt_colours:
+                chosen_pelt_color = choice(
+                    random.choices(Pelt.colour_categories, k=1)[0]
+                )
+           
         #if somehow it escapes the while loop
-        if chosen_pelt not in base_game_pelts and chosen_pelt_color not in base_game_colors:
+        base_and_masked = base_game_pelts + ['Masked']
+        if chosen_pelt not in base_and_masked and chosen_pelt_color not in Pelt.pelt_colours:
             chosen_pelt_color = 'GOLDEN'
             
         if chosen_tortie_base:
-            if chosen_tortie_base not in base_game_pelts:
-                while chosen_pelt_color not in base_game_colors:
+            if chosen_tortie_base == 'masked':
+                while chosen_pelt_color in Pelt.no_masked:
+                    chosen_pelt_color = choice(
+                        random.choices(Pelt.colour_categories, k=1)[0]
+                    )
+            elif chosen_tortie_base not in base_game_pelts:
+                while chosen_pelt_color not in Pelt.pelt_colours:
                     chosen_pelt_color = choice(
                         random.choices(Pelt.colour_categories, k=1)[0]
                     )
@@ -1551,7 +2009,8 @@ class Pelt:
             chosen_white = self.pattern_color_inheritance(parents, gender)
         else:
             chosen_white = self.randomize_pattern_color(gender)
-
+        
+        #print("init as " + self.colour)
         return chosen_white
 
     def init_sprite(self):
@@ -1632,9 +2091,6 @@ class Pelt:
     def init_pattern(self):
         base_game_patterns = ["tabby", "ticked", "mackerel", "classic", "sokoke", "agouti", "speckled",
                            "rosette", "single", "smoke", "singlestripe", "bengal", "marbled"]
-        base_game_colors = ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
-                            'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-                            'CHOCOLATE']
         
         if self.name in Pelt.torties:
             if not self.tortiebase:
@@ -1673,16 +2129,10 @@ class Pelt:
 
                 else:
                     # Normal generation
-                    if self.tortiebase in ["singlestripe", "sterstripe", "sillystripe", "dancestripe", "mimistripe", 
-                                           "smoke","stersmoke", "sillysmoke", "dancesmoke", "mimismoke", "mimisingle", "single", "smokepoint"]:
-                        self.tortiepattern = choice(['tabby', 'stertabby', 'sillytabby', 'dancetabby', 'mimitabby',
-                                                     'mackerel', 'stermackerel', 'sillymackerel', 'dancemackerel', 'mimimackerel',  
-                                                     'classic', 'sterclassic', 'sillyclassic', 'danceclassic', 'mimiclassic', 'single', 'smoke',
-                                                     'stersmoke', 'sillysmoke', 'dancesmoke', 'mimismoke', "mimisingle", 'agouti', 'steragouti', 'sillyagouti', 'danceagouti', 'mimiagouti',
-                                                     'ticked', 'sterticked', 'sillyticked', 'danceticked', 'mimiticked',
-                                                     'brindle', 'spots'])
+                    if self.tortiebase in ["singlestripe","smoke","single", "smokepoint"]:
+                        self.tortiepattern = choice(['tabby','mackerel', 'classic', 'single', 'smoke', 'agouti','ticked','brindle', 'spots'])
                     else:
-                        self.tortiepattern = random.choices([self.tortiebase, random.choice(['single', 'stersingle', 'sillysingle', 'dancesingle', 'mimisingle'])], weights=[97, 3], k=1)[0]
+                        self.tortiepattern = random.choices([self.tortiebase, 'single'], weights=[97, 3], k=1)[0]
 
                     if self.colour == "WHITE":
                         possible_colors = Pelt.white_colours.copy()
@@ -1709,15 +2159,16 @@ class Pelt:
             self.tortiepattern = None
             self.tortiecolour = None
             self.pattern = None
+            return
             
         
         if self.tortiebase not in base_game_patterns:
-            if self.colour not in base_game_colors:
-                self.colour = choice(base_game_colors)
+            if self.colour not in Pelt.pelt_colours:
+                self.colour = choice(Pelt.pelt_colours)
                 
         if self.tortiepattern not in base_game_patterns:
-            if self.tortiecolour not in base_game_colors:
-                self.tortiecolour = choice(base_game_colors)
+            if self.tortiecolour not in Pelt.pelt_colours:
+                self.tortiecolour = choice(Pelt.pelt_colours)
 
     def white_patches_inheritance(self, parents: tuple):
 
@@ -1932,18 +2383,26 @@ class Pelt:
 
         # PELT TINT
         # Basic tints as possible for all colors.
+
         base_tints = sprites.cat_tints["possible_tints"]["basic"]
         if self.colour in sprites.cat_tints["colour_groups"]:
             color_group = sprites.cat_tints["colour_groups"].get(self.colour, "warm")
             color_tints = sprites.cat_tints["possible_tints"][color_group]
         else:
             color_tints = []
-
+        
+        '''
         if base_tints or color_tints:
             self.tint = choice(base_tints + color_tints)
         else:
             self.tint = "none"
-
+        '''
+        weighted_tints = sprites.cat_tints["weighted_tints"]
+        all_tints = []
+        for tint_category in weighted_tints:
+            all_tints += tint_category
+            
+        self.tint = choice([choice(weighted_tints["dilute"]),choice(weighted_tints["light_cool"]),choice(weighted_tints["light_warm"]),choice(all_tints)])
         # TORTIE TINT
         # Basic tints as possible for all colors.
         if self.name in ["Tortie", "Calico"]:
@@ -1981,7 +2440,8 @@ class Pelt:
                 color_tints = []
 
             if base_tints or color_tints:
-                self.white_patches_tint = choice(base_tints + color_tints)
+                all_whitetints = base_tints + color_tints + sprites.white_patches_tints["possible_tints"]["dark"]
+                self.white_patches_tint = choice(base_tints + base_tints + color_tints + color_tints + all_whitetints)
             else:
                 self.white_patches_tint = "none"
         else:

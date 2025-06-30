@@ -146,7 +146,7 @@ class Sprites:
             'stermaskedcolours', 'sillymaskedcolours', 'dancemaskedcolours', 'mimimaskedcolours',
             'sterrosettecolours', 'sillyrosettecolours', 'dancerosettecolours', 'mimirosettecolours',
             'stersinglecolours', 'sillysinglecolours', 'dancesinglecolours', 'mimisinglecolours',
-            'sterstripecolours', 'sillystripecolours', 'dancestripecolours', 'mimistripecolours',
+            'stersinglestripecolours', 'sillysinglestripecolours', 'dancesinglestripecolours', 'mimisinglestripecolours',
             'stersmokecolours', 'sillysmokecolours', 'dancesmokecolours', 'mimismokecolours',
             'stersokokecolours', "french_scarves", "ties", 'sillysokokecolours', 'dancesokokecolours', 'mimisokokecolours',
             'sterspeckledcolours', 'sillyspeckledcolours', 'dancespeckledcolours', 'mimispeckledcolours',
@@ -174,7 +174,7 @@ class Sprites:
             'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
             'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
             'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours',
-            'minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
+            'minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours', 'minecraftsinglestripecolours',
             'minecraftsinglecolours', 'minecraftsmokecolours','minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours',
             'anjuagouticolours', 'anjubengalcolours', 'anjuclassiccolours', 'anjumackerelcolours', 'anjumarbledcolours', 'anjurosettecolours',
             'anjusinglecolours', 'anjusmokecolours','anjusokokecolours', 'anjuspeckledcolours', 'anjutabbycolours', 'anjutickedcolours'
@@ -411,6 +411,87 @@ class Sprites:
         ]
         
         anju_color_categories = [['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']]
+        
+        cs2_color_categories = [
+            ['LIGHTLIME', 'PINKGREY', 'YELLOWBROWN', 'REDGREY', 'BLUEBROWN', 'GHOSTBROWN', 'BLACKPURPLE'],
+            ['BLUECREAM', 'PALEPINKPURPLE', 'ICEBLUE', 'BLUECS2', 'GREENBROWN', 'NAVYBLUE'],
+            ['PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'NAVYBROWN', 'MULBERRY']
+        ]
+        
+        cs_color_categories = [
+                ['ICEWHITE', 'CRYSTAL', 'ORCHID', 'CERULEAN', 'GRAPE', 'GHOSTBLUE', 'BLACKBLUE'],
+                ['THISTLE', 'SUNYELLOW', 'BUBBLEGUM', 'REDSTAIN', 'ROSE', 'DUSKBROWN'],
+                ['FROZENSUN', 'GREENGOLD', 'OCEAN', 'TEAL', 'REDBLUE', 'TREE']
+        ]
+        
+        heta_color_categories = [
+            ['REDHETA', 'ORANGEHETA', 'YELLOWHETA', 'NEONYELLOW', 'NEONGREEN', 'GREENHETA', 'MINTGREEN'],
+            ['DARKMINT', 'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA', 'INDIGOHETA'],
+            ['PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA']
+        ]
+        
+        
+        #mega colors mod
+        
+        dance_color_categories = [
+            ['LIGHTCINNAMON', 'CINNAMON', 'SILVERFAWN', 'DARKCINNAMON', 'DARKFAWN','FAWN', 'LIGHTFAWN'],
+            ['PALEFAWN', 'PALECREAM','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD'],
+            ['GOLD', 'LIGHTGOLD', 'SILVERCREAM', 'PALEGOLD', 'SUNSHINE','BRONZE']
+        ]
+        
+        silly_color_categories = [
+            ['LIGHTLILAC', 'LILACSILLY', 'DARKLILAC', 'DARKASH', 'ASH', 'LIGHTASH', 'PALEASH'],
+            ['SILVERCINNAMON', 'SILVERRED','PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY'],
+            ['EBONY', 'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','PALECINNAMON']
+        ]
+        
+        ster_color_categories = [
+            ['WHITESTER', 'PALEGREYSTER', 'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER', 'BLACKSTER', 'OBSIDIANSTER'],
+            ['GHOSTSTER', 'PALEBLUE','LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'SILVERCHOCOLATE'],
+            ['SILVERORANGE', 'DARKSLATE', 'SLATE', 'LIGHTSLATE', 'PALESLATE','PALELILAC']
+        ]
+        
+        mimi_color_categories= [
+            ['COPPERMIMI', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE', 'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER'],
+            ['GINGERMIMI', 'DARKGINGERMIMI','SILVERGOLD', 'RUSSET', 'DARKRED', 'REDMIMI'],
+            ['LIGHTRED', 'PALERED', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE']
+        ]
+        
+        hive_color_categories = [
+            ['GREENH', 'TEALH', 'BLUEH', 'NAVYH', 'INDIGOH', 'PURPLEH', 'VIOLETH'],
+            ['PINKH', 'ROSEH','DARKPINKH', 'REDH', 'ORANGEH', 'GOLDH'],
+            ['PASTELPURPLEH', 'DARKGREENH', 'BROWN-PURPLE', 'YELLOWH', 'DARKMOSS','PURPLESWIRL']
+        ]
+        
+        kris_color_categories = [
+            ['PINKCREAM', 'BLUEMINT', 'SUNSET', 'PINK-BLUE', 'INDIGOK', 'BLUEGHOSTK', 'PINKK'],
+            ['PASTELPINKBLUE', 'RUSTYGREEN','OURPLE', 'BLUE-YELLOW', 'BLUE-PURPLE', 'DARKSUNSET'],
+            ['BANANABERRY', 'BRIGHTBLUEK', 'SUNRISE', 'GREEN-NAVY', 'PINKSHADOW','REDK']
+        ]
+        
+        meteor_color_categories = [
+            ['SILVERMETEOR', 'SILVERNAVY', 'CREAMSILVER', 'GREYSTAR', 'DARKGREYSTAR', 'BLACK-BROWN', 'BLUESPOTTED'],
+            ['CREAMMETEOR', 'PINK-WHITE','TANSPOTTED', 'REVERSESUN', 'WARM-BLUE', 'INDIGO-VIOLET'],
+            ['GREYMETEOR', 'ICESPOTTED', 'SHADOW', 'BLUE-EARTH', 'EARTHSPOTTED','BROWN-TAN']
+        ]
+        
+        pastel_color_categories = [
+            ['PALEPINK-PURPLE', 'PALEGREY-PINK', 'PALEBLUE-YELLOW', 'PALEMINT-PURPLE', 'PALEGREEN-INDIGO', 'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE'],
+            ['PALEPURPLE-GOLD', 'PALECYAN-GOLD','PALEMINT-MAGENTA', 'PALEMINT-VIOLET', 'PALEGREEN-BLUE', 'PALEGREEN-NAVY'],
+            ['PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE', 'PALEYELLOWGREEN','PALEYELLOW-BLUE']
+        ]
+        
+        pepper_color_categories = [
+            ['ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER', 'BLACKBLUEPEPPER'],
+            ['GOLDCREAM', 'GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED', 'NEONRED', 'REDBLACK'],
+            ['PALEBLUE-GOLD', 'INDIGOPEPPER', 'RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER']
+        ]
+        
+        sparkle_color_categories = [
+            ['REDS', 'RED-ORANGES', 'DARKYELLOWS', 'GREENREDS', 'CYANPINKG', 'INDIGOREDS', 'REVERSERAINBOW'],
+            ['PINKREDS', 'RUSTYS','GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES'],
+            ['BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS','SUNNYS']
+        ]
 
         color_types = [
             'singlecolours', 'tabbycolours', 'marbledcolours', 'rosettecolours',
@@ -423,54 +504,49 @@ class Sprites:
             'cheetahcolours', 'brindlecolours', 'wildcatcolours',
             'wolfcolours', 'spotscolours', 'smokepointcolours',
             'dalmatiancolours', 'finleappatchescolours', 'finleappatchescolours',
-            'steragouticolours', 'sillyagouticolours', 'danceagouticolours', 'mimiagouticolours',
-            'sterbengalcolours', 'sillybengalcolours', 'dancebengalcolours', 'mimibengalcolours',
-            'sterclassiccolours', 'sillyclassiccolours', 'danceclassiccolours', 'mimiclassiccolours',
-            'stermackerelcolours', 'sillymackerelcolours', 'dancemackerelcolours', 'mimimackerelcolours',
-            'stermarbledcolours', 'sillymarbledcolours', 'dancemarbledcolours', 'mimimarbledcolours',
-            'stermaskedcolours', 'sillymaskedcolours', 'dancemaskedcolours', 'mimimaskedcolours',
-            'sterrosettecolours', 'sillyrosettecolours', 'dancerosettecolours', 'mimirosettecolours',
-            'stersinglecolours', 'sillysinglecolours', 'dancesinglecolours', 'mimisinglecolours',
-            'sterstripecolours', 'sillystripecolours', 'dancestripecolours', 'mimistripecolours',
-            'stersmokecolours', 'sillysmokecolours', 'dancesmokecolours', 'mimismokecolours',
-            'stersokokecolours', 'sillysokokecolours', 'dancesokokecolours', 'mimisokokecolours',
-            'sterspeckledcolours', 'sillyspeckledcolours', 'dancespeckledcolours', 'mimispeckledcolours',
-            'stertabbycolours', 'sillytabbycolours', 'dancetabbycolours', 'mimitabbycolours',
-            'stertickedcolours', 'sillytickedcolours', 'dancetickedcolours', 'mimitickedcolours',
-            'cs_agouticolours', 'cs_bengalcolours', 'cs_classiccolours', 'cs_mackerelcolours', 'cs_marbledcolours', 'cs_maskedcolours', 'cs_rosettecolours',
-            'cs_singlecolours', 'cs_singlestripecolours', 'cs_smokecolours', 'cs_sokokecolours', 'cs_speckledcolours', 'cs_tabbycolours','cs_tickedcolours',
-            'cs_agouti2colours', 'cs_bengal2colours', 'cs_classic2colours', 'cs_mackerel2colours', 'cs_marbled2colours', 'cs_masked2colours', 'cs_rosette2colours',
-            'cs_single2colours', 'cs_singlestripe2colours', 'cs_smoke2colours', 'cs_sokoke2colours', 'cs_speckled2colours', 'cs_tabby2colours','cs_ticked2colours',
             'caliisokokecolours', 'dotcolours', 
             'caliispeckledcolours', 'kintsugicolours', 'dotfadecolours', 'circletabbycolours', 'colourpointcolours', 'lynxpointcolours', 'ncrestedcaracaracolours',
             'birchtabbycolours',
-            'krisagouticolours', 'krisbengalcolours', 'krisclassiccolours', 'krismackerelcolours', 'krismarbledcolours', 'krismaskedcolours', 'krisrosettecolours',
-            'krissinglecolours', 'krissinglestripecolours', 'krissmokecolours', 'krissokokecolours', 'krisspeckledcolours', 'kristabbycolours','kristickedcolours',
-            'meteoragouticolours', 'meteorbengalcolours', 'meteorclassiccolours', 'meteormackerelcolours', 'meteormarbledcolours', 'meteormaskedcolours', 'meteorrosettecolours',
-            'meteorsinglecolours', 'meteorsinglestripecolours', 'meteorsmokecolours', 'meteorsokokecolours', 'meteorspeckledcolours', 'meteortabbycolours','meteortickedcolours',
-            'hiveagouticolours', 'hivebengalcolours', 'hiveclassiccolours', 'hivemackerelcolours', 'hivemarbledcolours', 'hivemaskedcolours', 'hiverosettecolours',
-            'hivesinglecolours', 'hivesinglestripecolours', 'hivesmokecolours', 'hivesokokecolours', 'hivespeckledcolours', 'hivetabbycolours','hivetickedcolours',
-            'pepperagouticolours', 'pepperbengalcolours', 'pepperclassiccolours', 'peppermackerelcolours', 'peppermarbledcolours', 'pepperrosettecolours',
-            'peppersinglecolours', 'peppersinglestripecolours', 'peppersmokecolours', 'peppersokokecolours', 'pepperspeckledcolours', 'peppertabbycolours','peppertickedcolours',
-            'hetaagouticolours', 'hetabengalcolours', 'hetaclassiccolours', 'hetamackerelcolours', 'hetamarbledcolours', 'hetarosettecolours',
-            'hetasinglecolours', 'hetasinglestripecolours', 'hetasmokecolours', 'hetasokokecolours', 'hetaspeckledcolours', 'hetatabbycolours','hetatickedcolours',
-            'pastelagouticolours', 'pastelbengalcolours', 'pastelclassiccolours', 'pastelmackerelcolours', 'pastelmarbledcolours', 'pastelrosettecolours',
-            'pastelsinglecolours', 'pastelsinglestripecolours', 'pastelsmokecolours', 'pastelsokokecolours', 'pastelspeckledcolours', 'pasteltabbycolours','pasteltickedcolours',
-            'sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
-            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours',
             'prideagouticolours', 'pridebengalcolours', 'prideclassiccolours', 'pridemackerelcolours'
 
         ]
-
+    
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
                     self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
                     
         minecraft_color_types = ['minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
-            'minecraftsinglecolours', 'minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours', 'minecraftsmokecolours']
+            'minecraftsinglecolours', 'minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours', 'minecraftsmokecolours', 'minecraftsinglestripecolours']
         anju_color_types = ['anjuagouticolours', 'anjubengalcolours', 'anjuclassiccolours', 'anjumackerelcolours', 'anjumarbledcolours', 'anjurosettecolours',
             'anjusinglecolours', 'anjusokokecolours', 'anjuspeckledcolours', 'anjutabbycolours', 'anjutickedcolours', 'anjusmokecolours']
+        
+        heta_color_types = ['hetaagouticolours', 'hetabengalcolours', 'hetaclassiccolours', 'hetamackerelcolours', 'hetamarbledcolours', 'hetarosettecolours',
+            'hetasinglecolours', 'hetasinglestripecolours', 'hetasmokecolours', 'hetasokokecolours', 'hetaspeckledcolours', 'hetatabbycolours','hetatickedcolours']
+        cs_color_types = ['cs_agouticolours', 'cs_bengalcolours', 'cs_classiccolours', 'cs_mackerelcolours', 'cs_marbledcolours', 'cs_maskedcolours', 'cs_rosettecolours',
+            'cs_singlecolours', 'cs_singlestripecolours', 'cs_smokecolours', 'cs_sokokecolours', 'cs_speckledcolours', 'cs_tabbycolours','cs_tickedcolours']
+        cs2_color_types = ['cs_agouti2colours', 'cs_bengal2colours', 'cs_classic2colours', 'cs_mackerel2colours', 'cs_marbled2colours', 'cs_masked2colours', 'cs_rosette2colours',
+            'cs_single2colours', 'cs_singlestripe2colours', 'cs_smoke2colours', 'cs_sokoke2colours', 'cs_speckled2colours', 'cs_tabby2colours','cs_ticked2colours']
+        dance_color_types = ['danceagouticolours', 'dancebengalcolours', 'danceclassiccolours', 'dancemackerelcolours', 'dancemarbledcolours', 'dancemaskedcolours', 'dancerosettecolours',
+         'dancesinglecolours', 'dancesmokecolours', 'dancesokokecolours', 'dancespeckledcolours', 'dancesinglestripecolours', 'dancetabbycolours', 'dancetickedcolours']
+        mimi_color_types = ['mimiagouticolours', 'mimibengalcolours', 'mimiclassiccolours', 'mimimackerelcolours', 'mimimarbledcolours', 'mimimaskedcolours', 'mimirosettecolours',
+         'mimisinglecolours', 'mimismokecolours', 'mimisokokecolours', 'mimispeckledcolours', 'mimisinglestripecolours', 'mimitabbycolours', 'mimitickedcolours']        
+        silly_color_types = ['sillyagouticolours', 'sillybengalcolours', 'sillyclassiccolours', 'sillymackerelcolours', 'sillymarbledcolours', 'sillymaskedcolours', 'sillyrosettecolours',
+         'sillysinglecolours', 'sillysmokecolours', 'sillysokokecolours', 'sillyspeckledcolours', 'sillysinglestripecolours', 'sillytabbycolours', 'sillytickedcolours']        
+        ster_color_types = ['steragouticolours', 'sterbengalcolours', 'sterclassiccolours', 'stermackerelcolours', 'stermarbledcolours', 'stermaskedcolours', 'sterrosettecolours',
+         'stersinglecolours', 'stersmokecolours', 'stersokokecolours', 'sterspeckledcolours', 'stersinglestripecolours', 'stertabbycolours', 'stertickedcolours']
+        hive_color_types = ['hiveagouticolours', 'hivebengalcolours', 'hiveclassiccolours', 'hivemackerelcolours', 'hivemarbledcolours', 'hivemaskedcolours', 'hiverosettecolours',
+            'hivesinglecolours', 'hivesinglestripecolours', 'hivesmokecolours', 'hivesokokecolours', 'hivespeckledcolours', 'hivetabbycolours','hivetickedcolours']
+        kris_color_types = ['krisagouticolours', 'krisbengalcolours', 'krisclassiccolours', 'krismackerelcolours', 'krismarbledcolours', 'krismaskedcolours', 'krisrosettecolours',
+            'krissinglecolours', 'krissinglestripecolours', 'krissmokecolours', 'krissokokecolours', 'krisspeckledcolours', 'kristabbycolours','kristickedcolours']
+        meteor_color_types = ['meteoragouticolours', 'meteorbengalcolours', 'meteorclassiccolours', 'meteormackerelcolours', 'meteormarbledcolours', 'meteormaskedcolours', 'meteorrosettecolours',
+            'meteorsinglecolours', 'meteorsinglestripecolours', 'meteorsmokecolours', 'meteorsokokecolours', 'meteorspeckledcolours', 'meteortabbycolours','meteortickedcolours']
+        pastel_color_types = ['pastelagouticolours', 'pastelbengalcolours', 'pastelclassiccolours', 'pastelmackerelcolours', 'pastelmarbledcolours', 'pastelrosettecolours',
+            'pastelsinglecolours', 'pastelsinglestripecolours', 'pastelsmokecolours', 'pastelsokokecolours', 'pastelspeckledcolours', 'pasteltabbycolours','pasteltickedcolours']
+        pepper_color_types = ['pepperagouticolours', 'pepperbengalcolours', 'pepperclassiccolours', 'peppermackerelcolours', 'peppermarbledcolours', 'pepperrosettecolours',
+            'peppersinglecolours', 'peppersinglestripecolours', 'peppersmokecolours', 'peppersokokecolours', 'pepperspeckledcolours', 'peppertabbycolours','peppertickedcolours']
+        sparkle_color_types = ['sparkleagouticolours', 'sparklebengalcolours', 'sparkleclassiccolours', 'sparklemackerelcolours', 'sparklemarbledcolours', 'sparklemaskedcolours', 'sparklerosettecolours',
+            'sparklesinglecolours', 'sparklesinglestripecolours', 'sparklesmokecolours', 'sparklesokokecolours', 'sparklespeckledcolours', 'sparkletabbycolours','sparkletickedcolours']
         
         for row, colors in enumerate(minecraft_color_categories):
             for col, color in enumerate(colors):
@@ -482,6 +558,80 @@ class Sprites:
             for col, color in enumerate(colors):
                 for color_type in anju_color_types:
                     category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(cs_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in cs_color_types:
+                    category = color_type[3:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+                    
+        for row, colors in enumerate(cs2_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in cs2_color_types:
+                    category = color_type[3:]
+                    category = category.replace('2', '')
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(heta_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in heta_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(dance_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in dance_color_types:
+                    category = color_type[5:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(mimi_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in mimi_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(silly_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in silly_color_types:
+                    category = color_type[5:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(ster_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in ster_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        
+        for row, colors in enumerate(hive_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in hive_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        for row, colors in enumerate(kris_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in kris_color_types:
+                    category = color_type[4:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        for row, colors in enumerate(meteor_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in meteor_color_types:
+                    category = color_type[6:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        for row, colors in enumerate(pastel_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in pastel_color_types:
+                    category = color_type[6:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        for row, colors in enumerate(pepper_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in pepper_color_types:
+                    category = color_type[6:]
+                    self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
+        for row, colors in enumerate(sparkle_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in sparkle_color_types:
+                    category = color_type[7:]
                     self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
         
         # tortiepatchesmasks

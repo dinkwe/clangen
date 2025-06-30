@@ -123,7 +123,7 @@ class CustomizeCatScreen(Screens):
         self.base_game_patterns = ["tabby", "ticked", "mackerel", "classic", "sokoke", "agouti", "speckled",
                            "rosette", "single", "smoke", "singlestripe", "bengal", "marbled"]
         
-        self.minecraft_colors = [
+        minecraft_colors = [
             'ACACIALOG', 'BAMBOO', 'BIRCHLOG', 'CHERRYLOG', 'CRIMSONSTEM', 'DARKOAKLOG', 'JUNGLELOG', 'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'WARPEDSTEM',
             'ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS', 'CRIMSONPLANKS', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS', 'SPRUCEPLANKS', 'WARPEDPLANKS',
             'AMETHYST', 'BLACKGLAZEDTERRACOTTA', 'BLUEGLAZEDTERRACOTTA', 'BROWNGLAZEDTERRACOTTA', 'BROWN MUSHROOM', 'COPPER', 'CRYING OBSIDIAN', 'CYANGLAZEDTERRACOTTA', 'EXPOSEDCOPPER', 'GRAYGLAZEDTERRACOTTA', 'GREENGLAZEDTERRACOTTA',
@@ -131,7 +131,91 @@ class CustomizeCatScreen(Screens):
             'PURPUR', 'QUARTZ', 'REDGLAZEDTERRACOTTA', 'REDMUSHROOM', 'WEATHEREDCOPPER', 'WHITEGLAZEDTERRACOTTA', 'YELLOWGLAZEDTERRACOTTA'
         ]
         
-        self.anju_colors = ['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']
+        anju_colors = ['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']
+        
+        cs2_colors = [
+            'LIGHTLIME', 'PINKGREY', 'YELLOWBROWN', 'REDGREY', 'BLUEBROWN', 'GHOSTBROWN', 'BLACKPURPLE',
+            'BLUECREAM', 'PALEPINKPURPLE', 'ICEBLUE', 'BLUECS2', 'GREENBROWN', 'NAVYBLUE',
+            'PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'NAVYBROWN', 'MULBERRY'
+        ]
+        
+        cs_colors = [
+                'ICEWHITE', 'CRYSTAL', 'ORCHID', 'CERULEAN', 'GRAPE', 'GHOSTBLUE', 'BLACKBLUE',
+                'THISTLE', 'SUNYELLOW', 'BUBBLEGUM', 'REDSTAIN', 'ROSE', 'DUSKBROWN',
+                'FROZENSUN', 'GREENGOLD', 'OCEAN', 'TEAL', 'REDBLUE', 'TREE'
+        ]
+        
+        heta_colors = [
+            'REDHETA', 'ORANGEHETA', 'YELLOWHETA', 'NEONYELLOW', 'NEONGREEN', 'GREENHETA', 'MINTGREEN',
+            'DARKMINT', 'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA', 'INDIGOHETA',
+            'PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA'
+        ]
+        
+        
+        #mega colors mod
+        
+        dance_colors = [
+            'LIGHTCINNAMON', 'CINNAMON', 'SILVERFAWN', 'DARKCINNAMON', 'DARKFAWN','FAWN', 'LIGHTFAWN',
+            'PALEFAWN', 'PALECREAM','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD',
+            'GOLD', 'LIGHTGOLD', 'SILVERCREAM', 'PALEGOLD', 'SUNSHINE','BRONZE'
+        ]
+        
+        silly_colors = [
+            'LIGHTLILAC', 'LILACSILLY', 'DARKLILAC', 'DARKASH', 'ASH', 'LIGHTASH', 'PALEASH',
+            'SILVERCINNAMON', 'SILVERRED','PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY',
+            'EBONY', 'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','PALECINNAMON'
+        ]
+        
+        ster_colors = [
+            'WHITESTER', 'PALEGREYSTER', 'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER', 'BLACKSTER', 'OBSIDIANSTER',
+            'GHOSTSTER', 'PALEBLUE','LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'SILVERCHOCOLATE',
+            'SILVERORANGE', 'DARKSLATE', 'SLATE', 'LIGHTSLATE', 'PALESLATE','PALELILAC'
+        ]
+        
+        mimi_colors = [
+            'COPPERMIMI', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE', 'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER',
+            'GINGERMIMI', 'DARKGINGERMIMI','SILVERGOLD', 'RUSSET', 'DARKRED', 'REDMIMI',
+            'LIGHTRED', 'PALERED', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE'
+        ]
+        
+        hive_colors = [
+        'GREENH', 'TEALH', 'BLUEH', 'NAVYH', 'INDIGOH', 'PURPLEH', 'VIOLETH',
+        'PINKH', 'ROSEH','DARKPINKH', 'REDH', 'ORANGEH', 'GOLDH',
+        'PASTELPURPLEH', 'DARKGREENH', 'BROWN-PURPLE', 'YELLOWH', 'DARKMOSS','PURPLESWIRL'
+        ]
+        
+        kris_colors = [
+            'PINKCREAM', 'BLUEMINT', 'SUNSET', 'PINK-BLUE', 'INDIGOK', 'BLUEGHOSTK', 'PINKK',
+            'PASTELPINKBLUE', 'RUSTYGREEN','OURPLE', 'BLUE-YELLOW', 'BLUE-PURPLE', 'DARKSUNSET',
+            'BANANABERRY', 'BRIGHTBLUEK', 'SUNRISE', 'GREEN-NAVY', 'PINKSHADOW','REDK'
+        ]
+        
+        meteor_colors = [
+            'SILVERMETEOR', 'SILVERNAVY', 'CREAMSILVER', 'GREYSTAR', 'DARKGREYSTAR', 'BLACK-BROWN', 'BLUESPOTTED',
+            'CREAMMETEOR', 'PINK-WHITE','TANSPOTTED', 'REVERSESUN', 'WARM-BLUE', 'INDIGO-VIOLET',
+            'GREYMETEOR', 'ICESPOTTED', 'SHADOW', 'BLUE-EARTH', 'EARTHSPOTTED','BROWN-TAN'
+        ]
+        
+        pastel_colors = [
+            'PALEPINK-PURPLE', 'PALEGREY-PINK', 'PALEBLUE-YELLOW', 'PALEMINT-PURPLE', 'PALEGREEN-INDIGO', 'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE',
+            'PALEPURPLE-GOLD', 'PALECYAN-GOLD','PALEMINT-MAGENTA', 'PALEMINT-VIOLET', 'PALEGREEN-BLUE', 'PALEGREEN-NAVY',
+            'PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE', 'PALEYELLOWGREEN','PALEYELLOW-BLUE'
+        ]
+        
+        pepper_colors = [
+            'ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER', 'BLACKBLUEPEPPER',
+            'GOLDCREAM', 'GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED', 'NEONRED', 'REDBLACK',
+            'PALEBLUE-GOLD', 'INDIGOPEPPER', 'RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER'
+        ]
+        
+        sparkle_colors = [
+            'REDS', 'RED-ORANGES', 'DARKYELLOWS', 'GREENREDS', 'CYANPINKG', 'INDIGOREDS', 'REVERSERAINBOW',
+            'PINKREDS', 'RUSTYS','GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES',
+            'BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS','SUNNYS'
+        ]
+        
+        self.special_colors_masked = mimi_colors + ster_colors + silly_colors + dance_colors + cs_colors + cs2_colors + hive_colors + kris_colors + meteor_colors + sparkle_colors
+        self.special_colors_nomasked = minecraft_colors + anju_colors + heta_colors + pastel_colors + pepper_colors
 
         self.pelt_colours = copy(Pelt.pelt_colours)
         self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
@@ -208,14 +292,11 @@ class CustomizeCatScreen(Screens):
 
         self.reset_message = None
         self.reset_button = None
+        self.sparkle_button = None
+        self.sparkle_cats = True
 
         self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
         self.eye_colours.sort()
-        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.flutter_eyes)]
-        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.lamp_eyes)]
-        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
-        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.angel_eyes)]
-        self.eye_colours += [colour.capitalize() for colour in copy(Pelt.snail_eyes)]
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None
         self.heterochromia_text = None
@@ -337,7 +418,11 @@ class CustomizeCatScreen(Screens):
         self.pose_left_button = create_button((406, 530), (30, 30), get_arrow(1), ButtonStyles.ROUNDED_RECT)
         self.pose_right_button = create_button((486, 530), (30, 30), get_arrow(1, False), ButtonStyles.ROUNDED_RECT)
         self.reverse_button = create_button((105, 530), (70, 30), "Reverse", ButtonStyles.ROUNDED_RECT)
-        self.reset_button = create_button((110, 450), (105, 30), "Reset", ButtonStyles.SQUOVAL)
+        self.reset_button = create_button((60, 450), (105, 30), "Reset", ButtonStyles.SQUOVAL)
+        if self.sparkle_cats:
+            self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle On", ButtonStyles.SQUOVAL)
+        else:
+            self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
 
     def setup_dropdowns(self):
         """------------------------------------------------------------------------------------------------------------#
@@ -350,10 +435,24 @@ class CustomizeCatScreen(Screens):
                                                   get_selected_option(self.the_cat.pelt.name, "capitalize"))
         if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
             if 'GREEN' not in self.pelt_colours:
-                self.pelt_colours += self.anju_colors
-                self.pelt_colours += self.minecraft_colors
-        elif 'GREEN' in self.pelt_colours:
+                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+        elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+            if 'GREEN' in self.pelt_colours:
+                self.pelt_colours = copy(Pelt.pelt_colours)
+            if 'ASH' not in self.pelt_colours:
+                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+        elif 'GREEN' in self.pelt_colours or 'ASH' in self.pelt_colours:
             self.pelt_colours = copy(Pelt.pelt_colours)
+        
+        realistic_colors = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
+        if not self.sparkle_cats:
+            for color in self.pelt_colours:
+                if color not in realistic_colors:
+                     self.pelt_colours = realistic_colors
+                     break
+                    
+            if self.the_cat.pelt.colour not in realistic_colors:
+                self.the_cat.pelt.colour = "BLACK"
         self.pelt_colours.sort()
         self.pelt_colour_dropdown = create_dropdown((480, 125), (135, 40),
                                                     create_options_list(self.pelt_colours, "upper"),
@@ -366,11 +465,24 @@ class CustomizeCatScreen(Screens):
         
         if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
             if 'GREEN' not in self.tortie_colours:
-                self.tortie_colours += self.anju_colors
-                self.tortie_colours += self.minecraft_colors
-        elif 'GREEN' in self.tortie_colours:
+                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+        elif self.the_cat.pelt.tortiepattern == 'masked':
+            if 'GREEN' in self.pelt_colours:
+                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+            if 'ASH' not in self.tortie_colours:
+                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+        elif 'GREEN' in self.tortie_colours or 'ASH'  in self.tortie_colours:
             self.tortie_colours = copy(Pelt.pelt_colours)
             
+        if not self.sparkle_cats:
+            for color in self.tortie_colours:
+                if color not in realistic_colors:
+                     self.tortie_colours = realistic_colors
+                     break
+                    
+            if self.the_cat.pelt.colour not in realistic_colors:
+                self.the_cat.pelt.colour = "BLACK"
+        self.tortie_colours.sort()    
         self.tortie_colour_dropdown = create_dropdown((480, 200), (135, 40),
                                                       create_options_list(self.tortie_colours, "upper"),
                                                       get_selected_option(self.the_cat.pelt.tortiecolour, "upper"))
@@ -396,7 +508,23 @@ class CustomizeCatScreen(Screens):
         self.skin_dropdown = create_dropdown((640, 360), (135, 40), create_options_list(self.skins, "upper"),
                                              get_selected_option(self.the_cat.pelt.skin, "upper"))
         
-
+        if self.sparkle_cats:
+            self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
+            self.eye_colours.sort()
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.flutter_eyes)]
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.lamp_eyes)]
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.angel_eyes)]
+            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.snail_eyes)]
+        else:
+            self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
+            self.eye_colours.sort()
+            if self.the_cat.pelt.eye_colour.capitalize() not in self.eye_colours:
+                self.the_cat.pelt.eye_colour = "YELLOW"
+            if self.the_cat.pelt.eye_colour2:
+                if self.the_cat.pelt.eye_colour2.capitalize() not in self.eye_colours:
+                    self.the_cat.pelt.eye_colour2 = "YELLOW"
+        
         self.eye_colour1_dropdown = create_dropdown((320, 445), (135, 40),
                                                     create_options_list(self.eye_colours, "upper"),
                                                     get_selected_option(self.the_cat.pelt.eye_colour, "upper"))
@@ -451,7 +579,7 @@ class CustomizeCatScreen(Screens):
 
     def setup_cat_elements(self):
         (self.setup_pelt_length(), self.setup_tortie(), self.setup_white_patches_tint(), self.setup_eye_colours(),
-         self.setup_accessory(), self.setup_poses(), self.setup_reverse(), self.capture_initial_state())
+         self.setup_accessory(), self.setup_poses(), self.setup_reverse())
 
     def setup_pelt_length(self):
         self.cat_elements["pelt_length_index"] = self.pelt_lengths.index(self.the_cat.pelt.length)
@@ -591,6 +719,14 @@ class CustomizeCatScreen(Screens):
                 self.handle_back_button()
             elif event.ui_element == self.reset_button:
                 self.reset_attributes()
+            elif event.ui_element == self.sparkle_button:
+                self.sparkle_cats = not self.sparkle_cats
+                self.sparkle_button.kill()
+                if self.sparkle_cats:
+                    self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle On", ButtonStyles.SQUOVAL)
+                else:
+                    self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
+                self.update_ui_elements()
             elif event.ui_element in [self.pelt_length_left_button, self.pelt_length_right_button]:
                 self.handle_pelt_length_buttons(event.ui_element)
             elif event.ui_element == self.heterochromia_checkbox:
@@ -658,9 +794,9 @@ class CustomizeCatScreen(Screens):
                         self.the_cat.pelt.tortiecolour = 'BLACK'
             elif selected_option in self.base_game_patterns:
                 if 'GREEN' not in self.tortie_colours:
-                    self.tortie_colours += self.anju_colors
-                    self.tortie_colours += self.minecraft_colors
+                     self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
             setattr(self.the_cat.pelt, attribute, selected_option)
+            self.update_ui_elements()
         elif attribute == "tortiebase":
             if self.the_cat.pelt.tortiebase in self.base_game_patterns:
                 if selected_option not in self.base_game_patterns:
@@ -669,10 +805,9 @@ class CustomizeCatScreen(Screens):
                         self.the_cat.pelt.colour = 'BLACK'
             elif selected_option in self.base_game_patterns:
                 if 'GREEN' not in self.pelt_colours:
-                    self.pelt_colours += self.anju_colors
-                    self.pelt_colours += self.minecraft_colors
-                    self.update_ui_elements()
+                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
             setattr(self.the_cat.pelt, attribute, selected_option)
+            self.update_ui_elements()
         else:
             setattr(self.the_cat.pelt, attribute, selected_option)
 
@@ -694,6 +829,10 @@ class CustomizeCatScreen(Screens):
         if new_pelt_name in self.base_game_pelts:
             if self.the_cat.pelt.name not in self.base_game_pelts:
                 redo_dropdowns = True
+        elif new_pelt_name == 'Masked':
+            if self.the_cat.pelt.name not in self.base_game_pelts:
+                redo_dropdowns = True
+                self.the_cat.pelt.colour = 'BLACK'
         else:
             if self.the_cat.pelt.name in self.base_game_pelts:
                 redo_dropdowns = True
@@ -999,7 +1138,7 @@ class CustomizeCatScreen(Screens):
 
     def kill_buttons(self):
         buttons = [
-            self.previous_cat_button, self.back_button, self.next_cat_button, self.reset_button,
+            self.previous_cat_button, self.back_button, self.next_cat_button, self.reset_button, self.sparkle_button,
             self.pelt_length_left_button, self.pelt_length_right_button, self.pose_left_button,
             self.pose_right_button, self.reverse_button
         ]

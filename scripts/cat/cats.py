@@ -413,83 +413,21 @@ class Cat:
             neon_eyes_chance = 4
         if self.awakened and randint(1,neon_eyes_chance) == 1:
             self.pelt.eye_colour = choice(neos_eyes)
-        elif self.awakened and randint(1,20) == 1:
+        elif self.awakened and randint(1,25) == 1:
             self.pelt.eye_colour = choice(angel_eyes)
-        elif self.awakened and randint(1,20) == 1:
+        elif self.awakened and randint(1,25) == 1:
             self.pelt.eye_colour = choice(flutter_eyes)
-        elif self.awakened and randint(1,20) == 1:
+        elif self.awakened and randint(1,25) == 1:
             self.pelt.eye_colour = choice(lamp_eyes)
-        
-        magiccolors = ["CSSingle", "CSTabby", "CSTicked", "CSMackerel", "CSClassic",
-                       "CSSpeckled", "CSAgouti", "CSSokoke", "CSRosette", "CSSmoke",
-                       "CSSinglestripe", "CSMarbled", "CSBengal", "CSMasked"]
-        
-        magiccolors2 = ["CS2Single", "CS2Tabby", "CS2Ticked", "CS2Mackerel", "CS2Classic",
-                       "CS2Speckled", "CS2Agouti", "CS2Sokoke", "CS2Rosette", "CS2Smoke",
-                       "CS2Singlestripe", "CS2Marbled", "CS2Bengal", "CS2Masked"]
-
-        magiccolorskris = ["KrisSingle", "KrisTabby", "KrisTicked", "KrisMackerel", "KrisClassic",
-                       "KrisSpeckled", "KrisAgouti", "KrisSokoke", "KrisRosette", "KrisSmoke",
-                       "KrisSinglestripe", "KrisMarbled", "KrisBengal", "KrisMasked"]
-        
-        magiccolorsmeteor = ["MeteorSingle", "MeteorTabby", "MeteorTicked", "MeteorMackerel", "MeteorClassic",
-             "MeteorSpeckled", "MeteorAgouti", "MeteorSokoke", "MeteorRosette", "MeteorSmoke",
-             "MeteorSinglestripe", "MeteorMarbled", "MeteorBengal", "MeteorMasked"]
-        
-        magiccolorshive = ["HiveSingle", "HiveTabby", "HiveTicked", "HiveMackerel", "HiveClassic",
-             "HiveSpeckled", "HiveAgouti", "HiveSokoke", "HiveRosette", "HiveSmoke",
-             "HiveSinglestripe", "HiveMarbled", "HiveBengal", "HiveMasked"]
-        
-        magiccolorspepper = ["PepperSingle", "PepperTabby", "PepperTicked", "PepperMackerel", "PepperClassic",
-             "PepperSpeckled", "PepperAgouti", "PepperSokoke", "PepperRosette", "PepperSmoke",
-             "PepperSinglestripe", "PepperMarbled", "PepperBengal"]
-        
-        magiccolorsheta = ["HetaSingle", "HetaTabby", "HetaTicked", "HetaMackerel", "HetaClassic",
-             "HetaSpeckled", "HetaAgouti", "HetaSokoke", "HetaRosette", "HetaSmoke",
-             "HetaSinglestripe", "HetaMarbled", "HetaBengal"]
-        
-        magiccolorspastel = ["PastelSingle", "PastelTabby", "PastelTicked", "PastelMackerel", "PastelClassic",
-             "PastelSpeckled", "PastelAgouti", "PastelSokoke", "PastelRosette", "PastelSmoke",
-             "PastelSinglestripe", "PastelMarbled", "PastelBengal",]
-        
-        magiccolorssparkle = ["SparkleSingle", "SparkleTabby", "SparkleTicked", "SparkleMackerel", "SparkleClassic",
-             "SparkleSpeckled", "SparkleAgouti", "SparkleSokoke", "SparkleRosette", "SparkleSmoke",
-             "SparkleSinglestripe", "SparkleMarbled", "SparkleBengal", "SparkleMasked"]
-        
+            
         magiccolorspride = ["PrideAgouti", "PrideBengal", 'PrideClassic', 'PrideMackerel']
         
-        if not self.awakened and self.pelt.name in magiccolors:
-            self.pelt.name.replace('CS', '')
-        if not self.awakened and self.pelt.name in magiccolors2:
-            self.pelt.name.replace('CS2', '')
-        if not self.awakened and self.pelt.name in magiccolorskris:
-            self.pelt.name.replace('Kris', '')
-        if not self.awakened and self.pelt.name in magiccolorsmeteor:
-            self.pelt.name.replace('Meteor', '')
-        if not self.awakened and self.pelt.name in magiccolorshive:
-            self.pelt.name.replace('Hive', '')
-        if not self.awakened and self.pelt.name in magiccolorspepper:
-            self.pelt.name.replace('Pepper', '')
-        if not self.awakened and self.pelt.name in magiccolorsheta:
-            self.pelt.name.replace('Heta', '')
-        if not self.awakened and self.pelt.name in magiccolorspastel:
-            self.pelt.name.replace('Pastel', '')
-        if not self.awakened and self.pelt.name in magiccolorssparkle:
-            self.pelt.name.replace('Sparkle', '')
         if not self.awakened and self.pelt.name in magiccolorspride:
             self.pelt.name.replace('Pride', '')
         
-        allmagic = magiccolors + magiccolors2 + magiccolorskris + magiccolorsmeteor + magiccolorshive + magiccolorspepper + magiccolorsheta + magiccolorspastel + magiccolorssparkle + magiccolorspride
-        magic_weighted = magiccolors + magiccolors2 + magiccolors + magiccolors2 + magiccolors + magiccolors2 + magiccolorskris + magiccolorsmeteor + magiccolorsmeteor + magiccolorshive + magiccolorspepper + magiccolorsheta + magiccolorspastel + magiccolorssparkle + magiccolorspride
-
-        if self.awakened and self.pelt.name not in allmagic:
-            if randint(1,3) == 1:
-                self.pelt.name = choice(magic_weighted)
-        
-        if self.pelt.name not in allmagic:
-            sparkle_chance = game.config["cat_generation"]["sparkle_chance"]
-            if randint(1,sparkle_chance) == 1:
-                self.pelt.name = choice(magic_weighted)
+        if self.awakened and self.pelt.name not in magiccolorspride:
+            if randint(1,50) == 1:
+                self.pelt.name = choice(magiccolorspride)
         
         # Private Sprite
         self._sprite = None
