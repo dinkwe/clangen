@@ -268,7 +268,7 @@ class Pelt:
                  'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
     
     lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
-                 'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDEGREEN']
+                 'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
     
     angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
                  'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
@@ -1415,7 +1415,7 @@ class Pelt:
             self.name = self.name.capitalize()
             self.colour = meteor_dict[self.colour]
         if "Pastel" in self.name:
-            self.name = self.name[6]
+            self.name = self.name[6:]
             self.name = self.name.capitalize()
             self.colour = pastel_dict[self.colour]
         if "Pepper" in self.name:
@@ -1633,13 +1633,14 @@ class Pelt:
         if not parents:
             self.eye_colour = choice(Pelt.eye_colours)
         else:
-            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes]
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.neos_eyes, Pelt.flutter_eyes, Pelt.lamp_eyes, Pelt.angel_eyes, Pelt.snail_eyes]
             similar_colors = []
             for i in parents:
-                for colour in colour_wheel[:]:
+                for colour in colour_wheel:
                     if i.pelt.eye_colour in colour:
                         for color in colour:
                             similar_colors.append(color)
+                            
             self.eye_colour = choice([i.pelt.eye_colour for i in parents] +[choice(similar_colors)] +[choice(similar_colors)] + [choice(Pelt.eye_colours)])
 
         # White patches must be initalized before eye color.
