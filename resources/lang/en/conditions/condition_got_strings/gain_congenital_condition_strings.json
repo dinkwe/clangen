@@ -63,5 +63,28 @@
     "persistent headaches": [
         "r_c notices with some concern that any time m_c opens {PRONOUN/m_c/poss} eyes, {PRONOUN/m_c/subject} {VERB/m_c/mewl/mewls} incessantly and {VERB/m_c/try/tries} to wriggle into the darkest corners of the medicine cat den. r_c suspects {PRONOUN/m_c/subject} may have chronic headaches.",
         "Rather than go outside in the bright sunlight to play with {PRONOUN/m_c/poss} littermates, m_c prefers to huddle by {PRONOUN/m_c/self} in the dark and quiet of the medicine cat den, {PRONOUN/m_c/poss} head hurting too much to move."
+    ],
+    "testosterone deficiency": [
+        "r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+        "While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex."
+    ],
+    "excess testosterone": [
+        "r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+        "While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex.",
+        "m_c doesn't fully look like a she-cat, it looks like {PRONOUN/m_c/subject} {VERB/m_c/have/has} some excess testosterone - and that's okay!",
+        "The fur around m_c's face is scruffy and rougher than most she-cats.",
+        "m_c's tail lashes when another cat teases {PRONOUN/m_c/object} about the roughness of the fur on {PRONOUN/m_c/poss} face, which has been that way since {PRONOUN/m_c/subject} {VERB/m_c/were/was} a kit. It takes one of m_c's loved ones telling {PRONOUN/m_c/object} that {PRONOUN/m_c/poss} face fur is beautiful to calm {PRONOUN/m_c/object} down."
+    ],
+    "aneuploidy": [
+        "r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+        "While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex."
+    ],
+    "mosaicism": [
+        "r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+        "While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex."
+    ],
+    "chimerism": [
+        "r_c carefully soothes over all of m_c's parent's worries. Being intersex is perfectly normal and m_c will do fine!",
+        "While checking in on the nursery, the medicine cat notices something slightly different about m_c. It seems that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} intersex."
     ]
 }

@@ -563,6 +563,231 @@
             "zero": "indigo nylon collar",
             "many": "indigo nylon collars",
             "one": "indigo nylon collar"
-        }
+        },
+        "CSYELLOWHORN": {
+              "zero": "yellow horns",
+              "many": "yellow horns",
+              "one": "yellow horns"
+          },
+        "CSVIOLETHORN": {
+              "zero": "violet horns",
+              "many": "violet horns",
+              "one": "violet horns"
+          },
+        "CSINDIGOHORN": {
+              "zero": "maroon horns",
+              "many": "maroon horns",
+              "one": "maroon horns"
+          },
+        "CSBLUEHORN": {
+              "zero": "blue horns",
+              "many": "blue horns",
+              "one": "blue horns"
+          },
+        "CSBLACKHORN": {
+              "zero": "black horns",
+              "many": "black horns",
+              "one": "black horns"
+          },
+        "CSLIMEHORN": {
+              "zero": "lime horns",
+              "many": "lime horns",
+              "one": "lime horns"
+          },
+        "CSGOLDHORN": {
+              "zero": "gold horns",
+              "many": "gold horns",
+              "one": "gold horns"
+          },
+        "CSORANGEHORN": {
+              "zero": "orange horns",
+              "many": "orange horns",
+              "one": "orange horns"
+          },
+        "CSMAROONHORN": {
+              "zero": "maroon horns",
+              "many": "maroon horns",
+              "one": "maroon horns"
+          },
+        "CSGREENHORN": {
+              "zero": "green horns",
+              "many": "green horns",
+              "one": "green horns"
+          },
+        "CSFROSTHORN": {
+              "zero": "frost-white horns",
+              "many": "frost-white horns",
+              "one": "frost-white horns"
+          },
+        "CSSILVERHORN": {
+              "zero": "silver horns",
+              "many": "silver horns",
+              "one": "silver horns"
+          },
+        "CSCYANHORN": {
+              "zero": "cyan horns",
+              "many": "cyan horns",
+              "one": "cyan horns"
+          },
+        "CSMOSSHORN": {
+              "zero": "moss-green horns",
+              "many": "moss-green horns",
+              "one": "moss-green horns"
+          },
+        "CSBROWNHORN": {
+              "zero": "brown horns",
+              "many": "brown horns",
+              "one": "brown horns"
+          },
+        "CSYELLOWKITSUNE": {
+              "zero": "yellow kitsune tails",
+              "many": "yellow kitsune tails",
+              "one": "yellow kitsune tails"
+          },
+        "CSVIOLETKITSUNE": {
+              "zero": "violet kitsune tails",
+              "many": "violet kitsune tails",
+              "one": "violet kitsune tails"
+          },
+        "CSINDIGOKITSUNE": {
+              "zero": "maroon kitsune tails",
+              "many": "maroon kitsune tails",
+              "one": "maroon kitsune tails"
+          },
+        "CSBLUEKITSUNE": {
+              "zero": "blue kitsune tails",
+              "many": "blue kitsune tails",
+              "one": "blue kitsune tails"
+          },
+        "CSBLACKKITSUNE": {
+              "zero": "black kitsune tails",
+              "many": "black kitsune tails",
+              "one": "black kitsune tails"
+          },
+        "CSLIMEKITSUNE": {
+              "zero": "lime kitsune tails",
+              "many": "lime kitsune tails",
+              "one": "lime kitsune tails"
+          },
+        "CSGOLDKITSUNE": {
+              "zero": "gold kitsune tails",
+              "many": "gold kitsune tails",
+              "one": "gold kitsune tails"
+          },
+        "CSORANGEKITSUNE": {
+              "zero": "orange kitsune tails",
+              "many": "orange kitsune tails",
+              "one": "orange kitsune tails"
+          },
+        "CSMAROONKITSUNE": {
+              "zero": "maroon kitsune tails",
+              "many": "maroon kitsune tails",
+              "one": "maroon kitsune tails"
+          },
+        "CSGREENKITSUNE": {
+              "zero": "green kitsune tails",
+              "many": "green kitsune tails",
+              "one": "green kitsune tails"
+          },
+        "CSFROSTKITSUNE": {
+              "zero": "frost-white kitsune tails",
+              "many": "frost-white kitsune tails",
+              "one": "frost-white kitsune tails"
+          },
+        "CSSILVERKITSUNE": {
+              "zero": "silver kitsune tails",
+              "many": "silver kitsune tails",
+              "one": "silver kitsune tails"
+          },
+        "CSCYANKITSUNE": {
+              "zero": "cyan kitsune tails",
+              "many": "cyan kitsune tails",
+              "one": "cyan kitsune tails"
+          },
+        "CSMOSSKITSUNE": {
+              "zero": "moss-green kitsune tails",
+              "many": "moss-green kitsune tails",
+              "one": "moss-green kitsune tails"
+          },
+        "CSBROWNKITSUNE": {
+              "zero": "brown kitsune tails",
+              "many": "brown kitsune tails",
+              "one": "brown kitsune tails"
+          },
+        "CSYELLOWMERMAID": {
+              "zero": "yellow mermaid tail",
+              "many": "yellow mermaid tail",
+              "one": "yellow mermaid tail"
+          },
+        "CSVIOLETMERMAID": {
+              "zero": "violet mermaid tail",
+              "many": "violet mermaid tail",
+              "one": "violet mermaid tail"
+          },
+        "CSINDIGOMERMAID": {
+              "zero": "maroon mermaid tail",
+              "many": "maroon mermaid tail",
+              "one": "maroon mermaid tail"
+          },
+        "CSBLUEMERMAID": {
+              "zero": "blue mermaid tail",
+              "many": "blue mermaid tail",
+              "one": "blue mermaid tail"
+          },
+        "CSBLACKMERMAID": {
+              "zero": "black mermaid tail",
+              "many": "black mermaid tail",
+              "one": "black mermaid tail"
+          },
+        "CSLIMEMERMAID": {
+              "zero": "lime mermaid tail",
+              "many": "lime mermaid tail",
+              "one": "lime mermaid tail"
+          },
+        "CSGOLDMERMAID": {
+              "zero": "gold mermaid tail",
+              "many": "gold mermaid tail",
+              "one": "gold mermaid tail"
+          },
+        "CSORANGEMERMAID": {
+              "zero": "orange mermaid tail",
+              "many": "orange mermaid tail",
+              "one": "orange mermaid tail"
+          },
+        "CSMAROONMERMAID": {
+              "zero": "maroon mermaid tail",
+              "many": "maroon mermaid tail",
+              "one": "maroon mermaid tail"
+          },
+        "CSGREENMERMAID": {
+              "zero": "green mermaid tail",
+              "many": "green mermaid tail",
+              "one": "green mermaid tail"
+          },
+        "CSFROSTMERMAID": {
+              "zero": "frost-white mermaid tail",
+              "many": "frost-white mermaid tail",
+              "one": "frost-white mermaid tail"
+          },
+        "CSSILVERMERMAID": {
+              "zero": "silver mermaid tail",
+              "many": "silver mermaid tail",
+              "one": "silver mermaid tail"
+          },
+        "CSCYANMERMAID": {
+              "zero": "cyan mermaid tail",
+              "many": "cyan mermaid tail",
+              "one": "cyan mermaid tail"
+          },
+        "CSMOSSMERMAID": {
+              "zero": "moss-green mermaid tail",
+              "many": "moss-green mermaid tail",
+              "one": "moss-green mermaid tail"
+          },
+        "CSBROWNMERMAID": {
+              "zero": "brown mermaid tail",
+              "many": "brown mermaid tail",
+              "one": "brown mermaid tail"
+          }
     }
 }

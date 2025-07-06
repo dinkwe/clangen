@@ -6,7 +6,7 @@ import time
 from collections import namedtuple
 from copy import deepcopy
 from platform import system
-from random import choice
+from random import choice, randint
 from re import search as re_search
 from re import sub
 from typing import TYPE_CHECKING
@@ -14,12 +14,12 @@ from typing import TYPE_CHECKING
 import i18n
 import pygame
 import pygame_gui
-import ujson
 from pygame_gui.elements import UIWindow
 from pygame_gui.windows import UIMessageWindow
 
 from scripts.cat.history import History
 from scripts.cat.names import Name
+from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
 from scripts.game_structure.localization import (
@@ -32,13 +32,15 @@ from scripts.game_structure.ui_elements import (
     UIImageButton,
     UITextBoxTweaked,
     UISurfaceImageButton,
-    UIDropDown,
+    UIModifiedScrollingContainer,
+    UIDropDownContainer,
+    UISpriteButton
 )
 from scripts.housekeeping.datadir import (
     get_save_dir,
     get_cache_dir,
     get_saved_images_dir,
-    open_data_dir,
+    get_data_dir,
 )
 from scripts.housekeeping.progress_bar_updater import UIUpdateProgressBar
 from scripts.housekeeping.update import (
@@ -58,11 +60,291 @@ from scripts.utility import (
     process_text,
     ui_scale_dimensions,
     ui_scale_offset,
+    get_text_box_theme
 )
 
 if TYPE_CHECKING:
     from scripts.screens.Screens import Screens
+    
 
+class GuideEsper(UIWindow):
+    def __init__(self,cat):
+        super().__init__(
+            ui_scale(pygame.Rect((25, 340), (750, 350))),
+            window_display_title="Select a Guide",
+            object_id="#guiding_window",
+            resizable=False,
+        )
+        game.switches["window_open"] = True
+        self.the_cat = cat
+        self.elements = {}
+        self.result = None
+        self.cat_display = None
+        self.cat_info = None
+        self.selected_cat = None
+        self.potential_guides_page = 0
+        self.all_potential_guides = []
+        self.potential_guides_buttons = {}
+        self.potential_page_display = None
+        self.potential_container = None
+        self.back_button = UIImageButton(
+            ui_scale(pygame.Rect((715, 15), (20, 20))),
+            "",
+            object_id="#exit_window_button",
+            container=self,
+        )
+        self.guide_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((-75, 290), (73, 30))),
+            "guide",
+            get_button_dict(ButtonStyles.SQUOVAL, (73, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+            container=self,
+            anchors={"centerx": "centerx"},
+        )
+        Demo_frame = "resources/images/demo_frame.png"
+        self.elements["demo_frame"] = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((525, 50), (187, 259))),
+            pygame.transform.scale(
+                pygame.image.load(Demo_frame).convert_alpha(), (699, 520)
+            ),
+            manager=MANAGER,
+            container=self,
+        )
+        self.guide_button.disable()
+        text = "Select an available guide to stop "+ str(self.the_cat.name) + "'s rampage!"
+        self.info = pygame_gui.elements.UITextBox(
+            text,
+            ui_scale(pygame.Rect((125, 5), (900, 60))),
+            visible=True,
+            object_id="#text_box_30_horizleft",
+            manager=MANAGER,
+            container=self,
+        )
+        print(self.get_valid_guides())
+        self.all_potential_guides = self.chunks(self.get_valid_guides(), 10)
+        
+        self.potential_next_page = UISurfaceImageButton(
+            ui_scale(pygame.Rect((365, 290), (34, 34))),
+            Icon.ARROW_RIGHT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            container=self,
+        )
+        self.potential_last_page = UISurfaceImageButton(
+            ui_scale(pygame.Rect((195,290), (34, 34))),
+            Icon.ARROW_LEFT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            container=self,
+        )
+        
+        self.update_potential_guides_container_page()
+        
+        
+    def get_valid_guides(self):
+        valid_guides = [
+            i
+            for i in Cat.all_cats_list
+            if not i.faded
+            and not i.dead
+            and i.status not in ["kitten", "newborn"]
+            and i.is_awakened()
+            and i.awakened["type"] == "guide"
+            and not i.outside
+        ]
+        return valid_guides
+    
+    def update_potential_guides_container_page(self):
+        """Updates just the current page for the mates container, does
+        not refresh the list. It will also update the disable status of the
+        next and last page buttons"""
+        
+
+        for ele in self.potential_guides_buttons:
+            self.potential_guides_buttons[ele].kill()
+        self.potential_guides_buttons = {}
+
+        total_pages = len(self.all_potential_guides)
+        if max(1, total_pages) - 1 < self.potential_guides_page:
+            self.potential_guides_page = total_pages - 1
+        elif self.potential_guides_page < 0:
+            self.potential_guides_page = 0
+
+        if total_pages <= 1:
+            self.potential_last_page.disable()
+            self.potential_next_page.disable()
+        elif self.potential_guides_page >= total_pages - 1:
+            self.potential_last_page.enable()
+            self.potential_next_page.disable()
+        elif self.potential_guides_page <= 0:
+            self.potential_last_page.disable()
+            self.potential_next_page.enable()
+        else:
+            self.potential_last_page.enable()
+            self.potential_next_page.enable()
+
+        text = f"{self.potential_guides_page + 1} / {max(1, total_pages)}"
+        if not self.potential_page_display:
+            self.potential_page_display = pygame_gui.elements.UILabel(
+                ui_scale(pygame.Rect((195, 260), (204, 48))),
+                text,
+                container=self,
+                object_id=get_text_box_theme(
+                    "#text_box_26_horizcenter_vertcenter_spacing_95"
+                ),
+            )
+        else:
+            self.potential_page_display.set_text(text)
+
+        if self.all_potential_guides:
+            display_cats = self.all_potential_guides[self.potential_guides_page]
+        else:
+            display_cats = []
+
+        pos_x = 20
+        pos_y = 60
+        i = 0
+
+        for _off in display_cats:
+            self.potential_guides_buttons["cat" + str(i)] = UISpriteButton(
+                ui_scale(pygame.Rect((pos_x, pos_y), (100, 100))),
+                _off.sprite,
+                cat_object=_off,
+                container=self,
+            )
+            pos_x += 100
+            if pos_x >= 500:
+                pos_x = 20
+                pos_y += 100
+            i += 1
+        
+    def chunks(self, L, n):
+        return [L[x : x + n] for x in range(0, len(L), n)]
+    
+    def update_selected_cat(self):
+        if not self.the_cat.guided: 
+            self.guide_button.enable()
+        if self.cat_display is not None:
+            self.cat_display.kill()
+            self.cat_info.kill()
+        self.cat_display = UISpriteButton(
+                ui_scale(pygame.Rect((545, 50), (150, 150))),
+                self.selected_cat.sprite,
+                cat_object=self.selected_cat,
+                container=self,
+            )
+        resonance = self.calculate_resonance(self.selected_cat)
+        text = "Guiding Efficacy: "
+        if resonance < -1:
+            text += "\nvery low"
+        elif resonance < 0:
+            text += "\nlow"
+        elif resonance < 1:
+            text += "\naverage"
+        elif resonance < 2:
+            text += "\nhigh"
+        else:
+            text += "\nvery high"
+            
+        if self.the_cat.guided:
+            text += "\nAlready guided!"
+        self.cat_info = pygame_gui.elements.UITextBox(
+            text,
+            ui_scale(pygame.Rect((525,200), (200, 100))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+    
+    def calculate_resonance(self,cat):
+        buff = 0
+        if cat.status in ["medicine cat", "mediator", "medicine cat apprentice", "mediator apprentice", "caretaker", "caretaker apprentice"]:
+            buff += 1
+        buff += self.calculate_rank_difference(self.the_cat, cat)
+        #print(cat.ID)
+        if self.the_cat.relationships[cat.ID]:
+            if self.the_cat.relationships[cat.ID].platonic_like > 20 or self.the_cat.relationships[cat.ID].trust > 20:
+                buff += 1
+            elif self.the_cat.relationships[cat.ID].dislike > 20:
+                buff -= 1
+        return buff
+            
+    def calculate_rank_difference(self, esper, guide):
+        if esper.awakened["class"] == "C":
+            if guide.awakened["class"] == "C":
+                return 0
+            elif guide.awakened["class"] == "B":
+                return 1
+            else:
+                return 2
+        elif esper.awakened["class"] == "B":
+            if guide.awakened["class"] == "C":
+                return -1
+            elif guide.awakened["class"] == "B":
+                return 0
+            elif guide.awakened["class"] == "A":
+                return 1
+            else:
+                return 2
+        elif esper.awakened["class"] == "A":
+            if guide.awakened["class"] == "S":
+                return 1
+            elif guide.awakened["class"] == "A":
+                return 0
+            else:
+                return -1
+        else:
+            if guide.awakened["class"] == "S":
+                return 0
+            else:
+                return -1
+    
+    def attempt_guiding(self):
+        guide = randint(1,10) + self.calculate_resonance(self.selected_cat)
+        text = ""
+        if guide > 5:
+            text = "Success!"
+            self.the_cat.guided = True
+        else:
+            text = "Fail..."
+            guide_injured = randint(1,10)
+            if guide_injured == 1:
+                text += str(self.selected_cat.name) + " was hurt!"
+                injury = choice(["sore", "bruises"])
+                self.selected_cat.get_injured(injury)
+        self.result = pygame_gui.elements.UITextBox(
+            text,
+            ui_scale(pygame.Rect((590, 260), (100, 100))),
+            visible=True,
+            object_id="#text_box_30_horizlcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.guide_button.disable()
+        for button in self.potential_guides_buttons:
+            self.potential_guides_buttons[button].disable()
+        
+    def process_event(self, event):
+        if event.type == pygame_gui.UI_BUTTON_START_PRESS:
+            if event.ui_element == self.back_button:
+                game.switches["window_open"] = False
+                game.all_screens["profile screen"].exit_screen()
+                game.all_screens["profile screen"].screen_switches()
+                self.kill()
+            elif event.ui_element in self.potential_guides_buttons.values():
+                self.selected_cat = event.ui_element.cat_object
+                self.update_selected_cat()
+            elif event.ui_element == self.guide_button:
+                self.attempt_guiding()
+            elif event.ui_element == self.potential_last_page:
+                self.potential_guides_page -= 1
+                self.update_potential_guides_container_page()
+            elif event.ui_element == self.potential_next_page:
+                self.potential_guides_page += 1
+                self.update_potential_guides_container_page()
+        return super().process_event(event)
 
 class SymbolFilterWindow(UIWindow):
     def __init__(self):

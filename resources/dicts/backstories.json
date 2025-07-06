@@ -57,6 +57,9 @@
         ],
         "outsider_backstories": [
             "outsider1", "outsider2", "outsider3"
+        ],
+        "reincarnation_backstories": [
+            "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"
         ]
     },
     "conversion": {

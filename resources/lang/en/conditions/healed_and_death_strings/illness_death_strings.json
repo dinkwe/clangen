@@ -63,5 +63,9 @@
         "m_c's body couldn't continue on without nourishment, and {PRONOUN/m_c/subject} never woke up from {PRONOUN/m_c/poss} sleep.",
         "m_c finally succumbed to starvation.",
         "Frail and exhausted from the lack of food, m_c died of starvation."
-    ]
+    ],
+	"rampaging": [
+		"Without a guide to stop {PRONOUN/m_c/poss} rampage, m_c's abilities imploded, leaving {PRONOUN/m_c/object} dead.",
+		"m_c was too far gone for any guiding, and died during {PRONOUN/m_c/poss} rampage."
+	]
 }

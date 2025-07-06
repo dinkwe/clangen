@@ -1,5 +1,6 @@
 import os.path
 from typing import List, Dict, Union, Optional
+from random import randint, choice
 
 import i18n
 import i18n.translations
@@ -21,10 +22,21 @@ def get_new_pronouns(genderalign: str) -> List[Dict[str, Union[str, int]]]:
     :return: The default list of pronouns for the cat's genderalign in the selected lang
     """
     config = get_lang_config()["pronouns"]
+    neo_chance = 25
+    queer_list = ["intersex", "intergender", "trans male", "trans female","nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+    if genderalign in queer_list:
+        neo_chance = 10
     if game.settings["they them default"]:
         pronouns = config["sets"].get("default")
     else:
-        pronouns = config["sets"].get(genderalign, config["sets"].get("default"))
+        neos = randint(1,neo_chance)
+        if neos == 1:
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
+        elif genderalign == "neos":
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
+        else:
+            pronouns = config["sets"].get(genderalign, config["sets"].get("default"))
+        
     if pronouns is None:
         raise Exception(
             "Default pronouns not provided in lang file! Check config.json to confirm correct labels"

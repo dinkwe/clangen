@@ -3,6 +3,7 @@ Contains the Cat and Personality classes
 """
 
 from __future__ import annotations
+from copy import copy
 
 import bisect
 import itertools
@@ -49,6 +50,7 @@ from scripts.utility import (
     leader_ceremony_text_adjust,
     update_mask,
 )
+from scripts.game_structure.localization import load_lang_resource
 
 import scripts.game_structure.screen_settings
 
@@ -59,7 +61,6 @@ class Cat:
     dead_cats = []
     used_screen = screen
     current_pronoun_lang = None
-
     age_moons = {
         CatAgeEnum.NEWBORN: game.config["cat_ages"]["newborn"],
         CatAgeEnum.KITTEN: game.config["cat_ages"]["kitten"],
@@ -85,7 +86,7 @@ class Cat:
         "leader",
     ]
 
-    gender_tags = {"female": "F", "male": "M"}
+    gender_tags = {"female": "F", "male": "M", 'intersex' : 'I'}
 
     # EX levels and ranges.
     # Ranges are inclusive to both bounds
@@ -116,6 +117,8 @@ class Cat:
         backstory="clanborn",
         parent1=None,
         parent2=None,
+        past_life = None,
+        reincarnation = None,
         adoptive_parents=None,
         suffix=None,
         specsuffix_hidden=False,
@@ -174,6 +177,8 @@ class Cat:
         )
         self.parent1 = parent1
         self.parent2 = parent2
+        self.past_life = past_life
+        self.reincarnation = reincarnation
         self.adoptive_parents = adoptive_parents if adoptive_parents else []
         self.pelt = pelt if pelt else Pelt()
         self.former_mentor = []
@@ -200,6 +205,8 @@ class Cat:
         self.leader_death_heal = None
         self.also_got = False
         self.permanent_condition = {}
+        self.awakened = None
+        self.guided = False
         self.df = False
         self.experience_level = None
 
@@ -288,9 +295,19 @@ class Cat:
         else:
             self.backstory = self.backstory
 
+        
+
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
-            self.gender = choice(["female", "male"])
+            intersexchance = randint(1,25)
+            #probability that the cat will be intersex.. base chance around 8%
+            if intersexchance < 3 and example is False:
+                self.gender = "intersex"
+                intersex_condition = choice (["excess testosterone", "testosterone deficiency", "aneuploidy", "mosaicism", "chimerism"])
+                self.get_permanent_condition(intersex_condition, born_with=True)
+            else:
+                self.gender = choice(["female", "male"])
+        self.g_tag = self.gender_tags[self.gender]
 
         """if self.genderalign == "":
             self.genderalign = self.gender"""
@@ -331,7 +348,62 @@ class Cat:
                 load_existing_name=loading_cat,
                 cat=self,
             )
+        #FOR TESTING CONDITIONS
+        #if not self.example:
+            #new_condition = choice(["fractured spirit", "budding spirit", "shattered soul"])
+            #self.get_permanent_condition(new_condition,born_with=True)
+        
+        if self.awakened and self.pelt.skin in Pelt.skin_sprites:
+            if os.path.exists('resources/dicts/esper.json'):
+                with open('resources/dicts/esper.json') as read_file:
+                    powers_dict = ujson.loads(read_file.read())
+            if self.awakened["type"] == "guide":
+                #powerless shows twice bc we want it to be twice as common. visible guides
+                
+                self.pelt.skin = choice(['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                                        'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2",
+                                        'STAINDUST', 'STAINICEBLUE', 'STAININDIGO', 'STAINBLUE', 'STAINPURPLE', 'STAINDARKBLUE',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"
+                                        'STAINLIGHTPINK', 'STAINYELLOW', 'STAINPINK', 'STAINGOLD', 'STAINHOTPINK', 'STRAINDIRT',
+                                        'STAINCYAN', 'STAINLIME', 'STAINTURQUOISE', 'STAINGREEN', 'STAINBLUEGREEN', 'STAINPEACOCK',
+                                        'LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
+                                        'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW',"MIST","LIGHT1", "SPARKLES", "SPARKLES2"])
+            elif self.awakened["type"] == "esper":
+                self.pelt.skin = choice(powers_dict[self.awakened["ability"]]["skin"])
+            elif self.awakened["type"] == "enhanced esper":
+                self.pelt.skin = choice(powers_dict[self.awakened["ability"][0]]["skin"])
 
+        neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN',
+                 'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE']
+        
+        flutter_eyes = ['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS',
+                 'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
+    
+        lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
+                 'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
+        
+        angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE', 'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
+                 'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
+
+        snail_eyes = ['SNAIL YELLOW', 'SNAIL ORANGE', 'SNAIL HAZEL', 'SNAIL YELLOWGREEN', 'SNAIL GREEN', 'SNAIL BLUE', 'SNAIL DARKBLUE', 'SNAIL GRAY', 'SNAIL CYAN', 'SNAIL TURQUOISE', 'SNAIL PURPLE', 'SNAIL GOLD',
+                 'SNAIL COPPER', 'SNAIL MINT', 'SNAIL DARKBLUE2', 'SNAIL BLUE2', 'SNAIL BROWN', 'SNAIL SILVER', 'SNAIL LIGHTYELLOW', 'SNAIL DARKYELLOW', 'SNAIL GOLDENGREEN']
+        
+        neon_eyes_chance = 16
+        if self.awakened and self.awakened["type"] == "guide":
+            neon_eyes_chance = 4
+        if self.awakened and randint(1,neon_eyes_chance) == 1:
+            self.pelt.eye_colour = choice(neos_eyes)
+        elif self.awakened and randint(1,25) == 1:
+            self.pelt.eye_colour = choice(angel_eyes)
+        elif self.awakened and randint(1,25) == 1:
+            self.pelt.eye_colour = choice(flutter_eyes)
+        elif self.awakened and randint(1,25) == 1:
+            self.pelt.eye_colour = choice(lamp_eyes)
+        elif self.awakened and randint(1,25) == 1:
+            self.pelt.eye_colour = choice(snail_eyes)
+        
+        
+        
+                
         # Private Sprite
         self._sprite: Optional[pygame.Surface] = None
         self._sprite_mask: Optional[pygame.Mask] = None
@@ -399,6 +471,55 @@ class Cat:
                     self.age_moons[key_age][0], self.age_moons[key_age][1] + 1
                 ):
                     self.age = key_age
+    
+    def generate_ability(self):
+        if os.path.exists('resources/dicts/esper.json'):
+            with open('resources/dicts/esper.json') as read_file:
+                powers_dict = ujson.loads(read_file.read())
+        template = {
+            "type": "esper",
+            "class": "C",
+            "ability": "none",
+            "desc": "none"
+            }
+        strength = randint(1,10)
+        if strength == 10:
+            template["class"] = "S"
+        elif strength > 7:
+            template["class"] = "A"
+        elif strength > 4:
+            template["class"] = "B"
+            
+        guide_or_esp = randint(1,2)
+        if guide_or_esp == 1 and not self.awakened:
+            template["type"] = "guide"
+        else:
+            power = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+            template["desc"] = choice(powers_dict[power][template["class"]])
+            template["ability"] = power
+        
+        if self.awakened:
+            template["type"] = "enhanced esper"
+            classes = [self.awakened["class"], template["class"]]
+            power2 = choice(["pyrokinesis","hydrokinesis","cyrokinesis", "geokinesis", "aerokinesis", "illusions", "shapeshifting",
+                                "super strength", "enhanced senses", "telekinesis", "chimera", "invisibility", "incorporeal", "mind control",
+                                "flight","teleportation", "electromagnetic control", "light manipulation", "beast speak",
+                                "dendrokinesis", "electrokinesis", "telempathy", "astral projection", "flesh manipulation", "spatial manipulation"])
+            abilities = [self.awakened["ability"], power2]
+            template["desc"] = choice(powers_dict[power2][template["class"]])
+            while template["desc"] == self.awakened["desc"]:
+               template["desc"] = choice(powers_dict[power2][template["class"]])
+            powers = [self.awakened["desc"], template["desc"]]
+            
+            template["class"] = classes
+            template["ability"] = abilities
+            template["desc"] = powers
+            
+        self.awakened = template
+            
 
     def init_generate_cat(self, skill_dict):
         """
@@ -407,24 +528,78 @@ class Cat:
         :return: None
         """
         # trans cat chances
+        nonbiney_list = ["nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+        enby_masc = ["trans male" , "demiboy", "genderfaun", "trans masc"]
+        enby_fem = ["trans female" , "demigirl", "genderfae", "trans femme"]
         theythemdefault = game.settings["they them default"]
         self.genderalign = self.gender
-        trans_chance = randint(0, 50)
-        nb_chance = randint(0, 75)
+        trans_chance = randint(0, 30)
+        nb_chance = randint(0, 40)
+        
+        prob_awake = game.config["cat_generation"]["esper_chance"]
+        
+        if self.parent1 is not None:
+            par1 = Cat.fetch_cat(self.parent1)
+            if par1.awakened:
+                prob_awake = int(prob_awake/2)
+            
+        if self.parent2 is not None:
+            par2 = Cat.fetch_cat(self.parent2)
+            if par2.awakened:
+                prob_awake = int(prob_awake/2)
+        
+        if prob_awake < 1:
+            prob_awake = 1
+        
+        awakened_chance = randint(1,prob_awake)
+        if awakened_chance == 1:
+            self.generate_ability()
+            #self.generate_ability()
+            double_powers = randint(1,prob_awake*3)
+            if double_powers == 1 and self.awakened["type"] == "esper":
+                self.generate_ability()
+        
 
         # GENDER IDENTITY
-        if self.age.is_baby():
-            # newborns can't be trans, sorry babies
-            pass
-        elif nb_chance == 1:
-            self.genderalign = "nonbinary"
-        elif trans_chance == 1:
-            if self.gender == "female":
-                self.genderalign = "trans male"
+        if self.gender == "female" and not self.status in ['newborn', 'kitten']:
+            if trans_chance == 1:
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = "trans male"
+                else:
+                    self.genderalign = choice(enby_masc)
+            elif nb_chance == 1:
+                self.genderalign = choice(nonbiney_list)
             else:
-                self.genderalign = "trans female"
-
-        # PRONOUNS AUTO-GENERATE WHEN REQUIRED
+                self.genderalign = self.gender
+        elif self.gender == "male" and not self.status in ['newborn', 'kitten']:
+            if trans_chance == 1:
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = "trans female"
+                else:
+                    self.genderalign = choice(enby_fem)
+            elif nb_chance == 1:
+                self.genderalign = choice(nonbiney_list)
+            else:
+                self.genderalign = self.gender
+        elif self.gender == "intersex" and not self.status in ['newborn', 'kitten']:
+            if trans_chance == 1:
+                binary_chance = randint(1,10)
+                if binary_chance > 2:
+                    self.genderalign = choice(["trans female", "trans male"])
+                else:
+                    self.genderalign = choice(enby_fem + enby_masc)
+            elif nb_chance == 1:
+                intergenderchance = randint(1,2)
+                if intergenderchance == 1:
+                    self.genderalign = "intergender"
+                else:
+                    self.genderalign = choice(nonbiney_list)
+            else:
+                self.genderalign = self.gender
+        else:
+            self.genderalign = self.gender
 
         # APPEARANCE
         self.pelt = Pelt.generate_new_pelt(
@@ -450,7 +625,7 @@ class Cat:
                 )
                 self.experience += exp + 3
                 m -= 1
-        elif self.age in (CatAgeEnum.YOUNG_ADULT, CatAgeEnum.ADULT):
+        elif self.age in [CatAgeEnum.YOUNG_ADULT, CatAgeEnum.ADULT]:
             self.experience = randint(
                 Cat.experience_levels_range["prepared"][0],
                 Cat.experience_levels_range["proficient"][1],
@@ -470,6 +645,7 @@ class Cat:
 
         if not skill_dict:
             self.skills = CatSkills.generate_new_catskills(self.status, self.moons)
+            
 
     def __repr__(self):
         return "CAT OBJECT:" + self.ID
@@ -502,14 +678,42 @@ class Cat:
         Loads the correct pronouns for the loaded language.
         :return: List of dicts for the cat's pronouns
         """
-        if self.faded:
-            value = pronouns.get_default_pronouns()["0"]
-            return [value]
-
+        queer_list = ["intersex", "intergender", "trans male", "trans female","nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+        enby_masc = [ "demiboy", "genderfaun", "trans masc"]
+        enby_fem = ["demigirl", "genderfae", "trans femme"]
+        
+        she_him = randint(1,5)
+        neo_chance = game.config["cat_generation"]["neopronoun_chance"]
+        second_set = game.config["cat_generation"]["multiple_pronouns_chance"]
+        if self.genderalign in queer_list:
+            neo_chance = int(neo_chance/2)
+            second_set = int(second_set/4)
+        neos = randint(1,neo_chance)
+        seconds = randint(1,second_set)
+        
         locale = i18n.config.get("locale")
         value = self._pronouns.get(locale)
         if value is None:
             self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            if self.genderalign in enby_masc and she_him < 4:
+                self._pronouns[locale] += pronouns.get_new_pronouns("male")
+            elif self.genderalign in enby_fem and she_him < 4:
+                self._pronouns[locale] += pronouns.get_new_pronouns("female")
+            elif neos == 1:
+                self._pronouns[locale] += pronouns.get_new_pronouns("neos")
+            if seconds == 1:
+                pronoun_gender = randint(1,10)
+                if pronoun_gender < 6:
+                    #add he, she or they
+                    self._pronouns[locale] += pronouns.get_new_pronouns(choice(["male","female","nonbinary"]))
+                else:
+                    #add neos
+                    self._pronouns[locale] += pronouns.get_new_pronouns("neos")
+                
+            if len(self._pronouns[locale]) > 1:
+                if self._pronouns[locale][0]["subject"] == self._pronouns[locale][1]["subject"]:
+                    self._pronouns[locale] = [self._pronouns[locale][0]]
+                    print(self._pronouns[locale])
             value = self._pronouns[locale]
         return value
 
@@ -536,13 +740,13 @@ class Cat:
 
     def get_genderalign_string(self):
         # translate it if it's default
-        if self.genderalign in (
+        if self.genderalign in [
             "female",
             "male",
             "trans female",
             "trans male",
             "nonbinary",
-        ):
+        ]:
             return i18n.t(f"general.{self.genderalign}")
         # otherwise, it's custom - just return it directly
         return self.genderalign
@@ -593,7 +797,7 @@ class Cat:
                 final_thought = event_text_adjust(self, death_thought, main_cat=self)
                 self.thought = final_thought
                 return ""
-            elif game.clan.leader_lives <= 0:
+            elif game.clan.leader_lives <= 0:           
                 self.dead = True
                 game.just_died.append(self.ID)
                 game.clan.leader_lives = 0
@@ -862,7 +1066,7 @@ class Cat:
         mentors and apprentices."""
         self.outside = True
 
-        if self.status in ("leader", "warrior"):
+        if self.status in ["leader", "warrior"]:
             self.status_change("warrior")
 
         for app in self.apprentice.copy():
@@ -970,7 +1174,7 @@ class Cat:
     def rank_change_traits_skill(self, mentor):
         """Updates trait and skill upon ceremony"""
 
-        if self.status in ("warrior", "medicine cat", "mediator"):
+        if self.status in ["warrior", "medicine cat", "mediator", "messenger", "denkeeper", "caretaker", "storyteller", "gardener"]:
             # Give a couple doses of mentor influence:
             if mentor:
                 max_influence = randint(0, 2)
@@ -1019,6 +1223,73 @@ class Cat:
         #     output = i18n.t("utility.indefinite", text=output, m_c=self)
         event_text_adjust(Cat, output, main_cat=self)
         return output
+    
+    def describe_skin(self):
+        """Get a human-readable description of this cat's skin colour"""
+        skin = str(self.pelt.skin).lower()
+
+        if skin == "darkbrown":
+            skin = "dark brown"
+        elif skin == "lightbrown":
+            skin = "light brown"
+        elif skin == "darkgrey":
+            skin = "dark grey"
+        elif skin == "darksalmon":
+            skin = "dark salmon"
+        elif skin == "darkmarbled":
+            skin = "dark marbled"
+        elif skin == "lightmarbled":
+            skin = "light marbled"
+        elif skin == "darkblue":
+            skin = "dark blue"
+        elif skin == "lightblue":
+            skin = "light blue"
+        return skin
+
+    def describe_eyes(self):
+        """Get a human-readable description of this cat's eye colour"""
+        colour = str(self.pelt.eye_colour).lower()
+        colour2 = str(self.pelt.eye_colour2).lower()
+
+        if colour == "palegreen":
+            colour = "pale green"
+        elif colour == "darkblue":
+            colour = "dark blue"
+        elif colour == "paleblue":
+            colour = "pale blue"
+        elif colour == "paleyellow":
+            colour = "pale yellow"
+        elif colour == "heatherblue":
+            colour = "heather blue"
+        elif colour == "blue2":
+            colour = "blue"
+        elif colour == "sunlitice":
+            colour = "sunlit ice"
+        elif colour == "greenyellow":
+            colour = "green-yellow"
+        elif colour == "violet2":
+            colour = "blackberry"
+        elif colour == "turquoise2":
+            colour = "dark turquoise"
+        elif colour == "rose2":
+            colour = "dark rose"
+        if self.pelt.eye_colour2:
+            if colour2 == "palegreen":
+                colour2 = "pale green"
+            if colour2 == "darkblue":
+                colour2 = "dark blue"
+            if colour2 == "paleblue":
+                colour2 = "pale blue"
+            if colour2 == "paleyellow":
+                colour2 = "pale yellow"
+            if colour2 == "heatherblue":
+                colour2 = "heather blue"
+            if colour2 == "sunlitice":
+                colour2 = "sunlit ice"
+            if colour2 == "greenyellow":
+                colour2 = "green-yellow"
+            colour = f"{colour} and {colour2}"
+        return colour
 
     def convert_history(self, died_by, scar_events):
         """
@@ -1241,7 +1512,7 @@ class Cat:
                     for i in game.clan.starclan_cats
                     if self.fetch_cat(i)
                     and i not in life_givers
-                    and self.fetch_cat(i).status not in ("leader", "newborn")
+                    and self.fetch_cat(i).status not in ["leader", "newborn"]
                 ]
 
                 if len(possible_sc_cats) - 1 < amount:
@@ -1254,7 +1525,7 @@ class Cat:
                     for i in game.clan.darkforest_cats
                     if self.fetch_cat(i)
                     and i not in life_givers
-                    and self.fetch_cat(i).status not in ("leader", "newborn")
+                    and self.fetch_cat(i).status not in ["leader", "newborn"]
                 ]
                 if len(possible_df_cats) - 1 < amount:
                     extra_givers = possible_df_cats
@@ -1512,14 +1783,15 @@ class Cat:
             self.thoughts()
             return
 
-        if self.dead and not self.faded:
+        if self.dead:
             self.thoughts()
             return
 
         if old_age != self.age:
             # Things to do if the age changes
             self.personality.facet_wobble(facet_max=2)
-            self.pelt.rebuild_sprite = True
+        
+        #self.get_ill("rampaging")
 
         # Set personality to correct type
         self.personality.set_kit(self.age.is_baby())
@@ -1531,6 +1803,7 @@ class Cat:
             "medicine cat apprentice",
         ):
             self.update_mentor()
+        update_sprite(self)
 
     def thoughts(self):
         """Generates a thought for the cat, which displays on their profile."""
@@ -1575,7 +1848,7 @@ class Cat:
                     other_cat = None
                     break
         # for dead cats
-        elif where_kitty in ("starclan", "hell", "UR"):
+        elif where_kitty in ["starclan", "hell", "UR"]:
             while other_cat == self.ID and len(all_cats) > 1:
                 other_cat = choice(list(all_cats.keys()))
                 i += 1
@@ -1590,7 +1863,7 @@ class Cat:
                 and len(all_cats) > 1
                 or (other_cat not in self.relationships)
             ):
-                # or (self.status in ('kittypet', 'loner') and not all_cats.get(other_cat).outside):
+                # or (self.status in ['kittypet', 'loner'] and not all_cats.get(other_cat).outside):
                 other_cat = choice(list(all_cats.keys()))
                 i += 1
                 if i > 100:
@@ -1643,8 +1916,15 @@ class Cat:
 
     def moon_skip_illness(self, illness):
         """handles the moon skip for illness"""
-        if not self.is_ill():
+        if not self.is_ill() or self.dead:
             return True
+        
+        if illness == "rampaging":
+            if self.guided:
+                self.guided = False
+                self.healed_condition = True
+                return False
+            #COME BACK HERE
 
         if self.illnesses[illness]["event_triggered"]:
             self.illnesses[illness]["event_triggered"] = False
@@ -1685,7 +1965,7 @@ class Cat:
 
     def moon_skip_injury(self, injury):
         """handles the moon skip for injury"""
-        if not self.is_injured():
+        if not self.is_injured() or self.dead:
             return True
 
         if self.injuries[injury]["event_triggered"] is True:
@@ -1730,7 +2010,7 @@ class Cat:
 
     def moon_skip_permanent_condition(self, condition):
         """handles the moon skip for permanent conditions"""
-        if not self.is_disabled():
+        if not self.is_disabled() or self.dead:
             return "skip"
 
         if self.permanent_condition[condition]["event_triggered"]:
@@ -1848,6 +2128,32 @@ class Cat:
     #                                  conditions                                  #
     # ---------------------------------------------------------------------------- #
 
+    def get_reincarnation(self):
+        backstory = "reincarnation_starclan"
+        if self.df:
+            backstory = "reincarnation_df"
+        elif self.outside or self.exiled:
+            backstory = "reincarnation_unknown"
+        reincarnation = Cat(parent1 = self.ID, parent2 = self.ID, prefix = self.name.prefix, status = "newborn", moons = 0, backstory=backstory, gender=self.gender, past_life = self.ID)
+        game.clan.add_cat(reincarnation)
+        #we use self as both parents to increase similarity, but obviously
+        #we dont want that to stay as the parents LOL
+        reincarnation.parent1 = None
+        reincarnation.parent2 = None
+        History.add_beginning(reincarnation, clan_born=False)
+        reincarnation.past_life = self.ID
+        self.reincarnation = reincarnation.ID
+        #if game.clan.clan_settings["reincarnation_autofade"]:
+            #self.faded = True
+        '''
+        
+        "reincarnation_autofade": [
+            "Cats fade upon reincarnation",
+            "After reincarnation, a cat will automatically fade.",
+            false
+        ],
+        '''
+    
     def get_ill(self, name, event_triggered=False, lethal=True, severity="default"):
         """Add an illness to this cat.
 
@@ -1861,7 +2167,13 @@ class Cat:
             return
         if name == "kittencough" and self.status != "kitten":
             return
-
+       
+        if name == "rampaging":
+            if not self.awakened:
+                return
+            elif self.awakened["type"] == "guide":
+                return
+                
         illness = ILLNESSES[name]
         mortality = illness["mortality"][self.age.value]
         med_mortality = illness["medicine_mortality"][self.age.value]
@@ -1997,7 +2309,10 @@ class Cat:
                     herb_used = choice(usable_herbs)
                     game.clan.herb_supply.remove_herb(herb_used, -1)
                     avoided = True
-                    text = i18n.t("screens.med_den.blood_loss", name=self.name)
+                    text = i18n.t(
+                        "screens.med_den.blood_loss",
+                        name=self.name
+                    )
                     game.herb_events_list.append(text)
 
             if not avoided:
@@ -2015,10 +2330,133 @@ class Cat:
 
     def congenital_condition(self, cat):
         possible_conditions = []
+        multiple_condition_chance = game.config["cat_generation"]["multiple_permanent_conditions"]
+        max_conditions = game.config["cat_generation"]["max_conditions_born_with"]
+        comorbidity_chance = game.config["cat_generation"]["comorbidity_chance"]
+        conditions = 1
+        count = 1
+        possible_comorbidities = []
+        try:
+            with open("resources/dicts/conditions/comorbid_conditions.json", 'r') as read_file:
+                comorbid_conditions = ujson.loads(read_file.read())
+        except IOError:
+            comorbid_conditions = {
+                "paralyzed": [
+                    "curved spine"
+                ],
+                "constant joint pain": [
+                    "curved spine"
+                ],
+                "seizure prone": [
+                    "confused body", "curved spine", "face blindness", "parrot chatter"
+                ],
+                "prismatic mind": [
+                    "comet spirit", "burning light", "jumbled noise", "disrupted senses", "confused body",
+                    "jumbled mind", "counting fog", "spirited heart", "puzzled heart", "face blindness",
+                    "parrot chatter", "selective mutism", "thought blind"
+                ],
+                "obsessive mind": [
+                    "spirited heart"
+                ],
+                "weighted heart": [
+                    "shattered soul", "budding spirit"
+                ],
+                "comet spirit": [
+                    "prismatic mind", "burning light", "jumbled noise", "disrupted senses", "confused body",
+                    "jumbled mind", "counting fog", "spirited heart", "parrot chatter"
+                ],
+                "antisocial": [
+                    "shattered soul", "budding spirit", "puzzled heart"
+                ],
+                "anxiety": [
+                    "shattered soul", "budding spirit", "selective mutism"
+                ],
+                "constant roaming pain": [
+                    "jellyfish joints", "loose body", "curved spine"
+                ],
+                "thunderous spirit": [
+                    "shattered soul", "budding spirit", "spirited heart", "puzzled heart"
+                ],
+                "otherworldly mind": [
+                    "shattered soul", "budding spirit"
+                ],
+                "irritable bowels": [
+                    "jellyfish joints", "loose body"
+                ],
+                "jellyfish joints": [
+                    "constant roaming pain", "irritable bowels", "loose body"
+                ],
+                "loose body": [
+                    "constant roaming pain", "irritable bowels", "jellyfish joints"
+                ],
+                "burning light": [
+                    "prismatic mind", "comet spirit", "jumbled noise", "disrupted senses"
+                ],
+                "jumbled noise": [
+                    "prismatic mind", "comet spirit", "burning light", "disrupted senses"
+                ],
+                "disrupted senses": [
+                    "prismatic mind", "comet spirit", "burning light", "jumbled noise"
+                ],
+                "confused body": [
+                    "seizure prone", "prismatic mind", "comet spirit", "parrot chatter"
+                ],
+                "shattered soul": [
+                    "weighted heart", "antisocial", "anxiety", "thunderous spirit", "otherworldly mind"
+                ],
+                "budding spirit": [
+                    "weighted heart", "antisocial", "anxiety", "thunderous spirit", "otherworldly mind"
+                ],
+                "testosterone deficiency": [
+                    "infertile"
+                ],
+                "excess testosterone": [
+                    "pcos", "infertile"
+                ],
+                "aneuploidy": [
+                    "infertile"
+                ],
+                "mosaicism": [
+                    "infertile"
+                ],
+                "chimerism": [
+                    "infertile"
+                ],
+                "pcos": [
+                    "infertile"
+                ],
+                "curved spine": [
+                    "paralyzed", "constant joint pain", "seizure prone", "constant roaming pain"
+                ],
+                "jumbled mind": [
+                    "prismatic mind", "comet spirit", "counting fog"
+                ],
+                "counting fog": [
+                    "prismatic mind", "comet spirit", "jumbled mind"
+                ],
+                "spirited heart": [
+                    "prismatic mind", "obsessive mind", "comet spirit", "thunderous spirit"
+                ],
+                "puzzled heart": [
+                    "prismatic mind", "antisocial", "thunderous spirit"
+                ],
+                "face blindness": [
+                    "seizure prone", "prismatic mind", "thought blind"
+                ],
+                "parrot chatter": [
+                    "seizure prone", "prismatic mind", "comet spirit", "confused body"
+                ],
+                "selective mutism": [
+                    "prismatic mind", "anxiety"
+                ],
+                "thought blind": [
+                    "prismatic mind", "face blindness"
+                ]
+            }
 
         for condition in PERMANENT:
             possible = PERMANENT[condition]
-            if possible["congenital"] in ("always", "sometimes"):
+            if possible["congenital"] in ["always", "sometimes"]:
                 possible_conditions.append(condition)
 
         new_condition = choice(possible_conditions)
@@ -2033,7 +2471,7 @@ class Cat:
     def get_permanent_condition(self, name, born_with=False, event_triggered=False):
         if name not in PERMANENT:
             print(
-                self.name,
+                #self.name,
                 f"WARNING: {name} is not in the permanent conditions collection.",
             )
             return
@@ -2046,22 +2484,35 @@ class Cat:
         # remove accessories if need be
         if "NOTAIL" in self.pelt.scars or "HALFTAIL" in self.pelt.scars:
             self.pelt.accessory = [
-                acc
-                for acc in self.pelt.accessory
-                if acc
-                not in (
+                acc for acc in self.pelt.accessory
+                if acc not in (
                     "RED FEATHERS",
                     "BLUE FEATHERS",
                     "JAY FEATHERS",
                     "GULL FEATHERS",
                     "SPARROW FEATHERS",
-                    "CLOVER",
-                    "DAISY",
-                    "WISTERIA",
-                    "GOLDEN CREEPING JENNY",
+                    "CLOVERTAIL",
+                    "DAISYTAIL",
+                    'SEAWEED',
+                    'DAISY CORSAGE',
+                    "SNAKE",
+                    "OLD SILVER WATCH",
+                    "OLD GOLD WATCH",
+                    "BAUBLES",
+                    "SEAWEED",
                 )
             ]
 
+       
+           
+        intersex_exclusive = ["excess testosterone", "aneuploidy", "testosterone deficiency", "chimerism", "mosaicism"]
+        if self.gender != "intersex":
+            if name in intersex_exclusive:
+                return
+        if name in intersex_exclusive and self.gender != "intersex":
+            return
+
+        
         condition = PERMANENT[name]
         new_condition = False
         mortality = condition["mortality"][self.age.value]
@@ -2071,13 +2522,14 @@ class Cat:
         if condition["congenital"] == "always":
             born_with = True
         moons_until = condition["moons_until"]
+        
         if born_with and moons_until != 0:
             moons_until = randint(
                 moons_until - 1, moons_until + 1
             )  # creating a range in which a condition can present
             moons_until = max(moons_until, 0)
 
-        if born_with and self.status not in ("kitten", "newborn"):
+        if born_with and self.status not in ["kitten", "newborn"]:
             moons_until = -2
         elif born_with is False:
             moons_until = 0
@@ -2106,7 +2558,7 @@ class Cat:
                 "illness_infectiousness": new_perm_condition.illness_infectiousness,
                 "risks": new_perm_condition.risks,
                 "complication": None,
-                "event_triggered": new_perm_condition.new,
+                "event_triggered": new_perm_condition.new
             }
             new_condition = True
         return new_condition
@@ -2162,6 +2614,12 @@ class Cat:
     def is_injured(self):
         """Returns true if the cat is injured."""
         return len(self.injuries) > 0
+    
+    def is_awakened(self):
+        awakened = False
+        if self.awakened:
+            awakened = True
+        return awakened
 
     def is_disabled(self):
         """Returns true if the cat have permanent condition"""
@@ -2233,9 +2691,7 @@ class Cat:
         condition_file_path = condition_directory + "/" + self.ID + "_conditions.json"
 
         if (
-            (not self.is_ill() and not self.is_injured() and not self.is_disabled())
-            or self.dead
-            or self.outside
+            (not self.is_ill() and not self.is_injured() and not self.is_disabled() and not self.is_awakened())
         ):
             if os.path.exists(condition_file_path):
                 os.remove(condition_file_path)
@@ -2251,6 +2707,10 @@ class Cat:
 
         if self.is_disabled():
             conditions["permanent conditions"] = self.permanent_condition
+            
+        if self.is_awakened():
+            conditions["awakened"] = self.awakened
+        
 
         game.safe_save(condition_file_path, conditions)
 
@@ -2271,6 +2731,9 @@ class Cat:
                 self.illnesses = rel_data.get("illnesses", {})
                 self.injuries = rel_data.get("injuries", {})
                 self.permanent_condition = rel_data.get("permanent conditions", {})
+                if "awakened" in rel_data:
+                    if rel_data["awakened"]["type"] in ["esper", "guide", "enhanced esper"]:
+                        self.awakened = rel_data["awakened"]
 
             if "paralyzed" in self.permanent_condition and not self.pelt.paralyzed:
                 self.pelt.paralyzed = True
@@ -2295,11 +2758,11 @@ class Cat:
             and potential_mentor.status != "medicine cat"
         ):
             return False
-        if self.status == "apprentice" and potential_mentor.status not in (
+        if self.status == "apprentice" and potential_mentor.status not in [
             "leader",
             "deputy",
             "warrior",
-        ):
+        ]:
             return False
         if (
             self.status == "mediator apprentice"
@@ -2664,15 +3127,15 @@ class Cat:
                     and the_cat.parent1 is not None
                     and the_cat.parent2 is not None
                 ):
-                    are_parents = the_cat.ID in (self.parent1, self.parent2)
-                    parents = are_parents or self.ID in (
+                    are_parents = the_cat.ID in [self.parent1, self.parent2]
+                    parents = are_parents or self.ID in [
                         the_cat.parent1,
                         the_cat.parent2,
-                    )
-                    siblings = self.parent1 in (
+                    ]
+                    siblings = self.parent1 in [
                         the_cat.parent1,
                         the_cat.parent2,
-                    ) or self.parent2 in (the_cat.parent1, the_cat.parent2)
+                    ] or self.parent2 in [the_cat.parent1, the_cat.parent2]
 
                 related = parents or siblings
 
@@ -2710,7 +3173,7 @@ class Cat:
                             romantic_love = randint(15, 30)
                             comfortable = int(comfortable * 1.3)
                             trust = int(trust * 1.2)
-
+                    
                 if are_parents and like < 60:
                     like = 60
                 if siblings and like < 30:
@@ -2839,7 +3302,7 @@ class Cat:
             chance -= 5
 
         # Cat's compatibility with mediator also has an effect on success chance.
-        for cat in (cat1, cat2):
+        for cat in [cat1, cat2]:
             if get_personality_compatibility(cat, mediator) is True:
                 chance += 5
             elif get_personality_compatibility(cat, mediator) is False:
@@ -3085,15 +3548,9 @@ class Cat:
                 decrease = not decrease
 
             if decrease:
-                output += i18n.t(
-                    "screens.mediation.output_decrease",
-                    trait=i18n.t(f"screens.mediation.{trait}"),
-                )
+                output += i18n.t("screens.mediation.output_decrease", trait=i18n.t(f"screens.mediation.{trait}"))
             else:
-                output += i18n.t(
-                    "screens.mediation.output_increase",
-                    trait=i18n.t(f"screens.mediation.{trait}"),
-                )
+                output += i18n.t("screens.mediation.output_increase", trait=i18n.t(f"screens.mediation.{trait}"))
 
         return output
 
@@ -3370,22 +3827,64 @@ class Cat:
     # ---------------------------------------------------------------------------- #
     #                                  other                                       #
     # ---------------------------------------------------------------------------- #
-
+    
     def get_info_block(self, *, make_clan=False, patrol=False, relationship=False):
+        dadm_text = ""
+        if len(self.pronouns) == 1:
+            if self.pronouns[0].get("subject") == self.pronouns[0].get("object"):
+                    dadm_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("poss")
+            else:
+                    dadm_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("object")
+        else:
+            for pronoun in self.pronouns:
+                    dadm_text += pronoun.get("subject") + "/"
+            if dadm_text[-1] == "/":
+                    dadm_text = dadm_text[:-1]
+                    
+        awakened_text = ""        
+        if self.awakened:
+            if self.awakened["type"] in ["esper", "guide"]:
+                awakened_text = self.awakened["class"] + "-class " + self.awakened["type"] + "\n"
+                if self.awakened["type"] == "esper":
+                    awakened_text += "power: " + self.awakened["ability"] + "\n"
+            else:
+                class1 = self.awakened["class"][0]
+                class2 = self.awakened["class"][1]
+                total_class = class1
+                if class1 == "C" and class2 in ["B","A","S"]:
+                    total_class = class2
+                elif class1 == "B" and class2 in ["A","S"]:
+                    total_class = class2
+                elif class1 == "A" and class2 in ["S"]:
+                    total_class = class2
+                awakened_text = total_class + "-class " + self.awakened["type"] + "\n"
+                awakened_text += "powers: " + self.awakened["ability"][0] + " and " +  self.awakened["ability"][1] + "\n"
+
+
+        if self.permanent_condition:
+                dadm_text += "\n\ncondition"
+                if len(self.permanent_condition) > 1:
+                    dadm_text += "s:\n"
+                else:
+                    dadm_text += ":\n"
+                for condition in self.permanent_condition:
+                    dadm_text += str(condition) + "\n"
+                dadm_text = dadm_text[:-1]
+                
         if make_clan:
             return "\n".join(
                 [
                     self.genderalign,
                     i18n.t(
-                        (
-                            f"general.{self.age}"
-                            if self.age != "kitten"
-                            else "general.kitten_profile"
-                        ),
+                        f"general.{self.age}"
+                        if self.age != "kitten"
+                        else "general.kitten_profile",
                         count=1,
                     ),
                     i18n.t(f"cat.personality.{self.personality.trait}"),
                     self.skills.skill_string(),
+                    dadm_text,
+                    awakened_text,
                 ]
             )
         elif patrol:
@@ -3420,7 +3919,6 @@ class Cat:
                 self.skills.skill_string(short=True),
             ]
         )
-
     def get_save_dict(self, faded=False):
         if faded:
             return {
@@ -3432,6 +3930,8 @@ class Cat:
                 "dead_for": self.dead_for,
                 "parent1": self.parent1,
                 "parent2": self.parent2,
+                "past_life": self.past_life,
+                "reincarnation": self.reincarnation,
                 "adoptive_parents": self.adoptive_parents,
                 "df": self.df,
                 "faded_offspring": self.faded_offspring,
@@ -3444,11 +3944,9 @@ class Cat:
                 "specsuffix_hidden": self.name.specsuffix_hidden,
                 "gender": self.gender,
                 "gender_align": self.genderalign,
-                "pronouns": (
-                    self._pronouns
-                    if self._pronouns is not None
-                    else {i18n.config.get("locale"): self.pronouns}
-                ),
+                "pronouns": self._pronouns
+                if self._pronouns is not None
+                else {i18n.config.get("locale"): self.pronouns},
                 "birth_cooldown": self.birth_cooldown,
                 "status": self.status,
                 "backstory": self.backstory or None,
@@ -3457,6 +3955,8 @@ class Cat:
                 "facets": self.personality.get_facet_string(),
                 "parent1": self.parent1,
                 "parent2": self.parent2,
+                "past_life": self.past_life,
+                "reincarnation": self.reincarnation,
                 "adoptive_parents": self.adoptive_parents,
                 "mentor": self.mentor or None,
                 "former_mentor": (
@@ -3641,6 +4141,7 @@ game.cat_class = cat_class
 # ---------------------------------------------------------------------------- #
 
 resource_directory = "resources/dicts/conditions/"
+
 with open(f"{resource_directory}illnesses.json", "r", encoding="utf-8") as read_file:
     ILLNESSES = ujson.loads(read_file.read())
 
@@ -3651,7 +4152,6 @@ with open(
     f"{resource_directory}permanent_conditions.json", "r", encoding="utf-8"
 ) as read_file:
     PERMANENT = ujson.loads(read_file.read())
-
 MINOR_MAJOR_REACTION = None
 grief_lang = None
 

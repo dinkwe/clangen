@@ -25,6 +25,9 @@ from .SpriteInspectScreen import SpriteInspectScreen
 from .StartScreen import StartScreen
 from .SwitchClanScreen import SwitchClanScreen
 from .WarriorDenScreen import WarriorDenScreen
+from .PredictOffspringScreen import PredictOffspringScreen
+from .CustomizeCatScreen import CustomizeCatScreen
+from .CustomizeStatsScreen import CustomizeStatsScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -83,6 +86,10 @@ class AllScreens:
     family_tree_screen = FamilyTreeScreen("family tree screen")
     mediation_screen = MediationScreen("mediation screen")
     change_gender_screen = ChangeGenderScreen("change gender screen")
+    
+    customize_cat_screen = CustomizeCatScreen("customize cat screen")
+    customize_stats_screen = CustomizeStatsScreen("customize stats screen")
+    predict_offspring_screen = PredictOffspringScreen("predict offspring screen")
 
     @classmethod
     def rebuild_all_screens(cls):
@@ -120,3 +127,7 @@ class AllScreens:
         cls.family_tree_screen = FamilyTreeScreen("family tree screen")
         cls.mediation_screen = MediationScreen("mediation screen")
         cls.change_gender_screen = ChangeGenderScreen("change gender screen")
+        
+        cls.predict_offspring_screen = PredictOffspringScreen("predict offspring screen")
+        cls.customize_cat_screen = CustomizeCatScreen("customize cat screen")
+        cls.customize_stats_screen = CustomizeStatsScreen("customize stats screen")

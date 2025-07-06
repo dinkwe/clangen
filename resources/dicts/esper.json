@@ -1,0 +1,714 @@
+{
+    "pyrokinesis": {
+        "power": "can manipulate and control fire",
+        "skin":["FLAMES","FLAMES2", "SMOKE", "MAGMA", "FIRETAIL", "BLUEFIRETAIL"],
+        "C": [
+            "can create small flames",
+            "can spark fires with a paw",
+            "sneezes sparks",
+            "has an abnormally high natural body temperature"
+        ],
+        "B": [
+            "can create flames",
+            "can burn others through touch",
+            "can breathe fire",
+            "can move fire"
+        ],
+        "A":[
+            "can create large flames",
+            "can burn others through touch",
+            "has a tail made of fire",
+            "can breathe large bursts of fire",
+            "can set things on fire with a thought"
+        ],
+        "S":[
+            "can create massive flames",
+            "can summon storms of fire",
+            "can disintegrate things with a paw",
+            "can set things on fire with a thought",
+            "can burst into flames"
+
+        ]
+    },
+    "hydrokinesis": {
+        "power": "can manipulate and control water",
+        "skin":["MIST","BUBBLES", "BUBBLES2", "SPARKLES2"],
+        "C": [
+            "can create bubbles",
+            "can control small streams of water",
+            "can breathe underwater"
+        ],
+        "B": [
+            "can move water",
+            "can create streams of water",
+            "can summon rain clouds",
+            "can walk on water",
+            "can breathe underwater"
+        ],
+        "A":[
+            "can summon rainstorms",
+            "can control waves of water",
+            "can trap others in bubbles",
+            "can create platforms of water"
+        ],
+        "S":[
+            "can summon floods of water",
+            "can control waves of water",
+            "can trap others in bubbles",
+            "can create platforms of water"
+        ]
+    },
+    "cyrokinesis": {
+        "power": "can manipulate and control ice",
+        "skin":["MIST","SPARKLES", "FROZEN", "FROSTGLOW", "ICECRYSTALS", "CLOUDS"],
+        "C": [
+            "is ice cold to the touch",
+            "sneezes snowflakes"
+        ],
+        "B": [
+            "can breath streams of frost",
+            "can summon snow",
+            "can freeze things with a paw"
+        ],
+        "A": [
+            "can summon snow",
+            "can breath streams of frost",
+            "can freeze things with a paw"
+        ],
+        "S": [
+            "can summon hailstorms",
+            "can turn living things into ice"
+        ]
+    },
+    "geokinesis": {
+        "power": "can manipulate and control rocks",
+        "skin":["CRYSTALS","ROOTS","MAGMA", "STONE", "SPOOKYCRYSTALS"],
+        "C": [
+            "can summon and control pebbles",
+            "can control sand"
+        ],
+        "B": [
+            "can summon and control rocks",
+            "can create rock platforms",
+            "can control sand"
+        ],
+        "A": [
+            "can summon and control boulders",
+            "can create and control golems",
+            "can summon sandstorms",
+            "can create rock platforms",
+            "can cause minor earthquakes"
+        ],
+        "S": [
+            "can turn living things into stone",
+            "can summon and control boulders",
+            "can create and control golems",
+            "can summon sandstorms",
+            "can cause major earthquakes"
+        ]
+    },
+    "aerokinesis": {
+        "power": "can manipulate and control wind",
+        "skin":["LIGHT1", "MIST", "THUNDERSTORM", "FAEMANE", "WIND", "CLOUDS"],
+        "C": [
+            "can control small gusts of wind",
+            "purifies the surrounding air"
+        ],
+        "B": [
+            "can control gusts of wind",
+            "can create small blades of wind",
+            "can summon fog"
+        ],
+        "A": [
+            "can control large gusts of wind",
+            "can create blades of wind",
+            "can create walls of wind",
+            "can summon heavy fogs"
+        ],
+        "S": [
+            "can summon tornados",
+            "can summon hurricanes",
+            "can control large gusts of wind",
+            "can create large blades of wind",
+            "can create walls of wind"
+        ]
+    },
+    "illusions": {
+        "power": "can create illusions",
+        "skin":["INK", "INK2", "SPARKLES", "PURPLEFLAMES", "SKELETON", "SHADOWBEAST", "SHADOWSELF"],
+        "C": [
+            "can make illusions targetting one sense",
+            "can make small illusions",
+            "can appear displaced"
+        ],
+        "B": [
+            "can make illusions targetting multiple senses",
+            "can create illusions of prey",
+            "can appear displaced"
+        ],
+        "A": [
+            "can make illusions targetting multiple senses",
+            "can create illusions of other cats",
+            "can create illusions of predators"
+        ],
+        "S": [
+            "can trap other cats in illusions",
+            "can create illusions of other cats"
+        ]
+    },
+    "shapeshifting": {
+        "power": "can transform into other animals",
+        "skin":["FLESH", "SKELETON", "SHADOWBEAST", "INK","INK2", "ANTLERS","GREENCHIMERA", "CORALCHIMERA", "FOXTAIL", "BATWINGS", "BLACKFOX", "SNOWFOX"],
+        "C": [
+           "can change fur color at will",
+           "can change eye color at will",
+           "can become younger or older at will"
+        ],
+        "B": [
+            "can transform into a small bird",
+            "can transform into a fish",
+            "can transform into a raccoon",
+            "can transform into a squirrel",
+            "can transform into a mouse",
+            "can transform into a rat",
+            "can transform into a gopher",
+            "can transform into a spider",
+            "can transform into a beetle",
+            "can shrink"
+        ],
+        "A": [
+            "can transform into any cat",
+            "can transform into a canine",
+            "can transform into a bird of prey",
+            "can transform into a shark",
+            "can transform into a badger",
+            "can shrink or grow"
+        ],
+        "S": [
+            "can transform into any animal",
+            "can transform into any cat",
+            "can transform into a big cat",
+            "can transform into a bird of prey",
+            "can transform into a bear",
+            "can transform into any animal with wings",
+            "can transform into any animal with gills",
+            "can transform into any mammal",
+            "can shrink or grow"
+        ]
+    },
+    "super strength": {
+        "power": "supernaturally enhanced strength",
+        "skin":["SPARKLES", "SPARKLES2", "MAGMA","SMOKE", "INK2"],
+        "C": [
+            "is stronger than the average cat",
+            "has better stamina than the average cat",
+            "has an unnaturally strong bite"
+        ],
+        "B": [
+            "is strong enough to crush rocks",
+            "is resistant to pain",
+            "has the bite of a dog"	
+        ],
+        "A": [
+            "is strong enough to crush boulders",
+            "has the bite of a dog",
+            "can easily crush bones"
+        ],
+        "S": [
+            "can destroy anything with a paw",
+            "has the bite of a jaguar",
+            "can easily crush bones",
+            "is immune to physical pain"
+        ]
+    },
+    "super speed": {
+        "power": "supernaturally enhanced speed",
+        "skin":["LIGHT1", "MIST", "INK2", "SPARKLES", "SPARKLES2"],
+        "C": [
+            "is faster than the average cat",
+            "has better stamina than the average cat",
+            "can sprint further than the average cat",
+            "can swim faster than the average cat"],
+        "B": [
+            "is as fast as a hare",
+            "is as fast as a greyhound",
+            "can sprint at full speed for a several minutes",
+            "can swim as fast as a fish"
+            
+        ],
+        "A": [
+            "is as fast as a gazelle",
+            "is as fast as a cheetah",
+            "can sprint at full speed for a several minutes",
+            "can swim as fast as a fish"
+            
+        ],
+        "S": [
+            "moves faster than the eye can see",
+            "is as fast as a cheetah",
+            "can sprint at full speed for a few miles",
+            "can swim faster than any fish"
+            
+        ]
+    },
+    "enhanced senses": {
+        "power": "can sense things beyond",
+        "skin":["SPARKLES", "MIST", "LIGHT1", "LIGHT2", "SPARKLES2", "PURPLEGLOW", "YELLOWGLOW", "GREENGLOW"],
+        "C": [
+            "can hear better than the average cat",
+            "can see better than the average cat",
+            "can sense texture without touching an object"
+        ],
+        "B": [
+            "can see things from far away",
+            "can hear things from far away",
+            "can sense texture without touching an object"
+        ],
+        "A": [
+            "can see things from far away",
+            "can hear things from far away",
+            "can sense the near future"
+        ],
+        "S": [
+            "can sense the future",
+            "can hear and see things from far away"
+        ]
+    },
+    "telekinesis": {
+        "power": "can move things using the mind",
+        "skin":["PURPLEFLAMES", "SPARKLES", "BLUEFLAMES", "SPARKLES2", "THIRDEYE"],
+        "C": [
+            "can push small objects with a thought",
+            "can float small objects"
+        ],
+        "B": [
+            "can push objects with a thought",
+            "can make objects float"
+        ],
+        "A": [
+            "can push objects with a thought",
+            "can move other cats with a thought",
+            "can make objects float"
+        ],
+        "S": [
+            "can push large objects with a thought",
+            "can move other cats with a thought",
+            "can make large objects float"
+        ]
+    },
+    "chimera": {
+        "power": "has body part(s) of a different animal",
+        "skin":["FLESH", "SKELETON", "INK", "SPARROWGIFT", "SHADOWBEAST", "GREENCHIMERA", "CORALCHIMERA", "FOXTAIL", "BATWINGS", "DEVILWINGS", "BLUECORALCHIMERA", "ANTLERS", "KITSUNE", "SNOWFOX", "BLACKFOX"],
+        "C": [
+            "has lizard eyes",
+            "has a fox tail",
+            "has a third eye"
+        ],
+        "B": [
+            "has hooves",
+            "has hawk eyes",
+            "has horns",
+            "has two tails",
+            "has rabbit ears",
+            "has antlers",
+            "has a third eye",
+            "has a snake for a tail"
+        ],
+        "A": [
+            "has bird wings",
+            "has bat wings",
+            "has hooves",
+            "has horns",
+            "has antlers",
+            "has spider legs",
+            "has fins",
+            "is covered in armored scales",
+            "has three fox tails",
+            "has a snake for a tail"
+
+        ],
+        "S": [
+            "had bird wings",
+            "has bat wings",
+            "has spider legs",
+            "has fins and gills",
+            "has horns and saber fangs",
+            "is covered in armored scales",
+            "has nine fox tails"
+        ]
+    },
+    "invisibility": {
+        "power": "can turn invisible",
+        "skin":["MIST", "LIGHT1", "SPARKLES", "SPARKLES2", "BLUEFLAMES", "FROSTGLOW", "BLUEFIRETAIL", "SHADOWSELF"],
+        "C": [
+            "can become translucent",
+            "appears to be blurry"
+        ],
+        "B": [
+            "can become translucent",
+            "can turn partially invisible"
+        ],
+        "A": [
+            "can turn invisible",
+            "can turn partially invisible"
+        ],
+        "S": [
+            "can turn invisible",
+            "can turn other cats invisible"
+        ]
+    },
+    "incorporeal": {
+        "power": "can travel through objects",
+        "skin":["MIST", "LIGHT1", "SPARKLES", "SPARKLES2","BLUEFLAMES"],
+        "C": [
+            "can dodge better than the average cat",
+            "can see through plants"
+        ],
+        "B": [
+            "can travel through other cats",
+            "can travel through plants",
+            "can see through cats",
+            "can see through plants"
+        ],
+        "A": [
+            "can travel through inorganic material",
+            "can travel through organic material",
+            "can dodge any attack"
+        ],
+        "S": [
+            "can travel through any material",
+            "can dodge any attack"
+        ]
+    },
+    "mind control": {
+        "power": "can control the minds of others",
+        "skin":["INK", "INK2", "PURPLEFLAMES", "SHADOWBEAST", "SHADOWSELF"],
+        "C": [
+            "can influence the feelings of others",
+            "is supernaturally charismatic",
+            "can influence the dreams of others",
+            "can make other cats feel drowsy"
+        ],
+        "B": [
+            "can influence the feelings of others",
+            "has powerful suggestions",
+            "has a mesmerizing gaze",
+            "can control the dreams of others",
+            "can create nightmares",
+            "can make cats fall asleep"
+        ],
+        "A": [
+            "has powerful suggestions",
+            "can hypnotize others",
+            "has a mesmerizing gaze",
+            "can control the dreams of others",
+            "can create nightmares",
+            "can make cats fall asleep"
+
+        ],
+        "S": [
+            "can control the minds of other cats",
+            "can puppeteer other cats with ease",
+            "can hypnotize others",
+            "can trap a cat in an endless nightmare",
+            "can trap a cat in an endless dream"
+        ]
+    },
+    "flight": {
+        "power": "can fly (without wings)",
+        "skin":["MIST", "SPARKLES", "LIGHT1", "LIGHT2","WIND", "FAEMANE"],
+        "C": [
+            "can levitate a few inches",
+            "can glide in the air",
+            "can jump unnaturally high"
+        ],
+        "B": [
+            "can float above the ground",
+            "can glide in the air",
+            "can leap great distances"
+        ],
+        "A": [
+            "can float above the ground",
+            "can soar across the sky",
+            "can leap great distances"
+        ],
+        "S": [
+            "can soar across the sky",
+            "can walk in the air",
+            "can bounce over trees"
+        ]
+    },
+    "teleportation": {
+        "power": "can teleport to another location",
+        "skin":["MIST", "SPARKLES", "PURPLEFLAMES", "LIGHT1", "LIGHT2", "SPARKLES2"],
+        "C": [
+            "seems to blink between spaces",
+            "can teleport a few inches"
+        ],
+        "B": [
+            "can teleport short distances",
+            "seems to blink between spaces"
+        ],
+        "A": [
+            "can teleport moderate distances",
+            "can teleport a few seconds into the future",
+            "can teleport a few seconds into the past"
+        ],
+        "S": [
+            "can teleport great distances",
+            "can teleport a few minutes into the future",
+            "can teleport a few minutes into the past"
+        ]
+    },
+    "electromagnetic control": {
+        "power": "can manipulate magnetic fields",
+        "skin":["THUNDERSTORM", "LIGHT1", "LIGHT2", "LIGHTNING", "YELLOWGLOW","PURPLESPARKS"],
+        "C": [
+            "has fur charged with static shocks",
+            "can always sense true north"
+        ],
+        "B": [
+            "can track down metal objects",
+            "can move small metal objects",
+            "has a body that acts like a magnet"
+        ],
+        "A": [
+            "has a body that acts like a magnet",
+            "can move metal objects",
+            "can distort magnetic fields"
+        ],
+        "S": [
+            "can move large metal objects",
+            "can distort magnetic fields"
+        ]
+    },
+    "light manipulation":{
+        "power": "can control light and shadows",
+        "skin":["THUNDERSTORM", "LIGHT1", "LIGHT2", "PURPLEFLAMES", "INK", "INK2","LIGHTNING", "YELLOWGLOW","SHADOWBEAST", "SHADOW", "SHADOWSELF"],
+        "C": [
+            "glows in the dark",
+            "can create elaborate shadow puppets",
+            "has brightly glowing eyes"
+        ],
+        "B": [
+            "can summon small balls of light",
+            "can create elaborate shadow puppets"
+        ],
+        "A": [
+            "can summon balls of light",
+            "can slip into the shadows",
+            "can shroud others in darkness",
+            "can blind others with light"
+        ],
+        "S": [
+            "can summon large balls of light",
+            "can transform into a shadow",
+            "can travel through shadows",
+            "can shroud others in shadow",
+            "can blind others with light"
+        ]
+    },
+    "beast speak": {
+        "power": "can communicate with other animals",
+        "skin":["FLESH", "INK", "INK2", "SPARKLES", "FLOWERS", "DEATHBERRIES", "SHADOWBEAST", "SHADOWSELF"],
+        "C": [
+            "can sense the emotions of non-cats",
+            "can hear the voices of other species"
+        ],
+        "B": [
+            "understands the words of prey",
+            "can understand twolegs fluently"
+        ],
+        "A": [
+            "can communicate with canines",
+            "can communicate with prey",
+            "can understand twolegs fluently",
+            "can communicate with aquatic creatures",
+            "can communicate with birds",
+            "can manipulate other species",
+            "can influence other species"
+        ],
+        "S": [
+            "is fluent in every species' language",
+            "can control other animals"
+        ]
+    },
+    "dendrokinesis": {
+        "power": "can manipulate and control plants",
+        "skin":["FLOWERS", "DEATHBERRIES", "FAEMANE", "ROOTS", "TREE", "VINES"],
+        "C": [
+            "can grow small flowers",
+            "has a tail  made of leaves",
+            "is poisonous",
+            "can sense the feelings of plants"
+        ],
+        "B": [
+            "can grow small flowers",
+            "is venomous",
+            "can speak to plants",
+            "can sense the feelings of plants",
+            "is immune to poison"
+        ],
+        "A": [
+            "can make any plant bloom or wither",
+            "can summon small brambles",
+            "can travel through trees",
+            "can summon vines",
+            "can speak to plants"
+        ],
+        "S": [
+            "can summon walls of thorns",
+            "can make any plant bloom or wither",
+            "can travel through trees",
+            "can summon armies of vines"
+        ]
+    },
+    "electrokinesis": {
+        "power": "can manipulate and control lightning",
+        "skin":["THUNDERSTORM", "LIGHT1", "LIGHT2","LIGHTNING", "YELLOWGLOW", "PURPLESPARKS"],
+        "C": [
+            "sneezes sparks",
+            "glows in the dark",
+            "has fur charged with static shocks",
+            "can sense thunderstorms",
+            "serves as a conduit"
+        ],
+        "B": [
+            "can shock other cats",
+            "can summon small balls of lightning",
+            "serves as a conduit"
+        ],
+        "A": [
+            "can call down lightning",
+            "can shock other cats",
+            "can summon balls of electricity"
+        ],
+        "S": [
+            "can summon thunder storms",
+            "can call down lightning",
+            "can blast electricity from a paw"
+        ]
+    },
+    "telempathy":  {
+        "power": "can broadcast and sense emotions",
+        "skin":["SPARKLES", "LIGHT1", "SPARKLES2", "THIRDEYE"],
+        "C": [
+            "can sense strong emotions",
+            "can broadcast strong emotions"
+        ],
+        "B": [
+            "can sense the emotions of others",
+            "can sense the desires of others",
+            "has a calming aura"
+        ],
+        "A": [
+            "can sense the emotions of others",
+            "can sense the desires of others",
+            "can hear strong thoughts",
+            "has a powerful calming aura"
+        ],
+        "S": [
+            "can sense and influence the emotions of others",
+            "can hear the thoughts of others",
+            "can change the emotions of other cats",
+            "has a powerful calming aura"
+        ]
+    },
+    "astral projection": {
+        "power": "can project souls and spirits",
+        "skin":["SPARKLES", "PURPLEFLAMES", "SPARKLES2", "BLUEFLAMES", "THIRDEYE"],
+        "C": [
+            "can see echoes of the past",
+            "can see ghosts"
+        ],
+        "B": [
+            "can see echoes of the past",
+            "can see ghosts",
+            "can enter the dreams of others",
+            "can infiltrate the nightmares of others"
+        ],
+        "A": [
+            "can enter the dreams of others",
+            "can infiltrate the nightmares of others",
+            "can summon ghosts",
+            "can possess sleeping cats",
+            "has a soul that can leave the body temporarily"
+        ],
+        "S": [
+            "can broadcast the dreams of others",
+            "can summon ghosts",
+            "can possess other cats",
+            "has a soul that can leave the body"
+        ]
+    },
+    "nullification": {
+        "power": "can nullify the powers of others",
+        "skin":["DEATHBERRIES", "FLESH", "INK", "SHADOW"],
+        "C":[
+            "is resitant to the powers of others",
+            "cannot be sensed, even by magic",
+            "can sense the powers of others with touch"
+        ],
+        "B":[
+            "is resistant to the powers of others",
+            "is immune to the powers of C-class espers",
+            "can detect the powers of others from a distance"
+        ],
+        "A":[
+            "is immune to the powers of B and C-class espers",
+            "can temporarily disable the powers of others"
+        ],
+        "S":[
+            "is immune to the powers of A-class and below espers",
+            "can temporarily disable the powers of others"
+        ]
+    },
+    "flesh manipulation": {
+        "power": "can heal and manipulate flesh and blood",
+        "skin":["FLESH", "SKELETON", "INK"],
+        "C":[
+            "can heal scrapes",
+            "can regenerate from minor injuries"
+        ],
+        "B":[
+            "can heal small wounds",
+            "can regenerate from minor injuries"
+        ],
+        "A":[
+            "can heal wounds",
+            "can regenerate from injuries",
+            "can create weapons from blood"
+        ],
+        "S":[
+            "can regenerate limbs",
+            "can control the blood of other cats",
+            "can create weapons from blood"
+        ]
+    },
+    "spatial manipulation": {
+        "power": "can create portals or manipulate space",
+        "skin":["SPARKLES", "PURPLEFLAMES", "PURPLEGLOW", "BLUEFLAMES","PURPLESPARKS"],
+        "C":[
+           "can tell the exact distance and size of objects",
+           "can shrink objects slightly",
+           "can grow objects slightly"
+        ],
+        "B":[
+            "can create portals large enough to fit a paw",
+            "can shrink objects",
+            "can grow objects",
+            "can store small objects in a pocket dimension"
+        ],
+        "A":[
+            "can create portals large enough to fit a a cat's head",
+            "can shrink and grow objects",
+            "can store objects in a pocket dimension"
+        ],
+        "S":[
+            "can create portals large enough to fit a cat",
+            "can shrink and grow objects",
+            "can phase through dimensions",
+            "can store large objects in a pocket dimension"
+        ]
+    }
+}
