@@ -154,7 +154,7 @@ class PredictOffspringScreen(Screens):
         self.possible_mates = [
             i
             for i in Cat.all_cats_list
-            if i.is_potential_mate(self.selected_cat)
+            if i.is_potential_mate(self.selected_cat, for_love_interest=False, age_restriction=False, ignore_no_mates=True)
             and not (i.dead or i.outside)
         ]
         

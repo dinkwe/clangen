@@ -77,6 +77,1230 @@
             "one": "brown",
             "many": "dark brown"
         },
+        "ACACIALOG": {
+            "one": "gray",
+            "many": "warm gray"
+        },
+        "ACACIAPLANKS": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+        "AMETHYST": {
+            "one": "purple",
+            "many": "amethyst"
+        },
+        "ASH": {
+            "one": "gray",
+            "many": "ash gray"
+        },
+        "BAMBOO": {
+            "one": "green",
+            "many": "gray green"
+        },
+        "BAMBOOPLANKS": {
+            "one": "yellow",
+            "many": "pale yellow"
+        },
+        "BANANABERRY": {
+            "one": "pink",
+            "many": "pink and yellow"
+        },
+        "BANANAS": {
+            "one": "yellow",
+            "many": "yellow and black"
+        },
+        "BIRCHLOG": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "BIRCHPLANKS": {
+            "one": "cream",
+            "many": "tan cream"
+        },
+        "BLACK-BROWN": {
+            "one": "multi-colored",
+            "many": "black and brown"
+        },
+        "BLACKBLUE": {
+            "one": "blue",
+            "many": "dark blue"
+        },
+        "BLACKBLUEPEPPER": {
+            "one": "blue",
+            "many": "bright blue and black"
+        },
+        "BLACKBLUES": {
+            "one": "black",
+            "many": "black and blue"
+        },
+        "BLACKGLAZEDTERRACOTTA": {
+            "one": "black",
+            "many": "black and red"
+        },
+        "BLACKPURPLE": {
+            "one": "purple",
+            "many": "dark purple"
+        },
+        "BLACKSTER": {
+            "one": "black",
+            "many": "black"
+        },
+        "BLUE": {
+            "one": "blue",
+            "many": "navy blue"
+        },
+        "BLUE-EARTH": {
+            "one": "multi-colored",
+            "many": "brown and sky blue"
+        },
+        "BLUE-PURPLE": {
+            "one": "blue",
+            "many": "blue and purple"
+        },
+        "BLUE-YELLOW": {
+            "one": "yellow",
+            "many": "yellow and teal"
+        },
+        "BLUEBROWN": {
+            "one": "brown",
+            "many": "cool brown"
+        },
+        "BLUECREAM": {
+            "one": "cream",
+            "many": "blue and cream"
+        },
+        "BLUECS2": {
+            "one": "blue",
+            "many": "blue"
+        },
+        "BLUEGHOSTK": {
+            "one": "blue",
+            "many": "blue"
+        },
+        "BLUEGHOSTPEPPER": {
+            "one": "blue",
+            "many": "cyan and black"
+        },
+        "BLUEGLAZEDTERRACOTTA": {
+            "one": "blue",
+            "many": "blue"
+        },
+        "BLUEH": {
+            "one": "blue",
+            "many": "blue"
+        },
+        "BLUEHETA": {
+            "one": "blue",
+            "many": "light blue"
+        },
+        "BLUEMINT": {
+            "one": "green",
+            "many": "mint green"
+        },
+        "BLUEPEPPER": {
+            "one": "blue",
+            "many": "bright blue"
+        },
+        "BLUESPOTTED": {
+            "one": "blue",
+            "many": "brown-speckled blue"
+        },
+        "BLUESTER": {
+            "one": "gray",
+            "many": "blue gray"
+        },
+        "BRIGHTBLUEK": {
+            "one": "blue",
+            "many": "bright blue"
+        },
+        "BRIGHTYELLOW-RED": {
+            "one": "yellow",
+            "many": "yellow and red"
+        },
+        "BRONZE": {
+            "one": "brown",
+            "many": "bronze brown"
+        },
+        "BROWNMUSHROOM": {
+            "one": "brown",
+            "many": "light brown"
+        },
+        "BROWN-PURPLE": {
+            "one": "purple",
+            "many": "violet"
+        },
+        "BROWN-TAN": {
+            "one": "brown",
+            "many": "brown and tan"
+        },
+        "BROWNGLAZEDTERRACOTTA": {
+            "one": "brown",
+            "many": "brown and navy"
+        },
+        "BROWNREDS": {
+            "one": "orange",
+            "many": "light brown and red"
+        },
+        "BROWNSILLY": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "BUBBLEGUM": {
+            "one": "pink",
+            "many": "bubblegum pink"
+        },
+        "CERULEAN": {
+            "one": "blue",
+            "many": "cerulean blue"
+        },
+        "CHERRYLOG": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "CHERRYPLANKS": {
+            "one": "pink",
+            "many": "pale pink"
+        },
+        "CHOCOLATESILLY": {
+            "one": "brown",
+            "many": "brown"
+        },
+        "CINNAMON": {
+            "one": "cream",
+            "many": "pale cinnamon"
+        },
+        "COPPER": {
+            "one": "ginger",
+            "many": "copper"
+        },
+        "COPPERMIMI": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+        "CREAMMETEOR": {
+            "one": "cream",
+            "many": "cream and gray"
+        },
+        "CREAMSILVER": {
+            "one": "cream",
+            "many": "silver cream"
+        },
+        "CRIMSONPLANKS": {
+            "one": "red",
+            "many": "crimson-red"
+        },
+        "CRIMSONSTEM": {
+            "one": "red",
+            "many": "crimson and bright red"
+        },
+        "CRYING OBSIDIAN": {
+            "one": "black",
+            "many": "black and bright purple"
+        },
+        "CRYSTAL": {
+            "one": "purple",
+            "many": "pink and lilac"
+        },
+        "CYAN": {
+            "one": "blue",
+            "many": "cyan"
+        },
+        "CYANGLAZEDTERRACOTTA": {
+            "one": "blue",
+            "many": "cyan and black"
+        },
+        "CYANHETA": {
+            "one": "blue",
+            "many": "cyan"
+        },
+        "CYANPEPPER": {
+            "one": "blue",
+            "many": "pale cyan"
+        },
+        "CYANPINKG": {
+            "one": "blue",
+            "many": "teal and bright pink"
+        },
+        "DANCECREAM": {
+            "one": "cream",
+            "many": "cream"
+        },
+        "DARKASH": {
+            "one": "gray",
+            "many": "ash gray"
+        },
+        "DARKBLUE": {
+            "one": "gray",
+            "many": "dark blue gray"
+        },
+        "DARKBLUEPEPPER": {
+            "one": "blue",
+            "many": "dark blue"
+        },
+        "DARKBROWNSILLY": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "DARKCHOCOLATE": {
+            "one": "brown",
+            "many": "warm brown"
+        },
+        "DARKCINNAMON": {
+            "one": "brown",
+            "many": "pale brown"
+        },
+        "DARKCREAM": {
+            "one": "cream",
+            "many": "dark cream"
+        },
+        "DARKFAWN": {
+            "one": "cream",
+            "many": "fawn"
+        },
+        "DARKGINGERMIMI": {
+            "one": "cream",
+            "many": "cream"
+        },
+        "DARKGOLD": {
+            "one": "golden",
+            "many": "golden"
+        },
+        "DARKGREENH": {
+            "one": "green",
+            "many": "green"
+        },
+        "DARKGREYSTAR": {
+            "one": "gray",
+            "many": "dark gray"
+        },
+        "DARKGREYSTER": {
+            "one": "gray",
+            "many": "dark gray"
+        },
+        "DARKLILAC": {
+            "one": "gray",
+            "many": "dark gray"
+        },
+        "DARKMINT": {
+            "one": "green",
+            "many": "mint"
+        },
+        "DARKMOSS": {
+            "one": "green",
+            "many": "yellow-green and brown"
+        },
+        "DARKOAKLOG": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "DARKOAKPLANKS": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "DARKORANGE": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+        "DARKPINKH": {
+            "one": "pink",
+            "many": "dark pink"
+        },
+        "DARKRED": {
+            "one": "ginger",
+            "many": "dark ginger"
+        },
+        "DARKREDHETA": {
+            "one": "pink",
+            "many": "dark pink"
+        },
+        "DARKSLATE": {
+            "one": "gray",
+            "many": "dark gray"
+        },
+        "DARKSUNSET": {
+            "one": "orange",
+            "many": "sunset-orange"
+        },
+        "DARKYELLOWS": {
+            "one": "yellow",
+            "many": "dark yellow"
+        },
+        "DUSKBROWN": {
+            "one": "brown",
+            "many": "dusky brown"
+        },
+        "EARTHSPOTTED": {
+            "one": "brown",
+            "many": "mottled brown"
+        },
+        "EBONY": {
+            "one": "black",
+            "many": "ebony"
+        },
+        "EXPOSEDCOPPER": {
+            "one": "brown",
+            "many": "copper brown"
+        },
+        "FAWN": {
+            "one": "brown",
+            "many": "fawn"
+        },
+        "FROZENSUN": {
+            "one": "brown",
+            "many": "blue-brown"
+        },
+        "GHOSTBLUE": {
+            "one": "blue",
+            "many": "dark blue"
+        },
+        "GHOSTBROWN": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "GHOSTSTER": {
+            "one": "black",
+            "many": "black"
+        },
+        "GINGERMIMI": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+        "GOLD": {
+            "one": "golden",
+            "many": "golden"
+        },
+        "GOLDCREAM": {
+            "one": "cream",
+            "many": "golden cream"
+        },
+        "GOLDH": {
+            "one": "orange",
+            "many": "golden orange"
+        },
+        "GOLDPEPPER": {
+            "one": "yellow",
+            "many": "bright yellow and orange"
+        },
+        "GRAPE": {
+            "one": "indigo",
+            "many": "indigo"
+        },
+        "GRAYGLAZEDTERRACOTTA": {
+            "one": "gray",
+            "many": "gray"
+        },
+        "GREEN": {
+            "one": "green",
+            "many": "green"
+        },
+        "GREEN-NAVY": {
+            "one": "green",
+            "many": "bright green and navy"
+        },
+        "GREENBROWN": {
+            "one": "brown",
+            "many": "green-brown"
+        },
+        "GREENDARKREDS": {
+            "one": "green",
+            "many": "green and red"
+        },
+        "GREENGLAZEDTERRACOTTA": {
+            "one": "green",
+            "many": "green"
+        },
+        "GREENGOLD": {
+            "one": "green",
+            "many": "green and gold"
+        },
+        "GREENH": {
+            "one": "green",
+            "many": "green"
+        },
+        "GREENHETA": {
+            "one": "green",
+            "many": "bright green"
+        },
+        "GREENORANGES": {
+            "one": "green",
+            "many": "green and orange"
+        },
+        "GREENREDS": {
+            "one": "green",
+            "many": "green and crimson"
+        },
+        "GREYMETEOR": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "GREYSTAR": {
+            "one": "gray",
+            "many": "mottled gray"
+        },
+        "GREYSTER": {
+            "one": "gray",
+            "many": "gray"
+        },
+        "ICEBLUE": {
+            "one": "blue",
+            "many": "ice-blue"
+        },
+        "ICEPEPPER": {
+            "one": "white",
+            "many": "ice-blue"
+        },
+        "ICESPOTTED": {
+            "one": "blue",
+            "many": "mottled blue-silver"
+        },
+        "ICEWHITE": {
+            "one": "white",
+            "many": "white and ice-blue"
+        },
+        "INDIGO-VIOLET": {
+            "one": "purple",
+            "many": "violet and magenta"
+        },
+        "INDIGOBLUSH": {
+            "one": "indigo",
+            "many": "gray-indigo"
+        },
+        "INDIGOH": {
+            "one": "purple",
+            "many": "dark purple"
+        },
+        "INDIGOHETA": {
+            "one": "indigo",
+            "many": "pale indigo"
+        },
+        "INDIGOK": {
+            "one": "purple",
+            "many": "pink and purple"
+        },
+        "INDIGOPEPPER": {
+            "one": "pink",
+            "many": "bright pink"
+        },
+        "INDIGOREDS": {
+            "one": "purple",
+            "many": "purple and red"
+        },
+        "JUNGLELOG": {
+            "one": "brown",
+            "many": "green-brown"
+        },
+        "JUNGLEPLANKS": {
+            "one": "brown",
+            "many": "light brown"
+        },
+        "LIGHTASH": {
+            "one": "gray",
+            "many": "gray"
+        },
+        "LIGHTBLUE": {
+            "one": "gray",
+            "many": "blue-gray"
+        },
+        "LIGHTBLUEGLAZEDTERRACOTTA": {
+            "one": "blue",
+            "many": "light blue"
+        },
+        "LIGHTBROWNSILLY": {
+            "one": "brown",
+            "many": "light brown"
+        },
+        "LIGHTCHOCOLATE": {
+            "one": "brown",
+            "many": "light chocolate"
+        },
+        "LIGHTCINNAMON": {
+            "one": "brown",
+            "many": "light cinnamon"
+        },
+        "LIGHTCREAM": {
+            "one": "cream",
+            "many": "light cream"
+        },
+        "LIGHTFAWN": {
+            "one": "brown",
+            "many": "light fawn"
+        },
+        "LIGHTGINGER": {
+            "one": "ginger",
+            "many": "light ginger"
+        },
+        "LIGHTGOLD": {
+            "one": "golden",
+            "many": "light golden"
+        },
+        "LIGHTGRAYGLAZEDTERRACOTTA": {
+            "one": "gray",
+            "many": "gray and teal"
+        },
+        "LIGHTGREEN": {
+            "one": "green",
+            "many": "light green"
+        },
+        "LIGHTGREY": {
+            "one": "gray",
+            "many": "light gray"
+        },
+        "LIGHTLILAC": {
+            "one": "gray",
+            "many": "lilac-gray"
+        },
+        "LIGHTLIME": {
+            "one": "green",
+            "many": "pale green"
+        },
+        "LIGHTORANGE": {
+            "one": "ginger",
+            "many": "orange"
+        },
+        "LIGHTRED": {
+            "one": "ginger",
+            "many": "dark ginger"
+        },
+        "LIGHTSLATE": {
+            "one": "gray",
+            "many": "slate-gray"
+        },
+        "LILACSILLY": {
+            "one": "gray",
+            "many": "lilac-gray"
+        },
+        "LIMEGLAZEDTERRACOTTA": {
+            "one": "green",
+            "many": "lime green and yellow"
+        },
+        "MAGENTA": {
+            "one": "pink",
+            "many": "magenta"
+        },
+        "MAGENTAGLAZEDTERRACOTTA": {
+            "one": "pink",
+            "many": "bright pink"
+        },
+        "MAGENTAHETA": {
+            "one": "pink",
+            "many": "magenta"
+        },
+        "MANGROVELOG": {
+            "one": "brown",
+            "many": "brown"
+        },
+        "MANGROVEPLANKS": {
+            "one": "ginger",
+            "many": "dark ginger"
+        },
+        "MINTBLUES": {
+            "one": "blue",
+            "many": "cyan"
+        },
+        "MINTGREEN": {
+            "one": "green",
+            "many": "mint green"
+        },
+        "MULBERRY": {
+            "one": "purple",
+            "many": "violet"
+        },
+        "MUSHROOMINSIDE": {
+            "one": "brown",
+            "many": "pale brown"
+        },
+        "MUSHROOMSTEM": {
+            "one": "white",
+            "many": "white"
+        },
+        "NAVYBLUE": {
+            "one": "blue",
+            "many": "navy blue"
+        },
+        "NAVYBROWN": {
+            "one": "brown",
+            "many": "blue-brown"
+        },
+        "NAVYH": {
+            "one": "blue",
+            "many": "navy blue"
+        },
+        "NAVYHETA": {
+            "one": "blue",
+            "many": "blue"
+        },
+        "NEONGREEN": {
+            "one": "green",
+            "many": "pale green"
+        },
+        "NEONRED": {
+            "one": "brown",
+            "many": "mottled brown"
+        },
+        "NEONTEAL": {
+            "one": "blue",
+            "many": "mint-blue"
+        },
+        "NEONYELLOW": {
+            "one": "yellow",
+            "many": "pale yellow"
+        },
+        "OAKLOG": {
+            "one": "brown",
+            "many": "brown"
+        },
+        "OAKPLANKS": {
+            "one": "brown",
+            "many": "light brown"
+        },
+        "OBSIDIAN": {
+            "one": "black",
+            "many": "black and dark purple"
+        },
+        "OBSIDIANSTER": {
+            "one": "black",
+            "many": "black"
+        },
+        "OCEAN": {
+            "one": "blue",
+            "many": "cyan and brown"
+        },
+        "OCEANPEPPER": {
+            "one": "blue",
+            "many": "bright blue"
+        },
+        "ORANGE": {
+            "one": "orange",
+            "many": "orange"
+        },
+        "ORANGEGLAZEDTERRACOTTA": {
+            "one": "orange",
+            "many": "orange and teal"
+        },
+        "ORANGEH": {
+            "one": "orange",
+            "many": "bright orange"
+        },
+        "ORANGEHETA": {
+            "one": "ginger",
+            "many": "pale ginger"
+        },
+        "ORCHID": {
+            "one": "purple",
+            "many": "bright purple"
+        },
+        "OURPLE": {
+            "one": "purple",
+            "many": "purple and orange"
+        },
+        "OXIDIZED COPPER": {
+            "one": "copper",
+            "many": "copper"
+        },
+        "PALEASH": {
+            "one": "gray",
+            "many": "pale ash-gray"
+        },
+        "PALEBLUE": {
+            "one": "gray",
+            "many": "pale blue-gray"
+        },
+        "PALEBLUE-GOLD": {
+            "one": "orange",
+            "many": "pale blue and gold"
+        },
+        "PALEBLUE-INDIGO": {
+            "one": "indigo",
+            "many": "pale indigo"
+        },
+        "PALEBLUE-YELLOW": {
+            "one": "blue",
+            "many": "pale blue and yellow"
+        },
+        "PALEBROWN": {
+            "one": "brown",
+            "many": "pale brown"
+        },
+        "PALECHOCOLATE": {
+            "one": "brown",
+            "many": "pale chocolate"
+        },
+        "PALECINNAMON": {
+            "one": "brown",
+            "many": "pale cinnamon"
+        },
+        "PALECREAM": {
+            "one": "cream",
+            "many": "pale cream"
+        },
+        "PALECYAN-BLUE": {
+            "one": "blue",
+            "many": "mint-blue and indigo"
+        },
+        "PALECYAN-GOLD": {
+            "one": "blue",
+            "many": "pale cyan"
+        },
+        "PALECYAN-NAVY": {
+            "one": "blue",
+            "many": "mint-blue and indigo"
+        },
+        "PALECYAN-PURPLE": {
+            "one": "blue",
+            "many": "mint-blue and purple"
+        },
+        "PALEFAWN": {
+            "one": "cream",
+            "many": "pale fawn"
+        },
+        "PALEGINGERMIMI": {
+            "one": "ginger",
+            "many": "pale ginger"
+        },
+        "PALEGOLD": {
+            "one": "golden",
+            "many": "pale golden"
+        },
+        "PALEGREEN-BLUE": {
+            "one": "green",
+            "many": "mint-green and purple"
+        },
+        "PALEGREEN-INDIGO": {
+            "one": "green",
+            "many": "mint-green and purple"
+        },
+        "PALEGREEN-NAVY": {
+            "one": "green",
+            "many": "mint-green and navy"
+        },
+        "PALEGREY-PINK": {
+            "one": "pink",
+            "many": "gray and pink"
+        },
+        "PALEGREYSTER": {
+            "one": "gray",
+            "many": "pale gray"
+        },
+        "PALELILAC": {
+            "one": "gray",
+            "many": "pale lilac-gray"
+        },
+        "PALEMINT-MAGENTA": {
+            "one": "purple",
+            "many": "mint-blue and magenta"
+        },
+        "PALEMINT-PURPLE": {
+            "one": "purple",
+            "many": "mint-blue and pink"
+        },
+        "PALEMINT-VIOLET": {
+            "one": "purple",
+            "many": "mint-blue and violet"
+        },
+        "PALEORANGE": {
+            "one": "ginger",
+            "many": "pale orange"
+        },
+        "PALEORANGE-BLUE": {
+            "one": "orange",
+            "many": "pale orange and blue"
+        },
+        "PALEPINK-PURPLE": {
+            "one": "pink",
+            "many": "pale pink and purple"
+        },
+        "PALEPINKPURPLE": {
+            "one": "pink",
+            "many": "pale pink-purple"
+        },
+        "PALEPURPLE-GOLD": {
+            "one": "purple",
+            "many": "pale purple and gold"
+        },
+        "PALERED": {
+            "one": "ginger",
+            "many": "pale red"
+        },
+        "PALESLATE": {
+            "one": "gray",
+            "many": "pale slate-gray"
+        },
+        "PALEYELLOW-BLUE": {
+            "one": "yellow",
+            "many": "pale yellow and blue"
+        },
+        "PALEYELLOW-INDIGO": {
+            "one": "yellow",
+            "many": "pale yellow and indigo"
+        },
+        "PALEYELLOWGREEN": {
+            "one": "green",
+            "many": "pale yellow-green"
+        },
+        "PASTELPINKBLUE": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "PASTELPURPLEH": {
+            "one": "pink",
+            "many": "magenta"
+        },
+        "PINK": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "PINK-BLUE": {
+            "one": "pink",
+            "many": "bright pink"
+        },
+        "PINK-WHITE": {
+            "one": "silver",
+            "many": "silver and pink"
+        },
+        "PINKCREAM": {
+            "one": "pink",
+            "many": "light pink"
+        },
+        "PINKGLAZEDTERRACOTTA": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "PINKGREY": {
+            "one": "pink",
+            "many": "pink-gray"
+        },
+        "PINKH": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "PINKHETA": {
+            "one": "pink",
+            "many": "magenta"
+        },
+        "PINKK": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "PINKREDS": {
+            "one": "pink",
+            "many": "magenta"
+        },
+        "PINKSHADOW": {
+            "one": "pink",
+            "many": "dark pink and purple"
+        },
+        "PURPLE": {
+            "one": "purple",
+            "many": "pink-purple"
+        },
+        "PURPLECREAM": {
+            "one": "cream",
+            "many": "cream"
+        },
+        "PURPLEGLAZEDTERRACOTTA": {
+            "one": "purple",
+            "many": "purple and black"
+        },
+        "PURPLEH": {
+            "one": "purple",
+            "many": "purple"
+        },
+        "PURPLEHETA": {
+            "one": "purple",
+            "many": "light indigo"
+        },
+        "PURPLESWIRL": {
+            "one": "purple",
+            "many": "dark violet"
+        },
+        "PURPLEH": {
+            "one": "purple",
+            "many": "purple"
+        },
+        "PURPUR": {
+            "one": "purple",
+            "many": "pale purple"
+        },
+        "QUARTZ": {
+            "one": "white",
+            "many": "white"
+        },
+        "RAINBOW": {
+            "one": "rainbow",
+            "many": "rainbow"
+        },
+        "RED": {
+            "one": "red",
+            "many": "red"
+        },
+        "RED-ORANGES": {
+            "one": "orange",
+            "many": "orange"
+        },
+        "RED-BLACK": {
+            "one": "red",
+            "many": "neon red"
+        },
+        "REDBLUE": {
+            "one": "purple",
+            "many": "red and blue"
+        },
+        "REDBLUEBLACK": {
+            "one": "purple",
+            "many": "red and blue"
+        },
+        "REDCYANS": {
+            "one": "red",
+            "many": "red and cyan"
+        },
+        "REDGLAZEDTERRACOTTA": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDGREY": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDH": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDHETA": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDK": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDMIMI": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDMUSHROOM": {
+            "one": "red",
+            "many": "red and white"
+        },
+        "REDPEPPER": {
+            "one": "red",
+            "many": "neon red"
+        },
+        "REDS": {
+            "one": "red",
+            "many": "red"
+        },
+        "REDSTAIN": {
+            "one": "white",
+            "many": "red-white"
+        },
+        "REVERSERAINBOW": {
+            "one": "rainbow",
+            "many": "rainbow"
+        },
+        "REVSERSESUN": {
+            "one": "orange",
+            "many": "sunset-orange"
+        },
+        "ROSE": {
+            "one": "pink",
+            "many": "bright pink"
+        },
+        "ROSEH": {
+            "one": "pink",
+            "many": "pale pink"
+        },
+        "RUSSET": {
+            "one": "ginger",
+            "many": "dark ginger"
+        },
+        "RUSTBLUEPEPPER": {
+            "one": "pink",
+            "many": "bright pink and cyan"
+        },
+        "RUSTYGREEN": {
+            "one": "green",
+            "many": "pale brown-green"
+        },
+        "RUSTYS": {
+            "one": "red",
+            "many": "red"
+        },
+        "SCARLETPEPPER": {
+            "one": "pink",
+            "many": "bright pink"
+        },
+        "SCARLETPINK": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "SHADOW": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "SILVERBLUE": {
+            "one": "silver",
+            "many": "blue-silver"
+        },
+        "SILVERCHOCOLATE": {
+            "one": "silver",
+            "many": "chocolate-silver"
+        },
+        "SILVERCINNAMON": {
+            "one": "silver",
+            "many": "cinnamon-silver"
+        },
+        "SILVERCREAM": {
+            "one": "silver",
+            "many": "cream-silver"
+        },
+        "SILVERFAWN": {
+            "one": "silver",
+            "many": "fawn-silver"
+        },
+        "SILVERGOLD": {
+            "one": "silver",
+            "many": "golden-silver"
+        },
+        "SILVERGREY": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "SILVERMETEOR": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "SILVERMIMI": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "SILVERNAVY": {
+            "one": "silver",
+            "many": "brown and silver"
+        },
+        "SILVERORANGE": {
+            "one": "silver",
+            "many": "orange-silver"
+        },
+        "SILVERRED": {
+            "one": "silver",
+            "many": "red-silver"
+        },
+        "SILVERSLATE": {
+            "one": "silver",
+            "many": "silver"
+        },
+        "SLATE": {
+            "one": "gray",
+            "many": "gray"
+        },
+        "SPRUCELOG": {
+            "one": "brown",
+            "many": "dark brown"
+        },
+        "SPRUCEPLANKS": {
+            "one": "brown",
+            "many": "brown"
+        },
+        "SUNNYS": {
+            "one": "yellow",
+            "many": "yellow and orange"
+        },
+        "SUNRISE": {
+            "one": "orange",
+            "many": "sunset orange"
+        },
+        "SUNSET": {
+            "one": "orange",
+            "many": "sunset pink"
+        },
+        "SUNSHINE": {
+            "one": "golden",
+            "many": "golden"
+        },
+        "SUNYELLOW": {
+            "one": "yellow",
+            "many": "pale yellow and blue"
+        },
+        "TANSPOTTED": {
+            "one": "brown",
+            "many": "silver and brown"
+        },
+        "TEAL": {
+            "one": "green",
+            "many": "teal"
+        },
+        "TEALH": {
+            "one": "green",
+            "many": "teal"
+        },
+        "THISTLE": {
+            "one": "pink",
+            "many": "pink"
+        },
+        "TREE": {
+            "one": "green",
+            "many": "green and brown"
+        },
+        "VIOLETBLUSH": {
+            "one": "purple",
+            "many": "purple and pink"
+        },
+        "VIOLETH": {
+            "one": "purple",
+            "many": "violet"
+        },
+        "VIOLETHETA": {
+            "one": "purple",
+            "many": "purple"
+        },
+        "WARMBLUE": {
+            "one": "brown",
+            "many": "gray and brown"
+        },
+        "WARPEDPLANKS": {
+            "one": "blue",
+            "many": "teal"
+        },
+        "WARPEDSTEM": {
+            "one": "purple",
+            "many": "purple and teal"
+        },
+        "WEATHEREDCOPPER": {
+            "one": "copper",
+            "many": "copper"
+        },
+        "WHITEGLAZEDTERRACOTTA": {
+            "one": "white",
+            "many": "white and blue"
+        },
+        "WHITEGREENS": {
+            "one": "white",
+            "many": "white and green"
+        },
+        "WHITESTER": {
+            "one": "white",
+            "many": "white"
+        },
+        "YELLOW-RED": {
+            "one": "yellow",
+            "many": "yellow and red"
+        },
+        "YELLOWBROWN": {
+            "one": "brown",
+            "many": "yellow-brown"
+        },
+        "YELLOWGLAZREDTERRACOTTA": {
+            "one": "yellow",
+            "many": "yellow"
+        },
+        "YELLOWH": {
+            "one": "ginger",
+            "many": "ginger"
+        },
+        "YELLOWHETA": {
+            "one": "cream",
+            "many": "cream"
+        },
         "SingleColour": "single color",
         "SingleColour_long": "%{color}",
         "TwoColour": "two color",
@@ -126,54 +1350,6 @@
         "fur_short": "short",
         "fur_medium": "medium",
         "fur_long": "long",
-        "Sterspeckled": "speckled c_n",
-            "Sillyspeckled": "speckled c_n",
-            "Dancespeckled": "speckled c_n",
-            "Mimispeckled": "speckled c_n",
-            "Sterbengal": "unusually dappled c_n",
-            "Sillybengal": "unusually dappled c_n",
-            "Dancebengal": "unusually dappled c_n",
-            "Mimibengal": "unusually dappled c_n",
-            "Stermarbled": "c_n tabby",
-            "Sillymarbled": "c_n tabby",
-            "Dancemarbled": "c_n tabby",
-            "Mimimarbled": "c_n tabby",
-            "Stersmoke": "c_n smoke",
-            "Sillysmoke": "c_n smoke",
-            "Dancesmoke": "c_n smoke",
-            "Mimismoke": "c_n smoke",
-            "Stermackerel": "c_n tabby",
-            "Sillymackerel": "c_n tabby",
-            "Dancemackerel": "c_n tabby",
-            "Mimimackerel": "c_n tabby",
-            "Sterclassic": "c_n tabby",
-            "Sillyclassic": "c_n tabby",
-            "Danceclassic": "c_n tabby",
-            "Mimiclassic": "c_n tabby",
-            "Steragouti": "c_n tabby",
-            "Sillyagouti": "c_n tabby",
-            "Danceagouti": "c_n tabby",
-            "Mimiagouti": "c_n tabby",
-            "Sterstripe": "dorsal-striped c_n",
-            "Sillystripe": "dorsal-striped c_n",
-            "Dancestripe": "dorsal-striped c_n",
-            "Mimistripe": "dorsal-striped c_n",
-            "Sterrosette": "unusually spotted c_n",
-            "Sillyrosette": "unusually spotted c_n",
-            "Dancerosette": "unusually spotted c_n",
-            "Mimirosette": "unusually spotted c_n",
-            "Stersokoke": "c_n tabby",
-            "Sillysokoke": "c_n tabby",
-            "Dancesokoke": "c_n tabby",
-            "Mimisokoke": "c_n tabby",
-            "Stermasked": "masked c_n tabby",
-            "Sillymasked": "masked c_n tabby",
-            "Dancemasked": "masked c_n tabby",
-            "Mimimasked": "masked c_n tabby",
-            "Mimisingle": "single color c_n",
-            "Stersingle": "single-striped c_n",
-            "Sillysingle": "single color c_n",
-            "Dancesingle": "single color c_n",
             "Maned": "oddly caped c_n",
             "Ocelot": "oddly dappled c_n",
             "Lynx": "flecked c_n",
@@ -197,54 +1373,6 @@
             "PinstripeTabby": "strangely striped c_n",
             "Snowflake": "oddly dappled c_n",
             "Stain": "stained c_n",
-            "Sterspeckled_long": "speckled %{color}",
-            "Sillyspeckled_long": "speckled %{color}",
-            "Dancespeckle_long": "speckled %{color}",
-            "Mimispeckled_long": "speckled %{color}",
-            "Sterbengal_long": "unusually dappled %{color}",
-            "Sillybengal_long": "unusually dappled %{color}",
-            "Dancebengal_long": "unusually dappled %{color}",
-            "Mimibengal_long": "unusually dappled %{color}",
-            "Stermarbled_long": "%{color} tabby",
-            "Sillymarbled_long": "%{color} tabby",
-            "Dancemarbled_long": "%{color} tabby",
-            "Mimimarbled_long": "%{color} tabby",
-            "Stersmoke_long": "%{color} smoke",
-            "Sillysmoke_long": "%{color} smoke",
-            "Dancesmoke_long": "%{color} smoke",
-            "Mimismoke_long": "%{color} smoke",
-            "Stermackerel_long": "%{color} tabby",
-            "Sillymackerel_long": "%{color} tabby",
-            "Dancemackerel_long": "%{color} tabby",
-            "Mimimackerel_long": "%{color} tabby",
-            "Sterclassic_long": "%{color} tabby",
-            "Sillyclassic_long": "%{color} tabby",
-            "Danceclassic_long": "%{color} tabby",
-            "Mimiclassic_long": "%{color} tabby",
-            "Steragouti_long": "%{color} tabby",
-            "Sillyagouti_long": "%{color} tabby",
-            "Danceagouti_long": "%{color} tabby",
-            "Mimiagouti_long": "%{color} tabby",
-            "Sterstripe_long": "dorsal-striped %{color}",
-            "Sillystripe_long": "dorsal-striped %{color}",
-            "SillySingle_long": "single color %{color}",
-            "DanceSingle_long": "single color %{color}",
-            "Dancestripe_long": "dorsal-striped %{color}",
-            "Mimistripe_long": "dorsal-striped %{color}",
-            "Sterrosette_long": "unusually dappled %{color}",
-            "Sillyrosette_long": "unusually dappled %{color}",
-            "Dancerosette_long": "unusually dappled %{color}",
-            "Mimirosette_long": "unusually dappled %{color}",
-            "Stersokoke_long": "%{color} tabby",
-            "Sillysokoke_long": "%{color} tabby",
-            "Dancesokoke_long": "%{color} tabby",
-            "Mimisokoke_long": "%{color} tabby",
-            "Stermasked_long": "masked %{color} tabby",
-            "Sillymasked_long": "masked %{color} tabby",
-            "Dancemasked_long": "masked %{color} tabby",
-            "Mimimasked_long": "masked %{color} tabby",
-            "MimiSingle_long": "single color %color",
-            "SterSingle_long": "single-striped %color",
             "Maned_long": "oddly caped %{color}",
             "Ocelot_long": "oddly dappled%{color}",
             "Lynx_long": "flecked %{color}",
@@ -268,66 +1396,6 @@
             "PinstripeTabby_long": "strangely striped %{color}",
             "Snowflake_long": "oddly dappled %{color}",
             "Stain_long": "stained %{color}",
-        "CSSingleColour": "single color",
-        "CSSingleColour_long": "unnaturally colorful",
-        "CSTwoColour": "two color",
-        "CSTwoColour_long": "unnaturally colorful",
-        "CSTabby": "tabby",
-        "CSTabby_long": "unnaturally colorful tabby",
-        "CSSpeckled": "speckled",
-        "CSSpeckled_long": "speckled unnaturally colorful",
-        "CSBengal": "bengal",
-        "CSBengal_long": "unusually dappled unnaturally colorful",
-        "CSMarbled": "marbled",
-        "CSMarbled_long": "unnaturally colorful tabby",
-        "CSTicked": "ticked",
-        "CSTicked_long": "unnaturally colorful ticked",
-        "CSSmoke": "smoke",
-        "CSSmoke_long": "unnaturally colorful smoke",
-        "CSMackerel": "mackerel",
-        "CSMackerel_long": "unnaturally colorful tabby",
-        "CSClassic": "classic",
-        "CSClassic_long": "unnaturally colorful tabby",
-        "CSAgouti": "agouti",
-        "CSAgouti_long": "unnaturally colorful tabby",
-        "CSSinglestripe": "single-striped",
-        "CSSinglestripe_long": "dorsal-striped unnaturally colorful",
-        "CSRosette": "Rosette",
-        "CSRosette_long": "unusually spotted unnaturally colorful",
-        "CSSokoke": "Sokoke",
-        "CSSokoke_long": "unnaturally colorful tabby",
-        "CSMasked": "Masked",
-        "CSMasked_long": "masked unnaturally colorful tabby",
-        "CS2SingleColour": "single color",
-        "CS2SingleColour_long": "unnaturally colorful",
-        "CS2TwoColour": "two color",
-        "CS2TwoColour_long": "unnaturally colorful",
-        "CS2Tabby": "tabby",
-        "CS2Tabby_long": "unnaturally colorful tabby",
-        "CS2Speckled": "speckled",
-        "CS2Speckled_long": "speckled unnaturally colorful",
-        "CS2Bengal": "bengal",
-        "CS2Bengal_long": "unusually dappled unnaturally colorful",
-        "CS2Marbled": "marbled",
-        "CS2Marbled_long": "unnaturally colorful tabby",
-        "CS2Ticked": "ticked",
-        "CS2Ticked_long": "unnaturally colorful ticked",
-        "CS2Smoke": "smoke",
-        "CS2Smoke_long": "unnaturally colorful smoke",
-        "CS2Mackerel": "mackerel",
-        "CS2Mackerel_long": "unnaturally colorful tabby",
-        "CS2Classic": "classic",
-        "CS2Classic_long": "unnaturally colorful tabby",
-        "CS2Agouti": "agouti",
-        "CS2Agouti_long": "unnaturally colorful tabby",
-        "CS2Singlestripe": "single-striped",
-        "CS2Singlestripe_long": "dorsal-striped unnaturally colorful",
-        "CS2Rosette": "Rosette",
-        "CS2Rosette_long": "unusually spotted unnaturally colorful",
-        "CS2Sokoke": "Sokoke",
-        "CS2Sokoke_long": "unnaturally colorful tabby",
-        "CS2Masked": "Masked",
-        "CS2Masked_long": "masked unnaturally colorful tabby",
         "Ncrestedcaracara_long": "oddly spotted %{color}",
         "Ncrestedcaracara": "oddly spotted c_n",
         "Dot": "strangely dappled c_n",
