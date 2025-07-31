@@ -78,6 +78,15 @@ class Screens:
             "see kits screen",
             "mediation screen",
             "change gender screen",
+            "customize cat screen",
+            "customize stats screen",
+            "caretaker screen",
+            "storyteller screen",
+            "gardener screen",
+            "choose bestie screen",
+            "choose enemy screen",
+            "modify orientation screen",
+            "predict offspring screen",
         ]:
             game.last_list_forProfile = None
             self.current_group = "your_clan"
