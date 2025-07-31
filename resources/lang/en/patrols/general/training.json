@@ -459,7 +459,7 @@
                 ]
             },
             {
-                "text": "With the patrol ranged around {PRONOUN/s_c/object} in a loose circle, s_c teases that maybe {PRONOUN/s_c/subject} {VERB/s_c/do/does}n't want to tell a story, for once! But no, no, they're happy to entertain and teach their Clanmates - has anyone heard of story_list?",
+                "text": "With the patrol ranged around {PRONOUN/s_c/object} in a loose circle, s_c teases that maybe {PRONOUN/s_c/subject} {VERB/s_c/don't/doesn't} want to tell a story, for once! But no, no, they're happy to entertain and teach their Clanmates - has anyone heard of story_list?",
                 "exp": 20,
                 "weight": 40,
                 "stat_skill": [
@@ -606,7 +606,7 @@
                 ]
             },
             {
-                "text": "No one means to, but... well... the pair drifts off into a nap, lured by the sun. Untethered by normal limitations, s_c's spirit wanders from {PRONOUN/s_c/poss} own mindscape, picking up dream_list from {PRONOUN/s_c/poss} sleeping training partner like burrs on a pelt.",
+                "text": "No one means to, but... well... the pair drifts off into a nap, lured by the sun. Untethered by normal limitations, s_c's spirit wanders from {PRONOUN/s_c/poss} own mindscape, picking up dream_list/s_c from {PRONOUN/s_c/poss} sleeping training partner like burrs on a pelt.",
                 "exp": 30,
                 "weight": 40,
                 "can_have_stat": ["any"],
@@ -1812,7 +1812,7 @@
                 ]
             },
             {
-                "text": "r_c asks what they should do - but s_c doesn't care! {PRONOUN/s_c/subject/CAP} {VERB/s_c/do/does}n't want to lead this, to be the <i>leader</i> here. Please, for this afternoon, {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} just another Clanmate. And it's such a welcome break from {PRONOUN/s_c/poss} responsibilities, laughing and playing with the other cats till dusk, carefree and unburdened.",
+                "text": "r_c asks what they should do - but s_c doesn't care! {PRONOUN/s_c/subject/CAP} {VERB/s_c/don't/doesn't} want to lead this, to be the <i>leader</i> here. Please, for this afternoon, {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} just another Clanmate. And it's such a welcome break from {PRONOUN/s_c/poss} responsibilities, laughing and playing with the other cats till dusk, carefree and unburdened.",
                 "exp": 40,
                 "weight": 20,
                 "can_have_stat":["p_l"],
@@ -2543,6 +2543,9 @@
                     "compassionate",
                     "faithful",
                     "loving",
+                    "responsible",
+                    "thoughtful",
+                    "wise",
                     "bubbly",
                     "nurturing",
                     "sappy",
@@ -5765,7 +5768,7 @@
                 ]
             },
             {
-                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/do/does}n't mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that any Clanmate could use to top up the fresh-kill pile.",
+                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/don't/doesn't} mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that any Clanmate could use to top up the fresh-kill pile.",
                 "exp": 40,
                 "weight": 40,
                 "stat_skill": ["HUNTER,3"],
@@ -6050,7 +6053,7 @@
                 ]
             },
             {
-                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/do/does}n't mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that could be used to top up the fresh-kill pile.",
+                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/don't/doesn't} mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that could be used to top up the fresh-kill pile.",
                 "exp": 40,
                 "weight": 40,
                 "stat_skill": ["HUNTER,3"],
@@ -6303,7 +6306,7 @@
                 ]
             },
             {
-                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/do/does}n't mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that could be used to top up the fresh-kill pile.",
+                "text": "As one of the undisputed best hunters in c_n, possibly in generations, s_c is definitely the cat to come to for hunting advice. {PRONOUN/s_c/subject/CAP} {VERB/s_c/don't/doesn't} mind sharing some of {PRONOUN/s_c/poss} more useful little tricks that could be used to top up the fresh-kill pile.",
                 "exp": 40,
                 "weight": 40,
                 "stat_skill": ["HUNTER,3"],
@@ -7491,7 +7494,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "No matter how patiently p_l tries to teach app1 how to firmly, but gently, gather and shred the moss, {PRONOUN/app1/subject} {VERB/app1/do/does}n't seem to be paying any attention. Frustrated with {PRONOUN/app1/object}, p_l decides to have a talk with the leader upon their return to camp.",
+                "text": "No matter how patiently p_l tries to teach app1 how to firmly, but gently, gather and shred the moss, {PRONOUN/app1/subject} {VERB/app1/don't/doesn't} seem to be paying any attention. Frustrated with {PRONOUN/app1/object}, p_l decides to have a talk with the leader upon their return to camp.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
@@ -10140,7 +10143,7 @@
                 "weight": 20
             },
             {
-                "text": "{PRONOUN/p_l/subject/CAP} {VERB/p_l/do/does}n't know what it means - {PRONOUN/p_l/subject} <i>never</i> {VERB/p_l/know/knows} what it means, and p_l curses the stars as {PRONOUN/p_l/subject} {VERB/p_l/rise/rises} to {PRONOUN/p_l/poss} feet, apologizing profusely for disrupting the patrol.",
+                "text": "{PRONOUN/p_l/subject/CAP} {VERB/p_l/don't/doesn't} know what it means - {PRONOUN/p_l/subject} <i>never</i> {VERB/p_l/know/knows} what it means, and p_l curses the stars as {PRONOUN/p_l/subject} {VERB/p_l/rise/rises} to {PRONOUN/p_l/poss} feet, apologizing profusely for disrupting the patrol.",
                 "exp": 30,
                 "weight": 5
             }
@@ -10737,7 +10740,7 @@
                 ]
             },
             {
-                "text": "app1 knows that app2 isn't well-liked in the den for {PRONOUN/app2/poss} attitude. However, {PRONOUN/app1/subject} {VERB/app1/do/does}n't think app2 is a bad cat. {PRONOUN/app2/subject/CAP} just {VERB/app2/need/needs} someone to believe in {PRONOUN/app2/object}. Well, let app1 be that someone. {PRONOUN/app1/subject/CAP} agrees with app2. app2 is skeptically surprised by app1's vote of confidence but is happy to lead the patrol. app1 comes home with enough prey for the queens and elders and is rewarded with a nod from {PRONOUN/app1/poss} mentor.",
+                "text": "app1 knows that app2 isn't well-liked in the den for {PRONOUN/app2/poss} attitude. However, {PRONOUN/app1/subject} {VERB/app1/don't/doesn't} think app2 is a bad cat. {PRONOUN/app2/subject/CAP} just {VERB/app2/need/needs} someone to believe in {PRONOUN/app2/object}. Well, let app1 be that someone. {PRONOUN/app1/subject/CAP} agrees with app2. app2 is skeptically surprised by app1's vote of confidence but is happy to lead the patrol. app1 comes home with enough prey for the queens and elders and is rewarded with a nod from {PRONOUN/app1/poss} mentor.",
                 "exp": 15,
                 "weight": 20,
                 "stat_skill": ["SENSE,0", "MEDIATOR,0","ASSIST,0"],
@@ -11980,6 +11983,8 @@
             "text": "p_l waggles {PRONOUN/p_l/poss} haunches and dares r_c and s_c to come at {PRONOUN/p_l/object}. The three cats tussle until r_c distracts p_l with a sheathed strike to {PRONOUN/p_l/poss} ear, and s_c pins {PRONOUN/p_l/object} down. They congratulate each other as they head back to camp.",
             "exp": 5,
         "weight": 20,
+        "stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
+        "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
                     "cats_to": ["patrol"],
@@ -11992,9 +11997,11 @@
         "art": "train_general_intro"
 },
 {
-    "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. Though s_c does {PRONOUN/s_c/poss} best, {PRONOUN/s_c/subject} {VERB/s_c/do/does}n't stand much of a chance against two of {PRONOUN/s_c/poss} Clanmates.",
+    "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. Though s_c does {PRONOUN/s_c/poss} best, {PRONOUN/s_c/subject} {VERB/s_c/don't/doesn't} stand much of a chance against two of {PRONOUN/s_c/poss} Clanmates.",
     "exp": 5,
 "weight": 20,
+"stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
+    "can_have_stat": ["not_pl_rc"],
     "relationships": [
 {
             "cats_to": ["patrol"],
@@ -12010,6 +12017,8 @@
     "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. s_c tries to keep {PRONOUN/s_c/poss} eyes on both {PRONOUN/s_c/poss} Clanmates at once, but p_l and r_c find a rhythm together, and s_c can't keep up. After the match, p_l and r_c agree they'll have to try some of these moves in a future skirmish.",
     "exp": 5,
 "weight": 20,
+"stat_trait": ["troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"],
+    "can_have_stat": ["not_pl_rc"],
     "relationships": [
 {
             "cats_to": ["patrol"],
@@ -12256,6 +12265,10 @@
         "text": "p_l suggests that {PRONOUN/p_l/subject} and r_c team up against s_c. As soon as they attack, s_c turns tail and sprints off. When p_l calls {PRONOUN/s_c/object} back, confused, {PRONOUn/s_c/subject} {VERB/s_c/explain/explains} that's what {PRONOUN/s_c/subject}'d do if {PRONOUN/s_c/subject} were outnumbered in a fight. p_l sighs.",
         "exp": 0,
         "weight": 40,
+        "stat_trait": [
+        "troublesome", "lonesome", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "confident", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"
+    ],
+        "can_have_stat": ["not_pl_rc"],
         "relationships": [
     {
                 "cats_to": [ "s_c" ],
@@ -12271,6 +12284,10 @@
             "text": "p_l and r_c team up against s_c and thrash {PRONOUN/s_c/object} easily. While p_l and r_c congratulate each other, s_c silently stews over this unfair, unbalanced training exercise. {PRONOUN/s_c/poss/CAP} Clanmates don't notice {PRONOUN/s_c/poss} bad mood, which only makes {PRONOUN/s_c/object} more irritable.",
             "exp": 0,
             "weight": 20,
+            "stat_trait": [
+            "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "playful", "charismatic", "bold", "daring", "nervous", "righteous", "insecure", "strict", "compassionate", "thoughtful", "ambitious", "confident", "adventurous", "calm", "careful", "faithful", "loving", "loyal", "responsible", "shameless", "sneaky", "strange", "vengeful", "wise", "arrogant", "competitive", "grumpy", "cunning", "oblivious", "gloomy", "sincere", "flamboyant", "rebellious"
+        ],
+            "can_have_stat": ["not_pl_rc"],
             "relationships": [
         {
                     "cats_to": [ "p_l", "r_c" ],
@@ -12341,6 +12358,10 @@
                 "text": "p_l and r_c team up against s_c, and everything goes well until s_c shoves p_l off {PRONOUN/s_c/object} a little too vigorously and p_l yelps in pain as {PRONOUN/p_l/subject} {VERB/p_l/hit/hits} the ground. Then r_c and s_c team up - to help p_l limp back to camp.",
                 "exp": 0,
                 "weight": 20,
+                "stat_trait": [
+                "troublesome", "lonesome", "fierce", "bloodthirsty", "cold", "childish", "bold", "daring", "righteous", "insecure", "strict", "ambitious", "confident", "adventurous", "faithful", "loyal", "shameless", "sneaky", "strange", "vengeful", "arrogant", "competitive", "grumpy", "gloomy", "sincere", "flamboyant", "rebellious"
+            ],
+                "can_have_stat": ["not_pl_rc"],
             "injury": [
                 {
                     "cats": [ "p_l" ],
