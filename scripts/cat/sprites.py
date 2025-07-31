@@ -130,7 +130,7 @@ class Sprites:
             "blep", "booties", "wheels", "disabilityaccs", "disabilityscars",
             "eyes", "eyes2", "skin", "skin_magic", "skin_elemental", "skin_bingle", "skin_bingle2", "skin_mathkangaroo", "eyesdark", "dark2", "eyesvivid", "vivid2", "towheeeyes", "towheeeyes2",
             "scars", "missingscars", "wild", "eyes_wing", "eyes2_halo", "colorsplash_neckerchief", "colorsplash_witchhat", "skin_stain", "skin_turtle", "eyes_snail",
-            "medcatherbs", "beetleeyes", "beetleeyes2", "beetlemore", "beetlemore2", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
+            "medcatherbs", "beetleeyes", "beetleeyes2", "beetlemore", "beetlemore2", "moss_accs", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
             "collars", "bellcollars", "bowcollars", "nyloncollars", "colorsplash_horn", "colorsplash_kitsune", "colorsplash_mermaid",
             "singlecolours", "speckledcolours", "tabbycolours", "bengalcolours", "marbledcolours",
             "rosettecolours", "smokecolours", "tickedcolours", "mackerelcolours", "classiccolours",
@@ -287,7 +287,7 @@ class Sprites:
              'NEON GREEN', 'SEA'],
             ['DISCORD', 'AUTUMN LEAF', 'RUBY', 'PHANTOM', 'RIVER MOSS', 'WICKED']
         ]
-        
+
         cseye_colors = [
             ['BERBERIDA', 'RANUNCULA', 'CAPPARIDA', 'VIOLA', 'FUMARIA', 'PAPAVERA', 'MAGNOLIA'],
             ['POLYGALA', 'RESEDA', 'CISTA', 'NYMPHEA', 'DIPTEROCARPA', 'DILLENIA', 'AMYGDALA'],
@@ -690,25 +690,25 @@ class Sprites:
             ['PINKREDS', 'RUSTYS', 'GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES'],
             ['BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS', 'SUNNYS']
         ]
-        
+
         cs3_color_categories = [
-            ['BERBERIDA', 'RANUNCULA', 'CAPPARIDA', 'VIOLA', 'FUMARIA', 'PAPAVERA', 'MAGNOLIA'], 
-            ['POLYGALA', 'RESEDA', 'CISTA', 'NYMPHEA', 'DIPTEROCARPA', 'DILLENIA', 'AMYGDALA'], 
-            ['ANONA', 'MYRTA', 'TILIA', 'PITTOSPORA', 'MALVA', 'SARRACENIA', 'DROSERA'], 
-            ['HIPPOCASTANA', 'TROPAEOLA', 'PASSIFLORA', 'OLACA', 'CRUCIA', 'LOASA', 'MALPIGHIA'], 
-            ['MESEMBRYA', 'VITA', 'MARCGRAVIA', 'CLUSIA', 'BOMBA', 'SAMYDA', 'BIXA'], 
-            ['GERANIA', 'COMPOSITA', 'RHAMNA', 'OXALIDA', 'ARALIA', 'TEREBINTHA', 'MELIA'], 
-            ['SAXIFRAGA', 'LINA', 'CAPRIFOLIA', 'CARYOPHYLLA', 'LEGUMINOSAE', 'CAMELLIA', 'CACTACEA'], 
-            ['JASMINEA', 'LYTHRA', 'ACANTHA', 'CRASSULA', 'RUBIA', 'HYPERICA', 'LORANTHA'], 
-            ['AURANTIA', 'RHIZOPHORA', 'BORAGINA', 'TAMARICA', 'MELASTOMA', 'LECYTHIDA', 'VALERIANA'], 
-            ['COMBRETA', 'APOCYNA', 'DIPSA', 'STYLIDIA', 'RUTA', 'SOLANA', 'PLUMBAGINA'], 
-            ['LAMIA', 'BEGONIA', 'GROSSULARIA', 'GENTIANA', 'ERICA', 'CAMPANULA', 'POMA'], 
-            ['BIGNONIA', 'AMARANTA', 'VACCINIA', 'ONAGRA', 'PRIMULA', 'SAPOTA', 'LOBELIA'], 
-            ['MYRSINA', 'PORTULA', 'PLANTAGINA', 'ELAEAGNA', 'OLEA', 'POLEMONIA', 'ORCHIDA'], 
-            ['EUPHORBIA', 'SCROPHULARIA', 'CONVOLVULA', 'MUSA', 'UTRICULARIA', 'UMBELLA', 'PROTEA'], 
-            ['GOODENIA', 'THYMELA', 'URTICA', 'OROBANCHA', 'HYDROPHYLLA', 'AMARYLLIDA', 'CONIFERA'], 
-            ['PHYTOLACCA', 'PAEONIA', 'IRIDA', 'DIOSCORA', 'GESNERIA', 'SANTALA', 'HYDROCHARIDA'], 
-            ['ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA'], 
+            ['BERBERIDA', 'RANUNCULA', 'CAPPARIDA', 'VIOLA', 'FUMARIA', 'PAPAVERA', 'MAGNOLIA'],
+            ['POLYGALA', 'RESEDA', 'CISTA', 'NYMPHEA', 'DIPTEROCARPA', 'DILLENIA', 'AMYGDALA'],
+            ['ANONA', 'MYRTA', 'TILIA', 'PITTOSPORA', 'MALVA', 'SARRACENIA', 'DROSERA'],
+            ['HIPPOCASTANA', 'TROPAEOLA', 'PASSIFLORA', 'OLACA', 'CRUCIA', 'LOASA', 'MALPIGHIA'],
+            ['MESEMBRYA', 'VITA', 'MARCGRAVIA', 'CLUSIA', 'BOMBA', 'SAMYDA', 'BIXA'],
+            ['GERANIA', 'COMPOSITA', 'RHAMNA', 'OXALIDA', 'ARALIA', 'TEREBINTHA', 'MELIA'],
+            ['SAXIFRAGA', 'LINA', 'CAPRIFOLIA', 'CARYOPHYLLA', 'LEGUMINOSAE', 'CAMELLIA', 'CACTACEA'],
+            ['JASMINEA', 'LYTHRA', 'ACANTHA', 'CRASSULA', 'RUBIA', 'HYPERICA', 'LORANTHA'],
+            ['AURANTIA', 'RHIZOPHORA', 'BORAGINA', 'TAMARICA', 'MELASTOMA', 'LECYTHIDA', 'VALERIANA'],
+            ['COMBRETA', 'APOCYNA', 'DIPSA', 'STYLIDIA', 'RUTA', 'SOLANA', 'PLUMBAGINA'],
+            ['LAMIA', 'BEGONIA', 'GROSSULARIA', 'GENTIANA', 'ERICA', 'CAMPANULA', 'POMA'],
+            ['BIGNONIA', 'AMARANTA', 'VACCINIA', 'ONAGRA', 'PRIMULA', 'SAPOTA', 'LOBELIA'],
+            ['MYRSINA', 'PORTULA', 'PLANTAGINA', 'ELAEAGNA', 'OLEA', 'POLEMONIA', 'ORCHIDA'],
+            ['EUPHORBIA', 'SCROPHULARIA', 'CONVOLVULA', 'MUSA', 'UTRICULARIA', 'UMBELLA', 'PROTEA'],
+            ['GOODENIA', 'THYMELA', 'URTICA', 'OROBANCHA', 'HYDROPHYLLA', 'AMARYLLIDA', 'CONIFERA'],
+            ['PHYTOLACCA', 'PAEONIA', 'IRIDA', 'DIOSCORA', 'GESNERIA', 'SANTALA', 'HYDROCHARIDA'],
+            ['ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA'],
             ['ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA']
         ]
 
@@ -780,7 +780,6 @@ class Sprites:
         cs3_color_types = ['cs3_agouticolours', 'cs3_bengalcolours', 'cs3_classiccolours', 'cs3_mackerelcolours', 'cs3_marbledcolours', 'cs3_maskedcolours', 'cs3_rosettecolours',
             'cs3_singlecolours', 'cs3_singlestripecolours', 'cs3_smokecolours', 'cs3_sokokecolours', 'cs3_speckledcolours', 'cs3_tabbycolours', 'cs3_tickedcolours']
 
-        
         for row, colors in enumerate(minecraft_color_categories):
             for col, color in enumerate(colors):
                 for color_type in minecraft_color_types:
@@ -866,7 +865,7 @@ class Sprites:
                 for color_type in sparkle_color_types:
                     category = color_type[7:]
                     self.make_group(color_type, (col, row), f'{category[:-7]}{color}')
-                    
+
         for row, colors in enumerate(cs3_color_categories):
             for col, color in enumerate(colors):
                 for color_type in cs3_color_types:
@@ -1430,6 +1429,10 @@ class Sprites:
         chime_data = [["SILVER MOON", "GOLD STAR", "GOLD MOON", "MOON AND STARS"]]
         lantern_data = [["LANTERN"]]
 
+        moss_data = [
+            ["FAT CONE", "THIN CONE", "PEACH CORSAGE"]
+        ]
+
         neckerchief_data = [["WHITE NECKERCHIEF", "BABYBLUE NECKERCHIEF", "LIGHTPURPLE NECKERCHIEF", "BLUE NECKERCHIEF", "PURPLE NECKERCHIEF", "DARKPURPLE NECKERCHIEF"],
                     ["LIGHTPINK NECKERCHIEF", "LIGHTYELLOW NECKERCHIEF", "PINK NECKERCHIEF", "ORANGE NECKERCHIEF", "RED NECKERCHIEF"],
                     ["CYAN NECKERCHIEF", "YELLOWGREEN NECKERCHIEF", "TURQUOISE NECKERCHIEF", "GREEN NECKERCHIEF"]]
@@ -1617,6 +1620,11 @@ class Sprites:
         for row, lanterns in enumerate(lantern_data):
             for col, lantern in enumerate(lanterns):
                 self.make_group("lantern", (col, row), f"acc_lantern{lantern}")
+
+        # moss's accessories
+        for row, moss_accessories in enumerate(moss_data):
+            for col, moss_accessory in enumerate(moss_accessories):
+                self.make_group('moss_accs', (col, row), f'acc_herbs{moss_accessory}')
 
         for row, neckerchiefs in enumerate(neckerchief_data):
             for col, neckerchief in enumerate(neckerchiefs):
