@@ -3807,7 +3807,7 @@
                 "injury": [
                     {
                         "cats": ["patrol"],
-                        "injuries": ["shock", "constant nightmares"],
+                        "injuries": ["shock", "nightmares"],
                         "scars": []
                     },
                     {
