@@ -344,9 +344,9 @@ class Cat:
         self.dead_for = 0  # moons
         self.thought = ""
         self.genderalign = None
-        # I know this is an unnecessary dict, but I wanted to make my life easier when comparing to my own game :(
         self.sexuality = {
-            "gender": []
+            "gender": [],
+            "display": []
         }
         self.birth_cooldown = 0
         self.illnesses = {}
@@ -727,6 +727,7 @@ class Cat:
                 nb_chance = 0
 
         self.sexuality["gender"] = ["masc", "fem", "neu/other"]
+        self.sexuality["display"] = ["pansexual"]
 
         prob_awake = constants.CONFIG["cat_generation"]["esper_chance"]
 
@@ -828,6 +829,160 @@ class Cat:
 
         if not skill_dict:
             self.skills = CatSkills.generate_new_catskills(self.status.rank, self.age)
+
+    @staticmethod
+    def display_sexuality(sexuality_list, moons):
+        aspec_list = [
+            "asexual",
+            "demisexual",
+            "fraysexual",
+            "graysexual",
+            "black stripe asexual",
+            "aceflux",
+        ]
+        arospec_list = [
+            "aromantic",
+            "demiromantic",
+            "frayromantic",
+            "grayromantic",
+            "green stripe aromantic",
+            "aroflux",
+        ]
+        sexuality_text = ""
+
+        if moons < 5:
+            sexuality_text += "unlabeled"
+        elif len(sexuality_list) == 1:
+            sexuality_text += sexuality_list[0]
+        else:
+            ace = False
+            aro = False
+            other = False
+            for sexuality in sexuality_list:
+                if sexuality in aspec_list:
+                    ace = True
+                elif sexuality in arospec_list:
+                    aro = True
+                else:
+                    other = True
+
+            if len(sexuality_list) == 2:
+                if aro and other:
+                    for sexuality in sexuality_list:
+                        if sexuality in arospec_list:
+                            sexuality_text += sexuality + " "
+                    for sexuality in sexuality_list:
+                        if sexuality not in arospec_list:
+                            sexuality_text += sexuality.replace("sexual", "")
+                elif ace and other:
+                    flip = False
+                    if "lesbiromantic" in sexuality_list or "bi-lesbiromantic" in sexuality_list or "pan-lesbiromantic" in sexuality_list:
+                        flip = True
+
+                    for sexuality in sexuality_list:
+                        if sexuality not in aspec_list and not flip:
+                            sexuality_text += sexuality.replace("sexual", "romantic") + " "
+                        elif sexuality in aspec_list and flip:
+                            sexuality_text += sexuality + " "
+                    for sexuality in sexuality_list:
+                        if sexuality in aspec_list and not flip:
+                            sexuality_text += sexuality
+                        elif sexuality not in aspec_list and flip:
+                            sexuality_text += sexuality
+                    sexuality_text = sexuality_text.replace("heteroromantic", "straight")
+                    sexuality_text = sexuality_text.replace("lesbiromantic", "lesbian")
+                    sexuality_text = sexuality_text.replace("homoromantic", "gay")
+                elif not aro and not ace and other:
+                    for sexuality in sexuality_list:
+                        if "romantic" in sexuality:
+                            sexuality_text += sexuality + " "
+                    for sexuality in sexuality_list:
+                        if "sexual" in sexuality or "romantic" not in sexuality:
+                            sexuality_text += sexuality
+            elif len(sexuality_list) == 3:
+                # TODO: sexuality list can go up to 6, need to program displays for them.
+                # also need to finish up displays for 3 items.
+                full_ace = False
+                full_aro = False
+                for sexuality in sexuality_list:
+                    if sexuality in ["aromantic", "green stripe aromantic"]:
+                        full_aro = True
+                    elif sexuality in ["asexual", "black stripe asexual"]:
+                        full_ace = True
+
+                if full_aro and full_ace:
+                    for sexuality in sexuality_list:
+                        if sexuality in arospec_list:
+                            sexuality_text += sexuality + " "
+                    for sexuality in sexuality_list:
+                        if sexuality in aspec_list:
+                            sexuality_text += sexuality
+                    sexuality_text = sexuality_text.replace("aromantic asexual", "aroace")
+                    sexuality_text = sexuality_text.replace("green stripe aromantic black stripe asexual", "bold stripe aroace")
+                else:
+                    if aro and ace:
+                        aroace_text = ""
+                        if "demisexual" in sexuality_list and "demiromantic" in sexuality_list:
+                            aroace_text = "demi-aroace"
+                        elif "fraysexual" in sexuality_list and "frayromantic" in sexuality_list:
+                            aroace_text = "fray-aroace"
+                        elif "graysexual" in sexuality_list and "grayromantic" in sexuality_list:
+                            aroace_text = "grayrose"
+                        elif "aceflux" in sexuality_list and "aroflux" in sexuality_list:
+                            aroace_text = "aroaceflux"
+
+                        for sexuality in sexuality_list:
+                            if (sexuality not in arospec_list and sexuality not in aspec_list) and "sexual" in sexuality:
+                                sexuality_text += sexuality.replace("sexual", "") + " "
+
+                        if aroace_text != "":
+                            sexuality_text += aroace_text
+                        else:
+                            for sexuality in sexuality_list:
+                                if sexuality in arospec_list:
+                                    sexuality_text += sexuality + " "
+                            for sexuality in sexuality_list:
+                                if sexuality in aspec_list:
+                                    sexuality_text += sexuality
+
+                        for sexuality in sexuality_list:
+                            if (sexuality not in arospec_list and sexuality not in aspec_list) and "sexual" not in sexuality:
+                                sexuality_text += " " + sexuality
+
+        return sexuality_text
+
+    @staticmethod
+    def display_gendered_attraction(attraction):
+        attraction_text = ""
+        additions = 0
+
+        if "fem" in attraction:
+            additions += 1
+            attraction_text += "attracted to fem-aligned cats"
+        if "masc" in attraction:
+            additions += 1
+            if attraction_text == "":
+                attraction_text += "attracted to masc-aligned cats"
+            else:
+                if additions == len(attraction):
+                    if len(attraction) != 2:
+                        attraction_text += ","
+                    attraction_text += " and masc-aligned cats"
+                else:
+                    attraction_text += ", masc-aligned cats"
+        if "neu/other" in attraction:
+            additions += 1
+            if attraction_text == "":
+                attraction_text += "attracted to non-aligned cats"
+            else:
+                if additions == len(attraction):
+                    if len(attraction) != 2:
+                        attraction_text += ","
+                    attraction_text += " and non-aligned cats"
+                else:
+                    attraction_text += ", non-aligned cats"
+
+        return attraction_text
 
     def __repr__(self):
         return "CAT OBJECT:" + self.ID
@@ -1207,7 +1362,7 @@ class Cat:
                     "Lashes out at any cat who checks on {PRONOUN/m_c/object} after r_c's death",
                     "Took a long walk on {PRONOUN/m_c/poss} own to mourn r_c in private",
                     "Is busying {PRONOUN/m_c/self} with too much work to forget about r_c's death",
-                    "Does {PRONOUN/m_c/poss} best to console {PRONOUN/m_c/poss} clanmates about r_c's death",
+                    "Does {PRONOUN/m_c/poss} best to console {PRONOUN/m_c/poss} Clanmates about r_c's death",
                     "Takes a part of r_c's nest to put with {PRONOUN/m_c/poss} own, clinging to the fading scent",
                     "Sleeps in r_c's nest tonight",
                     "Defensively states that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need any comfort about r_c's death",
@@ -3373,6 +3528,7 @@ class Cat:
                     "SILVER FEATHERS",
                     "WISTERIA2",
                     "GOLDEN CREEPING JENNY",
+                    "PEACH CORSAGE",
                 )
             ]
 
@@ -3936,34 +4092,35 @@ class Cat:
             return False
 
         # sexuality
-        if not ignore_sexuality:
-            possible_kitties = []
-            if "fem" in self.sexuality["gender"]:
-                for gender in self.fem_attraction:
-                    possible_kitties.append(gender)
-            if "masc" in self.sexuality["gender"]:
-                for gender in self.masc_attraction:
-                    possible_kitties.append(gender)
-            if "neu/other" in self.sexuality["gender"]:
-                for gender in self.neu_other_attraction:
-                    possible_kitties.append(gender)
+        if get_clan_setting("gendered attraction") is True:
+            if not ignore_sexuality:
+                possible_kitties = []
+                if "fem" in self.sexuality["gender"]:
+                    for gender in self.fem_attraction:
+                        possible_kitties.append(gender)
+                if "masc" in self.sexuality["gender"]:
+                    for gender in self.masc_attraction:
+                        possible_kitties.append(gender)
+                if "neu/other" in self.sexuality["gender"]:
+                    for gender in self.neu_other_attraction:
+                        possible_kitties.append(gender)
 
-            if other_cat.genderalign not in possible_kitties:
-                return False
+                if other_cat.genderalign not in possible_kitties:
+                    return False
 
-            possible_kitties = []
-            if "fem" in other_cat.sexuality["gender"]:
-                for gender in self.fem_attraction:
-                    possible_kitties.append(gender)
-            if "masc" in other_cat.sexuality["gender"]:
-                for gender in self.masc_attraction:
-                    possible_kitties.append(gender)
-            if "neu/other" in other_cat.sexuality["gender"]:
-                for gender in self.neu_other_attraction:
-                    possible_kitties.append(gender)
+                possible_kitties = []
+                if "fem" in other_cat.sexuality["gender"]:
+                    for gender in self.fem_attraction:
+                        possible_kitties.append(gender)
+                if "masc" in other_cat.sexuality["gender"]:
+                    for gender in self.masc_attraction:
+                        possible_kitties.append(gender)
+                if "neu/other" in other_cat.sexuality["gender"]:
+                    for gender in self.neu_other_attraction:
+                        possible_kitties.append(gender)
 
-            if self.genderalign not in possible_kitties:
-                return False
+                if self.genderalign not in possible_kitties:
+                    return False
 
         # Current mentor
         if other_cat.ID in self.apprentice or self.ID in other_cat.apprentice:
@@ -5293,7 +5450,8 @@ class Cat:
                 "gender": self.gender,
                 "gender_align": self.genderalign,
                 "sexuality": {
-                    "gender": self.sexuality["gender"] if self.sexuality and self.sexuality["gender"] else ["masc", "fem", "neu/other"]
+                    "gender": self.sexuality["gender"] if self.sexuality and self.sexuality["gender"] else ["masc", "fem", "neu/other"],
+                    "display": self.sexuality["display"] if self.sexuality and self.sexuality["display"] else ["pansexual"]
                 },
                 "pronouns": (
                     self._pronouns
