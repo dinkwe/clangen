@@ -136,131 +136,14 @@ class CustomizeCatScreen(Screens):
         self.base_game_patterns = ["tabby", "ticked", "mackerel", "classic", "sokoke", "agouti", "speckled",
                            "rosette", "single", "smoke", "singlestripe", "bengal", "marbled"]
         
-        minecraft_colors = [
-            'ACACIALOG', 'BAMBOO', 'BIRCHLOG', 'CHERRYLOG', 'CRIMSONSTEM', 'DARKOAKLOG', 'JUNGLELOG', 'MANGROVELOG', 'OAKLOG', 'SPRUCELOG', 'WARPEDSTEM',
-            'ACACIAPLANKS', 'BAMBOOPLANKS', 'BIRCHPLANKS', 'CHERRYPLANKS', 'CRIMSONPLANKS', 'DARKOAKPLANKS', 'JUNGLEPLANKS', 'MANGROVEPLANKS', 'OAKPLANKS', 'SPRUCEPLANKS', 'WARPEDPLANKS',
-            'AMETHYST', 'BLACKGLAZEDTERRACOTTA', 'BLUEGLAZEDTERRACOTTA', 'BROWNGLAZEDTERRACOTTA', 'BROWN MUSHROOM', 'COPPER', 'CRYING OBSIDIAN', 'CYANGLAZEDTERRACOTTA', 'EXPOSEDCOPPER', 'GRAYGLAZEDTERRACOTTA', 'GREENGLAZEDTERRACOTTA',
-            'LIGHTBLUEGLAZED TERRACOTTA', 'LIGHTGRAYGLAZEDTERRACOTTA', 'LIMEGLAZEDTERRACOTTA', 'MAGENTAGLAZEDTERRACOTTA', 'MUSHROOMINSIDE', 'MUSHROOMSTEM', 'OBSIDIAN', 'ORANGEGLAZEDTERRACOTTA', 'OXIDIZEDCOPPER', 'PINKGLAZEDTERRACOTTA', 'PURPLEGLAZEDTERRACOTTA',
-            'PURPUR', 'QUARTZ', 'REDGLAZEDTERRACOTTA', 'REDMUSHROOM', 'WEATHEREDCOPPER', 'WHITEGLAZEDTERRACOTTA', 'YELLOWGLAZEDTERRACOTTA'
-        ]
-        
-        anju_colors = ['PINK', 'RED', 'LIGHTGREEN', 'GREEN', 'CYAN', 'BLUE', 'PURPLE']
-        
-        cs2_colors = [
-            'LIGHTLIME', 'PINKGREY', 'YELLOWBROWN', 'REDGREY', 'BLUEBROWN', 'GHOSTBROWN', 'BLACKPURPLE',
-            'BLUECREAM', 'PALEPINKPURPLE', 'ICEBLUE', 'BLUECS2', 'GREENBROWN', 'NAVYBLUE',
-            'PURPLECREAM', 'INDIGOBLUSH', 'VIOLETBLUSH', 'MAGENTA', 'NAVYBROWN', 'MULBERRY'
-        ]
-        
-        cs_colors = [
-                'ICEWHITE', 'CRYSTAL', 'ORCHID', 'CERULEAN', 'GRAPE', 'GHOSTBLUE', 'BLACKBLUE',
-                'THISTLE', 'SUNYELLOW', 'BUBBLEGUM', 'REDSTAIN', 'ROSE', 'DUSKBROWN',
-                'FROZENSUN', 'GREENGOLD', 'OCEAN', 'TEAL', 'REDBLUE', 'TREE'
-        ]
-        
-        heta_colors = [
-            'REDHETA', 'ORANGEHETA', 'YELLOWHETA', 'NEONYELLOW', 'NEONGREEN', 'GREENHETA', 'MINTGREEN',
-            'DARKMINT', 'NEONTEAL','CYANHETA', 'BLUEHETA', 'NAVYHETA', 'INDIGOHETA',
-            'PURPLEHETA', 'VIOLETHETA', 'MAGENTAHETA', 'PINKHETA', 'SCARLETPINK','DARKREDHETA'
-        ]
-        
-        cs3_colors = [
-            'BERBERIDA', 'RANUNCULA', 'CAPPARIDA', 'VIOLA', 'FUMARIA', 'PAPAVERA', 'MAGNOLIA', 
-            'POLYGALA', 'RESEDA', 'CISTA', 'NYMPHEA', 'DIPTEROCARPA', 'DILLENIA', 'AMYGDALA', 
-            'ANONA', 'MYRTA', 'TILIA', 'PITTOSPORA', 'MALVA', 'SARRACENIA', 'DROSERA', 
-            'HIPPOCASTANA', 'TROPAEOLA', 'PASSIFLORA', 'OLACA', 'CRUCIA', 'LOASA', 'MALPIGHIA', 
-            'MESEMBRYA', 'VITA', 'MARCGRAVIA', 'CLUSIA', 'BOMBA', 'SAMYDA', 'BIXA', 
-            'GERANIA', 'COMPOSITA', 'RHAMNA', 'OXALIDA', 'ARALIA', 'TEREBINTHA', 'MELIA', 
-            'SAXIFRAGA', 'LINA', 'CAPRIFOLIA', 'CARYOPHYLLA', 'LEGUMINOSAE', 'CAMELLIA', 'CACTACEA', 
-            'JASMINEA', 'LYTHRA', 'ACANTHA', 'CRASSULA', 'RUBIA', 'HYPERICA', 'LORANTHA', 
-            'AURANTIA', 'RHIZOPHORA', 'BORAGINA', 'TAMARICA', 'MELASTOMA', 'LECYTHIDA', 'VALERIANA', 
-            'COMBRETA', 'APOCYNA', 'DIPSA', 'STYLIDIA', 'RUTA', 'SOLANA', 'PLUMBAGINA', 
-            'LAMIA', 'BEGONIA', 'GROSSULARIA', 'GENTIANA', 'ERICA', 'CAMPANULA', 'POMA', 
-            'BIGNONIA', 'AMARANTA', 'VACCINIA', 'ONAGRA', 'PRIMULA', 'SAPOTA', 'LOBELIA', 
-            'MYRSINA', 'PORTULA', 'PLANTAGINA', 'ELAEAGNA', 'OLEA', 'POLEMONIA', 'ORCHIDA', 
-            'EUPHORBIA', 'SCROPHULARIA', 'CONVOLVULA', 'MUSA', 'UTRICULARIA', 'UMBELLA', 'PROTEA', 
-            'GOODENIA', 'THYMELA', 'URTICA', 'OROBANCHA', 'HYDROPHYLLA', 'AMARYLLIDA', 'CONIFERA', 
-            'PHYTOLACCA', 'PAEONIA', 'IRIDA', 'DIOSCORA', 'GESNERIA', 'SANTALA', 'HYDROCHARIDA', 
-            'ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA', 
-            'ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA'
-        ]
+        self.special_colors_masked = Pelt.mimi_colours + Pelt.ster_colours + Pelt.silly_colours + Pelt.dance_colours + Pelt.cs_colors + Pelt.cs2_colors + Pelt.cs3_colors + Pelt.hive_colors + Pelt.kris_colors + Pelt.meteor_colors + Pelt.sparkle_colors
+        self.special_colors_nomasked = Pelt.minecraft_colors + Pelt.anju_colors + Pelt.heta_colors + Pelt.pastel_colors + Pelt.pepper_colors
 
-        
-        
-        #mega colors mod
-        
-        dance_colors = [
-            'LIGHTCINNAMON', 'CINNAMON', 'SILVERFAWN', 'DARKCINNAMON', 'DARKFAWN','FAWN', 'LIGHTFAWN',
-            'PALEFAWN', 'PALECREAM','LIGHTCREAM', 'DANCECREAM', 'DARKCREAM', 'DARKGOLD',
-            'GOLD', 'LIGHTGOLD', 'SILVERCREAM', 'PALEGOLD', 'SUNSHINE','BRONZE'
-        ]
-        
-        silly_colors = [
-            'LIGHTLILAC', 'LILACSILLY', 'DARKLILAC', 'DARKASH', 'ASH', 'LIGHTASH', 'PALEASH',
-            'SILVERCINNAMON', 'SILVERRED','PALEBROWN', 'LIGHTBROWNSILLY', 'BROWNSILLY', 'DARKBROWNSILLY',
-            'EBONY', 'DARKCHOCOLATE', 'CHOCOLATESILLY', 'LIGHTCHOCOLATE', 'PALECHOCOLATE','PALECINNAMON'
-        ]
-        
-        ster_colors = [
-            'WHITESTER', 'PALEGREYSTER', 'LIGHTGREY', 'GREYSTER', 'DARKGREYSTER', 'BLACKSTER', 'OBSIDIANSTER',
-            'GHOSTSTER', 'PALEBLUE','LIGHTBLUE', 'BLUESTER', 'DARKBLUE', 'SILVERCHOCOLATE',
-            'SILVERORANGE', 'DARKSLATE', 'SLATE', 'LIGHTSLATE', 'PALESLATE','PALELILAC'
-        ]
-        
-        mimi_colors = [
-            'COPPERMIMI', 'DARKORANGE', 'ORANGE', 'LIGHTORANGE', 'PALEORANGE', 'PALEGINGERMIMI', 'LIGHTGINGER',
-            'GINGERMIMI', 'DARKGINGERMIMI','SILVERGOLD', 'RUSSET', 'DARKRED', 'REDMIMI',
-            'LIGHTRED', 'PALERED', 'SILVERMIMI', 'SILVERGREY', 'SILVERBLUE','SILVERSLATE'
-        ]
-        
-        hive_colors = [
-        'GREENH', 'TEALH', 'BLUEH', 'NAVYH', 'INDIGOH', 'PURPLEH', 'VIOLETH',
-        'PINKH', 'ROSEH','DARKPINKH', 'REDH', 'ORANGEH', 'GOLDH',
-        'PASTELPURPLEH', 'DARKGREENH', 'BROWN-PURPLE', 'YELLOWH', 'DARKMOSS','PURPLESWIRL'
-        ]
-        
-        kris_colors = [
-            'PINKCREAM', 'BLUEMINT', 'SUNSET', 'PINK-BLUE', 'INDIGOK', 'BLUEGHOSTK', 'PINKK',
-            'PASTELPINKBLUE', 'RUSTYGREEN','OURPLE', 'BLUE-YELLOW', 'BLUE-PURPLE', 'DARKSUNSET',
-            'BANANABERRY', 'BRIGHTBLUEK', 'SUNRISE', 'GREEN-NAVY', 'PINKSHADOW','REDK'
-        ]
-        
-        meteor_colors = [
-            'SILVERMETEOR', 'SILVERNAVY', 'CREAMSILVER', 'GREYSTAR', 'DARKGREYSTAR', 'BLACK-BROWN', 'BLUESPOTTED',
-            'CREAMMETEOR', 'PINK-WHITE','TANSPOTTED', 'REVERSESUN', 'WARM-BLUE', 'INDIGO-VIOLET',
-            'GREYMETEOR', 'ICESPOTTED', 'SHADOW', 'BLUE-EARTH', 'EARTHSPOTTED','BROWN-TAN'
-        ]
-        
-        pastel_colors = [
-            'PALEPINK-PURPLE', 'PALEGREY-PINK', 'PALEBLUE-YELLOW', 'PALEMINT-PURPLE', 'PALEGREEN-INDIGO', 'PALEYELLOW-INDIGO', 'PALEORANGE-BLUE',
-            'PALEPURPLE-GOLD', 'PALECYAN-GOLD','PALEMINT-MAGENTA', 'PALEMINT-VIOLET', 'PALEGREEN-BLUE', 'PALEGREEN-NAVY',
-            'PALEBLUE-INDIGO', 'PALECYAN-PURPLE', 'PALECYAN-NAVY', 'PALECYAN-BLUE', 'PALEYELLOWGREEN','PALEYELLOW-BLUE'
-        ]
-        
-        pepper_colors = [
-            'ICEPEPPER', 'CYANPEPPER', 'BLUEPEPPER', 'OCEANPEPPER', 'DARKBLUEPEPPER', 'BLUEGHOSTPEPPER', 'BLACKBLUEPEPPER',
-            'GOLDCREAM', 'GOLDPEPPER','YELLOW-RED', 'BRIGHTYELLOW-RED', 'NEONRED', 'REDBLACK',
-            'PALEBLUE-GOLD', 'INDIGOPEPPER', 'RUSTBLUEPEPPER', 'REDPEPPER', 'REDBLUEBLACK','SCARLETPEPPER'
-        ]
-        
-        sparkle_colors = [
-            'REDS', 'RED-ORANGES', 'DARKYELLOWS', 'GREENREDS', 'CYANPINKG', 'INDIGOREDS', 'REVERSERAINBOW',
-            'PINKREDS', 'RUSTYS','GREENORANGES', 'REDCYANS', 'MINTBLUES', 'BLACKBLUES',
-            'BANANAS', 'WHITEGREENS', 'BROWNREDS', 'RAINBOW', 'GREENDARKREDS','SUNNYS'
-        ]
-        
-        self.special_colors_masked = mimi_colors + ster_colors + silly_colors + dance_colors + cs_colors + cs2_colors + cs3_colors + hive_colors + kris_colors + meteor_colors + sparkle_colors
-        self.special_colors_nomasked = minecraft_colors + anju_colors + heta_colors + pastel_colors + pepper_colors
-
-        self.pelt_colours = copy(Pelt.pelt_colours)
-        self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
-        self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch
-        self.white_patches.sort()
-        self.white_patches.insert(0, "None")
+        self.white_patches = None
         self.white_patches_label = None
         self.white_patches_dropdown = None
         
-        self.pelt_colours.sort()
+        self.pelt_colours = None
         self.pelt_colour_label = None
         self.pelt_colour_dropdown = None
 
@@ -285,10 +168,7 @@ class CustomizeCatScreen(Screens):
         self.tortie_pattern_label = None
         self.tortie_pattern_dropdown = None
 
-        self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
-        self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch
-        self.white_patches.sort()
-        self.white_patches.insert(0, "None")
+        self.white_patches = None
         self.white_patches_label = None
         self.white_patches_dropdown = None
 
@@ -330,8 +210,7 @@ class CustomizeCatScreen(Screens):
         self.sparkle_button = None
         self.sparkle_cats = True
 
-        self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
-        self.eye_colours.sort()
+        self.eye_colours = None
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None
         self.heterochromia_text = None
@@ -351,11 +230,7 @@ class CustomizeCatScreen(Screens):
         self.pose_right_button = None
         self.pose_left_button = None
 
-        self.accessories = list(
-            dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.bows_accessories + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.wild_accessories + Pelt.tail_accessories + Pelt.collars + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories + Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels + Pelt.booties + Pelt.randomaccessories + Pelt.sailormoon + Pelt.beetle_feathers + Pelt.beetle_accessories + Pelt.chime_accessories+ Pelt.lantern_accessories + Pelt.neckerchiefs +  Pelt.witchhats + Pelt.pokemon_accessories))
-        self.accessories.sort()
-        self.accessories.insert(0, "None")
-        self.accessories += copy(Pelt.colorsplash_accessories)
+        self.accessories = None
         self.accessory_label = None
         self.accessory_dropdown = None
 
@@ -376,6 +251,7 @@ class CustomizeCatScreen(Screens):
         self.pelt_filter = "all"
         self.acc_filter = "all"
         self.white_filter = "all"
+        self.tortie_filter = "all"
         
 
     # prints attributes for testing
@@ -385,6 +261,274 @@ class CustomizeCatScreen(Screens):
         #for attribute, value in pelt_attributes.items():
             #print(f"{attribute}: {value}")
         #print("*** PELT END ***")
+    
+    def filter_lists(self):
+        #filter white patches 
+        if self.white_filter == "all":
+            self.white_patches = copy(Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white)
+            self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch
+        elif self.white_filter == "little":
+            self.white_patches = copy(Pelt.little_white)
+        elif self.white_filter == "mid":
+            self.white_patches = copy(Pelt.mid_white)
+        elif self.white_filter == "high":
+            self.white_patches = copy(Pelt.high_white)
+        elif self.white_filter == "mostly":
+            self.white_patches = copy(Pelt.mostly_white)
+            self.white_patches.append(Pelt.white_sprites[6]) # add fullwhite patch   
+        self.white_patches.sort()
+        self.white_patches.insert(0, "None")
+        
+        #filter eye colors
+        if self.eye_filter == "all":
+            self.eye_colours = copy(Pelt.eye_colours)
+            if self.sparkle_cats:
+                self.eye_colours += copy(Pelt.flutter_eyes) + copy(Pelt.lamp_eyes) + copy(Pelt.neos_eyes) + copy(Pelt.angel_eyes) + copy(Pelt.snail_eyes)
+        elif self.eye_filter == "red":
+            self.eye_colours = copy(Pelt.red_eyes)
+        elif self.eye_filter == "yellow":
+            self.eye_colours = copy(Pelt.yellow_eyes)
+        elif self.eye_filter == "green":
+            self.eye_colours = copy(Pelt.green_eyes)
+        elif self.eye_filter == "blue":
+            self.eye_colours = copy(Pelt.blue_eyes)
+        elif self.eye_filter == "purple":
+            self.eye_colours = copy(Pelt.purple_eyes)
+        elif self.eye_filter == "neos":
+            self.eye_colours = copy(Pelt.neos_eyes)
+        elif self.eye_filter == "flutter":
+            self.eye_colours = copy(Pelt.flutter_eyes)
+        elif self.eye_filter == "lamp":
+            self.eye_colours = copy(Pelt.lamp_eyes)
+        elif self.eye_filter == "angel":
+            self.eye_colours = copy(Pelt.angel_eyes)
+        elif self.eye_filter == "snail":
+            self.eye_colours = copy(Pelt.snail_eyes)
+        
+        self.eye_colours.sort()
+        
+        if self.the_cat.pelt.eye_colour not in self.eye_colours:
+            self.the_cat.pelt.eye_colour = choice(self.eye_colours)
+            
+        
+        #filter accessories
+        if self.acc_filter == "all":
+            self.accessories = list(
+                dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.bows_accessories
+                              + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.wild_accessories
+                              + Pelt.tail_accessories + Pelt.collars + Pelt.snake_accessories
+                              + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories
+                              + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories
+                              + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories
+                              + Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels
+                              + Pelt.booties + Pelt.randomaccessories + Pelt.sailormoon + Pelt.beetle_feathers
+                              + Pelt.beetle_accessories + Pelt.chime_accessories+ Pelt.lantern_accessories + Pelt.neckerchiefs
+                              + Pelt.witchhats + Pelt.pokemon_accessories + Pelt.colorsplash_accessories))
+        elif self.acc_filter == "bones":
+            self.accessories = list(
+                dict.fromkeys(Pelt.bone_accessories))
+            self.accessories += ["OGBIRD SKULL"]
+        elif self.acc_filter == "bugs":
+            self.accessories = list(
+                dict.fromkeys(Pelt.butterflies_accessories+ Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories))
+            self.accessories += ["MOTH WINGS","ROSY MOTH WINGS","MORPHO BUTTERFLY","MONARCH BUTTERFLY","CICADA WINGS","BLACK CICADA"]
+        elif self.acc_filter == "stuff":
+            self.accessories = list(
+                dict.fromkeys(Pelt.stuff_accessories + Pelt.crafted_accessories + Pelt.chime_accessories + Pelt.lantern_accessories))
+            self.accessories += ["DICE", "GOLDEN EARRINGS"]
+        elif self.acc_filter == "plants":
+            self.accessories = list(
+                dict.fromkeys(Pelt.plant_accessories + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.ster_accessories + Pelt.tail2_accessories + Pelt.fruit_accessories))
+            self.accessories += ["DOGWOOD", "TREESTAR","CHERRY BLOSSOM", "DAISY BLOOM", "RED ROSE", "WHITE ROSE", "GOLDEN FLOWER","DANDELIONS", "DANDELION PUFFS"]
+        elif self.acc_filter == "wild":
+            self.accessories = list(
+                dict.fromkeys(Pelt.wild_accessories + Pelt.beetle_feathers + Pelt.butterflies_accessories+ Pelt.deadInsect_accessories))
+            self.accessories += ["STICK FRIEND", "PEBBLE", "PEBBLE COLLECTION"]
+        elif self.acc_filter == "bows":
+            self.accessories = list(
+                dict.fromkeys(Pelt.bows_accessories + Pelt.sailormoon))
+            self.accessories += ["PINK BOWTIE", "GRAY BOWTIE"]
+        elif self.acc_filter == "feathers":
+            self.accessories = list(
+                dict.fromkeys(Pelt.beetle_feathers))
+            self.accessories +=["RED FEATHERS","BLUE FEATHERS","JAY FEATHERS","GULL FEATHERS","SPARROW FEATHERS","ROAD RUNNER FEATHER"]
+        elif self.acc_filter == "disabilities":
+            self.accessories = list(
+                dict.fromkeys(Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels))
+        elif self.acc_filter == "animals":
+            self.accessories = list(
+                dict.fromkeys(Pelt.smallAnimal_accessories + Pelt.aliveInsect_accessories + Pelt.snake_accessories))
+            self.accessories += ["FROG FRIEND", "MOUSE FRIEND", "BLUETAILED SKINK", "BLACKHEADED ORIOLE", "MILKSNAKE", "WORM FRIEND"]
+        elif self.acc_filter == "colorsplash":
+            self.accessories = list(
+                dict.fromkeys(Pelt.colorsplash_accessories))
+        elif self.acc_filter == "games":
+            self.accessories = list(
+                dict.fromkeys(Pelt.pokemon_accessories))
+            self.accessories += ["RACCOON LEAF", "WHITE RACCOON LEAF"]
+        elif self.acc_filter == "clothes":
+            self.accessories = list(
+                dict.fromkeys(Pelt.witchhats + Pelt.neckerchiefs))
+            self.accessories += ["BUNNY HAT", "SMILEY HAT", "PARTY HAT", "SANTA HAT", "PINK SCARF"]
+        self.accessories.sort()
+        self.accessories.insert(0, "None")
+        
+        #filter pelt colors
+        self.filter_pelt_colors()
+        self.filter_tortiecolors()
+        
+    def filter_pelt_colors(self):
+        if self.pelt_filter == "all":
+            
+            #first we add extra colors for base game pelts
+            if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+            elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+            else:
+                self.pelt_colours = copy(Pelt.pelt_colours)
+            
+            #if sparkle off -> remove rainbow cats
+            realistic_colors = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
+            if not self.sparkle_cats:
+                for color in self.pelt_colours:
+                    if color not in realistic_colors:
+                         self.pelt_colours.remove(color)   
+                if self.the_cat.pelt.colour not in realistic_colors:
+                    self.the_cat.pelt.colour = "BLACK"
+        
+        #sparkle filter is ignored if filtering for pelt bc if you're filtering for green cats. obviously theyre gonna be sparkled
+        elif self.pelt_filter == "ginger":
+            if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+                self.pelt_colours = copy(Pelt.ginger_colours)
+            elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+                self.pelt_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
+                                     "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
+                                      "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
+                                      "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                      "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
+                                      "CREAMSILVER"]
+            else:
+                self.pelt_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA"]
+        elif self.pelt_filter == "black":
+            if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+                self.pelt_colours = copy(Pelt.black_colours)
+            elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+                self.pelt_colours = ["GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
+                     "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
+                     "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
+                     "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
+                     "PAPAVERA", "MAGNOLIA"]
+            else:
+                self.pelt_colours = ["GREY", "DARKGREY", "GHOST", "BLACK"]
+        elif self.pelt_filter == "white":
+            if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+                self.pelt_colours = copy(Pelt.black_colours)
+            elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+                self.pelt_colours = ["WHITE", "PALEGREY", "SILVER""WHITESTER", "PALEGREYSTER",
+                     "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
+                     "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
+                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA"]
+            else:
+                self.pelt_colours = ["WHITE", "PALEGREY", "SILVER"]
+        elif self.pelt_filter == "brown":
+            if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+                self.pelt_colours = copy(Pelt.black_colours)
+            elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+                self.pelt_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
+                     "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
+                     "LIGHTCHOCOLATE", "PALECHOCOLATE", "LIGHTCINNAMON", "CINNAMON", "PALECINNAMON", "DARKCINNAMON",
+                     "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
+                     "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
+                     "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
+                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
+            else:
+                self.pelt_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE"]
+                
+        #for sparkle colors, we filter for pelt type first. if its not from base game we ignore filters bc like.
+        #then youd just get an empty list lol
+        elif self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
+            if self.pelt_filter == "red":
+                self.pelt_colours = copy(Pelt.red_colors)
+            if self.pelt_filter == "orange":
+                self.pelt_colours = copy(Pelt.orange_colors)
+            if self.pelt_filter == "yellow":
+                self.pelt_colours = copy(Pelt.yellow_colors)
+            if self.pelt_filter == "green":
+                self.pelt_colours = copy(Pelt.green_colors)
+            if self.pelt_filter == "blue":
+                self.pelt_colours = copy(Pelt.blue_colors)
+            if self.pelt_filter == "purple":
+                self.pelt_colours = copy(Pelt.purple_colors)
+            if self.pelt_filter == "black2":
+                self.pelt_colours = copy(Pelt.black_colors)
+        elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
+            #masked sparkle pelts: all colorsplash, hive, kris, meteor, sparkle
+            if self.pelt_filter == "red":
+                self.pelt_colours = ["PINKGREY", "REDGREY", "PALEPINKPURPLE","BUBBLEGUM", "REDSTAIN", "ROSE",
+                                      "REDBLUE", "REDS", "RED-ORANGES", "PINKREDS", "RUSTYS", "REDCYANS","BROWNREDS",
+                                      "PINK-WHITE", "PINKCREAM", "PINK-BLUE", "PINKK", "PASTELPINKBLUE", "PINKSHADOW",
+                                      "REDK", "PINKH", "ROSEH", "DARKPINKH", "REDH", "ANONA", "MYRTA", "TILIA", "PITTOSPORA", "MALVA",
+                                      "SARRACENIA", "DROSERA", "HIPPOCASTANA", "TROPAEOLA", "PASSIFLORA", "OLACA", "CRUCIA", "LOASA",
+                                      "MALPIGHIA", "PAEONIA", "ZINGIBERA", "ALISMA", "POLYGONA", "ROSA", "LILIA", "JUNCA", "VERBENA",
+                                      "HAEMODORA", "COMMELINA", "COLCHICA"]
+            if self.pelt_filter == "orange":
+                self.pelt_colours = ["CREAMMETEOR", "REVERSESUN", "SUNSET", "OURPLE", "SUNRISE", "ORANGEH", "MESEMBRYA", "VITA",
+                     "MARCGRAVIA", "CLUSIA", "BOMBA", "GERANIA", "COMPOSITA", "RHAMNA", "OXALIDA", "ARALIA"]
+            if self.pelt_filter == "yellow":
+                self.pelt_colours = ["SUNYELLOW", "FROZENSUN","DARKYELLOWS", "SUNNYS", "BANANABERRY", "GOLDH",
+                                     "YELLOWH", "SAXIFRAGA", "LINA", "CAPRIFOLIA", "CARYOPHYLLA"]
+            if self.pelt_filter == "green":
+                self.pelt_colours = ["LIGHTLIME","GREENBROWN", "GREENGOLD", "TREE", "GREENREDS", "GREENORANGES", "WHITEGREENS", "GREENDARKREDS",
+                    "RUSTYGREEN", "GREEN-NAVY", "GREENH", "DARKGREENH", "DARKMOSS", "JASMINEA", "LYTHRA", "ACANTHA",
+                    "CRASSULA", "RUBIA", "HYPERICA", "LORANTHA", "AURANTIA", "RHIZOPHORA", "BORAGINA", "TAMARICA",
+                    "MELASTOMA", "LECYTHIDA", "VALERIANA", "COMBRETA", "APOCYNA", "DIPSA", "STYLIDIA", "RUTA", "SOLANA",
+                    "PLUMBAGINA"]
+            if self.pelt_filter == "blue":
+                self.pelt_colours = ["BLUECREAM", "ICEBLUE", "CSBLUE2", "NAVYBLUE", "ICEWHITE","CERULEAN", "GHOSTBLUE",
+                                   "OCEAN", "TEAL", "CYANPINKG", "MINTBLUES", "BLACKBLUES", "SILVERNAVY", "BLACK-BROWN",
+                                   "BLUESPOTTED", "ICESPOTTED", "BLUE-EARTH", "BLUEMINT", "BLUEGHOSTK", "BLUE-YELLOW", "BLUE-PURPLE",
+                                   "BRIGHTBLUEK", "TEALH", "BLUEH", "NAVYH", "LAMIA", "BEGONIA", "GROSSULARIA", "GENTIANA", "ERICA",
+                                   "CAMPANULA", "POMA", "BIGNONIA", "AMARANTA", "VACCINIA", "ONAGRA", "PRIMULA", "SAPOTA", "LOBELIA",
+                                   "MYRSINA", "PORTULA", "PLANTAGINA", "ELAEAGNA", "OLEA", "POLEMONIA", "ORCHIDA", "EUPHORBIA",
+                                   "SCROPHULARIA", "CONVOLVULA", "MUSA", "UTRICULARIA", "UMBELLA", "PROTEA"]
+            if self.pelt_filter == "purple":
+                self.pelt_colours = ["PURPLECREAM", "INDIGOBLUSH", "VIOLETBLUSH", "MAGENTA",
+                     "MULBERRY", "GRAPE", "CRYSTAL", "ORCHID", "THISTLE", "INDIGOREDS", "WARM-BLUE", "INDIGO-VIOLET", "INDIGOK", "DARKSUNSET", "INDIGOH", "PURPLEH", "VIOLETH",
+                     "PASTELPURPLEH", "BROWN-PURPLE", "PURPLESWIRL", "GOODENIA", "THYMELA", "URTICA", "OROBANCHA",
+                     "HYDROPHYLLA", "AMARYLLIDA", "CONIFERA", "PHYTOLACCA", "IRIDA", "DIOSCORA", "GESNERIA", "SANTALA",
+                     "HYDROCHARIDA", "NYCTAGINA", "BROMELIA", "SMILA", "EBENA"]
+            if self.pelt_filter == "black2":
+                self.pelt_colours = ["REVERSERAINBOW", "RAINBOW", "SHADOW"]
+        else:
+            self.pelt_colours = copy(Pelt.pelt_colours)
+                
+        
+        #at the very end we alphabetize it. swag
+        self.pelt_colours.sort()
+        #now to make sure dropdowns dont break
+        if self.the_cat.pelt.colour not in self.pelt_colours:
+            self.the_cat.pelt.colour = choice(self.pelt_colours)
+    
+    def filter_tortiecolors(self):
+        if self.tortie_filter == "all":
+            #do the same for tortie patterns
+            if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+            elif self.the_cat.pelt.tortiepattern == 'masked':
+                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+            else:
+                self.tortie_colours = copy(Pelt.pelt_colours)
+                
+            if not self.sparkle_cats:
+                for color in self.tortie_colours:
+                    if color not in realistic_colors:
+                         self.tortie_colours.remove(color)
+                        
+                if self.the_cat.pelt.tortiecolour is not None:
+                    if self.the_cat.pelt.tortiecolour not in realistic_colors:
+                        self.the_cat.pelt.tortiecolour = "BLACK"
+        self.tortie_colours.sort()
 
     def screen_switches(self):
         super().screen_switches()
@@ -399,6 +543,7 @@ class CustomizeCatScreen(Screens):
         (self.next_cat, self.previous_cat) = self.the_cat.determine_next_and_previous_cats()
         self.cat_elements["cat_name"] = create_text_box("customize " + str(self.the_cat.name), (0, 40), (400, 40),
                                                         "#text_box_34_horizcenter", {"centerx": "centerx"})
+        self.filter_lists()
         self.setup_buttons()
         self.setup_next_and_previous_cat()
         self.setup_dropdowns()
@@ -475,27 +620,7 @@ class CustomizeCatScreen(Screens):
         self.pelt_name_dropdown = create_dropdown((320, 125), (135, 40),
                                                   create_options_list(self.pelt_names, "capitalize"),
                                                   get_selected_option(self.the_cat.pelt.name, "capitalize"))
-        if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
-            if 'GREEN' not in self.pelt_colours:
-                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
-        elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
-            if 'GREEN' in self.pelt_colours:
-                self.pelt_colours = copy(Pelt.pelt_colours)
-            if 'ASH' not in self.pelt_colours:
-                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
-        elif 'GREEN' in self.pelt_colours or 'ASH' in self.pelt_colours:
-            self.pelt_colours = copy(Pelt.pelt_colours)
-        
-        realistic_colors = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
-        if not self.sparkle_cats:
-            for color in self.pelt_colours:
-                if color not in realistic_colors:
-                     self.pelt_colours = realistic_colors
-                     break
-                    
-            if self.the_cat.pelt.colour not in realistic_colors:
-                self.the_cat.pelt.colour = "BLACK"
-        self.pelt_colours.sort()
+    
         self.pelt_colour_dropdown = create_dropdown((480, 125), (135, 40),
                                                     create_options_list(self.pelt_colours, "upper"),
                                                     get_selected_option(self.the_cat.pelt.colour, "upper"))
@@ -504,33 +629,16 @@ class CustomizeCatScreen(Screens):
         self.tortie_base_dropdown = create_dropdown((320, 200), (135, 40),
                                                     create_options_list(self.tortie_bases, "lower"),
                                                     get_selected_option(self.the_cat.pelt.tortiebase, "lower"))
-        
-        if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-            if 'GREEN' not in self.tortie_colours:
-                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
-        elif self.the_cat.pelt.tortiepattern == 'masked':
-            if 'GREEN' in self.pelt_colours:
-                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
-            if 'ASH' not in self.tortie_colours:
-                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
-        elif 'GREEN' in self.tortie_colours or 'ASH'  in self.tortie_colours:
-            self.tortie_colours = copy(Pelt.pelt_colours)
             
-        if not self.sparkle_cats:
-            for color in self.tortie_colours:
-                if color not in realistic_colors:
-                     self.tortie_colours = realistic_colors
-                     break
-                    
-            if self.the_cat.pelt.colour not in realistic_colors:
-                self.the_cat.pelt.colour = "BLACK"
-        self.tortie_colours.sort()    
         self.tortie_colour_dropdown = create_dropdown((480, 200), (135, 40),
                                                       create_options_list(self.tortie_colours, "upper"),
                                                       get_selected_option(self.the_cat.pelt.tortiecolour, "upper"))
         self.tortie_pattern_dropdown = create_dropdown((640, 200), (135, 40),
                                                        create_options_list(self.tortie_bases, "lower"),
                                                        get_selected_option(self.the_cat.pelt.tortiepattern, "lower"))
+        if len(self.the_cat.pelt.white_patches) > 0 and self.the_cat.pelt.white_patches[0] not in self.white_patches:
+                self.white_patches.append(self.the_cat.pelt.white_patches[0])
+        
         self.white_patches_dropdown = create_dropdown((320, 285), (135, 40),
                                                       create_options_list(self.white_patches, "upper"),
                                                       get_selected_option(self.the_cat.pelt.white_patches, "upper"), "smaller_font")
@@ -550,22 +658,6 @@ class CustomizeCatScreen(Screens):
         self.skin_dropdown = create_dropdown((640, 360), (135, 40), create_options_list(self.skins, "upper"),
                                              get_selected_option(self.the_cat.pelt.skin, "upper"))
         
-        if self.sparkle_cats:
-            self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
-            self.eye_colours.sort()
-            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.flutter_eyes)]
-            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.lamp_eyes)]
-            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.neos_eyes)]
-            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.angel_eyes)]
-            self.eye_colours += [colour.capitalize() for colour in copy(Pelt.snail_eyes)]
-        else:
-            self.eye_colours = [colour.capitalize() for colour in copy(Pelt.eye_colours)]
-            self.eye_colours.sort()
-            if self.the_cat.pelt.eye_colour.capitalize() not in self.eye_colours:
-                self.the_cat.pelt.eye_colour = "YELLOW"
-            if self.the_cat.pelt.eye_colour2:
-                if self.the_cat.pelt.eye_colour2.capitalize() not in self.eye_colours:
-                    self.the_cat.pelt.eye_colour2 = "YELLOW"
         
         self.eye_colour1_dropdown = create_dropdown((320, 445), (135, 40),
                                                     create_options_list(self.eye_colours, "upper"),
@@ -575,6 +667,10 @@ class CustomizeCatScreen(Screens):
                                                         get_selected_option(self.the_cat.pelt.eye_colour2,
                                                                             "upper") if self.the_cat.pelt.eye_colour2 else get_selected_option(
                                                                             self.the_cat.pelt.eye_colour, "upper")), "dropup")
+        
+        
+        if len(self.the_cat.pelt.accessory) > 0 and self.the_cat.pelt.accessory[0] not in self.accessories:
+                self.accessories.append(self.the_cat.pelt.accessory[0])
         self.accessory_dropdown = create_dropdown((568, 525), (180, 40), create_options_list(self.accessories, "upper"),
                                                   get_selected_option(self.the_cat.pelt.accessory, "upper"), "dropup")
 
@@ -716,6 +812,7 @@ class CustomizeCatScreen(Screens):
         self.kill_cat_elements()
         self.kill_buttons()
         self.kill_dropdowns()
+        self.filter_lists()
         self.cat_elements["cat_name"] = create_text_box("customize " + str(self.the_cat.name), (0, 40), (400, 40), "#text_box_34_horizcenter", {"centerx": "centerx"})
         self.setup_buttons()
         self.setup_dropdowns()
@@ -742,6 +839,10 @@ class CustomizeCatScreen(Screens):
             if event.ui_element == self.previous_cat_button:
                 if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
                     switch_set_value(Switch.cat, self.previous_cat)
+                    self.eye_filter = "all"
+                    self.pelt_filter = "all"
+                    self.acc_filter = "all"
+                    self.white_filter = "all"
                     self.kill_cat_elements()
                     self.kill_buttons()
                     self.kill_dropdowns()
@@ -751,6 +852,10 @@ class CustomizeCatScreen(Screens):
             elif event.ui_element == self.next_cat_button:
                 if isinstance(Cat.fetch_cat(self.next_cat), Cat):
                     switch_set_value(Switch.cat, self.next_cat)
+                    self.eye_filter = "all"
+                    self.pelt_filter = "all"
+                    self.acc_filter = "all"
+                    self.white_filter = "all"
                     self.kill_cat_elements()
                     self.kill_buttons()
                     self.kill_dropdowns()
@@ -770,7 +875,7 @@ class CustomizeCatScreen(Screens):
                     self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
                 self.update_ui_elements()
             elif event.ui_element == self.filter_button:
-                CustomizeFilterWindow(self.eye_filter, self.pelt_filter, self.acc_filter, self.white_filter)
+                CustomizeFilterWindow(self, self.eye_filter, self.pelt_filter, self.acc_filter, self.white_filter)
             elif event.ui_element in [self.pelt_length_left_button, self.pelt_length_right_button]:
                 self.handle_pelt_length_buttons(event.ui_element)
             elif event.ui_element == self.heterochromia_checkbox:
@@ -841,14 +946,7 @@ class CustomizeCatScreen(Screens):
             setattr(self.the_cat.pelt, attribute, selected_option)
             self.update_ui_elements()
         elif attribute == "tortiebase":
-            if self.the_cat.pelt.tortiebase in self.base_game_patterns:
-                if selected_option not in self.base_game_patterns:
-                    self.pelt_colours = copy(Pelt.pelt_colours)
-                    if self.the_cat.pelt.colour not in self.base_game_colors:
-                        self.the_cat.pelt.colour = 'BLACK'
-            elif selected_option in self.base_game_patterns:
-                if 'GREEN' not in self.pelt_colours:
-                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+            self.filter_pelt_colors()
             setattr(self.the_cat.pelt, attribute, selected_option)
             self.update_ui_elements()
         elif attribute == "tint":
@@ -917,6 +1015,7 @@ class CustomizeCatScreen(Screens):
         self.previous_pelt_name = new_pelt_name
         self.make_cat_sprite()
         if redo_dropdowns:
+            self.filter_pelt_colors()
             self.update_ui_elements()
 
     def handle_pelt_length_buttons(self, button):

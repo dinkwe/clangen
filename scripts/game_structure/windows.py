@@ -75,15 +75,6 @@ from scripts.utility import (
 if TYPE_CHECKING:
     from scripts.screens.Screens import Screens
 
-def create_dropdown(pos, size, options, selected_option, style=None):
-    return UIDropDownMenu(
-        options,
-        selected_option,
-        ui_scale(Rect(pos, size)),
-        object_id=f"#{style}",
-        manager=MANAGER
-    )
-
 
 class GuideEsper(UIWindow):
     def __init__(self, cat):
@@ -2608,9 +2599,9 @@ class ConfirmDisplayChanges(UIMessageWindow):
         return super().process_event(event)
     
 class CustomizeFilterWindow(UIWindow):
-    def __init__(self,eye_filter,pelt_filter,acc_filter,white_filter):
+    def __init__(self, customizer_screen, eye_filter,pelt_filter,acc_filter,white_filter):
         super().__init__(
-            ui_scale(pygame.Rect((250, 125), (300, 450))),
+            ui_scale(pygame.Rect((250, 125), (250, 325))),
             window_display_title="windows.symbol_filters",
             object_id="#filter_window",
         )
@@ -2619,26 +2610,106 @@ class CustomizeFilterWindow(UIWindow):
         self.pelt_filter = pelt_filter if pelt_filter else "all"
         self.acc_filter = acc_filter if acc_filter else "all"
         self.white_filter = white_filter if white_filter else "all"
+        self.customizer_screen = customizer_screen
 
         self.possible_tags = {
             "eyes": ["all","red", "yellow", "green", "blue", "purple", "neos", "flutter", "lamp", "angel", "snail"],
             "pelts": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"],
-            "acc": ["all", "bones", "butterflies", "stuff", "plants", "wild", "bows", "collars", "feathers","disabilities", "animals", "chimes", "colorsplash", "pokemon"],
+            "acc": ["all", "bones", "bugs", "stuff", "plants", "wild", "clothes", "bows", "collars", "feathers","disabilities", "animals","colorsplash", "games"],
             "white": ["all","little", "mid", "high", "mostly"]
         }
 
         self.back_button = UIImageButton(
-            ui_scale(pygame.Rect((270, 5), (22, 22))),
+            ui_scale(pygame.Rect((220, 5), (22, 22))),
             "",
             object_id="#exit_window_button",
             starting_height=10,
             container=self,
         )
+        self.eyes_label = pygame_gui.elements.UITextBox(
+            "eye colors",
+            ui_scale(pygame.Rect((50, 5), (135, 60))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.eyes_dropdown = UIDropDownMenu(
+            self.possible_tags["eyes"],
+            self.eye_filter,
+            ui_scale(pygame.Rect((50, 40), (135, 40))),
+            object_id=None,
+            manager=MANAGER,
+            container=self
+        )
+        
+        self.pelts_label = pygame_gui.elements.UITextBox(
+            "pelt colors",
+            ui_scale(pygame.Rect((50, 75), (135, 60))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.pelts_dropdown = UIDropDownMenu(
+            self.possible_tags["pelts"],
+            self.pelt_filter,
+            ui_scale(pygame.Rect((50, 110), (135, 40))),
+            object_id=None,
+            manager=MANAGER,
+            container=self
+        )
+        
+        self.acc_label = pygame_gui.elements.UITextBox(
+            "accessories",
+            ui_scale(pygame.Rect((50, 145), (135, 60))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.acc_dropdown = UIDropDownMenu(
+            self.possible_tags["acc"],
+            self.acc_filter,
+            ui_scale(pygame.Rect((50, 180), (135, 40))),
+            object_id=None,
+            manager=MANAGER,
+            container=self
+        )
+        
+        self.white_label = pygame_gui.elements.UITextBox(
+            "amount of white",
+            ui_scale(pygame.Rect((50, 215), (135, 60))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.white_dropdown = UIDropDownMenu(
+            self.possible_tags["white"],
+            self.white_filter,
+            ui_scale(pygame.Rect((50, 250), (135, 40))),
+            object_id="#dropup",
+            manager=MANAGER,
+            container=self
+        )
+
         
 
     def process_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.back_button:
+                self.customizer_screen.update_ui_elements()
                 self.kill()
+        elif event.type == pygame_gui.UI_DROP_DOWN_MENU_CHANGED:
+            if event.ui_element == self.eyes_dropdown:
+                self.customizer_screen.eye_filter = self.eyes_dropdown.selected_option[1]
+            elif event.ui_element == self.pelts_dropdown:
+                self.customizer_screen.pelt_filter = self.pelts_dropdown.selected_option[1]
+            elif event.ui_element == self.acc_dropdown:
+                self.customizer_screen.acc_filter = self.acc_dropdown.selected_option[1]
+            elif event.ui_element == self.white_dropdown:
+                self.customizer_screen.white_filter = self.white_dropdown.selected_option[1]
+            
 
         return super().process_event(event)
