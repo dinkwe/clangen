@@ -283,6 +283,8 @@ class ProfileScreen(Screens):
                 ChangeCatName(self.the_cat)
             elif event.ui_element == self.specify_gender_button:
                 self.change_screen("change gender screen")
+            elif event.ui_element == self.modify_orientation_button:
+                self.change_screen("modify orientation screen")
             elif event.ui_element == self.predict_offspring_button:
                 self.change_screen("predict offspring screen")
             # when button is pressed...
@@ -1190,9 +1192,10 @@ class ProfileScreen(Screens):
             name = [c for c in game.clan.all_clans if c.enum == the_cat.status.group][
                 0
             ].name
-        # otherwise, assume the cat takes the player clan's name
-        # it's okay if this is an outsider, if they don't actually have a group to refer to then they won't use this variable
         else:
+            # otherwise, assume the cat takes the player clan's name
+            # it's okay if this is an outsider, if they don't actually have a group to refer to
+            # then they won't use this variable
             name = game.clan.name
 
         if the_cat.status.is_exiled():
@@ -1226,15 +1229,15 @@ class ProfileScreen(Screens):
         ):
             if the_cat == game.clan.instructor:
                 # these guys are special, we won't name a group for them
-                output += f"{i18n.t(f'general.past_no_group')} "
+                output += f"{i18n.t(f'general.past_no_group')}"
             else:
-                output += f"{i18n.t(f'general.past_group', group=cat_clan)} "
+                output += f"{i18n.t(f'general.past_group', group=cat_clan)}"
         elif the_cat.status.is_clancat:
             output += f"{cat_clan} "
 
         if the_cat.status.is_outsider:
             if the_cat.dead:
-                output += f"{i18n.t(f'general.past_no_group')} "
+                output += f"{i18n.t(f'general.past_no_group')}"
             output += i18n.t(f"general.{the_cat.status.social}", count=1)
         elif the_cat.status.is_other_clancat:
             if name:
@@ -1262,6 +1265,17 @@ class ProfileScreen(Screens):
 
         # NEWLINE ----------
         output += "\n"
+
+        # SEXUALITY
+        if get_clan_setting("gendered attraction") is True:
+            if get_clan_setting("sexuality labels") is True:
+                sexuality_text = Cat.display_sexuality(the_cat.sexuality["display"], the_cat.moons) + "\n" + Cat.display_gendered_attraction(the_cat.sexuality["gender"])
+            else:
+                sexuality_text = Cat.display_gendered_attraction(the_cat.sexuality["gender"])
+            output += sexuality_text
+
+            # NEWLINE ----------
+            output += "\n"
 
         # AWAKENED
         if the_cat.awakened:
@@ -2727,6 +2741,19 @@ class ProfileScreen(Screens):
                 manager=MANAGER,
                 anchors={"top_target": self.cis_trans_button},
             )
+            self.modify_orientation_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 0), (172, 36))),
+                "modify orientation",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={"top_target": self.specify_gender_button},
+            )
+            if get_clan_setting("gendered attraction") is False:
+                self.modify_orientation_button.disable()
+            else:
+                self.modify_orientation_button.enable()
             self.predict_offspring_button = UISurfaceImageButton(
                 ui_scale(pygame.Rect((402, 0), (172, 36))),
                 "predict offspring",
@@ -2734,7 +2761,7 @@ class ProfileScreen(Screens):
                 object_id="@buttonstyles_ladder_middle",
                 starting_height=2,
                 manager=MANAGER,
-                anchors={"top_target": self.specify_gender_button},
+                anchors={"top_target": self.modify_orientation_button},
             )
             if (
                     self.the_cat.age not in [CatAge.YOUNG_ADULT, CatAge.ADULT, CatAge.SENIOR_ADULT, CatAge.SENIOR]
@@ -3091,6 +3118,7 @@ class ProfileScreen(Screens):
             self.change_name_button.kill()
             self.cat_toggles_button.kill()
             self.specify_gender_button.kill()
+            self.modify_orientation_button.kill()
             self.predict_offspring_button.kill()
             if self.cis_trans_button:
                 self.cis_trans_button.kill()
