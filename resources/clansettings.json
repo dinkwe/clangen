@@ -138,6 +138,20 @@
                 false
             ]
         ],
+        "gendered attraction": [
+            "string1",
+            "string2",
+            true
+        ],
+        "sexuality labels": [
+            "string1",
+            "string2",
+            true,
+            [
+                "gendered attraction",
+                true
+            ]
+        ],
         "single parentage": [
             "Allow cats to have kittens with an unknown second parent",
             "Allow cats to have kittens with an unknown second biological parent. The cat will be listed as the only biological parent.",
