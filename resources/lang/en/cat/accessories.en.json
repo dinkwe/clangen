@@ -2529,6 +2529,21 @@
             "many": "silver feathers",
             "one": "silver feathers"
         },
+        "FAT CONE": {
+            "zero": "pinecone",
+            "many": "pinecones",
+            "one": "pinecone"
+        },
+        "THIN CONE": {
+            "zero": "pinecone",
+            "many": "pinecones",
+            "one": "pinecone"
+        },
+        "PEACH CORSAGE": {
+            "zero": "peach tail corsage",
+            "many": "peach corsages",
+            "one": "peach corsage"
+        },
         "WHITE NECKERCHIEF": {
             "zero": "white neckerchief",
             "many": "white neckerchiefs",
