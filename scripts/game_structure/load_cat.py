@@ -105,7 +105,7 @@ def json_load():
                 eye_colour=cat["eye_colour"],
                 loading_cat=True,
             )
-            
+
             if constants.CONFIG["check_and_convert"]:
                 if cat["eye_colour"] == "BLUE2":
                     cat["eye_colour"] = "COBALT"
@@ -367,9 +367,15 @@ def json_load():
 
             if "sexuality" in cat:
                 new_cat.sexuality["gender"] = cat["sexuality"]["gender"] if "gender" in cat["sexuality"] else ["masc", "fem", "neu/other"]
+                new_cat.sexuality["display"] = cat["sexuality"]["display"] if "display" in cat["sexuality"] else ["pansexual"]
+
+                if "neu" in new_cat.sexuality["gender"]:
+                    new_cat.sexuality["gender"].remove("neu")
+                    new_cat.sexuality["gender"].append("neu/other")
             else:
                 cat["sexuality"] = {
                     "gender": ["masc", "fem", "neu/other"],
+                    "display": ["pansexual"]
                 }
 
             if "enemy" in cat:
