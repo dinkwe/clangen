@@ -846,7 +846,7 @@
                     "injury": [
                                 {
                         "cats": ["r_c"],
-                        "injuries": ["constant nightmares"],
+                        "injuries": ["nightmares"],
                         "scars": [],
                         "no_results": false
                                 }
