@@ -3498,7 +3498,7 @@
             "injury": [
                 {
                     "cats": ["app1"],
-                    "injuries": ["constant nightmares"],
+                    "injuries": ["nightmares"],
                     "scars": []
                 }
             ],
@@ -3651,7 +3651,7 @@
             "injury": [
                 {
                     "cats": ["patrol"],
-                    "injuries": ["shock", "constant nightmares"],
+                    "injuries": ["shock", "nightmares"],
                     "scars": []
                 },
                 {
