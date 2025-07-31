@@ -20,7 +20,10 @@
             "refugee2",
             "tragedy_survivor4",
             "guided3",
-            "wandering_healer2"
+            "wandering_healer2",
+            "murdered_parent1",
+            "murdered_parent2",
+            "murdered_parent3"
         ],
         "rogue_backstories": [
             "rogue1", "rogue2", "rogue3", "refugee4", "tragedy_survivor2", "guided2", "wandering_healer1"
@@ -58,19 +61,19 @@
             "outsider1", "outsider2", "outsider3"
         ],
         "reincarnation_backstories": [
-        "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"
+            "reincarnation_starclan", "reincarnation_df", "reincarnation_unknown"
         ],
         "tribe_backstories": [
-        "tribe1","tribe2", "tribe3", "tribe4"
+            "tribe1","tribe2", "tribe3", "tribe4"
         ],
         "animal_backstories": [
-        "animal1","animal2", "animal3", "animal4", "animal5", "animal6", "half_cat1", "half_cat2"
+            "animal1","animal2", "animal3", "animal4", "animal5", "animal6", "half_cat1", "half_cat2"
         ],
         "baby_clancat_backstories": [
             "halfclan1", "halfclan2", "outsider_roots1", "abandoned3"
         ],
         "baby_loner_backstories": [
-            "outsider_roots2", "abandoned1", "abandoned2"
+            "outsider_roots2", "abandoned1", "abandoned2", "murdered_parent1", "murdered_parent2", "murdered_parent3"
         ],
         "baby_kittypet_backstories": [
             "abandoned4"
