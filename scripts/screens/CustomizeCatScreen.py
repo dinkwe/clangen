@@ -636,7 +636,7 @@ class CustomizeCatScreen(Screens):
         self.tortie_pattern_dropdown = create_dropdown((640, 200), (135, 40),
                                                        create_options_list(self.tortie_bases, "lower"),
                                                        get_selected_option(self.the_cat.pelt.tortiepattern, "lower"))
-        if len(self.the_cat.pelt.white_patches) > 0 and self.the_cat.pelt.white_patches[0] not in self.white_patches:
+        if self.the_cat.pelt.white_patches is not None and self.the_cat.pelt.white_patches[0] not in self.white_patches:
                 self.white_patches.append(self.the_cat.pelt.white_patches[0])
         
         self.white_patches_dropdown = create_dropdown((320, 285), (135, 40),
