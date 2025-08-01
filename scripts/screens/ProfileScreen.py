@@ -1268,8 +1268,12 @@ class ProfileScreen(Screens):
 
         # SEXUALITY
         if get_clan_setting("gendered attraction") is True:
+            if the_cat.sexuality["gender"] > 0:
+                new_line = "\n"
+            else:
+                new_line = ""
             if get_clan_setting("sexuality labels") is True:
-                sexuality_text = Cat.display_sexuality(the_cat.sexuality["display"], the_cat.moons) + "\n" + Cat.display_gendered_attraction(the_cat.sexuality["gender"])
+                sexuality_text = Cat.display_sexuality(the_cat.sexuality["display"], the_cat.moons) + f"{new_line}" + Cat.display_gendered_attraction(the_cat.sexuality["gender"])
             else:
                 sexuality_text = Cat.display_gendered_attraction(the_cat.sexuality["gender"])
             output += sexuality_text
