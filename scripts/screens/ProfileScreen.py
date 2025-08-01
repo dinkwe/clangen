@@ -1268,7 +1268,7 @@ class ProfileScreen(Screens):
 
         # SEXUALITY
         if get_clan_setting("gendered attraction") is True:
-            if the_cat.sexuality["gender"] > 0:
+            if len(the_cat.sexuality["gender"]) > 0:
                 new_line = "\n"
             else:
                 new_line = ""
