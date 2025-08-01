@@ -864,60 +864,71 @@
     },
     {
         "patrol_id": "gen_bord_app_sneak1",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
-        "types": [
-            "border"
-        ],
+        "biome": ["any"],
+        "season": ["any"],
+        "types": ["border"],
+        "tags": [],
+        "patrol_art": "gen_speaking_cat_app",
         "min_cats": 3,
         "max_cats": 6,
-        "patrol_art": "gen_speaking_cat_app",
-        "intro_text": "Come on! It'll be fun, p_l insists. All of the warriors are asleep, and nobody will notice if a few apprentices sneak out for a bit of night exploration.",
-        "decline_text": "p_l might be ready to go on an adventure, but that doesn't mean {PRONOUN/p_l/poss} fellow apprentices feel the same. Instead of breaking the rules, everyone agrees to stay in camp.",
         "min_max_status": {
-            "warrior": [
-                -1,
-                -1
-            ],
-            "normal adult": [
-                -1,
-                -1
-            ],
-            "apprentice": [
-                3,
-                6
-            ]
+            "warrior": [-1, -1],
+            "normal adult": [-1, -1],
+            "apprentice": [3, 6]
         },
         "weight": 10,
         "chance_of_success": 40,
-        "tags": [],
+        "intro_text": "Come on! It'll be fun, p_l insists. All of the warriors are asleep, and nobody will notice if a few apprentices sneak out for a bit of night exploration.",
+        "decline_text": "p_l might be ready to go on an adventure, but that doesn't mean {PRONOUN/p_l/poss} fellow apprentices feel the same. Instead of breaking the rules, everyone agrees to stay in camp.",
         "success_outcomes": [
             {
-                "text": "The moon is high overhead as the gaggle of apprentices dash about the territory, elated to be able to run and play freely without their mentors around to stop them! It's a long, pleasant night, and everyone returns to camp satisfied...if a little tired.",
-                "exp": 20,
+                "text": "The moon is high overhead as the gaggle of apprentices dashes about the territory, elated to be able to run and play freely without their mentors around to stop them! It's a long, pleasant night, and everyone returns to camp satisfied... if a little tired.",
+                "exp": 5,
                 "weight": 20,
                 "art": "fst_hunt_fun4"
             },
             {
                 "text": "p_l and the other apprentices are goofing off deep in c_n territory when they smell an unfamiliar scent. Stealth, they all decide, is for cowards. They charge forward as a group all shouting in hopes of scaring off the stranger. The trespassing rogue doesn't stand a chance. They immediately flee from the gang of unruly apprentices, who return to camp proud to have protected c_n.",
-                "exp": 25,
+                "exp": 15,
                 "weight": 10,
                 "art": "fst_hunt_fun4",
-                "outsider_rep": -1
+                "outsider_rep": -1,
+                "new_cat": [
+                    ["rogue", "meeting"]
+                ],
+                "relationships": [
+                    {
+						"cats_from": ["n_c:0"],
+                        "cats_to": ["patrol"],
+						"mutual": false,
+						"values": ["dislike"],
+						"amount": 15
+                    },
+                    {
+						"cats_from": ["patrol"],
+                        "cats_to": ["n_c:0"],
+						"mutual": false,
+						"values": ["dislike"],
+						"amount": 5
+                    },
+					{
+						"cats_from": ["n_c:0"],
+                        "cats_to": ["patrol"],
+						"mutual": false,
+						"values": ["respect"],
+						"amount": 5
+                    }
+                ]
             },
             {
                 "text": "p_l and the other apprentices are so distracted by their games that they don't even notice when they cross the o_c_n border! r_c notices a second too late and points it out to the group. Instead of retreating, the apprentices all agree that a little exploration wouldn't hurt. They manage to poke around o_c_n territory, feeling like spies. Eventually they return to camp, triumphant that their trespass went undiscovered.",
-                "exp": 40,
+                "exp": 10,
                 "weight": 10,
                 "art": "fst_hunt_fun4"
             },
             {
                 "text": "The darkness makes the night mysterious. The apprentices slip through the territory, hearts pounding with exhilaration. There's something so thrilling about the pools of darkness and the wind whispering through the territory. It's a perfect night for hide-and-seek. The group spends the night playing, sneaking into their nests just before dawn breaks. What a fun night!",
-                "exp": 20,
+                "exp": 5,
                 "weight": 20,
                 "art": "fst_hunt_fun4"
             }
@@ -930,48 +941,62 @@
                 "art": "running_warrior_app"
             },
             {
-                "text": "p_l and the other apprentices are so distracted by their games that they don't even notice when they cross the o_c_n border! app1 notices a second too late and points it out to the group. Instead of retreating, the apprentices agree that a little exploration wouldn't hurt...but the patrol of enemy warriors that discovers them does not. A battle breaks out and the apprentices eventually flee, returning to camp battered and embarrassed.",
+                "text": "p_l and the other apprentices are so distracted by their games that they don't even notice when they cross the o_c_n border! app1 notices a second too late and points it out to the group. Instead of retreating, the apprentices agree that a little exploration wouldn't hurt... but the patrol of enemy warriors that discovers them does not. A battle breaks out and the apprentices eventually flee, returning to camp battered and embarrassed.",
                 "exp": 0,
                 "weight": 10,
                 "art": "gen_battle_app_other_clan",
                 "injury": [
                     {
-                        "cats": ["r_c", "multi"],
-                        "injuries": ["battle_injury", "battle_injury"]
+                        "cats": ["multi"],
+                        "injuries": ["battle_injury"]
                     }
                 ],
                 "history_text": {
-                    "scar": "m_c was scarred after being attacked by an enemy warrior."
-                }
+                    "scar": "m_c was scarred after being attacked by an enemy warrior.",
+                    "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after being attacked by an enemy warrior."
+                },
+                "other_clan_rep": -2
             },
             {
-                "text": "p_l and the other apprentices are so distracted by their games that they don't even notice when they cross the o_c_n border! app1 notices a second too late and points it out to the group. Instead of retreating, the apprentices agree that a little exploration wouldn't hurt...but the patrol of enemy warriors that discovers them does not. The apprentices are escorted back to c_n's camp, humiliated when the o_c_n warriors insist on reporting their trespass. They're going to be in so much trouble!",
+                "text": "p_l and the other apprentices are so distracted by their games that they don't even notice when they cross the o_c_n border! app1 notices a second too late and points it out to the group. Instead of retreating, the apprentices agree that a little exploration wouldn't hurt... but the patrol of enemy warriors that discovers them does not. The apprentices are escorted back to c_n's camp, humiliated when the o_c_n warriors insist on reporting their trespass. They're going to be in so much trouble!",
                 "exp": 0,
-                "weight": 10,
-                "art": "gen_bord_otherclan_hostile"
+                "weight": 15,
+                "art": "gen_bord_otherclan_hostile",
+                "other_clan_rep": -1
             },
             {
-                "text": "The moon is high overhead as the gaggle of apprentices dash about the territory, elated to be able to run and play freely. They're all so distracted by their games that they don't notice the sudden rush of dog scent. What started as a night of adventure quickly becomes a night of tragedy as a pair of giant hounds attacks the group. The apprentices flee, pausing only long enough to help their injured friends back to camp.",
+                "text": "The moon is high overhead as the gaggle of apprentices dashes about the territory, elated to be able to run and play freely. They're all so distracted by their games that they don't notice the sudden rush of dog scent. What started as a night of adventure quickly becomes a night of tragedy as a pair of giant hounds attacks the group. The apprentices flee, pausing only long enough to help their injured friends back to camp.",
                 "exp": 0,
                 "weight": 5,
                 "art": "gen_patrol_dog_apprentice",
                 "injury": [
                     {
-                        "cats": ["r_c", "multi"],
-                        "injuries": ["big_bite_injury"]
+                        "cats": ["multi"],
+                        "injuries": [
+                            "bite-wound", "mangled leg", "mangled tail", "dislocated joint",
+                            "bite-wound", "mangled leg", "mangled tail", "dislocated joint",
+                            "broken jaw", "broken bone", "head damage", "broken back"
+                        ]
+                    },
+                    {
+                        "cats": ["patrol"],
+                        "injuries": [
+                            "sore", "bruises", "scrapes", "cracked pads", "small cut", "joint pain", "torn pelt",
+                            "torn ear"
+                        ]
                     }
                 ],
                 "history_text": {
-                    "reg_death": "m_c died from {PRONOUN/r_c/poss} injuries after a dog attack.",
+                    "reg_death": "m_c died from {PRONOUN/m_c/poss} injuries after a dog attack.",
                     "scar": "m_c was scarred after being attacked by a dog."
                 }
             },
             {
-                "text": "The moon is high overhead as the gaggle of apprentices dash about the territory, elated to be able to run and play freely. They're all so distracted by their games that they don't notice the sudden rush of dog scent. What started as a night of adventure quickly becomes a night of tragedy as a pair of giant hounds attacks the group. The surviving apprentices flee, hearts breaking as they leave their friends behind.",
+                "text": "The moon is high overhead as the gaggle of apprentices dashes about the territory, elated to be able to run and play freely. They're all so distracted by their games that they don't notice the sudden rush of dog scent. What started as a night of adventure quickly becomes a night of tragedy as a pair of giant hounds attacks the group. The surviving apprentices flee, hearts breaking as they leave their friends behind.",
                 "exp": 0,
                 "weight": 5,
                 "art": "gen_patrol_dog_apprentice",
-                "dead_cats": ["r_c", "multi"],
+                "dead_cats": ["multi"],
                 "history_text": {
                     "reg_death": "m_c died during a dog attack."
                 }
