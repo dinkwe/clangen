@@ -172,7 +172,7 @@ class ModifyOrientationScreen(Screens):
     def screen_switches(self):
         super().screen_switches()
         self.gendered_attraction_list = [
-            "binary fem", "binary masc", "inter", "fem", "masc", "neu/other"
+            "fem", "masc", "neu/other"
         ]
         self.sexuality_sexual_list = [
             "straight", "lesbian", "sapphic", "multisexual", "bisexual", "polysexual", "bi-lesbian", "bi-sapphic",
