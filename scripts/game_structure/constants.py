@@ -1,6 +1,6 @@
 from pygame import Cursor, image, SYSTEM_CURSOR_ARROW
 import ujson
-import tomli
+#import tomli
 
 # this is just to make referencing main menu screens as a whole easier,
 # note that the clan creation screen is included and the clan settings screen is excluded. this is intended.
