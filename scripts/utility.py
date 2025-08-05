@@ -2920,7 +2920,7 @@ def generate_sprite(
                 if tint == "none":
                     tortie_1_none = True
             tortie_2_none = False
-            for tint in cat.pelt.tortie_tint:
+            for tint in cat.pelt.tortie_tint2:
                 if tint == "none":
                     tortie_2_none = True
 

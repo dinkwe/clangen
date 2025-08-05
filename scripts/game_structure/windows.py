@@ -2599,9 +2599,9 @@ class ConfirmDisplayChanges(UIMessageWindow):
         return super().process_event(event)
     
 class CustomizeFilterWindow(UIWindow):
-    def __init__(self, customizer_screen, eye_filter,pelt_filter,acc_filter,white_filter):
+    def __init__(self, customizer_screen, eye_filter, pelt_filter, acc_filter, white_filter, tortie_filter):
         super().__init__(
-            ui_scale(pygame.Rect((250, 125), (250, 325))),
+            ui_scale(pygame.Rect((250, 125), (250, 400))),
             window_display_title="windows.symbol_filters",
             object_id="#filter_window",
         )
@@ -2610,13 +2610,16 @@ class CustomizeFilterWindow(UIWindow):
         self.pelt_filter = pelt_filter if pelt_filter else "all"
         self.acc_filter = acc_filter if acc_filter else "all"
         self.white_filter = white_filter if white_filter else "all"
+        self.tortie_filter = tortie_filter if tortie_filter else "all"
+        
         self.customizer_screen = customizer_screen
 
         self.possible_tags = {
             "eyes": ["all","red", "yellow", "green", "blue", "purple", "neos", "flutter", "lamp", "angel", "snail"],
             "pelts": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"],
             "acc": ["all", "bones", "bugs", "stuff", "plants", "wild", "clothes", "bows", "collars", "feathers","disabilities", "animals","colorsplash", "games"],
-            "white": ["all","little", "mid", "high", "mostly"]
+            "white": ["all","little", "mid", "high", "mostly"],
+            "tortie": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"]
         }
 
         self.back_button = UIImageButton(
@@ -2693,6 +2696,23 @@ class CustomizeFilterWindow(UIWindow):
             manager=MANAGER,
             container=self
         )
+        
+        self.tortie_label = pygame_gui.elements.UITextBox(
+            "tortie colors",
+            ui_scale(pygame.Rect((50, 285), (135, 60))),
+            visible=True,
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER,
+            container=self,
+        )
+        self.tortie_dropdown = UIDropDownMenu(
+            self.possible_tags["tortie"],
+            self.tortie_filter,
+            ui_scale(pygame.Rect((50, 320), (135, 40))),
+            object_id="#dropup",
+            manager=MANAGER,
+            container=self
+        )
 
         
 
@@ -2710,6 +2730,8 @@ class CustomizeFilterWindow(UIWindow):
                 self.customizer_screen.acc_filter = self.acc_dropdown.selected_option[1]
             elif event.ui_element == self.white_dropdown:
                 self.customizer_screen.white_filter = self.white_dropdown.selected_option[1]
+            elif event.ui_element == self.tortie_dropdown:
+                self.customizer_screen.tortie_filter = self.tortie_dropdown.selected_option[1]
             
 
         return super().process_event(event)

@@ -112,8 +112,6 @@ class CustomizeCatScreen(Screens):
         self.initial_state = None
         self.previous_pelt_name = None
         self.heterochromia = False
-        self.initial_scar_selection = {}
-        self.previous_scar_selection = {}
         self.cat_elements = {}
 
         # UI elements
@@ -160,6 +158,7 @@ class CustomizeCatScreen(Screens):
 
         self.tortie_colours = copy(Pelt.pelt_colours)
         self.tortie_colours.sort()
+        self.tortie_colours2 = copy(Pelt.pelt_colours)
         self.tortie_colour_label = None
         self.tortie_colour_dropdown = None
 
@@ -214,6 +213,7 @@ class CustomizeCatScreen(Screens):
         self.eye_colour1_label = None
         self.eye_colour1_dropdown = None
         self.heterochromia_text = None
+        self.double_tortie_text = None
         self.eye_colour2_label = None
         self.eye_colour2_dropdown = None
 
@@ -240,18 +240,20 @@ class CustomizeCatScreen(Screens):
         self.scar_message = None
         self.scar1_label = None
         self.scar1_dropdown = None
-        self.scar2_label = None
-        self.scar2_dropdown = None
-        self.scar3_label = None
-        self.scar3_dropdown = None
-        self.scar4_label = None
-        self.scar4_dropdown = None
         
         self.eye_filter = "all"
         self.pelt_filter = "all"
         self.acc_filter = "all"
         self.white_filter = "all"
         self.tortie_filter = "all"
+        
+        self.tortiecolour2_dropdown = None
+        self.pattern2_dropdown = None
+        self.tortiepattern2_dropdown = None
+        
+        self.tortiecolour2_label = None
+        self.pattern2_label = None
+        self.tortiepattern2_label = None
         
 
     # prints attributes for testing
@@ -511,24 +513,162 @@ class CustomizeCatScreen(Screens):
             self.the_cat.pelt.colour = choice(self.pelt_colours)
     
     def filter_tortiecolors(self):
-        if self.tortie_filter == "all":
-            #do the same for tortie patterns
-            if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+        #first, is our cat even a tortie? if not, skip this hell
+        self.tortie_colours = copy(Pelt.pelt_colours)
+        if self.the_cat.pelt.tortiepattern:
+            if self.tortie_filter == "all":
+                #do the same for tortie patterns
+                if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                elif self.the_cat.pelt.tortiepattern == 'masked':
+                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                else:
+                    self.tortie_colours = copy(Pelt.pelt_colours)
+                    
+                if not self.sparkle_cats:
+                    for color in self.tortie_colours:
+                        if color not in realistic_colors:
+                             self.tortie_colours.remove(color)
+                            
+                    if self.the_cat.pelt.tortiecolour is not None:
+                        if self.the_cat.pelt.tortiecolour not in realistic_colors:
+                            self.the_cat.pelt.tortiecolour = "BLACK"
+                            
+            #sparkle filter is ignored if filtering for pelt bc if you're filtering for green cats. obviously theyre gonna be sparkled
+            elif self.tortie_filter == "ginger":
+                if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                    self.tortie_colours = copy(Pelt.ginger_colours)
+                elif self.the_cat.pelt.tortiepattern == 'masked':
+                    self.tortie_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
+                                         "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
+                                          "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
+                                          "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                          "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
+                                          "CREAMSILVER"]
+                else:
+                    self.tortie_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA"]
+            elif self.tortie_filter == "black":
+                if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                    self.tortie_colours = copy(Pelt.black_colours)
+                elif self.the_cat.pelt.tortiepattern == 'masked':
+                    self.tortie_colours = ["GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
+                         "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
+                         "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
+                         "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
+                         "PAPAVERA", "MAGNOLIA"]
+                else:
+                    self.tortie_colours = ["GREY", "DARKGREY", "GHOST", "BLACK"]
+            elif self.tortie_filter == "white":
+                if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                    self.tortie_colours = copy(Pelt.black_colours)
+                elif self.the_cat.pelt.tortiepattern == 'masked':
+                    self.tortie_colours = ["WHITE", "PALEGREY", "SILVER""WHITESTER", "PALEGREYSTER",
+                         "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
+                         "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
+                         "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA"]
+                else:
+                    self.tortie_colours = ["WHITE", "PALEGREY", "SILVER"]
+            elif self.tortie_filter == "brown":
+                if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                    self.tortie_colours = copy(Pelt.black_colours)
+                elif self.the_cat.pelt.tortiepattern == 'masked':
+                    self.tortie_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
+                         "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
+                         "LIGHTCHOCOLATE", "PALECHOCOLATE", "LIGHTCINNAMON", "CINNAMON", "PALECINNAMON", "DARKCINNAMON",
+                         "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
+                         "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
+                         "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
+                         "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
+                else:
+                    self.tortie_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE"]
+                    
+            #for sparkle colors, we filter for pelt type first. if its not from base game we ignore filters bc like.
+            #then youd just get an empty list lol
+            elif self.the_cat.pelt.tortiepattern in self.base_game_patterns:
+                if self.tortie_filter == "red":
+                    self.tortie_colours = copy(Pelt.red_colors)
+                if self.tortie_filter == "orange":
+                    self.tortie_colours = copy(Pelt.orange_colors)
+                if self.tortie_filter == "yellow":
+                    self.tortie_colours = copy(Pelt.yellow_colors)
+                if self.tortie_filter == "green":
+                    self.tortie_colours = copy(Pelt.green_colors)
+                if self.tortie_filter == "blue":
+                    self.tortie_colours = copy(Pelt.blue_colors)
+                if self.tortie_filter == "purple":
+                    self.tortie_colours = copy(Pelt.purple_colors)
+                if self.tortie_filter == "black2":
+                    self.tortie_colours = copy(Pelt.black_colors)
             elif self.the_cat.pelt.tortiepattern == 'masked':
-                self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                #masked sparkle pelts: all colorsplash, hive, kris, meteor, sparkle
+                if self.tortie_filter == "red":
+                    self.tortie_colours = ["PINKGREY", "REDGREY", "PALEPINKPURPLE","BUBBLEGUM", "REDSTAIN", "ROSE",
+                                          "REDBLUE", "REDS", "RED-ORANGES", "PINKREDS", "RUSTYS", "REDCYANS","BROWNREDS",
+                                          "PINK-WHITE", "PINKCREAM", "PINK-BLUE", "PINKK", "PASTELPINKBLUE", "PINKSHADOW",
+                                          "REDK", "PINKH", "ROSEH", "DARKPINKH", "REDH", "ANONA", "MYRTA", "TILIA", "PITTOSPORA", "MALVA",
+                                          "SARRACENIA", "DROSERA", "HIPPOCASTANA", "TROPAEOLA", "PASSIFLORA", "OLACA", "CRUCIA", "LOASA",
+                                          "MALPIGHIA", "PAEONIA", "ZINGIBERA", "ALISMA", "POLYGONA", "ROSA", "LILIA", "JUNCA", "VERBENA",
+                                          "HAEMODORA", "COMMELINA", "COLCHICA"]
+                if self.tortie_filter == "orange":
+                    self.tortie_colours = ["CREAMMETEOR", "REVERSESUN", "SUNSET", "OURPLE", "SUNRISE", "ORANGEH", "MESEMBRYA", "VITA",
+                         "MARCGRAVIA", "CLUSIA", "BOMBA", "GERANIA", "COMPOSITA", "RHAMNA", "OXALIDA", "ARALIA"]
+                if self.tortie_filter == "yellow":
+                    self.tortie_colours = ["SUNYELLOW", "FROZENSUN","DARKYELLOWS", "SUNNYS", "BANANABERRY", "GOLDH",
+                                         "YELLOWH", "SAXIFRAGA", "LINA", "CAPRIFOLIA", "CARYOPHYLLA"]
+                if self.tortie_filter == "green":
+                    self.tortie_colours = ["LIGHTLIME","GREENBROWN", "GREENGOLD", "TREE", "GREENREDS", "GREENORANGES", "WHITEGREENS", "GREENDARKREDS",
+                        "RUSTYGREEN", "GREEN-NAVY", "GREENH", "DARKGREENH", "DARKMOSS", "JASMINEA", "LYTHRA", "ACANTHA",
+                        "CRASSULA", "RUBIA", "HYPERICA", "LORANTHA", "AURANTIA", "RHIZOPHORA", "BORAGINA", "TAMARICA",
+                        "MELASTOMA", "LECYTHIDA", "VALERIANA", "COMBRETA", "APOCYNA", "DIPSA", "STYLIDIA", "RUTA", "SOLANA",
+                        "PLUMBAGINA"]
+                if self.tortie_filter == "blue":
+                    self.tortie_colours = ["BLUECREAM", "ICEBLUE", "CSBLUE2", "NAVYBLUE", "ICEWHITE","CERULEAN", "GHOSTBLUE",
+                                       "OCEAN", "TEAL", "CYANPINKG", "MINTBLUES", "BLACKBLUES", "SILVERNAVY", "BLACK-BROWN",
+                                       "BLUESPOTTED", "ICESPOTTED", "BLUE-EARTH", "BLUEMINT", "BLUEGHOSTK", "BLUE-YELLOW", "BLUE-PURPLE",
+                                       "BRIGHTBLUEK", "TEALH", "BLUEH", "NAVYH", "LAMIA", "BEGONIA", "GROSSULARIA", "GENTIANA", "ERICA",
+                                       "CAMPANULA", "POMA", "BIGNONIA", "AMARANTA", "VACCINIA", "ONAGRA", "PRIMULA", "SAPOTA", "LOBELIA",
+                                       "MYRSINA", "PORTULA", "PLANTAGINA", "ELAEAGNA", "OLEA", "POLEMONIA", "ORCHIDA", "EUPHORBIA",
+                                       "SCROPHULARIA", "CONVOLVULA", "MUSA", "UTRICULARIA", "UMBELLA", "PROTEA"]
+                if self.tortie_filter == "purple":
+                    self.tortie_colours = ["PURPLECREAM", "INDIGOBLUSH", "VIOLETBLUSH", "MAGENTA",
+                         "MULBERRY", "GRAPE", "CRYSTAL", "ORCHID", "THISTLE", "INDIGOREDS", "WARM-BLUE", "INDIGO-VIOLET", "INDIGOK", "DARKSUNSET", "INDIGOH", "PURPLEH", "VIOLETH",
+                         "PASTELPURPLEH", "BROWN-PURPLE", "PURPLESWIRL", "GOODENIA", "THYMELA", "URTICA", "OROBANCHA",
+                         "HYDROPHYLLA", "AMARYLLIDA", "CONIFERA", "PHYTOLACCA", "IRIDA", "DIOSCORA", "GESNERIA", "SANTALA",
+                         "HYDROCHARIDA", "NYCTAGINA", "BROMELIA", "SMILA", "EBENA"]
+                if self.tortie_filter == "black2":
+                    self.tortie_colours = ["REVERSERAINBOW", "RAINBOW", "SHADOW"]
             else:
                 self.tortie_colours = copy(Pelt.pelt_colours)
-                
-            if not self.sparkle_cats:
-                for color in self.tortie_colours:
-                    if color not in realistic_colors:
-                         self.tortie_colours.remove(color)
-                        
-                if self.the_cat.pelt.tortiecolour is not None:
-                    if self.the_cat.pelt.tortiecolour not in realistic_colors:
-                        self.the_cat.pelt.tortiecolour = "BLACK"
+        
         self.tortie_colours.sort()
+        if self.the_cat.pelt.tortiecolour not in self.tortie_colours:
+            self.the_cat.pelt.tortiecolour = choice(self.tortie_colours)
+        self.filter_tortiecolors2()
+            
+    def filter_tortiecolors2(self):
+        #first, is our cat even a tortie? if not, skip this hell
+        self.tortie_colours2 = copy(Pelt.pelt_colours)
+        if self.the_cat.pelt.tortiepattern2:
+                if self.the_cat.pelt.tortiepattern2 in self.base_game_patterns:
+                    self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                elif self.the_cat.pelt.tortiepattern2 == 'masked':
+                    self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_masked
+                else:
+                    self.tortie_colours2 = copy(Pelt.pelt_colours)
+                    
+                if not self.sparkle_cats:
+                    for color in self.tortie_colours2:
+                        if color not in realistic_colors:
+                             self.tortie_colours2.remove(color)
+                            
+                    if self.the_cat.pelt.tortiecolour2 is not None:
+                        if self.the_cat.pelt.tortiecolour2 not in realistic_colors:
+                            self.the_cat.pelt.tortiecolour2 = "BLACK"
+                            
+        
+        self.tortie_colours2.sort()
+        if self.the_cat.pelt.tortiecolour2 not in self.tortie_colours2:
+            self.the_cat.pelt.tortiecolour2 = choice(self.tortie_colours2)
 
     def screen_switches(self):
         super().screen_switches()
@@ -541,7 +681,7 @@ class CustomizeCatScreen(Screens):
     def build_cat_page(self):
         self.the_cat = Cat.all_cats.get(switch_get_value(Switch.cat))
         (self.next_cat, self.previous_cat) = self.the_cat.determine_next_and_previous_cats()
-        self.cat_elements["cat_name"] = create_text_box("customize " + str(self.the_cat.name), (0, 40), (400, 40),
+        self.cat_elements["cat_name"] = create_text_box("Customize " + str(self.the_cat.name), (0, 40), (400, 40),
                                                         "#text_box_34_horizcenter", {"centerx": "centerx"})
         self.filter_lists()
         self.setup_buttons()
@@ -555,11 +695,11 @@ class CustomizeCatScreen(Screens):
         #                                              LABEL SETUP START                                               #
         # ------------------------------------------------------------------------------------------------------------"""
         self.pelt_name_label = create_text_box("pelt name", (320, 100), (135, 40), "#text_box_22_horizleft")
-        self.pelt_colour_label = create_text_box("pelt colour", (480, 100), (135, 40), "#text_box_22_horizleft")
-        self.pelt_length_label = create_text_box("pelt length", (224, 500), (135, 40), "#text_box_22_horizleft")
+        self.pelt_colour_label = create_text_box("pelt color", (480, 100), (135, 40), "#text_box_22_horizleft")
+        self.pelt_length_label = create_text_box("pelt length", (174, 500), (135, 40), "#text_box_22_horizleft")
         self.pattern_label = create_text_box("pattern", (640, 100), (135, 40), "#text_box_22_horizleft")
         self.tortie_base_label = create_text_box("tortie base", (320, 175), (135, 40), "#text_box_22_horizleft")
-        self.tortie_colour_label = create_text_box("tortie colour", (480, 175), (135, 40), "#text_box_22_horizleft")
+        self.tortie_colour_label = create_text_box("tortie color", (480, 175), (135, 40), "#text_box_22_horizleft")
         self.tortie_pattern_label = create_text_box("tortie pattern", (640, 175), (135, 40), "#text_box_22_horizleft")
         self.white_patches_label = create_text_box("white patches", (320, 260), (135, 40), "#text_box_22_horizleft")
         self.vitiligo_label = create_text_box("vitiligo", (480, 260), (135, 40), "#text_box_22_horizleft")
@@ -570,19 +710,21 @@ class CustomizeCatScreen(Screens):
         self.skin_label = create_text_box("skin", (640, 335), (135, 40), "#text_box_22_horizleft")
         self.reset_message = create_text_box("Changes cannot be reset after leaving this page.",
                                              (5, 395), (315, 30), "#text_box_26_horizcenter")
-        self.eye_colour1_label = create_text_box("eye colour 1", (320, 420), (135, 40), "#text_box_22_horizleft")
+        self.eye_colour1_label = create_text_box("eye color 1", (320, 420), (135, 40), "#text_box_22_horizleft")
         self.heterochromia_text = create_text_box("heterochromia", (495, 451), (135, 40), "#text_box_26_horizcenter")
-        self.eye_colour2_label = create_text_box("eye colour 2", (640, 420), (135, 40), "#text_box_22_horizleft")
-        self.accessory_label = create_text_box("accessory", (568, 500), (135, 40), "#text_box_22_horizleft")
-        self.pose_label = create_text_box("pose", (406, 500), (110, 40), "#text_box_22_horizleft")
-        self.reverse_label = create_text_box("reverse", (52, 500), (135, 40), "#text_box_22_horizleft")
+        self.double_tortie_text = create_text_box("double tortie", (465, 531), (135, 40), "#text_box_26_horizcenter")
+        
+        self.eye_colour2_label = create_text_box("eye color 2", (640, 420), (135, 40), "#text_box_22_horizleft")
+        self.accessory_label = create_text_box("accessory", (595, 500), (135, 40), "#text_box_22_horizleft")
+        self.pose_label = create_text_box("pose", (336, 500), (110, 40), "#text_box_22_horizleft")
+        self.reverse_label = create_text_box("reverse", (22, 500), (135, 40), "#text_box_22_horizleft")
         self.scar_message = create_text_box("Adding/removing scars will not affect a cat's conditions or history.",
                                             (52, 650), (500, 40), "#text_box_26_horizleft")
-        self.scar1_label = create_text_box("scar 1", (46, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar2_label = create_text_box("scar 2", (196, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar3_label = create_text_box("scar 3", (346, 580), (135, 40), "#text_box_22_horizleft")
-        self.scar4_label = create_text_box("scar 4", (496, 580), (135, 40), "#text_box_22_horizleft")
+        self.scar1_label = create_text_box("scars", (46, 580), (135, 40), "#text_box_22_horizleft")
         
+        self.tortiecolour2_label = create_text_box("tortie color 2", (196, 580), (135, 40), "#text_box_22_horizleft")
+        self.pattern2_label = create_text_box("pattern 2", (346, 580), (135, 40), "#text_box_22_horizleft")
+        self.tortiepattern2_label = create_text_box("tortie pattern 2", (496, 580), (135, 40), "#text_box_22_horizleft")
         #tortie tints
         
         self.tortie_tints_label = create_text_box("tortie tint", (646, 580), (135, 40), "#text_box_22_horizleft")
@@ -597,12 +739,12 @@ class CustomizeCatScreen(Screens):
         self.back_button = create_button((25, 60), (105, 30), get_arrow(2) + " Back", ButtonStyles.SQUOVAL)
         self.next_cat_button = create_button((622, 25), (153, 30), "Next Cat " + get_arrow(3, arrow_left=False),
                                              ButtonStyles.SQUOVAL, sound_id="page_flip")
-        self.pelt_length_left_button = create_button((224, 530), (30, 30), get_arrow(1), ButtonStyles.ROUNDED_RECT)
-        self.pelt_length_right_button = create_button((324, 530), (30, 30), get_arrow(1, False),
+        self.pelt_length_left_button = create_button((174, 530), (30, 30), get_arrow(1), ButtonStyles.ROUNDED_RECT)
+        self.pelt_length_right_button = create_button((274, 530), (30, 30), get_arrow(1, False),
                                                       ButtonStyles.ROUNDED_RECT)
-        self.pose_left_button = create_button((406, 530), (30, 30), get_arrow(1), ButtonStyles.ROUNDED_RECT)
-        self.pose_right_button = create_button((486, 530), (30, 30), get_arrow(1, False), ButtonStyles.ROUNDED_RECT)
-        self.reverse_button = create_button((105, 530), (70, 30), "Reverse", ButtonStyles.ROUNDED_RECT)
+        self.pose_left_button = create_button((336, 530), (30, 30), get_arrow(1), ButtonStyles.ROUNDED_RECT)
+        self.pose_right_button = create_button((416, 530), (30, 30), get_arrow(1, False), ButtonStyles.ROUNDED_RECT)
+        self.reverse_button = create_button((75, 530), (70, 30), "Reverse", ButtonStyles.ROUNDED_RECT)
         self.reset_button = create_button((60, 425), (105, 30), "Reset", ButtonStyles.SQUOVAL)
         if self.sparkle_cats:
             self.sparkle_button = create_button((170, 425), (105, 30), "Sparkle On", ButtonStyles.SQUOVAL)
@@ -671,31 +813,28 @@ class CustomizeCatScreen(Screens):
         
         if len(self.the_cat.pelt.accessory) > 0 and self.the_cat.pelt.accessory[0] not in self.accessories:
                 self.accessories.append(self.the_cat.pelt.accessory[0])
-        self.accessory_dropdown = create_dropdown((568, 525), (180, 40), create_options_list(self.accessories, "upper"),
+        self.accessory_dropdown = create_dropdown((595, 525), (180, 40), create_options_list(self.accessories, "upper"),
                                                   get_selected_option(self.the_cat.pelt.accessory, "upper"), "dropup")
 
         scars = self.the_cat.pelt.scars
         self.scar1_dropdown = create_dropdown((42, 605), (135, 40), create_options_list(self.scars, "upper"),
                                               get_selected_option(scars, "upper"), "dropup")
-        self.scar2_dropdown = create_dropdown((192, 605), (135, 40), create_options_list(self.scars, "upper"),
-                                              get_selected_option(scars[1:], "upper"), "dropup")
-        self.scar3_dropdown = create_dropdown((342, 605), (135, 40), create_options_list(self.scars, "upper"),
-                                              get_selected_option(scars[2:], "upper"), "dropup")
-        self.scar4_dropdown = create_dropdown((492, 605), (135, 40), create_options_list(self.scars, "upper"),
-                                              get_selected_option(scars[3:], "upper"), "dropup")
+        
+        self.tortiecolour2_dropdown = create_dropdown((192, 605), (135, 40), create_options_list(self.tortie_colours, "upper"),
+                                              get_selected_option(self.the_cat.pelt.tortiecolour2, "upper"), "dropup")
+        self.pattern2_dropdown = create_dropdown((342, 605), (135, 40), create_options_list(self.patterns, "upper"),
+                                              get_selected_option(self.the_cat.pelt.pattern2, "upper"), "dropup")
+        self.tortiepattern2_dropdown = create_dropdown((492, 605), (135, 40), create_options_list(self.tortie_bases, "upper"),
+                                              get_selected_option(self.the_cat.pelt.tortiepattern2, "upper"), "dropup")
 
         self.tortie_tint_dropdown = create_dropdown((640, 605), (135, 40), create_options_list(self.tints, "lower"),
                                              get_selected_option(self.the_cat.pelt.tortie_tint, "lower", exception=True), "dropup")
 
+        self.make_double_tortie_checkbox()
+        
         """------------------------------------------------------------------------------------------------------------#
         #                                              DROPDOWN SETUP END                                              #
         # ------------------------------------------------------------------------------------------------------------"""
-
-        # stores current scar state
-        self.initial_scar_selection[self.scar1_dropdown] = self.scar1_dropdown.selected_option[1]
-        self.initial_scar_selection[self.scar2_dropdown] = self.scar2_dropdown.selected_option[1]
-        self.initial_scar_selection[self.scar3_dropdown] = self.scar3_dropdown.selected_option[1]
-        self.initial_scar_selection[self.scar4_dropdown] = self.scar4_dropdown.selected_option[1]
 
     def setup_cat(self):
         self.get_cat_age()
@@ -778,6 +917,11 @@ class CustomizeCatScreen(Screens):
             "points": self.the_cat.pelt.points,
             "white_patches_tint": self.the_cat.pelt.white_patches_tint,
             "tortie_tint": self.the_cat.pelt.tortie_tint,
+            "displays_2nd_tortie": self.the_cat.pelt.displays_2nd_tortie,
+            "tortiecolour2": self.the_cat.pelt.tortiecolour2,
+            "pattern2": self.the_cat.pelt.pattern2,
+            "tortiepattern2": self.the_cat.pelt.tortiepattern2,
+            "tortie_tint2": self.the_cat.pelt.tortie_tint2,
             "tint": self.the_cat.pelt.tint,
             "skin": self.the_cat.pelt.skin,
             "eye_colour": self.the_cat.pelt.eye_colour,
@@ -843,6 +987,7 @@ class CustomizeCatScreen(Screens):
                     self.pelt_filter = "all"
                     self.acc_filter = "all"
                     self.white_filter = "all"
+                    self.tortie_filter = "all"
                     self.kill_cat_elements()
                     self.kill_buttons()
                     self.kill_dropdowns()
@@ -856,6 +1001,7 @@ class CustomizeCatScreen(Screens):
                     self.pelt_filter = "all"
                     self.acc_filter = "all"
                     self.white_filter = "all"
+                    self.tortie_filter = "all"
                     self.kill_cat_elements()
                     self.kill_buttons()
                     self.kill_dropdowns()
@@ -875,11 +1021,17 @@ class CustomizeCatScreen(Screens):
                     self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
                 self.update_ui_elements()
             elif event.ui_element == self.filter_button:
-                CustomizeFilterWindow(self, self.eye_filter, self.pelt_filter, self.acc_filter, self.white_filter)
+                CustomizeFilterWindow(self, self.eye_filter, self.pelt_filter, self.acc_filter, self.white_filter, self.tortie_filter)
             elif event.ui_element in [self.pelt_length_left_button, self.pelt_length_right_button]:
                 self.handle_pelt_length_buttons(event.ui_element)
             elif event.ui_element == self.heterochromia_checkbox:
                 self.handle_heterochromia_checkbox()
+            elif event.ui_element == self.cat_elements["double_tortie_checkbox"]:
+                #QUICKSAVE
+                self.the_cat.pelt.displays_2nd_tortie = not self.the_cat.pelt.displays_2nd_tortie
+                self.make_double_tortie_checkbox()
+                self.make_cat_sprite()
+                self.update_ui_elements()
             elif event.ui_element in [self.pose_left_button, self.pose_right_button]:
                 self.handle_pose_buttons(event.ui_element)
             elif event.ui_element == self.reverse_button:
@@ -914,11 +1066,16 @@ class CustomizeCatScreen(Screens):
                 self.handle_eye_colour_dropdown(event.ui_element)
             elif event.ui_element == self.accessory_dropdown:
                 self.handle_accessory_dropdown()
-            elif event.ui_element in [self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown,
-                                      self.scar4_dropdown]:
+            elif event.ui_element == self.scar1_dropdown:
                 self.handle_scar_dropdown(event.ui_element)
             elif event.ui_element == self.tortie_tint_dropdown:
                 self.handle_dropdown_change(self.tortie_tint_dropdown, "tortie_tint")
+            elif event.ui_element == self.tortiecolour2_dropdown:
+                self.handle_dropdown_change(self.tortiecolour2_dropdown , "tortiecolour2")
+            elif event.ui_element == self.pattern2_dropdown:
+                self.handle_dropdown_change(self.pattern2_dropdown, "pattern2")
+            elif event.ui_element == self.tortiepattern2_dropdown:
+                self.handle_dropdown_change(self.tortiepattern2_dropdown, "tortiepattern2")
             # self.print_pelt_attributes() # for testing purposes
 
     def handle_dropdown_change(self, dropdown, attribute):
@@ -934,16 +1091,18 @@ class CustomizeCatScreen(Screens):
                 self.the_cat.pelt.pattern.append(selected_option)
             else:
                 self.the_cat.pelt.pattern = [selected_option]
-        elif attribute == "tortiepattern":
-            if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-                if selected_option not in self.base_game_patterns:
-                    self.tortie_colours = copy(Pelt.pelt_colours)
-                    if self.the_cat.pelt.tortiecolour not in self.base_game_colors:
-                        self.the_cat.pelt.tortiecolour = 'BLACK'
-            elif selected_option in self.base_game_patterns:
-                if 'GREEN' not in self.tortie_colours:
-                     self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
-            setattr(self.the_cat.pelt, attribute, selected_option)
+        elif attribute == "pattern2":
+            if selected_option == "NONE":
+                self.the_cat.pelt.pattern2 = None
+            elif self.the_cat.pelt.pattern2 is None:
+                self.the_cat.pelt.pattern2 = [selected_option]
+            elif isinstance(self.the_cat.pelt.pattern2, list):
+                self.the_cat.pelt.pattern2.append(selected_option)
+            else:
+                self.the_cat.pelt.pattern2 = [selected_option]
+        elif attribute == "tortiepattern" or attribute == "tortiepattern2":
+            self.filter_tortiecolors()
+            setattr(self.the_cat.pelt, attribute, selected_option.lower())
             self.update_ui_elements()
         elif attribute == "tortiebase":
             self.filter_pelt_colors()
@@ -951,37 +1110,40 @@ class CustomizeCatScreen(Screens):
             self.update_ui_elements()
         elif attribute == "tint":
             if selected_option == "None":
-                self.the_cat.pelt.tint = "none"
-            elif self.the_cat.pelt.tint == ["none"]:
+                    self.the_cat.pelt.tint = ["none"]
+            elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.tint = [selected_option]
-            elif isinstance(self.the_cat.pelt.tint, list):
-                self.the_cat.pelt.tint.append(selected_option)
             else:
-                self.the_cat.pelt.tint = [selected_option]
-            if "none" in self.the_cat.pelt.tint:
-                self.the_cat.pelt.tint = ["none"]
+                if self.the_cat.pelt.tint == ["none"]:
+                    self.the_cat.pelt.tint = [selected_option]
+                elif isinstance(self.the_cat.pelt.tint, list):
+                    self.the_cat.pelt.tint.append(selected_option)
+                else:
+                    self.the_cat.pelt.tint = [selected_option]
         elif attribute == "white_patches_tint":
             if selected_option == "None":
-                self.the_cat.pelt.white_patches_tint = "none"
-            elif self.the_cat.pelt.white_patches_tint == ["none"]:
+                    self.the_cat.pelt.white_patches_tint = ["none"]
+            elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.white_patches_tint = [selected_option]
-            elif isinstance(self.the_cat.pelt.white_patches_tint, list):
-                self.the_cat.pelt.white_patches_tint.append(selected_option)
             else:
-                self.the_cat.pelt.white_patches_tint = [selected_option]
-            if "none" in self.the_cat.pelt.white_patches_tint:
-                self.the_cat.pelt.white_patches_tint = ["none"]
+                if self.the_cat.pelt.white_patches_tint == ["none"]:
+                    self.the_cat.pelt.white_patches_tint = [selected_option]
+                elif isinstance(self.the_cat.pelt.white_patches_tint, list):
+                    self.the_cat.pelt.white_patches_tint.append(selected_option)
+                else:
+                    self.the_cat.pelt.white_patches_tint = [selected_option]
         elif attribute == "tortie_tint":
             if selected_option == "None":
-                self.the_cat.pelt.tortie_tint = "none"
-            elif self.the_cat.pelt.tortie_tint == ["none"]:
+                    self.the_cat.pelt.tortie_tint = ["none"]
+            elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.tortie_tint = [selected_option]
-            elif isinstance(self.the_cat.pelt.tortie_tint, list):
-                self.the_cat.pelt.tortie_tint.append(selected_option)
             else:
-                self.the_cat.pelt.tortie_tint = [selected_option]
-            if "none" in self.the_cat.pelt.tortie_tint:
-                self.the_cat.pelt.tortie_tint = ["none"]
+                if self.the_cat.pelt.tortie_tint == ["none"]:
+                    self.the_cat.pelt.tortie_tint = [selected_option]
+                elif isinstance(self.the_cat.pelt.tortie_tint, list):
+                    self.the_cat.pelt.tortie_tint.append(selected_option)
+                else:
+                    self.the_cat.pelt.tortie_tint = [selected_option]
         else:
             setattr(self.the_cat.pelt, attribute, selected_option)
 
@@ -1016,6 +1178,7 @@ class CustomizeCatScreen(Screens):
         self.make_cat_sprite()
         if redo_dropdowns:
             self.filter_pelt_colors()
+            self.filter_tortiecolors()
             self.update_ui_elements()
 
     def handle_pelt_length_buttons(self, button):
@@ -1076,15 +1239,11 @@ class CustomizeCatScreen(Screens):
 
     def handle_scar_dropdown(self, dropdown):
         selected_option = dropdown.selected_option[1]
-        previous_selection = self.previous_scar_selection.get(dropdown, self.initial_scar_selection[dropdown])
-
-        if previous_selection != "NONE" and previous_selection in self.the_cat.pelt.scars:
-            self.the_cat.pelt.scars.remove(previous_selection) # remove previous selection
 
         if selected_option != "NONE":
             self.the_cat.pelt.scars.append(selected_option) # add new selection
-
-        self.previous_scar_selection[dropdown] = selected_option
+        else:
+            self.the_cat.pelt.scars.clear()
 
         self.make_cat_sprite()
     
@@ -1129,7 +1288,7 @@ class CustomizeCatScreen(Screens):
 
     def update_pelt_length_display(self):
         self.kill_cat_element("pelt_length")
-        self.cat_elements["pelt_length"] = create_text_box(self.the_cat.pelt.length.lower(), (254, 530), (70, 40),
+        self.cat_elements["pelt_length"] = create_text_box(self.the_cat.pelt.length.lower(), (204, 530), (70, 40),
                                                            "#text_box_26_horizcenter")
 
     def check_if_tortie(self, new_pelt_name, previous_pelt_name):
@@ -1138,7 +1297,8 @@ class CustomizeCatScreen(Screens):
             self.tortie_base_dropdown,
             self.tortie_colour_dropdown,
             self.tortie_pattern_dropdown,
-            self.tortie_tint_dropdown
+            self.tortie_tint_dropdown,
+            self.tortiecolour2_dropdown, self.pattern2_dropdown, self.tortiepattern2_dropdown
         ]
         if new_pelt_name in ["Calico", "Tortie"]:
             if previous_pelt_name not in ["Calico", "Tortie"]:
@@ -1153,6 +1313,8 @@ class CustomizeCatScreen(Screens):
                     self.the_cat.pelt.tortiebase = previous_pelt_name.lower()
                 self.the_cat.pelt.tortiecolour = self.tortie_colours[0]
                 self.the_cat.pelt.tortiepattern = self.tortie_bases[0]
+                self.the_cat.pelt.tortiecolour2 = "GOLDEN"
+                self.the_cat.pelt.tortiepattern2 = "classic"
 
                 self.pattern_dropdown = create_dropdown((640, 125), (135, 40),
                                                         create_options_list(self.patterns, "upper"),
@@ -1173,6 +1335,13 @@ class CustomizeCatScreen(Screens):
 
                 for dropdown in dropdowns:
                     dropdown.enable()
+                    
+                self.make_double_tortie_checkbox()
+                if not self.the_cat.pelt.displays_2nd_tortie:
+                    self.tortiecolour2_dropdown.disable()
+                    self.pattern2_dropdown.disable()
+                    self.tortiepattern2_dropdown.disable()
+                    
         else:
             for dropdown in dropdowns:
                 dropdown.kill()
@@ -1188,11 +1357,14 @@ class CustomizeCatScreen(Screens):
             self.the_cat.pelt.tortiecolour = None
             self.the_cat.pelt.tortiepattern = None
             
+            self.the_cat.pelt.displays_2nd_tortie = False
+            
             self.the_cat.pelt.tortie_tint = ["none"]
 
             for dropdown in [self.pattern_dropdown, self.tortie_base_dropdown, self.tortie_colour_dropdown,
-                             self.tortie_pattern_dropdown, self.tortie_tint_dropdown]:
+                             self.tortie_pattern_dropdown, self.tortie_tint_dropdown, self.tortiecolour2_dropdown, self.pattern2_dropdown, self.tortiepattern2_dropdown]:
                 dropdown.disable()
+            self.make_double_tortie_checkbox()
 
     def check_white_patches_tint(self):
         if game_setting_get("vit tint"):
@@ -1228,6 +1400,23 @@ class CustomizeCatScreen(Screens):
             starting_height=2
         )
         self.cat_elements["heterochromia_checkbox"] = self.heterochromia_checkbox
+        
+    def make_double_tortie_checkbox(self):
+        self.kill_cat_element("double_tortie_checkbox")
+        checkbox_id = "@checked_checkbox" if self.the_cat.pelt.displays_2nd_tortie else "@unchecked_checkbox"
+        self.double_tortie_checkbox = UIImageButton(
+            ui_scale(pygame.Rect((460, 530), (30, 30))),
+            "",
+            object_id=checkbox_id,
+            starting_height=2
+        )
+        self.cat_elements["double_tortie_checkbox"] = self.double_tortie_checkbox
+        if self.the_cat.pelt.name not in ["Calico", "Tortie"] or not game_setting_get("double torties"):
+            self.cat_elements["double_tortie_checkbox"].disable()
+        if not self.the_cat.pelt.displays_2nd_tortie or not game_setting_get("double torties"):
+                self.tortiecolour2_dropdown.disable()
+                self.pattern2_dropdown.disable()
+                self.tortiepattern2_dropdown.disable()
 
     def handle_heterochromia_checkbox(self):
         self.heterochromia = not self.heterochromia
@@ -1270,7 +1459,7 @@ class CustomizeCatScreen(Screens):
         self.kill_cat_element("pose")
         pose_text = "none" if (self.the_cat.pelt.paralyzed or self.life_stage == "newborn") else str(
             self.cat_elements["current_pose"])
-        self.cat_elements["pose"] = create_text_box(pose_text, (436, 530), (50, 40), "#text_box_26_horizcenter")
+        self.cat_elements["pose"] = create_text_box(pose_text, (366, 530), (50, 40), "#text_box_26_horizcenter")
 
     def change_reverse(self):
         self.the_cat.pelt.reverse = not self.the_cat.pelt.reverse
@@ -1280,7 +1469,7 @@ class CustomizeCatScreen(Screens):
     def update_reverse_display(self):
         self.kill_cat_element("reverse")
         reverse_text = "true" if self.the_cat.pelt.reverse else "false"
-        self.cat_elements["reverse"] = create_text_box(reverse_text, (52, 530), (45, 40), "#text_box_26_horizcenter")
+        self.cat_elements["reverse"] = create_text_box(reverse_text, (22, 530), (45, 40), "#text_box_26_horizcenter")
 
     def exit_screen(self):
         self.kill_cat_elements()
@@ -1291,7 +1480,7 @@ class CustomizeCatScreen(Screens):
 
     def kill_cat_elements(self):
         elements_to_kill = [
-            "cat_name", "cat_image", "pelt_length", "pose", "heterochromia_checkbox", "reverse"
+            "cat_name", "cat_image", "pelt_length", "pose", "heterochromia_checkbox", "reverse", "double_tortie_checkbox"
         ]
         for element in elements_to_kill:
             self.kill_cat_element(element)
@@ -1307,7 +1496,8 @@ class CustomizeCatScreen(Screens):
             self.white_patches_label, self.vitiligo_label, self.points_label, self.white_patches_tint_label,
             self.tint_label, self.skin_label, self.eye_colour1_label, self.eye_colour2_label, self.heterochromia_text,
             self.reset_message, self.pose_label, self.reverse_label, self.accessory_label, self.scar_message,
-            self.scar1_label, self.scar2_label, self.scar3_label, self.scar4_label, self.tortie_tints_label 
+            self.scar1_label, self.tortie_tints_label, self.double_tortie_text,
+            self.tortiecolour2_label, self.pattern2_label, self.tortiepattern2_label
         ]
         for label in labels:
             label.kill()
@@ -1328,7 +1518,8 @@ class CustomizeCatScreen(Screens):
             self.vitiligo_dropdown,
             self.points_dropdown, self.skin_dropdown, self.white_patches_tint_dropdown, self.tint_dropdown,
             self.eye_colour1_dropdown, self.eye_colour2_dropdown, self.accessory_dropdown,
-            self.scar1_dropdown, self.scar2_dropdown, self.scar3_dropdown, self.scar4_dropdown, self.tortie_tint_dropdown 
+            self.scar1_dropdown, self.tortie_tint_dropdown,
+            self.tortiecolour2_dropdown, self.pattern2_dropdown, self.tortiepattern2_dropdown
         ]
         for dropdown in dropdowns:
             dropdown.kill()
