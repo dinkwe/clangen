@@ -1029,6 +1029,11 @@ class CustomizeCatScreen(Screens):
             elif event.ui_element == self.cat_elements["double_tortie_checkbox"]:
                 #QUICKSAVE
                 self.the_cat.pelt.displays_2nd_tortie = not self.the_cat.pelt.displays_2nd_tortie
+                if self.the_cat.pelt.displays_2nd_tortie:
+                    if not self.the_cat.pelt.tortiecolour2:
+                        self.the_cat.pelt.tortiecolour2 = "GOLDEN"
+                    if not self.the_cat.pelt.tortiepattern2:
+                        self.the_cat.pelt.tortiepattern2 = "classic"
                 self.make_double_tortie_checkbox()
                 self.make_cat_sprite()
                 self.update_ui_elements()
