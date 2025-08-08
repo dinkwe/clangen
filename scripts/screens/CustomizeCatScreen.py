@@ -1361,6 +1361,9 @@ class CustomizeCatScreen(Screens):
             self.the_cat.pelt.tortiebase = None
             self.the_cat.pelt.tortiecolour = None
             self.the_cat.pelt.tortiepattern = None
+            self.the_cat.pelt.tortiecolour2 = None
+            self.the_cat.pelt.tortiepattern2 = None
+            self.the_cat.pelt.pattern2 = None
             
             self.the_cat.pelt.displays_2nd_tortie = False
             
