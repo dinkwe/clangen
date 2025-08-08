@@ -335,21 +335,17 @@ class Pelt:
     ]
 
     yellow_eyes = [
-        'BULLET', 'GREY SILVER', 'PEACH', 'LIGHT YELLOW', 'SAND', 'DAFFODIL', 'SUNSHINE', 'MUSTARD', 'MARIGOLD',
-        'GOLD ORE', 'BRONZE ORE', 'BRASS', 'FOSSILIZED AMBER', 'TIMBER', 'COPPER ORE', 'DAWN SKY', 'YELLOW', 'AMBER',
-        'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW', 'BRONZE', 'SILVER', 'ROSE', 'LIGHT FLAME', 'PUMPKIN', 'BROWN',
-        'DARK PINE', 'FALL', 'GOLD MOON', 'OXIDIZED', 'BERRY BANANA', 'WORMY', 'THUNDERBOLT', 'PALE BROWN', 'MORNING',
-        'BLACK', 'ROSE GOLD', 'DARK BROWN', 'MUDDY', 'RUSTY', 'BAY', 'DISCORD', 'ORANGE', 'AUTUMN LEAF', 'POLYGALA',
-        'RESEDA', 'CISTA', 'NYMPHEA', 'DIPTEROCARPA', 'DILLENIA', 'AMYGDALA', 'MESEMBRYA', 'VITA', 'MARCGRAVIA',
-        'CLUSIA', 'BOMBA', 'SAMYDA', 'BIXA', 'GERANIA', 'COMPOSITA', 'RHAMNA', 'OXALIDA', 'ARALIA', 'TEREBINTHA',
-        'MELIA', 'SAXIFRAGA', 'LINA', 'CAPRIFOLIA', 'CARYOPHYLLA', 'LEGUMINOSAE', 'CAMELLIA', 'CACTACEA'
+        'LIGHT YELLOW', 'SAND', 'DAFFODIL', 'SUNSHINE', 'MUSTARD', 'MARIGOLD','GOLD ORE', 'BRASS',
+        'FOSSILIZED AMBER', 'YELLOW', 'AMBER','PALEYELLOW', 'GOLD', 'GREENYELLOW', 'SILVER','GOLD MOON', 'OXIDIZED',
+        'THUNDERBOLT', 'MORNING','BAY', 'DISCORD', 'CISTA','MESEMBRYA','SAMYDA', 'GERANIA', 'COMPOSITA', 'RHAMNA',
+        'OXALIDA','MELIA', 'LINA', 'CAPRIFOLIA', 'CARYOPHYLLA', 'LEGUMINOSAE', 'CAMELLIA'
     ]
 
     blue_eyes = [
-        'BLUE SKY', 'STORMY BLUE', 'OCEAN', 'DEPTHS', 'COBALT ORE', 'OVERCAST', 'STORMY', 'RAIN', 'AQUA', 'TEAL',
-        'CYAN DYE', 'IRIS', 'INDIGO', 'PERIWINKLE PURPLE', 'ROBIN', 'STEEL', 'DAWN SKIES', 'ICY CRACK', 'BLUE',
-        'DARKBLUE', 'CYAN', 'PALEBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'SEAFOAM', 'CLOUDY', 'TURQUOISE', 'RAINY',
-        'POND', 'MIDNIGHT', 'MOONSTONE', 'SNOW', 'WICKED', 'PHANTOM', 'DAWN SKY', 'BLUE HAZEL', 'CURSE', 'FIREWORK',
+        'BLUE SKY', 'STORMY BLUE', 'OCEAN', 'DEPTHS', 'COBALT ORE', 'OVERCAST', 'RAIN', 'AQUA', 'TEAL',
+        'CYAN DYE', 'IRIS', 'INDIGO', 'PERIWINKLE PURPLE', 'ROBIN', 'DAWN SKIES', 'ICY CRACK', 'BLUE',
+        'DARKBLUE', 'CYAN', 'PALEBLUE', 'COBALT', 'SUNLITICE', 'SEAFOAM', 'TURQUOISE', 'RAINY',
+        'POND', 'MOONSTONE', 'SNOW', 'DAWN SKY', 'BLUE HAZEL', 'CURSE', 'FIREWORK',
         'REVERSE SUNLITICE', 'ICY', 'WINTER ROSE', 'LAMIA', 'BEGONIA', 'GROSSULARIA', 'GENTIANA', 'ERICA', 'CAMPANULA',
         'POMA', 'BIGNONIA', 'AMARANTA', 'VACCINIA', 'ONAGRA', 'PRIMULA', 'SAPOTA', 'LOBELIA', 'MYRSINA', 'PORTULA',
         'PLANTAGINA', 'ELAEAGNA', 'OLEA', 'POLEMONIA', 'ORCHIDA', 'EUPHORBIA', 'SCROPHULARIA', 'CONVOLVULA', 'MUSA',
@@ -362,14 +358,23 @@ class Pelt:
         'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'ALGAE', 'SWAMP', 'AQUAMARINE', 'EARTH', 'DIRT', 'FOREST FIRE', 'LIME',
         'LUCKY', 'DARK HAZEL', 'DARK TURQUOISE', 'AVOCADO', 'NEON GREEN', 'SEA', 'JASMINEA', 'LYTHRA', 'ACANTHA',
         'CRASSULA', 'RUBIA', 'HYPERICA', 'LORANTHA', 'AURANTIA', 'RHIZOPHORA', 'BORAGINA', 'TAMARICA', 'MELASTOMA',
-        'LECYTHIDA', 'VALERIANA', 'COMBRETA', 'APOCYNA', 'DIPSA', 'STYLIDIA', 'RUTA', 'SOLANA', 'PLUMBAGINA'
+        'LECYTHIDA', 'VALERIANA', 'COMBRETA', 'APOCYNA', 'DIPSA', 'STYLIDIA', 'RUTA', 'SOLANA', 'PLUMBAGINA',
+        'WICKED'
     ]
 
     red_eyes = [
         'BLESSING', 'CEDAR', 'CHRISTMAS', 'COTTON CANDY', 'CRIMSON', 'DARK ROSE', 'DARKAMBER', 'ECLIPSE', 'PINK', 'RED',
         'ROSE', 'RUBY', 'SUNSET', 'VALENTINE', 'VOLCANO', 'ANONA', 'MYRTA', 'TILIA', 'PITTOSPORA', 'MALVA',
         'SARRACENIA', 'DROSERA', 'HIPPOCASTANA', 'TROPAEOLA', 'PASSIFLORA', 'OLACA', 'CRUCIA', 'LOASA', 'MALPIGHIA',
-        'ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA'
+        'ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA', 'BERRY BANANA', 'NYMPHEA', 'ROSE',
+        'ROSE GOLD'
+    ]
+    
+    orange_eyes = [
+        'AMYGDALA', 'ARALIA', 'AUTUMN LEAF', 'BIXA', 'BOMBA', 'BRONZE', 'BRONZE ORE', 'BROWN', 'CACTACEA', 'CLUSIA',
+        'COPPER', 'COPPER ORE', 'DARK BROWN', 'DARK PINE', 'DILLENIA', 'DIPTEROCARPA', 'FALL', 'LIGHT FLAME',
+        'MARCGRAVIA', 'MELIA', 'MUDDY', 'ORANGE', 'OXIDIZED', 'PALE BROWN', 'PEACH', 'PUMPKIN', 'RUSTY', 'SAMYDA',
+        'TEREBINTHA', 'TIMBER', 'VITA', 'WORMY'
     ]
 
     purple_eyes = [
@@ -377,7 +382,12 @@ class Pelt:
         'PASTEL', 'PASTEL LAVENDER', 'PERIWINKLE', 'SEASHELL', 'TWILIGHT SKY', 'VIOLET', 'BERBERIDA', 'RANUNCULA',
         'CAPPARIDA', 'VIOLA', 'FUMARIA', 'PAPAVERA', 'MAGNOLIA', 'GOODENIA', 'THYMELA', 'URTICA', 'OROBANCHA',
         'HYDROPHYLLA', 'AMARYLLIDA', 'CONIFERA', 'PHYTOLACCA', 'PAEONIA', 'IRIDA', 'DIOSCORA', 'GESNERIA', 'SANTALA',
-        'HYDROCHARIDA', 'ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA'
+        'HYDROCHARIDA', 'ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA', 'DAWN SKY'
+    ]
+    
+    black_eyes = [
+        'BLACK', 'BULLET', 'CISTA', 'GREY SILVER', 'POLYGALA', 'RESEDA', 'SAXIFRAGA', 'SILVER', 'CLOUDY', 'GREY',
+        'MIDNIGHT', 'PHANTOM', 'STEEL', 'STORMY'
     ]
 
     neos_eyes = [
@@ -2254,7 +2264,7 @@ class Pelt:
         if not parents:
             self.eye_colour = choice(Pelt.eye_colours)
         else:
-            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes,
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.orange_eyes, Pelt.black_eyes,
                             Pelt.neos_eyes, Pelt.flutter_eyes, Pelt.lamp_eyes, Pelt.angel_eyes, Pelt.snail_eyes]
             similar_colors = []
             for i in parents:
@@ -2284,7 +2294,7 @@ class Pelt:
             num = 1
 
         if not random.randint(0, num):
-            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes]
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.orange_eyes, Pelt.black_eyes]
             for colour in colour_wheel[:]:
                 if self.eye_colour in colour:
                     colour_wheel.remove(

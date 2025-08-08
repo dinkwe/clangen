@@ -2615,7 +2615,7 @@ class CustomizeFilterWindow(UIWindow):
         self.customizer_screen = customizer_screen
 
         self.possible_tags = {
-            "eyes": ["all","red", "yellow", "green", "blue", "purple", "neos", "flutter", "lamp", "angel", "snail"],
+            "eyes": ["all","red", "orange/brown", "yellow", "green", "blue", "purple", "black", "neos", "flutter", "lamp", "angel", "snail"],
             "pelts": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"],
             "acc": ["all", "bones", "bugs", "stuff", "plants", "wild", "clothes", "bows", "collars", "feathers","disabilities", "animals","colorsplash", "games"],
             "white": ["all","little", "mid", "high", "mostly"],
