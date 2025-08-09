@@ -905,7 +905,7 @@ def create_new_cat(
                     # TODO: refactor this entire function to remove this call amongst other things
                     from scripts.cat.pelts import Pelt
 
-                    new_cat.pelt.accessory.append(choice(Pelt.collars))
+                    new_cat.pelt.accessory.append(choice(collars))
 
             # try to give name from full loner name list
             elif original_social in (CatSocial.LONER, CatSocial.ROGUE) and bool(
@@ -3061,33 +3061,122 @@ def generate_sprite(
             new_sprite.blit(vitiligo, (0, 0))
 
         # draw eyes & scars1
-        neos_eyes = ['NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW',
-                     'NEO SCARLET', 'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN', 'NEO YELLOWRED',
-                     'NEO PINK', 'NEO INDIGO', 'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK',
-                     'NEO MINT', 'NEO BLACKBLUE']
+        #have to copy paste this monster bc cant import Pelt :/.
+        neos_eyes = [
+            'NEO FIRE', 'NEO AMETHYST', 'NEO LIME', 'NEO VIOLET', 'NEO SUN', 'NEO TURQUOISE', 'NEO YELLOW', 'NEO SCARLET',
+            'NEO PINKPURPLE', 'NEO LIGHTBLUE', 'NEO DARKBLUE', 'NEO CYAN', 'NEO YELLOWRED', 'NEO PINK', 'NEO INDIGO',
+            'NEO PURPLE', 'NEO YELLOWGREEN', 'NEO ICEBLUE', 'NEO PALEPINK', 'NEO MINT', 'NEO BLACKBLUE'
+        ]
 
-        flutter_eyes = ['FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE',
-                        'FLUTTER BEACH', 'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE',
-                        'FLUTTER GALAXY', 'FLUTTER STAINEDGLASS', 'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE',
-                        'FLUTTER BLUEYELLOW', 'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST',
-                        'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS', 'FLUTTER DUSTOX']
+        flutter_eyes = [
+            'FLUTTER SUNSET', 'FLUTTER MONARCH', 'FLUTTER PEACOCK', 'FLUTTER LUNAR', 'FLUTTER GREENORANGE', 'FLUTTER BEACH',
+            'FLUTTER REDADMIRAL', 'FLUTTER DARK', 'FLUTTER RAINBOW', 'FLUTTER LIGHTBLUE', 'FLUTTER GALAXY',
+            'FLUTTER STAINEDGLASS', 'FLUTTER GLASSWING', 'FLUTTER GREENSTRIPE', 'FLUTTER BLUEYELLOW',
+            'FLUTTER PASTELGALAXY', 'FLUTTER MOTH', 'FLUTTER SPARKLYDUST', 'FLUTTER IMPERIAL', 'FLUTTER PINKHEARTS',
+            'FLUTTER DUSTOX'
+        ]
 
-        lamp_eyes = ['LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE',
-                     'LAMP DARKBLUE', 'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD',
-                     'LAMP ORANGE2', 'LAMP DARKHAZEL', 'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW',
-                     'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW', 'LAMP GOLDENGREEN']
+        lamp_eyes = [
+            'LAMP YELLOW', 'LAMP ORANGE', 'LAMP HAZEL', 'LAMP YELLOWGREEN', 'LAMP GREEN', 'LAMP BLUE', 'LAMP DARKBLUE',
+            'LAMP GRAY', 'LAMP CYAN', 'LAMP TURQUOISE', 'LAMP PURPLE', 'LAMP GOLD', 'LAMP ORANGE2', 'LAMP DARKHAZEL',
+            'LAMP DARKBLUE2', 'LAMP BLUE2', 'LAMP BROWN', 'LAMP PALEYELLOW', 'LAMP LIGHTYELLOW', 'LAMP DARKYELLOW',
+            'LAMP GOLDEGREEN'
+        ]
 
-        angel_eyes = ['ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE',
-                      'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD',
-                      'ANGEL COPPER', 'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER',
-                      'ANGEL LIGHTYELLOW', 'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN']
+        angel_eyes = [
+            'ANGEL YELLOW', 'ANGEL ORANGE', 'ANGEL HAZEL', 'ANGEL YELLOWGREEN', 'ANGEL GREEN', 'ANGEL BLUE',
+            'ANGEL DARKBLUE', 'ANGEL GRAY', 'ANGEL CYAN', 'ANGEL TURQUOISE', 'ANGEL PURPLE', 'ANGEL GOLD', 'ANGEL COPPER',
+            'ANGEL MINT', 'ANGEL DARKBLUE2', 'ANGEL BLUE2', 'ANGEL BROWN', 'ANGEL SILVER', 'ANGEL LIGHTYELLOW',
+            'ANGEL DARKYELLOW', 'ANGEL GOLDENGREEN'
+        ]
 
-        snail_eyes = ['SNAIL YELLOW', 'SNAIL ORANGE', 'SNAIL HAZEL', 'SNAIL YELLOWGREEN', 'SNAIL GREEN', 'SNAIL BLUE',
-                      'SNAIL DARKBLUE', 'SNAIL GRAY', 'SNAIL CYAN', 'SNAIL TURQUOISE', 'SNAIL PURPLE', 'SNAIL GOLD',
-                      'SNAIL COPPER', 'SNAIL MINT', 'SNAIL DARKBLUE2', 'SNAIL BLUE2', 'SNAIL BROWN', 'SNAIL SILVER',
-                      'SNAIL LIGHTYELLOW', 'SNAIL DARKYELLOW', 'SNAIL GOLDENGREEN']
+        snail_eyes = [
+            'SNAIL YELLOW', 'SNAIL ORANGE', 'SNAIL HAZEL', 'SNAIL YELLOWGREEN', 'SNAIL GREEN', 'SNAIL BLUE',
+            'SNAIL DARKBLUE', 'SNAIL GRAY', 'SNAIL CYAN', 'SNAIL TURQUOISE', 'SNAIL PURPLE', 'SNAIL GOLD', 'SNAIL COPPER',
+            'SNAIL MINT', 'SNAIL DARKBLUE2', 'SNAIL BLUE2', 'SNAIL BROWN', 'SNAIL SILVER', 'SNAIL LIGHTYELLOW',
+            'SNAIL DARKYELLOW', 'SNAIL GOLDENGREEN'
+        ]
+        
+        aerial_eyes = ['BERBERID-AERIAL', 'RANUNCUL-AERIAL', 'CAPPARID-AERIAL', 'VIOL-AERIAL', 'FUMARI-AERIAL', 'PAPAVER-AERIAL', 'MAGNOLI-AERIAL',
+            'POLYGAL-AERIAL', 'RESED-AERIAL', 'CIST-AERIAL', 'NYMPHE-AERIAL', 'DIPTEROCARP-AERIAL', 'DILLENI-AERIAL', 'AMYGDAL-AERIAL',
+            'ANON-AERIAL', 'MYRT-AERIAL', 'TILI-AERIAL', 'PITTOSPOR-AERIAL', 'MALV-AERIAL', 'SARRACENI-AERIAL', 'DROSER-AERIAL',
+            'HIPPOCASTAN-AERIAL', 'TROPAEOL-AERIAL', 'PASSIFLOR-AERIAL', 'OLAC-AERIAL', 'CRUCI-AERIAL', 'LOAS-AERIAL', 'MALPIGHI-AERIAL',
+            'MESEMBRY-AERIAL', 'VIT-AERIAL', 'MARCGRAVI-AERIAL', 'CLUSI-AERIAL', 'BOMB-AERIAL', 'SAMYD-AERIAL', 'BIX-AERIAL',
+            'GERANI-AERIAL', 'COMPOSIT-AERIAL', 'RHAMN-AERIAL', 'OXALID-AERIAL', 'ARALI-AERIAL', 'TEREBINTH-AERIAL', 'MELI-AERIAL',
+            'SAXIFRAG-AERIAL', 'LIN-AERIAL', 'CAPRIFOLI-AERIAL', 'CARYOPHYLL-AERIAL', 'LEGUMINOSAE', 'CAMELLI-AERIAL', 'CACTACEA',
+            'JASMINE-AERIAL', 'LYTHR-AERIAL', 'ACANTH-AERIAL', 'CRASSUL-AERIAL', 'RUBI-AERIAL', 'HYPERIC-AERIAL', 'LORANTH-AERIAL',
+            'AURANTI-AERIAL', 'RHIZOPHOR-AERIAL', 'BORAGIN-AERIAL', 'TAMARIC-AERIAL', 'MELASTOM-AERIAL', 'LECYTHID-AERIAL', 'VALERIAN-AERIAL',
+            'COMBRET-AERIAL', 'APOCYN-AERIAL', 'DIPS-AERIAL', 'STYLIDI-AERIAL', 'RUT-AERIAL', 'SOLAN-AERIAL', 'PLUMBAGIN-AERIAL',
+            'LAMI-AERIAL', 'BEGONI-AERIAL', 'GROSSULARI-AERIAL', 'GENTIAN-AERIAL', 'ERIC-AERIAL', 'CAMPANUL-AERIAL', 'POM-AERIAL',
+            'BIGNONI-AERIAL', 'AMARANT-AERIAL', 'VACCINI-AERIAL', 'ONAGR-AERIAL', 'PRIMUL-AERIAL', 'SAPOT-AERIAL', 'LOBELI-AERIAL',
+            'MYRSIN-AERIAL', 'PORTUL-AERIAL', 'PLANTAGIN-AERIAL', 'ELAEAGN-AERIAL', 'OLE-AERIAL', 'POLEMONI-AERIAL', 'ORCHID-AERIAL',
+            'EUPHORBI-AERIAL', 'SCROPHULARI-AERIAL', 'CONVOLVUL-AERIAL', 'MUS-AERIAL', 'UTRICULARI-AERIAL', 'UMBELL-AERIAL', 'PROTE-AERIAL',
+            'GOODENI-AERIAL', 'THYMEL-AERIAL', 'URTIC-AERIAL', 'OROBANCH-AERIAL', 'HYDROPHYLL-AERIAL', 'AMARYLLID-AERIAL', 'CONIFER-AERIAL',
+            'PHYTOLACC-AERIAL', 'PAEONI-AERIAL', 'IRID-AERIAL', 'DIOSCOR-AERIAL', 'GESNERI-AERIAL', 'SANTAL-AERIAL', 'HYDROCHARID-AERIAL',
+            'ZINGIBER-AERIAL', 'ALISM-AERIAL', 'POLYGON-AERIAL', 'NYCTAGIN-AERIAL', 'BROMELI-AERIAL', 'SMIL-AERIAL', 'EBEN-AERIAL',
+            'ROS-AERIAL', 'LILI-AERIAL', 'JUNC-AERIAL', 'VERBEN-AERIAL', 'HAEMODOR-AERIAL', 'COMMELIN-AERIAL', 'COLCHIC-AERIAL']
+        
+        demon_eyes = ['BERBERID-DEMON', 'RANUNCUL-DEMON', 'CAPPARID-DEMON', 'VIOL-DEMON', 'FUMARI-DEMON', 'PAPAVER-DEMON', 'MAGNOLI-DEMON',
+            'POLYGAL-DEMON', 'RESED-DEMON', 'CIST-DEMON', 'NYMPHE-DEMON', 'DIPTEROCARP-DEMON', 'DILLENI-DEMON', 'AMYGDAL-DEMON',
+            'ANON-DEMON', 'MYRT-DEMON', 'TILI-DEMON', 'PITTOSPOR-DEMON', 'MALV-DEMON', 'SARRACENI-DEMON', 'DROSER-DEMON',
+            'HIPPOCASTAN-DEMON', 'TROPAEOL-DEMON', 'PASSIFLOR-DEMON', 'OLAC-DEMON', 'CRUCI-DEMON', 'LOAS-DEMON', 'MALPIGHI-DEMON',
+            'MESEMBRY-DEMON', 'VIT-DEMON', 'MARCGRAVI-DEMON', 'CLUSI-DEMON', 'BOMB-DEMON', 'SAMYD-DEMON', 'BIX-DEMON',
+            'GERANI-DEMON', 'COMPOSIT-DEMON', 'RHAMN-DEMON', 'OXALID-DEMON', 'ARALI-DEMON', 'TEREBINTH-DEMON', 'MELI-DEMON',
+            'SAXIFRAG-DEMON', 'LIN-DEMON', 'CAPRIFOLI-DEMON', 'CARYOPHYLL-DEMON', 'LEGUMINOSAE', 'CAMELLI-DEMON', 'CACTACEA',
+            'JASMINE-DEMON', 'LYTHR-DEMON', 'ACANTH-DEMON', 'CRASSUL-DEMON', 'RUBI-DEMON', 'HYPERIC-DEMON', 'LORANTH-DEMON',
+            'AURANTI-DEMON', 'RHIZOPHOR-DEMON', 'BORAGIN-DEMON', 'TAMARIC-DEMON', 'MELASTOM-DEMON', 'LECYTHID-DEMON', 'VALERIAN-DEMON',
+            'COMBRET-DEMON', 'APOCYN-DEMON', 'DIPS-DEMON', 'STYLIDI-DEMON', 'RUT-DEMON', 'SOLAN-DEMON', 'PLUMBAGIN-DEMON',
+            'LAMI-DEMON', 'BEGONI-DEMON', 'GROSSULARI-DEMON', 'GENTIAN-DEMON', 'ERIC-DEMON', 'CAMPANUL-DEMON', 'POM-DEMON',
+            'BIGNONI-DEMON', 'AMARANT-DEMON', 'VACCINI-DEMON', 'ONAGR-DEMON', 'PRIMUL-DEMON', 'SAPOT-DEMON', 'LOBELI-DEMON',
+            'MYRSIN-DEMON', 'PORTUL-DEMON', 'PLANTAGIN-DEMON', 'ELAEAGN-DEMON', 'OLE-DEMON', 'POLEMONI-DEMON', 'ORCHID-DEMON',
+            'EUPHORBI-DEMON', 'SCROPHULARI-DEMON', 'CONVOLVUL-DEMON', 'MUS-DEMON', 'UTRICULARI-DEMON', 'UMBELL-DEMON', 'PROTE-DEMON',
+            'GOODENI-DEMON', 'THYMEL-DEMON', 'URTIC-DEMON', 'OROBANCH-DEMON', 'HYDROPHYLL-DEMON', 'AMARYLLID-DEMON', 'CONIFER-DEMON',
+            'PHYTOLACC-DEMON', 'PAEONI-DEMON', 'IRID-DEMON', 'DIOSCOR-DEMON', 'GESNERI-DEMON', 'SANTAL-DEMON', 'HYDROCHARID-DEMON',
+            'ZINGIBER-DEMON', 'ALISM-DEMON', 'POLYGON-DEMON', 'NYCTAGIN-DEMON', 'BROMELI-DEMON', 'SMIL-DEMON', 'EBEN-DEMON',
+            'ROS-DEMON', 'LILI-DEMON', 'JUNC-DEMON', 'VERBEN-DEMON', 'HAEMODOR-DEMON', 'COMMELIN-DEMON', 'COLCHIC-DEMON',]
+        
+        floral_eyes = ['BERBERID-FLORA', 'RANUNCUL-FLORA', 'CAPPARID-FLORA', 'VIOL-FLORA', 'FUMARI-FLORA', 'PAPAVER-FLORA', 'MAGNOLI-FLORA',
+            'POLYGAL-FLORA', 'RESED-FLORA', 'CIST-FLORA', 'NYMPHE-FLORA', 'DIPTEROCARP-FLORA', 'DILLENI-FLORA', 'AMYGDAL-FLORA',
+            'ANON-FLORA', 'MYRT-FLORA', 'TILI-FLORA', 'PITTOSPOR-FLORA', 'MALV-FLORA', 'SARRACENI-FLORA', 'DROSER-FLORA',
+            'HIPPOCASTAN-FLORA', 'TROPAEOL-FLORA', 'PASSIFLOR-FLORA', 'OLAC-FLORA', 'CRUCI-FLORA', 'LOAS-FLORA', 'MALPIGHI-FLORA',
+            'MESEMBRY-FLORA', 'VIT-FLORA', 'MARCGRAVI-FLORA', 'CLUSI-FLORA', 'BOMB-FLORA', 'SAMYD-FLORA', 'BIX-FLORA',
+            'GERANI-FLORA', 'COMPOSIT-FLORA', 'RHAMN-FLORA', 'OXALID-FLORA', 'ARALI-FLORA', 'TEREBINTH-FLORA', 'MELI-FLORA',
+            'SAXIFRAG-FLORA', 'LIN-FLORA', 'CAPRIFOLI-FLORA', 'CARYOPHYLL-FLORA', 'LEGUMINOSAE', 'CAMELLI-FLORA', 'CACTACEA',
+            'JASMINE-FLORA', 'LYTHR-FLORA', 'ACANTH-FLORA', 'CRASSUL-FLORA', 'RUBI-FLORA', 'HYPERIC-FLORA', 'LORANTH-FLORA',
+            'AURANTI-FLORA', 'RHIZOPHOR-FLORA', 'BORAGIN-FLORA', 'TAMARIC-FLORA', 'MELASTOM-FLORA', 'LECYTHID-FLORA', 'VALERIAN-FLORA',
+            'COMBRET-FLORA', 'APOCYN-FLORA', 'DIPS-FLORA', 'STYLIDI-FLORA', 'RUT-FLORA', 'SOLAN-FLORA', 'PLUMBAGIN-FLORA',
+            'LAMI-FLORA', 'BEGONI-FLORA', 'GROSSULARI-FLORA', 'GENTIAN-FLORA', 'ERIC-FLORA', 'CAMPANUL-FLORA', 'POM-FLORA',
+            'BIGNONI-FLORA', 'AMARANT-FLORA', 'VACCINI-FLORA', 'ONAGR-FLORA', 'PRIMUL-FLORA', 'SAPOT-FLORA', 'LOBELI-FLORA',
+            'MYRSIN-FLORA', 'PORTUL-FLORA', 'PLANTAGIN-FLORA', 'ELAEAGN-FLORA', 'OLE-FLORA', 'POLEMONI-FLORA', 'ORCHID-FLORA',
+            'EUPHORBI-FLORA', 'SCROPHULARI-FLORA', 'CONVOLVUL-FLORA', 'MUS-FLORA', 'UTRICULARI-FLORA', 'UMBELL-FLORA', 'PROTE-FLORA',
+            'GOODENI-FLORA', 'THYMEL-FLORA', 'URTIC-FLORA', 'OROBANCH-FLORA', 'HYDROPHYLL-FLORA', 'AMARYLLID-FLORA', 'CONIFER-FLORA',
+            'PHYTOLACC-FLORA', 'PAEONI-FLORA', 'IRID-FLORA', 'DIOSCOR-FLORA', 'GESNERI-FLORA', 'SANTAL-FLORA', 'HYDROCHARID-FLORA',
+            'ZINGIBER-FLORA', 'ALISM-FLORA', 'POLYGON-FLORA', 'NYCTAGIN-FLORA', 'BROMELI-FLORA', 'SMIL-FLORA', 'EBEN-FLORA',
+            'ROS-FLORA', 'LILI-FLORA', 'JUNC-FLORA', 'VERBEN-FLORA', 'HAEMODOR-FLORA', 'COMMELIN-FLORA', 'COLCHIC-FLORA',]
+        
+        aquatic_eyes = ['BERBERID-AQUATIC', 'RANUNCUL-AQUATIC', 'CAPPARID-AQUATIC', 'VIOL-AQUATIC', 'FUMARI-AQUATIC', 'PAPAVER-AQUATIC', 'MAGNOLI-AQUATIC',
+            'POLYGAL-AQUATIC', 'RESED-AQUATIC', 'CIST-AQUATIC', 'NYMPHE-AQUATIC', 'DIPTEROCARP-AQUATIC', 'DILLENI-AQUATIC', 'AMYGDAL-AQUATIC',
+            'ANON-AQUATIC', 'MYRT-AQUATIC', 'TILI-AQUATIC', 'PITTOSPOR-AQUATIC', 'MALV-AQUATIC', 'SARRACENI-AQUATIC', 'DROSER-AQUATIC',
+            'HIPPOCASTAN-AQUATIC', 'TROPAEOL-AQUATIC', 'PASSIFLOR-AQUATIC', 'OLAC-AQUATIC', 'CRUCI-AQUATIC', 'LOAS-AQUATIC', 'MALPIGHI-AQUATIC',
+            'MESEMBRY-AQUATIC', 'VIT-AQUATIC', 'MARCGRAVI-AQUATIC', 'CLUSI-AQUATIC', 'BOMB-AQUATIC', 'SAMYD-AQUATIC', 'BIX-AQUATIC',
+            'GERANI-AQUATIC', 'COMPOSIT-AQUATIC', 'RHAMN-AQUATIC', 'OXALID-AQUATIC', 'ARALI-AQUATIC', 'TEREBINTH-AQUATIC', 'MELI-AQUATIC',
+            'SAXIFRAG-AQUATIC', 'LIN-AQUATIC', 'CAPRIFOLI-AQUATIC', 'CARYOPHYLL-AQUATIC', 'LEGUMINOSAE', 'CAMELLI-AQUATIC', 'CACTACEA',
+            'JASMINE-AQUATIC', 'LYTHR-AQUATIC', 'ACANTH-AQUATIC', 'CRASSUL-AQUATIC', 'RUBI-AQUATIC', 'HYPERIC-AQUATIC', 'LORANTH-AQUATIC',
+            'AURANTI-AQUATIC', 'RHIZOPHOR-AQUATIC', 'BORAGIN-AQUATIC', 'TAMARIC-AQUATIC', 'MELASTOM-AQUATIC', 'LECYTHID-AQUATIC', 'VALERIAN-AQUATIC',
+            'COMBRET-AQUATIC', 'APOCYN-AQUATIC', 'DIPS-AQUATIC', 'STYLIDI-AQUATIC', 'RUT-AQUATIC', 'SOLAN-AQUATIC', 'PLUMBAGIN-AQUATIC',
+            'LAMI-AQUATIC', 'BEGONI-AQUATIC', 'GROSSULARI-AQUATIC', 'GENTIAN-AQUATIC', 'ERIC-AQUATIC', 'CAMPANUL-AQUATIC', 'POM-AQUATIC',
+            'BIGNONI-AQUATIC', 'AMARANT-AQUATIC', 'VACCINI-AQUATIC', 'ONAGR-AQUATIC', 'PRIMUL-AQUATIC', 'SAPOT-AQUATIC', 'LOBELI-AQUATIC',
+            'MYRSIN-AQUATIC', 'PORTUL-AQUATIC', 'PLANTAGIN-AQUATIC', 'ELAEAGN-AQUATIC', 'OLE-AQUATIC', 'POLEMONI-AQUATIC', 'ORCHID-AQUATIC',
+            'EUPHORBI-AQUATIC', 'SCROPHULARI-AQUATIC', 'CONVOLVUL-AQUATIC', 'MUS-AQUATIC', 'UTRICULARI-AQUATIC', 'UMBELL-AQUATIC', 'PROTE-AQUATIC',
+            'GOODENI-AQUATIC', 'THYMEL-AQUATIC', 'URTIC-AQUATIC', 'OROBANCH-AQUATIC', 'HYDROPHYLL-AQUATIC', 'AMARYLLID-AQUATIC', 'CONIFER-AQUATIC',
+            'PHYTOLACC-AQUATIC', 'PAEONI-AQUATIC', 'IRID-AQUATIC', 'DIOSCOR-AQUATIC', 'GESNERI-AQUATIC', 'SANTAL-AQUATIC', 'HYDROCHARID-AQUATIC',
+            'ZINGIBER-AQUATIC', 'ALISM-AQUATIC', 'POLYGON-AQUATIC', 'NYCTAGIN-AQUATIC', 'BROMELI-AQUATIC', 'SMIL-AQUATIC', 'EBEN-AQUATIC',
+            'ROS-AQUATIC', 'LILI-AQUATIC', 'JUNC-AQUATIC', 'VERBEN-AQUATIC', 'HAEMODOR-AQUATIC', 'COMMELIN-AQUATIC', 'COLCHIC-AQUATIC',]
 
-        cs_eyes = angel_eyes + snail_eyes
+
+        cs_eyes = copy(angel_eyes) + copy(snail_eyes)
+        cs2_eyes = copy(aquatic_eyes) + copy(aerial_eyes) + copy(floral_eyes) + copy(demon_eyes)
+        all_cs = copy(cs_eyes) + copy(cs2_eyes)
 
         if cat.pelt.eye_colour in neos_eyes:
             eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
@@ -3099,6 +3188,14 @@ def generate_sprite(
             eyes = sprites.sprites["angel_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
         elif cat.pelt.eye_colour in snail_eyes:
             eyes = sprites.sprites["eyes_snail" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in aerial_eyes:
+            eyes = sprites.sprites["aerialeyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in aquatic_eyes:
+            eyes = sprites.sprites["aquaticeyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in demon_eyes:
+            eyes = sprites.sprites["demoneyes" + cat.pelt.eye_colour + cat_sprite].copy()
+        elif cat.pelt.eye_colour in floral_eyes:
+            eyes = sprites.sprites["floraleyes" + cat.pelt.eye_colour + cat_sprite].copy()
         else:
             eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
 
@@ -3111,8 +3208,17 @@ def generate_sprite(
                 eyes.blit(sprites.sprites["lamp_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
             elif cat.pelt.eye_colour2 in angel_eyes:
                 eyes.blit(sprites.sprites["angel_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in aerial_eyes:
+                eyes.blit(sprites.sprites["aerialeyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in aquatic_eyes:
+                eyes.blit(sprites.sprites["aquaticeyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in demon_eyes:
+                eyes.blit(sprites.sprites["demoneyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            elif cat.pelt.eye_colour2 in floral_eyes:
+                eyes.blit(sprites.sprites["floraleyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
             else:
                 eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+                
         if age != "newborn" or cat.pelt.eye_colour not in cs_eyes:
             new_sprite.blit(eyes, (0, 0))
 
@@ -3157,9 +3263,7 @@ def generate_sprite(
                 new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
             elif dead:
                 new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
-            if cat.pelt.eye_colour in angel_eyes:
-                new_sprite.blit(eyes, (0, 0))
-            if cat.pelt.eye_colour in snail_eyes:
+            if cat.pelt.eye_colour in all_cs or cat.pelt.eye_colour2 in all_cs:
                 new_sprite.blit(eyes, (0, 0))
         # draw skin and scars2
         blendmode = pygame.BLEND_RGBA_MIN

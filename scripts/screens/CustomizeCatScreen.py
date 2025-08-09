@@ -255,6 +255,8 @@ class CustomizeCatScreen(Screens):
         self.pattern2_label = None
         self.tortiepattern2_label = None
         
+        self.cs_eyes = True
+        
 
     # prints attributes for testing
     #def print_pelt_attributes(self):
@@ -286,6 +288,8 @@ class CustomizeCatScreen(Screens):
             self.eye_colours = copy(Pelt.eye_colours)
             if self.sparkle_cats:
                 self.eye_colours += copy(Pelt.flutter_eyes) + copy(Pelt.lamp_eyes) + copy(Pelt.neos_eyes) + copy(Pelt.angel_eyes) + copy(Pelt.snail_eyes)
+            if self.cs_eyes:
+                self.eye_colours += copy(Pelt.aerial_eyes) + copy(Pelt.demon_eyes) + copy(Pelt.floral_eyes) + copy(Pelt.aquatic_eyes)
         elif self.eye_filter == "red":
             self.eye_colours = copy(Pelt.red_eyes)
         elif self.eye_filter == "orange/brown":
@@ -307,9 +311,15 @@ class CustomizeCatScreen(Screens):
         elif self.eye_filter == "lamp":
             self.eye_colours = copy(Pelt.lamp_eyes)
         elif self.eye_filter == "angel":
-            self.eye_colours = copy(Pelt.angel_eyes)
+            self.eye_colours = copy(Pelt.angel_eyes) + copy(Pelt.aerial_eyes)
         elif self.eye_filter == "snail":
             self.eye_colours = copy(Pelt.snail_eyes)
+        elif self.eye_filter == "demon":
+            self.eye_colours = copy(Pelt.demon_eyes)
+        elif self.eye_filter == "floral":
+            self.eye_colours = copy(Pelt.floral_eyes)
+        elif self.eye_filter == "aquatic":
+            self.eye_colours = copy(Pelt.aquatic_eyes)
         
         self.eye_colours.sort()
         
@@ -755,7 +765,12 @@ class CustomizeCatScreen(Screens):
         else:
             self.sparkle_button = create_button((170, 425), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
 
-        self.filter_button = create_button((115, 460), (105, 30), "Filters", ButtonStyles.SQUOVAL)
+        self.filter_button = create_button((60, 460), (105, 30), "Filters", ButtonStyles.SQUOVAL)
+        
+        if self.cs_eyes:
+            self.cs_eyes_button = create_button((170, 460), (105, 30), "CS Eyes On", ButtonStyles.SQUOVAL)
+        else:
+            self.cs_eyes_button = create_button((170, 460), (105, 30), "CS Eyes Off", ButtonStyles.SQUOVAL)
         
     def setup_dropdowns(self):
         """------------------------------------------------------------------------------------------------------------#
@@ -1023,6 +1038,14 @@ class CustomizeCatScreen(Screens):
                     self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle On", ButtonStyles.SQUOVAL)
                 else:
                     self.sparkle_button = create_button((170, 450), (105, 30), "Sparkle Off", ButtonStyles.SQUOVAL)
+                self.update_ui_elements()
+            elif event.ui_element == self.cs_eyes_button:
+                self.cs_eyes = not self.cs_eyes
+                self.cs_eyes_button.kill()
+                if self.cs_eyes:
+                    self.cs_eyes_button = create_button((170, 460), (105, 30), "CS Eyes On", ButtonStyles.SQUOVAL)
+                else:
+                    self.cs_eyes_button = create_button((170, 460), (105, 30), "CS Eyes Off", ButtonStyles.SQUOVAL)
                 self.update_ui_elements()
             elif event.ui_element == self.filter_button:
                 CustomizeFilterWindow(self, self.eye_filter, self.pelt_filter, self.acc_filter, self.white_filter, self.tortie_filter)
@@ -1518,7 +1541,7 @@ class CustomizeCatScreen(Screens):
         buttons = [
             self.previous_cat_button, self.back_button, self.next_cat_button, self.reset_button, self.sparkle_button,
             self.pelt_length_left_button, self.pelt_length_right_button, self.pose_left_button,
-            self.pose_right_button, self.reverse_button, self.filter_button
+            self.pose_right_button, self.reverse_button, self.filter_button, self.cs_eyes_button
         ]
         for button in buttons:
             button.kill()
