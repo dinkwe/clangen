@@ -288,8 +288,8 @@ class CustomizeCatScreen(Screens):
             self.eye_colours = copy(Pelt.eye_colours)
             if self.sparkle_cats:
                 self.eye_colours += copy(Pelt.flutter_eyes) + copy(Pelt.lamp_eyes) + copy(Pelt.neos_eyes) + copy(Pelt.angel_eyes) + copy(Pelt.snail_eyes)
-            if self.cs_eyes:
-                self.eye_colours += copy(Pelt.aerial_eyes) + copy(Pelt.demon_eyes) + copy(Pelt.floral_eyes) + copy(Pelt.aquatic_eyes)
+                if self.cs_eyes:
+                    self.eye_colours += copy(Pelt.aerial_eyes) + copy(Pelt.demon_eyes) + copy(Pelt.floral_eyes) + copy(Pelt.aquatic_eyes)
         elif self.eye_filter == "red":
             self.eye_colours = copy(Pelt.red_eyes)
         elif self.eye_filter == "orange/brown":
