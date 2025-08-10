@@ -185,14 +185,8 @@ class Sprites:
             "cs3_agouticolours", "cs3_bengalcolours", "cs3_classiccolours", "cs3_mackerelcolours", "cs3_marbledcolours", "cs3_maskedcolours", "cs3_rosettecolours",
             "cs3_singlecolours", "cs3_singlestripecolours", "cs3_smokecolours", "cs3_sokokecolours", "cs3_speckledcolours", "cs3_tabbycolours", "cs3_tickedcolours",
             "cs_eyes", "cs_eyes2",
-            "floraleyes",
-            "floraleyes2",
-            "aerialeyes",
-            "aerialeyes2",
-            "aquaticeyes",
-            "aquaticeyes2",
-            "arideyes",
-            "arideyes2"
+            "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
+            "artsi_acc","wildaccs_2", "pride_bandanas"
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -1556,6 +1550,39 @@ class Sprites:
         pokemon_data = [["PIKACHU", "SQUIRTLE", "CHARMANDER", "SPHEAL", "GROWLITHE", "BULBASAUR"],
                     ["SENTRET", "SHAYMIN", "EMOLGA", "HISUI GROWLITHE", "ALOLAN VULPIX"],
                     ["VULPIX", "LUXRAY", "ALTARIA", "AZUMARILL"]]
+        
+        pride_bandanas_data = [
+            ["LESBIAN BANDANA", "GAYMALE BANDANA", "NONBINARY BANDANA", "BISEXUAL BANDANA", "ASEXUAL BANDANA", "AGENDER BANDANA"],
+            ["AROACE BANDANA", "GENDERFLUID BANDANA", "INTERSEX BANDANA", "PRIDE BANDANA", "TRANSGENDER BANDANA", "GENDERQUEER BANDANA"],
+            ["AROMANTIC BANDANA", "PANSEXUAL BANDANA", "DEMIGENDER BANDANA", "OMNISEXUAL BANDANA", "GENDERFAE BANDANA", "DEMIGIRL BANDANA"],
+            ["DEMIBOY BANDANA", "GENDERFAUN BANDANA", "GENDERFLOR BANDANA", "POLYAMOROUS BANDANA"]
+        ]
+        
+        superartsi_data = [
+            ["ORANGE BUTTERFLY", "CYAN BUTTERFLY", "BROWN HIDE", "GRAY HIDE", "BROWN HIDE AND HERBS", "GRAY HIDE AND HERBS"],
+            ["HERB TAILWRAP", "MOSS AND TAILWRAP", "BLEEDING HEARTS VINES", "BLEEDING HEARTS VINES2", "LILLIES"]
+        ]
+        
+        wild_accessories2_data = [
+            ["LILYPADS",  "DEATHBERRY VINE", "DEATHBERRIES", "ACORN2", "PINECONE", "VINES"],
+            ["CHERRIES", "BLEEDING HEARTS2", "SEASHELLS", "FERNS", "DRIED FERNS"],
+            ["WHEAT", "BLACK WHEAT"]
+        ]
+        
+        #pride bandanas
+        for row, bandanas in enumerate(pride_bandanas_data):
+            for col, bandana in enumerate(bandanas):
+                self.make_group("pride_bandanas", (col, row), f"acc_pride{bandana}")
+        
+        #superartsi's accessories
+        for row, accessories in enumerate(superartsi_data):
+            for col, accessory in enumerate(accessories):
+                self.make_group('artsi_acc', (col, row), f'acc_superartsi{accessory}')
+
+        #wild's accessories
+        for row, accessories in enumerate(wild_accessories2_data):
+            for col, accessory in enumerate(accessories):
+                self.make_group('wildaccs_2', (col, row), f'acc_wild2{accessory}')
 
         # medcatherbs
         for row, herbs in enumerate(medcatherbs_data):

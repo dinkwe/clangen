@@ -899,7 +899,14 @@ def create_new_cat(
         elif not original_group or not original_group.is_other_clan_group():
             # give kittypets a kittypet name
             if original_social == CatSocial.KITTYPET:
-                name = choice(names.names_dict["loner_names"])
+                #40% chance of popculture name, 40% chance of human name, 20% chance of loner name
+                name_type = randint(1,5)
+                if name_type == 1:
+                    name = choice(names.names_dict["loner_names"])
+                elif name_type < 4:
+                    name = choice(names.names_dict["human_names"])
+                else:
+                    name = choice(names.names_dict["popculture_names"])
                 # check if the kittypets come with a pretty acc
                 if bool(getrandbits(1)):
                     # TODO: refactor this entire function to remove this call amongst other things
@@ -907,14 +914,30 @@ def create_new_cat(
 
                     new_cat.pelt.accessory.append(choice(collars))
 
-            # try to give name from full loner name list
-            elif original_social in (CatSocial.LONER, CatSocial.ROGUE) and bool(
-                getrandbits(1)
-            ):
-                name = choice(names.names_dict["loner_names"])
-            # otherwise give name from prefix list (more nature-y names)
-            else:
-                name = choice(names.names_dict["normal_prefixes"])
+            # loner names
+            elif original_social == CatSocial.LONER:
+                #40% chance loner, 40% chance prefix, 10% chance popculture, 10% chance human
+                name_type = randint(1,10)
+                if name_type == 1:
+                    name = choice(names.names_dict["popculture_names"])
+                elif name_type == 2:
+                    name = choice(names.names_dict["human_names"])
+                elif name_type < 7:
+                    name = choice(names.names_dict["loner_names"])
+                else:
+                    name = choice(names.names_dict["normal_prefixes"])
+            
+            elif original_social == CatSocial.ROGUE:
+                #even 25% chance for each type
+                name_type = randint(1,4)
+                if name_type == 1:
+                    name = choice(names.names_dict["popculture_names"])
+                elif name_type == 2:
+                    name = choice(names.names_dict["human_names"])
+                elif name_type == 3:
+                    name = choice(names.names_dict["loner_names"])
+                else:
+                    name = choice(names.names_dict["normal_prefixes"])
 
                 # now, if this cat should take a new clan name, we give them such
             if new_name:
@@ -3448,6 +3471,18 @@ def generate_sprite(
                         elif accessory in cat.pelt.pokemon_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_pokemon" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.superartsi_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_superartsi" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.wild_accessories2:
+                            new_sprite.blit(
+                                sprites.sprites["acc_wild2" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.pride_bandanas:
+                            new_sprite.blit(
+                                sprites.sprites["acc_pride" + accessory + cat_sprite], (0, 0)
                             )
 
         # Apply fading fog
