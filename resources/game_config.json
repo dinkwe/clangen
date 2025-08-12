@@ -195,7 +195,7 @@
 	"cat_generation": {
 		"base_permanent_condition_one": 6,
 		"base_permanent_condition_two": 100,
-		"esper_chance": 6,
+		"esper_chance": 12,
 		"sparkle_chance": 50,
 		"multiple_permanent_conditions": 20,
 		"max_conditions_born_with": 3,

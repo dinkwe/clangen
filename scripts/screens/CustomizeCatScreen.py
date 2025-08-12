@@ -610,7 +610,7 @@ class CustomizeCatScreen(Screens):
                     self.tortie_colours = ["GREY", "DARKGREY", "GHOST", "BLACK"]
             elif self.tortie_filter == "white":
                 if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-                    self.tortie_colours = copy(Pelt.black_colours)
+                    self.tortie_colours = copy(Pelt.white_colours)
                 elif self.the_cat.pelt.tortiepattern == 'masked':
                     self.tortie_colours = ["WHITE", "PALEGREY", "SILVER","WHITESTER", "PALEGREYSTER",
                          "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
@@ -620,7 +620,7 @@ class CustomizeCatScreen(Screens):
                     self.tortie_colours = ["WHITE", "PALEGREY", "SILVER"]
             elif self.tortie_filter == "brown":
                 if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-                    self.tortie_colours = copy(Pelt.black_colours)
+                    self.tortie_colours = copy(Pelt.brown_colours)
                 elif self.the_cat.pelt.tortiepattern == 'masked':
                     self.tortie_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
                          "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
@@ -1567,6 +1567,11 @@ class CustomizeCatScreen(Screens):
         self.cat_elements["reverse"] = create_text_box(reverse_text, (22, 530), (45, 40), "#text_box_26_horizcenter")
 
     def exit_screen(self):
+        self.eye_filter = "all"
+        self.pelt_filter = "all"
+        self.acc_filter = "all"
+        self.white_filter = "all"
+        self.tortie_filter = "all"
         self.kill_cat_elements()
         self.kill_labels()
         self.kill_buttons()
