@@ -401,23 +401,38 @@ class CustomizeCatScreen(Screens):
         
     def filter_pelt_colors(self):
         if self.pelt_filter == "all":
-            
             #first we add extra colors for base game pelts
             if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
-                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                if self.sparkle_cats:
+                    self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                else:
+                    self.pelt_colours = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
             elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
-                self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                if self.sparkle_cats:
+                    self.pelt_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                else:
+                    self.pelt_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
+                                     "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
+                                     "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
+                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
+                                     "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
+                                     "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
+                                     "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
+                                     "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
+                                     "PAPAVERA", "MAGNOLIA", "WHITE", "PALEGREY", "SILVER", "WHITESTER", "PALEGREYSTER",
+                                     "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
+                                     "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
+                                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA", "LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
+                                     "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
+                                     "LIGHTCHOCOLATE", "PALECHOCOLATE", "LIGHTCINNAMON", "CINNAMON", "PALECINNAMON", "DARKCINNAMON",
+                                     "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
+                                     "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
+                                     "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
+                                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
             else:
                 self.pelt_colours = copy(Pelt.pelt_colours)
-            
-            #if sparkle off -> remove rainbow cats
-            realistic_colors = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
-            if not self.sparkle_cats:
-                for color in self.pelt_colours:
-                    if color not in realistic_colors:
-                         self.pelt_colours.remove(color)   
-                if self.the_cat.pelt.colour not in realistic_colors:
-                    self.the_cat.pelt.colour = "BLACK"
+               
         
         #sparkle filter is ignored if filtering for pelt bc if you're filtering for green cats. obviously theyre gonna be sparkled
         elif self.pelt_filter == "ginger":
@@ -447,7 +462,7 @@ class CustomizeCatScreen(Screens):
             if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
                 self.pelt_colours = copy(Pelt.black_colours)
             elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
-                self.pelt_colours = ["WHITE", "PALEGREY", "SILVER""WHITESTER", "PALEGREYSTER",
+                self.pelt_colours = ["WHITE", "PALEGREY", "SILVER","WHITESTER", "PALEGREYSTER",
                      "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
                      "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
                      "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA"]
@@ -539,20 +554,35 @@ class CustomizeCatScreen(Screens):
             if self.tortie_filter == "all":
                 #do the same for tortie patterns
                 if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
-                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                    if self.sparkle_cats:
+                        self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                    else:
+                        self.tortie_colours = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
                 elif self.the_cat.pelt.tortiepattern == 'masked':
-                    self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                    if self.sparkle_cats:
+                        self.tortie_colours = copy(Pelt.pelt_colours) + self.special_colors_masked
+                    else:
+                        self.tortie_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
+                                     "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
+                                     "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
+                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
+                                     "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
+                                     "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
+                                     "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
+                                     "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
+                                     "PAPAVERA", "MAGNOLIA", "WHITE", "PALEGREY", "SILVER", "WHITESTER", "PALEGREYSTER",
+                                     "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
+                                     "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
+                                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA", "LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
+                                     "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
+                                     "LIGHTCHOCOLATE", "PALECHOCOLATE", "LIGHTCINNAMON", "CINNAMON", "PALECINNAMON", "DARKCINNAMON",
+                                     "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
+                                     "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
+                                     "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
+                                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
                 else:
                     self.tortie_colours = copy(Pelt.pelt_colours)
-                    
-                if not self.sparkle_cats:
-                    for color in self.tortie_colours:
-                        if color not in realistic_colors:
-                             self.tortie_colours.remove(color)
-                            
-                    if self.the_cat.pelt.tortiecolour is not None:
-                        if self.the_cat.pelt.tortiecolour not in realistic_colors:
-                            self.the_cat.pelt.tortiecolour = "BLACK"
                             
             #sparkle filter is ignored if filtering for pelt bc if you're filtering for green cats. obviously theyre gonna be sparkled
             elif self.tortie_filter == "ginger":
@@ -582,7 +612,7 @@ class CustomizeCatScreen(Screens):
                 if self.the_cat.pelt.tortiepattern in self.base_game_patterns:
                     self.tortie_colours = copy(Pelt.black_colours)
                 elif self.the_cat.pelt.tortiepattern == 'masked':
-                    self.tortie_colours = ["WHITE", "PALEGREY", "SILVER""WHITESTER", "PALEGREYSTER",
+                    self.tortie_colours = ["WHITE", "PALEGREY", "SILVER","WHITESTER", "PALEGREYSTER",
                          "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
                          "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
                          "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA"]
@@ -661,8 +691,9 @@ class CustomizeCatScreen(Screens):
                 self.tortie_colours = copy(Pelt.pelt_colours)
         
         self.tortie_colours.sort()
-        if self.the_cat.pelt.tortiecolour not in self.tortie_colours:
-            self.the_cat.pelt.tortiecolour = choice(self.tortie_colours)
+        if self.the_cat.pelt.tortiepattern:
+            if self.the_cat.pelt.tortiecolour not in self.tortie_colours:
+                self.the_cat.pelt.tortiecolour = choice(self.tortie_colours)
         self.filter_tortiecolors2()
             
     def filter_tortiecolors2(self):
@@ -670,19 +701,39 @@ class CustomizeCatScreen(Screens):
         self.tortie_colours2 = copy(Pelt.pelt_colours)
         if self.the_cat.pelt.tortiepattern2:
                 if self.the_cat.pelt.tortiepattern2 in self.base_game_patterns:
-                    self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                    if self.sparkle_cats:
+                        self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_nomasked + self.special_colors_masked
+                    else:
+                        self.tortie_colours2 = Pelt.ginger_colours + Pelt.black_colours + Pelt.brown_colours + Pelt.white_colours
                 elif self.the_cat.pelt.tortiepattern2 == 'masked':
-                    self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_masked
+                    if self.sparkle_cats:
+                        self.tortie_colours2 = copy(Pelt.pelt_colours) + self.special_colors_masked
+                    else:
+                        self.tortie_colours2 = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
+                                     "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
+                                     "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
+                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
+                                     "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
+                                     "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
+                                     "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
+                                     "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
+                                     "PAPAVERA", "MAGNOLIA", "WHITE", "PALEGREY", "SILVER", "WHITESTER", "PALEGREYSTER",
+                                     "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
+                                     "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
+                                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA", "LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
+                                     "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",
+                                     "LIGHTCHOCOLATE", "PALECHOCOLATE", "LIGHTCINNAMON", "CINNAMON", "PALECINNAMON", "DARKCINNAMON",
+                                     "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
+                                     "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
+                                     "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
+                                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
+                        
                 else:
                     self.tortie_colours2 = copy(Pelt.pelt_colours)
-                    
-                if not self.sparkle_cats:
-                    for color in self.tortie_colours2:
-                        if color not in realistic_colors:
-                             self.tortie_colours2.remove(color)
                             
                     if self.the_cat.pelt.tortiecolour2 is not None:
-                        if self.the_cat.pelt.tortiecolour2 not in realistic_colors:
+                        if self.the_cat.pelt.tortiecolour2 not in self.tortie_colours2:
                             self.the_cat.pelt.tortiecolour2 = "BLACK"
                             
         
@@ -1389,6 +1440,9 @@ class CustomizeCatScreen(Screens):
             self.tortie_colour_dropdown = create_dropdown((480, 200), (135, 40), "None", "None")
             self.tortie_pattern_dropdown = create_dropdown((640, 200), (135, 40), "None", "None")
             self.tortie_tint_dropdown = create_dropdown((640, 605), (135, 40), "None", "none")
+            self.tortiecolour2_dropdown = create_dropdown((192, 605), (135, 40),  "None", "None")
+            self.pattern2_dropdown = create_dropdown((342, 605), (135, 40),  "None", "None")
+            self.tortiepattern2_dropdown = create_dropdown((492, 605), (135, 40),  "None", "None")
 
             self.the_cat.pelt.pattern = None
             self.the_cat.pelt.tortiebase = None

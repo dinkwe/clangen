@@ -126,6 +126,42 @@ class Thoughts:
 
         if "random_backstory_constraint" in thought:
             random_info_dict["backstory"] = thought["random_backstory_constraint"]
+        
+        if 'main_awakened_constraint' in thought:
+            if not main_cat.awakened:
+                return False
+            if main_cat.awakened["type"] not in thought['main_awakened_constraint']:
+                return False
+
+        if 'random_awakened_constraint' in thought:
+            if not random_cat.awakened:
+                return False
+            if random_cat and random_cat.awakened["type"] not in thought['random_awakened_constraint']:
+                return False
+        
+        if 'main_power_constraint' in thought:
+            if not main_cat.awakened:
+                return False
+            if main_cat.awakened["type"] == "guide":
+                return False
+            elif main_cat.awakened["type"] == "esper":
+                if main_cat.awakened["ability"] not in thought['main_power_constraint']:
+                    return False
+            elif main_cat.awakened["type"] == "enhanced esper":
+                if main_cat.awakened["ability"][0] not in thought['main_power_constraint'] or main_cat.awakened["ability"][1] not in thought['main_power_constraint']:
+                    return False
+                
+        if 'random_power_constraint' in thought:
+            if not random_cat.awakened:
+                return False
+            if random_cat.awakened["type"] == "guide":
+                return False
+            elif random_cat.awakened["type"] == "esper":
+                if random_cat.awakened["ability"] not in thought['main_power_constraint']:
+                    return False
+            elif random_cat.awakened["type"] == "enhanced esper":
+                if random_cat.awakened["ability"][0] not in thought['main_power_constraint'] or random_cat.awakened["ability"][1] not in thought['main_power_constraint']:
+                    return False
 
         if not event_for_cat(main_info_dict, main_cat):
             return False
