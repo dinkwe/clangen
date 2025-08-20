@@ -2392,9 +2392,9 @@ class Pelt:
             highest_white in ["high", "mostly", "full"]
             or self.colour == "WHITE"
         ):
-            num = num - 90
+            num = int(num/2)
         if highest_white == "full" or self.colour == "WHITE":
-            num -= 10
+            num = int(num/2)
         for _par in parents:
             if _par.pelt.eye_colour2:
                 num -= 10

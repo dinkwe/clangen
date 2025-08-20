@@ -84,7 +84,7 @@ class GuideEsper(UIWindow):
             object_id="#guiding_window",
             resizable=False,
         )
-        game.switches["window_open"] = True
+        #game.switches["window_open"] = True
         self.the_cat = cat
         self.elements = {}
         self.result = None
@@ -197,9 +197,7 @@ class GuideEsper(UIWindow):
                 ui_scale(pygame.Rect((195, 260), (204, 48))),
                 text,
                 container=self,
-                object_id=get_text_box_theme(
-                    "#text_box_26_horizcenter_vertcenter_spacing_95"
-                ),
+                object_id="#text_box_26_horizcenter_vertcenter_spacing_95",
             )
         else:
             self.potential_page_display.set_text(text)
@@ -336,7 +334,7 @@ class GuideEsper(UIWindow):
     def process_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.back_button:
-                game.switches["window_open"] = False
+                #game.switches["window_open"] = False
                 game.all_screens["profile screen"].exit_screen()
                 game.all_screens["profile screen"].screen_switches()
                 self.kill()

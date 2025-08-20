@@ -912,7 +912,7 @@ def create_new_cat(
                     # TODO: refactor this entire function to remove this call amongst other things
                     from scripts.cat.pelts import Pelt
 
-                    new_cat.pelt.accessory.append(choice(collars))
+                    new_cat.pelt.accessory.append(choice(Pelt.collars))
 
             # loner names
             elif original_social == CatSocial.LONER:
