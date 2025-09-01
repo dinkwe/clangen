@@ -8,6 +8,7 @@ import pygame_gui.elements
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
+from ..game_structure.game.switches import switch_set_value, switch_get_value, Switch
 from pygame_gui.elements import UIDropDownMenu, UITextBox
 from pygame import Rect
 from scripts.game_structure.ui_elements import (
@@ -137,7 +138,7 @@ class PredictOffspringScreen(Screens):
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
         )
-        self.selected_cat = Cat.fetch_cat(game.switches["cat"])
+        self.selected_cat = Cat.all_cats.get(switch_get_value(Switch.cat))
         
         self.possible_mates_box = pygame_gui.elements.UIImage(
             ui_scale(pygame.Rect((490, 100), (275, 250))),
@@ -155,9 +156,9 @@ class PredictOffspringScreen(Screens):
             i
             for i in Cat.all_cats_list
             if i.is_potential_mate(self.selected_cat, for_love_interest=False, age_restriction=False, ignore_no_mates=True)
-            and not (i.dead or i.outside)
+            and i.status.alive_in_player_clan
         ]
-        
+
         self.possible_mates_names = ["None", "Reincarnation"]
         for cat in self.possible_mates:
             self.possible_mates_names.append(str(cat.name).lower())

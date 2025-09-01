@@ -27,6 +27,7 @@ from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import BoxStyles, get_box
 from ..ui.generate_button import get_button_dict, ButtonStyles
 from ..ui.icon import Icon
+from ..game_structure.game.switches import switch_set_value, switch_get_value, Switch
 
 
 class ChooseEnemyScreen(Screens):
@@ -111,13 +112,13 @@ class ChooseEnemyScreen(Screens):
 
             elif event.ui_element == self.previous_cat_button:
                 if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
-                    game.switches["cat"] = self.previous_cat
+                    switch_set_value(Switch.cat, self.previous_cat)
                     self.update_current_cat_info()
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_cat_button:
                 if isinstance(Cat.fetch_cat(self.next_cat), Cat):
-                    game.switches["cat"] = self.next_cat
+                    switch_set_value(Switch.cat, self.next_cat)
                     self.update_current_cat_info()
                 else:
                     print("invalid next cat", self.next_cat)
@@ -762,7 +763,7 @@ class ChooseEnemyScreen(Screens):
     def update_current_cat_info(self, reset_selected_cat=True):
         """Updates all elements with the current cat, as well as the selected cat.
         Called when the screen switched, and whenever the focused cat is switched"""
-        self.the_cat = Cat.all_cats[game.switches["cat"]]
+        self.the_cat = Cat.all_cats[switch_get_value(Switch.cat)]
         if not self.the_cat.inheritance:
             self.the_cat.create_inheritance_new_cat()
 
@@ -1152,7 +1153,7 @@ class ChooseEnemyScreen(Screens):
     def get_valid_enemies(self):
         """Get a list of valid enemies for the current cat"""
 
-        # Behold! The uglest list comprehension ever created!
+        # Behold! The ugliest list comprehension ever created!
         valid_enemies = [
             i
             for i in Cat.all_cats_list
@@ -1160,7 +1161,8 @@ class ChooseEnemyScreen(Screens):
             and self.the_cat.is_potential_enemy(
                 i
             )
-            and i.outside == self.the_cat.outside
+            and i.status.is_outsider == self.the_cat.status.is_outsider
+            and i.status.group == self.the_cat.status.group
             and i.ID not in self.the_cat.enemy
             and i.ID not in self.the_cat.mate
             and i.ID not in self.the_cat.bestie

@@ -24,6 +24,7 @@
         "location": "location",
         "descriptor": "descriptor",
         "miscellaneous": "miscellaneous",
+        "editor_save_check_message": "This event will be saved to:",
         "save_check_message": "Would you like to save your game before exiting? If you don't, progress may be lost!",
         "delete_check_message": "Do you wish to delete %{clan}? This is permanent and cannot be undone.",
         "delete_yes": "Delete it!",
@@ -79,17 +80,18 @@
         "prevent_fading_tooltip_guide": "The afterlife guide can never fade.",
         "prevent_kits": "Prevent kits",
         "prevent_kits_tooltip": "Prevent the cat from adopting or having kittens.",
+        "immortality": "Prevent aging and death",
+        "immortality_tooltip": "Makes cat completely immortal. Does not prevent injuries/illnesses.",
         "prevent_retirement": "Prevent retirement",
         "prevent_retirement_tooltip_yes": "Allow cat to retire automatically",
         "prevent_retirement_tooltip_no": "Prevent cat from retiring automatically.",
         "prevent_romance": "Limit romantic interactions and mate changes",
         "prevent_romance_tooltip": "Prevent cat from automatically taking a mate, breaking up, or having romantic interactions with non-mates.",
-        "immortality": "Prevent aging and death",
-        "immortality_tooltip": "Makes cat completely immortal. Does not prevent injuries/illnesses.",
         "change_focus": "Change Focus",
         "focus_prompt": "<b>Which Clans will you target?</b>",
         "confirm_changes": "Confirm changes",
         "revert": "Revert",
-        "display_change_confirm": "Do you want to keep these changes? Display changes will be reverted in %{count} seconds."
+        "display_change_confirm": "Do you want to keep these changes? Display changes will be reverted in %{count} seconds.",
+        "editor_missing_info": "Uh oh! There's something missing. Have you added an event text, ID, type, and weight?"
     }
 }

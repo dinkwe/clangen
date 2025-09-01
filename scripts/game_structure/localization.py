@@ -6,6 +6,7 @@ import i18n.translations
 import ujson
 from random import choice, randint
 
+from scripts.game_structure.game.settings import game_setting_get
 from scripts.game_structure.game_essentials import game
 
 lang_config: Optional[Dict] = None
@@ -22,23 +23,18 @@ def get_new_pronouns(genderalign: str) -> List[Dict[str, Union[str, int]]]:
     :return: The default list of pronouns for the cat's genderalign in the selected lang
     """
     config = get_lang_config()["pronouns"]
-    neo_chance = 50
-    queer_list = ["intersex", "intergender", "trans male", "trans female","nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
+    neo_chance = 20
+    queer_list = ["intersex", "intergender", "trans male", "trans female", "nonbinary", "genderfluid", "demigirl", "demiboy", "genderfae", "genderfaun", "bigender", "genderqueer", "agender", "???", "deminonbinary", "trigender", "genderflux", "polygender"]
     if genderalign in queer_list:
-        neo_chance = 12
-    if game.settings["they them default"]:
+        neo_chance = 5
+    if game_setting_get("they them default"):
         pronouns = config["sets"].get("default")
     else:
-        neos = randint(1,neo_chance)
+        neos = randint(1, neo_chance)
         if neos == 1:
-            pronouns = choice(config["sets"].get("rare_neos", config["sets"].get("default")))
-        elif neos < 6:
-            pronouns = choice(config["sets"].get("common_neos", config["sets"].get("default")))
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
         elif genderalign == "neos":
-            if neos < 35:
-                pronouns = choice(config["sets"].get("common_neos", config["sets"].get("default")))
-            else:
-                pronouns = choice(config["sets"].get("common_neos", config["sets"].get("default")))
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
         else:
             pronouns = config["sets"].get(genderalign, config["sets"].get("default"))
         

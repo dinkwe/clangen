@@ -9,6 +9,7 @@ from random import choice, randint
 import ujson
 
 from scripts.cat.cats import Cat
+from ..cat.enums import CatAge, CatRank, CatGroup
 from scripts.cat_relations.relationship import Relationship
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
@@ -30,6 +31,8 @@ from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import get_box, BoxStyles
 from ..ui.generate_button import get_button_dict, ButtonStyles
 from ..ui.icon import Icon
+from ..game_structure.game.switches import switch_get_value, Switch
+from ..clan_package.settings import get_clan_setting
 
 
 class StorytellerScreen(Screens):
@@ -103,17 +106,15 @@ class StorytellerScreen(Screens):
         # Gather the storytellers:
         self.storytellers = []
         for cat in Cat.all_cats_list:
-            if cat.status in ["storyteller", "storyteller apprentice"] and not (
-                cat.dead or cat.outside
-            ):
+            if (cat.status.rank in [CatRank.STORYTELLER, CatRank.STORYTELLER_APPRENTICE] and cat.status.alive_in_player_clan):
                 self.storytellers.append(cat)
 
         self.page = 1
 
         if self.storytellers:
-            if Cat.fetch_cat(game.switches["cat"]) in self.storytellers:
+            if Cat.fetch_cat(switch_get_value(Switch.cat)) in self.storytellers:
                 self.selected_storyteller = self.storytellers.index(
-                    Cat.fetch_cat(game.switches["cat"])
+                    Cat.fetch_cat(switch_get_value(Switch.cat))
                 )
             else:
                 self.selected_storyteller = 0
@@ -404,7 +405,7 @@ class StorytellerScreen(Screens):
         chunked_cats = self.chunks(self.current_listed_cats, 24)
         if chunked_cats:
             for cat in chunked_cats[self.page - 1]:
-                if game.clan.clan_settings["show fav"] and cat.favourite:
+                if get_clan_setting("show fav") and cat.favourite:
                     _temp = pygame.transform.scale(
                         pygame.image.load(
                             f"resources/images/fav_marker.png"
@@ -478,19 +479,19 @@ class StorytellerScreen(Screens):
             else:
                 bonus = 1
         
-        #now we do the bonuses!
+        # now we do the bonuses!
         if self.selected_cat.dead and success:
-            #reset fading! the cats no longer forgor
+            # reset fading! the cats no longer forgor
             if self.selected_cat.pelt.opacity < 50:
-                self.selected_cat.pelt.opacity = int(self.selected_cat.pelt.opacity*2)
+                self.selected_cat.pelt.opacity = int(self.selected_cat.pelt.opacity * 2)
             else:
                 self.selected_cat.pelt.opacity = 100
             results += "\n" + "Fading reduced!"
         
         if success:
-            results +=  "\n" + "The Clan's opinion of " + str(self.selected_cat.name) + " has shifted."
+            results += "\n" + "The Clan's opinion of " + str(self.selected_cat.name) + " has shifted."
             for kitty in self.all_cats_list:
-                if not (kitty.dead or kitty.outside):
+                if kitty.status.alive_in_player_clan:
                     if self.selected_cat.ID in kitty.relationships:
                         rel = kitty.relationships[self.selected_cat.ID]
                     else:
@@ -625,7 +626,7 @@ class StorytellerScreen(Screens):
         col1 = ""
         if cat.dead:
             col1 += "former "
-        col1 += i18n.t(f"general.{cat.status.lower()}", count=1) + "\n" + i18n.t("general.moons_age", count=cat.moons)
+        col1 += i18n.t(f"general.{cat.status.rank}", count=1) + "\n" + i18n.t("general.moons_age", count=cat.moons)
         trait_text = i18n.t(f"cat.personality.{cat.personality.trait}")
         if cat.personality.trait != cat.personality.trait2:
             trait_text += " & " + i18n.t(f"cat.personality.{cat.personality.trait2}")    
@@ -696,9 +697,9 @@ class StorytellerScreen(Screens):
             self.mediate_button.disable()
         else:
             self.mediate_button.enable()
-            if self.story_selected == "love" and self.selected_cat.status in ["newborn", "kitten"]:
+            if self.story_selected == "love" and self.selected_cat.status.rank in [CatRank.KITTEN, CatRank.NEWBORN]:
                 self.mediate_button.disable()
-            elif self.story_selected == "love" and "apprentice" in self.selected_cat.status:
+            elif self.story_selected == "love" and self.selected_cat.status.rank.is_any_apprentice_rank():
                 self.mediate_button.disable()
             
         

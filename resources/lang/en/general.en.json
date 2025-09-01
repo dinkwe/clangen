@@ -5,14 +5,21 @@
             "many": "%{count} moons"
         },
         "moons_age_in_death": {
-            "one": "1 moon (in death)",
-            "many": "%{count} moons (in death)"
+            "one": "1 moon in death",
+            "many": "%{count} moons in death"
         },
         "moons_age_in_life": {
-            "one": "1 moon (in life)",
-            "many": "%{count} moons (in life)"
+            "one": "1 moon in life",
+            "many": "%{count} moons in life"
+        },
+        "years_age": {
+            "one": " (1 year)",
+            "many": " (%{count} years)"
         },
         "moon_date": "moon %{moon}",
+        "guide": "guiding ghost",
+        "past_no_group": "past ",
+        "past_group": "past %{group} ",
         "leader": {
             "one": "leader",
             "many": "leaders"
@@ -131,9 +138,13 @@
             "one": "former Clancat",
             "many": "former Clancats"
         },
+        "clancat": {
+            "one": "Clancat",
+            "many": "Clancats"
+        },
         "exiled": {
-            "one": "exiled",
-            "many": "exiled"
+            "one": "exiled from",
+            "many": "exiled from"
         },
         "lost": "lost",
         "mate": {
@@ -152,16 +163,17 @@
         "tom": "tom",
         "cat": "cat",
         "female": "female",
-        "male": "male",
         "trans female": "trans female",
+        "male": "male",
         "trans male": "trans male",
-        "nonbinary": "nonbinary",
         "intersex": "intersex",
-        "genderfluid": "genderfluid",
+        "intergender": "intergender",
         "demigirl": "demigirl",
-        "demiboy": "demiboy",
         "genderfae": "genderfae",
+        "demiboy": "demiboy",
         "genderfaun": "genderfaun",
+        "nonbinary": "nonbinary",
+        "genderfluid": "genderfluid",
         "bigender": "bigender",
         "genderqueer": "genderqueer",
         "agender": "agender",
@@ -190,22 +202,38 @@
         "relation_NOT_BLOOD": "not blood related",
         "relation_RELATED": "blood related",
         "related_label": "related: %{relation}",
+        "related_text": "related",
         "niece": "niece",
         "nephew": "nephew",
-        "siblings_child": "sibling's child",
+        "siblings_child": "%{relation}'s child",
         "aunt": "aunt",
         "uncle": "uncle",
-        "parents_sibling": "parent's sibling",
+        "parents_sibling": "%{relation}'s sibling",
+        "grandmother": "grandparent",
+        "grandfather": "grandparent",
         "grandparent": "grandparent",
+        "granddaughter": "grandchild",
+        "grandson": "grandchild",
         "grandchild": "grandchild",
+        "mother": "parent",
+        "father": "parent",
         "parent": "parent",
+        "daughter": "child",
+        "son": "child",
         "child": "child",
+        "sister": "sibling",
+        "brother": "sibling",
         "sibling": "sibling",
-        "sibling_littermate": "sibling (littermate)",
-        "cousin": "cousin",
+        "sibling_littermate": "%{relation} (littermate)",
+        "cousin_male": "cousin",
+        "cousin_female": "cousin",
+        "cousin_nb": "cousin",
+        "clan": "%{name}Clan",
         "starclan": "StarClan",
         "dark_forest": "Dark Forest",
         "unknown_residence": "Unknown Residence",
+        "your_clan": "Your Clan",
+        "cotc": "Cats Outside the Clan",
         "empty": "empty",
         "none": "none",
         "name_search": "name search",

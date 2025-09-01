@@ -7,6 +7,7 @@ from pygame import Rect
 import pygame_gui.elements
 
 from scripts.cat.cats import Cat
+from ..cat.enums import CatAge, CatRank, CatGroup
 from scripts.cat.pelts import Pelt
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
@@ -23,12 +24,15 @@ from scripts.utility import (
     shorten_text_to_fit,
     ui_scale_dimensions,
     adjust_list_text,
+    update_sprite
 )
 from .Screens import Screens
 from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import get_box, BoxStyles
 from ..ui.generate_button import get_button_dict, ButtonStyles
 from ..ui.icon import Icon
+from ..game_structure.game.switches import switch_get_value, Switch
+from ..clan_package.settings import get_clan_setting
 
 """ Cat customization UI """
 
@@ -123,6 +127,7 @@ class GardenerScreen(Screens):
         self.craft_button = None
         self.init_acc = None
         self.new_acc = None
+        self.acc_crafted = False
 
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
@@ -175,6 +180,7 @@ class GardenerScreen(Screens):
                 self.selected_submenu = "accessory"
                 self.setup_accessory()
                 self.update_gardener_info()
+                self.acc_button.disable()
             elif event.ui_element == self.random:
                 if self.selected_submenu is not None:
                     self.acc_preview.kill()
@@ -192,6 +198,7 @@ class GardenerScreen(Screens):
                 if self.selected_submenu is not None:
                     self.acc_preview.kill()
                     self.selected_cat.pelt.accessory.remove(self.new_acc)
+                    update_sprite(self.selected_cat)
                     self.acc_bonus_label.kill()
                     self.acc_bonus_dropdown.kill()
                     self.accessory_label.kill()
@@ -203,6 +210,7 @@ class GardenerScreen(Screens):
                     self.setup_accessory()
             elif event.ui_element == self.craft_button:
                 game.patrolled.append(self.gardeners[self.selected_gardener].ID)
+                self.acc_crafted = True
                 game.mediated.append(self.selected_cat.ID)
                 output = str(self.selected_cat.name) + " recieved a new accessory!"
                 if len(self.acc_bonuses) > 1:
@@ -291,6 +299,7 @@ class GardenerScreen(Screens):
                         ui_scale(pygame.Rect((592, 167), (100, 100))),
                         pygame.transform.scale(self.selected_cat.sprite, ui_scale_dimensions((100, 100))),
                     )
+                    update_sprite(self.selected_cat)
 
     def screen_switches(self):
         super().screen_switches()
@@ -298,17 +307,15 @@ class GardenerScreen(Screens):
         # Gather the gardeners:
         self.gardeners = []
         for cat in Cat.all_cats_list:
-            if cat.status in ["gardener", "gardener apprentice"] and not (
-                cat.dead or cat.outside
-            ):
+            if (cat.status.rank in [CatRank.GARDENER, CatRank.GARDENER_APPRENTICE] and cat.status.alive_in_player_clan):
                 self.gardeners.append(cat)
 
         self.page = 1
 
         if self.gardeners:
-            if Cat.fetch_cat(game.switches["cat"]) in self.gardeners:
+            if Cat.fetch_cat(switch_get_value(Switch.cat)) in self.gardeners:
                 self.selected_gardener = self.gardeners.index(
-                    Cat.fetch_cat(game.switches["cat"])
+                    Cat.fetch_cat(switch_get_value(Switch.cat))
                 )
             else:
                 self.selected_gardener = 0
@@ -460,6 +467,7 @@ class GardenerScreen(Screens):
         self.init_acc = self.selected_cat.pelt.accessory
         self.new_acc = choice(self.accessories)
         self.selected_cat.pelt.accessory.append(self.new_acc)
+        update_sprite(self.selected_cat)
         
         self.accessory_dropdown = create_dropdown((560, 125), (180, 40), create_options_list(self.accessories, "upper"),
                                                   get_selected_option(self.new_acc, "upper"), "dropdown")
@@ -571,7 +579,7 @@ class GardenerScreen(Screens):
             i
             for i in Cat.all_cats_list
             if (i.ID != self.gardeners[self.selected_gardener].ID)
-            and not (i.dead or i.outside)
+            and i.status.alive_in_player_clan
         ]
         self.all_cats = self.chunks(self.all_cats_list, 24)
         self.current_listed_cats = self.all_cats_list
@@ -606,7 +614,7 @@ class GardenerScreen(Screens):
         chunked_cats = self.chunks(self.current_listed_cats, 24)
         if chunked_cats:
             for cat in chunked_cats[self.page - 1]:
-                if game.clan.clan_settings["show fav"] and cat.favourite:
+                if get_clan_setting("show fav") and cat.favourite:
                     _temp = pygame.transform.scale(
                         pygame.image.load(
                             f"resources/images/fav_marker.png"
@@ -710,7 +718,7 @@ class GardenerScreen(Screens):
             pygame.transform.scale(gender_icon, ui_scale_dimensions((25, 25))),
         )
         
-        col1 = i18n.t(f"general.{cat.status.lower()}", count=1) + "\n" + i18n.t("general.moons_age", count=cat.moons)
+        col1 = i18n.t(f"general.{cat.status.rank}", count=1) + "\n" + i18n.t("general.moons_age", count=cat.moons)
         trait_text = i18n.t(f"cat.personality.{cat.personality.trait}")
         if cat.personality.trait != cat.personality.trait2:
             trait_text += " & " + i18n.t(f"cat.personality.{cat.personality.trait2}")    
@@ -735,7 +743,7 @@ class GardenerScreen(Screens):
                         former_indicate = "general.mate_dead"
 
                     mate_names.append(f"{str(mate_ob.name)} {i18n.t(former_indicate)}")
-                elif mate_ob.outside != cat.outside:
+                elif mate_ob.status.is_outsider != cat.status.is_outsider:
                     mate_names.append(
                         f"{str(mate_ob.name)} {i18n.t('general.mate_away')}"
                     )
@@ -774,7 +782,7 @@ class GardenerScreen(Screens):
                         former_indicate = "general.bestie_dead"
 
                     bestie_names.append(f"{str(bestie_ob.name)} {i18n.t(former_indicate)}")
-                elif bestie_ob.outside != cat.outside:
+                elif bestie_ob.status.is_outsider != cat.status.is_outsider:
                     bestie_names.append(
                         f"{str(bestie_ob.name)} {i18n.t('general.bestie_away')}"
                     )
@@ -814,7 +822,7 @@ class GardenerScreen(Screens):
                         former_indicate = "general.enemy_dead"
 
                     enemy_names.append(f"{str(enemy_ob.name)} {i18n.t(former_indicate)}")
-                elif enemy_ob.outside != cat.outside:
+                elif enemy_ob.status.is_outsider != cat.status.is_outsider:
                     enemy_names.append(
                         f"{str(enemy_ob.name)} {i18n.t('general.enemy_away')}"
                     )
@@ -881,6 +889,7 @@ class GardenerScreen(Screens):
         else:
             self.acc_button.enable()
             self.farm_button.disable()
+            self.acc_crafted = False
 
 
     def update_search_cats(self, search_text):
@@ -906,6 +915,11 @@ class GardenerScreen(Screens):
         self.update_page()
 
     def exit_screen(self):
+        if self.selected_cat is not None:
+            if not self.acc_crafted:
+                self.selected_cat.pelt.accessory.remove(self.new_acc)
+                update_sprite(self.selected_cat)
+        
         self.selected_cat = None
 
         for ele in self.gardener_elements:
@@ -969,6 +983,7 @@ class GardenerScreen(Screens):
             del self.craft_button
             self.acc_preview.kill()
             del self.acc_preview
+        self.selected_submenu = None
 
     def chunks(self, L, n):
         return [L[x : x + n] for x in range(0, len(L), n)]

@@ -6,6 +6,7 @@ import pygame.transform
 import pygame_gui.elements
 
 from scripts.cat.cats import Cat
+from ..cat.enums import CatAge, CatRank, CatGroup
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game
 from scripts.game_structure.ui_elements import (
@@ -25,6 +26,9 @@ from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import get_box, BoxStyles
 from ..ui.generate_button import get_button_dict, ButtonStyles
 from ..ui.icon import Icon
+from ..game_structure.game.switches import switch_get_value, Switch
+from ..clan_package.settings import get_clan_setting
+from ..game_structure.game.settings import game_setting_get
 
 
 class CaretakerScreen(Screens):
@@ -54,7 +58,7 @@ class CaretakerScreen(Screens):
                                 "MESSENGER", "STRONG"]
         self.spirit_skills = ["STAR", "CLAIRVOYANT","OMEN", "GHOST", "DARK", "PROPHET", "DREAM",
                               "UNKNOWN", "LEADERSHIP", "VIBES", "AURAVIBES","COMFORTER", "PRODIGY",
-                              "ANIMAL MAGNET","LUCK"]
+                              "ANIMAL MAGNET", "LUCK"]
         self.activity_skills = ["HYDRO", "CLEAN", "SONG", "ARTISAN", "CHEF", "DETECTIVE", "BOOKMAKER",
                                 "DECORATOR", "DELIVERER", "ANIMALTAKER", "VET","MATCHMAKER", "STARGAZER",
                                 "WAKEFUL", "GARDENER","PYRO", "HERBALIST", "DISGUISE", "TREASURE", "HEALER",
@@ -167,17 +171,15 @@ class CaretakerScreen(Screens):
         # Gather the caretakers:
         self.caretakers = []
         for cat in Cat.all_cats_list:
-            if cat.status in ["caretaker", "caretaker apprentice"] and not (
-                cat.dead or cat.outside
-            ):
+            if cat.status.rank in [CatRank.CARETAKER, CatRank.CARETAKER_APPRENTICE] and cat.status.alive_in_player_clan:
                 self.caretakers.append(cat)
 
         self.page = 1
 
         if self.caretakers:
-            if Cat.fetch_cat(game.switches["cat"]) in self.caretakers:
+            if Cat.fetch_cat(switch_get_value(Switch.cat)) in self.caretakers:
                 self.selected_caretaker = self.caretakers.index(
-                    Cat.fetch_cat(game.switches["cat"])
+                    Cat.fetch_cat(switch_get_value(Switch.cat))
                 )
             else:
                 self.selected_caretaker = 0
@@ -403,8 +405,8 @@ class CaretakerScreen(Screens):
             i
             for i in Cat.all_cats_list
             if (i.ID != self.caretakers[self.selected_caretaker].ID)
-            and not (i.dead or i.outside)
-            and i.status == "kitten"
+            and i.status.alive_in_player_clan
+            and i.status.rank == CatRank.KITTEN
         ]
         self.all_cats = self.chunks(self.all_cats_list, 24)
         self.current_listed_cats = self.all_cats_list
@@ -439,7 +441,7 @@ class CaretakerScreen(Screens):
         chunked_cats = self.chunks(self.current_listed_cats, 24)
         if chunked_cats:
             for cat in chunked_cats[self.page - 1]:
-                if game.clan.clan_settings["show fav"] and cat.favourite:
+                if get_clan_setting("show fav") and cat.favourite:
                     _temp = pygame.transform.scale(
                         pygame.image.load(
                             f"resources/images/fav_marker.png"
@@ -548,7 +550,7 @@ class CaretakerScreen(Screens):
         if other_cat:
             # FAMILY DOT
             # Only show family dot on cousins if first cousin mates are disabled.
-            if game.clan.clan_settings["first cousin mates"]:
+            if get_clan_setting("first cousin mates"):
                 check_cousins = False
             else:
                 check_cousins = other_cat.is_cousin(cat)
@@ -674,7 +676,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.platonic_like,
                 positive_trait=True,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
             bar_count += 1
@@ -702,7 +704,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.dislike,
                 positive_trait=False,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
             bar_count += 1
@@ -730,7 +732,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.admiration,
                 positive_trait=True,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
             bar_count += 1
@@ -758,7 +760,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.comfortable,
                 positive_trait=True,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
             bar_count += 1
@@ -786,7 +788,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.jealousy,
                 positive_trait=False,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
             bar_count += 1
@@ -817,7 +819,7 @@ class CaretakerScreen(Screens):
                 ),
                 the_relationship.trust,
                 positive_trait=True,
-                dark_mode=game.settings["dark mode"],
+                dark_mode=game_setting_get("dark mode"),
             )
 
     def selected_cat_list(self):
@@ -868,7 +870,7 @@ class CaretakerScreen(Screens):
         Cat.sort_cats(self.all_cats_list)
         kittens_list = []
         for cat in self.all_cats_list:
-            if cat.status == "kitten":
+            if cat.status.rank == CatRank.KITTEN:
                 kittens_list.append(cat)
 
         search_text = search_text.strip()

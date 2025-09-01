@@ -1598,7 +1598,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/do/does}n't have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches.",
+                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/don't/doesn't} have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["juniper"]
@@ -1663,7 +1663,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/do/does}n't have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches. app1 is very hesitant to join {PRONOUN/p_l/object} up there, but eventually overcomes {PRONOUN/app1/poss} fear to leaf-gather on a lower branch... <i>very</i> carefully.",
+                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/don't/doesn't} have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches. app1 is very hesitant to join {PRONOUN/p_l/object} up there, but eventually overcomes {PRONOUN/app1/poss} fear to leaf-gather on a lower branch... <i>very</i> carefully.",
                 "exp": 40,
                 "weight": 20,
                 "herbs": ["juniper"],
@@ -1807,7 +1807,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/do/does}n't have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches. The patrol joins {PRONOUN/p_l/object}, tense and focused, and it's an exhausted group that returns back to camp as the sun dips toward the horizon. Exhausted, yes - but successful.",
+                "text": "At least {PRONOUN/p_l/subject} {VERB/p_l/don't/doesn't} have to dig through the snow for these leaves. p_l sighs, slowly and carefully snipping off juniper among the tree's branches. The patrol joins {PRONOUN/p_l/object}, tense and focused, and it's an exhausted group that returns back to camp as the sun dips toward the horizon. Exhausted, yes - but successful.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["juniper"],
@@ -2306,7 +2306,7 @@
                     "text": "Two lovers met in leaf-bare at the border between their Clans, under the shelter of a bushy white-berried yew. One night, it was not love that met there, but a great battle between their rival Clans, one neither would stagger from alive. The yew drank of their blood, and in the colder moons, even now, you can see it shining in its deathberries.",
                     "exp": 40,
                     "weight": 20,
-                    "herbs": ["random_herbs"],
+                "herbs": ["random_herbs"],
                     "relationships": [
                         {
                             "cats_to": ["p_l"],

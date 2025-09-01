@@ -1,6 +1,7 @@
 """
 Stores the DebugMenu class and the DebugMode class
 """
+
 import pygame
 import pygame_gui
 import html
@@ -147,6 +148,7 @@ class DebugMenu(UIWindow):
         """
         for line in lines.split("\n"):
             self.push_line(line)
+
 
 class DebugMode:
     """

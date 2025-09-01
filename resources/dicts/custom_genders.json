@@ -1,0 +1,12 @@
+{
+    "comment": [
+        "If you have a cat in your Clan with a custom-inputted gender, please add the gender here!",
+        "Otherwise, no-one will be able to be attracted to them.",
+        "'custom genders' should be a list of dictionaries."
+    ],
+    "template (copy, do not use)": {
+        "name": "gender's name",
+        "category": "options: 'fem', 'masc', or 'neu/other'"
+    },
+    "custom genders": []
+}

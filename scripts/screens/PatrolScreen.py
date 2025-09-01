@@ -6,13 +6,13 @@ import pygame
 import pygame_gui
 
 from scripts.cat.cats import Cat
+from scripts.events_module.patrol.patrol import Patrol
 from scripts.game_structure.game_essentials import game
 from scripts.game_structure.ui_elements import (
     UIImageButton,
     UISpriteButton,
     UISurfaceImageButton,
 )
-from scripts.events_module.patrol.patrol import Patrol
 from scripts.utility import (
     get_text_box_theme,
     ui_scale,
@@ -20,7 +20,10 @@ from scripts.utility import (
     ui_scale_dimensions,
 )
 from .Screens import Screens
-from ..game_structure import image_cache
+from ..clan_package.settings import get_clan_setting
+from ..game_structure import image_cache, constants
+from ..game_structure.game.settings import game_setting_get
+from ..cat.enums import CatRank
 from ..game_structure.propagating_thread import PropagatingThread
 from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import BoxStyles, get_box
@@ -85,30 +88,30 @@ class PatrolScreen(Screens):
             self.menu_button_pressed(event)
             self.mute_button_pressed(event)
 
-        elif event.type == pygame.KEYDOWN and game.settings["keybinds"]:
+        elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
             if event.key == pygame.K_LEFT:
                 self.change_screen("list screen")
             # elif event.key == pygame.K_RIGHT:
             # self.change_screen('list screen')
 
     def handle_choose_cats_events(self, event):
-        #do we have denkeepers or messengers
+        # do we have denkeepers or messengers
         yay_messengers = False
         yay_denkeepers = False
         if any(
-                    (
-                        cat.status in ["messenger", "messenger apprentice"]
+                (
+                        cat.status.rank in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
                         for cat in self.current_patrol
-                    )
-                ):
-                    yay_messengers = True
+                )
+        ):
+            yay_messengers = True
         elif any(
-                    (
-                        cat.status in ["denkeeper", "denkeeper apprentice"]
+                (
+                        cat.status.rank in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
                         for cat in self.current_patrol
-                    )
-                ):
-                    yay_denkeepers = True
+                )
+        ):
+            yay_denkeepers = True
         if event.ui_element == self.elements["random"]:
             if self.able_cats:
                 self.selected_cat = choice(self.able_cats)
@@ -136,11 +139,11 @@ class PatrolScreen(Screens):
             if self.selected_cat in self.current_patrol:
                 self.current_patrol.remove(self.selected_cat)
             else:
-                #messengers cannot patrol with denkeepers
-                if self.selected_cat.status in ["denkeeper", "denkeeper apprentice"] and yay_messengers:
-                        print("denkeepers cannot patrol borders!")
-                elif self.selected_cat.status in ["messenger", "messenger apprentice"] and yay_denkeepers:
-                        print("messengers cannot hunt!")
+                # messengers cannot patrol with denkeepers
+                if self.selected_cat.status.rank in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE] and yay_messengers:
+                    print("denkeepers cannot patrol borders!")
+                elif self.selected_cat.status.rank in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE] and yay_denkeepers:
+                    print("messengers cannot hunt!")
                 else:
                     self.current_patrol.append(self.selected_cat)
             self.update_cat_images_buttons()
@@ -152,27 +155,27 @@ class PatrolScreen(Screens):
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                        if cat.status.rank not in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
                     ]
                 elif yay_denkeepers:
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["messenger", "messenger apprentice"]
+                        if cat.status.rank not in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
                     ]
                 else:
                     able_temp = self.able_cats
-                if not game.clan.clan_settings["random med cat"]:
+                if not get_clan_setting("random med cat"):
                     able_no_med = [
                         cat
-                        for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
+                        for cat in self.able_cats
+                        if not cat.status.rank.is_any_herb_gatherer_rank()
                     ]
                     if len(able_no_med) == 0:
-                        able_no_med = able_temp
+                        able_no_med = self.able_cats
                     self.selected_cat = choice(able_no_med)
                 else:
-                    if able_temp:
+                    if self.able_cats:
                         self.selected_cat = choice(self.able_cats)
                     else:
                         print(
@@ -189,27 +192,27 @@ class PatrolScreen(Screens):
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                        if cat.status.rank not in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
                     ]
                 elif yay_denkeepers:
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["messenger", "messenger apprentice"]
+                        if cat.status.rank not in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
                     ]
                 else:
                     able_temp = self.able_cats
-                if not game.clan.clan_settings["random med cat"]:
+                if not get_clan_setting("random med cat"):
                     able_no_med = [
                         cat
-                        for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
+                        for cat in self.able_cats
+                        if not cat.status.rank.is_any_herb_gatherer_rank()
                     ]
                     if len(able_no_med) < 3:
-                        able_no_med = able_temp
+                        able_no_med = self.able_cats
                     self.current_patrol += sample(able_no_med, k=3)
                 else:
-                    self.current_patrol += sample(able_temp, k=3)
+                    self.current_patrol += sample(self.able_cats, k=3)
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements["add_six"]:
@@ -219,27 +222,27 @@ class PatrolScreen(Screens):
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["denkeeper", "denkeeper apprentice"]
+                        if cat.status.rank not in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
                     ]
                 elif yay_denkeepers:
                     able_temp = [
                         cat
                         for cat in self.able_cats
-                        if cat.status not in ["messenger", "messenger apprentice"]
+                        if cat.status.rank not in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
                     ]
                 else:
                     able_temp = self.able_cats
-                if not game.clan.clan_settings["random med cat"]:
+                if not get_clan_setting("random med cat"):
                     able_no_med = [
                         cat
-                        for cat in able_temp
-                        if cat.status not in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
+                        for cat in self.able_cats
+                        if not cat.status.rank.is_any_herb_gatherer_rank()
                     ]
                     if len(able_no_med) < 6:
-                        able_no_med = able_temp
+                        able_no_med = self.able_cats
                     self.current_patrol += sample(able_no_med, k=6)
                 else:
-                    self.current_patrol += sample(able_temp, k=6)
+                    self.current_patrol += sample(self.able_cats, k=6)
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements["remove_all"]:
@@ -465,18 +468,18 @@ class PatrolScreen(Screens):
                     manager=MANAGER,
                     anchors={"centerx": "centerx"},
                 )
-            
-            if self.selected_cat != None:
-                if self.selected_cat.status in ["denkeeper", "denkeeper apprentice"] and any(
+
+            if self.selected_cat is not None:
+                if self.selected_cat.status.rank in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE] and any(
                     (
-                        cat.status in ["messenger", "messenger apprentice"]
+                        cat.status.rank in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
                         for cat in self.current_patrol
                     )
                 ):
                     self.elements["add_remove_cat"].disable()
-                elif self.selected_cat.status in ["messenger", "messenger apprentice"] and any(
+                elif self.selected_cat.status.rank in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE] and any(
                     (
-                        cat.status in ["denkeeper", "denkeeper apprentice"]
+                        cat.status.rank in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
                         for cat in self.current_patrol
                     )
                 ):
@@ -495,34 +498,30 @@ class PatrolScreen(Screens):
             self.elements["add_six"].enable()
             self.elements["random"].enable()
 
-            # making sure meds and caretakers don't get the option for other patrols
+            # making sure meds don't get the option for other patrols
             if any(
-                (
-                    cat.status in ["medicine cat", "medicine cat apprentice", "caretaker", "caretaker apprentice", "gardener", "gardener apprentice"]
-                    for cat in self.current_patrol
-                )
+                (cat.status.rank.is_any_herb_gatherer_rank() for cat in self.current_patrol)
             ):
                 self.patrol_type = "med"
-            # making sure messengers don't get the option for other patrols UNLESS theres a med
+            # making sure messengers don't get the option for other patrols UNLESS there's a med
             elif any(
-                (
-                    cat.status in ["messenger", "messenger apprentice"]
-                    for cat in self.current_patrol
-                )
+                    (
+                            cat.status.rank in [CatRank.MESSENGER, CatRank.MESSENGER_APPRENTICE]
+                            for cat in self.current_patrol
+                    )
             ):
                 self.patrol_type = "border"
-            # making sure denkeepers don't get the option for other patrols UNLESS theres a med
+            # making sure denkeepers don't get the option for other patrols UNLESS there's a med
             elif any(
-                (
-                    cat.status in ["denkeeper", "denkeeper apprentice"]
-                    for cat in self.current_patrol
-                )
+                    (
+                            cat.status.rank in [CatRank.DENKEEPER, CatRank.DENKEEPER_APPRENTICE]
+                            for cat in self.current_patrol
+                    )
             ):
                 self.patrol_type = "hunting"
             else:
                 if self.patrol_type == "med":
                     self.patrol_type = "general"
-            
 
             self.elements["paw"].enable()
             self.elements["mouse"].enable()
@@ -555,17 +554,19 @@ class PatrolScreen(Screens):
 
             self.elements["info"] = pygame_gui.elements.UITextBox(
                 text,
-                ui_scale(pygame.Rect((250, 525), (300, 400))),
+                ui_scale(pygame.Rect((0, 525), (175, -1))),
+                starting_height=0,
                 object_id=get_text_box_theme("#text_box_30_horizcenter"),
                 manager=MANAGER,
+                anchors={"centerx": "centerx"},
             )
 
             able_no_med = [
                 cat
                 for cat in self.able_cats
-                if cat.status not in ["medicine cat", "medicine cat apprentice", "gardener", "gardener apprentice", "caretaker", "caretaker apprentice"]
+                if not cat.status.rank.is_any_herb_gatherer_rank()
             ]
-            if game.clan.clan_settings["random med cat"]:
+            if get_clan_setting("random med cat"):
                 able_no_med = self.able_cats
             if len(able_no_med) == 0:
                 able_no_med = self.able_cats
@@ -913,14 +914,16 @@ class PatrolScreen(Screens):
         )
         self.elements["intro_image"] = pygame_gui.elements.UIImage(
             ui_scale(pygame.Rect((75, 150), (300, 300))),
-            pygame.transform.scale(
-                self.patrol_obj.get_patrol_art().premul_alpha(),
-                ui_scale_dimensions((300, 300)),
-            )
-            if game.settings["no sprite antialiasing"]
-            else pygame.transform.smoothscale(
-                self.patrol_obj.get_patrol_art().premul_alpha(),
-                ui_scale_dimensions((300, 300)),
+            (
+                pygame.transform.scale(
+                    self.patrol_obj.get_patrol_art().premul_alpha(),
+                    ui_scale_dimensions((300, 300)),
+                )
+                if game_setting_get("no sprite antialiasing")
+                else pygame.transform.smoothscale(
+                    self.patrol_obj.get_patrol_art().premul_alpha(),
+                    ui_scale_dimensions((300, 300)),
+                )
             ),
         )
 
@@ -1092,20 +1095,18 @@ class PatrolScreen(Screens):
         # ASSIGN TO ABLE CATS
         for the_cat in Cat.all_cats_list:
             if (
-                not the_cat.dead
-                and the_cat.in_camp
+                the_cat.in_camp
                 and the_cat.ID not in game.patrolled
-                and the_cat.status
-                not in ["elder", "kitten", "mediator", "mediator apprentice", "storyteller", "storyteller apprentice"]
-                and not the_cat.outside
+                and the_cat.status.rank.is_allowed_to_patrol()
+                and the_cat.status.alive_in_player_clan
                 and the_cat not in self.current_patrol
                 and not the_cat.not_working()
             ):
                 if (
-                    the_cat.status == "newborn"
-                    or game.config["fun"]["all_cats_are_newborn"]
+                    the_cat.status.rank == CatRank.NEWBORN
+                    or constants.CONFIG["fun"]["all_cats_are_newborn"]
                 ):
-                    if game.config["fun"]["newborns_can_patrol"]:
+                    if constants.CONFIG["fun"]["newborns_can_patrol"]:
                         self.able_cats.append(the_cat)
                 else:
                     self.able_cats.append(the_cat)
@@ -1143,7 +1144,7 @@ class PatrolScreen(Screens):
         pos_x = 50
         i = 0
         for cat in display_cats:
-            if game.clan.clan_settings["show fav"] and cat.favourite:
+            if get_clan_setting("show fav") and cat.favourite:
                 self.fav[str(i)] = pygame_gui.elements.UIImage(
                     ui_scale(pygame.Rect((pos_x, pos_y), (50, 50))),
                     pygame.transform.scale(
@@ -1156,10 +1157,12 @@ class PatrolScreen(Screens):
                 self.fav[str(i)].disable()
             self.cat_buttons["able_cat" + str(i)] = UISpriteButton(
                 ui_scale(pygame.Rect((pos_x, pos_y), (50, 50))),
-                pygame.transform.scale(cat.sprite, ui_scale_dimensions((50, 50)))
-                if game.settings["no sprite antialiasing"]
-                else pygame.transform.smoothscale(
-                    cat.sprite, ui_scale_dimensions((50, 50))
+                (
+                    pygame.transform.scale(cat.sprite, ui_scale_dimensions((50, 50)))
+                    if game_setting_get("no sprite antialiasing")
+                    else pygame.transform.smoothscale(
+                        cat.sprite, ui_scale_dimensions((50, 50))
+                    )
                 ),
                 cat_object=cat,
                 manager=MANAGER,
@@ -1180,10 +1183,14 @@ class PatrolScreen(Screens):
             for cat in self.current_patrol:
                 self.cat_buttons["patrol_cat" + str(i)] = UISpriteButton(
                     ui_scale(pygame.Rect((pos_x, pos_y), (50, 50))),
-                    pygame.transform.scale(cat.sprite, ui_scale_dimensions((50, 50)))
-                    if game.settings["no sprite antialiasing"]
-                    else pygame.transform.smoothscale(
-                        cat.sprite, ui_scale_dimensions((50, 50))
+                    (
+                        pygame.transform.scale(
+                            cat.sprite, ui_scale_dimensions((50, 50))
+                        )
+                        if game_setting_get("no sprite antialiasing")
+                        else pygame.transform.smoothscale(
+                            cat.sprite, ui_scale_dimensions((50, 50))
+                        )
                     ),
                     cat_object=cat,
                     manager=MANAGER,
@@ -1355,9 +1362,11 @@ class PatrolScreen(Screens):
                 )
                 self.elements["mate_button"] = UIImageButton(
                     ui_scale(pygame.Rect((148, -4), (104, 26))),
-                    "screens.patrol.select"
-                    if self.mate in self.able_cats
-                    else "screens.patrol.unavailable",
+                    (
+                        "screens.patrol.select"
+                        if self.mate in self.able_cats
+                        else "screens.patrol.unavailable"
+                    ),
                     object_id="#patrol_select_button",
                     manager=MANAGER,
                     anchors={"top_target": self.elements["mate_frame"]},
@@ -1387,7 +1396,8 @@ class PatrolScreen(Screens):
             # Draw mentor or apprentice
             relation = "should not display"
             if (
-                self.selected_cat.status in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]
+                self.selected_cat.status.rank
+                in [CatRank.MEDICINE_APPRENTICE, CatRank.APPRENTICE]
                 or self.selected_cat.apprentice != []
             ):
                 self.elements["app_mentor_frame"] = pygame_gui.elements.UIImage(
@@ -1397,8 +1407,8 @@ class PatrolScreen(Screens):
                 )
 
                 if (
-                    self.selected_cat.status
-                    in ["medicine cat apprentice", "caretaker apprentice", "apprentice", "denkeeper apprentice", "messenger apprentice"]
+                    self.selected_cat.status.rank
+                    in [CatRank.MEDICINE_APPRENTICE, CatRank.APPRENTICE]
                     and self.selected_cat.mentor is not None
                 ):
                     self.app_mentor = Cat.fetch_cat(self.selected_cat.mentor)
@@ -1449,9 +1459,11 @@ class PatrolScreen(Screens):
                     # Button to switch to that cat
                     self.elements["app_mentor_button"] = UIImageButton(
                         ui_scale(pygame.Rect((548, -4), (104, 26))),
-                        "screens.patrol.select"
-                        if self.app_mentor in self.able_cats
-                        else "screens.patrol.unavailable",
+                        (
+                            "screens.patrol.select"
+                            if self.app_mentor in self.able_cats
+                            else "screens.patrol.unavailable"
+                        ),
                         object_id="#patrol_select_button",
                         manager=MANAGER,
                         anchors={"top_target": self.elements["app_mentor_frame"]},

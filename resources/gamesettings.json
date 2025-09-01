@@ -16,6 +16,21 @@
         }
     ],
     "general": {
+        "vit tint": [
+            "Tinted vitiligo",
+            "If enabled, cats' vitiligo will be tinted with their white patch tint(s).",
+            false
+        ],
+        "multiple tints": [
+            "Stacking tints",
+            "If enabled, cats can spawn with multiple tints that visually stack.",
+            false
+        ],
+        "double torties": [
+            "\"Double\" torties",
+            "If enabled, cats can spawn with secondary tortie patches.",
+            false
+        ],
         "dark mode": [
             "Dark mode",
             "Camp backgrounds will match with the mode: nighttime for dark mode and daytime for light mode.",

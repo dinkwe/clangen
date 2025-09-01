@@ -14,6 +14,8 @@ from scripts.utility import (
     event_text_adjust,
 )
 from .Screens import Screens
+from ..cat.enums import CatRank
+from ..game_structure.ui_elements import UIModifiedScrollingContainer
 
 
 class AllegiancesScreen(Screens):
@@ -53,9 +55,10 @@ class AllegiancesScreen(Screens):
         self.update_heading_text(f"{game.clan.name}Clan")
         allegiance_list = self.get_allegiances_text()
 
-        self.scroll_container = pygame_gui.elements.UIScrollingContainer(
+        self.scroll_container = UIModifiedScrollingContainer(
             ui_scale(pygame.Rect((50, 165), (715, 470))),
             allow_scroll_x=False,
+            allow_scroll_y=True,
             manager=MANAGER,
         )
 
@@ -69,9 +72,11 @@ class AllegiancesScreen(Screens):
                     object_id=get_text_box_theme("#text_box_30_horizleft"),
                     container=self.scroll_container,
                     manager=MANAGER,
-                    anchors={"top_target": self.names_boxes[-1]}
-                    if len(self.names_boxes) > 0
-                    else None,
+                    anchors=(
+                        {"top_target": self.names_boxes[-1]}
+                        if len(self.names_boxes) > 0
+                        else None
+                    ),
                 )
             )
             self.ranks_boxes[-1].disable()
@@ -130,49 +135,42 @@ class AllegiancesScreen(Screens):
     def get_allegiances_text(self):
         """Determine Text. Ouputs list of tuples."""
 
-        living_cats = [i for i in Cat.all_cats.values() if not (i.dead or i.outside)]
+        living_cats = [
+            i for i in Cat.all_cats.values() if i.status.alive_in_player_clan
+        ]
         living_meds = []
         living_mediators = []
-        living_warriors = []
-        living_apprentices = []
-        living_kits = []
-        living_elders = []
         living_messengers = []
         living_caretakers = []
         living_denkeepers = []
+        living_warriors = []
+        living_apprentices = []
         living_gardeners = []
         living_storytellers = []
+        living_kits = []
+        living_elders = []
         for cat in living_cats:
-            if cat.status == "medicine cat":
+            if cat.status.rank == CatRank.MEDICINE_CAT:
                 living_meds.append(cat)
-            elif cat.status == "warrior":
+            elif cat.status.rank == CatRank.WARRIOR:
                 living_warriors.append(cat)
-            elif cat.status == "mediator":
+            elif cat.status.rank == CatRank.MEDIATOR:
                 living_mediators.append(cat)
-            elif cat.status in [
-                "apprentice",
-                "medicine cat apprentice",
-                "mediator apprentice",
-                "caretaker apprentice",
-                "messenger apprentice",
-                "denkeeper apprentice",
-                "gardener apprentice",
-                "storyteller apprentice"
-            ]:
-                living_apprentices.append(cat)
-            elif cat.status == "caretaker":
+            elif cat.status.rank == CatRank.CARETAKER:
                 living_caretakers.append(cat)
-            elif cat.status == "denkeeper":
+            elif cat.status.rank == CatRank.DENKEEPER:
                 living_denkeepers.append(cat)
-            elif cat.status == "messenger":
+            elif cat.status.rank == CatRank.MESSENGER:
                 living_messengers.append(cat)
-            elif cat.status == "gardener":
+            elif cat.status.rank == CatRank.GARDENER:
                 living_gardeners.append(cat)
-            elif cat.status == "storyteller":
+            elif cat.status.rank == CatRank.STORYTELLER:
                 living_storytellers.append(cat)
-            elif cat.status in ["kitten", "newborn"]:
+            elif cat.status.rank.is_any_apprentice_rank():
+                living_apprentices.append(cat)
+            elif cat.status.rank.is_baby():
                 living_kits.append(cat)
-            elif cat.status == "elder":
+            elif cat.status.rank == CatRank.ELDER:
                 living_elders.append(cat)
 
         # Find Queens:
@@ -191,7 +189,7 @@ class AllegiancesScreen(Screens):
         # Clan Leader Box:
         # Pull the Clan leaders
         outputs = []
-        if game.clan.leader and not (game.clan.leader.dead or game.clan.leader.outside):
+        if game.clan.leader and game.clan.leader.status.alive_in_player_clan:
             outputs.append(
                 [
                     f"<b><u>{i18n.t('general.leader', count=1).upper()}</u></b>",
@@ -200,7 +198,7 @@ class AllegiancesScreen(Screens):
             )
 
         # Deputy Box:
-        if game.clan.deputy and not (game.clan.deputy.dead or game.clan.deputy.outside):
+        if game.clan.deputy and game.clan.deputy.status.alive_in_player_clan:
             outputs.append(
                 [
                     f"<b><u>{i18n.t('general.deputy', count=1).upper()}</u></b>",
@@ -227,17 +225,7 @@ class AllegiancesScreen(Screens):
 
             _box[1] = "\n".join([self.generate_one_entry(i) for i in living_mediators])
             outputs.append(_box)
-
-        # Warrior Box:
-        if living_warriors:
-            _box = ["", ""]
-            _box[
-                0
-            ] = f"<b><u>{i18n.t('general.warrior', count=len(living_warriors)).upper()}</u></b>"
-
-            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_warriors])
-            outputs.append(_box)
-
+        
         # other Box:
         if living_caretakers:
             _box = ["", ""]
@@ -279,6 +267,17 @@ class AllegiancesScreen(Screens):
 
             _box[1] = "\n".join([self.generate_one_entry(i) for i in living_storytellers])
             outputs.append(_box)
+
+        # Warrior Box:
+        if living_warriors:
+            _box = ["", ""]
+            _box[
+                0
+            ] = f"<b><u>{i18n.t('general.warrior', count=len(living_warriors)).upper()}</u></b>"
+
+            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_warriors])
+            outputs.append(_box)
+
         # Apprentice Box:
         if living_apprentices:
             _box = ["", ""]

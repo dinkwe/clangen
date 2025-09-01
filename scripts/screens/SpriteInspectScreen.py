@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: ascii -*-
+import i18n
 import pygame
 import pygame_gui
 
@@ -11,13 +12,17 @@ from scripts.utility import (
     shorten_text_to_fit,
     ui_scale_dimensions,
     ui_scale_offset,
-    get_text_box_theme, )
+    get_text_box_theme,
+)
 from scripts.utility import ui_scale
 from .Screens import Screens
+from ..clan_package.settings import get_clan_setting
+from ..game_structure.game.settings import game_setting_get
+from ..game_structure.game.switches import switch_set_value, switch_get_value, Switch
+from ..cat.enums import CatGroup
 from ..game_structure.screen_settings import MANAGER
 from ..game_structure.windows import SaveAsImage
 from ..ui.generate_button import get_button_dict, ButtonStyles
-from ..ui.get_arrow import get_arrow
 
 
 class SpriteInspectScreen(Screens):
@@ -51,35 +56,20 @@ class SpriteInspectScreen(Screens):
         super().__init__(name)
 
     def handle_event(self, event):
-        life_stages_dict = {
-            "newborn": 0,
-            "kitten": 1,
-            "adolescent": 2,
-            "adult": 3,
-            "senior": 4
-        }
-        current_life_stage_number = life_stages_dict.get(self.get_current_life_stage())
-
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             self.mute_button_pressed(event)
 
             if event.ui_element == self.back_button:
-                self.cat_elements["cat_name"].kill()
-                self.cat_elements["favourite_button"].kill()
                 self.change_screen("profile screen")
             elif event.ui_element == self.next_cat_button:
                 if isinstance(Cat.fetch_cat(self.next_cat), Cat):
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-                    game.switches["cat"] = self.next_cat
+                    switch_set_value(Switch.cat, self.next_cat)
                     self.cat_setup()
                 else:
                     print("invalid next cat", self.next_cat)
             elif event.ui_element == self.previous_cat_button:
-                self.cat_elements["cat_name"].kill()
-                self.cat_elements["favourite_button"].kill()
                 if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
-                    game.switches["cat"] = self.previous_cat
+                    switch_set_value(Switch.cat, self.previous_cat)
                     self.cat_setup()
                 else:
                     print("invalid previous cat", self.previous_cat)
@@ -87,274 +77,12 @@ class SpriteInspectScreen(Screens):
                 self.displayed_life_stage = min(
                     self.displayed_life_stage + 1, len(self.valid_life_stages) - 1
                 )
-
-                if self.displayed_life_stage > current_life_stage_number:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (older, dead)"
-                    else:
-                        cat_name += " (older)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
-                elif self.displayed_life_stage < current_life_stage_number:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (younger, dead)"
-                    else:
-                        cat_name += " (younger)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
-                else:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (dead)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
                 self.update_disabled_buttons()
                 self.make_cat_image()
             elif event.ui_element == self.save_image_button:
                 SaveAsImage(self.generate_image_to_save(), str(self.the_cat.name))
             elif event.ui_element == self.previous_life_stage:
                 self.displayed_life_stage = max(self.displayed_life_stage - 1, 0)
-
-                if self.displayed_life_stage > current_life_stage_number:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (older, dead)"
-                    else:
-                        cat_name += " (older)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
-                elif self.displayed_life_stage < current_life_stage_number:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (younger, dead)"
-                    else:
-                        cat_name += " (younger)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
-                else:
-                    self.cat_elements["cat_name"].kill()
-                    self.cat_elements["favourite_button"].kill()
-
-                    cat_name = str(self.the_cat.name)  # name
-                    if self.the_cat.dead:
-                        cat_name += " (dead)"
-                    short_name = shorten_text_to_fit(cat_name, 195, 20)
-
-                    self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                        cat_name,
-                        ui_scale(pygame.Rect((0, 0), (-1, 40))),
-                        manager=MANAGER,
-                        object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                        anchors={"centerx": "centerx"},
-                    )
-                    self.cat_elements["cat_name"].set_relative_position(ui_scale_offset((0, 60)))
-
-                    favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
-                    favorite_button_rect.topright = ui_scale_offset((-10, 63))
-                    self.cat_elements["favourite_button"] = UIImageButton(
-                        favorite_button_rect,
-                        "",
-                        object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
-                        manager=MANAGER,
-                        tool_tip_text="general.remove_favorite"
-                        if self.the_cat.favourite
-                        else "general.mark_favorite",
-                        starting_height=2,
-                        anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
-                    )
-                    del favorite_button_rect
-
-                    # Write the checkboxes. The text is set up in switch_screens.
-                    self.update_checkboxes()
-
-                    (
-                        self.next_cat,
-                        self.previous_cat,
-                    ) = self.the_cat.determine_next_and_previous_cats()
-                    self.update_disabled_buttons()
-
                 self.update_disabled_buttons()
                 self.make_cat_image()
             elif event.ui_element == self.checkboxes["platform_shown"]:
@@ -414,7 +142,7 @@ class SpriteInspectScreen(Screens):
 
         self.next_cat_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((622, 25), (153, 30))),
-            "Next Cat " + get_arrow(3, arrow_left=False),
+            "buttons.next_cat",
             get_button_dict(ButtonStyles.SQUOVAL, (153, 30)),
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
@@ -422,7 +150,7 @@ class SpriteInspectScreen(Screens):
         )
         self.previous_cat_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((25, 25), (153, 30))),
-            get_arrow(2, arrow_left=True) + " Previous Cat",
+            "buttons.previous_cat",
             get_button_dict(ButtonStyles.SQUOVAL, (153, 30)),
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
@@ -430,7 +158,7 @@ class SpriteInspectScreen(Screens):
         )
         self.back_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((25, 60), (105, 30))),
-            get_arrow(2) + " Back",
+            "buttons.back",
             get_button_dict(ButtonStyles.SQUOVAL, (105, 30)),
             object_id="@buttonstyles_squoval",
             manager=MANAGER,
@@ -452,47 +180,44 @@ class SpriteInspectScreen(Screens):
 
         self.save_image_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((25, 95), (135, 30))),
-            "Save as Image",
+            "screens.sprite_inspect.save_image",
             get_button_dict(ButtonStyles.SQUOVAL, (135, 30)),
             object_id="@buttonstyles_squoval",
         )
 
         # Toggle Text:
         self.platform_shown_text = pygame_gui.elements.UITextBox(
-            "Show Platform",
+            "screens.sprite_inspect.show_platform",
             ui_scale(pygame.Rect((150, 580), (-1, 50))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
         )
         self.scars_shown_text = pygame_gui.elements.UITextBox(
-            "Show Scar(s)",
+            "screens.sprite_inspect.show_scars",
             ui_scale(pygame.Rect((350, 580), (-1, 50))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
         )
         self.acc_shown_text = pygame_gui.elements.UITextBox(
-            "Show Accessory",
+            "screens.sprite_inspect.show_accessory",
             ui_scale(pygame.Rect((545, 580), (-1, 50))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
         )
         self.override_dead_lineart_text = pygame_gui.elements.UITextBox(
-            "Show as Living",
+            "screens.sprite_inspect.show_living",
             ui_scale(pygame.Rect((250, 630), (-1, 50))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
         )
         self.override_not_working_text = pygame_gui.elements.UITextBox(
-            "Show as Healthy",
+            "screens.sprite_inspect.show_healthy",
             ui_scale(pygame.Rect((450, 630), (-1, 100))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
         )
 
-        if game.clan.clan_settings["backgrounds"]:
-            self.platform_shown = True
-        else:
-            self.platform_shown = False
+        self.platform_shown = get_clan_setting("backgrounds")
 
         self.cat_setup()
 
@@ -502,7 +227,7 @@ class SpriteInspectScreen(Screens):
             self.cat_elements[ele].kill()
         self.cat_elements = {}
 
-        self.the_cat = Cat.fetch_cat(game.switches["cat"])
+        self.the_cat = Cat.fetch_cat(switch_get_value(Switch.cat))
 
         self.cat_elements["platform"] = pygame_gui.elements.UIImage(
             ui_scale(pygame.Rect((120, 100), (560, 490))),
@@ -517,14 +242,7 @@ class SpriteInspectScreen(Screens):
         # "young adult", "adult", and "senior adult" all look the same: collapse to adult
         # This is not the best way to do it, so if we make them have difference appearances, this will
         # need to be changed/removed.
-        life_stages_dict = {
-            "newborn": 0,
-            "kitten": 1,
-            "adolescent": 2,
-            "adult": 3,
-            "senior": 4
-        }
-        if self.the_cat.age in ["young adult", "adult", "senior adult"]:
+        if self.the_cat.age in ("young adult", "adult", "senior adult"):
             current_life_stage = "adult"
         else:
             current_life_stage = self.the_cat.age
@@ -534,7 +252,7 @@ class SpriteInspectScreen(Screens):
             self.valid_life_stages.append(life_stage)
 
         # Store the index of the currently displayed life stage.
-        self.displayed_life_stage = life_stages_dict.get(current_life_stage)
+        self.displayed_life_stage = self.valid_life_stages.index(current_life_stage)
 
         # Reset all the toggles
         self.lifestage = None
@@ -548,9 +266,7 @@ class SpriteInspectScreen(Screens):
 
         cat_name = str(self.the_cat.name)  # name
         if self.the_cat.dead:
-            cat_name += (
-                " (dead)"  # A dead cat will have the (dead) sign next to their name
-            )
+            cat_name = i18n.t("general.dead_label", name=cat_name)
         short_name = shorten_text_to_fit(cat_name, 195, 20)
 
         self.cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
@@ -569,9 +285,11 @@ class SpriteInspectScreen(Screens):
             "",
             object_id="#fav_star" if self.the_cat.favourite else "#not_fav_star",
             manager=MANAGER,
-            tool_tip_text="Remove favorite"
-            if self.the_cat.favourite
-            else "Mark as favorite",
+            tool_tip_text=(
+                "general.remove_favorite"
+                if self.the_cat.favourite
+                else "general.mark_favorite"
+            ),
             starting_height=2,
             anchors={"right": "right", "right_target": self.cat_elements["cat_name"]},
         )
@@ -585,16 +303,6 @@ class SpriteInspectScreen(Screens):
             self.previous_cat,
         ) = self.the_cat.determine_next_and_previous_cats()
         self.update_disabled_buttons()
-
-    def get_current_life_stage(self):
-        self.the_cat = Cat.fetch_cat(game.switches["cat"])
-
-        if self.the_cat.age in ["young adult", "adult", "senior adult"]:
-            current_life_stage = "adult"
-        else:
-            current_life_stage = self.the_cat.age
-
-        return current_life_stage
 
     def update_checkboxes(self):
         for ele in self.checkboxes:
@@ -614,6 +322,7 @@ class SpriteInspectScreen(Screens):
             self.the_cat.pelt.scars,
         )
 
+        # "Show accessories"
         self.make_one_checkbox(
             ui_scale_offset((500, 575)),
             "acc_shown",
@@ -685,7 +394,7 @@ class SpriteInspectScreen(Screens):
             scars_hidden=not self.scars_shown,
             acc_hidden=not self.acc_shown,
             always_living=self.override_dead_lineart,
-            no_not_working=self.override_not_working,
+            disable_sick_sprite=self.override_not_working,
         )
 
         self.cat_elements["cat_image"] = pygame_gui.elements.UIImage(
@@ -736,7 +445,6 @@ class SpriteInspectScreen(Screens):
         return super().exit_screen()
 
     def update_disabled_buttons(self):
-
         self.update_previous_next_cat_buttons()
 
         if self.displayed_life_stage >= len(self.valid_life_stages) - 1:
@@ -750,14 +458,18 @@ class SpriteInspectScreen(Screens):
             self.previous_life_stage.enable()
 
     def get_platform(self):
-        the_cat = Cat.all_cats.get(game.switches["cat"], game.clan.instructor)
+        the_cat = Cat.all_cats.get(switch_get_value(Switch.cat), game.clan.instructor)
 
         light_dark = "light"
-        if game.settings["dark mode"]:
+        if game_setting_get("dark mode"):
             light_dark = "dark"
 
         available_biome = ["Forest", "Mountainous", "Plains", "Beach"]
-        biome = game.clan.biome
+        biome = (
+            game.clan.biome
+            if not game.clan.override_biome
+            else game.clan.override_biome
+        )
 
         if biome not in available_biome:
             biome = available_biome[0]
@@ -776,7 +488,7 @@ class SpriteInspectScreen(Screens):
         if light_dark == "light":
             offset = 80
 
-        if the_cat.df:
+        if the_cat.status.group == CatGroup.DARK_FOREST:
             biome_platforms = platformsheet.subsurface(
                 pygame.Rect(0, order.index("SC/DF") * 70, 640, 70)
             )

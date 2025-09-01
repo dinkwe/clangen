@@ -14,6 +14,7 @@ from scripts.game_structure.game_essentials import game
 #                              Scar Event Class                                #
 # ---------------------------------------------------------------------------- #
 
+
 class Scar_Events:
     """All events with a connection to conditions."""
 
@@ -82,7 +83,7 @@ class Scar_Events:
 
     @staticmethod
     def handle_scars(cat, injury_name):
-        """ 
+        """
         This function handles the scars
         """
 
@@ -100,7 +101,6 @@ class Scar_Events:
             chance += 2
 
         if len(cat.pelt.scars) < 4 and not int(random.random() * chance):
-
             # move potential scar text into displayed scar text
 
             scar_pool = [
@@ -110,68 +110,68 @@ class Scar_Events:
             ]
             if "NOPAW" in cat.pelt.scars:
                 scar_pool = [
-                    i for i in scar_pool if i not in ["TOETRAP", "RATBITE", "FROSTSOCK"]
+                    i for i in scar_pool if i not in ("TOETRAP", "RATBITE", "FROSTSOCK")
                 ]
             if "NOTAIL" in cat.pelt.scars:
                 scar_pool = [
                     i
                     for i in scar_pool
                     if i
-                    not in [
+                    not in (
                         "HALFTAIL",
                         "TAILBASE",
                         "TAILSCAR",
                         "MANTAIL",
                         "BURNTAIL",
                         "FROSTTAIL",
-                    ]
+                    )
                 ]
             if "HALFTAIL" in cat.pelt.scars:
                 scar_pool = [
                     i
                     for i in scar_pool
-                    if i not in ["TAILSCAR", "MANTAIL", "FROSTTAIL"]
+                    if i not in ("TAILSCAR", "MANTAIL", "FROSTTAIL")
                 ]
             if "BRIGHTHEART" in cat.pelt.scars:
                 scar_pool = [
-                    i for i in scar_pool if i not in ["RIGHTBLIND", "BOTHBLIND"]
+                    i for i in scar_pool if i not in ("RIGHTBLIND", "BOTHBLIND")
                 ]
             if "BOTHBLIND" in cat.pelt.scars:
                 scar_pool = [
                     i
                     for i in scar_pool
                     if i
-                    not in [
+                    not in (
                         "THREE",
                         "RIGHTBLIND",
                         "LEFTBLIND",
                         "BOTHBLIND",
                         "BRIGHTHEART",
-                    ]
+                    )
                 ]
             if "NOEAR" in cat.pelt.scars:
                 scar_pool = [
                     i
                     for i in scar_pool
                     if i
-                    not in [
+                    not in (
                         "LEFTEAR",
                         "RIGHTEAR",
                         "NOLEFTEAR",
                         "NORIGHTEAR",
                         "FROSTFACE",
-                    ]
+                    )
                 ]
             if "MANTAIL" in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ["BURNTAIL", "FROSTTAIL"]]
+                scar_pool = [i for i in scar_pool if i not in ("BURNTAIL", "FROSTTAIL")]
             if "BURNTAIL" in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ["MANTAIL", "FROSTTAIL"]]
+                scar_pool = [i for i in scar_pool if i not in ("MANTAIL", "FROSTTAIL")]
             if "FROSTTAIL" in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ["MANTAIL", "BURNTAIL"]]
+                scar_pool = [i for i in scar_pool if i not in ("MANTAIL", "BURNTAIL")]
             if "NOLEFT" in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ["LEFTEAR"]]
+                scar_pool = [i for i in scar_pool if i not in ("LEFTEAR",)]
             if "NORIGHT" in cat.pelt.scars:
-                scar_pool = [i for i in scar_pool if i not in ["RIGHTEAR"]]
+                scar_pool = [i for i in scar_pool if i not in ("RIGHTEAR",)]
 
             # Extra check for disabling scars.
             if int(random.random() * 3):
@@ -202,8 +202,7 @@ class Scar_Events:
                 return None, None
 
             # If we've reached this point, we can move forward with giving history.
-            History.add_scar(
-                cat,
+            cat.history.add_scar(
                 i18n.t(
                     "cat.history.scar_from_injury",
                     injury_name=i18n.t(f"conditions.injuries.{injury_name}"),
@@ -214,22 +213,52 @@ class Scar_Events:
             specialty = random.choice(scar_pool)
             if specialty in ["NOTAIL", "HALFTAIL"]:
                 cat.pelt.accessory = [
-                    acc for acc in cat.pelt.accessory
-                    if acc not in (
+                    acc
+                    for acc in cat.pelt.accessory
+                    if acc
+                    not in (
                         "RED FEATHERS",
-                    "BLUE FEATHERS",
-                    "JAY FEATHERS",
-                    "GULL FEATHERS",
-                    "SPARROW FEATHERS",
-                    "CLOVERTAIL",
-                    "DAISYTAIL",
-                    'SEAWEED',
-                    'DAISY CORSAGE',
-                    "SNAKE",
-                    "OLD SILVER WATCH",
-                    "OLD GOLD WATCH",
-                    "BAUBLES",
-                    "SEAWEED",
+                        "BLUE FEATHERS",
+                        "JAY FEATHERS",
+                        "GULL FEATHERS",
+                        "SPARROW FEATHERS",
+                        "CLOVERTAIL",
+                        "DAISYTAIL",
+                        "DAISY CORSAGE",
+                        "CLOVERTAIL",
+                        "OLD SILVER WATCH",
+                        "OLD GOLD WATCH",
+                        "BAUBLES",
+                        "DOGWOOD",
+                        "TREESTAR",
+                        "SEAWEED",
+                        "CRIMSONBOWS",
+                        "BLUEBOWS",
+                        "YELLOWBOWS",
+                        "CYANBOWS",
+                        "REDBOWS",
+                        "LIMEBOWS",
+                        "GREENBOWS",
+                        "RAINBOWBOWS",
+                        "BLACKBOWS",
+                        "SPIKESBOWS",
+                        "WHITEBOWS",
+                        "PINKBOWS",
+                        "PURPLEBOWS",
+                        "MULTIBOWS",
+                        "INDIGOBOWS",
+                        "THRUSH FEATHERS",
+                        "GOLDFINCH FEATHERS",
+                        "DOVE FEATHERS",
+                        "PEACOCK FEATHERS",
+                        "HAWK FEATHERS",
+                        "BLUE JAY FEATHERS",
+                        "ROBIN FEATHERS",
+                        "FIERY FEATHERS",
+                        "SUNSET FEATHERS",
+                        "SILVER FEATHERS",
+                        "WISTERIA2",
+                        "GOLDEN CREEPING JENNY",
                     )
                 ]
 

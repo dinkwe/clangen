@@ -106,6 +106,8 @@
     "sky": [171, 204, 250],
     "lightblue": [182, 221, 232],
     "creamytan": [250, 232, 213],
+    "oldbookpage": [227, 208, 152],
+    "chocolate": [112, 70, 42],
     "none": null
   },
   "dilute_tint_colours":

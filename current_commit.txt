@@ -1,0 +1,7 @@
+The ClanGen dev commit that the merge is currently running on is 1040971.
+Link: https://github.com/ClanGenOfficial/clangen/commit/104097144be0fa39792c64a5de399bced5cc3d57
+It also contains the following post-1040971 bugfixes:
+https://github.com/ClanGenOfficial/clangen/pull/3882
+https://github.com/ClanGenOfficial/clangen/pull/3883
+https://github.com/ClanGenOfficial/clangen/pull/3884
+https://github.com/ClanGenOfficial/clangen/pull/3889

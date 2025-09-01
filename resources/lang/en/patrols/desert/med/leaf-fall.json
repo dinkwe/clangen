@@ -3,7 +3,7 @@
         "patrol_id": "dst_med_discussion_leaffall1",
         "biome": ["desert"],
         "season": ["leaf-fall"],
-        "types": [],
+        "types": ["herb_gathering"],
         "tags": [],
         "patrol_art": "med_general_intro",
         "min_cats": 2,
@@ -71,7 +71,7 @@
         "patrol_id": "dst_med_dwindleherbsgathering_leaffall1",
         "biome": ["desert"],
         "season": ["leaf-fall"],
-        "types": [],
+        "types": ["herb_gathering"],
         "tags": [],
         "patrol_art": "med_general_intro",
         "min_cats": 2,
@@ -887,7 +887,8 @@
         "max_cats": 6,
         "min_max_status": {
             "healer cats": [1, 6],
-            "all apprentices": [1, 6]
+            "all apprentices": [1, 5],
+            "medicine cat": [1, 5]
         },
         "weight": 20,
         "intro_text": "app1 shovels tansy into {PRONOUN/app1/poss} mouth without a care in the world. p_l stops {PRONOUN/app1/object}, and tells {PRONOUN/app1/object} {PRONOUN/app1/subject} really <i>should</i> have a care.",
@@ -895,7 +896,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Tansy isn't mallow or dandelion, to be played with by kits. In high concentrations or potency, it can kill the elderly, pregnant, or compromised, and it will <i>definitely</i> make app1 sick if {PRONOUN/app1/subject} {VERB/app1/do/does}n't respect it.",
+                "text": "Tansy isn't mallow or dandelion, to be played with by kits. In high concentrations or potency, it can kill the elderly, pregnant, or compromised, and it will <i>definitely</i> make app1 sick if {PRONOUN/app1/subject} {VERB/app1/don't/doesn't} respect it.",
                 "exp": 30,
                 "weight": 20,
                 "herbs": ["tansy"],

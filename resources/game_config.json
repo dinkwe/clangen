@@ -108,11 +108,16 @@
 			"parent_to_kit": {
 				"romantic": 0,
 				"platonic": 40,
-				"dislike": 0,
+				"dislike": 25,
 				"admiration": 30,
 				"comfortable": 40,
-				"jealousy": 0,
-				"trust": 30
+				"jealousy": 20,
+				"trust": 30,
+				"comment": [
+					"Dislike and jealousy are called for the turmoiled litter events.",
+					"While still having platonic value at least.",
+					"Only occurs with the turmoil right after a litter is born though."
+				]
 			}
 		},
 		"sib_buff": {
@@ -164,25 +169,27 @@
 		"random_affair_chance": 50,
 		"unmated_random_affair_chance": 10,
 		"one_kit_possibility": {"young adult": 28, "adult": 24, "senior adult": 17, "senior": 15},
-            "two_kit_possibility": {"young adult": 32, "adult": 28, "senior adult": 10, "senior": 10},
-            "three_kit_possibility": {"young adult": 36, "adult": 32, "senior adult": 5, "senior": 3},
-            "four_kit_possibility": {"young adult": 32, "adult": 28, "senior adult": 4, "senior": 2},
-            "five_kit_possibility": {"young adult": 28, "adult": 24, "senior adult": 3, "senior": 1},
-            "six_kit_possibility": {"young adult": 24, "adult": 20, "senior adult": 2, "senior": 0},
-            "seven_kit_possibility": {"young adult": 10, "adult": 8, "senior adult": 1, "senior": 0},
-            "eight_kit_possibility": {"young adult": 8, "adult": 6, "senior adult": 0, "senior": 0},
-            "nine_kit_possibility": {"young adult": 6, "adult": 4, "senior adult": 0, "senior": 0},
-            "ten_kit_possibility": {"young adult": 4, "adult": 2, "senior adult": 0, "senior": 0},
-            "eleven_kit_possibility": {"young adult": 2, "adult": 1, "senior adult": 0, "senior": 0},
-            "max_kit_possibility": {"young adult": 1, "adult": 1, "senior adult": 0, "senior": 0},
+		"two_kit_possibility": {"young adult": 32, "adult": 28, "senior adult": 10, "senior": 10},
+		"three_kit_possibility": {"young adult": 36, "adult": 32, "senior adult": 5, "senior": 3},
+		"four_kit_possibility": {"young adult": 32, "adult": 28, "senior adult": 4, "senior": 2},
+		"five_kit_possibility": {"young adult": 28, "adult": 24, "senior adult": 3, "senior": 1},
+		"six_kit_possibility": {"young adult": 24, "adult": 20, "senior adult": 2, "senior": 0},
+		"seven_kit_possibility": {"young adult": 8, "adult": 6, "senior adult": 0, "senior": 0},
+		"eight_kit_possibility": {"young adult": 4, "adult": 2, "senior adult": 0, "senior": 0},
+		"nine_kit_possibility": {"young adult": 2, "adult": 1, "senior adult": 0, "senior": 0},
+		"ten_kit_possibility": {"young adult": 1, "adult": 0, "senior adult": 0, "senior": 0},
+		"eleven_kit_possibility": {"young adult": 1, "adult": 0, "senior adult": 0, "senior": 0},
+		"max_kit_possibility": {"young adult": 1, "adult": 1, "senior adult": 0, "senior": 0},
 		"min_kits": 1,
 		"max_kits": 6,
+		"failed_adopt": {"intersex": 0.10, "female": 0.05, "male": 0.15},
 		"comment": [
 			"primary mated - 1/chance for kits, relationship and other factors will influence this chance",
 			"primary unmated - 1/chance for kits, relationship and other factors will influence this chance",
 			"The kit number is incremental. It is 1-6 as default so if you change these numbers, you should probably keep this in mind.",
 			"As in, your max kits number should probably be 5 more than the min kits number.",
-			"But that's not required - just makes more sense that way with how the litters are generated."
+			"But that's not required - just makes more sense that way with how the litters are generated.",
+			"Failed adoption in this case is how often a false pregnancy results in no kits, no end of adoption. Toggled with the pregnancy turmoil setting in game."
 		]
 	},
 	"cat_generation": {
@@ -191,7 +198,8 @@
 		"sparkle_chance": 50,
 		"base_male_tortie": 13,
 		"base_female_tortie": 4,
-		"base_heterochromia": 120,
+		"double_tortie": 45,
+		"base_heterochromia": 60,
 		"direct_inheritance": 15,
 		"wildcard_tortie": 9,
 		"vit_chance": 8,
@@ -202,12 +210,19 @@
 		"max_white_amount": 2,
 		"base_extra_tortie": 3,
 		"max_tortie_amount": 2,
-		"multiple_pronouns_chance": 20, 
+		"multiple_pronouns_chance": 20,
 		"neopronoun_chance": 30,
 		"comment": [
+			"double_tortie (45 by default)",
+			"multiple_permanent_conditions (20 by default) - 1/chance for a cat to be born with one extra permanent condition,",
+			"runs until it's tried to give a cat [max_conditions_born_with - 1] extra conditions.",
+			"max_conditions_born_with (3 by default) - the maximum amount of permanent conditions a cat can be born with.",
+			"comorbidity_chance (5 by default) - 1/chance for a cat that's being given an extra permanent condition to be given",
+			"a condition that is comorbid with any of their existing ones instead of a random one.",
 			"max_white_amount is the max amount of white patches one cat can generate with - 2 by default",
 			"max_tortie_amount is the max amount of tortie patches one cat can generate with - 2 by default",
-			"Note that extra patch chances decrease with each extra patch - chances base_extra_white 5 by default, base_extra_tortie 3 by default"
+			"Note that extra patch chances decrease with each extra patch - chances base_extra_white 5 by default, base_extra_tortie 3 by default",
+			"neopronoun_chance refers to the chance that a cats FIRST set of pronouns will be neopronouns"
 		]
 	},
 	"cat_name_controls": {
@@ -221,8 +236,8 @@
 		]
 	},
 	"accessory_generation": {
-		"base_acc_chance": 150,
-		"med_modifier": -80,
+		"base_acc_chance": 50,
+		"med_modifier": -30,
 		"baby_modifier": -20,
 		"elder_modifier": 20,
 		"happy_trait_modifier": -30,
@@ -272,7 +287,11 @@
 		"become_storyteller_chances": {
 			"warrior": 5000,
 			"elder": 400
-		}
+		},
+		"disabled_cat_med_chance_increase": 2,
+		"comment": [
+			"The disabled_cat_med_chance_increase (2 by default) will divide the chance of disabled cats becoming medicine cat/mediator apprentices by its value."
+		]
 	},
 	"lost_cat": {
 		"rejoin_chance": 20
@@ -312,7 +331,18 @@
 		]
 	},
 	"event_generation": {
-		"debug_ensure_event_id": null
+		"debug_ensure_event_id": null,
+		"debug_type_override": null,
+		"debug_override_requirements": false,
+		"max_illnesses": 3,
+		"max_perm_conditions": -1,
+		"comment": [
+			"if randint(1, df_trainee_injury_event_denominator) <= df_trainee_injury_event_compare - base is 15% chance",
+			"Max perm conditions is -1 (disabled) be default. This feature is primarily for testing purposes and not recommended for gameplay.",
+			"It cannot be set to lower than 3. I mean you can but  it will disable the limit entirely ",
+			"Max illnesses is the maximum total of illnesses and injuries a cat can have at once. Does not include perm conditions",
+			"Set to -1 to disable"
+		]
 	},
 	"death_related": {
 		"leader_death_chance": 50,
@@ -550,5 +580,7 @@
 				"leaf-bare": [5, 2, 1]
 			}
 		}
-	}
+	},
+	"dev_tools": false,
+	"check_and_convert": true
 }

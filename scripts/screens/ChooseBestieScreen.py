@@ -26,6 +26,7 @@ from .Screens import Screens
 from ..game_structure.screen_settings import MANAGER
 from ..ui.generate_box import BoxStyles, get_box
 from ..ui.generate_button import get_button_dict, ButtonStyles
+from ..game_structure.game.switches import switch_set_value, switch_get_value, Switch
 from ..ui.icon import Icon
 
 
@@ -635,7 +636,7 @@ class ChooseBestieScreen(Screens):
     def update_current_cat_info(self, reset_selected_cat=True):
         """Updates all elements with the current cat, as well as the selected cat.
         Called when the screen switched, and whenever the focused cat is switched"""
-        self.the_cat = Cat.all_cats[game.switches["cat"]]
+        self.the_cat = Cat.all_cats[switch_get_value(Switch.cat)]
         if not self.the_cat.inheritance:
             self.the_cat.create_inheritance_new_cat()
 
@@ -982,7 +983,7 @@ class ChooseBestieScreen(Screens):
     def get_valid_besties(self):
         """Get a list of valid besties for the current cat"""
 
-        # Behold! The uglest list comprehension ever created!
+        # Behold! The ugliest list comprehension ever created!
         valid_besties = [
             i
             for i in Cat.all_cats_list
@@ -990,9 +991,11 @@ class ChooseBestieScreen(Screens):
             and self.the_cat.is_potential_bestie(
                 i
             )
-            and i.outside == self.the_cat.outside
-            and i.ID not in self.the_cat.bestie
+            and i.status.is_outsider == self.the_cat.status.is_outsider
+            and i.status.group == self.the_cat.status.group
+            and i.ID not in self.the_cat.enemy
             and i.ID not in self.the_cat.mate
+            and i.ID not in self.the_cat.bestie
         ]
 
         return valid_besties
