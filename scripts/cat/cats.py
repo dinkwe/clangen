@@ -4459,7 +4459,7 @@ class Cat:
             else:
                 dadm_text_2 += ":\n"
             for condition in self.permanent_condition:
-                dadm_text_2 += self.change_condition_name(str(condition)) + "\n"
+                dadm_text_2 += (str(condition)) + "\n"
             dadm_text_2 = dadm_text_2[:-1]
                 
         trait_text = i18n.t(f"cat.personality.{self.personality.trait}")
