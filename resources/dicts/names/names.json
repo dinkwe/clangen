@@ -859,14 +859,5 @@
     "face", "fang", "feet", "foot", "glare", "heart", "jaw", "leg", "legs", "muzzle", "nose", "patch", "rump", "scar",
     "shoulder", "shoulders", "sight", "snout", "soul", "spirit", "spot", "spots", "step", "tail", "talon", "teeth",
     "throat", "toe", "toes", "tooth"
-  ],
-  "normal_plural_suffixes": [
-    " Band", " Charm", " Cloud", " Clutter", " Collective", " Colony", " Conspiracy", " Family", " Flock", " Herd",
-    " Mischief", " Murder", " Nest", " Pack", " Plague", " Pod", " Pounce", " Pride", " Shoal", " Skulk", " Swarm",
-    " System"
-  ],
-  "leader_plural_suffixes": [
-    " Asterism", " Belt", " Cluster", " Comets", " Constellation", " Cosmos", " Galaxy", " Meteor Shower", " Nebula",
-    " Nova", " Ring", " Shooting Stars"
   ]
 }
