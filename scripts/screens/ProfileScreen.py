@@ -2244,14 +2244,6 @@ class ProfileScreen(Screens):
             x.kill()
         self.condition_data = {}
         for con in all_illness_injuries[self.conditions_page]:
-            
-            if con[0] in self.the_cat.permanent_condition:
-                if "misdiagnosis" in self.the_cat.permanent_condition[con[0]] and self.the_cat.permanent_condition[con[0]]["misdiagnosis"] is not False: 
-                    condition_name = self.change_condition_name(con[0], self.the_cat.permanent_condition[con[0]]["misdiagnosis"])
-                else:
-                    condition_name = self.change_condition_name(con[0])
-            else:
-                condition_name = self.change_condition_name(con[0])
             # Background Box
             self.condition_data[f"bg_{con}"] = pygame_gui.elements.UIPanel(
                 ui_scale(pygame.Rect((x_pos, 13), (142, 142))),
@@ -2262,7 +2254,7 @@ class ProfileScreen(Screens):
             )
 
             self.condition_data[f"name_{con}"] = UITextBoxTweaked(
-                condition_name,
+                con[0],
                 ui_scale(pygame.Rect((0, 0), (120, -1))),
                 line_spacing=0.90,
                 object_id="#text_box_30_horizcenter",
