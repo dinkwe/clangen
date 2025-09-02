@@ -2,8 +2,8 @@
     "activate_death": true,
     "activate_events": true,
     "start_amount": 60,
-    "auto_warrior_prey": [5,7],
-    "auto_apprentice_prey": [2,4],
+    "auto_warrior_prey": [1,4],
+    "auto_apprentice_prey": [1,2],
     "condition_increase": 1,
     "base_event_trigger_factor": 4,
 	"events_weights":{
