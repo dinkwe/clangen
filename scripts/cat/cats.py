@@ -4712,7 +4712,7 @@ def create_cat(rank, moons=None, biome=None, secondary_biome=None, tertiary_biom
         if scar in not_allowed_scars:
             new_cat.pelt.scars.remove(scar)
     
-    if randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition_two"]) <= constants.CONFIG["cat_generation"]["base_permanent_condition_one"]:
+    if randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]):
         new_cat.congenital_condition(new_cat)
 
     return new_cat
