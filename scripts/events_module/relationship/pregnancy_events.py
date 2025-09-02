@@ -343,7 +343,6 @@ class Pregnancy_Events:
             correct_guess = "large"
 
         Pregnancy_Events.rebuild_strings()
-
         if thinking_amount[0] == "correct":
             if correct_guess == "small":
                 text = choice(Pregnancy_Events.PREGNANT_STRINGS["litter_guess_small"])
@@ -862,7 +861,7 @@ class Pregnancy_Events:
 
             # try to give them a permanent condition. 1/90 chance
             # don't delete the game.clan condition, this is needed for a test
-            if game.clan and randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition_two"]) <= constants.CONFIG["cat_generation"]["base_permanent_condition_one"]:
+            if game.clan and randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]):
                 kit.congenital_condition(kit)
                 for condition in kit.permanent_condition:
                     if kit.permanent_condition[condition] == "born without a leg":

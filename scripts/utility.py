@@ -3352,26 +3352,6 @@ def generate_sprite(
                                 sprites.sprites["acc_wild" + accessory + cat_sprite],
                                 (0, 0),
                             )
-                        elif accessory in cat.pelt.booties:
-                            new_sprite.blit(
-                                sprites.sprites['booties' + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.wheels:
-                            new_sprite.blit(
-                                sprites.sprites['wheels' + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.toy_accessories:
-                            new_sprite.blit(
-                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.blankie_accessories:
-                            new_sprite.blit(
-                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.flag_accessories:
-                            new_sprite.blit(
-                                sprites.sprites['acc_dismod' + accessory + cat_sprite], (0, 0)
-                            )
                         elif accessory in cat.pelt.collars:
                             new_sprite.blit(
                                 sprites.sprites["collars" + accessory + cat_sprite], (0, 0)
