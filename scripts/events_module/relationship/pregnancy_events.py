@@ -861,7 +861,7 @@ class Pregnancy_Events:
 
             # try to give them a permanent condition. 1/90 chance
             # don't delete the game.clan condition, this is needed for a test
-            if game.clan and randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]):
+            if game.clan and randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]) == 1:
                 kit.congenital_condition(kit)
                 for condition in kit.permanent_condition:
                     if kit.permanent_condition[condition] == "born without a leg":

@@ -4469,7 +4469,7 @@ class Cat:
             return "\n".join(
                 [
                     self.get_genderalign_string(self.genderalign),
-                    dadm_text_1,
+                    pronoun_text,
                     f"{i18n.t((f'general.{self.age}' if self.age != 'kitten' else f'general.kitten_profile'), count=1)} ({self.moons} moon{'' if self.moons == 1 else 's'})",
                     trait_text,
                     self.skills.skill_string(),
@@ -4712,7 +4712,7 @@ def create_cat(rank, moons=None, biome=None, secondary_biome=None, tertiary_biom
         if scar in not_allowed_scars:
             new_cat.pelt.scars.remove(scar)
     
-    if randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]):
+    if randint(1, constants.CONFIG["cat_generation"]["base_permanent_condition"]) == 1:
         new_cat.congenital_condition(new_cat)
 
     return new_cat
