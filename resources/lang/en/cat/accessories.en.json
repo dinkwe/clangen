@@ -2583,6 +2583,216 @@
             "zero": "green witch hat",
             "many": "green witch hats",
             "one": "green witch hat"
+        },
+        "LILLIES": {
+            "zero": "lillies",
+            "many": "lillies",
+            "one": "lily"
+        },
+        "LILYPADS": {
+            "zero": "lilypads",
+            "many": "lilypads",
+            "one": "lilypad"
+        },
+        "DEATHBERRY VINE": {
+            "zero": "deathberry vine",
+            "many": "deathberry vines",
+            "one": "deathberry vine"
+        },
+        "DEATHBERRIES": {
+            "zero": "deathberries",
+            "many": "deathberries",
+            "one": "deathberry"
+        },
+        "ACORN2": {
+            "zero": "acorn",
+            "many": "acorns",
+            "one": "acorn"
+        },
+        "PINECONE": {
+            "zero": "pinecone",
+            "many": "pinecones",
+            "one": "pinecone"
+        },
+        "VINES": {
+            "zero": "vines",
+            "many": "vines",
+            "one": "vine"
+        },
+        "CHERRIES": {
+            "zero": "cherries",
+            "many": "cherries",
+            "one": "cherry"
+        },
+        "BLEEDING HEARTS2": {
+            "zero": "bleeding hearts",
+            "many": "bleeding hearts",
+            "one": "bleeding heart"
+        },
+        "SEASHELLS": {
+            "zero": "seashells",
+            "many": "seashells",
+            "one": "seashell"
+        },
+        "FERNS": {
+            "zero": "ferns",
+            "many": "ferns",
+            "one": "fern"
+        },
+        "DRIED FERNS": {
+            "zero": "dried ferns",
+            "many": "dried ferns",
+            "one": "dried fern"
+        },
+        "WHEAT": {
+            "zero": "wheat",
+            "many": "wheat",
+            "one": "wheat stalk"
+        },
+        "BLACK WHEAT": {
+            "zero": "black wheat",
+            "many": "black wheat",
+            "one": "black wheat stalk"
+        },
+        "ORANGE BUTTERFLY": {
+            "zero": "orange butterfly",
+            "many": "orange butterflies",
+            "one": "orange butterfly"
+        },
+        "CYAN BUTTERFLY": {
+            "zero": "cyan butterfly",
+            "many": "cyan butterflies",
+            "one": "cyan butterfly"
+        },
+        "BROWN HIDE": {
+            "zero": "brown hide",
+            "many": "brown hides",
+            "one": "brown hide"
+        },
+        "GRAY HIDE": {
+            "zero": "gray hide",
+            "many": "gray hides",
+            "one": "gray hide"
+        },
+        "BROWN HIDE AND HERBS": {
+            "zero": "brown hide with herbs",
+            "many": "brown hides with herbs",
+            "one": "brown hide with herbs"
+        },
+        "GRAY HIDE AND HERBS": {
+            "zero": "gray hide with herbs",
+            "many": "gray hides with herbs",
+            "one": "gray hide with herbs"
+        },
+        "LESBIAN BANDANA": {
+            "zero": "lesbian pride bandana",
+            "many": "lesbian pride bandanas",
+            "one": "lesbian pride bandana"
+        },
+        "GAYMALE BANDANA": {
+            "zero": "gay pride bandana",
+            "many": "gay pride bandanas",
+            "one": "gay pride bandana"
+        },
+        "NONBINARY BANDANA": {
+            "zero": "nonbinary pride bandana",
+            "many": "nonbinary pride bandanas",
+            "one": "nonbinary pride bandana"
+        },
+        "BISEXUAL BANDANA": {
+            "zero": "bisexual pride bandana",
+            "many": "bisexual pride bandanas",
+            "one": "bisexual pride bandana"
+        },
+        "ASEXUAL BANDANA": {
+            "zero": "asexual pride bandana",
+            "many": "asexual pride bandanas",
+            "one": "asexual pride bandana"
+        },
+        "AGENDER BANDANA": {
+            "zero": "agender pride bandana",
+            "many": "agender pride bandanas",
+            "one": "agender pride bandana"
+        },
+        "AROACE BANDANA": {
+            "zero": "aroace pride bandana",
+            "many": "aroace pride bandanas",
+            "one": "aroace pride bandana"
+        },
+        "GENDERFLUID BANDANA": {
+            "zero": "genderfluid pride bandana",
+            "many": "genderfluid pride bandanas",
+            "one": "genderfluid pride bandana"
+        },
+        "INTERSEX BANDANA": {
+            "zero": "intersex pride bandana",
+            "many": "intersex pride bandanas",
+            "one": "intersex pride bandana"
+        },
+        "PRIDE BANDANA": {
+            "zero": "pride bandana",
+            "many": "pride bandanas",
+            "one": "pride bandana"
+        },
+        "TRANSGENDER BANDANA": {
+            "zero": "transgender pride bandana",
+            "many": "transgender pride bandanas",
+            "one": "transgender pride bandana"
+        },
+        "GENDERQUEER BANDANA": {
+            "zero": "genderqueer pride bandana",
+            "many": "genderqueer pride bandanas",
+            "one": "genderqueer pride bandana"
+        },
+        "AROMANTIC BANDANA": {
+            "zero": "aromantic pride bandana",
+            "many": "aromantic pride bandanas",
+            "one": "aromantic pride bandana"
+        },
+        "PANSEXUAL BANDANA": {
+            "zero": "pansexual pride bandana",
+            "many": "pansexual pride bandanas",
+            "one": "pansexual pride bandana"
+        },
+        "DEMIGENDER BANDANA": {
+            "zero": "demigender pride bandana",
+            "many": "demigender pride bandanas",
+            "one": "demigender pride bandana"
+        },
+        "OMNISEXUAL BANDANA": {
+            "zero": "omnisexual pride bandana",
+            "many": "onisexual pride bandanas",
+            "one": "omnisexual pride bandana"
+        },
+        "GENDERFAE BANDANA": {
+            "zero": "genderfae pride bandana",
+            "many": "genderfae pride bandanas",
+            "one": "genderfae pride bandana"
+        },
+        "DEMIGIRL BANDANA": {
+            "zero": "demigirl pride bandana",
+            "many": "demigirl pride bandanas",
+            "one": "demigirl pride bandana"
+        },
+        "DEMIBOY BANDANA": {
+            "zero": "demiboy pride bandana",
+            "many": "demiboy pride bandanas",
+            "one": "demiboy pride bandana"
+        },
+        "GENDERFAUN BANDANA": {
+            "zero": "genderfaun pride bandana",
+            "many": "genderfaun pride bandanas",
+            "one": "genderfaun pride bandana"
+        },
+        "GENDERFLOR BANDANA": {
+            "zero": "genderflor pride bandana",
+            "many": "genderflor pride bandanas",
+            "one": "genderflor pride bandana"
+        },
+        "POLYAMOROUS BANDANA": {
+            "zero": "polyamorous pride bandana",
+            "many": "polyamorous pride bandanas",
+            "one": "polyamorous pride bandana"
         }
     }
 }

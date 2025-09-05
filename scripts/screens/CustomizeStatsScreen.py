@@ -282,6 +282,7 @@ class CustomizeStatsScreen(Screens):
             "otherclan2",
             "otherclan3",
             "otherclan4",
+            "otherclan5",
             "disgraced1",
             "disgraced2",
             "disgraced3",
@@ -630,10 +631,7 @@ class CustomizeStatsScreen(Screens):
         disabilities_list = []
         for con in self.permanent_conditions:
             if con in self.the_cat.permanent_condition:
-                if not game_setting_get("warriorified names"):
-                    disabilities_list.append(Cat.change_condition_name(con))
-                else:
-                    disabilities_list.append(con)
+                disabilities_list.append(con)
 
         disability = "none"
         if len(disabilities_list) > 1:
