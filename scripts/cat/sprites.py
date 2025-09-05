@@ -186,7 +186,9 @@ class Sprites:
             "cs3_singlecolours", "cs3_singlestripecolours", "cs3_smokecolours", "cs3_sokokecolours", "cs3_speckledcolours", "cs3_tabbycolours", "cs3_tickedcolours",
             "cs_eyes", "cs_eyes2",
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
-            "artsi_acc","wildaccs_2", "pride_bandanas"
+            "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "vickieyes2",
+            "starcatchereyes1", "starcatchereyes1_2", "starcatchereyes2", "starcatchereyes2_2", "starcatchereyes3", "starcatchereyes3_2",
+            "starcatchereyes4", "starcatchereyes4_2", "starcatchereyes5", "starcatchereyes5_2", "starcatchereyes6", "starcatchereyes6_2"
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -310,6 +312,54 @@ class Sprites:
             ['ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA'],
             ['ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA'],
         ]
+        
+        vicki_eyes = [
+            ['PINWHEEL','BEE', 'VAST FOREST', 'OBSIDIAN', 'WARPED NYLIUM', 'SCULK', 'COPPER GLOW', 'DESERT', 'CUPID',
+            'MISSING', 'HESTIA', 'BLOSSOM'],
+            ['OVERGROWTH', 'PRIMAL', 'ALLIUM', 'GEM', 'AXOLOTL', 'PARAKEET', 'LUCID DREAM',
+            'PETRICHOR', 'AZALEA', 'PEARL']
+        ]
+        
+        starcatcher1 = [
+            ['TORBIN', 'DARKLEAP', 'PASTEL BLUES', 'YELLOW SHEEN', 'PUMPKIN ORANGE', 'PASTEL YELLOW', 'ALGAE2', 'ANGELIC SILVER',
+             'ANGELIC GREEN'],
+            ['SPRAYPAINT PUNK', 'CHROME', 'BLACK CAT', 'VELVETY YELLOW', 'PAINT', 'MINTY', 'PRETTY BLUE',
+            'LIGHT MINT', 'MINT GUM', 'SUNSHINE']
+        ]
+        
+        starcatcher2 = [
+            ['WINTERBERRY FOREST', 'RAINDROP', 'RED EYE', 'PANTHER', 'MELON', 'OXY', 'LILAN', 'LEMONLIME', 'MOONSHINE', 'DULL',
+            'DEMONIC RED', 'DULL GREY'],
+            ['VELVETY RED', 'SHINY', 'DEMONIC BLUE', 'BRIGHT VELVET', 'DULL BLUE', 'DARK MELON',
+            'RED BERRY', 'LIGHT BERRY', 'PAINTED']
+        ]
+        
+        starcatcher3 = [
+            ['MELON BERRY', 'PASTEL YELLOWGREY', 'DARK MINT', 'PASTELS', 'EMO', 'RED LILY', 'STRAWBERRY', 'PUMPKIN SEED',
+            'ANGELIC PASTELS', 'SEED', 'RED ANGELIC', 'DEMONIC BLUE2'],
+            ['PASTY PURPLE', 'ALBINO2', 'ANGELIC ALGAE', 'ANGELIC GOLD',
+            'BLUD', 'PASTEL LILAC', 'SEASAND', 'ANGELIC SEASAND', 'FIREY AMBER']
+        ]    
+        
+        starcatcher4 = [
+            ['SICKLY GREY', 'GLOW IN THE DARK', 'FRUITY', 'BLOOD', 'PASTEL MINT', 'CUTE PASTELS', 'VALENTINES DAY', 'CUPID2',
+            'CUTE SUNSET', 'VERY LIGHT BLUE', 'LIGHT MELON', 'SONNE'],
+            ['HOT COCOA', 'LIGHTNING DOG', 'HEADLIGHTS', 'GRAPE SEEDS',
+            'YELLOW AND BROWN', 'SEA CORAL', 'BLOODY MARY', 'BLUE CORAL', 'RED FOIL']
+        ]
+        
+        starcatcher5 = [
+            ['BRIGHT PUMPKIN', 'WOWIE MELON', 'OCEANIC GOLD', 'PAIN', 'BERRY JUICE', 'COTTON CANDY2', 'PINK SUNSET', 'EMO SHINE',
+            'JUICY BERRY', 'PURPLE SUNSET', 'LIGHT RED SUNSET', 'ANGELIC SUNSET PASTELS'],
+            ['MOONY', 'EMO MINT', 'SEASHELL2',
+            'GRASS', 'PASTEL BEACH', 'ANGELIC VELVET', 'LIGHT MINT CHOC', 'DARK ALGAE', 'ANGELIC']
+        ]
+        
+        starcatcher6 = [
+            ['BURNET', 'DARK BLACK', 'BURNET AMBER', 'LIGHT MELON2', 'OCEANIC SEASHELL', 'CARAMEL APPLE', 'BERRY VELVET',
+            'LILAC COFFEE', 'PASTEL HEADLIGHTS', 'EMO WATERMELON', 'CRIMSON LAVA', 'REVERSE ALBINO'],
+            ['ALBINO3', 'FOIL GOLD', 'PINK VELVET', 'LOL BLUE', 'LAVA RED', 'RED GREY', 'NORMAL RED', 'RED GREY2', 'DARK PINK VELVET', 'STARDUST']
+        ]
 
         for row, colors in enumerate(cseye_colors):
             for col, color in enumerate(colors):
@@ -325,6 +375,41 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('beetleeyes', (col, row), f'eyes{color}')
                 self.make_group('beetleeyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(vicki_eyes):
+            for col, color in enumerate(colors):
+                self.make_group('vickieyes', (col, row), f'eyes{color}')
+                self.make_group('vickieyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(starcatcher1):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes1', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes1_2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(starcatcher2):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes2', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes2_2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(starcatcher3):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes3', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes3_2', (col, row), f'eyes2{color}')
+                
+        for row, colors in enumerate(starcatcher4):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes4', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes4_2', (col, row), f'eyes2{color}')
+                
+        for row, colors in enumerate(starcatcher5):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes5', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes5_2', (col, row), f'eyes2{color}')
+                
+        for row, colors in enumerate(starcatcher6):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchereyes6', (col, row), f'eyes{color}')
+                self.make_group('starcatchereyes6_2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(beetle_more):
             for col, color in enumerate(colors):

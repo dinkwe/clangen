@@ -565,7 +565,6 @@ class ProfileScreen(Screens):
             manager=MANAGER,
         )
         # self.placeholder_tab_3.disable()
-
         self.guide_tab_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((576, 622), (176, 30))),
             "guide",
@@ -1712,7 +1711,10 @@ class ProfileScreen(Screens):
                 "cat.backstories.cats_outside_the_clan",
                 status=i18n.t(f"general.{self.the_cat.status.rank}", count=1),
             )
-        elif self.the_cat.status.is_other_clancat:
+        elif (
+            self.the_cat.status.is_other_clancat
+            and self.the_cat != game.clan.instructor
+        ):
             clan = [
                 clan
                 for clan in game.clan.all_clans
