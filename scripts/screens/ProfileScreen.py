@@ -547,24 +547,24 @@ class ProfileScreen(Screens):
             manager=MANAGER,
         )
 
-        self.placeholder_tab_3 = UISurfaceImageButton(
+        self.guide_tab_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((400, 622), (176, 30))),
-            "",
+            "guide",
             get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
             object_id="@buttonstyles_profile_middle",
             starting_height=1,
             manager=MANAGER,
         )
-        self.placeholder_tab_3.disable()
+        self.guide_tab_button.disable()
 
-        self.guide_tab_button = UISurfaceImageButton(
+        self.placeholder_tab_3 = UISurfaceImageButton(
             ui_scale(pygame.Rect((576, 622), (176, 30))),
-            "guide",
+            "",
             get_button_dict(ButtonStyles.PROFILE_RIGHT, (176, 30)),
             object_id="@buttonstyles_profile_right",
             manager=MANAGER,
         )
-        self.guide_tab_button.disable()
+        self.placeholder_tab_3.disable()
 
         self.build_profile()
 

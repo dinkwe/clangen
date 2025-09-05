@@ -112,11 +112,11 @@
         "multiple tints_tooltip": "If enabled, cats can spawn with multiple tints that visually stack.",
         "double torties": "\"Double\" torties",
         "double torties_tooltip": "If enabled, cats can spawn with secondary tortie patches.",
-        "intrusive_thoughts_TWO_woaw": "Allow content with night dirtmaking and nest wetting",
-        "intrusive_thoughts_TWO_woaw_tooltip": "This toggle enables cats to experience night dirtmaking (having to get up in the night to use the dirtplace) and nest wetting.",
         "gendered attraction": "gendered attraction label",
         "gendered attraction_tooltip": "gendered attraction tooltip",
         "sexuality labels": "sexuality labels label",
-        "sexuality labels_tooltip": "sexuality labels tooltip"
+        "sexuality labels_tooltip": "sexuality labels tooltip",
+        "higher_disabled_med_rates": "Higher non-warrior apprentice odds for cats with permanent conditions",
+        "higher_disabled_med_rates_tooltip": "Cats with permanent conditions will be 2 times more likely to become a medicine cat, mediator, caretaker, denkeeper, gardener, messenger, or storyteller apprentice when they hit 6 moons old. This does not affect the chance to change roles later in life, if any of the settings are on."
     }
 }

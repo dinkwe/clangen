@@ -11001,7 +11001,7 @@
         "season": ["any"],
         "sub_type": ["accessory"],
         "frequency": 2,
-        "event_text":  "No cat is surprised when m_c pads into camp with an eager acc_singular right behind {PRONOUN/m_c/object).",
+        "event_text":  "No cat is surprised when m_c pads into camp with an eager acc_singular right behind {PRONOUN/m_c/object}.",
         "new_accessory": ["SMALLANIMAL"],
         "m_c": {
             "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
