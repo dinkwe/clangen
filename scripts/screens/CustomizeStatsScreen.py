@@ -326,6 +326,7 @@ class CustomizeStatsScreen(Screens):
             "otherclan2",
             "otherclan3",
             "otherclan4",
+            "otherclan5",
             "disgraced1",
             "disgraced2",
             "disgraced3",
