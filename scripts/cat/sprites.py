@@ -187,7 +187,10 @@ class Sprites:
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
             "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "vickieyes2",
             "starcatchereyes1", "starcatchereyes1_2", "starcatchereyes2", "starcatchereyes2_2", "starcatchereyes3", "starcatchereyes3_2",
-            "starcatchereyes4", "starcatchereyes4_2", "starcatchereyes5", "starcatchereyes5_2", "starcatchereyes6", "starcatchereyes6_2"
+            "starcatchereyes4", "starcatchereyes4_2", "starcatchereyes5", "starcatchereyes5_2", "starcatchereyes6", "starcatchereyes6_2",
+            'freyes1', 'freyes2', 'freyes3', 'freyes4', 'freyes5',
+            'freyes1het', 'freyes2het', 'freyes3het', 'freyes4het', 'freyes5het',
+            'foxyeyes', 'foxyeyeshet', 'foxyeyes2', 'foxyeyes2het'
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -359,6 +362,41 @@ class Sprites:
             'LILAC COFFEE', 'PASTEL HEADLIGHTS', 'EMO WATERMELON', 'CRIMSON LAVA', 'REVERSE ALBINO'],
             ['ALBINO3', 'FOIL GOLD', 'PINK VELVET', 'LOL BLUE', 'LAVA RED', 'RED GREY', 'NORMAL RED', 'RED GREY2', 'DARK PINK VELVET', 'STARDUST']
         ]
+        
+        freyes1 = [
+            ["BRIGHT EARTH FR", "BRIGHT PLAGUE FR", "BRIGHT WIND FR", "BRIGHT WATER FR", "BRIGHT LIGHTNING FR", "BRIGHT ICE FR", "BRIGHT LIGHT FR", "BRIGHT SHADOW FR", "BRIGHT ARCANE FR", "BRIGHT NATURE FR", "BRIGHT FIRE FR", "BASIC EARTH FR"],
+            ["BASIC PLAGUE FR", "BASIC WIND FR", "BASIC WATER FR", "BASIC LIGHTNING FR", "BASIC ICE FR", "BASIC SHADOW FR", "BASIC LIGHT FR", "BASIC ARCANE FR", "BASIC NATURE"]
+        ]
+
+        freyes2 = [
+            ["BASIC FIRE FR", "DARK EARTH FR", "DARK PLAGUE FR", "DARK WIND FR", "DARK WATER FR", "DARK LIGHTNING FR", "DARK ICE FR", "DARK SHADOW FR", "DARK LIGHT FR", "DARK ARCANE FR", "DARK NATURE FR","DARK FIRE FR"],
+            ["DARK SCLERA EARTH FR", "DARK SCLERA PLAGUE FR", "DARK SCLERA WIND FR", "DARK SCLERA WATER FR", "DARK SCLERA LIGHTNING FR", "DARK SCLERA ICE FR", "DARK SCLERA SHADOW FR", "DARK SCLERA LIGHT FR", "DARK SCLERA ARCANE"]
+        ]
+
+        freyes3 = [
+            ["DARK SCLERA NATURE FR", "FACETED FIRE FR", "FACETED EARTH FR", "FACETED PLAGUE FR", "FACETED WIND FR", "FACETED WATER FR", "FACETED LIGHTNING FR", "FACETED ICE FR", "FACETED SHADOW FR", "FACETED LIGHT FR", "FACETED ARCANE FR", "FACETED NATURE FR"],
+            ["FACETED FIRE FR", "GLOWING EARTH FR", "GLOWING PLAGUE FR", "GLOWING WIND FR", "GLOWING WATER FR", "GLOWING LIGHTNING FR", "GLOWING ICE FR", "GLOWING SHADOW FR", "GLOWING LIGHT FR", "GLOWING ARCANE FR"]
+        ]
+
+        freyes4 = [
+            ["GLOWING NATURE FR", "GLOWING FIRE FR", "FADED EARTH FR", "FADED PLAGUE FR", "FADED WIND FR", "FADED WATER FR", "FADED LIGHTNING FR", "FADED ICE FR", "FADED SHADOW FR", "FADED LIGHT FR", "FADED ARCANE FR","FADED NATURE FR"],
+            ["FADED FIRE FR", "PASTEL EARTH FR", "PASTEL PLAGUE FR", "PASTEL WIND FR", "PASTEL WATER", "PASTEL LIGHTNING FR", "PASTEL ICE FR", "PASTEL SHADOW FR", "PASTEL LIGHT FR"]
+        ]
+
+        freyes5 = [
+            ["PASTEL ARCANE FR", "PASTEL NATURE FR", "PASTEL FIRE FR", "UNUSUAL EARTH FR", "UNUSUAL PLAGUE FR", "UNUSUAL WIND FR", "UNUSUAL WATER FR", "UNUSUAL LIGHTNING FR", "UNUSUAL ICE FR", "UNUSUAL SHADOW FR", "UNUSUAL LIGHT FR", "UNUSUAL ARCANE FR"],
+            ["UNUSUAL NATURE FR", "UNUSUAL FIRE FR", "FACETED EARTH FR", "FACETED PLAGUE FR", "FACETED WIND FR", "FACETED WATER FR", "FACETED LIGHTNING FR", "FACETED ICE FR", "FACETED SHADOW FR"]
+        ]
+
+        foxyeyes = [
+            ["BLUE ALBINO", "RED ALBINO", "LIGHT BLUE ALBINO", "CYAN ALBINO", "PINK ALBINO", "DARKSTALKER", "CLAY", "COLD MONOCHROME", "GLORY", "MOON", "WARM MONOCHROME", "PEACEBRINGER"],
+            ["PERIL", "PURPLE MYSTERY", "ROSEGOLD FLUTTER", "SEAFOAM SPLASH", "STARFLIGHT", "SUNNY", "SWAMP GOLD", "TSUNAMI", "VELVET"]
+        ]
+
+        foxyeyes2 = [
+            ["ORANGENEW", "GOLD SCARAB", "BLUE MOON", "SUBMERGED", "GRAPE", "BLUEBERRY", "FOOLS GOLD", "DARK BLUE", "LIME", "LIGHT GOLD", "COOKIE", "MERRY CHRISTMAS"],
+            ["TRICK OR TREAT", "SPINEL", "NEW DAWN", "DAMP MOSS", "BLIND BLUE", "BLIND GREEN", "BLIND RED", "BLIND PINK", "BLIND PURPLE"]
+        ]
 
         for row, colors in enumerate(cseye_colors):
             for col, color in enumerate(colors):
@@ -458,6 +496,35 @@ class Sprites:
         for row, colors in enumerate(snail_eyes):
             for col, color in enumerate(colors):
                 self.make_group('eyes_snail', (col, row), f'eyes_snail{color}')
+                
+        for row, colors in enumerate(freyes1):
+            for col, color in enumerate(colors):
+                self.make_group('freyes1', (col, row), f'eyes{color}')
+                self.make_group('freyes1het', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(freyes2):
+            for col, color in enumerate(colors):
+                self.make_group('freyes2', (col, row), f'eyes{color}')
+                self.make_group('freyes2het', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(freyes3):
+            for col, color in enumerate(colors):
+                self.make_group('freyes3', (col, row), f'eyes{color}')
+                self.make_group('freyes3het', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(freyes4):
+            for col, color in enumerate(colors):
+                self.make_group('freyes4', (col, row), f'eyes{color}')
+                self.make_group('freyes4het', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(freyes5):
+            for col, color in enumerate(colors):
+                self.make_group('freyes5', (col, row), f'eyes{color}')
+                self.make_group('freyes5het', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(foxyeyes):
+            for col, color in enumerate(colors):
+                self.make_group('foxyeyes', (col, row), f'eyes{color}')
+                self.make_group('foxyeyeshet', (col, row), f'eyes2{color}')
+        for row, colors in enumerate(foxyeyes2):
+            for col, color in enumerate(colors):
+                self.make_group('foxyeyes2', (col, row), f'eyes{color}')
+                self.make_group('foxyeyes2het', (col, row), f'eyes2{color}')
                 
         eye_colors = [
             ['BERBERID-FLORA', 'RANUNCUL-FLORA', 'CAPPARID-FLORA', 'VIOL-FLORA', 'FUMARI-FLORA', 'PAPAVER-FLORA', 'MAGNOLI-FLORA'],
