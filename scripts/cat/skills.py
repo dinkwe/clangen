@@ -421,6 +421,10 @@ class SkillPath(Enum):
     BUG = ("chases ladybugs", "bug catcher", "bug collector", "bee keeper")
     BONES = ("plays with prey scraps", "bone cleaner", "bone collector", "expert taxidermist")
 
+    DANGER = ("picks fights often", "trains with claws", "loves border patrols", "chases danger")
+    OCCULT = ("loves ghost stories", "believes in conspiracy theories", "investigates the occult", "hunts cryptids")
+    GEO = ("plays with pebbles", "collects stones", "looks for crystals", "finds rare gems")
+    
     @staticmethod
     def get_random(exclude: list = ()):
         """Get a random path, with more uncommon paths being less common"""
@@ -441,7 +445,8 @@ class SkillPath(Enum):
                 SkillPath.LANGUAGE,
                 SkillPath.PYRO,
                 SkillPath.DAY,
-                SkillPath.NIGHT
+                SkillPath.NIGHT,
+                SkillPath.OCCULT
             )
             if i not in exclude
         ]
@@ -560,6 +565,9 @@ class Skill:
         SkillPath.STRONG: "strength",
         SkillPath.BUG: "bug collecting",
         SkillPath.BONES: "taxidermy",
+        SkillPath.DANGER: "danger seeker",
+        SkillPath.OCCULT: "occultist",
+        SkillPath.GEO: "rock collecting"
     }
 
     def __init__(self, path: SkillPath, points: int = 0, interest_only: bool = False):
@@ -766,6 +774,9 @@ class CatSkills:
         SkillPath.STRONG: SkillTypeFlag.STRONG,
         SkillPath.BUG: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT,
         SkillPath.BONES: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT,
+        SkillPath.DANGER: SkillTypeFlag.STRONG,
+        SkillPath.OCCULT: SkillTypeFlag.SUPERNATURAL,
+        SkillPath.GEO: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT,
     }
 
     # pylint: enable=unsupported-binary-operation
