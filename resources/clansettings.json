@@ -167,6 +167,11 @@
             "Allows cats with the same grandparents but different parents to become mates.",
             false
         ],
+        "second cousin mates": [
+            "Allow second cousins to be mates and have romantic interactions",
+            "Allows cats with the same great-grandparents but different parents to become mates.",
+            true
+        ],
 		"pregnancy turmoil": [
 			"Allow negative pregnancy events",
 			"Allows cats to have events like postpartum and false pregnancies.",

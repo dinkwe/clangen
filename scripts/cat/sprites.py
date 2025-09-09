@@ -191,7 +191,7 @@ class Sprites:
             "starcatchereyes4", "starcatchereyes4_2", "starcatchereyes5", "starcatchereyes5_2", "starcatchereyes6", "starcatchereyes6_2",
             'freyes1', 'freyes2', 'freyes3', 'freyes4', 'freyes5',
             'freyes1het', 'freyes2het', 'freyes3het', 'freyes4het', 'freyes5het',
-            'foxyeyes', 'foxyeyeshet', 'foxyeyes2', 'foxyeyes2het'
+            'foxyeyes', 'foxyeyeshet', 'foxyeyes2', 'foxyeyes2het', 'stormsacc'
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -1721,10 +1721,21 @@ class Sprites:
             ["WHEAT", "BLACK WHEAT"]
         ]
         
+        storms_accessories_data = [
+            ["PEARL NECKLACE", "TAIL PEARLS", "DRAPES", "PEARL EARRINGS", "EYEPATCH"],
+            ["PEARL BRACELETS", "JEWEL NECKLACE"]
+
+        ]
+        
         #pride bandanas
         for row, bandanas in enumerate(pride_bandanas_data):
             for col, bandana in enumerate(bandanas):
                 self.make_group("pride_bandanas", (col, row), f"acc_pride{bandana}")
+    
+        #storms accessories, pirate coat is unfinished so we ignore
+        for row, accessories in enumerate(storms_accessories_data):
+            for col, accessory in enumerate(accessories):
+                self.make_group("stormsacc", (col, row), f"acc_storm{accessory}")
         
         #superartsi's accessories
         for row, accessories in enumerate(superartsi_data):

@@ -47,6 +47,7 @@ class Inheritance:
         self.parents_siblings = {}
         self.cousins = {}
         self.grand_parents = {}
+        self.great_grand_parents = {}
         self.grand_kits = {}
         self.all_involved = []
         self.all_but_cousins = []
@@ -73,6 +74,7 @@ class Inheritance:
         self.parents_siblings = {}
         self.cousins = {}
         self.grand_parents = {}
+        self.great_grand_parents = {}
         self.grand_kits = {}
         self.all_involved = []
         self.all_but_cousins = []
@@ -86,6 +88,9 @@ class Inheritance:
 
         # grandparents
         self.init_grandparents()
+        
+        #great grandparents
+        self.init_greatgrandparents()
 
         # mates
         self.init_mates()
@@ -183,6 +188,9 @@ class Inheritance:
         if cat_id in self.grand_parents:
             info["type"].append(self.grand_parents[cat_id]["type"])
             info["additional"].extend(self.grand_parents[cat_id]["additional"])
+        if cat_id in self.great_grand_parents:
+            info["type"].append(self.great_grand_parents[cat_id]["type"])
+            info["additional"].extend(self.great_grand_parents[cat_id]["additional"])
         if cat_id in self.grand_kits:
             info["type"].append(self.grand_kits[cat_id]["type"])
             info["additional"].extend(self.grand_kits[cat_id]["additional"])
@@ -361,6 +369,37 @@ class Inheritance:
                     self.all_but_cousins.append(grand_id)
                 self.grand_parents[grand_id]["additional"].append(
                     i18n.t("inheritance.parent_of_inter", name=str(parent_cat.name))
+                )
+    
+    def init_greatgrandparents(self):
+        for grandparent_id, value in self.grand_parents.items():
+            grandparent_cat = self.cat.fetch_cat(grandparent_id)
+            if grandparent_cat is None:
+                continue
+            greatgrandparents = self.get_parents(grandparent_cat)
+            for grand_id in greatgrandparents:
+                if grand_id in self.parents.keys():
+                    parent_relation = self.parents[grand_id]
+                    if parent_relation["type"] == RelationType.BLOOD:
+                        print(
+                            "WARNING - How did this happen? "
+                            "A great-grandparent is also the blood parent? Please report this!"
+                        )
+                    continue  # even it is not blood related, it is confusing
+                grand_type = (
+                    RelationType.BLOOD
+                    if value["type"] == RelationType.BLOOD
+                    else RelationType.NOT_BLOOD
+                )
+                if grand_id not in self.great_grand_parents:
+                    self.great_grand_parents[grand_id] = {
+                        "type": grand_type,
+                        "additional": [],
+                    }
+                    self.all_involved.append(grand_id)
+                    self.all_but_cousins.append(grand_id)
+                self.great_grand_parents[grand_id]["additional"].append(
+                    i18n.t("inheritance.parent_of_inter", name=str(grandparent_cat.name))
                 )
 
     def init_kits(self, inter_id, inter_cat):
