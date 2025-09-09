@@ -1252,7 +1252,6 @@ class Pelt:
         "YELLOWGREEN WITCHHAT",
         "TURQUOISE WITCHHAT",
         "GREEN WITCHHAT",
-        "EYEPATCH",
         "PEARL EARRINGS", "EYEPATCH", 
     ]
 
