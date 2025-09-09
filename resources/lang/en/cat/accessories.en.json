@@ -2903,6 +2903,41 @@
             "zero": "polyamorous pride bandana",
             "many": "polyamorous pride bandanas",
             "one": "polyamorous pride bandana"
+        },
+        "PEARL NECKLACE": {
+            "zero": "pearl necklace",
+            "many": "pearl necklaces",
+            "one": "pearl necklace"
+        },
+        "TAIL PEARLS": {
+            "zero": "tail pearls",
+            "many": "tail pearls",
+            "one": "tail pearl"
+        },
+        "PEARL EARRINGS": {
+            "zero": "pearl earrings",
+            "many": "pearl earrings",
+            "one": "pearl earrings"
+        },
+        "DRAPES": {
+            "zero": "drapes",
+            "many": "drapes",
+            "one": "drape"
+        },
+        "EYEPATCH": {
+            "zero": "eyepatch",
+            "many": "eyepatches",
+            "one": "eyepatch"
+        },
+        "PEARL BRACELETS": {
+            "zero": "pearl bracelets",
+            "many": "pearl bracelets",
+            "one": "pearl bracelet"
+        },
+        "JEWEL NECKLACE": {
+            "zero": "jewel necklace",
+            "many": "jewel necklaces",
+            "one": "jewel necklace"
         }
     }
 }
