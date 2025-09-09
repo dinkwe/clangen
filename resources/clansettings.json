@@ -161,6 +161,11 @@
             "Allow first cousins to be mates and have romantic interactions",
             "Allows cats with the same grandparents but different parents to become mates.",
             false
+        ],
+        "second cousin mates": [
+            "Allow second cousins to be mates and have romantic interactions",
+            "Allows cats with the same great-grandparents but different parents to become mates.",
+            true
         ]
     },
     "freshkill_tactics":{

@@ -2418,21 +2418,30 @@ class Cat:
             self.inheritance = Inheritance(self)
         return other_cat.ID in self.inheritance.cousins.keys()
 
-    def is_related(self, other_cat, cousin_allowed):
+    def is_related(self, other_cat, cousin_allowed, second_cousins_allowed=False):
         """Checks if the given cat is related to the current cat, according to the inheritance."""
+        #cousin_allowed -> cousins allowed to be mates
         if not self.inheritance:
             self.inheritance = Inheritance(self)
+            
         if cousin_allowed:
             return other_cat.ID in self.inheritance.all_but_cousins
+        elif not second_cousins_allowed:
+            if self.inheritance.great_grand_parents:
+                if other_cat.inheritance.great_grand_parents:
+                    for ggp_id in other_cat.inheritance.great_grand_parents.keys:
+                        if ggp_id in self.inheritance.great_grand_parents:
+                            return True
         return other_cat.ID in self.inheritance.all_involved
 
-    def get_relatives(self, cousin_allowed=True) -> list:
+    def get_relatives(self, cousin_allowed=False) -> list:
         """Returns a list of ids of all nearly related ancestors."""
+        #cousin_allowed = cousins allowed to be mates
         if not self.inheritance:
             self.inheritance = Inheritance(self)
         if cousin_allowed:
-            return self.inheritance.all_involved
-        return self.inheritance.all_but_cousins
+            return self.inheritance.all_but_cousins
+        return self.inheritance.all_involved
 
     # ---------------------------------------------------------------------------- #
     #                                  conditions                                  #
@@ -3136,6 +3145,7 @@ class Cat:
 
         try:
             first_cousin_mates = get_clan_setting("first cousin mates")
+            second_cousin_mates = get_clan_setting("second cousin mates")
         except:
             if "unittest" not in sys.modules:
                 raise
@@ -3149,7 +3159,7 @@ class Cat:
             return False
 
         # Inheritance check
-        if self.is_related(other_cat, first_cousin_mates):
+        if self.is_related(other_cat, first_cousin_mates, second_cousin_mates):
             return False
 
         # check dead cats

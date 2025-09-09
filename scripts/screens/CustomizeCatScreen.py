@@ -338,7 +338,7 @@ class CustomizeCatScreen(Screens):
                               + Pelt.bone_accessories + Pelt.butterflies_accessories + Pelt.stuff_accessories
                               + Pelt.randomaccessories + Pelt.sailormoon + Pelt.beetle_feathers
                               + Pelt.beetle_accessories + Pelt.chime_accessories+ Pelt.lantern_accessories + Pelt.neckerchiefs
-                              + Pelt.witchhats + Pelt.pokemon_accessories + Pelt.superartsi_accessories + Pelt.wild_accessories2 + Pelt.pride_bandanas))
+                              + Pelt.witchhats + Pelt.pokemon_accessories + Pelt.superartsi_accessories + Pelt.wild_accessories2 + Pelt.pride_bandanas + Pelt.storms_accessories))
             if self.sparkle_cats:
                 self.accessories += list(dict.fromkeys(Pelt.colorsplash_accessories))
         elif self.acc_filter == "bones":
@@ -351,7 +351,7 @@ class CustomizeCatScreen(Screens):
             self.accessories += ["MOTH WINGS","ROSY MOTH WINGS","MORPHO BUTTERFLY","MONARCH BUTTERFLY","CICADA WINGS","BLACK CICADA", "ORANGE BUTTERFLY", "CYAN BUTTERFLY"]
         elif self.acc_filter == "stuff":
             self.accessories = list(
-                dict.fromkeys(Pelt.stuff_accessories + Pelt.crafted_accessories + Pelt.chime_accessories + Pelt.lantern_accessories))
+                dict.fromkeys(Pelt.stuff_accessories + Pelt.crafted_accessories + Pelt.chime_accessories + Pelt.lantern_accessories + Pelt.storms_accessories))
             self.accessories += ["DICE", "GOLDEN EARRINGS"]
         elif self.acc_filter == "plants":
             self.accessories = list(
