@@ -2906,7 +2906,7 @@ class Cat:
             if self.inheritance.great_grand_parents:
                 if other_cat.inheritance.great_grand_parents:
                     for ggp_id in other_cat.inheritance.great_grand_parents.keys():
-                        if ggp_id in self.inheritance.great_grand_parents:
+                        if ggp_id in self.inheritance.great_grand_parents.keys():
                             return True
         return other_cat.ID in self.inheritance.all_involved
 
