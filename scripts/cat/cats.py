@@ -2429,7 +2429,7 @@ class Cat:
         elif not second_cousins_allowed:
             if self.inheritance.great_grand_parents:
                 if other_cat.inheritance.great_grand_parents:
-                    for ggp_id in other_cat.inheritance.great_grand_parents.keys:
+                    for ggp_id in other_cat.inheritance.great_grand_parents.keys():
                         if ggp_id in self.inheritance.great_grand_parents:
                             return True
         return other_cat.ID in self.inheritance.all_involved
