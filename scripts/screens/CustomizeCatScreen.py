@@ -338,6 +338,8 @@ class CustomizeCatScreen(Screens):
             self.eye_colours = copy(Pelt.indigo_eyes)
         elif self.eye_filter == "chartreuse":
             self.eye_colours = copy(Pelt.chartreuse_eyes)
+        elif self.eye_filter == "primal":
+            self.eye_colours = copy(Pelt.primal_eyes)
         
         self.eye_colours.sort()
         
