@@ -8787,5 +8787,100 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "manipulative_gen",
+        "thoughts": [
+            "Sweetly asks r_c to get some prey for {PRONOUN/m_c/object)",
+            "Refuses to make eye contact so that r_c will stop talking to {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+            "manipulative"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "manipulative_to_deputy",
+        "thoughts": [
+            "whispers something to the deputy moments before {PRONOUN/m_c/poss} enemy is called for dawn patrol"
+        ],
+        "main_trait_constraint": [
+            "manipulative"
+        ],
+        "random_living_status": [
+            "living"
+        ],
+        "random_status_status": [
+            "deputy"
+        ]
+    },
+    {
+        "id": "judgmental_gen",
+        "thoughts": [
+            "Comments on r_c's grooming habits loudly",
+            "Complains about the prey variety in the freshkill pile",
+            "Side-eyes r_c when {PRONOUN/r_c/subject} {VERB/r_c/gush/gushes} about another cat"
+        ],
+        "main_trait_constraint": [
+            "judgmental"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "sarcastic_gen",
+        "thoughts": [
+            "Rolls {PRONOUN/m_c/poss} eyes dramatically",
+            "Toooooooootally wants to go on dawn patrol for the fifth day in a row"
+        ],
+        "main_trait_constraint": [
+            "sarcastic"
+        ]
+    },
+    {
+        "id": "dramatic_gen",
+        "thoughts": [
+            "Tumbles halfway across camp when nudged slightly",
+            "Gesticulates wildly when recounting a story",
+            "Gasps loud enough to wake up r_c"
+        ],
+        "main_trait_constraint": [
+            "dramatic"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "forgetful_gen",
+        "thoughts": [
+            "Asks r_c if {PRONOUN/r_c/subject} {VERB/r_c/remember/remembers} where {PRONOUN/m_c/subject} left {PRONOUN/m_c/poss} ladder",
+            "Can't remember what happened yesterday",
+            "Sheepishly asks r_c what {PRONOUN/r_c/poss} name was again"
+        ],
+        "main_trait_constraint": [
+            "forgetful"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "strong_gen",
+        "thoughts": [
+            "Tells r_c to count on {PRONOUN/m_c/subject}",
+            "Practices lifting heavy stones",
+            "Shows off {PRONOUN/m_c/poss} muscles while stretching",
+            "Lifts a branch blocking a den for r_c"
+        ],
+        "main_skill_constraint": [
+            "STRONG,1"
+        ],
+        "random_living_status": [
+            "living"
+        ]
     }
 ]

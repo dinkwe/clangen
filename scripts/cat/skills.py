@@ -425,6 +425,9 @@ class SkillPath(Enum):
     OCCULT = ("loves ghost stories", "believes in conspiracy theories", "investigates the occult", "hunts cryptids")
     GEO = ("plays with pebbles", "collects stones", "looks for crystals", "finds rare gems")
     
+    COMEDY = ("always giggling", "good at making jokes", "comedian", "makes every cat laugh")
+    TOUGH = ("tougher than other kits", "hard to injure", "very tough", "practically a cockroach")
+    
     @staticmethod
     def get_random(exclude: list = ()):
         """Get a random path, with more uncommon paths being less common"""
@@ -567,7 +570,9 @@ class Skill:
         SkillPath.BONES: "taxidermy",
         SkillPath.DANGER: "danger seeker",
         SkillPath.OCCULT: "occultist",
-        SkillPath.GEO: "rock collecting"
+        SkillPath.GEO: "rock collecting",
+        SkillPath.COMEDY: "comedy",
+        SkillPath.TOUGH: "tough"
     }
 
     def __init__(self, path: SkillPath, points: int = 0, interest_only: bool = False):
@@ -777,6 +782,8 @@ class CatSkills:
         SkillPath.DANGER: SkillTypeFlag.STRONG,
         SkillPath.OCCULT: SkillTypeFlag.SUPERNATURAL,
         SkillPath.GEO: SkillTypeFlag.SMART | SkillTypeFlag.OBSERVANT,
+        SkillPath.TOUGH: SkillTypeFlag.STRONG,
+        SkillPath.COMEDY: SkillTypeFlag.SOCIAL,
     }
 
     # pylint: enable=unsupported-binary-operation

@@ -2828,6 +2828,81 @@
             "zero": "jewel necklace",
             "many": "jewel necklaces",
             "one": "jewel necklace"
+        },
+        "ALOLAN VULPIX": {
+            "zero": "alolan vulpix",
+            "many": "alolan vulpixes",
+            "one": "alolan vulpix"
+        },
+        "ALTARIA": {
+            "zero": "altaria",
+            "many": "altarias",
+            "one": "altaria"
+        },
+        "AZUMARILL": {
+            "zero": "azumarill",
+            "many": "azumarills",
+            "one": "azumarill"
+        },
+        "BULBASAUR": {
+            "zero": "bulbasaur",
+            "many": "bulbasaurs",
+            "one": "bulbasaur"
+        },
+        "CHARMANDER": {
+            "zero": "charmander",
+            "many": "charmanders",
+            "one": "charmander"
+        },
+        "EMOLGA": {
+            "zero": "emolga",
+            "many": "emolgas",
+            "one": "emolgas"
+        },
+        "GROWLITHE": {
+            "zero": "growlithe",
+            "many": "growlithes",
+            "one": "growlithe"
+        },
+        "HISUIAN GROWLITHE": {
+            "zero": "hisuian growlithe",
+            "many": "hisuian growlithes",
+            "one": "hisuian growlithe"
+        },
+        "LUXRAY": {
+            "zero": "luxray",
+            "many": "luxrays",
+            "one": "luxray"
+        },
+        "PIKACHU": {
+            "zero": "pikachu",
+            "many": "pikachus",
+            "one": "pikachu"
+        },
+        "SENTRET": {
+            "zero": "sentret",
+            "many": "sentrets",
+            "one": "sentret"
+        },
+        "SHAYMIN": {
+            "zero": "shaymin",
+            "many": "shaymins",
+            "one": "shaymin"
+        },
+        "SPHEAL": {
+            "zero": "spheal",
+            "many": "spheals",
+            "one": "spheal"
+        },
+        "SQUIRTLE": {
+            "zero": "squirtle",
+            "many": "squirtle",
+            "one": "squirtle"
+        },
+        "VULPIX": {
+            "zero": "vulpix",
+            "many": "vulpixes",
+            "one": "vulpix"
         }
     }
 }

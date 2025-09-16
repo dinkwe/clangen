@@ -183,14 +183,11 @@ class Sprites:
             "anjusinglecolours", "anjusmokecolours", "anjusokokecolours", "anjuspeckledcolours", "anjutabbycolours", "anjutickedcolours",
             "cs3_agouticolours", "cs3_bengalcolours", "cs3_classiccolours", "cs3_mackerelcolours", "cs3_marbledcolours", "cs3_maskedcolours", "cs3_rosettecolours",
             "cs3_singlecolours", "cs3_singlestripecolours", "cs3_smokecolours", "cs3_sokokecolours", "cs3_speckledcolours", "cs3_tabbycolours", "cs3_tickedcolours",
-            "cs_eyes", "cs_eyes2",
+            "cs_eyes", "cs_eyes2", "primaleyes", "primaleyes2", "paweyesnothers", "paweyesnothers2",
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
             "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "vickieyes2",
-            "starcatchereyes1", "starcatchereyes1_2", "starcatchereyes2", "starcatchereyes2_2", "starcatchereyes3", "starcatchereyes3_2",
-            "starcatchereyes4", "starcatchereyes4_2", "starcatchereyes5", "starcatchereyes5_2", "starcatchereyes6", "starcatchereyes6_2",
-            'freyes1', 'freyes2', 'freyes3', 'freyes4', 'freyes5',
-            'freyes1het', 'freyes2het', 'freyes3het', 'freyes4het', 'freyes5het',
-            'foxyeyes', 'foxyeyeshet', 'foxyeyes2', 'foxyeyes2het', 'stormsacc'
+            "starcatchermerged", "starcatchermerged_het", 'stareyesmerged', 'stareyesmergedhet', 'frfoxy_merged', 'frfoxy_mergedhet',
+            'stormsacc', "meteorcolours",
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -224,32 +221,16 @@ class Sprites:
 
         # Define eye colors
         eye_colors = [
-            [
-                "YELLOW",
-                "AMBER",
-                "HAZEL",
-                "PALEGREEN",
-                "GREEN",
-                "BLUE",
-                "DARKBLUE",
-                "GREY",
-                "CYAN",
-                "EMERALD",
-                "HEATHERBLUE",
-                "SUNLITICE",
-            ],
-            [
-                "COPPER",
-                "SAGE",
-                "COBALT",
-                "PALEBLUE",
-                "BRONZE",
-                "SILVER",
-                "PALEYELLOW",
-                "GOLD",
-                "GREENYELLOW",
-                "ORANGE",
-            ],
+            ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
+             'HEATHERBLUE', 'SUNLITICE'],
+            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW',
+             'SUNSET-P', 'RED-P', 'ORANGE-P'],
+            ['PURPLE-P', 'PINK-P', 'LILAC-P', 'LAVENDER-P', 'VIOLET-P', 'ROSE-P', 'BLUSH',
+            'HOTPINK', 'SALMON', 'CORAL', 'SCARLET', 'SUNRISE'],
+            ['MIDNIGHT-P', 'PALE', 'LIGHTRED', 'LIGHTORANGE', 'DARKORANGE', 'DARKPURPLE',
+            'LIGHTPURPLE', 'DARKPINK', 'LIGHTPINK', 'DARKGREEN', 'DARKYELLOW', 'FIRE'],
+            ['BLURPLE', 'DARKHAZEL', 'LUNAR', 'MINTCHOCOLATE', 'FLOWERFROST', 'SEAGREEN',
+            'BLOOM', 'MINT-P', 'REDROSE', 'DARKRED', 'COOLBOW', 'WARMBOW']
         ]
         beetle_eyes = [    
             ['ROSE', 'ALGAE', 'SEAFOAM', 'LIGHT FLAME', 'CLOUDY', 'RED', 'TURQUOISE', 'SWAMP', 'RAINY', 'AQUAMARINE', 'EARTH', 'PUMPKIN'],
@@ -326,38 +307,23 @@ class Sprites:
             ['TORBIN', 'DARKLEAP', 'PASTEL BLUES', 'YELLOW SHEEN', 'PUMPKIN ORANGE', 'PASTEL YELLOW', 'ALGAE2', 'ANGELIC SILVER',
              'ANGELIC GREEN'],
             ['SPRAYPAINT PUNK', 'CHROME', 'BLACK CAT', 'VELVETY YELLOW', 'PAINT', 'MINTY', 'PRETTY BLUE',
-            'LIGHT MINT', 'MINT GUM', 'SUNSHINE']
-        ]
-        
-        starcatcher2 = [
+            'LIGHT MINT', 'MINT GUM', 'SUNSHINE'],
             ['WINTERBERRY FOREST', 'RAINDROP', 'RED EYE', 'PANTHER', 'MELON', 'OXY', 'LILAN', 'LEMONLIME', 'MOONSHINE', 'DULL',
             'DEMONIC RED', 'DULL GREY'],
             ['VELVETY RED', 'SHINY', 'DEMONIC BLUE', 'BRIGHT VELVET', 'DULL BLUE', 'DARK MELON',
-            'RED BERRY', 'LIGHT BERRY', 'PAINTED']
-        ]
-        
-        starcatcher3 = [
+            'RED BERRY', 'LIGHT BERRY', 'PAINTED'],
             ['MELON BERRY', 'PASTEL YELLOWGREY', 'DARK MINT', 'PASTELS', 'EMO', 'RED LILY', 'STRAWBERRY', 'PUMPKIN SEED',
             'ANGELIC PASTELS', 'SEED', 'RED ANGELIC', 'DEMONIC BLUE2'],
             ['PASTY PURPLE', 'ALBINO2', 'ANGELIC ALGAE', 'ANGELIC GOLD',
-            'BLUD', 'PASTEL LILAC', 'SEASAND', 'ANGELIC SEASAND', 'FIREY AMBER']
-        ]    
-        
-        starcatcher4 = [
+            'BLUD', 'PASTEL LILAC', 'SEASAND', 'ANGELIC SEASAND', 'FIREY AMBER'],
             ['SICKLY GREY', 'GLOW IN THE DARK', 'FRUITY', 'BLOOD', 'PASTEL MINT', 'CUTE PASTELS', 'VALENTINES DAY', 'CUPID2',
             'CUTE SUNSET', 'VERY LIGHT BLUE', 'LIGHT MELON', 'SONNE'],
             ['HOT COCOA', 'LIGHTNING DOG', 'HEADLIGHTS', 'GRAPE SEEDS',
-            'YELLOW AND BROWN', 'SEA CORAL', 'BLOODY MARY', 'BLUE CORAL', 'RED FOIL']
-        ]
-        
-        starcatcher5 = [
+            'YELLOW AND BROWN', 'SEA CORAL', 'BLOODY MARY', 'BLUE CORAL', 'RED FOIL'],
             ['BRIGHT PUMPKIN', 'WOWIE MELON', 'OCEANIC GOLD', 'PAIN', 'BERRY JUICE', 'COTTON CANDY2', 'PINK SUNSET', 'EMO SHINE',
             'JUICY BERRY', 'PURPLE SUNSET', 'LIGHT RED SUNSET', 'ANGELIC SUNSET PASTELS'],
             ['MOONY', 'EMO MINT', 'SEASHELL2',
-            'GRASS', 'PASTEL BEACH', 'ANGELIC VELVET', 'LIGHT MINT CHOC', 'DARK ALGAE', 'ANGELIC']
-        ]
-        
-        starcatcher6 = [
+            'GRASS', 'PASTEL BEACH', 'ANGELIC VELVET', 'LIGHT MINT CHOC', 'DARK ALGAE', 'ANGELIC'],
             ['BURNET', 'DARK BLACK', 'BURNET AMBER', 'LIGHT MELON2', 'OCEANIC SEASHELL', 'CARAMEL APPLE', 'BERRY VELVET',
             'LILAC COFFEE', 'PASTEL HEADLIGHTS', 'EMO WATERMELON', 'CRIMSON LAVA', 'REVERSE ALBINO'],
             ['ALBINO3', 'FOIL GOLD', 'PINK VELVET', 'LOL BLUE', 'LAVA RED', 'RED GREY', 'NORMAL RED', 'RED GREY2', 'DARK PINK VELVET', 'STARDUST']
@@ -365,38 +331,77 @@ class Sprites:
         
         freyes1 = [
             ["BRIGHT EARTH FR", "BRIGHT PLAGUE FR", "BRIGHT WIND FR", "BRIGHT WATER FR", "BRIGHT LIGHTNING FR", "BRIGHT ICE FR", "BRIGHT LIGHT FR", "BRIGHT SHADOW FR", "BRIGHT ARCANE FR", "BRIGHT NATURE FR", "BRIGHT FIRE FR", "BASIC EARTH FR"],
-            ["BASIC PLAGUE FR", "BASIC WIND FR", "BASIC WATER FR", "BASIC LIGHTNING FR", "BASIC ICE FR", "BASIC SHADOW FR", "BASIC LIGHT FR", "BASIC ARCANE FR", "BASIC NATURE"]
-        ]
-
-        freyes2 = [
+            ["BASIC PLAGUE FR", "BASIC WIND FR", "BASIC WATER FR", "BASIC LIGHTNING FR", "BASIC ICE FR", "BASIC SHADOW FR", "BASIC LIGHT FR", "BASIC ARCANE FR", "BASIC NATURE"],
             ["BASIC FIRE FR", "DARK EARTH FR", "DARK PLAGUE FR", "DARK WIND FR", "DARK WATER FR", "DARK LIGHTNING FR", "DARK ICE FR", "DARK SHADOW FR", "DARK LIGHT FR", "DARK ARCANE FR", "DARK NATURE FR","DARK FIRE FR"],
-            ["DARK SCLERA EARTH FR", "DARK SCLERA PLAGUE FR", "DARK SCLERA WIND FR", "DARK SCLERA WATER FR", "DARK SCLERA LIGHTNING FR", "DARK SCLERA ICE FR", "DARK SCLERA SHADOW FR", "DARK SCLERA LIGHT FR", "DARK SCLERA ARCANE"]
-        ]
-
-        freyes3 = [
+            ["DARK SCLERA EARTH FR", "DARK SCLERA PLAGUE FR", "DARK SCLERA WIND FR", "DARK SCLERA WATER FR", "DARK SCLERA LIGHTNING FR", "DARK SCLERA ICE FR", "DARK SCLERA SHADOW FR", "DARK SCLERA LIGHT FR", "DARK SCLERA ARCANE"],
             ["DARK SCLERA NATURE FR", "FACETED FIRE FR", "FACETED EARTH FR", "FACETED PLAGUE FR", "FACETED WIND FR", "FACETED WATER FR", "FACETED LIGHTNING FR", "FACETED ICE FR", "FACETED SHADOW FR", "FACETED LIGHT FR", "FACETED ARCANE FR", "FACETED NATURE FR"],
-            ["FACETED FIRE FR", "GLOWING EARTH FR", "GLOWING PLAGUE FR", "GLOWING WIND FR", "GLOWING WATER FR", "GLOWING LIGHTNING FR", "GLOWING ICE FR", "GLOWING SHADOW FR", "GLOWING LIGHT FR", "GLOWING ARCANE FR"]
-        ]
-
-        freyes4 = [
+            ["FACETED FIRE FR", "GLOWING EARTH FR", "GLOWING PLAGUE FR", "GLOWING WIND FR", "GLOWING WATER FR", "GLOWING LIGHTNING FR", "GLOWING ICE FR", "GLOWING SHADOW FR", "GLOWING LIGHT FR", "GLOWING ARCANE FR"],
             ["GLOWING NATURE FR", "GLOWING FIRE FR", "FADED EARTH FR", "FADED PLAGUE FR", "FADED WIND FR", "FADED WATER FR", "FADED LIGHTNING FR", "FADED ICE FR", "FADED SHADOW FR", "FADED LIGHT FR", "FADED ARCANE FR","FADED NATURE FR"],
-            ["FADED FIRE FR", "PASTEL EARTH FR", "PASTEL PLAGUE FR", "PASTEL WIND FR", "PASTEL WATER", "PASTEL LIGHTNING FR", "PASTEL ICE FR", "PASTEL SHADOW FR", "PASTEL LIGHT FR"]
-        ]
-
-        freyes5 = [
+            ["FADED FIRE FR", "PASTEL EARTH FR", "PASTEL PLAGUE FR", "PASTEL WIND FR", "PASTEL WATER", "PASTEL LIGHTNING FR", "PASTEL ICE FR", "PASTEL SHADOW FR", "PASTEL LIGHT FR"],
             ["PASTEL ARCANE FR", "PASTEL NATURE FR", "PASTEL FIRE FR", "UNUSUAL EARTH FR", "UNUSUAL PLAGUE FR", "UNUSUAL WIND FR", "UNUSUAL WATER FR", "UNUSUAL LIGHTNING FR", "UNUSUAL ICE FR", "UNUSUAL SHADOW FR", "UNUSUAL LIGHT FR", "UNUSUAL ARCANE FR"],
-            ["UNUSUAL NATURE FR", "UNUSUAL FIRE FR", "FACETED EARTH FR", "FACETED PLAGUE FR", "FACETED WIND FR", "FACETED WATER FR", "FACETED LIGHTNING FR", "FACETED ICE FR", "FACETED SHADOW FR"]
-        ]
-
-        foxyeyes = [
+            ["UNUSUAL NATURE FR", "UNUSUAL FIRE FR", "FACETED EARTH FR", "FACETED PLAGUE FR", "FACETED WIND FR", "FACETED WATER FR", "FACETED LIGHTNING FR", "FACETED ICE FR", "FACETED SHADOW FR"],
             ["BLUE ALBINO", "RED ALBINO", "LIGHT BLUE ALBINO", "CYAN ALBINO", "PINK ALBINO", "DARKSTALKER", "CLAY", "COLD MONOCHROME", "GLORY", "MOON", "WARM MONOCHROME", "PEACEBRINGER"],
-            ["PERIL", "PURPLE MYSTERY", "ROSEGOLD FLUTTER", "SEAFOAM SPLASH", "STARFLIGHT", "SUNNY", "SWAMP GOLD", "TSUNAMI", "VELVET"]
-        ]
-
-        foxyeyes2 = [
+            ["PERIL", "PURPLE MYSTERY", "ROSEGOLD FLUTTER", "SEAFOAM SPLASH", "STARFLIGHT", "SUNNY", "SWAMP GOLD", "TSUNAMI", "VELVET"],
             ["ORANGENEW", "GOLD SCARAB", "BLUE MOON", "SUBMERGED", "GRAPE", "BLUEBERRY", "FOOLS GOLD", "DARK BLUE", "LIME", "LIGHT GOLD", "COOKIE", "MERRY CHRISTMAS"],
             ["TRICK OR TREAT", "SPINEL", "NEW DAWN", "DAMP MOSS", "BLIND BLUE", "BLIND GREEN", "BLIND RED", "BLIND PINK", "BLIND PURPLE"]
         ]
+
+        
+        primal_eyes = [['PRIMAL ARCANE', 'PRIMAL EARTH', 'PRIMAL FIRE', 'PRIMAL ICE'],
+                   ['PRIMAL LIGHT', 'PRIMAL LIGHTNING', 'PRIMAL NATURE', 'PRIMAL PLAGUE'],
+                   ['PRIMAL SHADOW', 'PRIMAL WATER', 'PRIMAL WIND']]
+        
+        paw_eyes = [['TRADITIONAL LUNA PB', 'TRADITIONAL SOL PB', 'TRADITIONAL ABYSSAL PB', 'TRADITIONAL ZENITH PB', 'TRADITIONAL HARVEST PB',
+                  'TRADITIONAL COGWHEEL PB', 'TRADITIONAL METROPOLIS', 'VIBRANT LUNA PB', 'VIBRANT SOL PB', 'VIBRANT ABYSSAL PB',
+                  'VIBRANT ZENITH PB', 'VIBRANT HARVEST PB'], ['VIBRANT COGWHEEL PB', 'VIBRANT METROPOLIS PB', 'SOLID GOLD',
+                  'MISTLETOE', 'OCEAN WATER', 'PINK EYE', 'SEA GREEN', 'TOOTHPASTE', 'MINT CHOCOLATE']]
+        
+        stareyes10 = [
+            ['TORCH','ALLIGATOR','SHINY VIOLET','LAZULI','TRUE SILVER','ORANGE-SILVER','PINK COPPER','PIXIE','PURPLE QUARTZ','MARBLE','PINE','FAUX HETEROCHROMIA',],
+            ['BERRIES','BLINDING SUN','JUICY RED','REDPINK','DIANTHUS','IRISH','WINTER BERRY','WASTELAND','SOL','BLUE GLACIER'],
+            ['BLACK-2','ARIEL','SAFFRON','HUCKLEBERRY','ULYSSES','PINK RUBY','RIDGE','STORMBRINGER','LIME SODA','COYOTE','OPALESCENCE','OBSIDIAN SHADOW'],
+            ['TRANS','VELVET SATIN','COPPER LEAF','HAUYNE','PINKISH PURPLE','WORM','AGING COPPER','BUBONIC','SILVER-GREEN','FAIRY'],
+            ['TEAL2','DEEP OCEAN','MERCY','SUNNY BROWN','SOFT SHIMMER','IKEA','COINS','DIZZY','RAVER GREEN','MINTY FRESH','BILLFISH','ALMONDS'],
+            ['BISTRE','MISTY','WISTERIA','FAUX HETEROCHROMIA2','SHINING SILVER','COVELLITE','DARK MAGENTA','GOLDEN GRAY','CROW','BLUE HAZE'],
+            ['FAUX HETEROCHROMIA3','WARM GRAY','EXPOSED BRONZE','WARM TARNISH','HAWKFROST','FAUX HETEROCHROMIA4','LUPINE','MIDNIGHT SHADOW','CAPRISUN','TARNISH','FAUX HETEROCHROMIA5', 'BATESIA'],
+            ['FADED INK','FAUX HETEROCHROMIA6','HEMOPIGMENT','ORANGE SODA','ICY CYAN','LILYPAD','RUSTED BLUE','RUSTED NIGHT','EVENING','BLACKBIRD'],
+            ['HYDRANGEA','TURQUOISE2','PALE PRIMARY','SAFARI','SOMETHING WICKED','SHINY BROWN','RED GRAY','PRINCESS','PALE INDIGO','ICEBERG','CROCODILE','STARLESS NIGHT'],
+            ['NEON TEAL','FAUX HETEROCHROMIA7','SILVER-PINK','MACHINE','FAUX HETEROCHROMIA8','IRON RUBY','CHARTREUSE-5','SHARK','HAMMERHEAD','GRAY BROWN'],
+            ['SUNSET SEA','CARAMEL DIP','BLUE-GRAY','PALEST PINK','SILVERY TEAL','FISHY','CREAMSICLE','WARM SILVER','APOCALYPSE','HEATHER GRAY','BLUE EMBER','SUMMER',],
+            ['DUSTY','BLUE EMBER2','STRANGE CYAN','FADED GOLD','SILVER-16','SHERBERT','JADE','OFF-WHITE','HAUNTING','BLOODMOON'],
+            ['GATORADE','WASP','GLARE','PASTEL SUMMER','DARKNESS','LASER BEAM','BRIGHT CYAN','INK JET','LAST SUNSET','HOLLYLEAF','MYSTERY','HADES'],
+            ['ICTERINE','DARK CREAM','ALIEN BLUES','RASPBERRY','BLEEDING HEART','BABY BLUE','NEON ORANGE','NEON OPAL','OW THE EDGE','BLUE DRAGON'],
+            ['FAIRYWREN','REDBRICK','TRUE GREEN','HAREBELL','WYSTERIA','ORANGE PASTELS','CAPRISUN2','EMBER','PURPLE PUMPKIN','BRIGHT LIME','ORANGE SKY','BRIGHT BI'],
+            ['LIGHT GRAY','SEASIDE','CAIN','FIREYS','KELPIE','CELESTITE','PALE ROSE','SOFT PURPLE','SOFT TRANS','ZABA'],
+            ['LAVA TRAP','CONCH SHELL','LABRADORITE','ROMANCE','TRAFFIC','ALCIDES','JACKOLANTERN','YELLOW SKY','FROGGY','CAVANSITE','RED-11','FADING LIGHT'],
+            ['TORCHLIGHT','CHERRY LEMON','ROOK','SHIMMER','KYANITE','PASTEL BI','CIPHER','GAIA','MINT JADE','PEAR'],
+            ['SETTING SUN','PURPLE SKY','FADED PINK','SPARKLING SODA','BRIGHT OLIVE','YEW','MINT LIME','BLUE FLAX','RISING DAWN','BEACHBALL','RED-ORANGE','HOLLY'],
+            ['GOLD LEAF','DARKER JACK','ANOTHER ALBINO','MERCURY','RED DUSK','PARROT','VOLCANIC ASH','BISEXUAL','BRIGHT ALBINO','LARKSPUR'],
+            ['SPOOKY PASTEL','RIDDLE','HYDRANGEA2','BLITZ','SINISTER','DOVE','OLD WORLD BLUES','BENITOITE','RED-40','CRATER LAKE','BLUE FIRE','GRIM'],
+            ['FAUX GRASS','IDIA','DIAMOND','SILVER CYAN','RUBY SAPPHIRE','SPOOKY NIGHT','PINK-SILVER','SHINY VELVET','SYNTHWAVE','CUCUMBER'],
+            ['BOYSENBERRY','SOFT MAROON','NEON GRAY','FRESH PUMPKIN','ALMOST BLUE','PINK-BROWN','SUNDOWN','SEAL','PLATINUM2','PEACHY','MALLEUS','UMBER'],
+            ['ORANGE-PINK','SNAPDRAGON','BLACKPINK','CHRYSOCOLLA','PINK-ISH','ICHOR','PINK PEONY','CHINCHILLA','SMITHSONITE','PETUNIA'],
+            ['SWEETTOOTH','ARTICHOKE','PRINTER INK','MANGROVE','FALLOUT','EDELWEISS','GRAPE SODA','VOID','FADED GREEN','BLACK OPAL','BURNT BLUE','SOFT RED'],
+            ['NIGHTWATCH','KELP FOREST','GLAUCOUS4','BUBBLES','HOT CHOCOLATE','FADED INDIGO','CHAOS','MIKU','HONEYBERRY','RED VELVET']
+            
+        ]
+
+        
+        
+        for row, colors in enumerate(stareyes10):
+            for col, color in enumerate(colors):
+                self.make_group('stareyesmerged', (col, row), f'eyes{color}')
+                self.make_group('stareyesmergedhet', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(paw_eyes):
+            for col, color in enumerate(colors):
+                self.make_group("paweyesnothers", (col, row), f"eyes{color}")
+                self.make_group("paweyesnothers2", (col, row), f"eyes2{color}")
+        
+        for row, colors in enumerate(primal_eyes):
+            for col, color in enumerate(colors):
+                self.make_group("primaleyes", (col, row), f"eyes{color}")
+                self.make_group("primaleyes2", (col, row), f"eyes2{color}")
 
         for row, colors in enumerate(cseye_colors):
             for col, color in enumerate(colors):
@@ -412,6 +417,17 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('beetleeyes', (col, row), f'eyes{color}')
                 self.make_group('beetleeyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(vicki_eyes):
+            for col, color in enumerate(colors):
+                self.make_group('vickieyes', (col, row), f'eyes{color}')
+                self.make_group('vickieyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(starcatcher1):
+            for col, color in enumerate(colors):
+                self.make_group('starcatchermerged', (col, row), f'eyes{color}')
+                self.make_group('starcatchermerged_het', (col, row), f'eyes2{color}')
+        
 
         for row, colors in enumerate(beetle_more):
             for col, color in enumerate(colors):
@@ -422,41 +438,6 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('eragonaeyes', (col, row), f'eyes{color}')
                 self.make_group('eragonaeyes2', (col, row), f'eyes2{color}')
-                
-        for row, colors in enumerate(vicki_eyes):
-            for col, color in enumerate(colors):
-                self.make_group('vickieyes', (col, row), f'eyes{color}')
-                self.make_group('vickieyes2', (col, row), f'eyes2{color}')
-        
-        for row, colors in enumerate(starcatcher1):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes1', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes1_2', (col, row), f'eyes2{color}')
-        
-        for row, colors in enumerate(starcatcher2):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes2', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes2_2', (col, row), f'eyes2{color}')
-        
-        for row, colors in enumerate(starcatcher3):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes3', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes3_2', (col, row), f'eyes2{color}')
-                
-        for row, colors in enumerate(starcatcher4):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes4', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes4_2', (col, row), f'eyes2{color}')
-                
-        for row, colors in enumerate(starcatcher5):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes5', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes5_2', (col, row), f'eyes2{color}')
-                
-        for row, colors in enumerate(starcatcher6):
-            for col, color in enumerate(colors):
-                self.make_group('starcatchereyes6', (col, row), f'eyes{color}')
-                self.make_group('starcatchereyes6_2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(towheeeyes):
             for col, color in enumerate(colors):
@@ -499,32 +480,8 @@ class Sprites:
                 
         for row, colors in enumerate(freyes1):
             for col, color in enumerate(colors):
-                self.make_group('freyes1', (col, row), f'eyes{color}')
-                self.make_group('freyes1het', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(freyes2):
-            for col, color in enumerate(colors):
-                self.make_group('freyes2', (col, row), f'eyes{color}')
-                self.make_group('freyes2het', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(freyes3):
-            for col, color in enumerate(colors):
-                self.make_group('freyes3', (col, row), f'eyes{color}')
-                self.make_group('freyes3het', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(freyes4):
-            for col, color in enumerate(colors):
-                self.make_group('freyes4', (col, row), f'eyes{color}')
-                self.make_group('freyes4het', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(freyes5):
-            for col, color in enumerate(colors):
-                self.make_group('freyes5', (col, row), f'eyes{color}')
-                self.make_group('freyes5het', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(foxyeyes):
-            for col, color in enumerate(colors):
-                self.make_group('foxyeyes', (col, row), f'eyes{color}')
-                self.make_group('foxyeyeshet', (col, row), f'eyes2{color}')
-        for row, colors in enumerate(foxyeyes2):
-            for col, color in enumerate(colors):
-                self.make_group('foxyeyes2', (col, row), f'eyes{color}')
-                self.make_group('foxyeyes2het', (col, row), f'eyes2{color}')
+                self.make_group('frfoxy_merged', (col, row), f'eyes{color}')
+                self.make_group('frfoxy_mergedhet', (col, row), f'eyes2{color}')
                 
         eye_colors = [
             ['BERBERID-FLORA', 'RANUNCUL-FLORA', 'CAPPARID-FLORA', 'VIOL-FLORA', 'FUMARI-FLORA', 'PAPAVER-FLORA', 'MAGNOLI-FLORA'],
@@ -968,9 +925,25 @@ class Sprites:
             ['ZINGIBERA', 'ALISMA', 'POLYGONA', 'NYCTAGINA', 'BROMELIA', 'SMILA', 'EBENA'],
             ['ROSA', 'LILIA', 'JUNCA', 'VERBENA', 'HAEMODORA', 'COMMELINA', 'COLCHICA']
         ]
-
-        color_types = [
-            "singlecolours",
+        
+        potato_color_categories = [ 
+            ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'MIDNIGHT', 'AZUL', 'SKY', 'RED-P', 'ORANGE-P',
+             'LIGHTRED-P', 'PASTELBOW', 'DEEPWINKLE', 'SUNLIGHT', 'MIDNIGHTGREEN', 'WINKLE'],
+            ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'ROSE-P', 'CHERRY', 'CORNFLOWER', 'THISTLE-P',
+             'LIGHTORANGE-P', 'LEMON', 'OLIVE', 'RAINBOW-P', 'MIDNIGHTBLUE', 'CORALS', 'MIDNIGHTCYAN', 'UNICORN'],
+            ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE', 'HEATHER', 'LAVENDER', 'FADEDSKY',
+             'DEEPTHISTLE', 'PALEYELLOW', 'GOLD-P', 'RUSTY', 'PLINK', 'DEEPSEA', 'PALEWINKLE', 'BRIGHTERNIGHT', 'PALEROSES'],
+            ['BROWNGOLD', 'DARKHEATHER', 'FLARE', 'SEAFOAM', 'ORCHID-P', 'VIOLET', 'FADEDGREEN', 'OAK', 'PALEGREEN', 'PERIWINKLE',
+             'CRIMSON', 'BURNTORANGE', 'GARNET', 'BRIGHTERTHYST', 'SWAMP', 'MIDNIGHTPURPLE', 'PURPLEISH', 'CLOUDRIVER'],
+            ['RUBY', 'TINTEDROSE', 'DARKLEAF', 'RUST', 'GREENMINT', 'PITCHNIGHT', 'ROSENIGHT', 'BLACKWHITE', 'GOLDSUN',
+             'DEEPFLARE', 'PINK-P', 'PALEPURPLE', 'BLOSSOMS', 'BLOOMS', 'MOSSES', 'MIDNIGHTRED', 'EVERGREEN', 'MYTHICAL'],
+            ['LEAF', 'COOLGREEN', 'PITCHLEAF', 'MINT', 'WARMWHITE', 'DARKMINT-P', 'NAVY', 'DARKPURPLE', 'BRIGHTPURPLE', 'BLUE-P',
+             'FADEDBLUE', 'SKYBLUE', 'LOLIPOP', 'BUBBLEGUM-P', 'MEADOWS', 'MIDNIGHTPINK', 'OCEAN-P', 'SUNCLOUD'],
+            ['FADEDMAGENTA', 'ROSETINT', 'DEEPROSE', 'HOTPINK', 'SILVERROSE', 'FADEDROSE', 'PLATINUM', 'METAL', 'METALIC', 'STONE',
+             'STORM', 'PITCHBLACK', 'GREEN-P', 'MAGENTA-P', 'DARKYELLOW', 'MIDNIGHTYELLOW', 'DEEPCARAMEL', 'SUNRISES']
+        ]
+        
+        potato_color_types = ["singlecolours",
             "tabbycolours",
             "marbledcolours",
             "rosettecolours",
@@ -984,6 +957,9 @@ class Sprites:
             "agouticolours",
             "singlestripecolours",
             "maskedcolours",
+            "meteorcolours"]
+
+        color_types = [
             "manedcolours", "ocelotcolours",
             "lynxcolours", "royalcolours", "abyssiniancolours", "cloudedcolours", "stainvoithex",
             "dobermancolours", "ghosttabbycolours", "merlecolours", "monarchcolours",
@@ -1001,6 +977,11 @@ class Sprites:
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
+                    self.make_group(color_type, (col, row), f"{color_type[:-7]}{color}")
+                    
+        for row, colors in enumerate(potato_color_categories):
+            for col, color in enumerate(colors):
+                for color_type in potato_color_types:
                     self.make_group(color_type, (col, row), f"{color_type[:-7]}{color}")
 
         minecraft_color_types = ['minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
@@ -1714,15 +1695,15 @@ class Sprites:
 
         ]
         
-        #storms accessories, pirate coat is unfinished so we ignore
-        for row, accessories in enumerate(storms_accessories_data):
-            for col, accessory in enumerate(accessories):
-                self.make_group("stormsacc", (col, row), f"acc_storm{accessory}")
-        
         #pride bandanas
         for row, bandanas in enumerate(pride_bandanas_data):
             for col, bandana in enumerate(bandanas):
                 self.make_group("pride_bandanas", (col, row), f"acc_pride{bandana}")
+    
+        #storms accessories, pirate coat is unfinished so we ignore
+        for row, accessories in enumerate(storms_accessories_data):
+            for col, accessory in enumerate(accessories):
+                self.make_group("stormsacc", (col, row), f"acc_storm{accessory}")
         
         #superartsi's accessories
         for row, accessories in enumerate(superartsi_data):
