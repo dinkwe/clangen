@@ -393,7 +393,7 @@ class CustomizeCatScreen(Screens):
             self.accessories +=["RED FEATHERS","BLUE FEATHERS","JAY FEATHERS","GULL FEATHERS","SPARROW FEATHERS","ROAD RUNNER FEATHER"]
         elif self.acc_filter == "disabilities":
             self.accessories = list(
-                dict.fromkeys(Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels))
+                dict.fromkeys(Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels + Pelt.booties))
         elif self.acc_filter == "animals":
             self.accessories = list(
                 dict.fromkeys(Pelt.smallAnimal_accessories + Pelt.aliveInsect_accessories + Pelt.snake_accessories))
