@@ -359,7 +359,7 @@ class Pelt:
         'WINTERBERRY FOREST', 'RAINDROP', 'RED EYE', 'PANTHER', 'MELON', 'OXY', 'LILAN', 'LEMONLIME', 'MOONSHINE', 'DULL',
         'DEMONIC RED', 'DULL GREY', 'VELVETY RED', 'SHINY', 'DEMONIC BLUE', 'BRIGHT VELVET', 'DULL BLUE', 'DARK MELON',
         'RED BERRY', 'LIGHT BERRY', 'PAINTED',
-        'MELON BERRY', 'PASTEL YELLOW2', 'DARK MINT', 'PASTELS', 'EMO', 'RED LILY', 'STRAWBERRY', 'PUMPKIN SEED',
+        'MELON BERRY', 'PASTEL YELLOWGREY', 'DARK MINT', 'PASTELS', 'EMO', 'RED LILY', 'STRAWBERRY', 'PUMPKIN SEED',
         'ANGELIC PASTELS', 'SEED', 'RED ANGELIC', 'DEMONIC BLUE2', 'PASTY YELLOW', 'ALBINO2', 'ANGELIC ALGAE', 'ANGELIC GOLD',
         'BLUD', 'PASTEL LILAC', 'SEASAND', 'ANGELIC SEASAND', 'FIREY AMBER',
         'SICKLY GREY', 'GLOW IN THE DARK', 'FRUITY', 'BLOOD', 'PASTEL MINT', 'CUTE PASTELS', 'VALENTINES DAY', 'CUPID2',
@@ -420,7 +420,7 @@ class Pelt:
         'ICTERINE','DARK CREAM','ALIEN BLUES','RASPBERRY','BLEEDING HEART','BABY BLUE','NEON ORANGE','NEON OPAL','OW THE EDGE','BLUE DRAGON',
         
         'FAIRYWREN','REDBRICK','TRUE GREEN','HAREBELL','WYSTERIA','ORANGE PASTELS','CAPRISUN2','EMBER','LAVA TRAP','BRIGHT LIME','ORANGE SKY','BRIGHT BI',
-        'LIGHT GRAY','SEASIDE','CAIN','ORANGE-15','KELPIE','CELESTITE','PALE ROSE','SOFT PURPLE','SOFT TRANS','ZABA',
+        'LIGHT GRAY','SEASIDE','CAIN','FIREYS','KELPIE','CELESTITE','PALE ROSE','SOFT PURPLE','SOFT TRANS','ZABA',
         
         'PURPLE PUMPKIN','CONCH SHELL','LABRADORITE','ROMANCE','TRAFFIC','ALCIDES','JACKOLANTERN','YELLOW SKY','FROGGY','CAVANSITE','RED-11','FADING LIGHT',
         'TORCHLIGHT','CHERRY LEMON','ROOK','SHIMMER','KYANITE','PASTEL BI','CIPHER','GAIA','MINT JADE','PEAR',
@@ -570,7 +570,7 @@ class Pelt:
                    'EBENA', 'FADED ARCANE FR', 'FADED SHADOW FR', 'GEM', 'GESNERIA', 'GRAPE',
                    'GRAPE SEEDS', 'HESTIA', 'LAVENDER', 'LAVENDER-P', 'HALLOWEEN', 'MISSING',
                    'LIGHTPURPLE', 'LILAC', 'LILAC-P', 'NYCTAGINA', 'OBSIDIAN', 'PARADOX', 'PASTEL',
-                   'PASTEL LAVENDER', 'PASTEL LILAC', 'PASTEL SHADOW FR', 'PASTY PURPLE',
+                   'PASTEL LAVENDER', 'PASTEL LILAC', 'PASTEL SHADOW FR',
                    'PURPLE SUNSET', 'PURPLE-P', 'SEASHELL', 'SMILA', 'PASTEL BI', 'SNAPDRAGON',
                    'STARFLIGHT', 'TRADITIONAL ABYSSAL PB', 'TWILIGHT SKY', 'UNUSUAL ARCANE FR', 'UNUSUAL SHADOW FR', 'VERBENA',
                    'VIOLET', 'BISEXUAL', 'PURPLE QUARTZ', 'WISTERIA', 'HYDRANGEA', 'HYDRANGEA2',
@@ -1529,7 +1529,7 @@ class Pelt:
     spotted = [
         "Speckled", "Rosette",
         "Speckled", "Rosette",
-        "Lynx", "Bobcat", "Spots", "Merle", "Dot", "Caliispeckled", "Dotfade"
+        "Lynx", "Bobcat", "Spots", "Merle", "Dot", "Caliispeckled", "Dotfade", "Meteor"
     ]
     plain = [
         "SingleColour", "Smoke", "Singlestripe",
@@ -1718,7 +1718,7 @@ class Pelt:
 
     blue_colors = ["CYAN", "BLUE", "WARPEDPLANKS", "CYANGLAZEDTERRACOTTA", "LIGHTBLUEGLAZED TERRACOTTA",
                    "LIGHTGRAYGLAZEDTERRACOTTA", "WHITEGLAZEDTERRACOTTA", "BROWNGLAZEDTERRACOTTA", "NEONTEAL",
-                   "CYANHETA", "BLUEHETA", "NAVYHETA", "BLUECREAM", "ICEBLUE", "CSBLUE2", "NAVYBLUE", "ICEWHITE",
+                   "CYANHETA", "BLUEHETA", "NAVYHETA", "BLUECREAM", "ICEBLUE", "NAVYBLUE", "ICEWHITE",
                    "CERULEAN", "GHOSTBLUE", "OCEAN", "TEAL", "CYANPINKG", "MINTBLUES", "BLACKBLUES", "ICEPEPPER",
                    "CYANPEPPER", "BLUEPEPPER", "OCEANPEPPER", "DARKBLUEPEPPER", "BLUEGHOSTPEPPER", "PALEBLUE-GOLD",
                    "PALEBLUE-INDIGO", "PALECYAN-PURPLE", "PALECYAN-NAVY", "PALECYAN-BLUE", "SILVERNAVY", "BLACK-BROWN",
@@ -2328,7 +2328,7 @@ class Pelt:
                 self.name = self.name[4:]
                 self.name = self.name.capitalize()
                 self.colour = kris_dict[self.colour]
-            if "Meteor" in self.name:
+            if self.name != "Meteor" and "Meteor" in self.name:
                 self.name = self.name[6:]
                 self.name = self.name.capitalize()
                 self.colour = meteor_dict[self.colour]
@@ -2416,10 +2416,10 @@ class Pelt:
                     self.tortiepattern = self.tortiepattern[4:]
                     self.tortiecolour = hive_dict[self.tortiecolour]
 
-                if "meteor" in self.tortiebase:
+                if self.tortiebase != "meteor" and "meteor" in self.tortiebase:
                     self.tortiebase = self.tortiebase[6:]
                     self.colour = meteor_dict[self.colour]
-                if "meteor" in self.tortiepattern:
+                if  self.tortiepattern != "meteor" and "meteor" in self.tortiepattern:
                     self.tortiepattern = self.tortiepattern[6:]
                     self.tortiecolour = meteor_dict[self.tortiecolour]
 
@@ -3117,7 +3117,7 @@ class Pelt:
                 # This is the "wildcard" chance, where you can get funky combinations.
                 # The "not wildcard_chance" allows users to set wildcard_tortie to 0,
                 # and always get wildcard torties.
-                if not wildcard_chance or random.getrandbits(wildcard_chance) == 1:
+                if not wildcard_chance or random.getrandbits(int(wildcard_chance)) == 1:
                     self.tortiecolour = choice(Pelt.pelt_colours)
                     if self.colour == self.tortiecolour:
                         possible_patterns = Pelt.tortiebases.copy()
