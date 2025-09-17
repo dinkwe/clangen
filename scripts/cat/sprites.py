@@ -127,6 +127,7 @@ class Sprites:
 
         for x in (
             "lineart", "lineartdf", "lineartdead", "flutter_lineart", "flutter_lineartdf", "flutter_lineartdead", "lamp_lineart", "lamp_lineartdf", "lamp_lineartdead",
+            "blep", "booties", "wheels", "disabilityaccs", "disabilityscars",
             "eyes", "eyes2", "skin", "skin_magic", "skin_elemental", "skin_bingle", "skin_bingle2", "skin_mathkangaroo", "eyesdark", "dark2", "eyesvivid", "vivid2", "towheeeyes", "towheeeyes2",
             "scars", "missingscars", "wild", "eyes_wing", "eyes2_halo", "colorsplash_neckerchief", "colorsplash_witchhat", "skin_stain", "skin_turtle", "eyes_snail",
             "medcatherbs", "beetleeyes", "beetleeyes2", "beetlemore", "beetlemore2", "moss_accs", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
@@ -314,7 +315,7 @@ class Sprites:
             'RED BERRY', 'LIGHT BERRY', 'PAINTED'],
             ['MELON BERRY', 'PASTEL YELLOWGREY', 'DARK MINT', 'PASTELS', 'EMO', 'RED LILY', 'STRAWBERRY', 'PUMPKIN SEED',
             'ANGELIC PASTELS', 'SEED', 'RED ANGELIC', 'DEMONIC BLUE2'],
-            ['PASTY PURPLE', 'ALBINO2', 'ANGELIC ALGAE', 'ANGELIC GOLD',
+            ['PASTY YELLOW', 'ALBINO2', 'ANGELIC ALGAE', 'ANGELIC GOLD',
             'BLUD', 'PASTEL LILAC', 'SEASAND', 'ANGELIC SEASAND', 'FIREY AMBER'],
             ['SICKLY GREY', 'GLOW IN THE DARK', 'FRUITY', 'BLOOD', 'PASTEL MINT', 'CUTE PASTELS', 'VALENTINES DAY', 'CUPID2',
             'CUTE SUNSET', 'VERY LIGHT BLUE', 'LIGHT MELON', 'SONNE'],
@@ -366,7 +367,7 @@ class Sprites:
             ['FAUX HETEROCHROMIA3','WARM GRAY','EXPOSED BRONZE','WARM TARNISH','HAWKFROST','FAUX HETEROCHROMIA4','LUPINE','MIDNIGHT SHADOW','CAPRISUN','TARNISH','FAUX HETEROCHROMIA5', 'BATESIA'],
             ['FADED INK','FAUX HETEROCHROMIA6','HEMOPIGMENT','ORANGE SODA','ICY CYAN','LILYPAD','RUSTED BLUE','RUSTED NIGHT','EVENING','BLACKBIRD'],
             ['HYDRANGEA','TURQUOISE2','PALE PRIMARY','SAFARI','SOMETHING WICKED','SHINY BROWN','RED GRAY','PRINCESS','PALE INDIGO','ICEBERG','CROCODILE','STARLESS NIGHT'],
-            ['NEON TEAL','FAUX HETEROCHROMIA7','SILVER-PINK','MACHINE','FAUX HETEROCHROMIA8','IRON RUBY','CHARTREUSE-5','SHARK','HAMMERHEAD','GRAY BROWN'],
+            ['NEON TEAL','FAUX HETEROCHROMIA7','SILVER-PINK','MACHINE','FAUX HETEROCHROMIA8','IRON RUBY','FOSSIL','SHARK','HAMMERHEAD','GRAY BROWN'],
             ['SUNSET SEA','CARAMEL DIP','BLUE-GRAY','PALEST PINK','SILVERY TEAL','FISHY','CREAMSICLE','WARM SILVER','APOCALYPSE','HEATHER GRAY','BLUE EMBER','SUMMER',],
             ['DUSTY','BLUE EMBER2','STRANGE CYAN','FADED GOLD','SILVER-16','SHERBERT','JADE','OFF-WHITE','HAUNTING','BLOODMOON'],
             ['GATORADE','WASP','GLARE','PASTEL SUMMER','DARKNESS','LASER BEAM','BRIGHT CYAN','INK JET','LAST SUNSET','HOLLYLEAF','MYSTERY','HADES'],
@@ -382,7 +383,7 @@ class Sprites:
             ['BOYSENBERRY','SOFT MAROON','NEON GRAY','FRESH PUMPKIN','ALMOST BLUE','PINK-BROWN','SUNDOWN','SEAL','PLATINUM2','PEACHY','MALLEUS','UMBER'],
             ['ORANGE-PINK','SNAPDRAGON','BLACKPINK','CHRYSOCOLLA','PINK-ISH','ICHOR','PINK PEONY','CHINCHILLA','SMITHSONITE','PETUNIA'],
             ['SWEETTOOTH','ARTICHOKE','PRINTER INK','MANGROVE','FALLOUT','EDELWEISS','GRAPE SODA','VOID','FADED GREEN','BLACK OPAL','BURNT BLUE','SOFT RED'],
-            ['NIGHTWATCH','KELP FOREST','GLAUCOUS4','BUBBLES','HOT CHOCOLATE','FADED INDIGO','CHAOS','MIKU','HONEYBERRY','RED VELVET']
+            ['NIGHTWATCH','KELP FOREST','MIDNIGHT VELVET','BUBBLES','HOT CHOCOLATE','FADED INDIGO','CHAOS','MIKU','HONEYBERRY','RED VELVET']
             
         ]
 
