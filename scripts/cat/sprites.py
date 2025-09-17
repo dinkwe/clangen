@@ -127,7 +127,6 @@ class Sprites:
 
         for x in (
             "lineart", "lineartdf", "lineartdead", "flutter_lineart", "flutter_lineartdf", "flutter_lineartdead", "lamp_lineart", "lamp_lineartdf", "lamp_lineartdead",
-            "blep", "booties", "wheels", "disabilityaccs", "disabilityscars",
             "eyes", "eyes2", "skin", "skin_magic", "skin_elemental", "skin_bingle", "skin_bingle2", "skin_mathkangaroo", "eyesdark", "dark2", "eyesvivid", "vivid2", "towheeeyes", "towheeeyes2",
             "scars", "missingscars", "wild", "eyes_wing", "eyes2_halo", "colorsplash_neckerchief", "colorsplash_witchhat", "skin_stain", "skin_turtle", "eyes_snail",
             "medcatherbs", "beetleeyes", "beetleeyes2", "beetlemore", "beetlemore2", "moss_accs", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
