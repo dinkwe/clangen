@@ -127,9 +127,9 @@ class Sprites:
 
         for x in (
             "lineart", "lineartdf", "lineartdead", "flutter_lineart", "flutter_lineartdf", "flutter_lineartdead", "lamp_lineart", "lamp_lineartdf", "lamp_lineartdead",
-            "eyes", "eyes2", "skin", "skin_magic", "skin_elemental", "skin_bingle", "skin_bingle2", "skin_mathkangaroo", "eyesdark", "dark2", "eyesvivid", "vivid2", "towheeeyes", "towheeeyes2",
+            "eyes", "skin", "skin_magic", "skin_elemental", "skin_bingle", "skin_bingle2", "skin_mathkangaroo", "eyesdark", "eyesvivid", "towheeeyes",
             "scars", "missingscars", "wild", "eyes_wing", "eyes2_halo", "colorsplash_neckerchief", "colorsplash_witchhat", "skin_stain", "skin_turtle", "eyes_snail",
-            "medcatherbs", "beetleeyes", "beetleeyes2", "beetlemore", "beetlemore2", "moss_accs", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
+            "medcatherbs", "beetleeyes", "beetlemore",  "moss_accs", "neos_eyes", "neos_eyes2", "lamp_eyes", "flutter_eyes", "flutter_eyes2",
             "collars", "bellcollars", "bowcollars", "nyloncollars", "colorsplash_horn", "colorsplash_kitsune", "colorsplash_mermaid",
             "singlecolours", "speckledcolours", "tabbycolours", "bengalcolours", "marbledcolours",
             "rosettecolours", "smokecolours", "tickedcolours", "mackerelcolours", "classiccolours",
@@ -138,7 +138,7 @@ class Sprites:
             "shadersnewwhite", "lightingnew", "pokemon",
             "whitepatches", "minkswhite", "voithexpatches", "exoticwhitepatches", "tortiepatchesmasks", "minkstorties",
             "fademask", "fadestarclan", "fadedarkforest", "bandanas", "stainvoithex",
-            "symbols", "plant2_accessories", "flower_accessories", "snake_accessories", "eragonatorite", "eragonawp", "eragonaeyes", "eragonaeyes2",
+            "symbols", "plant2_accessories", "flower_accessories", "snake_accessories", "eragonatorite", "eragonawp", "eragonaeyes",
             "brindlecolours", "wildcatcolours", "wolfcolours", "spotscolours", "smokepointcolours",
             "dalmatiancolours", "finleappatchescolours", "eragonatorite2", "sterflowers", "harnesses", "bows", "teethcollars", "smallAnimal_accessories", "aliveInsect_accessories",
             "deadInsect_accessories", "fruit_accessories", "crafted_accessories", "tail2_accessories", "bonesacc", "butterflymothacc", "twolegstuff", "steragouticolours", "sillyagouticolours", "danceagouticolours", "mimiagouticolours",
@@ -183,10 +183,10 @@ class Sprites:
             "anjusinglecolours", "anjusmokecolours", "anjusokokecolours", "anjuspeckledcolours", "anjutabbycolours", "anjutickedcolours",
             "cs3_agouticolours", "cs3_bengalcolours", "cs3_classiccolours", "cs3_mackerelcolours", "cs3_marbledcolours", "cs3_maskedcolours", "cs3_rosettecolours",
             "cs3_singlecolours", "cs3_singlestripecolours", "cs3_smokecolours", "cs3_sokokecolours", "cs3_speckledcolours", "cs3_tabbycolours", "cs3_tickedcolours",
-            "cs_eyes", "cs_eyes2", "primaleyes", "primaleyes2", "paweyesnothers", "paweyesnothers2",
+            "cs_eyes", "primaleyes", "primaleyes2", "paweyesnothers",
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
-            "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "vickieyes2",
-            "starcatchermerged", "starcatchermerged_het", 'stareyesmerged', 'stareyesmergedhet', 'frfoxy_merged', 'frfoxy_mergedhet',
+            "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "heterochromiamask",
+            "starcatchermerged", 'stareyesmerged', 'frfoxy_merged', "starcatcher_accs",
             'stormsacc', "meteorcolours",
         ):
             if "lineart" in x and (
@@ -391,12 +391,10 @@ class Sprites:
         for row, colors in enumerate(stareyes10):
             for col, color in enumerate(colors):
                 self.make_group('stareyesmerged', (col, row), f'eyes{color}')
-                self.make_group('stareyesmergedhet', (col, row), f'eyes2{color}')
         
         for row, colors in enumerate(paw_eyes):
             for col, color in enumerate(colors):
                 self.make_group("paweyesnothers", (col, row), f"eyes{color}")
-                self.make_group("paweyesnothers2", (col, row), f"eyes2{color}")
         
         for row, colors in enumerate(primal_eyes):
             for col, color in enumerate(colors):
@@ -406,82 +404,71 @@ class Sprites:
         for row, colors in enumerate(cseye_colors):
             for col, color in enumerate(colors):
                 self.make_group("cs_eyes", (col, row), f"eyes{color}")
-                self.make_group("cs_eyes2", (col, row), f"eyes2{color}")
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
                 self.make_group("eyes", (col, row), f"eyes{color}")
-                self.make_group("eyes2", (col, row), f"eyes2{color}")
 
         for row, colors in enumerate(beetle_eyes):
             for col, color in enumerate(colors):
                 self.make_group('beetleeyes', (col, row), f'eyes{color}')
-                self.make_group('beetleeyes2', (col, row), f'eyes2{color}')
         
         for row, colors in enumerate(vicki_eyes):
             for col, color in enumerate(colors):
                 self.make_group('vickieyes', (col, row), f'eyes{color}')
-                self.make_group('vickieyes2', (col, row), f'eyes2{color}')
         
         for row, colors in enumerate(starcatcher1):
             for col, color in enumerate(colors):
                 self.make_group('starcatchermerged', (col, row), f'eyes{color}')
-                self.make_group('starcatchermerged_het', (col, row), f'eyes2{color}')
         
 
         for row, colors in enumerate(beetle_more):
             for col, color in enumerate(colors):
                 self.make_group('beetlemore', (col, row), f'eyes{color}')
-                self.make_group('beetlemore2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(era_eye_colors):
             for col, color in enumerate(colors):
                 self.make_group('eragonaeyes', (col, row), f'eyes{color}')
-                self.make_group('eragonaeyes2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(towheeeyes):
             for col, color in enumerate(colors):
                 self.make_group('towheeeyes', (col, row), f'eyes{color}')
-                self.make_group('towheeeyes2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(eyesdark):
             for col, color in enumerate(colors):
                 self.make_group('eyesdark', (col, row), f'eyes{color}')
-                self.make_group('dark2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(eyesvivid):
             for col, color in enumerate(colors):
                 self.make_group('eyesvivid', (col, row), f'eyes{color}')
-                self.make_group('vivid2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(neos_eyes):
             for col, color in enumerate(colors):
-                self.make_group('neos_eyes', (col, row), f'neos_eyes{color}')
-                self.make_group('neos_eyes2', (col, row), f'neos_eyes2{color}')
+                self.make_group('neos_eyes', (col, row), f'eyes{color}')
+                self.make_group('neos_eyes2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(flutter_eyes):
             for col, color in enumerate(colors):
-                self.make_group('flutter_eyes', (col, row), f'flutter_eyes{color}')
-                self.make_group('flutter_eyes2', (col, row), f'flutter_eyes2{color}')
+                self.make_group('flutter_eyes', (col, row), f'eyes{color}')
+                self.make_group('flutter_eyes2', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(lamp_eyes):
             for col, color in enumerate(colors):
-                self.make_group('lamp_eyes', (col, row), f'lamp_eyes{color}')
-                self.make_group('lamp_eyes', (col, row), f'lamp_eyes2{color}')
+                self.make_group('lamp_eyes', (col, row), f'eyes{color}')
+                self.make_group('lamp_eyes', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(angel_eyes):
             for col, color in enumerate(colors):
-                self.make_group('eyes_wing', (col, row), f'angel_eyes{color}')
-                self.make_group('eyes2_halo', (col, row), f'angel_eyes2{color}')
+                self.make_group('eyes_wing', (col, row), f'eyes{color}')
+                self.make_group('eyes2_halo', (col, row), f'eyes2{color}')
 
         for row, colors in enumerate(snail_eyes):
             for col, color in enumerate(colors):
-                self.make_group('eyes_snail', (col, row), f'eyes_snail{color}')
+                self.make_group('eyes_snail', (col, row), f'eyes{color}')
                 
         for row, colors in enumerate(freyes1):
             for col, color in enumerate(colors):
                 self.make_group('frfoxy_merged', (col, row), f'eyes{color}')
-                self.make_group('frfoxy_mergedhet', (col, row), f'eyes2{color}')
                 
         eye_colors = [
             ['BERBERID-FLORA', 'RANUNCUL-FLORA', 'CAPPARID-FLORA', 'VIOL-FLORA', 'FUMARI-FLORA', 'PAPAVER-FLORA', 'MAGNOLI-FLORA'],
@@ -506,8 +493,8 @@ class Sprites:
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
-                self.make_group("floraleyes", (col, row), f"floraleyes{color}")
-                self.make_group("floraleyes2", (col, row), f"floraleyes2{color}")
+                self.make_group("floraleyes", (col, row), f"eyes{color}")
+                self.make_group("floraleyes2", (col, row), f"eyes2{color}")
         
         eye_colors = [
             ['BERBERID-AERIAL', 'RANUNCUL-AERIAL', 'CAPPARID-AERIAL', 'VIOL-AERIAL', 'FUMARI-AERIAL', 'PAPAVER-AERIAL', 'MAGNOLI-AERIAL'],
@@ -532,8 +519,8 @@ class Sprites:
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
-                self.make_group("aerialeyes", (col, row), f"aerialeyes{color}")
-                self.make_group("aerialeyes2", (col, row), f"aerialeyes2{color}")
+                self.make_group("aerialeyes", (col, row), f"eyes{color}")
+                self.make_group("aerialeyes2", (col, row), f"eyes2{color}")
         
         eye_colors = [
             ['BERBERID-AQUATIC', 'RANUNCUL-AQUATIC', 'CAPPARID-AQUATIC', 'VIOL-AQUATIC', 'FUMARI-AQUATIC', 'PAPAVER-AQUATIC', 'MAGNOLI-AQUATIC'],
@@ -558,8 +545,8 @@ class Sprites:
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
-                self.make_group("aquaticeyes", (col, row), f"aquaticeyes{color}")
-                self.make_group("aquaticeyes2", (col, row), f"aquaticeyes2{color}")
+                self.make_group("aquaticeyes", (col, row), f"eyes{color}")
+                self.make_group("aquaticeyes2", (col, row), f"eyes2{color}")
         
         eye_colors = [
             ['BERBERID-DEMON', 'RANUNCUL-DEMON', 'CAPPARID-DEMON', 'VIOL-DEMON', 'FUMARI-DEMON', 'PAPAVER-DEMON', 'MAGNOLI-DEMON'],
@@ -584,8 +571,8 @@ class Sprites:
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
-                self.make_group("arideyes", (col, row), f"demoneyes{color}")
-                self.make_group("arideyes2", (col, row), f"demoneyes2{color}")
+                self.make_group("arideyes", (col, row), f"eyes{color}")
+                self.make_group("arideyes2", (col, row), f"eyes2{color}")
 
         # toritemasktwo
         torite_mask_two = [
@@ -1223,6 +1210,8 @@ class Sprites:
         for row, masksthree in enumerate(torite_mask_two2):
             for col, maskthree in enumerate(masksthree):
                 self.make_group('eragonatorite2', (col, row), f"tortiemask{maskthree}")
+                
+        self.make_group('heterochromiamask', (0,0), f"heterochromiamask")
 
         # Define skin colors
         skin_colors = [
@@ -1277,31 +1266,31 @@ class Sprites:
         
         for row, colors in enumerate(skin_colors_magic):
             for col, color in enumerate(colors):
-                self.make_group('skin_magic', (col, row), f"skin_magic{color}")
+                self.make_group('skin_magic', (col, row), f"skin{color}")
         
         for row, colors in enumerate(skin_colors_elemental):
             for col, color in enumerate(colors):
-                self.make_group('skin_elemental', (col, row), f"skin_elemental{color}")
+                self.make_group('skin_elemental', (col, row), f"skin{color}")
         
         for row, colors in enumerate(skin_colors_bingle):
             for col, color in enumerate(colors):
-                self.make_group('skin_bingle', (col, row), f"skin_bingle{color}")
+                self.make_group('skin_bingle', (col, row), f"skin{color}")
 
         for row, colors in enumerate(skin_colors_bingle2):
             for col, color in enumerate(colors):
-                self.make_group('skin_bingle2', (col, row), f"skin_bingle2{color}")
+                self.make_group('skin_bingle2', (col, row), f"skin{color}")
 
         for row, colors in enumerate(skin_colors_math):
             for col, color in enumerate(colors):
-                self.make_group('skin_mathkangaroo', (col, row), f"skin_mathkangaroo{color}")
+                self.make_group('skin_mathkangaroo', (col, row), f"skin{color}")
 
         for row, colors in enumerate(skin_colors_turtle):
             for col, color in enumerate(colors):
-                self.make_group('skin_turtle', (col, row), f"skin_turtle{color}")
+                self.make_group('skin_turtle', (col, row), f"skin{color}")
 
         for row, colors in enumerate(skin_colors_stain):
             for col, color in enumerate(colors):
-                self.make_group('skin_stain', (col, row), f"skin_stain{color}")
+                self.make_group('skin_stain', (col, row), f"skin{color}")
 
         self.load_scars()
         self.load_symbols()
@@ -1694,6 +1683,15 @@ class Sprites:
             ["PEARL BRACELETS", "JEWEL NECKLACE"]
 
         ]
+        
+        starcatcher_data = [
+                ["FULL BANDAGES", "LEFT BANDAGES", "CLAWS"]
+            ]
+        
+        #starcatcher accessories
+        for row, accs in enumerate(starcatcher_data):
+            for col, acc in enumerate(accs):
+                self.make_group("starcatcher_accs", (col, row), f"acc_starcatcher{acc}")
         
         #pride bandanas
         for row, bandanas in enumerate(pride_bandanas_data):

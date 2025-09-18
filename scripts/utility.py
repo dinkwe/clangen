@@ -3189,50 +3189,25 @@ def generate_sprite(
         cs_eyes = copy(angel_eyes) + copy(snail_eyes)
         cs2_eyes = copy(aquatic_eyes) + copy(aerial_eyes) + copy(floral_eyes) + copy(demon_eyes)
         all_cs = copy(cs_eyes) + copy(cs2_eyes)
+        all_extra_eyes = copy(all_cs) + copy(flutter_eyes) + copy(neos_eyes) + copy(lamp_eyes) + ['PRIMAL ARCANE', 'PRIMAL EARTH', 'PRIMAL FIRE', 'PRIMAL ICE',
+                   'PRIMAL LIGHT', 'PRIMAL LIGHTNING', 'PRIMAL NATURE', 'PRIMAL PLAGUE',
+                   'PRIMAL SHADOW', 'PRIMAL WATER', 'PRIMAL WIND']
 
-        if cat.pelt.eye_colour in neos_eyes:
-            eyes = sprites.sprites["neos_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in flutter_eyes:
-            eyes = sprites.sprites["flutter_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in lamp_eyes:
-            eyes = sprites.sprites["lamp_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in angel_eyes:
-            eyes = sprites.sprites["angel_eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in snail_eyes:
-            eyes = sprites.sprites["eyes_snail" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in aerial_eyes:
-            eyes = sprites.sprites["aerialeyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in aquatic_eyes:
-            eyes = sprites.sprites["aquaticeyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in demon_eyes:
-            eyes = sprites.sprites["demoneyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        elif cat.pelt.eye_colour in floral_eyes:
-            eyes = sprites.sprites["floraleyes" + cat.pelt.eye_colour + cat_sprite].copy()
-        else:
-            eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-
-        if cat.pelt.eye_colour2 is not None:
-            if cat.pelt.eye_colour2 in neos_eyes:
-                eyes.blit(sprites.sprites["neos_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in flutter_eyes:
-                eyes.blit(sprites.sprites["flutter_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in lamp_eyes:
-                eyes.blit(sprites.sprites["lamp_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in angel_eyes:
-                eyes.blit(sprites.sprites["angel_eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in aerial_eyes:
-                eyes.blit(sprites.sprites["aerialeyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in aquatic_eyes:
-                eyes.blit(sprites.sprites["aquaticeyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in demon_eyes:
-                eyes.blit(sprites.sprites["demoneyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            elif cat.pelt.eye_colour2 in floral_eyes:
-                eyes.blit(sprites.sprites["floraleyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
-            else:
-                eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+        eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
                 
         if age != "newborn" or cat.pelt.eye_colour not in cs_eyes:
             new_sprite.blit(eyes, (0, 0))
+            
+        if cat.pelt.eye_colour2 is not None:
+            if cat.pelt.eye_colour2 in all_extra_eyes:
+                eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+            else:
+                #eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
+                eyes2 = sprites.sprites["eyes" + cat.pelt.eye_colour2 + cat_sprite].copy()
+                eyes2.blit(sprites.sprites["heterochromiamask" + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
+                # Add patches onto cat.
+                new_sprite.blit(eyes2, (0, 0))
+
 
         if not scars_hidden:
             for scar in cat.pelt.scars:
@@ -3288,27 +3263,8 @@ def generate_sprite(
                           'STAINCYAN', 'STAINLIME', 'STAINTURQUOISE', 'STAINGREEN', 'STAINBLUEGREEN', 'STAINPEACOCK']
 
 
-        if cat.pelt.skin in ['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
-                    'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'RED']:
-            new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['FLAMES', 'FLOWERS', 'LIGHT1', 'SPARKLES', 'INK', 'MIST', 'MAGMA', 'SMOKE', 'PURPLEFLAMES',
-                    'INK2', 'THUNDERSTORM', 'LIGHT2', 'DEATHBERRIES', 'SKELETON', 'FLESH', 'POWERLESS1', 'POWERLESS2', 'BUBBLES']:
-            new_sprite.blit(sprites.sprites["skin_magic" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['GREENCHIMERA', 'CORALCHIMERA', 'FROSTGLOW','THIRDEYE', 'CRYSTALS', 'FOXTAIL', 'CLOUDS', "BATWINGS", "SPOOKYCRYSTALS", "TRANSCLOUDS", 'MAGEGIFT', 'DEVILWINGS', 'SPARROWGIFT', 'DOVEWINGS', 'ANTLERS', 'BLUECORALCHIMERA', 'ICECRYSTALS', 'BLACKFOX']:
-            new_sprite.blit(sprites.sprites["skin_bingle" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE2', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK', 'BRIGHTORANGE',
-                         'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']:
-            new_sprite.blit(sprites.sprites["skin_mathkangaroo" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE']:
-            new_sprite.blit(sprites.sprites["skin_bingle2" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in skin_sprites_stain:
-            new_sprite.blit(sprites.sprites["skin_stain" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in skin_sprites_turtle:
-            new_sprite.blit(sprites.sprites["skin_turtle" + cat.pelt.skin + cat_sprite], (0, 0))
-        elif cat.pelt.skin in ['FLAMES2', 'BUBBLES2', 'VINES', 'WIND', 'LIGHTNING', 'BLUEFLAMES', 'FROZEN', 'STONE', 'TREE',
-                    'PURPLESPARKS', 'PURPLEGLOW', 'SHADOW', 'YELLOWGLOW', 'FAEMANE', 'GREENGLOW', 'SHADOWBEAST', 'SPARKLES2', 'ROOTS']:
-            new_sprite.blit(sprites.sprites["skin_elemental" + cat.pelt.skin + cat_sprite], (0, 0))
-       
+        new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
+        
         if not scars_hidden:
             for scar in cat.pelt.scars:
                 if scar in cat.pelt.scars2:
