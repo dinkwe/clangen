@@ -3413,6 +3413,10 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_storm" + accessory + cat_sprite], (0, 0)
                             )
+                        elif accessory in cat.pelt.starcatcher_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_starcatcher" + accessory + cat_sprite], (0, 0)
+                            )
 
         # Apply fading fog
         if (
