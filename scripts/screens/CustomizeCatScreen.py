@@ -360,7 +360,7 @@ class CustomizeCatScreen(Screens):
                               + Pelt.booties + Pelt.randomaccessories + Pelt.sailormoon + Pelt.beetle_feathers
                               + Pelt.beetle_accessories + Pelt.chime_accessories+ Pelt.lantern_accessories + Pelt.neckerchiefs
                               + Pelt.witchhats + Pelt.pokemon_accessories + Pelt.superartsi_accessories + Pelt.wild_accessories2
-                              + Pelt.pride_bandanas + Pelt.storms_accessories))
+                              + Pelt.pride_bandanas + Pelt.storms_accessories + Pelt.starcatcher_accessories))
             if self.sparkle_cats:
                 self.accessories += list(dict.fromkeys(Pelt.colorsplash_accessories))
         elif self.acc_filter == "bones":
