@@ -373,7 +373,7 @@ class CustomizeCatScreen(Screens):
             self.accessories += ["MOTH WINGS","ROSY MOTH WINGS","MORPHO BUTTERFLY","MONARCH BUTTERFLY","CICADA WINGS","BLACK CICADA", "ORANGE BUTTERFLY", "CYAN BUTTERFLY"]
         elif self.acc_filter == "stuff":
             self.accessories = list(
-                dict.fromkeys(Pelt.stuff_accessories + Pelt.crafted_accessories + Pelt.chime_accessories + Pelt.lantern_accessories + Pelt.storms_accessories))
+                dict.fromkeys(Pelt.stuff_accessories + Pelt.crafted_accessories + Pelt.chime_accessories + Pelt.lantern_accessories + Pelt.storms_accessories + Pelt.starcatcher_accessories))
             self.accessories += ["DICE", "GOLDEN EARRINGS"]
         elif self.acc_filter == "plants":
             self.accessories = list(
@@ -1221,8 +1221,8 @@ class CustomizeCatScreen(Screens):
             setattr(self.the_cat.pelt, attribute, selected_option)
             self.update_ui_elements()
         elif attribute == "tint":
-            if selected_option == "None":
-                    self.the_cat.pelt.tint = ["none"]
+            if selected_option == "none":
+                self.the_cat.pelt.tint = ["none"]
             elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.tint = [selected_option]
             else:
@@ -1233,7 +1233,7 @@ class CustomizeCatScreen(Screens):
                 else:
                     self.the_cat.pelt.tint = [selected_option]
         elif attribute == "white_patches_tint":
-            if selected_option == "None":
+            if selected_option == "none":
                     self.the_cat.pelt.white_patches_tint = ["none"]
             elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.white_patches_tint = [selected_option]
@@ -1245,7 +1245,7 @@ class CustomizeCatScreen(Screens):
                 else:
                     self.the_cat.pelt.white_patches_tint = [selected_option]
         elif attribute == "tortie_tint":
-            if selected_option == "None":
+            if selected_option == "none":
                     self.the_cat.pelt.tortie_tint = ["none"]
             elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.tortie_tint = [selected_option]
