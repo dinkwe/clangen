@@ -2903,6 +2903,21 @@
             "zero": "vulpix",
             "many": "vulpixes",
             "one": "vulpix"
+        },
+        "FULL BANDAGES": {
+            "zero": "full bandages",
+            "many": "full bandages",
+            "one": "full bandages"
+        },
+        "LEFT BANDAGES": {
+            "zero": "left bandages",
+            "many": "left bandages",
+            "one": "left bandage"
+        },
+        "CLAWS": {
+            "zero": "dog claws",
+            "many": "dog claws",
+            "one": "dog claw"
         }
     }
 }
