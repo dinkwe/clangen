@@ -1902,7 +1902,7 @@ class Pelt:
     skin_colors_bingle2 = ['SHADOWSELF', 'FIRETAIL', 'BLUEFIRETAIL', 'SCORPION', 'SNOWFOX', 'KITSUNE', 'FENNECKITSUNE',
                            '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016']
 
-    skin_sprites_math = ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK',
+    skin_sprites_math = ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE2', 'NEONGREEN', 'BLUESPECKLED', 'BRIGHTPINK',
                          'BRIGHTORANGE', 'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE', 'WHITE', 'BLACK2', 'AQUA',
                          'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']
 

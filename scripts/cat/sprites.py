@@ -1246,7 +1246,7 @@ class Sprites:
         ]
 
         skin_colors_math = [
-            ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE', 'NEONGREEN', 'BLUESPECKLED'],
+            ['LIGHTPURPLE', 'BLUE2', 'DARKPURPLE', 'DARKBLUE2', 'NEONGREEN', 'BLUESPECKLED'],
             ['BRIGHTPINK', 'BRIGHTORANGE', 'MAGENTA', 'PINKBLUE', 'PURPLEYELLOW', 'BLUEORANGE'],
             ['WHITE', 'BLACK2', 'AQUA', 'DARKGREEN', 'BRIGHTYELLOW', 'NULL1']
         ]

@@ -2615,7 +2615,7 @@ class CustomizeFilterWindow(UIWindow):
         self.possible_tags = {
             "eyes": ["all", "pink", "red", "orange", "brown", "yellow", "chartreuse", "green", "cyan", "light blue", "dark blue", "indigo", "violet", "black", "gray", "silver", "white",
                      "angel", "aquatic", "demon", "floral", "flutter", "lamp", "neos", "primal", "snail"],
-            "pelts": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "cyan", "blue", "purple", "black2"],
+            "pelts": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"],
             "acc": ["all", "bones", "bugs", "stuff", "plants", "wild", "clothes", "bows", "collars", "feathers","disabilities", "animals","colorsplash", "games"],
             "white": ["all","little", "mid", "high", "mostly"],
             "tortie": ["all", "ginger", "black", "white", "brown", "red", "orange", "yellow", "green", "blue", "purple", "black2"]
