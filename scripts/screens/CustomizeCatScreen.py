@@ -127,14 +127,14 @@ class CustomizeCatScreen(Screens):
         self.pelt_name_dropdown = None
         
         self.base_game_pelts = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Speckled",
-                           "Rosette", "SingleColour", "Smoke", "Singlestripe", "Bengal", "Marbled"]
+                           "Rosette", "SingleColour", "Smoke", "Singlestripe", "Bengal", "Marbled", "TwoColour"]
         self.base_game_colors = ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
                             'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
                             'CHOCOLATE']
         self.base_game_patterns = ["tabby", "ticked", "mackerel", "classic", "sokoke", "agouti", "speckled",
                            "rosette", "single", "smoke", "singlestripe", "bengal", "marbled"]
         
-        self.special_colors_masked = Pelt.mimi_colours + Pelt.ster_colours + Pelt.silly_colours + Pelt.dance_colours + Pelt.cs_colors + Pelt.cs2_colors + Pelt.cs3_colors + Pelt.hive_colors + Pelt.kris_colors + Pelt.meteor_colors + Pelt.sparkle_colors
+        self.special_colors_masked = Pelt.mimi_colours + Pelt.ster_colours + Pelt.silly_colours + Pelt.dance_colours + Pelt.cs_colors + Pelt.cs2_colors + Pelt.cs3_colors + Pelt.hive_colors + Pelt.kris_colors + Pelt.meteor_colors + Pelt.sparkle_colors + Pelt.potato_colors
         self.special_colors_nomasked = Pelt.minecraft_colors + Pelt.anju_colors + Pelt.heta_colors + Pelt.pastel_colors + Pelt.pepper_colors
 
         self.white_patches = None
@@ -287,7 +287,7 @@ class CustomizeCatScreen(Screens):
         if self.eye_filter == "all":
             self.eye_colours = copy(Pelt.eye_colours)
             if self.sparkle_cats:
-                self.eye_colours += copy(Pelt.flutter_eyes) + copy(Pelt.lamp_eyes) + copy(Pelt.neos_eyes) + copy(Pelt.angel_eyes) + copy(Pelt.snail_eyes)+ copy(Pelt.primal_eyes)
+                self.eye_colours += copy(Pelt.flutter_eyes) + copy(Pelt.lamp_eyes) + copy(Pelt.neos_eyes) + copy(Pelt.angel_eyes) + copy(Pelt.snail_eyes) + copy(Pelt.primal_eyes)
                 if self.cs_eyes:
                     self.eye_colours += copy(Pelt.aerial_eyes) + copy(Pelt.demon_eyes) + copy(Pelt.floral_eyes) + copy(Pelt.aquatic_eyes)
         elif self.eye_filter == "red":
@@ -389,6 +389,9 @@ class CustomizeCatScreen(Screens):
             self.accessories = list(
                 dict.fromkeys(Pelt.beetle_feathers))
             self.accessories +=["RED FEATHERS","BLUE FEATHERS","JAY FEATHERS","GULL FEATHERS","SPARROW FEATHERS","ROAD RUNNER FEATHER"]
+        elif self.acc_filter == "disabilities":
+            self.accessories = list(
+                dict.fromkeys(Pelt.toy_accessories + Pelt.blankie_accessories + Pelt.flag_accessories + Pelt.wheels + Pelt.booties))
         elif self.acc_filter == "animals":
             self.accessories = list(
                 dict.fromkeys(Pelt.smallAnimal_accessories + Pelt.aliveInsect_accessories + Pelt.snake_accessories))
@@ -430,7 +433,7 @@ class CustomizeCatScreen(Screens):
                     self.pelt_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
                                      "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
                                      "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
-                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
                                      "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
                                      "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
                                      "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
@@ -445,7 +448,9 @@ class CustomizeCatScreen(Screens):
                                      "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
                                      "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
                                      "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
-                                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
+                                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA", 'SUNLIGHT', 'CORALS', 'BROWNGOLD', 'GOLDSUN', 'ORCHID-P', 'PERIWINKLE', 'PITCHNIGHT', 'BLACKWHITE',
+                                     'METAL', 'METALIC', 'STONE', 'STORM', 'PITCHBLACK', 'DARKHEATHER', 'WARMWHITE', 'PLATINUM',
+                                     'SILVERROSE', 'HEATHER', 'LAVENDER', 'OAK', 'DEEPCARAMEL']
             else:
                 self.pelt_colours = copy(Pelt.pelt_colours)
                
@@ -460,7 +465,7 @@ class CustomizeCatScreen(Screens):
                                       "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
                                       "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
                                       "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
-                                      "CREAMSILVER"]
+                                      "CREAMSILVER", 'SUNLIGHT', 'CORALS', 'BROWNGOLD', 'GOLDSUN']
             else:
                 self.pelt_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA"]
         elif self.pelt_filter == "black":
@@ -471,7 +476,8 @@ class CustomizeCatScreen(Screens):
                      "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
                      "LIGHTBLUE", "BLUESTER", "DARKBLUE", "LIGHTLILAC", "LILACSILLY", "DARKLILAC", "DARKASH", "EBONY",
                      "BLACKPURPLE", "BLACKBLUE", "GREYSTAR", "DARKGREYSTAR", "GREYMETEOR", "VIOLA", "FUMARIA",
-                     "PAPAVERA", "MAGNOLIA"]
+                     "PAPAVERA", "MAGNOLIA", 'ORCHID-P', 'PERIWINKLE', 'PITCHNIGHT', 'BLACKWHITE',
+                     'METAL', 'METALIC', 'STONE', 'STORM', 'PITCHBLACK']
             else:
                 self.pelt_colours = ["GREY", "DARKGREY", "GHOST", "BLACK"]
         elif self.pelt_filter == "white":
@@ -481,7 +487,8 @@ class CustomizeCatScreen(Screens):
                 self.pelt_colours = ["WHITE", "PALEGREY", "SILVER","WHITESTER", "PALEGREYSTER",
                      "PALESLATE", "PALEBLUE", "PALELILAC", "PALEASH", "PALEFAWN", "PALECREAM", "SILVERMIMI",
                      "SILVERGREY", "SILVERBLUE", "SILVERSLATE", "SILVERFAWN", "SILVERCREAM", "SILVERMETEOR",
-                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA"]
+                     "BERBERIDA", "RANUNCULA", "CAPPARIDA", "POLYGALA", 'DARKHEATHER', 'WARMWHITE', 'PLATINUM',
+                     'SILVERROSE']
             else:
                 self.pelt_colours = ["WHITE", "PALEGREY", "SILVER"]
         elif self.pelt_filter == "brown":
@@ -494,7 +501,7 @@ class CustomizeCatScreen(Screens):
                      "COPPERMIMI", "DARKFAWN", "FAWN", "LIGHTFAWN", "SILVERCHOCOLATE", "SILVERCINNAMON", "BLUEBROWN",
                      "GHOSTBROWN", "NAVYBROWN", "DUSKBROWN", "TANSPOTTED", "EARTHSPOTTED", "BROWN-TAN", "RESEDA",
                      "CISTA", "NYMPHEA", "DIPTEROCARPA", "DILLENIA", "AMYGDALA", "SAMYDA", "BIXA", "TEREBINTHA",
-                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA"]
+                     "MELIA", "LEGUMINOSAE", "CAMELLIA", "CACTACEA", 'HEATHER', 'LAVENDER', 'OAK', 'DEEPCARAMEL']
             else:
                 self.pelt_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE"]
                 
@@ -516,7 +523,7 @@ class CustomizeCatScreen(Screens):
             if self.pelt_filter == "black2":
                 self.pelt_colours = copy(Pelt.black_colors)
         elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
-            #masked sparkle pelts: all colorsplash, hive, kris, meteor, sparkle
+            #masked sparkle pelts: all colorsplash, hive, kris, meteor, sparkle, potato
             if self.pelt_filter == "red":
                 self.pelt_colours = ["PINKGREY", "REDGREY", "PALEPINKPURPLE","BUBBLEGUM", "REDSTAIN", "ROSE",
                                       "REDBLUE", "REDS", "RED-ORANGES", "PINKREDS", "RUSTYS", "REDCYANS","BROWNREDS",
@@ -524,19 +531,24 @@ class CustomizeCatScreen(Screens):
                                       "REDK", "PINKH", "ROSEH", "DARKPINKH", "REDH", "ANONA", "MYRTA", "TILIA", "PITTOSPORA", "MALVA",
                                       "SARRACENIA", "DROSERA", "HIPPOCASTANA", "TROPAEOLA", "PASSIFLORA", "OLACA", "CRUCIA", "LOASA",
                                       "MALPIGHIA", "PAEONIA", "ZINGIBERA", "ALISMA", "POLYGONA", "ROSA", "LILIA", "JUNCA", "VERBENA",
-                                      "HAEMODORA", "COMMELINA", "COLCHICA"]
+                                      "HAEMODORA", "COMMELINA", "COLCHICA", 'RED-P', 'LIGHTRED-P', 'ROSE-P', 'CHERRY', 'PLINK', 'PALEROSES',
+                                      'CRIMSON', 'BURNTORANGE', 'GARNET', 'RUBY', 'TINTEDROSE', 'RUST', 'ROSENIGHT', 'DEEPFLARE', 'PINK-P',
+                                      'LOLIPOP', 'BUBBLEGUM-P', 'FADEDMAGENTA', 'ROSETINT', 'DEEPROSE', 'HOTPINK', 'FADEDROSE', 'MAGENTA-P']
             if self.pelt_filter == "orange":
                 self.pelt_colours = ["CREAMMETEOR", "REVERSESUN", "SUNSET", "OURPLE", "SUNRISE", "ORANGEH", "MESEMBRYA", "VITA",
-                     "MARCGRAVIA", "CLUSIA", "BOMBA", "GERANIA", "COMPOSITA", "RHAMNA", "OXALIDA", "ARALIA"]
+                     "MARCGRAVIA", "CLUSIA", "BOMBA", "GERANIA", "COMPOSITA", "RHAMNA", "OXALIDA", "ARALIA",
+                     'ORANGE-P', 'LIGHTORANGE-P', 'RUSTY', 'FLARE']
             if self.pelt_filter == "yellow":
                 self.pelt_colours = ["SUNYELLOW", "FROZENSUN","DARKYELLOWS", "SUNNYS", "BANANABERRY", "GOLDH",
-                                     "YELLOWH", "SAXIFRAGA", "LINA", "CAPRIFOLIA", "CARYOPHYLLA"]
+                                     "YELLOWH", "SAXIFRAGA", "LINA", "CAPRIFOLIA", "CARYOPHYLLA",
+                                     'LEMON', 'PALEYELLOW', 'GOLD-P', 'SUNCLOUD', 'DARKYELLOW', 'SUNRISES']
             if self.pelt_filter == "green":
                 self.pelt_colours = ["LIGHTLIME","GREENBROWN", "GREENGOLD", "TREE", "GREENREDS", "GREENORANGES", "WHITEGREENS", "GREENDARKREDS",
                     "RUSTYGREEN", "GREEN-NAVY", "GREENH", "DARKGREENH", "DARKMOSS", "JASMINEA", "LYTHRA", "ACANTHA",
                     "CRASSULA", "RUBIA", "HYPERICA", "LORANTHA", "AURANTIA", "RHIZOPHORA", "BORAGINA", "TAMARICA",
                     "MELASTOMA", "LECYTHIDA", "VALERIANA", "COMBRETA", "APOCYNA", "DIPSA", "STYLIDIA", "RUTA", "SOLANA",
-                    "PLUMBAGINA"]
+                    "PLUMBAGINA", 'OLIVE', 'PALEGREEN', 'FADEDGREEN', 'SWAMP', 'GREENMINT', 'DARKLEAF', 'MOSSES',
+                    'EVERGREEN', 'MYTHICAL', 'LEAF', 'COOLGREEN', 'MINT', 'MEADOWS', 'GREEN-P']
             if self.pelt_filter == "blue":
                 self.pelt_colours = ["BLUECREAM", "ICEBLUE", "CSBLUE2", "NAVYBLUE", "ICEWHITE","CERULEAN", "GHOSTBLUE",
                                    "OCEAN", "TEAL", "CYANPINKG", "MINTBLUES", "BLACKBLUES", "SILVERNAVY", "BLACK-BROWN",
@@ -544,15 +556,20 @@ class CustomizeCatScreen(Screens):
                                    "BRIGHTBLUEK", "TEALH", "BLUEH", "NAVYH", "LAMIA", "BEGONIA", "GROSSULARIA", "GENTIANA", "ERICA",
                                    "CAMPANULA", "POMA", "BIGNONIA", "AMARANTA", "VACCINIA", "ONAGRA", "PRIMULA", "SAPOTA", "LOBELIA",
                                    "MYRSINA", "PORTULA", "PLANTAGINA", "ELAEAGNA", "OLEA", "POLEMONIA", "ORCHIDA", "EUPHORBIA",
-                                   "SCROPHULARIA", "CONVOLVULA", "MUSA", "UTRICULARIA", "UMBELLA", "PROTEA"]
+                                   "SCROPHULARIA", "CONVOLVULA", "MUSA", "UTRICULARIA", "UMBELLA", "PROTEA", 'AZUL', 'OCEAN-P',
+                                   'SKY', 'CORNFLOWER', 'RAINBOW-P', 'FADEDSKY', 'DEEPSEA', 'PALEWINKLE', 'SEAFOAM', 'CLOUDRIVER',
+                                   'DARKMINT-P', 'BLUE-P', 'FADEDBLUE', 'SKYBLUE']
             if self.pelt_filter == "purple":
                 self.pelt_colours = ["PURPLECREAM", "INDIGOBLUSH", "VIOLETBLUSH", "MAGENTA",
                      "MULBERRY", "GRAPE", "CRYSTAL", "ORCHID", "THISTLE", "INDIGOREDS", "WARM-BLUE", "INDIGO-VIOLET", "INDIGOK", "DARKSUNSET", "INDIGOH", "PURPLEH", "VIOLETH",
                      "PASTELPURPLEH", "BROWN-PURPLE", "PURPLESWIRL", "GOODENIA", "THYMELA", "URTICA", "OROBANCHA",
                      "HYDROPHYLLA", "AMARYLLIDA", "CONIFERA", "PHYTOLACCA", "IRIDA", "DIOSCORA", "GESNERIA", "SANTALA",
-                     "HYDROCHARIDA", "NYCTAGINA", "BROMELIA", "SMILA", "EBENA"]
+                     "HYDROCHARIDA", "NYCTAGINA", "BROMELIA", "SMILA", "EBENA", 'PASTELBOW', 'DEEPWINKLE',' WINKLE',
+                     'THISTLE-P', 'UNICORN', 'DEEPTHISTLE', 'VIOLET', 'BRIGHTERTHYST', 'PURPLEISH', 'PALEPURPLE',
+                     'BLOSSOMS', 'BLOOMS',  'NAVY', 'DARKPURPLE', 'BRIGHTPURPLE']
             if self.pelt_filter == "black2":
-                self.pelt_colours = ["REVERSERAINBOW", "RAINBOW", "SHADOW"]
+                self.pelt_colours = ["REVERSERAINBOW", "RAINBOW", "SHADOW", 'MIDNIGHT', 'MIDNIGHTGREEN', 'MIDNIGHTBLUE', 'MIDNIGHTCYAN',
+                    'BRIGHTERNIGHT', 'MIDNIGHTPURPLE', 'MIDNIGHTRED', 'PITCHLEAF', 'MIDNIGHTPINK', 'MIDNIGHTYELLOW']
         else:
             self.pelt_colours = copy(Pelt.pelt_colours)
                 
@@ -581,7 +598,7 @@ class CustomizeCatScreen(Screens):
                         self.tortie_colours = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
                                      "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
                                      "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
-                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
                                      "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
                                      "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
                                      "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
@@ -728,7 +745,7 @@ class CustomizeCatScreen(Screens):
                         self.tortie_colours2 = ["CREAM", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "SIENNA",
                                      "SUNSHINE", "BRONZE", "LIGHTCREAM", "DANCECREAM", "DARKCREAM",
                                      "DARKGOLD", "GOLD", "LIGHTGOLD", "PALEGOLD", "DARKORANGE", "ORANGE", "LIGHTORANGE", "PALEORANGE",
-                                     "PALEGINGERMIrealistic_colorsMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
+                                     "PALEGINGERMIMI", "LIGHTGINGER", "GINGERMIMI", "DARKGINGERMIMI", "RUSSET", "DARKRED", "REDMIMI",
                                      "LIGHTRED", "PALERED", "SILVERGOLD", "SILVERORANGE", "SILVERRED", "YELLOWBROWN", "BANANAS",
                                      "CREAMSILVER", "GREY", "DARKGREY", "GHOST", "BLACK", "LIGHTGREY", "GREYSTER",
                                      "DARKGREYSTER", "BLACKSTER", "OBSIDIANSTER", "GHOSTSTER", "LIGHTSLATE", "SLATE", "DARKSLATE",
@@ -1217,7 +1234,7 @@ class CustomizeCatScreen(Screens):
             self.update_ui_elements()
         elif attribute == "tint":
             if selected_option == "none":
-                    self.the_cat.pelt.tint = ["none"]
+                self.the_cat.pelt.tint = ["none"]
             elif not game_setting_get("multiple tints"):
                 self.the_cat.pelt.tint = [selected_option]
             else:

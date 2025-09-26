@@ -139,7 +139,7 @@ class Cat:
         "mature", "apologetic", "salty", "whiny", "spicy", "bubbly", "picky", "cheeky", "shy", "fearless", "skittish",
         "self-conscious", "impressionable", "high-spirited", "crybaby", "tiny", "morbid", "obedient", "colorful",
         "zoomy", "clingy", "curious", "slug", "defiant", "sinister", "prim", "tender", "jokester", "wild", "bright",
-        "earnest", "rowdy", "sloppy", "complex", "emotional", "protective", "bossy"
+        "earnest", "rowdy", "sloppy", "complex", "emotional", "protective", "bossy", "bright"
     ]
 
     fem_attraction = [
