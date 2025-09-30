@@ -3265,7 +3265,7 @@ def generate_sprite(
                 new_sprite.blit(eyes, (0, 0))
         # draw skin and scars2
         new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
-       
+        blendmode = pygame.BLEND_RGBA_MIN
         if not scars_hidden:
             for scar in cat.pelt.scars:
                 if scar in cat.pelt.scars2:
