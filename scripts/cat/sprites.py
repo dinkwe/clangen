@@ -191,8 +191,8 @@ class Sprites:
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
             "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "heterochromiamask",
             "starcatchermerged", 'stareyesmerged', 'frfoxy_merged', "starcatcher_accs",
-            'stormsacc', "meteorcolours",
-            'main_markings', 'markings_inside', 'overfur', 'underfur', 'white_markings'
+            'stormsacc', "meteorcolours"
+            #'main_markings', 'markings_inside', 'overfur', 'underfur', 'white_markings'
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -997,7 +997,8 @@ class Sprites:
         for row, colors in enumerate(potato_color_categories):
             for col, color in enumerate(colors):
                 for color_type in potato_color_types:
-                    self.make_group(color_type, (col, row), f"{color_type[:-7]}{color}")
+                    category = color_type[7:]
+                    self.make_group(color_type, (col, row), f"{category[:-7]}{color}")
 
         minecraft_color_types = ['minecraftagouticolours', 'minecraftbengalcolours', 'minecraftclassiccolours', 'minecraftmackerelcolours', 'minecraftmarbledcolours', 'minecraftrosettecolours',
             'minecraftsinglecolours', 'minecraftsokokecolours', 'minecraftspeckledcolours', 'minecrafttabbycolours', 'minecrafttickedcolours', 'minecraftsmokecolours', 'minecraftsinglestripecolours']
