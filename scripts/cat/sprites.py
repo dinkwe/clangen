@@ -134,6 +134,9 @@ class Sprites:
             "singlecolours", "speckledcolours", "tabbycolours", "bengalcolours", "marbledcolours",
             "rosettecolours", "smokecolours", "tickedcolours", "mackerelcolours", "classiccolours",
             "sokokecolours", "agouticolours", "singlestripecolours", "maskedcolours",
+            "potato_singlecolours", "potato_speckledcolours", "potato_tabbycolours", "potato_bengalcolours", "potato_marbledcolours",
+            "potato_rosettecolours", "potato_smokecolours", "potato_tickedcolours", "potato_mackerelcolours", "potato_classiccolours",
+            "potato_sokokecolours", "potato_agouticolours", "potato_singlestripecolours", "potato_maskedcolours",
             "manedcolours", "ocelotcolours", "lynxcolours", "abyssiniancolours", "cloudedcolours", "dobermancolours", "ghosttabbycolours", "merlecolours", "monarchcolours", "oceloidcolours", "pinstripetabbycolours", "snowflakecolours", "royalcolours", "bobcatcolours", "cheetahcolours",
             "shadersnewwhite", "lightingnew", "pokemon",
             "whitepatches", "minkswhite", "voithexpatches", "exoticwhitepatches", "tortiepatchesmasks", "minkstorties",
@@ -188,6 +191,7 @@ class Sprites:
             "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "heterochromiamask",
             "starcatchermerged", 'stareyesmerged', 'frfoxy_merged', "starcatcher_accs",
             'stormsacc', "meteorcolours",
+            'main_markings', 'markings_inside', 'overfur', 'underfur', 'white_markings'
         ):
             if "lineart" in x and (
                 constants.CONFIG["fun"]["april_fools"]
@@ -196,6 +200,15 @@ class Sprites:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
             else:
                 self.spritesheet(f"sprites/{x}.png", x)
+        
+        overfur = [['BASIC', 'BENGAL', 'SOLID', 'TABBY', 'SMOKE', 'WOLF1', 'WOLF2', 'DOT']]
+        underfur = [['BASIC', 'BENGAL', 'SOLID', 'TABBY', 'WOLF', 'DOT']]
+        markings = [['ABYSSINIAN', 'AGOUT', 'BENGAL', 'BIRCHTABBY', 'BOBCAT', 'BRINDLE', 'CALIISOKOKE', 'CALIISPECKLED', 'CHEETAH', 'CIRCLETABBY'],
+                     ['CLASSIC', 'CLOUDED', 'COLOURPOINT', 'DALMATION', 'DOBERMAN', 'DOT', 'DOTFADE', 'FINLEAPPATCHES', 'GHOSTTABBY', 'KINTSUGI'],
+                     ['LYNX', 'LYNXPOINT', 'MACKEREL', 'MANED', 'MARBLED', 'MASKED', 'MERLE', 'METEOR', 'MONARCH', 'NCRESTEDCARCARA'],
+                     ['OCELOID', 'OCELOT', 'PINSTRIPETABBY', 'ROSETTE', 'ROYAL', 'SINGLE', 'SINGLESTRIPE', 'SMOKE', 'SMOKEPOINT', 'SNOWFLAKE'],
+                     ['SOKOKE', 'SPECKLED', 'SPOTS', 'TABBY', 'TICKED', 'WILDCAT', 'WOLF']]
+        white_markings = [['BASE', 'WOLF']]
 
         # Line art
         self.make_group("lineart", (0, 0), "lines")
@@ -914,11 +927,11 @@ class Sprites:
         ]
         
         potato_color_categories = [ 
-            ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'MIDNIGHT', 'AZUL', 'SKY', 'RED-P', 'ORANGE-P',
+            ['WHITE2', 'PALEGREY2', 'SILVER2', 'GREY2', 'DARKGREY2', 'GHOST2', 'BLACK2', 'MIDNIGHT', 'AZUL', 'SKY', 'RED-P', 'ORANGE-P',
              'LIGHTRED-P', 'PASTELBOW', 'DEEPWINKLE', 'SUNLIGHT', 'MIDNIGHTGREEN', 'WINKLE'],
-            ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'ROSE-P', 'CHERRY', 'CORNFLOWER', 'THISTLE-P',
+            ['CREAM2', 'PALEGINGE2R', 'GOLDEN2', 'GINGER2', 'DARKGINGER2', 'SIENNA2', 'ROSE-P', 'CHERRY', 'CORNFLOWER', 'THISTLE-P',
              'LIGHTORANGE-P', 'LEMON', 'OLIVE', 'RAINBOW-P', 'MIDNIGHTBLUE', 'CORALS', 'MIDNIGHTCYAN', 'UNICORN'],
-            ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE', 'HEATHER', 'LAVENDER', 'FADEDSKY',
+            ['LIGHTBROWN2', 'LILAC2', 'BROWN2', 'GOLDEN-BROWN2', 'DARKBROWN2', 'CHOCOLATE2', 'HEATHER', 'LAVENDER', 'FADEDSKY',
              'DEEPTHISTLE', 'PALEYELLOW', 'GOLD-P', 'RUSTY', 'PLINK', 'DEEPSEA', 'PALEWINKLE', 'BRIGHTERNIGHT', 'PALEROSES'],
             ['BROWNGOLD', 'DARKHEATHER', 'FLARE', 'SEAFOAM', 'ORCHID-P', 'VIOLET', 'FADEDGREEN', 'OAK', 'PALEGREEN', 'PERIWINKLE',
              'CRIMSON', 'BURNTORANGE', 'GARNET', 'BRIGHTERTHYST', 'SWAMP', 'MIDNIGHTPURPLE', 'PURPLEISH', 'CLOUDRIVER'],
@@ -930,7 +943,23 @@ class Sprites:
              'STORM', 'PITCHBLACK', 'GREEN-P', 'MAGENTA-P', 'DARKYELLOW', 'MIDNIGHTYELLOW', 'DEEPCARAMEL', 'SUNRISES']
         ]
         
-        potato_color_types = ["singlecolours",
+        potato_color_types = ["potato_singlecolours",
+            "potato_tabbycolours",
+            "potato_marbledcolours",
+            "potato_rosettecolours",
+            "potato_smokecolours",
+            "potato_tickedcolours",
+            "potato_speckledcolours",
+            "potato_bengalcolours",
+            "potato_mackerelcolours",
+            "potato_classiccolours",
+            "potato_sokokecolours",
+            "potato_agouticolours",
+            "potato_singlestripecolours",
+            "potato_maskedcolours"]
+
+        color_types = [
+            "singlecolours",
             "tabbycolours",
             "marbledcolours",
             "rosettecolours",
@@ -944,9 +973,7 @@ class Sprites:
             "agouticolours",
             "singlestripecolours",
             "maskedcolours",
-            "meteorcolours"]
-
-        color_types = [
+            "meteorcolours",
             "manedcolours", "ocelotcolours",
             "lynxcolours", "royalcolours", "abyssiniancolours", "cloudedcolours", "stainvoithex",
             "dobermancolours", "ghosttabbycolours", "merlecolours", "monarchcolours",
