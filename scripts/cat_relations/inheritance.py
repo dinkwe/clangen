@@ -714,6 +714,44 @@ class Inheritance:
         blood_parents = self.get_blood_parents(relevant_cat)
         no_blood_parents = self.get_adoptive_parents(relevant_cat)
         return blood_parents + no_blood_parents
+    
+    def get_past_lives (self, cat=None) -> list:
+        """Returns a list of IDs which are past lives to the cat, according to the inheritance hierarchy.
+        :param cat: The cat whose parents you want to return"""
+        relevant_cat = self.cat
+        past_lives = []
+        if cat:
+            relevant_cat = cat
+        if relevant_cat.past_life:
+            past_life = True
+            past_lives = [relevant_cat.past_life]
+            prev_life = relevant_cat.fetch_cat(relevant_cat.past_life)
+            while past_life:
+                if prev_life.past_life:
+                    past_lives.append(prev_life.past_life)
+                    prev_life = relevant_cat.fetch_cat(prev_life.past_life)
+                else:
+                    past_life = False 
+        return past_lives
+    
+    def get_reincarnations (self, cat=None) -> list:
+        """Returns a list of IDs which are past lives to the cat, according to the inheritance hierarchy.
+        :param cat: The cat whose parents you want to return"""
+        relevant_cat = self.cat
+        past_lives = []
+        if cat:
+            relevant_cat = cat
+        if relevant_cat.reincarnation:
+            reincarnated = True
+            past_lives = [relevant_cat.reincarnation]
+            next_life = relevant_cat.fetch_cat(relevant_cat.reincarnation)
+            while reincarnated:
+                if next_life.reincarnation:
+                    past_lives.append(next_life.reincarnation)
+                    next_life = relevant_cat.fetch_cat(next_life.reincarnation)
+                else:
+                    reincarnated = False      
+        return past_lives
 
     # ---------------------------------------------------------------------------- #
     #                                     kits                                     #
