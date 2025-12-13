@@ -3214,7 +3214,6 @@ def generate_sprite(
             if cat.pelt.eye_colour2 in all_extra_eyes:
                 eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
             else:
-                #eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
                 eyes2 = sprites.sprites["eyes" + cat.pelt.eye_colour2 + cat_sprite].copy()
                 eyes2.blit(sprites.sprites["heterochromiamask" + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
                 # Add patches onto cat.
@@ -3240,29 +3239,19 @@ def generate_sprite(
             )
             new_sprite.blit(sprites.sprites["lighting" + cat_sprite], (0, 0))
 
+        lineart_type = ""
         if cat.pelt.eye_colour in flutter_eyes:
-            if not dead:
-                new_sprite.blit(sprites.sprites["flutter_lines" + cat_sprite], (0, 0))
-            elif cat.status.group == CatGroup.DARK_FOREST:
-                new_sprite.blit(sprites.sprites["flutter_lineartdf" + cat_sprite], (0, 0))
-            elif dead:
-                new_sprite.blit(sprites.sprites["flutter_lineartdead" + cat_sprite], (0, 0))
+            lineart_type = "flutter_"
         elif cat.pelt.eye_colour in lamp_eyes:
-            if not dead:
-                new_sprite.blit(sprites.sprites["lamp_lines" + cat_sprite], (0, 0))
-            elif cat.status.group == CatGroup.DARK_FOREST:
-                new_sprite.blit(sprites.sprites["lamp_lineartdf" + cat_sprite], (0, 0))
-            elif dead:
-                new_sprite.blit(sprites.sprites["lamp_lineartdead" + cat_sprite], (0, 0))
-        else:
-            if not dead:
-                new_sprite.blit(sprites.sprites["lines" + cat_sprite], (0, 0))
-            elif cat.status.group == CatGroup.DARK_FOREST:
-                new_sprite.blit(sprites.sprites["lineartdf" + cat_sprite], (0, 0))
-            elif dead:
-                new_sprite.blit(sprites.sprites["lineartdead" + cat_sprite], (0, 0))
-            if cat.pelt.eye_colour in all_cs or cat.pelt.eye_colour2 in all_cs:
-                new_sprite.blit(eyes, (0, 0))
+            lineart_type = "lamp_"
+        if not dead:
+            new_sprite.blit(sprites.sprites[lineart_type + "lines" + cat_sprite], (0, 0))
+        elif cat.status.group == CatGroup.DARK_FOREST:
+                new_sprite.blit(sprites.sprites[lineart_type + "lineartdf" + cat_sprite], (0, 0))
+        elif dead:
+            new_sprite.blit(sprites.sprites[lineart_type + "lineartdead" + cat_sprite], (0, 0))
+        if cat.pelt.eye_colour in all_cs or cat.pelt.eye_colour2 in all_cs:
+            new_sprite.blit(eyes, (0, 0))
         # draw skin and scars2
         new_sprite.blit(sprites.sprites["skin" + cat.pelt.skin + cat_sprite], (0, 0))
         blendmode = pygame.BLEND_RGBA_MIN

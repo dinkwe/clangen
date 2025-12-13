@@ -386,6 +386,10 @@ class ProfileScreen(Screens):
                             )
                             self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
                         self.the_cat.pelt.rebuild_sprite = True
+
+                self.clear_profile()
+                self.build_profile()
+                self.update_disabled_buttons_and_text()
             elif event.ui_element == self.reincarnate_button:     
                 self.the_cat.get_reincarnation()
 
