@@ -17,6 +17,7 @@
         "toggles": "cat toggles",
         "exile": "exile cat",
         "exile_df": "exile to dark forest",
+        "send_ur": "send to a foreign land",
         "guide_sc": "guide into starclan",
         "exile_tooltip": "This cannot be reversed.",
         "exile_guide_tooltip": "Changing where this cat resides will change where your Clan goes after death.",

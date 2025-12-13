@@ -78,6 +78,8 @@ class FamilyTreeScreen(Screens):
         self.kits = []
         self.kits_mates = []
         self.grandkits = []
+        self.past_lives = []
+        self.reincarnations = []
 
         self.cat_elements = {}
         self.relation_elements = {}
@@ -112,6 +114,8 @@ class FamilyTreeScreen(Screens):
                     print("invalid next cat", self.next_cat)
             elif event.ui_element == self.parents_button:
                 self.current_group = self.parents
+                if self.past_lives:
+                    self.current_group += self.past_lives
                 self.current_group_name = "parents"
                 self.handle_relation_groups()
             elif event.ui_element == self.siblings_button:
@@ -144,6 +148,8 @@ class FamilyTreeScreen(Screens):
                 self.handle_relation_groups()
             elif event.ui_element == self.kits_button:
                 self.current_group = self.kits
+                if self.reincarnations:
+                    self.current_group += self.reincarnations
                 self.current_group_name = "kits"
                 self.handle_relation_groups()
             elif event.ui_element == self.kits_mates_button:
@@ -357,9 +363,11 @@ class FamilyTreeScreen(Screens):
         self.cousins = self.the_cat.inheritance.get_cousins()
         self.grandparents = self.the_cat.inheritance.get_grandparents()
         self.grandkits = self.the_cat.inheritance.get_grand_kits()
+        self.past_lives = self.the_cat.inheritance.get_past_lives()
+        self.reincarnations = self.the_cat.inheritance.get_reincarnations()
 
         # collect grandparents
-        if self.parents:
+        if self.parents or self.past_lives:
             y_dim += 98
             y_pos += 98
             if self.grandparents:
@@ -380,11 +388,11 @@ class FamilyTreeScreen(Screens):
                 x_dim += 216
 
         # collect mates
-        if self.mates or self.kits:
+        if self.mates or self.kits or self.reincarnations:
             x_pos += 138
             x_dim += 140
         # collect kits
-        if self.kits:
+        if self.kits or self.reincarnations:
             if not self.siblings_kits:
                 y_dim += 40
             if self.kits_mates:
@@ -444,7 +452,7 @@ class FamilyTreeScreen(Screens):
             container=self.family_tree,
         )
 
-        if self.parents:
+        if self.parents or self.past_lives:
             self.siblings_button = UIImageButton(
                 ui_scale(pygame.Rect((76 + x_pos, 32 + y_pos), (158, 30))),
                 "",
@@ -502,7 +510,7 @@ class FamilyTreeScreen(Screens):
                     container=self.family_tree,
                 )
 
-        if self.mates or self.kits:
+        if self.mates or self.kits or self.reincarnations:
             self.mates_button = UIImageButton(
                 ui_scale(pygame.Rect((-138 + x_pos, 32 + y_pos), (144, 30))),
                 "",
@@ -510,7 +518,7 @@ class FamilyTreeScreen(Screens):
                 manager=MANAGER,
                 container=self.family_tree,
             )
-        if self.kits:
+        if self.kits or self.reincarnations:
             self.kits_button = UIImageButton(
                 ui_scale(pygame.Rect((-59 + x_pos, 48 + y_pos), (58, 82))),
                 "",
@@ -584,7 +592,12 @@ class FamilyTreeScreen(Screens):
                     add_info = set(additional_info["additional"])  # remove duplicates
                     info_text += "\n"
                     info_text += adjust_list_text(list(add_info))
-
+            if kitty in self.past_lives:
+                info_text += "\n"
+                info_text += "past life"
+            if kitty in self.reincarnations:
+                info_text += "\n"
+                info_text += "reincarnation"
             self.relation_elements["cat" + str(i)] = UISpriteButton(
                 ui_scale(pygame.Rect((324 + pos_x, 485 + pos_y), (50, 50))),
                 _kitty.sprite,
