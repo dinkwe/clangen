@@ -2874,12 +2874,9 @@ class ProfileScreen(Screens):
 
             if not self.the_cat.status.alive_in_player_clan:
                 self.choose_bestie_button.disable()
-            else:
-                self.choose_bestie_button.enable()
-            
-            if not self.the_cat.status.alive_in_player_clan:
                 self.choose_enemy_button.disable()
             else:
+                self.choose_bestie_button.enable()
                 self.choose_enemy_button.enable()
 
         # Roles Tab

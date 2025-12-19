@@ -194,7 +194,7 @@ class Sprites:
             'stormsacc', "meteorcolours"
             #'main_markings', 'markings_inside', 'overfur', 'underfur', 'white_markings'
         ):
-            if "lineart" in x and (
+            if x in ["lineart", "lineartdf", "lineartdead"] and (
                 constants.CONFIG["fun"]["april_fools"]
                 or is_today(SpecialDate.APRIL_FOOLS)
             ):

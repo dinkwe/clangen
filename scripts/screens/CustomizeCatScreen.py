@@ -495,7 +495,7 @@ class CustomizeCatScreen(Screens):
                 self.pelt_colours = ["WHITE", "PALEGREY", "SILVER"]
         elif self.pelt_filter == "brown":
             if self.the_cat.pelt.name in self.base_game_pelts or self.the_cat.pelt.tortiebase in self.base_game_patterns:
-                self.pelt_colours = copy(Pelt.black_colours)
+                self.pelt_colours = copy(Pelt.brown_colours)
             elif self.the_cat.pelt.name == 'Masked' or self.the_cat.pelt.tortiebase == 'masked':
                 self.pelt_colours = ["LIGHTBROWN", "LILAC", "BROWN", "GOLDEN-BROWN", "DARKBROWN", "CHOCOLATE", "LIGHTASH", "ASH", "PALEBROWN",
                      "LIGHTBROWNSILLY", "BROWNSILLY", "DARKBROWNSILLY", "DARKCHOCOLATE", "CHOCOLATESILLY",

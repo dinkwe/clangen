@@ -29,6 +29,21 @@ SEASON_CALENDAR = [
     "Leaf-bare",
 ]
 
+MONTH_CALENDAR = [
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+    "January",
+    "February",
+]
+
 TEMPERAMENT_DICT = {
     "low_social": ["cunning", "proud", "bloodthirsty"],
     "mid_social": ["amiable", "stoic", "wary"],
