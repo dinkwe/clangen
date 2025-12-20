@@ -241,6 +241,7 @@ def get_current_month():
         index = modifiers[game.clan.starting_season]
     
     return constants.MONTH_CALENDAR[index]
+        
 
 
 def change_clan_reputation(difference):
@@ -3206,20 +3207,19 @@ def generate_sprite(
                    'PRIMAL SHADOW', 'PRIMAL WATER', 'PRIMAL WIND']
 
         eyes = sprites.sprites["eyes" + cat.pelt.eye_colour + cat_sprite].copy()
-                
+
+        
         if age != "newborn" or cat.pelt.eye_colour not in cs_eyes:
             new_sprite.blit(eyes, (0, 0))
-            
+        
         if cat.pelt.eye_colour2 is not None:
             if cat.pelt.eye_colour2 in all_extra_eyes:
                 eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
             else:
-                #eyes.blit(sprites.sprites["eyes2" + cat.pelt.eye_colour2 + cat_sprite], (0, 0))
                 eyes2 = sprites.sprites["eyes" + cat.pelt.eye_colour2 + cat_sprite].copy()
                 eyes2.blit(sprites.sprites["heterochromiamask" + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_MULT)
                 # Add patches onto cat.
                 new_sprite.blit(eyes2, (0, 0))
-
 
         if not scars_hidden:
             for scar in cat.pelt.scars:
@@ -3318,10 +3318,6 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_bones" + accessory + cat_sprite], (0, 0)
                             )
-                        elif accessory in cat.pelt.butterflies_accessories:
-                            new_sprite.blit(
-                                sprites.sprites["acc_butterflymoth" + accessory + cat_sprite], (0, 0)
-                            )
                         elif accessory in cat.pelt.stuff_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_twolegstuff" + accessory + cat_sprite], (0, 0)
@@ -3367,10 +3363,6 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_tail2" + accessory + cat_sprite], (0, 0)
                             )
-                        elif accessory in cat.pelt.ster_accessories:
-                            new_sprite.blit(
-                                sprites.sprites["acc_ster" + accessory + cat_sprite], (0, 0)
-                            )
                         elif accessory in cat.pelt.sailormoon:
                             new_sprite.blit(
                                 sprites.sprites["acc_sailor" + accessory + cat_sprite], (0, 0)
@@ -3382,14 +3374,6 @@ def generate_sprite(
                         elif accessory in cat.pelt.beetle_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_beetle" + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.beetle_feathers:
-                            new_sprite.blit(
-                                sprites.sprites["acc_beetlefeathers" + accessory + cat_sprite], (0, 0)
-                            )
-                        elif accessory in cat.pelt.neckerchiefs:
-                            new_sprite.blit(
-                                sprites.sprites["acc_neckerchief" + accessory + cat_sprite], (0, 0)
                             )
                         elif accessory in cat.pelt.witchhats:
                             new_sprite.blit(
@@ -3407,10 +3391,6 @@ def generate_sprite(
                             new_sprite.blit(
                                 sprites.sprites["acc_wild2" + accessory + cat_sprite], (0, 0)
                             )
-                        elif accessory in cat.pelt.pride_bandanas:
-                            new_sprite.blit(
-                                sprites.sprites["acc_pride" + accessory + cat_sprite], (0, 0)
-                            )
                         elif accessory in cat.pelt.storms_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_storm" + accessory + cat_sprite], (0, 0)
@@ -3418,6 +3398,10 @@ def generate_sprite(
                         elif accessory in cat.pelt.starcatcher_accessories:
                             new_sprite.blit(
                                 sprites.sprites["acc_starcatcher" + accessory + cat_sprite], (0, 0)
+                            )
+                        elif accessory in cat.pelt.festive_accessories:
+                            new_sprite.blit(
+                                sprites.sprites["acc_festive" + accessory + cat_sprite], (0, 0)
                             )
 
         # Apply fading fog
