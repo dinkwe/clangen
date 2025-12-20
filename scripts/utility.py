@@ -230,6 +230,18 @@ def get_current_season():
 
     return game.clan.current_season
 
+def get_current_month():
+    
+    modifiers = {"Newleaf": 0, "Greenleaf": 3, "Leaf-fall": 6, "Leaf-bare": 9}
+    index = game.clan.age % 12 + modifiers[game.clan.starting_season]
+
+    if index > 11:
+        index = index - 12
+    if constants.CONFIG["lock_season"]:
+        index = modifiers[game.clan.starting_season]
+    
+    return constants.MONTH_CALENDAR[index]
+
 
 def change_clan_reputation(difference):
     """

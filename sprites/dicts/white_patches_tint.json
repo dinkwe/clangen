@@ -21,6 +21,16 @@
     "DARKBROWN": "brown",
     "CHOCOLATE": "brown"
   },
+  "weighted_tints": {
+    "basic": ["none", "offwhite", "almond", "cream","dawn", "ebb", "lightorange", "mocha", "orange", "pink","powder"],
+    "subtle": ["ash", "ashgray", "blue", "camel", "chalk", "cherry", "cloud", "coffee", "creamytan", "darkcream", 
+              "golden", "honeydew", "ivory", "lightblue", "lightbrown", "lighterblue", "lightyellow", "lilac", "malted",
+              "slate", "vanilla", "violet"],
+    "moderate": ["bronze", "brown", "caramel", "chocolate", "coyote", "darkash", "darkblue", "darkgold", "fawn",
+              "ghastly", "gold", "gray", "lightblack", "lightgold", "lightgray", "lightgreen", "lightpink",
+              "lightpurple", "lightred", "obsidian", "overcast", "peach", "plank", "quail", "storming", "sunshine", "wheat"],
+    "strong": ["black", "dark", "hazel"]
+  },
   "possible_tints": {
     "basic": ["none", "offwhite", "offwhite"],
     "black": ["gray", "darkcream", "cream", "creamytan", "ashgray", "violet", "powder", "blue", "obsidian", "lightblue", "slate", "lighterblue", "lightpurple"],

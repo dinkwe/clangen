@@ -1,7 +1,7 @@
 {
     "en": {
         "heading": "Timeskip to progress your Clan's life.",
-        "season": "Current season: %{season}",
+        "season": "Current season: %{season} (%{month})",
         "age": {
             "one": "Clan age: %{count} moon",
             "many": "Clan age: %{count} moons"

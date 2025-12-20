@@ -524,7 +524,7 @@ class Pelt:
                   'PASTEL NATURE FR', 'PLUMBAGINA', 'RIVER MOSS', 'SAGE', 'SEA GREEN', 'SOLANA',
                   'STYLIDIA', 'SWAMP GOLD', 'TAMARICA', 'THICKET', 'TRADITIONAL HARVEST PB', 'TREE', 'UNUSUAL NATURE FR',
                   'UNUSUAL WIND FR', 'VALERIANA', 'TOOTHPASTE', 'MINT CHOCOLATE', 'SWAMP',
-                  'SEASIDE',  'GREEN-12', 'YEW', 'CUCUMBER', 'ARTICHOKE', 'FALLOUT',
+                  'SEASIDE', 'YEW', 'CUCUMBER', 'ARTICHOKE', 'FALLOUT',
                   'DEEP OCEAN', 'RAVER GREEN', 'MINTY FRESH', 'SUMMER', 'HOLLYLEAF', 'TRUE GREEN']
     
     cyan_eyes = ['ANGELIC ALGAE', 'AQUA', 'AQUAMARINE', 'MERCY',
@@ -3571,6 +3571,14 @@ class Pelt:
         # WHITE PATCHES TINT
         if self.white_patches or self.points or self.vitiligo:
             # Now for white patches
+            #color groups are meaingless at this point so we got weighted ones instead
+            weighted_white_tints = sprites.white_patches_tints["weighted_tints"]
+            #2 basic, 2 subtle, 1 moderate, 1 strong
+            commonlist = weighted_white_tints["basic"] + weighted_white_tints["subtle"]
+            rarelist = weighted_white_tints["moderate"] + weighted_white_tints["strong"]
+            weightedlist = commonlist + commonlist + rarelist
+            
+            
             base_tints = sprites.white_patches_tints["possible_tints"]["basic"]
             if self.colour in sprites.cat_tints["colour_groups"]:
                 color_group = sprites.white_patches_tints["colour_groups"].get(
@@ -3581,8 +3589,7 @@ class Pelt:
                 color_tints = []
 
             if base_tints or color_tints:
-                all_whitetints = base_tints + color_tints + sprites.white_patches_tints["possible_tints"]["dark"]
-                self.white_patches_tint = choice(base_tints + base_tints + color_tints + color_tints + all_whitetints)
+                self.white_patches_tint = choice(base_tints + weightedlist + color_tints + color_tints)
             else:
                 self.white_patches_tint = "none"
         else:

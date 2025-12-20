@@ -530,7 +530,7 @@ class RelationshipScreen(Screens):
                     container=self.selected_cat_container,
                 )
                 related = self.the_cat.is_related(
-                    self.inspect_cat, game.clan.clan_settings["first cousin mates"]
+                    self.inspect_cat, get_clan_setting("first cousin mates")
                 )
             else:
                 # Family Dot
