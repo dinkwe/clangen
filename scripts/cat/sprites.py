@@ -191,7 +191,7 @@ class Sprites:
             "floraleyes","floraleyes2","aerialeyes","aerialeyes2","aquaticeyes","aquaticeyes2","arideyes","arideyes2",
             "artsi_acc","wildaccs_2", "pride_bandanas", "vickieyes", "heterochromiamask",
             "starcatchermerged", 'stareyesmerged', 'frfoxy_merged', "starcatcher_accs",
-            'stormsacc', "meteorcolours"
+            'stormsacc', "meteorcolours", "festive_accessories", "starcatcher_vines"
             #'main_markings', 'markings_inside', 'overfur', 'underfur', 'white_markings'
         ):
             if x in ["lineart", "lineartdf", "lineartdead"] and (
@@ -1729,15 +1729,35 @@ class Sprites:
                 ["FULL BANDAGES", "LEFT BANDAGES", "CLAWS"]
             ]
         
+        vines_data = [
+                ["BLOOMING VINES", "MORE FLOWERING VINES", "FLOWERING VINES", "MORE VINES", "VINES2"]
+            ]
+        
+        festive_data = [
+            ["COLORFUL LIGHTS", "FESTIVE LIGHTS", "WARM LIGHTS", "COOL LIGHTS", "BRIGHT LIGHTS", "GOLDEN LIGHTS"],
+            ["COCOA REINDEER", "PINE REINDEER", "CHESNUT REINDEER", "SWEATER POLKADOT", "SWEATER FESTIVE"],
+            ["SWEATER FANCY", "WHITE SOCKS", "MULTICOLOR SOCKS", "RED SOCKS"],
+        ]
+        
+        # pink's festive accessories
+        for row, collars in enumerate(festive_data):
+            for col, collar in enumerate(collars):
+                self.make_group("festive_accessories", (col, row), f"acc_festive{collar}")
+        
         #starcatcher accessories
         for row, accs in enumerate(starcatcher_data):
             for col, acc in enumerate(accs):
                 self.make_group("starcatcher_accs", (col, row), f"acc_starcatcher{acc}")
+                
+        #vines accessories
+        for row, accs in enumerate(vines_data):
+            for col, acc in enumerate(accs):
+                self.make_group("starcatcher_vines", (col, row), f"acc_herbs{acc}")
         
         #pride bandanas
         for row, bandanas in enumerate(pride_bandanas_data):
             for col, bandana in enumerate(bandanas):
-                self.make_group("pride_bandanas", (col, row), f"acc_pride{bandana}")
+                self.make_group("pride_bandanas", (col, row), f"collars{bandana}")
     
         #storms accessories, pirate coat is unfinished so we ignore
         for row, accessories in enumerate(storms_accessories_data):
@@ -1832,7 +1852,7 @@ class Sprites:
         # butterflies and moths
         for row, butterflymoth in enumerate(butterflymoth_data):
             for col, butterflies in enumerate(butterflymoth):
-                self.make_group('butterflymothacc', (col, row), f'acc_butterflymoth{butterflies}')
+                self.make_group('butterflymothacc', (col, row), f'acc_wild{butterflies}')
         # twoleg stuff
         for row, twolegstuff in enumerate(twolegstuff_data):
             for col, stuff in enumerate(twolegstuff):
@@ -1881,7 +1901,7 @@ class Sprites:
         # ster
         for row, sterflowers in enumerate(ster_data):
             for col, sterflower in enumerate(sterflowers):
-                self.make_group("sterflowers", (col, row), f"acc_ster{sterflower}")
+                self.make_group("sterflowers", (col, row), f"acc_herbs{sterflower}")
 
         # dismod accessories
         for row, disabilityaccs in enumerate(disabilityaccs_data):
@@ -1918,7 +1938,7 @@ class Sprites:
                 self.make_group("beetle_accessories", (col, row), f"acc_beetle{beetleaccessory}")
         for row, beetle_feathers in enumerate(beetle_feathers_data):
             for col, beetlefeather in enumerate(beetle_feathers):
-                self.make_group("beetle_feathers", (col, row), f"acc_beetlefeathers{beetlefeather}")
+                self.make_group("beetle_feathers", (col, row), f"acc_wild{beetlefeather}")
 
         # chimes
         for row, chimes in enumerate(chime_data):
@@ -1937,7 +1957,7 @@ class Sprites:
 
         for row, neckerchiefs in enumerate(neckerchief_data):
             for col, neckerchief in enumerate(neckerchiefs):
-                self.make_group("colorsplash_neckerchief", (col, row), f"acc_neckerchief{neckerchief}")
+                self.make_group("colorsplash_neckerchief", (col, row), f"collars{neckerchief}")
 
         for row, hats in enumerate(witchhat_data):
             for col, hat in enumerate(hats):

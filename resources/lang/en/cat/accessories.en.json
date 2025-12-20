@@ -3028,6 +3028,106 @@
             "zero": "dog claws",
             "many": "dog claws",
             "one": "dog claw"
+        },
+        "BLOOMING VINES": {
+            "zero": "blooming vines",
+            "many": "blooming vines",
+            "one": "blooming vine"
+        },
+        "MORE FLOWERING VINES": {
+            "zero": "more flowering vines",
+            "many": "more flowering vines",
+            "one": "more flowering vine"
+        },
+        "FLOWERING VINES": {
+            "zero": "flowering vines",
+            "many": "flowering vines",
+            "one": "flowering vine"
+        },
+        "MORE VINES": {
+            "zero": "more vines",
+            "many": "more vines",
+            "one": "more vine"
+        },
+        "VINES2": {
+            "zero": "vines",
+            "many": "vines",
+            "one": "vine"
+        },
+        "COLORFUL LIGHTS": {
+            "zero": "colorful lights",
+            "many": "colorful lights",
+            "one": "colorful light"
+        },
+        "FESTIVE LIGHTS": {
+            "zero": "festive lights",
+            "many": "festive lights",
+            "one": "festive light"
+        },
+        "WARM LIGHTS": {
+            "zero": "warm lights",
+            "many": "warm lights",
+            "one": "warm light"
+        },
+        "COOL LIGHTS": {
+            "zero": "cool lights",
+            "many": "cool lights",
+            "one": "cool light"
+        },
+        "BRIGHT LIGHTS": {
+            "zero": "bright lights",
+            "many": "bright lights",
+            "one": "bright light"
+        },
+        "GOLDEN LIGHTS": {
+            "zero": "golden lights",
+            "many": "golden lights",
+            "one": "golden light"
+        },
+        "COCOA REINDEER": {
+            "zero": "cocoa reindeer harness",
+            "many": "cocoa reindeer harnesses",
+            "one": "cocoa reindeer harness"
+        },
+        "PINE REINDEER": {
+            "zero": "pine reindeer harness",
+            "many": "pine reindeer harnesses",
+            "one": "pine reindeer harness"
+        },
+        "CHESNUT REINDEER": {
+            "zero": "chesnut reindeer harness",
+            "many": "chesnut reindeer harnesses",
+            "one": "chesnut reindeer harness"
+        },
+        "SWEATER POLKADOT": {
+            "zero": "polkadot sweater",
+            "many": "polkadot sweaters",
+            "one": "polkadot sweater"
+        },
+        "SWEATER FESTIVE": {
+            "zero": "festive sweater",
+            "many": "festive sweaters",
+            "one": "festive sweater"
+        },
+        "SWEATER FANCY": {
+            "zero": "fancy sweater",
+            "many": "fancy sweaters",
+            "one": "fancy sweater"
+        },
+        "WHITE SOCKS": {
+            "zero": "white socks",
+            "many": "white socks",
+            "one": "white sock"
+        },
+        "MULTICOLOR SOCKS": {
+            "zero": "multicolor socks",
+            "many": "multicolor socks",
+            "one": "multicolor sock"
+        },
+        "RED SOCKS": {
+            "zero": "red socks",
+            "many": "red socks",
+            "one": "red sock"
         }
     }
 }
