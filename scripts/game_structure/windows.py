@@ -100,6 +100,7 @@ class GuideEsper(UIWindow):
             ui_scale(pygame.Rect((715, 15), (20, 20))),
             "",
             object_id="#exit_window_button",
+            starting_height=10,
             container=self,
         )
         self.guide_button = UISurfaceImageButton(

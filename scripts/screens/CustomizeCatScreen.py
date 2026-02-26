@@ -1069,7 +1069,7 @@ class CustomizeCatScreen(Screens):
         self.kill_buttons()
         self.kill_dropdowns()
         self.filter_lists()
-        self.cat_elements["cat_name"] = create_text_box("customize " + str(self.the_cat.name), (0, 40), (400, 40), "#text_box_34_horizcenter", {"centerx": "centerx"})
+        self.cat_elements["cat_name"] = create_text_box("Customize " + str(self.the_cat.name), (0, 40), (400, 40), "#text_box_34_horizcenter", {"centerx": "centerx"})
         self.setup_buttons()
         self.setup_dropdowns()
         self.setup_cat_elements()
