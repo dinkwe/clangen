@@ -114,7 +114,7 @@ class FamilyTreeScreen(Screens):
                     print("invalid next cat", self.next_cat)
             elif event.ui_element == self.parents_button:
                 self.current_group = self.parents
-                if self.past_lives:
+                if self.past_lives and self.current_group_name != "parents":
                     self.current_group += self.past_lives
                 self.current_group_name = "parents"
                 self.handle_relation_groups()
@@ -148,7 +148,7 @@ class FamilyTreeScreen(Screens):
                 self.handle_relation_groups()
             elif event.ui_element == self.kits_button:
                 self.current_group = self.kits
-                if self.reincarnations:
+                if self.reincarnations and self.current_group_name != "kits":
                     self.current_group += self.reincarnations
                 self.current_group_name = "kits"
                 self.handle_relation_groups()
