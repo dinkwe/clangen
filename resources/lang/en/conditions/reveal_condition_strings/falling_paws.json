@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "reveal_condition_falling_paws0",
+        "strings": [
+            "m_c complains about feeling lightheaded whenever {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up too quickly. After running a few tests, r_c has come to the conclusion that m_c has falling paws.",
+            "After m_c faints in the middle of the medicine den, the medicine cat diagnoses m_c with falling paws."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_falling_paws1",
+        "strings": [
+            "m_c has to sit down often when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up. A Clanmate jokes about {PRONOUN/m_c/object} having a set of always falling paws.",
+            "m_c can feel {PRONOUN/m_c/poss} heartbeat when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

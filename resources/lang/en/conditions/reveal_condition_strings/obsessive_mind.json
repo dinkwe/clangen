@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "reveal_condition_obsessive_mind0",
+        "strings": [
+            "m_c sleeps separately from {PRONOUN/m_c/poss} parent and denmates, liking {PRONOUN/m_c/poss} own nest that {PRONOUN/m_c/subject} can decorate and keep it just how {PRONOUN/m_c/subject} {VERB/m_c/like/likes} it. r_c explains to {PRONOUN/m_c/poss} concerned parent that {PRONOUN/m_c/subject} could have an obsessive mind."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_obsessive_mind1",
+        "strings": [
+            "m_c hisses when some of {PRONOUN/m_c/poss} denmates playfight near {PRONOUN/m_c/poss} nest, quick to realign what they knocked out of place. {PRONOUN/m_c/poss/CAP} parent scolds {PRONOUN/m_c/object} for this, but m_c complains that it makes {PRONOUN/m_c/object} anxious when {PRONOUN/m_c/poss} things are out of place.",
+            "Counting and recounting, m_c keeps doing things a certain number of times and when asked why, {PRONOUN/m_c/subject} just {VERB/m_c/say/says} that it's a reasonable number of times.",
+            "Around and around, m_c keeps asking the same questions, not settled even though the answer is the same every time.",
+            "m_c has little habits that {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} repeating, like grooming {PRONOUN/m_c/poss} paws in a particular order or waving {PRONOUN/m_c/poss} tail at someone multiple times before even saying a greeting.",
+            "When it comes to cleaning the den, m_c is the best helper and very particular - sometimes needing to place an item multiple times until it's just right.",
+            "m_c insists on repeatedly washing {PRONOUN/m_c/poss} paws, long after they're clean. {PRONOUN/m_c/subject/CAP} simply {VERB/m_c/don't/doesn't} feel right otherwise."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

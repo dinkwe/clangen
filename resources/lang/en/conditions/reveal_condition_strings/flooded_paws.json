@@ -2,6 +2,20 @@
     {
         "event_id": "reveal_condition_flooded_paws0",
         "strings": [
+            "r_c0 listens to m_c's heart, which rapidly pounds even at rest."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_flooded_paws1",
+        "strings": [
             "Everytime m_c stands up too quickly, {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like {PRONOUN/m_c/poss} heart is going to burst.",
             "m_c can feel {PRONOUN/m_c/poss} blood pool in {PRONOUN/m_c/poss} paws whenever {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up after resting."
         ],

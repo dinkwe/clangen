@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "reveal_condition_cometspirit0",
+        "strings": [
+            "m_c mewled and whined like any other kit, but {PRONOUN/m_c/poss} energy was through the nursery's roof and driving the queens mad - to the point they called r_c over just to see if {PRONOUN/r_c/subject} {VERB/r_c/have/has} anything to calm the rambunctious kit. r_c chuckled and said m_c may simply have a comet spirit - {PRONOUN/r_c/subject} {VERB/r_c/have/has} some herbs that might help {PRONOUN/m_c/object} relax."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_cometspirit1",
+        "strings": [
+            "m_c races around camp like an absolute whirlwind, getting under every cat's paws. The warriors shake their heads and the queens sigh, but as long as m_c doesn't get into trouble, they'll just have to deal with {PRONOUN/m_c/poss} energy.",
+            "m_c talked long into the afternoon about the bugs {PRONOUN/m_c/subject} saw, and how they're so cool and how they run away when you paw at them!",
+            "There's some frustration from the older Clan members at how distractable m_c is, but it's just the way that {PRONOUN/m_c/subject} {VERB/m_c/are/is}.",
+            "m_c eagerly follows the older warriors and apprentices, bounding from cat to cat with questions that make heads spin."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

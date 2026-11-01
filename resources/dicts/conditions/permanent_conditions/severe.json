@@ -55,5 +55,123 @@
                 "ragwort"
             ]
         }
+    },
+    "constant_fatigue": {
+        "severity": "severe",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,1],
+        "mortality": {},
+        "immune_system_effect": 0.01,
+        "progression": {},
+        "risks": {
+            "sleeplessness": 0.1,
+            "lethargy": 0.1,
+            "nightmares": 0.05,
+            "dizziness": 0.05,
+            "understimulation": 0.03,
+            "sleep_paralysis": 0.02,
+            "brain_fog": 0.05
+        },
+        "treatment_strength": {
+            "1": [
+                "honey",
+                "chamomile",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "constant_roaming_pain": {
+        "severity": "severe",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [3,5],
+        "mortality": {},
+        "immune_system_effect": 0.05,
+        "progression": {},
+        "risks": {
+            "joint_pain": 0.033,
+            "running_nose": 0.02,
+            "stomachache": 0.02,
+            "sore": 0.1,
+            "acute_pain": 0.033,
+            "headache": 0.1,
+            "severe_headache": 0.05,
+            "intermittent_paralysis": 0.01
+        },
+        "treatment_strength": {
+            "1": [
+                "honey",
+                "chamomile",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "deer_tick_disease": {
+        "severity": "severe",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.01,
+        "progression": {},
+        "risks": {
+            "joint_pain": 0.067,
+            "brain_fog": 0.05,
+            "fatigue": 0.067,
+            "headache": 0.033,
+            "severe_headache": 0.02,
+            "fainting": 0.02,
+            "nausea": 0.033,
+            "constant_joint_pain": 0.015
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "daisy",
+                "marigold"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "otherworldly_mind": {
+        "severity": "severe",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "kittenspace": 0.0125,
+            "puppyspace": 0.0125,
+            "kitten_regressor": 0.001,
+            "puppy_regressor": 0.01,
+            "budding_spirit": 0.005,
+            "branching_soul": 0.005,
+            "fractured_spirit": 0.005,
+            "parrot_chatter": 0.015,
+            "parroting": 0.1,
+            "hallucinations": 0.1,
+            "paranoia": 0.1,
+            "psychotic_episode": 0.02,
+            "hostile_hallucinations": 0.02,
+            "delusions": 0.033
+
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
     }
 }

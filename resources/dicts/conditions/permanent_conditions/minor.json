@@ -211,7 +211,10 @@
         "mortality": {},
         "immune_system_effect": 0.0,
         "progression": {},
-        "risks": {},
+        "risks": {
+            "verbal_shutdown": 0.167,
+            "anxiety_attack": 0.05
+        },
         "treatment_strength": {
             "1": [
                 "poppy",
@@ -244,5 +247,512 @@
         "possible_scars": [
             "THROAT"
         ]
+    },
+    "kitten_regressor": {
+        "severity": "minor",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "kittenspace": 0.02
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "puppy_regressor": {
+        "severity": "minor",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "puppyspace": 0.02
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "thought_blind": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [4,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "face_blind": 0.02
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "jumbled_noise": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,4],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "headache": 0.02,
+            "sound_headache": 0.05,
+            "information_loss": 0.03,
+            "word_loss": 0.03,
+            "earache": 0.025,
+            "ear_buzzing": 0.025
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "body_biter": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "torn_pelt": 0.025,
+            "wrenched_claws": 0.0125,
+            "cracked_pads": 0.02,
+            "rash": 0.03,
+            "small_cut": 0.0125,
+            "stimming": 0.05,
+            "harmful_stims": 0.7,
+            "nosebleed": 0.03,
+            "earache": 0.02,
+            "ear_infection": 0.01
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper",
+                "ragwort",
+                "poppy",
+                "raspberry"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "jumbled_mind": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "counting_fog": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "parrot_chatter": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "parroting": 0.12,
+            "stimming": 0.12,
+            "verbal_shutdown": 0.04
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "constant_rash": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "rash": 0.1,
+            "torn_pelt": 0.025,
+            "running_nose": 0.02,
+            "whitecough": 0.01,
+            "earache": 0.02
+
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "comfrey",
+                "elder_leaves"
+            ],
+            "2": [],
+            "3": []
+        },
+        "possible_scars": [
+            "RASH"
+        ]
+    },
+    "face_blind": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "headache": 0.02
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "spirited_heart": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.067
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "irritable_bowels": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,4],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "stomachache": 0.2,
+            "diarrhea": 0.1,
+            "constipation": 0.167,
+            "nest_wetting": 0.04,
+            "nausea": 0.1
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper",
+                "mallow",
+                "ragwort",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "infertile": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [10,14],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "lazy_eye": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,1],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "failing_eyesight": 0.0125,
+            "headache": 0.04,
+            "dizziness": 0.04
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "puzzled_heart": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "pmos": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.013,
+            "shark_week": 0.03,
+            "primordial_pain": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "essential_tremor": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "tremors": 0.067
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "daisy",
+                "moss"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "permanent_ear_buzzing": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,1],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "ear_buzzing": 0.067
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "confused_body": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "tics": 0.1,
+            "tic_attack": 0.05,
+            "impulsivity": 0.02,
+            "sprain": 0.015,
+            "absence": 0.015,
+            "broken_bone": 0.01,
+            "parroting": 0.05,
+            "parrot_chatter": 0.01,
+            "harmful_stims": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "snow_vision": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "sunblindness": 0.033,
+            "failing_eyesight": 0.005
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "testosterone_deficiency": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "intersex": true,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "excess_testosterone": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "intersex": true,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.01,
+            "pmos": 0.02
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "aneuploidy": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "intersex": true,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "mosaicism": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "intersex": true,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "chimerism": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "intersex": true,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infertile": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
     }
 }

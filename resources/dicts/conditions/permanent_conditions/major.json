@@ -308,8 +308,23 @@
         "immune_system_effect": 0.0,
         "progression": {},
         "risks": {
-            "constant_nightmares": 0.3,
-            "selective_mutism": 0.02
+            "constant_nightmares": 0.1,
+            "selective_mutism": 0.01,
+            "shock": 0.05,
+            "nightmares": 0.05,
+            "amnesia": 0.02,
+            "depersonalization": 0.02,
+            "derealization": 0.02,
+            "kittenspace": 0.015,
+            "puppyspace": 0.015,
+            "anxiety_attack": 0.05,
+            "paranoia": 0.05,
+            "sleep_paralysis": 0.02,
+            "fatigue": 0.067,
+            "budding_spirit": 0.0067,
+            "fractured_spirit": 0.0067,
+            "branching_soul": 0.0067,
+            "foggy_mind": 0.0067
         },
         "treatment_strength": {
             "1": [
@@ -345,6 +360,802 @@
             "3": [
                 "poppy"
             ]
+        }
+    },
+    "antisocial": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "double_tongue": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "juniper",
+                "chamomile"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "comet_spirit": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "zoomies": 0.05,
+            "absence": 0.04,
+            "vivid_daydreams": 0.0125,
+            "hyperfixation": 0.1,
+            "indecision": 0.05,
+            "impulsivity": 0.067,
+            "understimulation": 0.022,
+            "budding_spirit": 0.005,
+            "branching_soul": 0.005,
+            "jumbled_mind": 0.01,
+            "counting_fog": 0.01,
+            "spirited_heart": 0.01,
+            "parrot_chatter": 0.01,
+            "stimming": 0.1,
+            "harmful_stims": 0.02,
+            "word_loss": 0.1,
+            "parroting": 0.05,
+            "vivid_daydreamer": 0.01
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "juniper",
+                "chamomile"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "anxiety": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "paranoia": 0.033,
+            "hallucinations": 0.0125,
+            "indecision": 0.05,
+            "anxiety_attack": 0.033,
+            "panic_attack": 0.033,
+            "shock": 0.017,
+            "vivid_daydreams": 0.033,
+            "impulsivity": 0.1,
+            "kitten_regressor": 0.01,
+            "puppy_regressor": 0.01,
+            "sleep_paralysis": 0.022,
+            "tics": 0.0125,
+            "tic_attack": 0.011,
+            "body_biter": 0.011,
+            "double_tongue": 0.0059,
+            "spirited_heart": 0.01,
+            "puzzled_heart": 0.01,
+            "selective_mutism": 0.02,
+            "vivid_daydreamer": 0.01
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "thyme",
+                "chamomile"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "prismatic_mind": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [3,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "special_interest": 0.2,
+            "hyperfixation": 0.1,
+            "stimming": 0.1,
+            "harmful_stims": 0.04,
+            "verbal_shutdown": 0.025,
+            "anxiety_attack": 0.025,
+            "tics": 0.0125,
+            "tic_attack": 0.01,
+            "seasonal_lethargy": 0.03,
+            "absence": 0.025,
+            "vivid_daydreams": 0.03,
+            "kittenspace": 0.01,
+            "kitten_regressor": 0.005,
+            "puppyspace": 0.01,
+            "puppy_regressor": 0.005,
+            "overstimulation": 0.05,
+            "understimulation": 0.05,
+            "budding_spirit": 0.005,
+            "branching_soul": 0.005,
+            "jumbled_mind": 0.013,
+            "counting_fog": 0.013,
+            "nausea": 0.05,
+            "spirited_heart": 0.01,
+            "puzzled_heart": 0.01,
+            "selective_mutism": 0.01,
+            "parrot_chatter": 0.013,
+            "parroting": 0.1,
+            "word_loss": 0.013,
+            "vivid_daydreamer": 0.01,
+            "meltdown": 0.02,
+            "shutdown": 0.02,
+            "emotionally_numb": 0.05
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "declawed": {
+        "severity": "major",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": true,
+        "moons_until_discovery": [2,4],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infection": 0.01,
+            "sore": 0.05,
+            "joint_pain": 0.03,
+            "acute_pain": 0.03
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper",
+                "ragwort"
+            ],
+            "2": [],
+            "3": []
+        },
+        "possible_scars": [
+            "DECLAWED"
+        ]
+    },
+    "thunderous_spirit": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "strong_attachment": 0.1,
+            "black_and_white_cloud": 0.1,
+            "amnesia": 0.02,
+            "depersonalization": 0.02,
+            "derealization": 0.02,
+            "kittenspace": 0.01,
+            "puppyspace": 0.01,
+            "kitten_regressor": 0.005,
+            "puppy_regressor": 0.005,
+            "budding_spirit": 0.0075,
+            "branching_soul": 0.0075,
+            "fractured_spirit": 0.0075,
+            "puzzled_heart": 0.01,
+            "spirited_heart": 0.01,
+            "hallucinations": 0.05,
+            "paranoia": 0.05,
+            "psychotic_episode": 0.015,
+            "delusions": 0.02,
+            "double_tongue": 0.02
+
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "echoing_shock": {
+        "severity": "major",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,0],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "shock": 0.0067,
+            "sleeplessness": 0.05,
+            "fatigue": 0.0067,
+            "emotionally_numb" :0.0067,
+            "amnesia": 0.02,
+            "depersonalization": 0.02,
+            "derealization": 0.02,
+            "kittenspace": 0.013,
+            "puppyspace": 0.013,
+            "paranoia": 0.05,
+            "lethargy": 0.04,
+            "diziness": 0.03,
+            "sleep_paralysis": 0.02,
+            "double_tongue": 0.013,
+            "budding_spirit": 0.0075,
+            "branching_soul": 0.0075,
+            "fractured_spirit": 0.0075,
+            "foggy_mind": 0.0075
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "juniper",
+                "thyme"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "branching soul": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [3,8],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.067,
+            "kittenspace": 0.02,
+            "puppyspace": 0.02,
+            "kitten_regressor": 0.013,
+            "puppy_regressor": 0.013,
+            "selective_mutism": 0.013,
+            "amnesia": 0.067,
+            "depersonalization": 0.05,
+            "derealization": 0.05
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "murky_mind": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "fatigue": 0.1,
+            "emotionally_numb": 0.1,
+            "brain_fog": 0.05,
+            "sleeplessness": 0.01
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "loose_body": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,4],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "dislocated_joint": 0.067,
+            "constipation": 0.05,
+            "severe_headache": 0.05,
+            "headache": 0.067,
+            "sore": 0.067
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "jellyfish_joints": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [4,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "dislocated_joint": 0.05,
+            "sprain": 0.05,
+            "subluxated_joint": 0.05,
+            "sore": 0.033,
+            "joint_pain": 0.025
+        },
+        "treatment_strength": {
+            "1": [
+                "cobwebs",
+                "burdock",
+                "moss",
+                "ragwort"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "ongoing_sleeplessness": {
+        "severity": "major",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,1],
+        "mortality": {},
+        "immune_system_effect": 0.01,
+        "progression": {},
+        "risks": {
+            "sleeplessness": 0.1,
+            "lethargy": 0.033,
+            "impulsivity": 0.033,
+            "hallucinations": 0.033,
+            "nightmares": 0.1,
+            "ear_buzzing": 0.05,
+            "dizziness": 0.04,
+            "sleep_paralysis": 0.022,
+            "fatigue": 0.033,
+            "fainting": 0.02,
+            "nosebleed": 0.0167,
+            "earache": 0.02,
+            "brain_fog": 0.1,
+            "hostile_hallucinations": 0.01
+        },
+        "treatment_strength": {
+            "1": [
+                "honey",
+                "chamomile",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "weighted_heart": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "lasting_grief": 0.01,
+            "grief_striken": 0.025,
+            "seasonal_lethargy": 0.033,
+            "lethargy": 0.067,
+            "anxiety_attack": 0.025,
+            "absence": 0.02,
+            "sleep_paralysis": 0.02,
+            "fatigue": 0.04,
+            "emotionally_numb": 0.04,
+            "body_biter": 0.01,
+            "budding_spirit": 0.005,
+            "branching_soul": 0.005,
+            "brain_fog": 0.05,
+            "harmful_stims": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "thyme",
+                "juniper",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "foggy_mind": {
+        "severity": "major",
+        "can_be_congenital": false,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [2,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.025,
+            "brain_fog": 0.1,
+            "derealization": 0.1,
+            "depersonalization": 0.1,
+            "harmful_stims": 0.025,
+            "delusions": 0.04,
+            "psychotic_episode": 0.02,
+            "amnesia": 0.1,
+            "kittenspace": 0.025,
+            "puppyspace": 0.025
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "bad_knee": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [4,8],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "sore": 0.1,
+            "joint_pain": 0.05,
+            "acute_pain": 0.033,
+            "knee_locking": 0.05
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy",
+                "daisy",
+                "moss"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "irritated_belly": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,4],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anemia": 0.02,
+            "stomachache": 0.05,
+            "diarrhea": 0.033,
+            "nausea": 0.04
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "intermittent_paralysis": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [0,1],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "infection": 0.0167,
+            "torn_pelt": 0.033,
+            "sore": 0.05,
+            "joint_pain": 0.05,
+            "paralysis_episode": 0.067,
+            "paralyzed": 0.0083,
+            "dizziness": 0.033,
+            "phantom_pain": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "daisy",
+                "juniper",
+                "ragwort",
+                "marigold",
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "obsessive_mind": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.033,
+            "indecision": 0.05,
+            "compulsions": 0.1,
+            "hyperfixation": 0.05,
+            "paranoia": 0.02,
+            "kittenspace": 0.0125,
+            "puppyspace": 0.0125,
+            "body_biter": 0.015,
+            "cracked_pads": 0.067,
+            "word_loss": 0.04,
+            "parroting": 0.02,
+            "psychotic_episode": 0.005
+        },
+        "treatment_strength": {
+            "1": [
+                "chamomile",
+			    "juniper",
+			    "betony"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "falling_paws": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [4,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "dizziness": 0.033,
+            "headache": 0.033,
+            "fainting": 0.0167,
+            "bruises": 0.025,
+            "scrapes": 0.025
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "fractured_spirit": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [6,8],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.067,
+            "kittenspace": 0.02,
+            "selective_mutism": 0.01,
+            "kitten_regressor": 0.01,
+            "puppy_regressor": 0.02,
+            "amnesia": 0.05,
+            "depersonalization": 0.033,
+            "derealization": 0.033
+
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "buddng_spirit": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [3,5],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "anxiety_attack": 0.067,
+            "kittenspace": 0.025,
+            "selective_mutism": 0.015,
+            "kitten_regressor": 0.015,
+            "puppy_regressor": 0.025,
+            "amnesia": 0.01,
+            "depersonalization": 0.015,
+            "derealization": 0.015
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "primordial_pain": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [8,10],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "stomachache": 0.05,
+            "shark_week": 0.05,
+            "headache": 0.033,
+            "anemia": 0.0167,
+            "dizziness": 0.033,
+            "nausea": 0.033
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "flooded_paws": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [5,10],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "dizziness": 0.067,
+            "headache": 0.033,
+            "fainting": 0.02,
+            "fatigue": 0.02,
+            "nausea": 0.033
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "disrupted_senses": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [1,3],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "sunblindness": 0.04,
+            "headache": 0.067,
+            "severe_headache": 0.02,
+            "ear_buzzing": 0.04,
+            "stomachache": 0.033,
+            "rash": 0.033,
+            "overstimulation": 0.1,
+            "understimulation": 0.033,
+            "fatigue": 0.02,
+            "earache": 0.05,
+            "brain_fog": 0.04
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "bipolar_i": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [5,8],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "zoomies": 0.04,
+            "absence": 0.04,
+            "impulsivity": 0.067,
+            "harmful_stims": 0.02,
+            "sleeplessness": 0.033,
+            "delusions": 0.015,
+            "grief_striken": 0.0125,
+            "lethargy": 0.025
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "bipolar_ii": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [5,8],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "grief_striken": 0.025,
+            "seasonal_lethargy": 0.033,
+            "lethargy": 0.067,
+            "anxiety_attack": 0.025,
+            "absence": 0.04,
+            "fatigue": 0.04,
+            "brain_fog": 0.05,
+            "harmful_stims": 0.02,
+            "delusions": 0.01,
+            "impulsivity": 0.033
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "curved_spine": {
+        "severity": "minor",
+        "can_be_congenital": true,
+        "can_be_acquired": true,
+        "requires_scar": false,
+        "moons_until_discovery": [7,9],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "sore": 0.05,
+            "joint_pain": 0.025
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "frequent_fainting": {
+        "severity": "major",
+        "can_be_congenital": true,
+        "can_be_acquired": false,
+        "requires_scar": false,
+        "moons_until_discovery": [2,6],
+        "mortality": {},
+        "immune_system_effect": 0.0,
+        "progression": {},
+        "risks": {
+            "dizziness": 0.1,
+            "headache": 0.033,
+            "fainting": 0.04,
+            "seizure": 0.015
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
         }
     }
 }
