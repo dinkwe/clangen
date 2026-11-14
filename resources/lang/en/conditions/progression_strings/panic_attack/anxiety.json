@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "panic_attack_anxiety0",
+        "strings": [
+            "After the panic has faded away, m_c still seems to be on edge. r_c0 sits and talks with {PRONOUN/m_c/object} about how {PRONOUN/m_c/subject} might have anxiety that wasn't discovered until now."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status":[
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "panic_attack_anxiety1",
+        "strings":[
+            "m_c still feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} on the verge of panic. Thoughts going around and around frantically chasing each other like a dog after its own tail."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

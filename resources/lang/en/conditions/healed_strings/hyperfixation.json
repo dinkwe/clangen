@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "hyperfixation_healed0",
+        "strings": [
+            "m_c is no longer hyperfixated on a topic.",
+		    "m_c has returned to {PRONOUN/m_c/poss} regular daily activities."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "harmful_stims_broken_bone0",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "harmful_stims_broken_bone1",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

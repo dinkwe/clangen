@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "gain_temporary_condition_kittenspace0",
+        "strings": [
+            "Recently, m_c has been acting a bit differently than usual. It seems like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gone into kittenspace.",
+	        "m_c has been acting a little bit differently than usual - much younger and more reliant on {PRONOUN/m_c/poss} Clanmates. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'ve/'s} gone into kittenspace."
+        ],
+        "involved_cats": {
+            "m_c":{}
+        }
+    }
+]

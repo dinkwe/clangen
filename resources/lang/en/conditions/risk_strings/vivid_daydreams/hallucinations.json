@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "vivid_daydreams_hallucinations0",
+        "strings": [
+            "Something is really wrong, r_c0 worriedly fusses over m_c as {PRONOUN/m_c/poss} escapism seems to blend into {PRONOUN/m_c/poss} reality."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "vivid_daydreams_hallucinations1",
+        "strings": [
+            "m_c seems to be struggling to distinguish where {PRONOUN/m_c/poss} dream ends and reality begins to the distress of {PRONOUN/m_c/poss} Clanmates.",
+            "While {PRONOUN/m_c/poss} Clanmates watch over {PRONOUN/m_c/object}, m_c's eyes track and follow in distress things that only {PRONOUN/m_c/subject} can seem to see.",
+            "m_c shivers in their den, the shadows on the walls and out of the corner of {PRONOUN/m_c/poss} eyes making monsters.",
+            "All dreams have risk of becoming nightmares, and these daydreams are no different as sleeplessness and escapism don't mix well. m_c shivers as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to find where reality actually is.",
+            "m_c has the horrible realisation that this isn't a daydream anymore."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

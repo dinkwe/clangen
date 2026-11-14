@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "nest_wetting_healed0",
+        "strings": [
+            "After the embarrassment, m_c is relieved to wake up once more in a clean nest.",
+		    "m_c is no longer wetting the nest and is welcomed back in.",
+            "m_c purrs when {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up in nice, clean moss."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

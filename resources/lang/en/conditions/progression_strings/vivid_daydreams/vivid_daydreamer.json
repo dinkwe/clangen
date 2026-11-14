@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "vivid_daydreams_vivid_daydreamer0",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "vivid_daydreams_vivid_daydreamer1",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

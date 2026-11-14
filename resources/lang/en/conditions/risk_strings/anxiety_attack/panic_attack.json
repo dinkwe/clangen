@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "anxiety_attack_panic_attack0",
+        "strings": [
+            "r_c0 carefully remains outside of m_c's personal space and attempts to count with {PRONOUN/m_c/object}, desperately hoping the distraction will prevent {PRONOUN/m_c/poss} anxiety from further progressing to full panic."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_attack_panic_attack1",
+        "strings": [
+            "m_c's tail lashes, eyes darting around camp. {PRONOUN/m_c/poss/CAP} paws dig into the dirt of the den floor and {PRONOUN/m_c/subject} {VERB/m_c/look/looks} moments away from bolting at the slightest movement.",
+            "Instead of fading, the anxiety only seems to build and build until m_c feels like {PRONOUN/m_c/subject} can't breathe, everything is dangerous and wrong and {PRONOUN/m_c/subject} {VERB/m_c/need/needs} out, out.",
+            "'It's irrational, there's nothing there, {PRONOUN/m_c/subject} {VERB/m_c/are/is} not in any danger here,' m_c keeps reminding {PRONOUN/m_c/self} over and over as {PRONOUN/m_c/poss} chest grows tighter and tighter.",
+            "{PRONOUN/m_c/subject/CAP} can't breathe, m_c can't breathe, drowning on land, drowning in the panic that floods {PRONOUN/m_c/poss} body putting all {PRONOUN/m_c/poss} fur on end."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

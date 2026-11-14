@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "depersonalization_healed0",
+        "strings": [
+            "m_c was finally able to ground {PRONOUN/m_c/self} and is no longer experiencing depersonalization.",
+		    "m_c no longer feels detached from {PRONOUN/m_c/poss} own body."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

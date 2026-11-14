@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "special_interest_healed0",
+        "strings": [
+            "While the intensity of m_c's love for the subject has faded, it's not gone in the slightest and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} still ready to chat off another cat's ears if prompted.",
+		    "m_c is able to refocus {PRONOUN/m_c/self} and stay on task, without always bringing {PRONOUN/m_c/poss} special interest into it.",
+            "m_c has some listlessness when {PRONOUN/m_c/poss} interest fades to be slightly less all-consuming.",
+            "m_c will always love {PRONOUN/m_c/poss} special interest, but can also make room for new interests."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

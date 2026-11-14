@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "compulsions_bruises0",
+        "strings": [
+            "r_c0 understandingly helps m_c soothe {PRONOUN/m_c/poss} bruises."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "compulsions_bruises1",
+        "strings": [
+            "Some of m_c's compulsions included knocking {PRONOUN/m_c/self} and it's left {PRONOUN/m_c/object} with a couple of bruises."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

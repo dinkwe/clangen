@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "gain_temporary_condition_brain_fog0",
+        "strings": [
+            "m_c is experiencing some brain fog.",
+        	"m_c has some brain fog."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

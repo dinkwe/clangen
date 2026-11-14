@@ -735,23 +735,58 @@ dev_tools = false
       running_nose = 3
       stomachache = 2
       tick_fever = 1
+      sleeplessness = 1
+      burn_out = 3
+      ear_buzzing = 5
+      nest_wetting = 10
+      kittenspace = 1
+      puppyspace = 1
+      stimming = 2
+      brain_fog = 2
     [condition_related.seasonal_chances.greenleaf]
       fleas = 3
       stomachache = 2
       heat_exhaustion = 3
       heat_stroke = 1
+      anxiety_attack = 3
       tick_fever = 1
+      sleeplessness = 1
+      ear_buzzing = 5
+      nest_wetting = 10
+      kittenspace = 1
+      puppyspace = 1
+      stimming = 2
+      brain_fog = 2
     [condition_related.seasonal_chances.leaf-fall]
       stomachache = 2
       greencough = 1
       kittencough = 1
       running_nose = 4
+      anxiety_attack = 3
+      seasonal_lethargy = 5
+      sleeplessness = 1
+      ear_buzzing = 5
+      nest_wetting = 20
+      kittenspace = 1
+      puppyspace = 1
+      stimming = 1
+      brain_fog = 2
     [condition_related.seasonal_chances.leaf-bare]
       stomachache = 2
       greencough = 3
       running_nose = 2
       kittencough = 4
       yellowcough = 1
+      anxiety_attack = 3
+      sleeplessness = 1
+      burn_out = 3
+      ear_buzzing = 5
+      nest_wetting = 20
+      kittenspace = 1
+      puppyspace = 1
+      stimming = 3
+      brain_fog = 2
+      masking = 1
 
 
 [clan_creation]

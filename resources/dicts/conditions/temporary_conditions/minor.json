@@ -432,9 +432,122 @@
             ]
         }
     },
-    "temporary_weakness": {
+    "anxiety_attack": {
         "tags": [],
-        "requires_scar": false,
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "panic_attack": 0.02,
+            "paranoia": 0.02,
+            "tics": 0.01,
+            "tic_attack": 0.01,
+            "nausea": 0.05
+        },
+        "treatment_strength": {
+            "1": [
+                "thyme"
+            ],
+            "2": [],
+            "3": [
+                "catmint",
+                "betony"
+            ]
+        }
+    },
+    "verbal_shutdown": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 4,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "mute":{
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {},
+        "treatment_strength": {
+            "1": [
+                "chamomile"
+            ],
+            "2": [
+            ],
+            "3": [
+                "honey",
+                "betony"
+            ]
+        }
+    },
+    "special_interest": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 12,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "hyperfixation": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 6,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "stimming": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "body_biter": {
+                "chance": 0.02,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {
+            "parroting": 0.2,
+            "harmful_stims": 0.04
+        },
+        "treatment_strength": {
+            "1": [
+                "catmint"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "impulsivity": {
+        "tags": [],
         "severity": "minor",
         "duration": 2,
         "mortality": {},
@@ -442,27 +555,92 @@
         "immune_system_effect": 0.0,
         "side_effect": {},
         "progression": {},
-        "risks": {
-            "sore": 0.3,
-            "joint_pain": 0.3,
-            "bruises": 0.2,
-            "sprain": 0.1
-        },
+        "risks": {},
         "treatment_strength": {
             "1": [
-                "poppy"
+                "chamomile"
             ],
             "2": [
-                "betony",
-                "juniper"
+                "thyme"
             ],
             "3": [
-                "elder_leaves",
-                "thyme"
             ]
         }
     },
-    "stinky": {
+    "vivid_daydreams": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "vivid_daydreamer": 0.008
+        },
+        "risks": {
+            "hallucinations": 0.008
+        },
+        "treatment_strength": {
+            "1": ["chamomile"],
+            "2": [
+                "thyme"
+            ],
+            "3": [
+            ]
+        }
+    },
+    "zoomies": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "bruises": 0.03
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper"
+            ],
+            "2": [
+                "thyme",
+                "poppy"
+            ],
+            "3": [
+                "rosemary"
+            ]
+        }
+    },
+    "compulsions": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "bruises": 0.03
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper"
+            ],
+            "2": [
+                "thyme",
+                "poppy"
+            ],
+            "3": [
+                "rosemary"
+            ]
+        }
+    },
+    "minor_ear_buzzing": {
         "tags": [],
         "severity": "minor",
         "duration": 1,
@@ -472,6 +650,468 @@
         "side_effect": {},
         "progression": {},
         "risks": {},
-        "treatment_strength": {}
+        "treatment_strength": {
+            "1": [],
+            "2": [
+                "daisy",
+                "thyme"
+            ],
+            "3": [
+                "chamomile"
+            ]
+        }
+    },
+    "nest_wetting": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "sleeplessness": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy"
+            ],
+            "2": [
+                "juniper"
+            ],
+            "3": []
+        }
+    },
+    "night_dirtmaking": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "sleeplessness": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy"
+            ],
+            "2": [
+                "juniper"
+            ],
+            "3": []
+        }
+    },
+    "tics": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "tic_attack": 0.01,
+            "bruises": 0.03,
+            "sore": 0.04
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "information_loss": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "word_loss": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "parroting": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 3,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "parrot_chatter": {
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {},
+        "treatment_strength": {
+            "1": [
+                "chamomile"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "brain_fog": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 3,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [
+                "honey"
+            ],
+            "2": [
+                "thyme",
+                "poppy"
+            ],
+            "3": []
+        }
+    },
+    "amnesia": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "verbal_shutdown": 0.1,
+            "brain_fog": 0.1
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "derealization": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "verbal_shutdown": 0.1,
+            "brain_fog": 0.1,
+            "depersonalization": 0.05
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "depersonalization": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "verbal_shutdown": 0.1,
+            "brain_fog": 0.1,
+            "amnesia": 0.1,
+            "derealization": 0.05
+        },
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "harmful_stims": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "body_biter": {
+                "chance": 0.02,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {
+            "parroting": 0.04,
+            "bruises": 0.1,
+            "claw_wound": 0.04,
+            "cat_bite": 0.04,
+            "joint_pain": 0.02,
+            "broken_bone": 0.01,
+            "sprain": 0.04,
+            "sore": 0.1
+        },
+        "treatment_strength": {
+            "1": [
+                "catmint"
+            ],
+            "2": [],
+            "3": []
+        }
+    },
+    "delusions": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 3,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "otherworldly_mind": {
+                "chance": 0.007,
+                "when": "CONTINUING",
+                "allow_scar": false
+            },
+            "thunderous_spirit": {
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {
+            "psychotic_episode": 0.02,
+            "panic_attack": 0.02,
+            "hallucinations": 0.07,
+            "nightmares": 0.07
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper",
+                "thyme"
+            ],
+            "2": [
+                "poppy"
+            ],
+            "3": [
+                "ragwort"
+            ]
+        }
+    },
+    "tremors": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {
+            "essential_tremor": {
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "emotionally_numb": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "sleeplessness": 0.02
+        },
+        "treatment_strength": {
+            "1": [
+                "thyme"
+            ],
+            "2": [],
+            "3": [
+                "marigold",
+                "honey"
+            ]
+        }
+    },
+    "anemia": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "masking": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progression": {},
+        "risks": {
+            "meltdown": 0.04,
+            "shutdown": 0.04,
+            "burn_out": 0.05
+        },
+        "treatment_strength": {
+            "1": [
+                "chamomile"
+            ],
+            "2": [
+                "honey"
+            ],
+            "3": [
+                "betony"
+            ]
+        }
+    },
+    "earache": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 1,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {
+            "dizziness": 0.04,
+            "shock": 0.01
+        },
+        "progression": {
+            "partial_hearing_loss": {
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {
+            "ear_infection": 0.04,
+            "ear_buzzing": 0.1
+        },
+        "treatment_strength": {
+            "1": [
+                "juniper"
+            ],
+            "2": [
+                "poppy"
+            ],
+            "3": []
+        }
+    },
+    "fatigue": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 4,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {},
+        "progressions": {
+            "constant_fatigue": {
+                "chance": 0.01,
+                "when": "CONTINUING",
+                "allow_scar": false
+            }
+        },
+        "risks": {
+            "sleeplessness": 0.04,
+            "nightmares": 0.1,
+            "dizziness": 0.05,
+            "brain_fog": 0.05
+        },
+        "treatment_strength": {
+            "1": [
+                "poppy"
+            ],
+            "2": [
+                "chamomile"
+            ],
+            "3": [
+                "honey"
+            ]
+        }
+    },
+    "nosebleed": {
+        "tags": [],
+        "severity": "minor",
+        "duration": 2,
+        "mortality": {},
+        "infectiousness": 0.0,
+        "immune_system_effect": 0.0,
+        "side_effect": {
+            "blood_loss": 0.04
+        },
+        "progressions": {},
+        "risks": {},
+        "treatment_strength": {
+            "1": [
+                "cobwebs",
+                "marigold",
+                "juniper"
+
+            ],
+            "2": [
+                "horsetail",
+                "moss"
+            ],
+            "3": [
+                "ragwort"
+            ]
+        }
     }
 }

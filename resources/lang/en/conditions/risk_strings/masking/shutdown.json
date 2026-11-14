@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "masking_shutdown0",
+        "strings": [
+            "r_c0 checks on m_c with worry, it looks like {PRONOUN/m_c/subject} {VERB/m_c/have/has} gone from masking into shutdown."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "masking_shutdown1",
+        "strings": [
+            "Under all the pressure that m_c's been facing, {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to shut down.",
+            "The mask that's put distance between m_c and {PRONOUN/m_c/poss} Clanmates has led to shutdown."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

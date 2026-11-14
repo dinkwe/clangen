@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "brain_fog_healed0",
+        "strings": [
+            "m_c reassures the medicine cat that {PRONOUN/m_c/poss} brain fog has passed.",
+		    "m_c is no longer experiencing brain fog.",
+            "m_c has stopped feeling so numb; {PRONOUN/m_c/poss} brain fog has lifted."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

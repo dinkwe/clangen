@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "depersonalization_verbal_shutdown0",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "depersonalization_verbal_shutdown1",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

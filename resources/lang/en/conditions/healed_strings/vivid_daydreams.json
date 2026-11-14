@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "vivid_daydreams_healed0",
+        "strings": [
+            "After all the daydreaming, m_c feels once more able to engage with reality.",
+		    "m_c stopped daydreaming.",
+            "m_c is a lot more relaxed and feels able to focus completely on {PRONOUN/m_c/poss} tasks."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

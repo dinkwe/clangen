@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "tremors_essential_tremor0",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "tremors_essential_tremor1",
+        "strings": [
+            ""
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

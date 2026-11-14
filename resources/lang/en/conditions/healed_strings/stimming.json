@@ -1,0 +1,15 @@
+[
+    {
+        "event_id": "stimming_healed0",
+        "strings": [
+            "For the moment, m_c has calmed {PRONOUN/m_c/poss} stimming.",
+		    "m_c's stimming has become slightly less obvious.",
+            "After bouncing all around in {PRONOUN/m_c/poss} excitement, m_c has calmed down.",
+            "m_c's stimming has calmed {PRONOUN/m_c/object} back down.",
+            "m_c has finished self soothing with {PRONOUN/m_c/poss} stimming."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]
