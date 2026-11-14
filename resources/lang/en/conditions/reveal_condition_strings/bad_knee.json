@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_bad_knee0",
+        "strings": [
+            "As m_c grows, {PRONOUN/m_c/poss} knee starts to ache. r_c sighs and tells {PRONOUN/m_c/object} that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a bad knee."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_bad_knee1",
+        "strings": [
+            "m_c's knee always locks up and makes {PRONOUN/m_c/object} trip - {PRONOUN/m_c/subject} {VERB/m_c/have/has} a bad knee.",
+            "m_c's parent had always assumed m_c's knee being painful was because {PRONOUN/m_c/subject} {VERB/m_c/were/was} having growing pains. It turns out, m_c actually has a bad knee."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

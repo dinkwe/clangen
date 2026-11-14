@@ -2,7 +2,8 @@
     {
         "event_id": "reveal_condition_jumbled_mind0",
         "strings": [
-            "m_c frequently stumbles over {PRONOUN/m_c/poss} words. r_c0 suspects {PRONOUN/m_c/subject} may have a jumbled mind."
+            "m_c frequently stumbles over {PRONOUN/m_c/poss} words. r_c0 suspects {PRONOUN/m_c/subject} may have a jumbled mind.",
+            "m_c can't get a sentence out and is almost brought to tears. This has become a pattern and the medicine cat thinks that m_c has a jumbled mind."
         ],
         "involved_cats": {
             "m_c": {},
@@ -16,7 +17,8 @@
     {
         "event_id": "reveal_condition_jumbled_mind1",
         "strings": [
-            "m_c can't get a sentence out and is almost brought to tears. This has become a pattern and the medicine cat thinks that m_c has a jumbled mind."
+            "m_c can't get a sentence out and is almost brought to tears- perhaps {PRONOUN/m_c/subject} has a jumbled mind.",
+            "m_c often struggles with piecing together parts of a sentence."
         ],
         "involved_cats": {
             "m_c": {}

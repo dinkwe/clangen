@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "reveal_condition_murky_mind0",
+        "strings": [
+            "After a conversation with r_c, m_c realizes that just feeling meh isn't the normal experience."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_murky_mind1",
+        "strings": [
+            "It seems like m_c just doesn't feel much.",
+            "m_c feels less excited about life achivements than {PRONOUN/m_c/poss} other peers.",
+            "m_c just doesn't seem to feel as much.",
+            "m_c goes through life in a murk."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

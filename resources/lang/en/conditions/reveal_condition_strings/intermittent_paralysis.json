@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "reveal_condition_intermittent_paralysis0",
+        "strings": [
+            "r_c soothes m_c's frantically worried parent while m_c might have trouble walking with care and patience {PRONOUN/m_c/subject} can live a happy healthy life."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_intermittent_paralysis1",
+        "strings": [
+            "m_c expresses frustration that walking seems so much harder for {PRONOUN/m_c/object} than everyone else."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

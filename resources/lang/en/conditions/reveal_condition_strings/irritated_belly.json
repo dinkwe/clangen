@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "reveal_condition_irritated_belly0",
+        "strings": [
+            "m_c has had trouble eating prey and keeping it down. r_c has decided that {PRONOUN/m_c/subject} will need a specialized diet going forward."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_irritated_belly1",
+        "strings": [
+            "m_c has lived with an irritated belly long enough to need answers from the medicine cat."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

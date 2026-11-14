@@ -2,7 +2,9 @@
     {
         "event_id": "reveal_condition_frequent_fainting0",
         "strings": [
-            "r_c0 is shocked to find m_c collapsed on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/reveal/reveals} that this isn't the first time {PRONOUN/m_c/subject} {VERB/m_c/have/has} fainted."
+            "r_c0 is shocked to find m_c collapsed on the ground. {PRONOUN/m_c/subject/CAP} {VERB/m_c/reveal/reveals} that this isn't the first time {PRONOUN/m_c/subject} {VERB/m_c/have/has} fainted.",
+            "After the third time m_c faints, {PRONOUN/m_c/subject} finally {VERB/m_c/go/goes} to the medicine cat.",
+            "The medicine cat panics after seeing m_c faint in front of them. m_c admits this happens to {PRONOUN/m_c/object} whenever {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} dehydrated."
         ],
         "involved_cats": {
             "m_c": {},
@@ -16,8 +18,8 @@
     {
       "event_id": "reveal_condition_frequent_fainting1",
       "strings": [
-          "After the third time m_c faints, {PRONOUN/m_c/subject} finally {VERB/m_c/go/goes} to the medicine cat.",
-          "The medicine cat panics after seeing m_c faint in front of them. m_c admits this happens to {PRONOUN/m_c/object} whenever {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} dehydrated."
+         "m_c surprises {PRONOUN/m_c/poss} denmates by fainting first thing in the morning."
+        
       ],
       "involved_cats": {
           "m_c": {}
