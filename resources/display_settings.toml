@@ -21,6 +21,7 @@
         special_dates = true
         "random relation" = true
         "they them default" = false
+        "warriorified names" = true
 
     [game.other]
         language = [

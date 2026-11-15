@@ -107,6 +107,8 @@
         "hoarding": "Hoarding Resources",
         "hoarding_tooltip": "The warriors begin stockpiling as many resources as they can get their paws on, regardless of their own safety. Prey and herbs will increase each moonskip, but injuries and illnesses will also increase.",
         "requires_mediator": "-requires mediator-",
-        "requires_medicine_cat": "-requires medicine cat-"
+        "requires_medicine_cat": "-requires medicine cat-",
+        "warriorified names":"Use warriors names for the new conditions",
+        "warriorified names_tooltip": "IE: use prismatic mind instead of autism."
     }
 }

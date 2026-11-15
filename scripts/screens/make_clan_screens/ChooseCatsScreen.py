@@ -971,4 +971,19 @@ class ChooseCatsScreen(MakeClanScreenBase):
             if self.clan_info.leader != cat
             else cat.name.get_specsuffix_name(CatRank.LEADER)
         )
-        return f"<b>{name}</b><br>{cat.genderalign_string}<br>{i18n.t('general.' + cat.age, count=1)}<br>{i18n.t('cat.personality.' + cat.personality.trait)}<br>{cat.skills.skill_string(short=True)}"
+        pronoun_text = ""
+        if len(cat.pronouns) == 1:
+                if cat.pronouns[0].get("subject") == cat.pronouns[0].get("object"):
+                    pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("poss")
+                else:
+                    pronoun_text += cat.pronouns[0].get("subject") + "/" + cat.pronouns[0].get("object")
+        else:
+                for pronoun in cat.pronouns:
+                    pronoun_text += pronoun.get("subject") + "/"
+                if pronoun_text[-1] == "/":
+                    pronoun_text = pronoun_text[:-1]
+        
+        if cat.permanent_conditions:
+            return f"<b>{name}</b><br>{cat.genderalign_string} ({pronoun_text})<br>{i18n.t('general.' + cat.age, count=1)}<br>{i18n.t('cat.personality.' + cat.personality.trait)}<br>{cat.skills.skill_string(short=True)}<br>has a permanent condition!"
+        else:
+            return f"<b>{name}</b><br>{cat.genderalign_string} ({pronoun_text})<br>{i18n.t('general.' + cat.age, count=1)}<br>{i18n.t('cat.personality.' + cat.personality.trait)}<br>{cat.skills.skill_string(short=True)}"

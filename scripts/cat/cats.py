@@ -2186,9 +2186,29 @@ class Cat:
 
     def get_info_block(self, *, make_clan=False, patrol=False, relationship=False):
         if make_clan:
+            pronoun_text = ""
+            perm_cond_text = ""
+            if len(self.pronouns) == 1:
+                    if self.pronouns[0].get("subject") == self.pronouns[0].get("object"):
+                        pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("poss")
+                    else:
+                        pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("object")
+            else:
+                    for pronoun in self.pronouns:
+                        pronoun_text += pronoun.get("subject") + "/"
+                    if pronoun_text[-1] == "/":
+                        pronoun_text = pronoun_text[:-1]
+            if self.permanent_conditions:
+                perm_cond_text = "conditions:\n"
+                for condition in self.permanent_conditions:
+                    if game and not game.game_setting_get("warriorified names"):
+                        perm_cond_text += i18n.t(f"conditions.real_condition_names.{condition.name}")  
+                    else:
+                        perm_cond_text += i18n.t(f"conditions.permanent_conditions.{condition.name}")        
+                        
             return "\n".join(
                 [
-                    self.genderalign_string,
+                    (self.genderalign_string + " (" + pronoun_text + ")"),
                     i18n.t(
                         (
                             f"general.{self.age}"
@@ -2201,6 +2221,7 @@ class Cat:
                     self.skills.skill_string(
                         is_adolescent=(self.age == CatAge.ADOLESCENT)
                     ),
+                    perm_cond_text
                 ]
             )
         elif patrol:
