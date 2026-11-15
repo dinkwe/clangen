@@ -1,9 +1,9 @@
-from random import choice
+from random import choice, randint
 from typing import TYPE_CHECKING, Dict, Union, List
 
 import i18n
 
-from scripts.game_structure import game
+from scripts.game_structure import game, constants
 from scripts.game_structure.game import game_setting_get
 from scripts.game_structure.localization import get_lang_config, load_lang_resource
 
@@ -32,7 +32,18 @@ def get_new_pronouns(genderalign: str) -> List[Dict[str, Union[str, int]]]:
     if game_setting_get("they them default"):
         pronouns = config["sets"].get("default")
     else:
-        pronouns = config["sets"].get(genderalign, config["sets"].get("default"))
+        neos_chance = constants.CONFIG["cat_generation"]["neopronoun_chance"]
+        if genderalign not in ["male", "female"]:
+            neos_chance= int(neos_chance/2)
+        neos = randint(1, neos_chance)
+        if neos == 1:
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
+        elif genderalign == "neos":
+            pronouns = choice(config["sets"].get("neopronouns", config["sets"].get("default")))
+        else:
+            pronouns = config["sets"].get(genderalign, config["sets"].get("default"))
+    
+    
     if pronouns is None:
         raise Exception(
             "Default pronouns not provided in lang file! Check config.json to confirm correct labels"

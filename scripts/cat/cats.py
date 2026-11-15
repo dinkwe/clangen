@@ -98,7 +98,7 @@ class Cat:
         CatRank.LEADER,
     ]
 
-    gender_tags = {"female": "F", "male": "M"}
+    gender_tags = {"female": "F", "male": "M", "intersex": "I"}
 
     # EX levels and ranges.
     # Ranges are inclusive to both bounds
@@ -184,7 +184,7 @@ class Cat:
         # Public attributes
         self.ID = ID
 
-        self.gender: Literal["male", "female"] = gender_dict["sex"]
+        self.gender: Literal["male", "female", "intersex"] = gender_dict["sex"]
         self.genderalign = gender_dict["genderalign"]
         if gender_dict.get("pronouns"):  # pronouns are lazy-loaded for new cats
             self.pronouns = gender_dict.get("pronouns")
@@ -415,7 +415,22 @@ class Cat:
         locale = i18n.config.get("locale")
         value = self._pronouns.get(locale)
         if value is None:
-            self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            second_set_chance = constants.CONFIG["cat_generation"]["multiple_pronouns_chance"]
+            if self.genderalign not in ["male", "female", "intersex"]:
+                second_set_chance= int(second_set_chance/2)
+            seconds = randint(1,second_set_chance)
+            if "intersex" in self.genderalign:
+                self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign[9:])
+            else:
+                self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            if seconds == 1:
+                pronoun_gender = randint(1, 10)
+                if pronoun_gender < 6:
+                    # add he, she, or they
+                    self._pronouns[locale] += pronouns.get_new_pronouns(choice(["male", "female", "nonbinary"]))
+                else:
+                    # add neos
+                    self._pronouns[locale] += pronouns.get_new_pronouns("neos")
             value = self._pronouns[locale]
         return value
 
@@ -464,6 +479,7 @@ class Cat:
             "trans female",
             "trans male",
             "nonbinary",
+            "intersex",
         ):
             return i18n.t(f"general.{self.genderalign}")
         # otherwise, it's custom - just return it directly

@@ -244,7 +244,10 @@ class NewCatFactory(BaseCatFactory, ABC):
             "sex": sex if sex else cls.rng.choice(("male", "female")),
         }
         gender["genderalign"] = genderalign if genderalign else gender["sex"]
-        
+        intersex_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["intersex_chance"])
+        if intersex_chance == 1:
+            gender["sex"] = "intersex"
+            print("SEX")
         #weighing "nonbinary" to be the most common
         genderqueer_list = [
             "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary",
@@ -261,8 +264,8 @@ class NewCatFactory(BaseCatFactory, ABC):
         if age.is_baby():
             return gender
 
-        trans_chance = cls.rng.randint(0, 50)
-        nb_chance = cls.rng.randint(0, 75)
+        trans_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["trans_chance"])
+        nb_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["enby_chance"])
 
         if nb_chance == 1:
             gender["genderalign"] = cls.rng.choice(genderqueer_list)
@@ -270,7 +273,9 @@ class NewCatFactory(BaseCatFactory, ABC):
             gender["genderalign"] = (
                 cls.rng.choice(transmasc_list) if gender["sex"] == "female" else cls.rng.choice(transfem_list)
             )
-
+        if gender["sex"] == "intersex":
+            gender["genderalign"] = "intersex " + gender["genderalign"]
+            #print(gender)
         return gender
 
     @staticmethod

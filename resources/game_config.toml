@@ -458,6 +458,21 @@ dev_tools = false
   # 1/2^(chance) that a cat will have colourpoint
   random_point_chance = 5
 
+  # 1/(chance) that a cis cat will have neopronouns. this chance is modified for trans cats
+  neopronoun_chance = 50
+
+  # 1/chance that a cis cat will have multiple pronouns (ie he/they). this chance is modified for trans cats
+  multiple_pronouns_chance = 40
+
+  # 1/chance that a cat will ALREADY be trans or nonbinary when they are generated.
+  trans_chance = 40
+  enby_chance = 60
+
+  # 1/chance that a cat will be intersex
+  intersex_chance = 25
+
+
+
 [cat_name_controls]
   # set to true if you always want cats named after the color of their pelt
   # if cats can't find a pelt color, they will choose from normal_prefixes

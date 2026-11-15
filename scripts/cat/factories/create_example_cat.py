@@ -43,12 +43,19 @@ def create_example_cats(majority_rank: CatRank, rank_weights: dict) -> list["Cat
                     and not PERMANENT_CONDITIONS[condition]["can_be_congenital"]
                 ):
                     continue
+                if condition in ["excess_testosterone", "testosterone_deficiency", "aneuploidy",
+                                            "mosaicism", "chimerism"]:
+                    continue
                 possible_conditions.append(condition)
 
             if possible_conditions:
                 chosen_condition = choice(possible_conditions)
                 if PERMANENT_CONDITIONS[chosen_condition]["can_be_congenital"]:
                     gain_permanent_condition(created_cat, chosen_condition, True)
+        if created_cat.gender == "intersex":
+            intersex_condition = choice(["excess_testosterone", "testosterone_deficiency", "aneuploidy",
+                                            "mosaicism", "chimerism"])
+            gain_permanent_condition(created_cat, intersex_condition, is_congenital=True)
                     
     return chosen_cats
 
