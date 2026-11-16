@@ -247,7 +247,7 @@ class NewCatFactory(BaseCatFactory, ABC):
         intersex_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["intersex_chance"])
         if intersex_chance == 1:
             gender["sex"] = "intersex"
-            print("SEX")
+            #print("INTERSEX ALERT!!")
         #weighing "nonbinary" to be the most common
         genderqueer_list = [
             "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary",

@@ -2220,7 +2220,10 @@ class Cat:
                     if game and not game.game_setting_get("warriorified names"):
                         perm_cond_text += i18n.t(f"conditions.real_condition_names.{condition.name}")  
                     else:
-                        perm_cond_text += i18n.t(f"conditions.permanent_conditions.{condition.name}")        
+                        perm_cond_text += i18n.t(f"conditions.permanent_conditions.{condition.name}")
+                    perm_cond_text += "\n"
+                    
+            perm_cond_text=perm_cond_text[:-1]
                         
             return "\n".join(
                 [
