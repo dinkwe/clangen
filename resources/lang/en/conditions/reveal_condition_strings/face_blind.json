@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "reveal_condition_face_blind0",
+        "strings": [
+            "m_c struggles to tell {PRONOUN/m_c/poss} Clanmates apart without hearing their voices. m_c is face blind.",
+            "m_c doesn't greet a Clanmate until they mew at {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} is face blind.",
+            "m_c confesses that {PRONOUN/m_c/subject} {VERB/m_c/find/finds} it easier to identify cats from their voices and scents, rather than their faces."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

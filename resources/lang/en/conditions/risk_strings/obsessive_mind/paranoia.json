@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "obsessive_mind_paranoia0",
+        "strings": [
+            "r_c0 gently speaks to m_c, talking at length with {PRONOUN/m_c/object} about the herbs in the medicine den, trying to assure {PRONOUN/m_c/object} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} safe."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_paranoia1",
+        "strings": [
+            "m_c is wandering around camp, somehow convinced that the world will be ending soon and is rather listless.",
+            "m_c refuses to eat the prey on the fresh-kill pile, going out each day to catch even fresher prey for {PRONOUN/m_c/self} instead.",
+            "While the rest of the Clan settles down for the night, m_c is getting up every few hours to check and make sure that things are still safe and fine.",
+            "m_c keeps waking up {PRONOUN/m_c/poss} denmates to get them to check just one more time if they are really sure the camp is secure.",
+            "{PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} not paranoid, it's just the proper level of caution, m_c insists as {PRONOUN/m_c/subject} {VERB/m_c/check/checks} for the third time that afternoon that the nursery is secure."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

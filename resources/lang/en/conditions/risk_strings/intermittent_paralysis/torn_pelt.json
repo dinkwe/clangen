@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "intermittent_paralysis_torn_pelt0",
+        "strings": [
+            "With a hiss, m_c sets to licking at and soothing the tears in {PRONOUN/m_c/poss} pelt, recalling r_c0's warnings about risk of infection."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_torn_pelt1",
+        "strings": [
+            "It would appear that m_c's most recent fall around camp has torn open some wounds on {PRONOUN/m_c/poss} pelt."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

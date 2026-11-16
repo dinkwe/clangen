@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "nosebleed_healed0",
+        "strings": [
+            "m_c sighs in relief when {PRONOUN/m_c/poss} nose stops bleeding.",
+            "m_c's nose has stopped bleeding."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

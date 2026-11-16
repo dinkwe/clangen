@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "curved_spine_joint_pain0",
+        "strings": [
+            "m_c stretches as much as {PRONOUN/m_c/subject} can, but {PRONOUN/m_c/poss} back pain refuses to cease."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

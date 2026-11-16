@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "weighted_heart_absence0",
+        "strings": [
+            "After the worried reports of {PRONOUN/m_c/poss} Clanmates, r_c0 comes to check on m_c with a package of herbs. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'ve/'s} been staring blankly at one spot of the den for hours now."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_absence1",
+        "strings": [
+            "m_c's head spins and {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like every blink, the world around {PRONOUN/m_c/object} speeds away - leaving {PRONOUN/m_c/object} disoriented and lost.",
+            "Between one blink and the next, m_c feels like {PRONOUN/m_c/poss} soul has jumped and the world is somewhat underwater.",
+            "m_c's denmates carefully make sure that there's nothing too out of place for when {PRONOUN/m_c/poss} mind comes back to {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

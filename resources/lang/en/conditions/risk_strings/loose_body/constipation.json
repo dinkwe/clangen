@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "loose_body_constipation0",
+        "strings": [
+            "r_c0 chuckles as m_c shuffles into {PRONOUN/r_c0/poss} den, asking for some herbs to help with dirtmaking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "loose_body_constipation1",
+        "strings": [
+            "m_c is very frustrated after {PRONOUN/m_c/subject} {VERB/m_c/discover/discovers} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} having a bit of dirtmaking trouble."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

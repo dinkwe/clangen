@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_dizziness0",
+        "strings": [
+            "r_c0 notices that m_c's been struggling to walk straight recently. After a talk, it just seems that {PRONOUN/m_c/poss} fatigue has led to a little bit of dizziness."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_dizziness1",
+        "strings": [
+            "Due to m_c's brain fog and fatigue, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} begun experiencing a little bit of dizziness while walking around camp.",
+            "Overtired from {PRONOUN/m_c/poss} fatigue, m_c's gotten a little bit of dizziness standing up recently."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

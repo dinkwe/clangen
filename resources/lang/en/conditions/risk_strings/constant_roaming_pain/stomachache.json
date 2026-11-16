@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "constant_roaming_pain_stomachache0",
+        "strings": [
+            "r_c0 sighs when m_c comes in with the complaint of a stomachache - hopefully it's just something {PRONOUN/m_c/subject} ate."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_stomachache1",
+        "strings": [
+            "m_c rolls onto {PRONOUN/m_c/poss} back in {PRONOUN/m_c/poss} nest, too uncomfortable to doze on {PRONOUN/m_c/poss} stomach."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

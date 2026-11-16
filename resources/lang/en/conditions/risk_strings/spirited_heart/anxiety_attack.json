@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "spirited_heart_anxiety_attack0",
+        "strings": [
+            "m_c spends a few hours convincing a Clanmate to not kill a rabbit kit, and although {PRONOUN/m_c/subject} {VERB/m_c/were/was} successful, it still leaves {PRONOUN/m_c/object} wracked with anxiety."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

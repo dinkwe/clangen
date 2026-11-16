@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "prismatic_mind_understimulation0",
+        "strings": [
+            "r_c0 reassures m_c that's it's alright - {PRONOUN/m_c/subject} just {VERB/m_c/need/needs} to focus on what's around {PRONOUN/m_c/object}. r_c0 prompts {PRONOUN/m_c/object}, asking what {PRONOUN/m_c/subject} can see, hear, and feel."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_understimulation1",
+        "strings": [
+            "Sometimes the world feels a bit off to m_c, distant and out of reach for reasons that {PRONOUN/m_c/subject} can't quite name.",
+            "m_c's whole body shakes, coiled and wound up with an energy that rises into something close to anxiety from the lack of realness to the world around {PRONOUN/m_c/object}.",
+            "When the world feels distant to m_c, it worries {PRONOUN/m_c/object} greatly.",
+            "m_c has been feeling a little bit understimulated recently and is off balance as a result."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

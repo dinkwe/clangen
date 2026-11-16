@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "emotionally_numb_sleeplessness0",
+        "strings": [
+            "m_c finds that when you don't feel much, sleep comes harder to you.",
+            "m_c doesn't feel tired enough to go to sleep quite yet.",
+            "m_c stares at the other side of {PRONOUN/m_c/poss} den, unable to sleep."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

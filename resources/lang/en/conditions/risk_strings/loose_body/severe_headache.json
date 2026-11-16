@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "loose_body_severe_headache0",
+        "strings": [
+            "r_c0 has to rush to m_c's den to give them some herbs because {PRONOUN/m_c/poss} headache is so painful that {PRONOUN/m_c/subject} can't move."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "loose_body_severe_headache1",
+        "strings": [
+            "m_c lies in {PRONOUN/m_c/poss} nest, clutching {PRONOUN/m_c/poss} head in pain."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

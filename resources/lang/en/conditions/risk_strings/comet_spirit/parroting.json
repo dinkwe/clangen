@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_parroting0",
+        "strings": [
+            "r_c0 sighs as yet another fuming cat comes in complaining about m_c 'mocking' them with {PRONOUN/m_c/poss} parroting behaviour."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_parroting1",
+        "strings": [
+            "m_c has been cheerfully mimicking {PRONOUN/m_c/poss} various Clanmates as a way to show more affection.",
+            "As a way to keep in control of {PRONOUN/m_c/poss} words, m_c has been parroting {PRONOUN/m_c/poss} Clanmates.",
+            "m_c finds it incredibly funny how some of {PRONOUN/m_c/poss} Clanmates overreact to {PRONOUN/m_c/object} parroting words."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

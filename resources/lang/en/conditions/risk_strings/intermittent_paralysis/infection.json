@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "intermittent_paralysis_infection0",
+        "strings": [
+            "r_c0 has noticed that m_c reeks of infection, but m_c hasn't noticed anything that could have caused it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_infection1",
+        "strings": [
+            "m_c complains that {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} worse than usual; it seems like a scratch or other wound has become infected without notice.",
+            "There's an infection building in one of m_c's untended scratches."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

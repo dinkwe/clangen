@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "lasting_grief_weighted_heart0",
+        "strings": [
+            "r_c0 helps m_c groom, purring all the while as comfortingly as {PRONOUN/r_c0/subject} can. m_c just stares off into the distance, eyes almost seeming empty."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "lasting_grief_weighted_heart1",
+        "strings": [
+            "m_c's sadness has gone into numbness - something heavy weighs {PRONOUN/m_c/object} down as {PRONOUN/m_c/subject} {VERB/m_c/wander/wanders} listlessly around the camp.",
+            "The grief has become something numb, empty almost, as m_c stares at the walls of {PRONOUN/m_c/poss} den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know how {PRONOUN/m_c/subject} {VERB/m_c/are/is} supposed to get up after this.",
+            "m_c stares blankly up at the sky, feeling less motivated to do anything, {PRONOUN/m_c/poss} mind fogged with grief and despair.",
+            "m_c stalked out of camp, clawing at the ground as {PRONOUN/m_c/subject} went. It was so unfair, all of it, why did StarClan take them away? Why curse {PRONOUN/m_c/object} with this darkness inside?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

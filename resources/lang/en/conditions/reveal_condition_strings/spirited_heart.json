@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "reveal_condition_spirited_heart0",
+        "strings": [
+            "After watching a bee die, m_c was left destitute for weeks. {PRONOUN/m_c/poss/CAP} emotions run strong: {PRONOUN/m_c/subject} is a spirited heart.",
+            "m_c found a pretty butterfly in the nursery and refused to let anyone kill it, fiercely protecting it until it could find its way out of its den."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "anxiety_breathless_fit0",
+        "strings": [
+            "With all of {PRONOUN/m_c/poss} anxieties chasing each other in m_c's head, it's hard for {PRONOUN/m_c/object} to focus on r_c0's quiet encouragement to match breathing."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_breathless_fit1",
+        "strings": [
+            "The breathing exercises that m_c's been using recently to keep calm have only resulted in the opposite.",
+            "m_c's anxiety is causing {PRONOUN/m_c/object} to struggle to breathe."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

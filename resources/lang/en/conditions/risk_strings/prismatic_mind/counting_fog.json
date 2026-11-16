@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "prismatic_mind_counting_fog0",
+        "strings": [
+            "Being a prismatic mind affects how m_c processes numbers. r_c0 assures {PRONOUN/m_c/object} that it's okay, {PRONOUN/m_c/subject} just {VERB/m_c/have/has} counting fog."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_counting_fog1",
+        "strings": [
+            "Being a prismatic mind affects how m_c processes numbers. The medicine cat assures {PRONOUN/m_c/object} that it's okay, {PRONOUN/m_c/subject} just {VERB/m_c/have/has} counting fog."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

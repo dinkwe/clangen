@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_confused_body0",
+        "strings": [
+            "m_c's parent brings m_c to r_c0 for {PRONOUN/m_c/poss} uncontrollable movement. r_c0 says that {PRONOUN/m_c/subject} have a confused body."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_confused_body1",
+        "strings": [
+            "As m_c grows up, {PRONOUN/m_c/subject} start having uncontrollable movements.",
+            "m_c tics and is impulsive. {PRONOUN/m_c/subject/CAP} might have a confused body."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

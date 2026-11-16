@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "bipolar_ii_delusions0",
+        "strings": [
+            "m_c comes crying into the medicine den, insisting that {PRONOUN/m_c/poss} teeth are falling out, even after repeated assurances that they're not.",
+            "m_c is absolutely certain that an outsider is following {PRONOUN/m_c/object} wherever they go and insists {PRONOUN/m_c/subject} {VERB/m_c/need/needs} protection."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

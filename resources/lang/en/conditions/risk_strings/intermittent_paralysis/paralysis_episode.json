@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "intermittent_paralysis_paralysis_episode0",
+        "strings": [
+            "r_c0 sighs as once more m_c worries about the lack of response and sensation from {PRONOUN/m_c/poss} hindquarters. With a gentle tone, {PRONOUN/r_c0/subject} {VERB/r_c0/reassure/reassures} {PRONOUN/m_c/object} it's just another paralysis episode."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_paralysis_episode1",
+        "strings": [
+            "It would seem that this moon m_c is having a flare up, unable to move {PRONOUN/m_c/poss} hindquarters as fluidly as {PRONOUN/m_c/subject} would like.",
+            "With a shake of the head, m_c refuses to leave {PRONOUN/m_c/poss} nest. It seems to be another paralysis episode.",
+            "With much effort m_c drags {PRONOUN/m_c/self} out of the den to face the day. It appears {PRONOUN/m_c/subject} {VERB/m_c/are/is} having another paralysis episode.",
+            "m_c is experiencing a paralysis episode."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

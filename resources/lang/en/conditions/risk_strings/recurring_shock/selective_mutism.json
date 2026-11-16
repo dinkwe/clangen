@@ -1,11 +1,23 @@
 [
     {
-        "event_id": "recurring_shock_selective_mutism1",
+        "event_id": "recurring_shock_selective_mutism0",
         "strings": [
-            "m_c finds that, at times, {PRONOUN/m_c/subject} simply cannot bring {PRONOUN/m_c/self} to speak."
+            "Due to m_c's recurring shock, r_c has noticed that {PRONOUN/m_c/subject} {VERB/m_c/have/has} developed selective mutism."
         ],
         "involved_cats": {
-            "m_c": {}
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
         }
+    },
+    {
+        "event_id": "recurring_shock_selective_mutism1",
+        "strings": [
+            "m_c finds that, at times, {PRONOUN/m_c/subject} simply cannot bring {PRONOUN/m_c/self} to speak.",
+            "m_c has developed selective mutism due to the lingering effects of {PRONOUN/m_c/poss} recurring shock."
+        ]
     }
 ]

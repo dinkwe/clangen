@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "irritable_bowels_diarrhea0",
+        "strings": [
+            "Reluctantly, after the third time m_c has raced to the dirtplace, {PRONOUN/m_c/subject} {VERB/m_c/pad/pads} over to r_c0 for some hopefully soothing herbs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritable_bowels_diarrhea1",
+        "strings": [
+            "m_c has hardly left the dirtplace, too fearful of another embarrassing display of {PRONOUN/m_c/poss} lack of bowel control.",
+            "Awkwardly, m_c has to ask to bow out of {PRONOUN/m_c/poss} tasks this moon, {PRONOUN/m_c/subject}{VERB/m_c/'ve/s} been suffering some rather horrible diarrhea."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

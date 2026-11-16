@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "seizure_prone_fainting0",
+        "strings": [
+            "r_c0 worriedly fusses over m_c in the medicine den. It appears that after {PRONOUN/m_c/poss} last couple of seizures, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} left weak and at risk of fainting."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "seizure_prone_fainting1",
+        "strings": [
+            "m_c finds {PRONOUN/m_c/self} on the ground, staring at the sky with {PRONOUN/m_c/poss} Clanmates worriedly checking on {PRONOUN/m_c/object}.",
+            "Seizures aren't the only thing sending m_c to collapse."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

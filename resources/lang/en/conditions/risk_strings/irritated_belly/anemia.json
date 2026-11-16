@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "irritated_belly_anemia0",
+        "strings": [
+            "The limited diet that r_c0 has put m_c on has left {PRONOUN/m_c/object} feeling cold and dizzy when {PRONOUN/m_c/subject} stand up."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritated_belly_anemia1",
+        "strings": [
+            "It seems that m_c has become anemic from {PRONOUN/m_c/poss} irritated belly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

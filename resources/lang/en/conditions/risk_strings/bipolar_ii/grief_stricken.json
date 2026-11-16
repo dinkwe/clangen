@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "bipolar_ii_grief_stricken0",
+        "strings": [
+            "By StarClan, m_c wishes that {PRONOUN/m_c/subject} could hold onto the small things, instead of feeling this heavy blanket weight of sadness and longing for things gone.",
+            "There's no reason for this, nothing has happened recently. Yet m_c wakes with a wail, the weight of grief holding {PRONOUN/m_c/object} down and aching as sharply as if someone had newly passed.",
+            "m_c stalks angrily from camp, the grief welling up in {PRONOUN/m_c/poss} throat feeling like it will choke {PRONOUN/m_c/object}. m_c can't help but find it unfair that this sadness won't go away."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

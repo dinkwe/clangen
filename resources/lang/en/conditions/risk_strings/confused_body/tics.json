@@ -1,0 +1,15 @@
+[
+    {
+        "event_id": "confused_body_tics0",
+        "strings": [
+            "m_c has started ticing again.",
+            "m_c barely noticed when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to tic.",
+            "m_c's ears have started to peel backwards without {PRONOUN/m_c/poss} say-so.",
+            "A kit asks why {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} doing that when m_c's fur fluffs out because of {PRONOUN/m_c/poss} tics.",
+            "Another cat gets mad at m_c when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} hissing as a tic."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

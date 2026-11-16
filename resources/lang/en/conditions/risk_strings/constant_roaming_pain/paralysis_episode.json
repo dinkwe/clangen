@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_paralysis_episode0",
+        "strings": [
+            "In distress, m_c calls to r_c0 hoping for an explanation for {PRONOUN/m_c/poss} hindpaws' failure to respond. After a bit of talking, it's determined that the paralysis should only be temporary."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_paralysis_episode1",
+        "strings": [
+            "While m_c admits that the break is nice, {PRONOUN/m_c/subject} {VERB/m_c/are/is} a little bit anxious about the fact {PRONOUN/m_c/poss} legs refuse to respond.",
+            "m_c complains about the fact that {PRONOUN/m_c/poss} legs haven't been responding as much as usual recently, to the point it appears {PRONOUN/m_c/subject} {VERB/m_c/have/has} an episode of paralysis."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

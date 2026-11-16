@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "prismatic_mind_face_blindness0",
+        "strings": [
+            "m_c doesn't greet r_c0 until {PRONOUN/r_c0/subject} {VERB/r_c0/mew/mews} at {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} face blind."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": [
+                "medicine cat"
+            ]
+        }
+    },
+    {
+        "event_id": "prismatic_mind_face_blindness1",
+        "strings": [
+            "m_c struggles to tell {PRONOUN/m_c/poss} Clanmates apart without hearing their voices. m_c is face blind.",
+            "m_c confesses that {PRONOUN/m_c/subject} {VERB/m_c/find/finds} it easier to identify cats from their voices and scents, rather than their faces.",
+            "The medicine cat assures m_c that being unable to remember and recognize faces is a common part of being a prismatic mind."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

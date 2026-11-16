@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "irritable_bowels_stomachache0",
+        "strings": [
+            "m_c accepts the herbs from r_c0 for {PRONOUN/m_c/poss} latest repeat stomachache. Both can only wish that it would prevent m_c from getting another one later."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritable_bowels_stomachache1",
+        "strings": [
+            "m_c winces as {PRONOUN/m_c/subject} roll over in {PRONOUN/m_c/poss} nest. No matter the position, it doesn't help with the ache in {PRONOUN/m_c/poss} stomach.",
+            "m_c feels bloated and overfull after just a small bit of prey.",
+            "Upon waking up, m_c knows it'll be a bad day. {PRONOUN/m_c/subject/CAP} already {VERB/m_c/feel/feels} a bit queasy and unwell because of {PRONOUN/m_c/poss} stomach."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

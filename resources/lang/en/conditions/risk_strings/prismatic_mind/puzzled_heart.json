@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "prismatic_mind_puzzled_heart0",
+        "strings": [
+            "When other cats vent to m_c, {PRONOUN/m_c/subject/CAP} tend to give solutions rather than comfort. The medicine cat proposes that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a puzzled heart.",
+            "m_c admits that {PRONOUN/m_c/subject} {VERB/m_c/have/has} never been able to read emotions, much less empathize with them.",
+            "As a prismatic mind, m_c has never been able to connect with other cats in the same way. {PRONOUN/m_c/subject/CAP} may be a puzzled heart."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

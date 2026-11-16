@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "bad_knee_knee_locking0",
+        "strings": [
+            "r_c0 moves m_c to the medicine den after {PRONOUN/m_c/poss} knees lock up from pain in the middle of camp."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bad_knee_knee_locking1",
+        "strings": [
+            "m_c tries to get up from {PRONOUN/m_c/poss} nest, but collapses back down into it before calling for the medicine cat."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

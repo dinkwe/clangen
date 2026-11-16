@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_stomachache0",
+        "strings": [
+            "r_c0 sympathetically prepares some stomach-pain relieving herbs for m_c to have with {PRONOUN/m_c/poss} prey."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_stomachache1",
+        "strings": [
+            "After eating, m_c is left feeling a bit queasy as the prey doesn't sit well within {PRONOUN/m_c/poss} belly.",
+            "m_c miserably rolls over onto {PRONOUN/m_c/poss} back, feeling uncomfortable resting on {PRONOUN/m_c/poss} belly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

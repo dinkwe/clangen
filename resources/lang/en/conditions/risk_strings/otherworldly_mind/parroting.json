@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "otherworldly_mind_parroting0",
+        "strings": [
+            "r_c0 sighs when m_c keeps looping {PRONOUN/m_c/poss} words and parroting {PRONOUN/m_c/poss} Clanmates."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "otherworldly_mind_parroting1",
+        "strings": [
+            "m_c isn't mocking other cats when {PRONOUN/m_c/subject} {VERB/m_c/repeat/repeats} what {PRONOUN/m_c/subject} {VERB/m_c/hear/hears}.",
+            "Recently m_c has been doing a fair bit of parroting."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "confused_body_sprain0",
+        "strings": [
+            "m_c limps to r_c0 after {PRONOUN/m_c/subject} sprained {PRONOUN/m_c/poss} paw from jumping awkwardly into the dirt."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "confused_body_sprain1",
+        "strings": [
+            "m_c gets a sprain from throwing {PRONOUN/m_c/self} onto the ground.",
+            "m_c got a sprain.",
+            "m_c locks up and takes a harsh fall as a result."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "anxiety_indecision0",
+        "strings": [
+            "r_c0 gently sits beside m_c as {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} in place, eyes wide, struggling to decide what {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to do."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_indecision1",
+        "strings": [
+            "m_c keeps going back and forth between {PRONOUN/m_c/poss} options and isn't able to commit to any of them.",
+            "m_c keeps second guessing {PRONOUN/m_c/poss} own opinion and is told {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have to decide today if it's too hard."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

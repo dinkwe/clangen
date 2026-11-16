@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_sleeplessness0",
+        "strings": [
+            "r_c0 sits with m_c well into the night while {PRONOUN/m_c/subject} {VERB/m_c/stare/stares} listlessly and somewhat forlornly at {PRONOUN/m_c/poss} paws and the bedding of the nest around {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_sleeplessness1",
+        "strings": [
+            "m_c really wishes that {PRONOUN/m_c/subject} could just sleep as the dawn rises up around {PRONOUN/m_c/object} with yet another sleepless night fading away.",
+            "Some of m_c's denmates are getting really annoyed by {PRONOUN/m_c/object} getting up and disturbing everyone else when {PRONOUN/m_c/subject} {VERB/m_c/wander/wanders} off.",
+            "While it's good for m_c to keep busy at night, {PRONOUN/m_c/poss} denmates worry as they see {PRONOUN/m_c/poss} fur getting messier and messier from lack of energy to care."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

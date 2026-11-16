@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "night_dirtmaking_sleeplessness0",
+        "strings": [
+            "Reluctantly, m_c goes to talk to r_c0. The frequent trips to the dirtplace all night have left {PRONOUN/m_c/object} unable to sleep."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "night_dirtmaking_sleeplessness1",
+        "strings": [
+            "With some shock, m_c realises that the sun is rising already, and {PRONOUN/m_c/subject} {VERB/m_c/haven't/hasn't} gotten any sleep at all.",
+            "Before m_c knows what is happening, it's already morning and {PRONOUN/m_c/subject} {VERB/m_c/haven't/hasn't} slept yet."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

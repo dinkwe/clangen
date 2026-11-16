@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "antisocial_double_tongue0",
+        "strings": [
+            "m_c often finds it easier to lie. All of these lies have piled up and gotten m_c into trouble.",
+            "m_c's Clanmates understand that this is a trauma response, but lying still has consequences.",
+            "It feels like m_c has another tongue. {PRONOUN/m_c/subject/CAP} {VERB/m_c/WANT/WANTS} to tell the truth, but it's like another tongue comes out and tells a lie for {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

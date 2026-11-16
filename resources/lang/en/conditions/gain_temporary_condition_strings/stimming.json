@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "gain_temporary_condition_stimming0",
+        "strings": [
+            "m_c has started stimming.",
+        	"m_c has been stimming a lot more than usual recently.",
+            "The Clan is happy to see m_c stimming more."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

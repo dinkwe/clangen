@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "lazy_eye_headache0",
+        "strings": [
+            "Poor m_c's woken up with a headache. Asking for r_c0, {PRONOUN/m_c/subject} {VERB/m_c/worry/worries} about how it will impair {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "lazy_eye_headache1",
+        "strings": [
+            "Grumbling, m_c makes {PRONOUN/m_c/poss} way to the medicine den to get some herbs to chase away a headache.",
+            "Resolutely, m_c ignores the dull throb in {PRONOUN/m_c/poss} head in the hopes that ignoring it will make it vanish.",
+            "After all the squinting m_c's been doing trying to clearly see things, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not surprised to have a bit of a headache.",
+            "Waking up, m_c lets out a small groan. It seems like it will be a bad day with {PRONOUN/m_c/poss} head swimming a bit."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

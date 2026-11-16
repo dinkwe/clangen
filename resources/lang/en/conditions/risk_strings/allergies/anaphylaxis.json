@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "allergies_anaphylaxis0",
+        "strings": [
+            "r_c0 frets over m_c as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles}, it looks as though m_c's allergy has become so, so much worse again."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "allergies_anaphylaxis1",
+        "strings": [
+            "Rather than the usual minor irritation that m_c's used to experiencing from {PRONOUN/m_c/poss} allergies, this time it feels like {PRONOUN/m_c/poss} life is in real danger.",
+            "m_c desperately wheezes, stumbling towards the medicine den as {PRONNOUN/m_c/poss} allergic reaction comes on worse than expected.",
+            "There's desperate yowling across the camp as m_c collapses due to {PRONNOUN/m_c/poss} allergic reaction."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

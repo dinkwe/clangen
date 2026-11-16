@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "body_biter_small_cut0",
+        "strings": [
+            "r_c0 gets cobwebs ready for {PRONOUN/m_c/object} when m_c comes in with a small cut."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_small_cut1",
+        "strings": [
+            "m_c has cut {PRONOUN/m_c/self} after chewing on {PRONOUN/m_c/poss} lips.",
+            "m_c has chewed too deeply into {PRONOUN/m_c/poss} calluses, and has started to bleed.",
+            "Once again, m_c has started to bleed from {PRONOUN/m_c/poss} nonstop biting."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

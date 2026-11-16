@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_sunblindness0",
+        "strings": [
+            "m_c sheepishly explains to r_c0 that {PRONOUN/m_c/subject} got distracted and wound up looking at the sky for too long today."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_sunblindness1",
+        "strings": [
+            "Due to m_c's lack of sleep, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} found that {PRONOUN/m_c/poss} eyes are more sensitive than usual, {PRONOUN/m_c/subject} {VERB/m_c/are/is} experiencing some temporary blindness.",
+            "In the glare of the sun, m_c hisses at it because it makes {PRONOUN/m_c/poss} eyes burn.",
+            "m_c shakes {PRONOUN/m_c/poss} head and ducks back into the den - the world outside is just particularly blinding."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

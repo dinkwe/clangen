@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "lazy_eye_failing_eyesight0",
+        "strings": [
+            "r_c0 has noticed that m_c's been squinting a lot more than usual, tripping over {PRONOUN/m_c/poss} own paws and struggling in patrols. It seems like m_c's vision is not as strong as it should be."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "lazy_eye_failing_eyesight1",
+        "strings": [
+            "m_c's noticed that because of {PRONOUN/m_c/poss} lazy eye, {PRONOUN/m_c/poss} vision doesn't seem to be as crisp as it should be.",
+            "While walking around the camp, m_c's noticed that things don't seem as clear as they once were for {PRONOUN/m_c/object}.",
+            "With some worry, m_c has to admit that {PRONOUN/m_c/poss} lazy eye seems to be affecting more and more of {PRONOUN/m_c/poss} vision."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

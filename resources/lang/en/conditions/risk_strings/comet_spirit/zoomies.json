@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_zoomies0",
+        "strings": [
+            "r_c0 watches, bemused, as m_c dashes into {PRONOUN/r_c0/poss} den, bouncing around cheerfully while babbling something, before zooming off again into the camp."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_zoomies1",
+        "strings": [
+            "m_c's energy always brings joy to the rest of the Clan, but sometimes {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} to have far too much of it.",
+            "The peace of the camp is hardly disturbed by m_c playing around like a young kitten.",
+            "m_c feels filled with the need to move, to jump around and just go, go, go!"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

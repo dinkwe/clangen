@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "otherworldly_mind_hallucinations0",
+        "strings": [
+            "It's becoming increasingly more difficult for m_c to understand where reality starts and ends. Figures and shapes dance around {PRONOUN/m_c/object} just outside of {PRONOUN/m_c/poss} vision.",
+            "m_c admits to a Clanmate that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not sure if {PRONOUN/m_c/subject} can actually trust {PRONOUN/m_c/poss} ears and what {PRONOUN/m_c/subject} {VERB/m_c/are/is} hearing anymore."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

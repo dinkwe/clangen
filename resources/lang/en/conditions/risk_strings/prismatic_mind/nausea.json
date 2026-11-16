@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "prismatic_mind_nausea0",
+        "strings": [
+            "When m_c tried to eat, {PRONOUN/m_c/subject} had to quickly turn to r_c0 and ask for some anti-nausea herbs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_nausea1",
+        "strings": [
+            "m_c decided to try an old favorite food of {PRONOUN/m_c/inposs}, but {PRONOUN/m_c/subject} ended up not liking it. In fact, its texture and taste made {PRONOUN/m_c/object} feel nauseous, and {PRONOUN/m_c/subject} now {VERB/m_c/lie/lies} in {PRONOUN/m_c/poss} nest, curled up and hoping that this feeling will go away soon.",
+            "When m_c is hungry, that hunger manifests as a case of nausea.",
+            "m_c isn't able to finish {PRONOUN/m_c/poss} prey, leaving it half eaten and looking like {PRONOUN/m_c/subject} might be sick."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

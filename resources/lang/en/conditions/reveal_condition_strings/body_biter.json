@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "reveal_condition_body_biter0",
+        "strings": [
+            "After {PRONOUN/m_c/poss} parent is informed that m_c doesn't realize when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} pulling at {PRONOUN/m_c/poss} fur, m_c's parent drops {PRONOUN/m_c/object} off at the medicine den. r_c0 says that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a body biter."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_body_biter1",
+        "strings": [
+            "m_c bites at {PRONOUN/m_c/poss} claws. It is possible that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a body biter.",
+            "m_c keeps getting told not to pick at {PRONOUN/m_c/poss} scabs but {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} even realize when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} doing it.",
+            "m_c picks at {PRONOUN/m_c/poss} body when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} stressed."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

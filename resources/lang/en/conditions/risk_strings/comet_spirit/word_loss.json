@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "comet_spirit_word_loss0",
+        "strings": [
+            "r_c0 has noticed that m_c has been speaking too fast for {PRONOUN/m_c/poss} words to keep up."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_word_loss1",
+        "strings": [
+            "Talking so fast all the time has led m_c's words to get lost on the way.",
+            "m_c has been speaking so fast that all {PRONOUN/m_c/poss} words have been tripping over one another."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

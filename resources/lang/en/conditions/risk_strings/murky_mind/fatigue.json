@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "murky_mind_fatigue0",
+        "strings": [
+            "m_c usually feels at least a little bit tired. Today is no exception.",
+            "m_c doesn't know how everyone else wakes up with so much energy.",
+            "m_c just wants to roll over and go back to bed, but {PRONOUN/m_c/poss} grumbling stomach tells {PRONOUN/m_c/object} otherwise.",
+            "The only reason that m_c got up today was so that {PRONOUN/m_c/poss} Clanmates weren't disturbed by {PRONOUN/m_c/poss} snoring."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

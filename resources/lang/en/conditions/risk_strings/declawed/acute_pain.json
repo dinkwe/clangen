@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "declawed_acute_pain0",
+        "strings": [
+            "r_c0 helps m_c around the camp, offering support so that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have to place too much weight on {PRONOUN/m_c/poss} painful and swollen-looking paws."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "declawed_acute_pain1",
+        "strings": [
+            "m_c winces with every step, biting {PRONOUN/m_c/poss} tongue so that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} yowl from the pulsing ache within {PRONOUN/m_c/poss} paws.",
+            "m_c doesn't feel ashamed to shake {PRONOUN/m_c/poss} head and refuse to leave {PRONOUN/m_c/poss} nest because of the pain in {PRONOUN/m_c/poss} paws this moon.",
+            "With much relief, m_c has been taking a break this moon, soaking {PRONOUN/m_c/poss} paws in a herbal paste and relaxing to recover from the pain."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "body_biter_nosebleed0",
+        "strings": [
+            "r_c0 sighs when m_c comes in from a nosebleed from rubbing {PRONOUN/m_c/poss} nose too often."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_nosebleed1",
+        "strings": [
+            "m_c winces when {PRONOUNS/m_c/poss} claws nick {PRONOUN/m_c/poss} nose and accidentally cut it open."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

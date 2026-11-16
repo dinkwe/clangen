@@ -19,7 +19,7 @@
     {
         "event_id": "rat_bite_infection1",
         "strings": [
-            "It seems inevitable that all rat bites are nasty, so m_c isn't really surprised when {PRONOUN/m_c/inposs} starts to show signs of infection."
+            "It seems inevitable that all rat bites are nasty, so m_c isn't really surprised when {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to show signs of infection."
         ],
         "involved_cats": {
             "m_c": {}

@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "echoing_shock_depersonalization0",
+        "strings": [
+            "m_c keeps double checking {PRONOUN/m_c/poss} paws, worried that they might belong to another cat.",
+            "m_c keeps spacing out, feeling as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} floating above {PRONOUN/m_c/poss} own body.",
+            "Other cats keep asking why m_c is acting so different from {PRONOUN/m_c/poss} usual self. m_c doesn't understand who {PRONOUN/m_c/poss} 'usual self' is supposed to be."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

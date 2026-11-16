@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "obsessive_mind_psychotic_episode0",
+        "strings": [
+            "m_c's obsessions have escalated to psychotic symptoms.",
+            "m_c is having a psychotic episode."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "derealization_depersonalization0",
+        "strings": [
+            "m_c's paws feel like they belong to another cat.",
+            "In the fog of dissociation, m_c feels like {PRONOUN/m_c/poss} body isn't {PRONOUN/m_c/poss} own."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

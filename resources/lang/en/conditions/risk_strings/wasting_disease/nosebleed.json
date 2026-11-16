@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "wasting_disease_nosebleed0",
+        "strings": [
+            "r_c0 sighs, bringing even more moss over and instructing m_c to tilt {PRONOUN/m_c/poss} head up in the hopes that it'll help with {PRONOUN/m_c/poss} nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "wasting_disease_nosebleed1",
+        "strings": [
+            "m_c has gotten a nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

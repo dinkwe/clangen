@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_earache0",
+        "strings": [
+            "m_c complains to r_c0 about an earache."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_earache1",
+        "strings": [
+            "Frustrated, m_c buries {PRONOUN/m_c/poss} head into moss, hoping it'll dull the pain in {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "constant_roaming_pain_acute_pain0",
+        "strings": [
+            "r_c0 winces at the whimpers and shudders that m_c is doing. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/know/knows} that m_c is in a lot of pain and {VERB/r_c0/are/is} only able to do so much with the herbs that {PRONOUN/r_c0/subject} {VERB/r_c0/have/has}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_acute_pain1",
+        "strings": [
+            "m_c whimpers, {PRONOUN/m_c/poss} whole body shaking as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to take the herbs given to {PRONOUN/m_c/object}. It's hard when the world spins and swims from all the pain.",
+            "A lot of m_c's Clanmates are worried about {PRONOUN/m_c/object} due to how m_c refuses to move from the sheer pain of it.",
+            "Simply brushing up against someone makes m_c wince and let out little yowls of pain.",
+            "m_c is curled up in {PRONOUN/m_c/poss} nest shaking, unable to move without letting out cries of pain."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

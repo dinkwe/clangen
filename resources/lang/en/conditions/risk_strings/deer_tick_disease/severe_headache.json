@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deer_tick_disease_severe_headache0",
+        "strings": [
+            "In misery, m_c slinks into r_c0's den, head down and wincing from the rattling pain in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deer_tick_disease_severe_headache1",
+        "strings": [
+            "When m_c woke up this morning, {PRONOUN/m_c/subject} decided to just roll back over and squeeze {PRONOUN/m_c/poss} eyes shut in the hopes of avoiding the splitting pain.",
+            "m_c lies in {PRONOUN/m_c/poss} nest, clutching {PRONOUN/m_c/poss} head in pain."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

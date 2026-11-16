@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_rash0",
+        "strings": [
+            "With more than a little frustration, m_c goes to r_c0, complaining about the rash that's growing beneath {PRONOUN/m_c/poss} fur."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_rash1",
+        "strings": [
+            "m_c keeps scratching at a single spot, it looks like there's a rash forming.",
+            "m_c hisses while grooming, it looks like the skin under {PRONOUN/m_c/poss} fur is starting to get flaky and patchy with a stress induced rash."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

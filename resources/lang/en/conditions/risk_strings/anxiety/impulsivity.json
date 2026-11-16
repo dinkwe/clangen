@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "anxiety_impulsivity0",
+        "strings": [
+            "r_c0 has noticed that m_c is running {PRONOUN/m_c/self} thin, jumping into things without thinking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_impulsivity1",
+        "strings": [
+            "m_c took a piece of prey from the pile and spent the rest of the day looking like {PRONOUN/m_c/subject} might cry.",
+            "m_c has been volunteering for everything this moon without thinking."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

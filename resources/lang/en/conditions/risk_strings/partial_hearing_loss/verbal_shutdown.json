@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "partial_hearing_loss_verbal_shutdown0",
+        "strings": [
+            "r_c0 has noticed that m_c is a lot quieter around the camp recently. After a quick checkup, it's nothing dangerous - {PRONOUN/m_c/subject} {VERB/m_c/are/is} experiencing a verbal shutdown."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "partial_hearing_loss_verbal_shutdown1",
+        "strings": [
+            "m_c doesn't speak to anyone, preferring to use signs to communicate."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

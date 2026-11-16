@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "prismatic_mind_hyperfixation0",
+        "strings": [
+            "m_c has been spinning in circles around r_c0 while talking about a new interest that has caught {PRONOUN/m_c/poss} attention."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_hyperfixation1",
+        "strings": [
+            "While this doesn't feel like it will become part of {PRONOUN/m_c/poss} entire world, m_c has spent quite some time talking about a new topic with {PRONOUN/m_c/poss} Clanmates.",
+            "m_c seems to have been doing nothing but training recently, focused on incorporating a new specific set of moves into {PRONOUN/m_c/poss} hunting style.",
+            "In the past few weeks, m_c has gotten deeply interested in collecting feathers and identifying which bird they came from."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

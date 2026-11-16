@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_hallucinations0",
+        "strings": [
+            "r_c0 sighs when a Clanmate comes in, reporting that m_c has zoned out into a sleeping-while-awake state. It's becoming too common from {PRONOUN/m_c/poss} sleeplessness."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_hallucinations1",
+        "strings": [
+            "m_c feels like {PRONOUN/m_c/subject} {VERB/m_c/are/is} slipping between reality and dreams, not quite awake as {PRONOUN/m_c/subject} {VERB/m_c/go/goes} through {PRONOUN/m_c/poss} day.",
+            "m_c is distracted and everyone knows it, {PRONOUN/m_c/poss} brain in a dream even while {PRONOUN/m_c/subject} {VERB/m_c/look/looks} and seem fully awake.",
+            "It's becoming increasingly harder for m_c to understand where reality starts and ends. Figures and shapes dance around {PRONOUN/m_c/object} just outside of {PRONOUN/m_c/poss} vision.",
+            "m_c jumps as a Clanmate brushes against {PRONOUN/m_c/object}, fur all on end as {PRONOUN/m_c/subject} {VERB/m_c/admit/admits} surprise that the other cat is actually real."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

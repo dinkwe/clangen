@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "anxiety_attack_tic0",
+        "strings": [
+            "r_c0 calmly explains that this sometimes happens to cats who are panicking. This doesn't help soothe m_c's mind or twitching tail."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_attack_tic1",
+        "strings": [
+            "m_c squeaks and can't stop squeaking during {PRONOUN/m_c/poss} anxiety attack."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

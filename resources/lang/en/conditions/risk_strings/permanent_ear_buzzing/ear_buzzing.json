@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "permanent_ear_buzzing_ear_buzzing0",
+        "strings": [
+            "r_c0 has given m_c permission to skip out on patrols due to the ringing in {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "permanent_ear_buzzing_ear_buzzing1",
+        "strings": [
+            "The ringing has intensified to where m_c can't leave {PRONOUN/m_c/poss} nest.",
+            "m_c won't be much use on patrols. The ringing in {PRONOUN/m_c/poss} ears is too much."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

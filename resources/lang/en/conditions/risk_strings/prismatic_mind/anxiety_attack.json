@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "prismatic_mind_anxiety_attack0",
+        "strings": [
+            "All that r_c0 can really do is listen to m_c talking in circles, purring in an attempt to give {PRONOUN/m_c/object} something to steady {PRONOUN/m_c/self} with."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_anxiety_attack1",
+        "strings": [
+            "Unable to properly deal with being overwhelmed, m_c has started to nervously pace in place.",
+            "m_c's mind has been going around in circles with the same kinds of messy thoughts.",
+            "Unable to properly stim after some recent changes, m_c has found {PRONOUN/m_c/self} with {PRONOUN/m_c/poss} fur all puffed up and anxieties circling in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

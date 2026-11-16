@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "prismatic_mind_parrot_chatter0",
+        "strings": [
+            "When r_c0 mews hello to m_c, {PRONOUN/m_c/subject} {VERB/m_c/mew/mews} it back a dozen times. It seems m_c has parrot chatter."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_parrot_chatter1",
+        "strings": [
+            "m_c often catches {PRONOUN/m_c/self} repeating the same word over and over. The medicine cat suggests it might be parrot chatter.",
+            "The medicine cat assures that m_c's frequent repetition of words is common for a prismatic mind."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

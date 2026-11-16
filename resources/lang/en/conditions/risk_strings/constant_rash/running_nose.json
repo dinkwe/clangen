@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_rash_running_nose0",
+        "strings": [
+            "r_c0 has noticed that m_c has a bit of a running nose. While it's nothing dangerous for now, {PRONOUN/r_c0/subject} still {VERB/r_c0/herd/herds} {PRONOUN/m_c/object} into the medicine den for a check up just to be safe."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_rash_running_nose1",
+        "strings": [
+            "m_c has caught a bit of the sniffles this moon",
+            "As whitecough and silvercough season has come around, m_c's gotten a small running nose that {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} won't become anything worse."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

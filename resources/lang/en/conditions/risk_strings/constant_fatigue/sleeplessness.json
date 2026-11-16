@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_sleeplessness0",
+        "strings": [
+            "m_c tells r_c0 flatly that since sleeping hasn't been helping {PRONOUN/m_c/object} feel any less tired, {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} see the point of it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_sleeplessness1",
+        "strings": [
+            "Due to the fact that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} always tired anyway, m_c decides that sleeping isn't necessary.",
+            "Thanks to {PRONOUN/m_c/poss} fatigue, m_c hasn't been sleeping well recently."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

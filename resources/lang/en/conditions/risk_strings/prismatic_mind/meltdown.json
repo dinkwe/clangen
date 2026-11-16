@@ -1,0 +1,31 @@
+[
+    {
+        "event_id": "prismatic_mind_meltdown0",
+        "strings": [
+            "r_c0 finds m_c yowling into the sky and crying. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/do/does}n't know <i>why</i> {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} having this reaction, but it's clear that m_c having a meltdown."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_meltdown1",
+        "strings": [
+            "m_c has been trying to trudge through, but just <i>can't</i>.",
+            "Sometimes, prismatic minds can't control themselves when things get overwhelming for them. This time, it's clear that m_c can't.",
+            "With no warning, m_c just breaks wailing over a broken piece of stone in the middle of camp.",
+            "m_c finally has a breakdown to {PRONOUN/m_c/poss} own relief when things have been just <i>too much</i>.",
+            "m_c wants to apologize for {PRONOUN/m_c/poss} behaviour, but all {PRONOUN/m_c/subject} can do is feel things right now.",
+            "It's too loud, too bright, to <i>everything</i> for m_c with {PRONOUN/m_c/poss} emotions right now.",
+            "A Clanmate expresses worry watching m_c destroy {PRONOUN/m_c/poss} own nest, clearly overtaken by some emotion."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

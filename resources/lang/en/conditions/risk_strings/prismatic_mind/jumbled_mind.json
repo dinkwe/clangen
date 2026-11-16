@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "prismatic_mind_jumbled_mind0",
+        "strings": [
+            "Being a prismatic mind affects how m_c process words. Whenever {PRONOUN/m_c/subject} speaks, it comes out as a jumbled mess."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

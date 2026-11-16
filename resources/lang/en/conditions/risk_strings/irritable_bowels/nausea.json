@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "irritable_bowels_nausea0",
+        "strings": [
+            "When m_c tried to eat, {PRONOUN/m_c/subject} had to quickly turn to r_c0 and ask for some anti-nausea herbs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritable_bowels_nausea1",
+        "strings": [
+            "When m_c is hungry, that hunger manifests as a case of nausea.",
+            "m_c isn't able to finish {PRONOUN/m_c/poss} prey, leaving it half-eaten and {PRONOUN/m_c/object} looking like {PRONOUN/m_c/subject} might be sick."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_nightmares0",
+        "strings": [
+            "Looking even more tired than usual, m_c asks r_c0 if {PRONOUN/r_c0/subject} {VERB/r_c0/have/has} anything to help with nightmares."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_nightmares1",
+        "strings": [
+            "Already struggling to get proper sleep and rest, it's only made harder for m_c with a recent bout of nightmares.",
+            "m_c's already tired enough sleeping well, now {PRONOUN/m_c/subject} {VERB/m_c/have/has} nightmares that further drain {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

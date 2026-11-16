@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_joint_pain0",
+        "strings": [
+            "r_c0 can only set aside a nest and some herbs for {PRONOUN/m_c/object} when m_c comes in complaining of joint pain."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_joint_pain1",
+        "strings": [
+            "m_c has been complaining for days, {PRONOUN/m_c/poss} joints seem to be giving them particular trouble this moon.",
+            "After the work that m_c has put into helping the apprentices care for the elders, {PRONOUN/m_c/subject} {VERB/m_c/are/is} left with aches all over."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

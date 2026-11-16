@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_fatigue0",
+        "strings": [
+            "r_c0 has noticed that m_c seems more exhausted than usual recently. After talking with {PRONOUN/m_c/object}, {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} reassured that it's just a bit of fatigue."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_fatigue1",
+        "strings": [
+            "With all the discordant sensations that m_c experiences daily, it's not a surprise that {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} experiencing some fatigue.",
+            "m_c is feeling incredibly worn down and fatigued this season."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

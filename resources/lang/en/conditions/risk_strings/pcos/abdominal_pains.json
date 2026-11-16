@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "pcos_abdominal_pains0",
+        "strings": [
+            "Despite it not being {PRONOUN/m_c/poss} shark week, m_c has found {PRONOUN/m_c/self} in great abdominal pain recently.",
+            "Due to m_c's pcos, a sharp pain has taken over {PRONOUN/m_c/poss} abdomen.",
+            "With a cry, m_c pleads to {PRONOUN/m_c/poss} denmates for assistance with {PRONOUN/m_c/poss} latest bout of horrible abdominal pains."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

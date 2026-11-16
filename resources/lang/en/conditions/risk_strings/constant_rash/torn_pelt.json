@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_rash_torn_pelt0",
+        "strings": [
+            "As much as m_c has tried to follow r_c0's advice and not scratch, {PRONOUN/m_c/subject} {VERB/m_c/weren't/wasn't} quite able to. {PRONOUN/m_c/subject/CAP} now {VERB/m_c/sit/sits} wincing and listening to r_c0's lecture over {PRONOUN/m_c/poss} torn pelt."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_rash_torn_pelt1",
+        "strings": [
+            "While m_c's tried not to scratch too much at {PRONOUN/m_c/poss} pelt, it was a losing battle.",
+            "Due to how itchy m_c's rash has been, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} ended up scratching some areas a bit more raw than is comfortable."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

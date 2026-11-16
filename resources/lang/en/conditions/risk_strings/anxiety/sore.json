@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "anxiety_sore0",
+        "strings": [
+            "m_c has been very anxious lately and after waking up one day, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} extremely sore.",
+            "m_c has been tensing {PRONOUN/m_c/poss} muscles when {PRONOUN/m_c/subject} {VERB/m_c/get/gets} anxious.",
+            "m_c's belly is sore from how hard {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} tensing it."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

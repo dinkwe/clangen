@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "parrot_chatter_verbal_shutdown0",
+        "strings": [
+            "When r_c0 checks on m_c, it's to discover that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in verbal shutdown."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "parrot_chatter_verbal_shutdown1",
+        "strings": [
+            "m_c seems very overwhelmed and has entered verbal shutdown."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

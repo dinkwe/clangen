@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_hostile_hallucinations0",
+        "strings": [
+            "m_c's nightmares are starting to slip into real life.",
+            "Falling asleep was already difficult and m_c's growing hallucinations are not helping."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_earache0",
+        "strings": [
+            "m_c complains to r_c0 that all the jumbled sounds around {PRONOUN/m_c/object} have left {PRONOUN/m_c/poss} ears aching."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_earache1",
+        "strings": [
+            "Poor m_c is wincing around camp, extra sensitive due to an earache.",
+            "While sounds are already hard for m_c to discern, it's even harder when {PRONOUN/m_c/poss} ears have a sharp pain within."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

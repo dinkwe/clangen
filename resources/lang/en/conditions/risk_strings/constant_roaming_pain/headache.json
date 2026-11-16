@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "constant_roaming_pain_headache0",
+        "strings": [
+            "r_c0 starts to fuss with herbs when m_c comes into the medicine den, wincing with each blink. {PRONOUN/r_c0/subject/CAP} gently {VERB/r_c0/ease/eases} {PRONOUN/m_c/object} into a quiet and dark corner of the den to rest."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_headache1",
+        "strings": [
+            "m_c refuses to uncurl from within the den as the morning sunlight comes in, wincing as a dull throb echoes in {PRONOUN/m_c/poss} skull."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

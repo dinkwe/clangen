@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "kitten_regressor_kittenspace0",
+        "strings": [
+            "m_c has slipped into kittenspace again.",
+            "m_c is in kittenspace.",
+            "m_c has started acting like a kitten."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

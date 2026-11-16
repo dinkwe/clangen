@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_headache0",
+        "strings": [
+            "r_c0 listens to m_c's complain with empathy. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/have/has} just the herbs to help."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_headache1",
+        "strings": [
+            "Unsurprisingly with m_c's sensitivity, {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} with a pounding in {PRONOUN/m_c/poss} head just barely able to ignore it and carry out {PRONOUN/m_c/poss} camp duties.",
+            "With a wince, m_c elects to help out in the quiet of the medicine den for the day."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

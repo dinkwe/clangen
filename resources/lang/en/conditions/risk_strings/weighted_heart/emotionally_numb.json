@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "weighted_heart_emotionally_numb0",
+        "strings": [
+            "m_c has stopped feeling like {PRONOUN/m_c/self}. Actually, {PRONOUN/m_c/subject} {VERB/m_c/have/has}n't been feeling much of anything."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_emotionally_numb1",
+        "strings": [
+            "m_c can barely move {PRONOUN/m_c/self} to anger or tears anymore.",
+            "These days, m_c just feels numb."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "prismatic_mind_seasonal_lethargy0",
+        "strings": [
+            "m_c comes into r_c0's den, feeling incredibly tired and stressed from the changing of the seasons. r_c0 reassures {PRONOUN/m_c/object} that it's alright and {PRONOUN/m_c/subject} can take a break if {PRONOUN/m_c/subject} need to."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_seasonal_lethargy1",
+        "strings": [
+            "As the seasons' changes become more and more obvious, m_c curls further into {PRONOUN/m_c/poss} nest, trying to pretend things aren't changing so drastically.",
+            "m_c is frustrated and upset as the seasons change, clawing at {PRONOUN/m_c/poss} nesting material and hating that a fog is descending on {PRONOUN/m_c/object} that nothing {PRONOUN/m_c/subject} {VERB/m_c/do/does} seems to fix."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

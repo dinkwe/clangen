@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "frequent_fainting_dizziness0",
+        "strings": [
+            "r_c0 helps m_c stay on {PRONOUN/m_c/poss} paws while guiding {PRONOUN/m_c/object} towards the medicine den to rest in until this period of dizziness passes.",
+            "m_c and r_c0 were sharing tongues when suddenly m_c was hit with a wave of dizziness."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "frequent_fainting_dizziness1",
+        "strings": [
+            "m_c quickly sits back down and takes a deep breath. This stops {PRONOUN/m_c/object} from fainting, but the dizziness doesn't subside.",
+            "m_c stands up too quickly and finds the world spinning around {PRONOUN/m_c/object}.",
+            "m_c hisses when a Clanmate says that {PRONOUN/m_c/subject} should just be more careful when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

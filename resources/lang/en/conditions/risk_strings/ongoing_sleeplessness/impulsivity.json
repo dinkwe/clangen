@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_impulsivity0",
+        "strings": [
+            "m_c's brain is a little bit burnt, {PRONOUN/m_c/subject} {VERB/m_c/are/is} jumping straight into things without thinking, even coming and talking to r_c0 about it was done without any thought put into it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_impulsivity1",
+        "strings": [
+            "It's all m_c can do to even halfway remain on task, {PRONOUN/m_c/subject} {VERB/m_c/are/is} doing things without thinking.",
+            "There's no thoughts and m_c's head is empty. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} just doing.",
+            "m_c doesn't think, {PRONOUN/m_c/subject} {VERB/m_c/are/is} just moving, moving and acting. Thinking can come later when {PRONOUN/m_c/subject} {VERB/m_c/have/has} the energy to."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

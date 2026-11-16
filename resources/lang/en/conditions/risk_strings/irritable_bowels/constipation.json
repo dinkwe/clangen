@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "irritable_bowels_constipation0",
+        "strings": [
+            "Huffing and puffing, m_c goes to r_c0 to ask if {PRONOUN/r_c/subject} {VERB/r_c/have/has} anything that can help in the dirtmaking department."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritable_bowels_constipation1",
+        "strings": [
+            "m_c feels incredibly miserable, bloated, and stuffed full without being able to get rid of the feeling.",
+            "Pitifully, m_c has spent most of the day in the dirtplace uselessly trying to make dirt."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deer_tick_disease_joint_pain0",
+        "strings": [
+            "m_c asks a Clanmate to get r_c0 to help {PRONOUN/m_c/object} stretch out {PRONOUN/m_c/poss} legs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deer_tick_disease_joint_pain1",
+        "strings": [
+            "A hiss comes from m_c's den as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to get {PRONOUN/m_c/poss} legs comfortable.",
+            "m_c overdid it while out in the territory - {PRONOUN/m_c/poss} joints are extra sensitive this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "deer_tick_disease_headache0",
+        "strings": [
+            "m_c goes to r_c0 and asks if {PRONOUN/r_c0/subject} {VERB/r_c0/have/has} any herbs for {PRONOUN/m_c/poss} headache."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deer_tick_disease_headache1",
+        "strings": [
+            "m_c's mind is clouded by a dull ache that won't go away."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

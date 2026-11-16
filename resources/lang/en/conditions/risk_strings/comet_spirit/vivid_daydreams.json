@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_vivid_daydreams0",
+        "strings": [
+            "m_c talks to r_c0 at length about all {PRONOUN/m_c/poss} ideas and dreams to help the Clan."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_vivid_daydreams1",
+        "strings": [
+            "It's not odd to see m_c running around camp with {PRONOUN/m_c/poss} head somewhere in the clouds.",
+            "m_c purrs in a sunbeam while {PRONOUN/m_c/poss} mind is elsewhere.",
+            "m_c closes {PRONOUN/m_c/poss} eyes and daydreams for a long time today."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

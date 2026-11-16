@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "murky_mind_sleeplessness0",
+        "strings": [
+            "m_c has been having some trouble falling asleep.",
+            "m_c just can't seem to fall asleep."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

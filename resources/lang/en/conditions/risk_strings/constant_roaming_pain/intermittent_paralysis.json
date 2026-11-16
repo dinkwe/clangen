@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "constant_roaming_pain_intermittent_paralysis0",
+        "strings": [
+            "When r_c0 comes over to check m_c after complaints of tingling in {PRONOUN/m_c/poss} legs, it's to inform {PRONOUN/m_c/object} that it's because {PRONOUN/m_c/poss} legs aren't working properly anymore."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_intermittent_paralysis1",
+        "strings": [
+            "m_c has been complaining of tingling in {PRONOUN/m_c/poss} legs for days, but one day it stops. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} relieved, until {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to move again.",
+            "When m_c attempts to get up from {PRONOUN/m_c/poss} nest, {PRONOUN/m_c/subject} {VERB/m_c/let/lets} out a yowl of distress. It would appear that only half of {PRONOUN/m_c/object} has gotten up.",
+            "After a few moons of on and off falling over, m_c finds one morning that {PRONOUN/m_c/subject} no longer {VERB/m_c/have/has} to worry about falling."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

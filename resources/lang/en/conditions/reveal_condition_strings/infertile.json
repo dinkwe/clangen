@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_infertile0",
+        "strings": [
+            "r_c0 explains to m_c that {PRONOUN/m_c/subject} may be infertile."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_infertile1",
+        "strings": [
+            "m_c has discovered that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} infertile.",
+            "After m_c discovers that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} infertile, {PRONOUN/m_c/subject} {VERB/m_c/realize/realizes} that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a lot more to think about than {PRONOUN/m_c/subject} previously thought."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

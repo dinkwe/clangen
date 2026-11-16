@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "bipolar_ii_brain_fog0",
+        "strings": [
+            "{PRONOUN/m_c/poss/CAP} Clanmates have noticed that m_c seems distracted, unable to hold onto {PRONOUN/m_c/poss} thoughts."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

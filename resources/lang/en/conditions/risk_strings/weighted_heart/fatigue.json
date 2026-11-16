@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "weighted_heart_fatigue0",
+        "strings": [
+            "m_c tells r_c0 about {PRONOUN/m_c/poss} constant tiredness."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_fatigue1",
+        "strings": [
+            "Even with the best night's sleep, m_c has just felt more and more tired.",
+            "Looking up at the den's ceiling, m_c wonders if {PRONOUN/m_c/subject} will ever feel less tired."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

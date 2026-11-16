@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "allergies_ear_buzzing0",
+        "strings": [
+            "r_c0 sits beside m_c, watching as {PRONOUN/m_c/subject} {VERB/m_c/shake/shakes} {PRONOUN/m_c/poss} head for the third time that afternoon, complaining about the buzzing."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "allergies_ear_buzzing1",
+        "strings": [
+            "It would seem that sniffles and a watery nose aren't enough for m_c... now {PRONOUN/m_c/poss} ears keep buzzing and it's quite disorientating.",
+            "m_c complains that {PRONOUN/m_c/poss} ears feel full of dandelion fluff and feathers."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

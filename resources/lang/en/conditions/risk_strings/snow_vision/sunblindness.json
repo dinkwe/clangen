@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "confused_body_sunblindness0",
+        "strings": [
+            "m_c loudly complains to r_c0 about the flares and spots that now take up {PRONOUN/m_c/poss} vision, leaving {PRONOUN/m_c/object} unable to properly see at all."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "confused_body_sunblindness1",
+        "strings": [
+            "After waking up and stepping out of the den, m_c is hissing at the light and how it burns in {PRONOUN/m_c/poss} eyes over the snow sparkles.",
+            "m_c talks to a Clanmate about how the snow in {PRONOUN/m_c/poss} vision is catching the light too much and turning into flares."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

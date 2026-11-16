@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "thunderous_spirit_fractured_spirit0",
+        "strings": [
+            "m_c has a nervous conversation with r_c0 after not feeling like {PRONOUN/m_c/self} for awhile. r_c0 {VERB/r_c0/tell/tells} {PRONOUN/m_c/object} that {PRONOUN/m_c/subject} might be a fractured spirit."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_fractured_spirit1",
+        "strings": [
+            "m_c vents to the medicine cat that sometimes, it feels like {PRONOUN/m_c/poss} body isn't {PRONOUN/m_c/poss} own. {PRONOUN/m_c/subject/CAP} may be a fractured spirit.",
+            "m_c doesn't understand why {PRONOUN/m_c/subject} {VERB/m_c/have/has} so many gaps in their memory."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

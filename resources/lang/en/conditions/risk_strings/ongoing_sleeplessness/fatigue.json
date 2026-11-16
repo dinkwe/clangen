@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_fatigue0",
+        "strings": [
+            "While r_c0 is relieved to hear that m_c has been getting some sleep, that doesn't stop {PRONOUN/r_c0/object} from worrying when it doesn't seem to help m_c feel any better."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_fatigue1",
+        "strings": [
+            "m_c wonders how long {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to sleep before it will give {PRONOUN/m_c/object} {PRONOUN/m_c/poss} energy back.",
+            "After all of m_c's difficulties with sleep, {PRONOUN/m_c/subject} can't help but feel disappointed when the sleep {PRONOUN/m_c/subject} finally {VERB/m_c/do/does} get doesn't seem to help."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

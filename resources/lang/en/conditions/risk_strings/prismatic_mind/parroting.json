@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "prismatic_mind_parroting0",
+        "strings": [
+            "With more than a little amusement, r_c0 has been sitting with m_c while {PRONOUN/m_c/subject} {VERB/m_c/parrot/parrots} r_c0's own words right back to {PRONOUN/r_c0/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_parroting1",
+        "strings": [
+            "m_c's gotten caught in a loop of repeating {PRONOUN/m_c/poss} Clanmates words or even {PRONOUN/m_c/poss} own.",
+            "m_c's become something of an echo around camp, repeating words and sentences much like a colourful parrot."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

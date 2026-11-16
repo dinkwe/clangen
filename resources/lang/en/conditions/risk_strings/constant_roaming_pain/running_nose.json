@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_running_nose0",
+        "strings": [
+            "r_c0 worriedly ferries m_c to the medicine den when {PRONOUN/r_c0/subject} noticed {PRONOUN/m_c/object} sniffing more than usual."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_running_nose1",
+        "strings": [
+            "m_c's nose has begun running on and off this moon.",
+            "After all the work m_c has done this moon, {PRONOUN/m_c/subject} {VERB/m_c/have/has} begun sneezing."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

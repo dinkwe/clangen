@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_rash_rash0",
+        "strings": [
+            "Much to the frustration of both r_c0 and m_c, the rash on m_c has spread and returned to more places across {PRONOUN/m_c/poss} body."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_rash_rash1",
+        "strings": [
+            "After m_c forgot to properly care for {PRONOUN/m_c/poss} pelt with the herbal paste, the rash that {PRONOUN/m_c/subject} {VERB/m_c/suffer/suffers} from has come back with a vengeance.",
+            "Wincing, m_c begs off patrol to go visit the medicine den for help putting {PRONOUN/m_c/poss} herbal paste on the areas that {PRONOUN/m_c/subject} just can't reach."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

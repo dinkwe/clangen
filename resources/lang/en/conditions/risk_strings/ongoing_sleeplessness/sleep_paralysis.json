@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_sleep_paralysis0",
+        "strings": [
+            "m_c complains to r_c0 about how even waking up seems to be a struggle for {PRONOUN/m_c/object} now."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_sleep_paralysis1",
+        "strings": [
+            "m_c buries {PRONOUN/m_c/poss} head into the nesting around {PRONOUN/m_c/object} - now {PRONOUN/m_c/poss} nightmares seem to be following {PRONOUN/m_c/object} into the waking hours.",
+            "Monsters seem to lurk around the camp, waiting for m_c to wake from the small snatches of sleep {PRONOUN/m_c/subject} manage to get.",
+            "While trying to talk to the night guards and bite away the boredom, m_c fell asleep, unable to move."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

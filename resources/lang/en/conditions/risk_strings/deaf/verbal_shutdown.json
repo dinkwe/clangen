@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deaf_verbal_shutdown0",
+        "strings": [
+            "r_c0 sits with m_c, trading signs back and forth when {PRONOUN/m_c/subject} {VERB/m_c/stop/stops} speaking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deaf_verbal_shutdown1",
+        "strings": [
+            "Nobody minds when m_c has a few bad days and chooses to just use sign to communicate rather than trying to strain to speak.",
+            "Frustrated at not been able to tell if {PRONOUN/m_c/subject} {VERB/m_c/are/is} speaking clearly, m_c just decides to use {PRONOUN/m_c/poss} best communication method instead."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

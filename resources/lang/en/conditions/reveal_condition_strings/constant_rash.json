@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_constant_rash0",
+        "strings": [
+            "r_c0 has noticed that little m_c is often scratching at {PRONOUN/m_c/self} throughout the season, it would seem that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a near constant recurring rash."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_constant_rash1",
+        "strings": [
+            "No matter how much care m_c takes to follow the instructions given to {PRONOUN/m_c/object} by the medicine cat, nothing seems to keep the rash away.",
+            "m_c's a particularly grumpy kitten, mostly because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} constantly itching and in pain from a rash that refuses to leave."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

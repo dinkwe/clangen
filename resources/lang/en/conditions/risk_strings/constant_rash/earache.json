@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_rash_earache0",
+        "strings": [
+            "m_c loudly complains to r_c0 about how scratching at the rash around {PRONOUN/m_c/poss} ears has left them aching and sore."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_rash_earache1",
+        "strings": [
+            "It appears that m_c's rash has spread into {PRONOUN/m_c/poss} ears and left them achy.",
+            "Some of m_c's Clanmates have grown tired of hearing m_c complain about the itchy soreness within {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

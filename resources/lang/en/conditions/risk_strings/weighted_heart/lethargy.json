@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "weighted_heart_lethargy0",
+        "strings": [
+            "r_c0 goes on a den visit to check in on m_c. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'ve/'s} been blankly staring at the den wall for most of the afternoon."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_lethargy1",
+        "strings": [
+            "m_c comes into the medicine den, looking barely able to carry {PRONOUN/m_c/self} on {PRONOUN/m_c/poss} paws.",
+            "m_c's Clanmates bring {PRONOUN/m_c/object} a little bit of extra prey and bedding while {PRONOUN/m_c/subject} {VERB/m_c/lie/lies} in {PRONOUN/m_c/poss} nest, weighed down and exhausted.",
+            "Part of {PRONOUN/m_c/object} wishes it were raining, as m_c likes the sound, which is like a lullaby to take {PRONOUN/m_c/object} away from the deep-seated exhaustion in {PRONOUN/m_c/poss} bones.",
+            "m_c feels barely able to do {PRONOUN/m_c/poss} in-camp jobs this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

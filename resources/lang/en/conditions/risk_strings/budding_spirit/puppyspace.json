@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "budding_spirit_puppyspace0",
+        "strings": [
+            "m_c has slipped into a more puppy-like headspace. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} worried about this, but r_c0 assures {PRONOUN/m_c/object} that {PRONOUN/m_c/subject} {VERB/m_c/are/is} just in puppyspace, and that's okay."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "budding_spirit_puppyspace1",
+        "strings": [
+            "m_c, despite being too old to play pretend, acts more dog-like sometimes. It's possible that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in puppyspace."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

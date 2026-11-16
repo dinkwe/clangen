@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "wasting_disease_silvercough0",
+        "strings": [
+            "r_c0 sighs and gets the plantain for m_c's cough. r_c0 is happy that it was silvercough and not something worse, but sad that {PRONOUN/m_c/object} {VERB/m_c/are/is} getting sick at all."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "wasting_disease_silvercough1",
+        "strings": [
+            "m_c has been hacking all moon when {PRONOUN/m_c/subject} finally go to the medicine cat."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "minor_ear_buzzing_healed0",
+        "strings": [
+            "There is so much relief from m_c that {PRONOUN/m_c/poss} ears are no longer buzzing with flies.",
+		    "m_c purrs when {PRONOUN/m_c/poss} ears stop tinkling.",
+            "m_c sits and shares tongues freely with {PRONOUN/m_c/poss} Clanmates, no longer shaking {PRONOUN/m_c/poss} head to try and hear better."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

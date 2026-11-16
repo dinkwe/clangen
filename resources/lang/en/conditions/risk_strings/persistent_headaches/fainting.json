@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "persistent_headaches_fainting0",
+        "strings": [
+            "Because of m_c's headache, neither {PRONOUN/m_c/subject} nor r_c0 were prepared when {PRONOUN/m_c/subject} became faint and toppled over."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "persistent_headaches_fainting1",
+        "strings": [
+            "m_c's headaches have led to {PRONOUN/m_c/object} having a case of fainting.",
+            "Poor m_c was found passed out in {PRONOUN/m_c/poss} nest, not having even made it outside to start the day."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

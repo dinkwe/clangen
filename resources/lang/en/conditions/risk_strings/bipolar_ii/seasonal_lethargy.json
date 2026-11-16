@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "bipolar_ii_seasonal_lethargy0",
+        "strings": [
+            "As the seasons change, so does m_c's mood. {PRONOUN/m_c/subject/CAP} {VERB/m_c/begin/begins} seeming more and more tired and r_c0 invites {PRONOUN/m_c/object} into the medicine den, quietly sitting beside m_c and assuring {PRONOUN/m_c/object} that it's okay if {PRONOUN/m_c/subject} {VERB/m_c/are/is} tired and {VERB/m_c/do/does}n't feel able to work."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bipolar_ii_seasonal_lethargy0",
+        "strings": [
+            "m_c is frustrated and upset as the seasons change, clawing at {PRONOUN/m_c/poss} nesting material and hating that a fog is descending on {PRONOUN/m_c/object} that nothing {PRONOUN/m_c/subject} {VERB/m_c/do/does} seems to fix."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "allergies_nosebleed0",
+        "strings": [
+            "m_c worriedly comes to r_c0, fearing redcough when a sneeze comes along with blood. Thankfully, it's just a nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "allergies_nosebleed1",
+        "strings": [
+            "m_c has noticed that all {PRONOUN/m_c/poss} sneezing seems to have led to a nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

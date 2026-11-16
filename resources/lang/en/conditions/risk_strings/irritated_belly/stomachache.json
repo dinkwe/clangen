@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "irritated_belly_stomachache0",
+        "strings": [
+            "m_c has accidentally eaten something that r_c0 wouldn't approve of and now {PRONOUN/m_c/subject} {VERB/m_c/have/has} a stomachache."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritated_belly_stomachache1",
+        "strings": [
+            "m_c isn't sure what happened to give {PRONOUN/m_c/object} a stomachache, but {PRONOUN/m_c/subject} {VERB/m_c/suspect/suspects} it has something to do with a mischievous apprentice, or a prey pile mishap.",
+            "m_c's stomach feels tight and hard in {PRONOUN/m_c/poss} belly. {PRONOUN/m_c/subject/CAP} feel sick yet again.",
+            "Another day, another stomachache! m_c hates this."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

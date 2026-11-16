@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "anxiety_tics0",
+        "strings": [
+            "m_c's worries swirl around {PRONOUN/m_c/poss} head and sink deeply into {PRONOUN/m_c/poss} heart. Because of this, {PRONOUN/m_c/subject} sometimes {VERB/m_c/move/moves} without thinking about it. {PRONOUN/m_c/subject/CAP} go to r_c0 about it and {VERB/m_c/are/is} assured that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} having tics, not a seizure."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_tics1",
+        "strings": [
+            "m_c worries that {PRONOUN/m_c/poss} friends hate {PRONOUN/m_c/object}, and that worry is worsened by {PRONOUN/m_c/object} occasionally flicking {PRONOUN/m_c/poss} tail or squeaking like a mouse.",
+            "Too many of m_c's worries bundle up in {PRONOUN/m_c/poss} heart and {PRONOUN/m_c/poss} body starts ticing.",
+            "m_c has been more anxious lately and it resulted in {PRONOUN/m_c/object} having tics."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

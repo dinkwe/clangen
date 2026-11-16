@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "anxiety_shock0",
+        "strings": [
+            "r_c0 talks softly with m_c while {PRONOUN/m_c/subject} {VERB/m_c/stare/stares} blankly at the wall, shaking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_shock1",
+        "strings": [
+            "After all the anxiety that m_c has had this week, {PRONOUN/m_c/subject} {VERB/m_c/lie/lies} in the back of the den and stare at the wall, completely worn out.",
+            "m_c shivers in {PRONOUN/m_c/poss} nest, curling {PRONOUN/m_c/poss} tail around {PRONOUN/m_c/object} and pressing {PRONOUN/m_c/poss} ears down.",
+            "This moon has been rough, m_c can barely keep {PRONOUN/m_c/poss} paws stable as {PRONOUN/m_c/subject} {VERB/m_c/head/heads} towards the medicine den to ask for something to ease the pressure."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

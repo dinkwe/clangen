@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_earache0",
+        "strings": [
+            "m_c complains to r_c0 about the sharp repeating pain within {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_earache1",
+        "strings": [
+            "m_c keeps shaking {PRONOUN/m_c/poss} head, uselessly trying to dull the pain coming from {PRONOUN/m_c/poss} ears.",
+            "m_c complains to a Clanmate about the earache that's plaguing {PRONOUN/m_c/object} this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

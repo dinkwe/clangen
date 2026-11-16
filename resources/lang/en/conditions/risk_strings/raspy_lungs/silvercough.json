@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "raspy_lungs_silvercough0",
+        "strings": [
+            "It's the season for whitecough and silvercough, and despite r_c0 helping m_c take extra precautions, {PRONOUN/m_c/subject} {VERB/m_c/sit/sits} miserably curled up in the medicine den with silvercough."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "raspy_lungs_silvercough1",
+        "strings": [
+            "m_c's weakened lungs leave them unable to properly fight off the sickness this moon. Coughing and spluttering, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} a nice nest to wait it out."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

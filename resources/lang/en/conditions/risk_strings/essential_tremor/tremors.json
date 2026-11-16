@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "essential_tremors_tremors0",
+        "strings": [
+            "m_c's paws keep shaking uncontrollably.",
+            "m_c is unable to keep {PRONOUN/m_c/poss} paws steady, no matter how hard {PRONOUN/m_c/subject} try."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

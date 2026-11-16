@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "parroting_healed0",
+        "strings": [
+            "m_c has finished {PRONOUN/m_c/poss} parroting.",
+		    "It looks like m_c's words are back to being {PRONOUN/m_c/poss} own now."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

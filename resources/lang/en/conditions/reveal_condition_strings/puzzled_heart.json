@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "reveal_condition_puzzled_heart0",
+        "strings": [
+            "When other cats vent to m_c, {PRONOUN/m_c/subject} tend to give solutions rather than comfort. The medicine cat proposes that m_c is a puzzled heart.",
+            "m_c admits that {PRONOUN/m_c/subject} {VERB/m_c/have/has} never been able to read emotions, much less empathize with them.",
+            "Every morning, m_c practices forming different facial expressions and body language. Why must emotions be so complicated?"
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

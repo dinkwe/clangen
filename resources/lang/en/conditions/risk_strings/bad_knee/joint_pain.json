@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "bad_knee_joint_pain0",
+        "strings": [
+            "m_c asks a Clanmate to get r_c0 to help {PRONOUN/m_c/object} stretch out {PRONOUN/m_c/poss} legs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bad_knee_joint_pain1",
+        "strings": [
+            "m_c groans in pain when {PRONOUN/m_c/poss} knees hurt too much to get up.",
+            "A hiss comes from m_c's den as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to get {PRONOUN/m_c/poss} legs comfortable."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

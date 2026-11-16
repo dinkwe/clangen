@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "anxiety_paranoia0",
+        "strings": [
+            "Even with all of r_c0's assurances, m_c is certain that there is something out there, hunting for {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_paranoia1",
+        "strings": [
+            "m_c feels rooted in place while it feels like something large looms in the shadows, hunting specifically for {PRONOUN/m_c/object}.",
+            "No matter what m_c's Clanmates say, {PRONOUN/m_c/subject} {VERB/m_c/refuse/refuses} to let {PRONOUN/m_c/self} calm down. If {PRONOUN/m_c/subject} {VERB/m_c/drop/drops} {PRONOUN/m_c/poss} guard, that's when danger will strike.",
+            "m_c is convinced that something bad will happen, refusing to stop pacing and checking the camp for anything out of place, even a stray leaf seeming to be a threat.",
+            "With a loud refusal, m_c insists it's not paranoia. {PRONOUN/m_c/subject/CAP} just {VERB/m_c/know/knows} that there is a danger out there after the Clan.",
+            "m_c keeps checking in on the medicine cat, asking over and over about any signs from StarClan this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

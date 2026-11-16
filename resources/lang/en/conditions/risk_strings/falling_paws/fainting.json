@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "falling_paws_fainting0",
+        "strings": [
+            "r_c0 pads over to check on m_c when {PRONOUN/r_c0/subject} {VERB/m_c/realize/realizes} that m_c has fainted standing up."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "falling_paws_fainting1",
+        "strings": [
+            "m_c stood up too fast and has passed out.",
+            "m_c could feel it coming and sits down right before passing out.",
+            "m_c has fainted but before {PRONOUN/m_c/subject} did, {PRONOUN/m_c/subject} sat down.",
+            "m_c feels {PRONOUN/m_c/poss} paws go cold before {PRONOUN/m_c/subject} faint."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

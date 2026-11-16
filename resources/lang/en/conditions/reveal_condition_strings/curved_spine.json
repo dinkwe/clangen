@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "reveal_condition_curved_spine0",
+        "strings": [
+            "m_c can barely get out of {PRONOUN/m_c/poss} bed due to back pain. r_c0 feels {PRONOUN/m_c/poss} back and realizes that {PRONOUN/m_c/poss} spine is curved."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+      "event_id": "reveal_condition_curved_spine1",
+      "strings": [
+          "m_c's spine has always been a little different, but it seems growing up has only made it worse. {PRONOUN/m_c/subject/CAP} clearly {VERB/m_c/have/has} a curved spine."
+      ],
+      "involved_cats": {
+          "m_c": {}
+      }
+    }
+]

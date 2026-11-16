@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "face_blindness_headache0",
+        "strings": [
+            "m_c finds it difficult to try to focus on the faces of {PRONOUN/m_c/poss} Clanmates today. By the end of the day, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} left with a pounding headache."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

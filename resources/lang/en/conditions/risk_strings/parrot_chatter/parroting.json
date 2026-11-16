@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "parrot_chatter_parroting0",
+        "strings": [
+            "r_c0 purrs in amusement when m_c parrots {PRONOUN/r_c0/poss} words back."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "parrot_chatter_parroting1",
+        "strings": [
+            "To nobody's surprise, m_c is parroting {PRONOUN/m_c/poss} Clanmates again."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "echoing_shock_lethargy0",
+        "strings": [
+            "Recently, m_c has been feeling so worn down. It's all that {PRONOUN/m_c/subject} can do to explain to r_c0 the awful overwhelming feeling that prickles just beneath {PRONOUN/m_c/poss} fur."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_lethargy1",
+        "strings": [
+            "Despite the cheerful air around the rest of the Clan, m_c refuses to leave {PRONOUN/m_c/poss} nest, curled up and feeling rather miserable.",
+            "m_c has been feeling awfully tired lately, like a heavy fog is weighing down {PRONOUN/m_c/poss} paws."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

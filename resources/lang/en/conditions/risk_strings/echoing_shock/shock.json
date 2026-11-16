@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "echoing_shock_shock0",
+        "strings": [
+            "m_c talks to r_c0 with a tremble in {PRONOUN/m_c/poss} voice. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} even know the proper words to explain the mess of {PRONOUN/m_c/poss} feelings, but r_c0 offers {PRONOUN/m_c/object} comfort anyway."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_shock1",
+        "strings": [
+            "m_c feels hot and cold, {PRONOUN/m_c/poss} body unable to decide. {PRONOUN/m_c/subject/CAP} {VERB/m_c/shake/shakes}, unable to process the mess within.",
+            "While nothing bad has happened recently, m_c still wakes with a racing heart and a tremble that refuses to leave {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

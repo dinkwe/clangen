@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "obsessive_mind_anxiety_attack0",
+        "strings": [
+            "r_c0 understands that m_c has more trouble than most keeping calm, and talks with {PRONOUN/m_c/object} about why {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} extra anxious when {PRONOUN/m_c/subject} {VERB/m_c/fail/fails} to fully check the camp before doing {PRONOUN/m_c/poss} patrols."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_anxiety_attack1",
+        "strings": [
+            "When m_c starts to think about a possibility that scares {PRONOUN/m_c/object}, {PRONOUN/m_c/poss} mind fills with a fog and {PRONOUN/m_c/poss} heart starts beating erratically. {PRONOUN/m_c/subject/CAP} {VERB/m_c/panic/panics} and {VERB/m_c/wake/wakes} up a friend.",
+            "A Clanmate sits beside m_c and lets {PRONOUN/m_c/object} ramble on as {PRONOUN/m_c/subject} {VERB/m_c/catastrophize/catastrophizes}.",
+            "m_c starts crying because {PRONOUN/m_c/subject} didn't check the camp fully before leaving that morning."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

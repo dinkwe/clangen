@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "anxiety_attack_paranoia0",
+        "strings": [
+            "m_c watches r_c0 with wary eyes, tail twitching and ears pressed low. r_c0 carefully broadcasts and exaggerates {PRONOUN/r_c0/poss} every movement to try and make {PRONOUN/m_c/object} feel a bit more secure."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_attack_paranoia1",
+        "strings": [
+            "After working {PRONOUN/m_c/self} into such anxiety, m_c finds {PRONOUN/m_c/self} struggling to get back out of it and on edge for the rest of the day.",
+            "m_c refuses to let {PRONOUN/m_c/self} calm down, sure that there is something wrong and dangerous out there.",
+            "While there is no reason to worry, m_c refuses to see it that way and stands stiffly at the camp entrance, fur all on end and ears raised to hear absolutely everything."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

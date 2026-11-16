@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "puppy_regressor_puppyspace0",
+        "strings": [
+            "m_c has slipped into puppyspace again.",
+            "m_c is in puppyspace.",
+            "m_c has started acting like a puppy."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

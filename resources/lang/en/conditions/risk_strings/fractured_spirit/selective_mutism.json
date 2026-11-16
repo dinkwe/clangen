@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "fractured_spirit_selective_mutism0",
+        "strings": [
+            "r_c0 reassures m_c's Clanmates that m_c is only going to be quiet for a while now. {PRONOUN/m_c/subject/CAP} just need some time."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fractured_spirit_selective_mutism1",
+        "strings": [
+            "m_c only wants to talk to the Clanmates closest to {PRONOUN/m_c/object}. And for {PRONOUN/m_c/poss} other Clanmates, {PRONOUN/m_c/subject} {VERB/m_c/rely/relies} on sign language and tail signals to communicate.",
+            "m_c has gone quiet for a bit, too overwhelmed to speak."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

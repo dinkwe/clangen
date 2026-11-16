@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "flooded_paws_nausea0",
+        "strings": [
+            "When m_c tries to stand up, {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like {PRONOUN/m_c/subject} might throw up.",
+            "Today, m_c woke up feeling nauseous due to {PRONOUN/m_c/poss} flooded paws."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "flooded_paws_dizziness0",
+        "strings": [
+            "r_c0 helps m_c stay on {PRONOUN/m_c/poss} paws while guiding {PRONOUN/m_c/object} towards the medicine den to rest in until this period of dizziness passes."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "flooded_paws_dizziness1",
+        "strings": [
+            "m_c stands up too quickly and finds the world spinning around {PRONOUN/m_c/object}.",
+            "It seems every time m_c moves too suddenly, a new wave of dizziness hits {PRONOUN/m_c/object}.",
+            "m_c hisses when a Clanmate says that {PRONOUN/m_c/subject} should just be more careful when {PRONOUN/m_c/subject} {VERB/m_c/stand/stands} up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

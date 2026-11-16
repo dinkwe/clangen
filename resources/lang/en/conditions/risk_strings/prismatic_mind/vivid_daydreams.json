@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "prismatic_mind_vivid_daydreams0",
+        "strings": [
+            "When r_c0 and m_c talk about m_c's escapism daydreams, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} very eager and excited to share {PRONOUN/m_c/poss} rich imaginary world."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_vivid_daydreams1",
+        "strings": [
+            "m_c keeps running in circles around camp, escaping into {PRONOUN/m_c/poss} head rather than facing reality.",
+            "More and more often, m_c retreats into {PRONOUN/m_c/poss} own world in {PRONOUN/m_c/poss} head, tail lashing as {PRONOUN/m_c/subject} {VERB/m_c/envision/envisions} things that only {PRONOUN/m_c/subject} can see.",
+            "Sometimes, m_c will narrate fanciful events and stories to the kits.",
+            "m_c admits that when daydreaming, {PRONOUN/m_c/subject} practice what {PRONOUN/m_c/subject} will talk about with {PRONOUN/m_c/poss} Clanmates."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

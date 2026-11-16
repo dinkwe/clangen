@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "anxiety_vivid_daydreams0",
+        "strings": [
+            "r_c0 consults with m_c about {PRONOUN/m_c/poss} daydreaming, reassuring {PRONOUN/m_c/object} that it's a perfectly fine coping mechanism."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_vivid_daydreams1",
+        "strings": [
+            "m_c babbles into the air, paws twitching as if {PRONOUN/m_c/subject} {VERB/m_c/were/was} sleeping with a particularly loud dream.",
+            "Rather than socialising with the rest of the Clan, m_c has been withdrawing into {PRONOUN/m_c/self} and {PRONOUN/m_c/poss} head to escape the pressing anxiety.",
+            "m_c sits quietly in the corner of the camp, finding happiness in {PRONOUN/m_c/poss} own internal world.",
+            "Between bouts of anxiety, m_c is calming {PRONOUN/m_c/self} down by retreating away from the world around {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

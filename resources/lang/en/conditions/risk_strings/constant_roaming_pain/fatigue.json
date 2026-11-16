@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_roaming_pain_fatigue0",
+        "strings": [
+            "With all of m_c's roaming pain, it's no surprise to r_c0 that it's left {PRONOUN/m_c/object} with an exhaustion that doesn't want to leave."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_fatigue1",
+        "strings": [
+            "m_c lies in {PRONOUN/m_c/poss} nest, wondering if {PRONOUN/m_c/subject} will ever feel energized again.",
+            "With all of the pain in {PRONOUN/m_c/poss} life, it's a wonder that m_c can get any sleep, let alone recover energy from it. Unsurprisingly, {PRONOUN/m_c/subject} just {VERB/m_c/feel/feels} tired all the time."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

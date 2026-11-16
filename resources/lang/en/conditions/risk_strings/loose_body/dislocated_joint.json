@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "loose_body_dislocated_joint0",
+        "strings": [
+            "m_c has to go to r_c0's den again after another one of {PRONOUN/m_c/poss} joints slips out of place."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "loose_body_dislocated_joint1",
+        "strings": [
+            "m_c dislocated {PRONOUN/m_c/poss} elbow, again."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

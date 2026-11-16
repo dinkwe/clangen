@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "flooded_paws_fatigue0",
+        "strings": [
+            "r_c0's noticed that m_c has been more tired than usual lately. After talking with {PRONOUN/m_c/object} about it, it seems as if m_c's just experiencing some fatigue."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "flooded_paws_fatigue1",
+        "strings": [
+            "Today, m_c woke up feeling fatigued due to {PRONOUN/m_c/poss} flooded paws."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

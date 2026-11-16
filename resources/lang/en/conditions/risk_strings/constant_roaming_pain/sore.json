@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "constant_roaming_pain_sore0",
+        "strings": [
+            "r_c0 gently scolds m_c when {PRONOUN/m_c/subject} {VERB/m_c/come/comes} into the medicine den. It looks like working too hard without taking breaks has made {PRONOUN/m_c/object} particularly sore."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_sore1",
+        "strings": [
+            "After all the effort that {PRONOUN/m_c/subject} put into helping out the elders this moon, m_c has made {PRONOUN/m_c/self} sore - not that it stops {PRONOUN/m_c/object} from taking pride in the effort.",
+            "m_c doesn't regret the extra work {PRONOUN/m_c/subject} put into helping this moon, even as {PRONOUN/m_c/subject} {VERB/m_c/wince/winces} while simply walking back over to {PRONOUN/m_c/poss} nest.",
+            "m_c lazes about in a sunbeam, watching contently as {PRONOUN/m_c/poss} Clanmates gather together for training that {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to spot for."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "intermittent_paralysis_sore0",
+        "strings": [
+            "m_c purrs as r_c0 massages and soothes out the worst of the aches in {PRONOUN/m_c/poss} body."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_sore1",
+        "strings": [
+            "After a number of false starts and falls, m_c is feeling rather sore.",
+            "Even with all the work put into m_c's physical therapy {PRONOUN/m_c/subject} still {VERB/m_c/end/ends} up feeling sore at the end of the day."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

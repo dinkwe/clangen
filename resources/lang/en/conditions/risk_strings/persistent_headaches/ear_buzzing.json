@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "persistent_headaches_ear_buzzing0",
+        "strings": [
+            "r_c0 keeps rolling some stones over and over in the medicine den beside m_c, hoping that the sound will cancel out all of the buzzing that {PRONOUN/m_c/subject} {VERB/m_c/are/is} complaining about."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "persistent_headaches_ear_buzzing1",
+        "strings": [
+            "As if m_c doesn't have enough issues with {PRONOUN/m_c/poss} headaches, now {PRONOUN/m_c/poss} ears are buzzing and no matter how much {PRONOUN/m_c/subject} {VERB/m_c/shake/shakes} {PRONOUN/m_c/poss} head or hide, it doesn't go away."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

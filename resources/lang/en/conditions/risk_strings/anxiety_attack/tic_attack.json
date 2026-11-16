@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "anxiety_attack_tic_attack0",
+        "strings": [
+            "r_c0 calmly explains that what m_c is experiencing is a tic attack."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_attack_tic_attack1",
+        "strings": [
+            "m_c can't control {PRONOUN/m_c/poss} movements during {PRONOUN/m_c/poss} anxiety attack."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

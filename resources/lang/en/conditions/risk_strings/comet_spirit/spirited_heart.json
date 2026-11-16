@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "comet_spirit_spirited_heart0",
+        "strings": [
+            "After watching a bee die, m_c was left destitute for weeks. {PRONOUN/m_c/poss/CAP} emotions run strong: {PRONOUN/m_c/subject} {VERB/m_c/are/is} a spirited heart.",
+            "Being a comet spirit amplifies how m_c feels emotions, especially the emotions of {PRONOUN/m_c/poss} Clanmates. {PRONOUN/m_c/subject/CAP} may be a spirited heart."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

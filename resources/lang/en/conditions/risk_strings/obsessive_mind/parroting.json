@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "obsessive_mind_parroting0",
+        "strings": [
+            "m_c has been chattering words back at {PRONOUN/m_c/poss} Clanmates. r_c0 purrs with amusement because it seems to just be a case of parroting."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_parroting1",
+        "strings": [
+            "m_c's been parroting words and phrases that {PRONOUN/m_c/subject} {VERB/m_c/like/likes} around camp more often recently.",
+            "It appears that m_c has found a mantra to parrot around camp.",
+            "After a Clanmate spoke something particularly profound, m_c has been repeating the statement over and over like a mantra."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

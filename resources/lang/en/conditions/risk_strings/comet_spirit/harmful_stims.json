@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_harmful_stims0",
+        "strings": [
+            "r_c0 catches m_c biting {PRONOUN/m_c/self} repeatedly whenever emotions run high."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_harmful_stims1",
+        "strings": [
+            "m_c confesses that {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} scratching at {PRONOUN/m_c/poss} own fur when overwhelmed.",
+            "m_c's stims are different from those of other cats: they leave damage behind.",
+            "m_c admits to r_c that the only way {PRONOUN/m_c/subject} can calm down is by hurting {PRONOUN/m_c/self}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

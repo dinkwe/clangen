@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "prismatic_mind_emotionally_numb0",
+        "strings": [
+            "m_c has trouble understanding {PRONOUN/m_c/poss} emotions. r_c0 says that this happens sometimes with cats like m_c."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_emotionally_numb1",
+        "strings": [
+            "m_c has never really known what {PRONOUN/m_c/subject} {VERB/m_c/are/is} feeling."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

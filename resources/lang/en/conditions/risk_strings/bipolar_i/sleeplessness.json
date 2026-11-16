@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "bipolar_i_sleeplessness0",
+        "strings": [
+            "While it's good for m_c to keep busy at night, {PRONOUN/m_c/poss} denmates worry as they see {PRONOUN/m_c/poss} fur getting messier and messier from lack of energy to care.",
+            "m_c finds {PRONOUN/m_c/self} unable to sleep at night, haunted by thoughts racing through {PRONOUN/m_c/poss} mind."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

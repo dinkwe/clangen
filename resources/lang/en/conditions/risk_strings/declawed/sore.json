@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "declawed_sore0",
+        "strings": [
+            "r_c0 sympathetically provides wrappings for m_c's sore paws. The wounds have healed, but still sometimes ache."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "declawed_sore1",
+        "strings": [
+            "m_c winces as {PRONOUN/m_c/subject} {VERB/m_c/flex/flexes} {PRONOUN/m_c/poss} paws.",
+            "Without {PRONOUN/m_c/poss} claws, m_c has been struggling to re-balance {PRONOUN/m_c/self}, and with all the walking around camp, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/poss} paws aching and sore.",
+            "Waking up, m_c knows it's not going to be a good day. {PRONOUN/m_c/poss/CAP} paws are tender at even the slightest of brushes against the softest material of {PRONOUN/m_c/poss} nest."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

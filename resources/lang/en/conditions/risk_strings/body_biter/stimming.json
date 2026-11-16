@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "body_biter_stimming0",
+        "strings": [
+            "r_c0 has noticed that m_c is biting at {PRONOUN/m_c/self} more than usual, it looks like m_c's doing it as a form of stimming."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_stimming1",
+        "strings": [
+            "m_c has begun to stim around camp, finding sticks to chew on in an attempt to not bite at {PRONOUN/m_c/self}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

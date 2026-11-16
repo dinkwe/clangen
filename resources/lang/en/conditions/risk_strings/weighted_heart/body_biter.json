@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "weighted_heart_body_biter0",
+        "strings": [
+            "r_c0 sighs and tells m_c that {PRONOUN/m_c/subject} can't keep coming in after biting fur away. Soon after, r_c0 realizes that m_c is a body biter."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_body_biter1",
+        "strings": [
+            "m_c bites and nibbles at {PRONOUN/m_c/self}. It's possible that m_c is a body biter now.",
+            "m_c assures {PRONOUN/m_c/poss} loved one that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not hurting {PRONOUN/m_c/self} intentionally when {PRONOUN/m_c/subject} groom {PRONOUN/m_c/self} repetitively."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

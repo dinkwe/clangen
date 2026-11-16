@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "prismatic_mind_tic0",
+        "strings": [
+            "r_c0 assures m_c that {PRONOUN/m_c/poss} body is just having tics."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_tic1",
+        "strings": [
+            "m_c has started ticing.",
+            "m_c twitches and tics. {PRONOUN/m_c/poss/CAP} tail tip moves without {PRONOUN/m_c/poss} say-so."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

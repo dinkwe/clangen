@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "thunderous_spirit_strong_attachment0",
+        "strings": [
+            "r_c0 notices that m_c is becoming more dependent and clingy with one of {PRONOUN/m_c/poss} Clanmates, and invites {PRONOUN/m_c/object} to talk about it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_strong_attachment1",
+        "strings": [
+            "m_c can't stop thinking about one of {PRONOUN/m_c/poss} Clanmates, and cannot bear the thought of not being near them, to the point that it's disrupting {PRONOUN/m_c/poss} duties.",
+            "No one understands m_c, apart from that one special cat in {PRONOUN/m_c/poss} life. At least, that's what {PRONOUN/m_c/poss} thunderous spirit is making {PRONOUN/m_c/object} think. {PRONOUN/m_c/subject/CAP} {VERB/m_c/refuse/refuses} to be apart from them, and will lash out at any Clanmate that tries to separate them."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

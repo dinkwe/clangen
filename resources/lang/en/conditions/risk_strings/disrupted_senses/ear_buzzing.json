@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_ear_buzzing0",
+        "strings": [
+            "r_c0 lies against m_c, purring as much as {PRONOUN/m_c/subject} can in the hopes to drown out the buzzing bothering {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_ear_buzzing1",
+        "strings": [
+            "Poor m_c's been shaking {PRONOUN/m_c/poss} head all day, trying to shake out the flies that {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} to be stuck hearing.",
+            "With irritation, m_c slinks towards the medicine den in the hopes of getting something to clear the buzzing from {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

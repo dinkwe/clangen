@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_indecision0",
+        "strings": [
+            "m_c comes in to see r_c0, {PRONOUN/m_c/poss} tail twitching as {PRONOUN/m_c/subject} consult with {PRONOUN/r_c0/object} on how to make decision making easier."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_indecision1",
+        "strings": [
+            "m_c stands beside the camp entryway somewhat frozen, talking with the deputy about what patrol to potentially go on.",
+            "m_c sits, tail tip twitching as {PRONOUN/m_c/subject} try to decide what prey to eat.",
+            "m_c paces back and forth, {PRONOUN/m_c/subject} can't decide if {PRONOUN/m_c/subject} should ask the deputy whether {PRONOUN/m_c/subject} can go to the gathering."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

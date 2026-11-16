@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "falling_paws_bruises0",
+        "strings": [
+            "m_c slowly stands up and slinks to r_c0. {PRONOUN/m_c/subject} {VERB/m_c/tell/tells} r_c0 that {PRONOUN/m_c/subject} got these bruises when {PRONOUN/m_c/subject} almost fainted and sat back down too suddenly."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "falling_paws_bruises1",
+        "strings": [
+            "m_c narrowly avoided fainting but got some bruises in the process.",
+            "m_c fell down to avoid fainting and got hurt in the process."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "partial_hearing_loss_deaf0",
+        "strings": [
+            "r_c0 patiently assists m_c with {PRONOUN/m_c/poss} complaints of an earache."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "partial_hearing_loss_deaf1",
+        "strings": [
+            "m_c has gotten an earache."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

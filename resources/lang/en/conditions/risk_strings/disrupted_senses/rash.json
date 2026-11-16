@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_rash0",
+        "strings": [
+            "With some frustration, m_c complains to r_c0 about the rash that seems to have appeared from nowhere across {PRONOUN/m_c/poss} body under the fur."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_rash1",
+        "strings": [
+            "Due to a shift in the season and environment around the camp, poor m_c's gotten a rash under {PRONOUN/m_c/poss} fur.",
+            "m_c's had the unfortunate luck of getting a rash on {PRONOUN/m_c/poss} sensitive skin."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

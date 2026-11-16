@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "hostile_hallucinations_healed0",
+        "strings": [
+            "m_c is no longer hallucinating.",
+		    "m_c's hallucinations have calmed down and {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} safe to leave {PRONOUN/m_c/poss} den again."
+        ],
+        "involved_cats": {
+            "m_c":{}
+        }
+    }
+]

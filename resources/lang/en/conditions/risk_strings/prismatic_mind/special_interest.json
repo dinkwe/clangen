@@ -1,0 +1,34 @@
+[
+    {
+        "event_id": "prismatic_mind_special_interest0",
+        "strings": [
+            "m_c has been seen focusing on pretty pebbles and feathers {PRONOUN/m_c/subject} {VERB/m_c/have/has} been finding around {PRONOUN/m_c/poss} territory. When r_c0 confronts {PRONOUN/m_c/object} about it, m_c explains {PRONOUN/m_c/subject} just like the objects. They're pretty."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_special_interest1",
+        "strings": [
+            "Today, m_c was caught holding some kind of kittypet toy in {PRONOUN/m_c/poss} jaws. {PRONOUN/m_c/subject/CAP} looked embarrassed, and only mumbled that it just looked fluffy - {PRONOUN/m_c/subject} {VERB/m_c/admit/admits} it was worth stealing.",
+            "m_c has been thinking about this one particular spot in the territory for days now, and seems to be constantly going back to that spot - even sneaking away in the night!",
+            "A collection of shiny objects was found in m_c's nest, and when confronted about it {PRONOUN/m_c/subject} simply {VERB/m_c/state/states} that {PRONOUN/m_c/subject} couldn't help it, they were shiny! So shiny...",
+            "m_c has been exploring a really particular part of the territory, explaining everything {PRONOUN/m_c/subject} {VERB/m_c/have/has} found and seen with gleeful vigor.",
+            "Some of {PRONOUN/m_c/poss} Clanmates are struggling to keep m_c on topic, {PRONOUN/m_c/subject} {VERB/m_c/keep/keeps} losing focus when it's not about {PRONOUN/m_c/poss} latest interest.",
+            "m_c has recently been collecting a lot of things related to a singular topic - {PRONOUN/m_c/subject}'ll even eagerly talk a cat's ears off about it, if allowed to!",
+            "Every patrol that m_c has gone on has heard about {PRONOUN/m_c/poss} latest interest; it's nice to see {PRONOUN/m_c/object} so happy about finding something new to enjoy.",
+            "m_c is practically vibrating out of {PRONOUN/m_c/poss} pelt when {PRONOUN/m_c/subject} {VERB/m_c/talk/talks} to {PRONOUN/m_c/poss} Clanmates about {PRONOUN/m_c/poss} latest interest.",
+            "It looks like m_c has rediscovered an old special interest and is eagerly bouncing as {PRONOUN/m_c/subject} {VERB/m_c/talk/talks} about it.",
+            "Finding something new to talk about is nice, but for m_c it's something special to return to an old favourite subject."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

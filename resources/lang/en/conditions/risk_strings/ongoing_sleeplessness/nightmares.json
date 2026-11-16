@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_nightmares0",
+        "strings": [
+            "m_c comes in to see r_c0, picking up some poppy seeds in the hope for some completely dream-free sleep."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_nightmares1",
+        "strings": [
+            "m_c whimpers as {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up, pressing {PRONOUN/m_c/poss} ears flat. It's bad enough that {PRONOUN/m_c/subject} hardly ever {VERB/m_c/sleep/sleeps}, now what little they do get is plagued with nightmares."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

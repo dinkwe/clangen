@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "bipolar_ii_impulsivity0",
+        "strings": [
+            "m_c has said some things that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} mean to r_c0."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bipolar_ii_impulsivity0",
+        "strings": [
+            "It's all m_c can do to even halfway remain on task, {PRONOUN/m_c/subject} {VERB/m_c/are/is} doing things without thinking.",
+            "m_c took a piece of prey from the pile and spent the rest of the day looking like {PRONOUN/m_c/subject} might cry."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

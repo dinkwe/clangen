@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "prismatic_mind_vivid_daydreamer0",
+        "strings": [
+            "Sometimes, m_c seems to lose hours staring at the sky, imagining stories the elders recited to {PRONOUN/m_c/object}.",
+            "On rough days, m_c finds it easier to picture fantastical scenarios in {PRONOUN/m_c/poss} mind than face the stresses of the Clan."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

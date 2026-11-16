@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "bipolar_ii_absence0",
+        "strings": [
+            "m_c stops mid action, just staring blankly for a period as the sunlight shifts over {PRONOUN/m_c/poss} nose.",
+            "While walking around, m_c zones out and stares into the distance for periods of time."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

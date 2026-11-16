@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_sleep_paralysis0",
+        "strings": [
+            "m_c goes to r_c0 with questions on how to keep Dark Forest cats from stalking {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_sleep_paralysis1",
+        "strings": [
+            "m_c's been seeing monsters in the early hours of the day recently; they loom over {PRONOUN/m_c/object} when {PRONOUN/m_c/subject} first {VERB/m_c/awake/awakes}.",
+            "No matter how much sleep m_c gets, {PRONOUN/m_c/subject} still {VERB/m_c/find/finds} {PRONOUN/m_c/self} unable to fully wake up properly and struggling against incomprehensible figures that grip {PRONOUN/m_c/object} painfully."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

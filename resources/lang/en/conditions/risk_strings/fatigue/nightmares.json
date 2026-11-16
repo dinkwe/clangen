@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "fatigue_nightmares0",
+        "strings": [
+            "Due to m_c's overtiredness, r_c0 worries that {PRONOUN/m_c/subject} might be experiencing more nightmares than usual."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fatigue_nightmares1",
+        "strings": [
+            "Poor m_c's been suffering from some nightmares recently."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

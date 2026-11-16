@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "weighted_heart_sleep_paralysis0",
+        "strings": [
+            "In the early hours of the morning, m_c slinks in to see r_c0 to complain about sleep paralysis."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_sleep_paralysis1",
+        "strings": [
+            "m_c softly admits to {PRONOUN/m_c/poss} denmates that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been seeing things {PRONOUN/m_c/subject} can't easily explain.",
+            "m_c sometimes wakes up unable to move fully until several blinks."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

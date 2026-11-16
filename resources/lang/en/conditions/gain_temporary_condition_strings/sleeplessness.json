@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "gain_temporary_condition_sleeplessness0",
+        "strings": [
+            "m_c has been unable to get any sleep.",
+	        "This past moon, it's been difficult for m_c to sleep.",
+	        "m_c is having trouble sleeping properly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

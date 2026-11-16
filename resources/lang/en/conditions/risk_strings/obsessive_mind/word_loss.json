@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "obsessive_mind_word_loss0",
+        "strings": [
+            "r_c0 has noticed m_c becoming more and more frustrated when {PRONOUN/m_c/subject} just can't find the right words to use."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_word_loss1",
+        "strings": [
+            "m_c's been increasingly frustrated this last moon incapable of saying anything right.",
+            "m_c claws at the dirt wishing that words were easier for {PRONOUN/m_c/object} to say without messing up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

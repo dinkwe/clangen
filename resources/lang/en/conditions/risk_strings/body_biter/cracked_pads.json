@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "body_biter_cracked_pads0",
+        "strings": [
+            "r_c0 sighs when m_c comes in with bleeding pawpads."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_cracked_pads1",
+        "strings": [
+            "m_c has been picking and nibbling at {PRONOUN/m_c/poss} pawpads until they became cracked.",
+            "m_c's paws have gotten cracked from {PRONOUN/m_c/poss} grooming."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "echoing_shock_dizziness0",
+        "strings": [
+            "When speaking to r_c0, m_c struggles to explain the feeling of lightheaded dizziness that's been overtaking {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_dizziness1",
+        "strings": [
+            "m_c has been more on edge recently, swaying on {PRONOUN/m_c/poss} paws and struggling to walk straight.",
+            "While physically fine, something in m_c's head seems backwards and it's hard to keep {PRONOUN/m_c/self} centered and balanced. Instead, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} feeling dizzy and lightheaded constantly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

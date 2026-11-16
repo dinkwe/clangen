@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "reveal_condition_constant_roaming_pain0",
+        "strings": [
+            "After moons of m_c complaining of pains through {PRONOUN/m_c/poss} kithood, r_c0 sits back and softly explains that this pain will follow {PRONOUN/m_c/object} through {PRONOUN/m_c/poss} whole life and medicine cats can only offer temporary relief."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_constant_roaming_pain1",
+        "strings": [
+            "m_c insists that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not lying, {PRONOUN/m_c/subject} {VERB/m_c/have/has} pains all the time. It doesn't look like it'll ever go away.",
+            "Unlike other kittens m_c keeps {PRONOUN/m_c/self} mostly curled up in the nursery, constantly complaining of pains throughout {PRONOUN/m_c/poss} body.",
+            "When touched by another, m_c lets out yowls of pain. It's distressing for everyone that they can't really help {PRONOUN/m_c/object}."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

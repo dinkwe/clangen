@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_jumbled_noise0",
+        "strings": [
+          "r_c0 reassures m_c's parents that {PRONOUN/m_c/subject} {VERB/m_c/aren't/isn't} disobedient, {PRONOUN/m_c/subject} just {VERB/m_c/have/has} a case of jumbled noise."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_jumbled_noise1",
+        "strings": [
+            "m_c has gotten overwhelmed by noise {PRONOUN/m_c/poss} entire life and has finally figured out why!",
+            "m_c is happy to know that the reason {PRONOUN/m_c/subject} sometimes lose words is because {PRONOUN/m_c/subject} {VERB/m_c/have/has} jumbled noise."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

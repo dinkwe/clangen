@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "anxiety_panic_attack0",
+        "strings": [
+            "r_c0 is doing a general den check on m_c when {PRONOUN/r_c0/subject} {VERB/r_c0/notice/notices} that {PRONOUN/m_c/poss} breathing is coming particularly harshly."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_panic_attack1",
+        "strings": [
+            "Nobody is sure what happened - one second, m_c was fine, the next, {PRONOUN/m_c/subject} {VERB/m_c/are/is} darting across the camp ears pressed down and fur all on end.",
+            "m_c has been pacing circles around the camp, fur on end and looking as if {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to snap.",
+            "Tail lashing and fur on edge, m_c reports to the medicine den for reassurance.",
+            "m_c has been struggling to breathe. Some of {PRONOUN/m_c/poss} Clanmates are worried about it being whitecough, but it seems to be just a bit of panic."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

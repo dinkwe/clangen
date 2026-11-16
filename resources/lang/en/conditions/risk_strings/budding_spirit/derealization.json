@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "budding_spirit_derealization0",
+        "strings": [
+            "m_c keeps spacing out for longer and longer periods. Nothing feels real anymore.",
+            "m_c keeps confusing dreams and reality, as both feel equally fake.",
+            "m_c knows {PRONOUN/m_c/subject} woke up this morning, but {PRONOUN/m_c/subject} still {VERB/m_c/feel/feels} trapped in a dream.",
+            "For m_c, everything seems especially hazy lately. Is any of this even real?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

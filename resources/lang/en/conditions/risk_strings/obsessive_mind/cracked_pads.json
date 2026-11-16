@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "obsessive_mind_cracked_pads0",
+        "strings": [
+            "m_c has been washing {PRONOUN/m_c/poss} paws too often, and has to ask r_c0 for a poultice to treat {PRONOUN/m_c/poss} dry and bleeding pawpads."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_cracked_pads1",
+        "strings": [
+            "m_c realizes that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been washing {PRONOUN/m_c/poss} paws too often when it becomes painful to walk."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

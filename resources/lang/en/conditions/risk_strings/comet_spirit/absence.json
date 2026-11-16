@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "comet_spirit_absence0",
+        "strings": [
+            "m_c sits in the medicine den beside r_c0, just staring off into the distance."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_absence1",
+        "strings": [
+            "While walking around, m_c zones out and stares into the distance for periods of time.",
+            "m_c sits in place staring, paws vaguely tensing and untensing."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

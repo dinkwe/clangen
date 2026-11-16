@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "thunderous_spirit_double_tongue0",
+        "strings": [
+            "m_c KNOWS it's not that big of a deal, but when r_c0 asks where {PRONOUN/r_c0/poss} favorite prey went, m_c would rather lie than say {PRONOUN/m_c/subject} ate it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_double_tongue1",
+        "strings": [
+            "m_c has started lying whenever {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to. It's not that {PRONOUN/m_c/subject} {VERB/m_c/WANT/WANTS} to, it's that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} feel like {PRONOUN/m_c/subject} {VERB/m_c/have/has} any other options.",
+            "It feels like m_c has another tongue. {PRONOUN/m_c/subject/CAP} {VERB/m_c/WANT/WANTS} to tell the truth, but it's like another tongue comes out and tells a lie for {PRONOUN/m_c/object}.",
+            "m_c feels like if {PRONOUN/m_c/subject} {VERB/m_c/tell/tells} the truth, no one will believe {PRONOUN/m_c/object}! So, instead {PRONOUN/m_c/subject} {VERB/m_c/start/starts} lying. Then it grows into a habit, regardless of how important the truth is.",
+            "m_c hates lying, but {PRONOUN/m_c/subject} can't stop {PRONOUN/m_c/self}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

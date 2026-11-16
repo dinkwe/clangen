@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "body_biter_rash0",
+        "strings": [
+            "m_c goes to get help from r_c0 for the rash that has formed from {PRONOUN/m_c/poss} obsessive grooming."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_rash1",
+        "strings": [
+            "m_c's pelt has gotten a rash from irritation.",
+            "m_c shies away from touch because {PRONOUN/m_c/poss} fur has gotten sensitive."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

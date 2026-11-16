@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "allergies_fainting0",
+        "strings": [
+            "To r_c0's horror, m_c collapses into a faint from {PRONOUN/m_c/poss} allergic reaction."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "allergies_fainting1",
+        "strings": [
+            "Poor m_c has fainted due to exposure to one of {PRONOUN/m_c/poss} allergens.",
+            "m_c wasn't expecting to faint today, it would seem that {PRONOUN/m_c/poss} allergies are worse than usual this season."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

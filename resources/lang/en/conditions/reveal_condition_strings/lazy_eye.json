@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "reveal_condition_lazy_eye0",
+        "strings": [
+            "While looking the same as any other kit in the nursery there's a bit of a shock when m_c's eyes finally open. r_c0's quick to reassure the parents that a lazy eye isn't anything to worry too much about."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_lazy_eye1",
+        "strings": [
+            "Even if m_c's eye seems a little bit different, it doesn't really bother {PRONOUN/m_c/object}.",
+            "m_c doesn't understand the fuss that everyone keeps making about {PRONOUN/m_c/poss} eye. {PRONOUN/m_c/subject/CAP} {VERB/m_c/think/thinks} it makes {PRONOUN/m_c/object} look cool.",
+            "Despite being as healthy as any other kitten in the Nursery, m_c's been struggling to navigate and is dismayed to hear that {PRONOUN/m_c/poss} eyesight might never be as clear as {PRONOUN/m_c/poss} Clanmates'."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "comet_spirit_understimulation0",
+        "strings": [
+            "r_c0 talks to m_c, discussing together why {PRONOUN/m_c/subject} {VERB/m_c/have/has} been feeling so listless and uncomfortable around camp recently."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_understimulation1",
+        "strings": [
+            "No matter what m_c seems to do, it just feels like something is off this moon.",
+            "Frustrated, m_c snaps at a Clanmate to leave {PRONOUN/m_c/object} alone, only to regret it and apologise heartbeats later. Something is off with {PRONOUN/m_c/object}.",
+            "m_c rocks back and forth, trying to get rid of this painful boredom."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

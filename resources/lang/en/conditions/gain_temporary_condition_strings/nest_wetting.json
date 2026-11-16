@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "gain_temporary_condition_nest_wetting0",
+        "strings": [
+            "m_c is experiencing some nest wetting."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "recurring_shock_emotionally_numb0",
+        "strings": [
+            "Instead of feeling everything that m_c wishes that {PRONOUN/m_c/subject} didn't feel, m_c just feels numb.",
+            "m_c has too many difficult emotions to sort, so instead, {PRONOUN/m_c/subject} just {VERB/m_c/don't/doesn't} feel.",
+            "m_c can barely feel a thing these days."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

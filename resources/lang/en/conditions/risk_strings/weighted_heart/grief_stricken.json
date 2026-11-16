@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "weighted_heart_grief_stricken0",
+        "strings": [
+            "m_c wanders into the medicine den with a fresh ache in {PRONOUN/m_c/poss} chest, just looking for r_c0 for some comfort."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_grief_stricken1",
+        "strings": [
+            "There's no reason for this, nothing has happened recently. Yet m_c wakes with a wail, the weight of grief holding {PRONOUN/m_c/object} down and aching as sharply as if someone had newly passed.",
+            "By StarClan, m_c wishes that {PRONOUN/m_c/subject} could hold onto the small things, instead of feeling this heavy blanket weight of sadness and longing for things gone.",
+            "m_c wanders listlessly around camp, looking for someone or something that is no longer there."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

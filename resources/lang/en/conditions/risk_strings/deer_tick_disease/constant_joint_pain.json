@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "deer_tick_disease_constant_joint_pain0",
+        "strings": [
+            "m_c has been complaining of joint pain much more than usual. r_c0 suspects that {PRONOUN/m_c/poss} deer tick disease has wreaked more havoc on {PRONOUN/m_c/poss} joints than previously thought."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deer_tick_disease_constant_joint_pain1",
+        "strings": [
+            "m_c can't shake the achiness in {PRONOUN/m_c/poss} joints - it just seems to keep getting worse."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

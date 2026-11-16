@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "intermittent_paralysis_dizziness0",
+        "strings": [
+            "m_c complains to r_c0 about a recent bout of dizziness that seems to keep plaguing {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_dizziness1",
+        "strings": [
+            "Cats have noticed that m_c seems to be spending more of {PRONOUN/m_c/poss} day sitting down in an attempt to be slight less dizzy.",
+            "m_c complains about the sudden bout of dizziness that {PRONOUN/m_c/subject} has been dealing with."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

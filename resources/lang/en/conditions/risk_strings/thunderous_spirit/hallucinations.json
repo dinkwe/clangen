@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "thunderous_spirit_hallucinations0",
+        "strings": [
+            "m_c feels ants crawling on {PRONOUN/m_c/poss} skin, even after r_c0 has checked {PRONOUN/m_c/object} for bugs a dozen times."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_hallucinations1",
+        "strings": [
+            "m_c keeps seeing a cat following {PRONOUN/m_c/object} out of the corner of {PRONOUN/m_c/poss} eye, even though there's neither noise nor scent.",
+            "m_c admits to a Clanmate that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not sure if {PRONOUN/m_c/subject} can actually trust {PRONOUN/m_c/poss} ears and what {PRONOUN/m_c/subject} {VERB/m_c/are/is} hearing anymore.",
+            "A Clanmate spots m_c talking to {PRONOUN/m_c/self}, only to realize that {PRONOUN/m_c/subject} {VERB/m_c/are/is} actually talking to things that aren't there at all."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

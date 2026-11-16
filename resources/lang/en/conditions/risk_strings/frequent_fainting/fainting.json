@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "frequent_fainting_fainting0",
+        "strings": [
+            "r_c0 makes sure that the nest is nice and soft, set aside for m_c to rest in once {PRONOUN/m_c/subject} {VERB/m_c/recover/recovers} from {PRONOUN/m_c/poss} fainting spell."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "frequent_fainting_fainting1",
+        "strings": [
+            "m_c stood up too fast and ended up crashing back down to the distress of {PRONOUN/m_c/poss} Clanmates.",
+            "m_c fainted trying to power through the day.",
+            "m_c thought {PRONOUN/m_c/subject} could ride out the wave of dizziness, only to wake up on the ground.",
+            "m_c assures {PRONOUN/m_c/poss} Clanmates that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} fine. The fainting spell only lasted a few moments.",
+            "m_c was sharing tongues with a Clanmate when {PRONOUN/m_c/subject} suddenly collapsed."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

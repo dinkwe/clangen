@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "jellyfish_joints_dislocated_joint0",
+        "strings": [
+            "Crack! m_c sighs, getting help from {PRONOUN/m_c/poss} Clanmates to get into r_c0's den, to relocate {PRONOUN/m_c/poss} joint."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "jellyfish_joints_dislocated_joint1",
+        "strings": [
+            "As m_c limps to the medicine den, {PRONOUN/m_c/subject} {VERB/m_c/think/thinks} that maybe {PRONOUN/m_c/subject} should have woken up the Clanmate who slept on {PRONOUN/m_c/poss} leg."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "fractured_spirit_kittenspace0",
+        "strings": [
+            "Sometimes, m_c feels younger than the age {PRONOUN/m_c/poss} body is. {PRONOUN/m_c/subject/CAP} {VERB/m_c/talk/talks} to r_c about it, worried something is wrong with {PRONOUN/m_c/object}, but r_c0 assures {PRONOUN/m_c/object} that what {PRONOUN/m_c/subject} {VERB/m_c/are/is} feeling is perfectly normal - {PRONOUN/m_c/poss} brain is just in kittenspace."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fractured_spirit_kittenspace1",
+        "strings": [
+            "m_c, despite being old for a kit, acts younger than {PRONOUN/m_c/subject} {VERB/m_c/are/is} sometimes. It's possible that {PRONOUN/m_c/subject} {VERB/m_c/are/is} in kittenspace."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

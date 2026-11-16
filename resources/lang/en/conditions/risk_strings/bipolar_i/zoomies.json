@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "bipolar_i_zoomies0",
+        "strings": [
+            "m_c has more energy than usual, rapidly zooming around the camp.",
+            "m_c feels filled with the need to move, to jump around and just go, go, go!"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

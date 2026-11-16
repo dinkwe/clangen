@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "anxiety_tic_attack0",
+        "strings": [
+            "After narrowly avoiding a panic attack, m_c has started rapidly moving and speaking without meaning to.",
+            "After narrowly avoiding an anxiety attack, m_c has started rapidly moving and speaking without meaning to.",
+            "It seems that m_c's anxiety has been too much for {PRONOUN/m_c/object} lately and {PRONOUN/m_c/subject} {VERB/m_c/have/has} gotten a tic attack.",
+            "Much to m_c's horror, {PRONOUN/m_c/poss} friends all see {PRONOUN/m_c/object} start to have a tic attack."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "weighted_heart_seasonal_lethargy0",
+        "strings": [
+            "As the seasons change, so does m_c's mood. {PRONOUN/m_c/subject/CAP} {VERB/m_c/begin/begins} seeming more and more tired and r_c0 invites {PRONOUN/m_c/object} into the medicine den, quietly sitting beside m_c and assuring {PRONOUN/m_c/object} that it's okay if {PRONOUN/m_c/subject} {VERB/m_c/are/is} tired and {VERB/m_c/do/does}n't feel able to work."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_seasonal_lethargy1",
+        "strings": [
+            "m_c watches the seasons change around {PRONOUN/m_c/object}, digging {PRONOUN/m_c/poss} paws into the nest around {PRONOUN/m_c/object}. {PRONOUN/m_c/subject/CAP} really {VERB/m_c/hate/hates} how this change makes {PRONOUN/m_c/object} feel lost and small.",
+            "While the camp moves about, cats speaking with one another about chores and jobs for the season, m_c remains tightly curled up in {PRONOUN/m_c/poss} den, just too tired.",
+            "With only half of {PRONOUN/m_c/poss} mind on the task, m_c listlessly wanders around the camp."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

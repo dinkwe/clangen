@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_irritable_bowels0",
+        "strings": [
+            "r_c0 is very carefully preparing yet another mixture of belly soothing herbs for m_c. {PRONOUN/r_c/subject}{VERB/m_c/'re/'s} worried about the consistency of {PRONOUN/m_c/poss} issues."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_irritable_bowels1",
+        "strings": [
+            "m_c is yet again complaining about having a stomachache, this is becoming upsettingly common.",
+            "The parents of m_c worry when {PRONOUN/m_c/subject} {VERB/m_c/struggles/struggle} to properly eat and use the dirtplace, always in some form of discomfort."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

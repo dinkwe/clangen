@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "declawed_infection0",
+        "strings": [
+            "r_c0 hisses as m_c limps into the medicine den. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/do/does}n't even have to check to know there's something wrong with m_c's paws."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "declawed_infection1",
+        "strings": [
+            "m_c can barely walk. {PRONOUN/m_c/poss/CAP} paws are angry and swollen.",
+            "Once again, m_c finds {PRONOUN/m_c/self} cursing the Twolegs who did this to {PRONOUN/m_c/object} as {PRONOUN/m_c/poss} paws burn and ache painfully around {PRONOUN/m_c/poss} toes."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

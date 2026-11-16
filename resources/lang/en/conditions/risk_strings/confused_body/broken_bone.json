@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "confused_body_broken_bone0",
+        "strings": [
+            "r_c0 sighs when m_c comes in with a broken bone from getting all locked up."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "confused_body_broken_bone1",
+        "strings": [
+            "m_c locks up and takes a harsh fall as a result.",
+            "m_c got very unfortunate when {PRONOUN/m_c/subject} got locked up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

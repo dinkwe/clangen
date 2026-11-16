@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "echoing_shock_selective_mutism0",
+        "strings": [
+            "Due to m_c's echoing shock, r_c0 has noticed that {PRONOUN/m_c/subject} {VERB/m_c/have/has} developed selective mutism."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_selective_mutism1",
+        "strings": [
+            "m_c has developed selective mutism due to the lingering effects of {PRONOUN/m_c/poss} echoing shock."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

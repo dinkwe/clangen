@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "recurring_shock_sleep_paralysis0",
+        "strings": [
+            "Poor m_c walks into the medicine den in a daze. When r_c0 asks {PRONOUN/m_c/object} what's wrong, {PRONOUN/m_c/subject} can only splutter an explanation about being unable to move when initially waking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "recurring_shock_sleep_paralysis1",
+        "strings": [
+            "m_c has been struggling recently. When {PRONOUN/m_c/subject} {VERB/m_c/wake/wakes} up, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} unable to move and seeing things lurking just beyond the den.",
+            "Even when sleeping in the middle of the den surrounded by {PRONOUN/m_c/poss} Clanmates, m_c doesn't seem to be able to escape the figures that find {PRONOUN/m_c/object} in the early morning."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

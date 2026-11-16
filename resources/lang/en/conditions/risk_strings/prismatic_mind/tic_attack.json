@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "prismatic_mind_tic_attack0",
+        "strings": [
+            "r_c0 assures m_c that {PRONOUN/m_c/poss} body is just having tics."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_tic_attack1",
+        "strings": [
+            "m_c is having a tic attack and can't patrol today.",
+            "m_c squeaks and shakes {PRONOUN/m_c/poss} head during {PRONOUN/m_c/poss} tic attack."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

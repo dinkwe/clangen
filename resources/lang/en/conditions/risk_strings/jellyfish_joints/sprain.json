@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "jellyfish_joints_sprain0",
+        "strings": [
+            "Mousedung! m_c tripped, and where most cats would just fall on {PRONOUN/m_c/poss} chest, m_c fell on {PRONOUN/m_c/poss} paw - spraining it in the process.",
+            "m_c ran too quickly and twisted {PRONOUN/m_c/poss} paw! Off to the medicine den again..."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

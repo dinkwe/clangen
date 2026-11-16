@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "obsessive_mind_indecision0",
+        "strings": [
+            "r_c0 reassures m_c that it's alright to take some time to make a decision on things."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_indecision1",
+        "strings": [
+            "m_c has been sitting in place for most of the afternoon, seeming to be stuck on what to do.",
+            "Pacing around camp, m_c doesn't seem to be able to solidly make a decision.",
+            "m_c keeps fretting and worrying about what choices to make."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

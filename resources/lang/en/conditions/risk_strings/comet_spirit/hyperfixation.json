@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "comet_spirit_hyperfixation0",
+        "strings": [
+            "m_c spins circles around r_c0, running around and screaming about {PRONOUN/m_c/poss} latest interest and hyperfixation."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_hyperfixation1",
+        "strings": [
+            "m_c frustratedly digs {PRONOUN/m_c/poss} paws into the dirt of the camp, struggling to focus on {PRONOUN/m_c/poss} tasks when {PRONOUN/m_c/subject} would rather be doing something to do with {PRONOUN/m_c/poss} hyperfixation.",
+            "m_c's Clanmates purr in amusement when listening to {PRONOUN/m_c/poss} rapid, enthusiastic babbling."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

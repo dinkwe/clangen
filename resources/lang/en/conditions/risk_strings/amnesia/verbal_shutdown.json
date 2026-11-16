@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "amnesia_verbal_shutdown0",
+        "strings": [
+            "The loss of {PRONOUN/m_c/poss} memory has made m_c shutdown completely.",
+            "First m_c lost {PRONOUN/m_c/poss} memory, now {PRONOUN/m_c/poss} words have disappeared as well."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

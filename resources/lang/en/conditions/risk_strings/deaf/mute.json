@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deaf_mute0",
+        "strings": [
+            "r_c0 has noticed m_c getting quieter and quieter as time goes on. Coming over to check on {PRONOUN/m_c/object}, {PRONOUN/r_c/subject} {VERB/r_c/discover/discovers} that m_c's voice has left {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deaf_mute1",
+        "strings": [
+            "m_c's awkward volume control has faded away until all {PRONOUN/m_c/poss} words are just too hard for {PRONOUN/m_c/poss} Clanmates to hear.",
+            "After struggling for so long to be heard, m_c has settled into a calm silence."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

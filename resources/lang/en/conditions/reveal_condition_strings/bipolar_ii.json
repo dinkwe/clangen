@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "reveal_condition_bipolar_i0",
+        "strings": [
+            "m_c doesn't understand why {PRONOUN/m_c/poss} mood seems to change so drastically between moons.",
+            "Sometimes m_c struggles to even get out of {PRONOUN/m_c/poss} nest in the mornings, weighed down by a heavy air in {PRONOUN/m_c/poss} heart."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

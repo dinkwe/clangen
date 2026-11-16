@@ -21,6 +21,18 @@
         special_dates = true
         "random relation" = true
         "they them default" = false
+        "warriorified names" = true
+
+    [game.triggers]
+        "allow triggers" = false
+        "misdiganosis" = false
+        "iatrogenic disorders" = false
+        "eating disorders" = false
+        "self harm" = false
+        "psychosis" = false
+        "dissociation" = false
+        "intrusive thoughts" = false
+        "body fluids" = false
 
     [game.other]
         language = [

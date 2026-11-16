@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "fatigue_sleeplessness0",
+        "strings": [
+            "r_c0's noticed that m_c has been active throughout the nights recently. It looks like {PRONOUN/m_c/poss} fatigue has led to some level of sleeplessness."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fatigue_sleeplessness1",
+        "strings": [
+            "m_c's been struggling to sleep recently, it's only making {PRONOUN/m_c/poss} fatigue worse.",
+            "At least now m_c knows that {PRONOUN/m_c/poss} constant feeling of tiredness has an origin."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

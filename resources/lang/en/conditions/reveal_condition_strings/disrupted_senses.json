@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "reveal_condition_disrupted_senses0",
+        "strings": [
+            "r_c0 talks with m_c's parents about how much more sensitive {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} than other kittens. After some observation it seems that m_c might just have some disrupted senses."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_disrupted_senses1",
+        "strings": [
+            "Whenever m_c steps out of the nursery {PRONOUN/m_c/subject} {VERB/m_c/whine/whines} and {VERB/m_c/retreat/retreats} back inside.",
+            "While {PRONOUN/m_c/poss} nurserymates are already freely exploring and playing around camp, m_c whimpers and complains about the evil sun trying to blind {PRONOUN/m_c/object}.",
+            "m_c hates going outside, {PRONOUN/m_c/subject} always {VERB/m_c/complain/complains} about the burning in {PRONOUN/m_c/poss} eyes.",
+            "m_c is always complaining about how everyone else in the Clan around {PRONOUN/m_c/object} is just too loud.",
+            "It often seems to take m_c multiple attempts before {PRONOUN/m_c/subject} can understand what {PRONOUN/m_c/poss} Clanmates are trying to tell {PRONOUN/m_c/object}.",
+            "m_c complains often about how the nest around {PRONOUN/m_c/object} feels like against {PRONOUN/m_c/poss} pelt."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "echoing_shock_sleeplessness0",
+        "strings": [
+            "m_c has been avoiding sleeping more and more. r_c0 can understand it, but {PRONOUN/r_c0/subject} still {VERB/r_c0/try/tries} to talk with {PRONOUN/m_c/object} about the fears that keep {PRONOUN/m_c/object} awake."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_sleeplessness1",
+        "strings": [
+            "It isn't something that m_c can explain. {PRONOUN/m_c/poss/CAP} avoidance of sleep comes from something deeper within.",
+            "As m_c takes yet another night patrol, {PRONOUN/m_c/poss} Clanmates can only take notice of how worn down {PRONOUN/m_c/subject} {VERB/m_c/seem/seems}."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

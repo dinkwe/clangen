@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deaf_ear_infection0",
+        "strings": [
+            "r_c0 sighs and tells m_c that {PRONOUN/m_c/subject} {VERB/m_c/have/has} gotten an ear infection."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deaf_ear_infection1",
+        "strings": [
+            "m_c has gotten an ear infection because of {PRONOUN/m_c/poss} damaged ears.",
+            "m_c has an ear infection."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

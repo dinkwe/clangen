@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "word_loss_healed0",
+        "strings": [
+            "With a bit of help from {PRONOUN/m_c/poss} Clanmates, m_c is able to speak in full sentences again.",
+		    "After a bit of stumbling and fumbling, m_c has found words that are like what {PRONOUN/m_c/subject} {VERB/m_c/were/was} trying to say."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

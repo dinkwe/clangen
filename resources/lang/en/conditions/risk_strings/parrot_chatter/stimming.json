@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "parrot_chatter_stimming0",
+        "strings": [
+            "r_c0 has noticed that m_c is using {PRONOUN/m_c/poss} chattering as a form of stimming recently."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "parrot_chatter_stimming1",
+        "strings": [
+            "m_c has been stimming more often recently.",
+            "It seems like m_c can barely stay still as {PRONOUN/m_c/subject} {VERB/m_c/wriggle/wriggles} {PRONOUN/m_c/poss} whole body in excitement for the whole day.",
+            "m_c keeps purring to {PRONOUN/m_c/self} as an act of self soothing.",
+            "Some of m_c's Clanmates find themselves confused by m_c's running around the camp in small circles, seemingly chasing {PRONOUN/m_c/poss} tail."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

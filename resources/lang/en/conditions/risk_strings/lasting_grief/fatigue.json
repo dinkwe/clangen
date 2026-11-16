@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "lasting_grief_fatigue0",
+        "strings": [
+            "Quietly, m_c talks to r_c0 about how tired {PRONOUN/m_c/subject} {VERB/m_c/are/is}. No matter how much {PRONOUN/m_c/subject} {VERB/m_c/sleep/sleeps}, it doesn't seem to get any better."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "lasting_grief_fatigue1",
+        "strings": [
+            "m_c has just been feeling exhausted recently, no matter how much sleep {PRONOUN/m_c/subject} {VERB/m_c/are/is} or {VERB/m_c/are/is}n't getting.",
+            "No matter how much sleep m_c gets a night, {PRONOUN/m_c/subject} {VERB/m_c/are/is}n't able to feel any less exhausted."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

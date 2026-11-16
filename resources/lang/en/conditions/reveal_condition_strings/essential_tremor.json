@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "reveal_condition_essential_tremor0",
+        "strings": [
+            "No matter what m_c tries, {PRONOUN/m_c/poss} paws can never stay perfectly still.",
+            "m_c keeps repeatedly dropping {PRONOUN/m_c/poss} prey until {PRONOUN/m_c/subject} give up in frustration.",
+            "After a trip to the medicine den, m_c learns that most cats' paws don't shake at all, much less constantly."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

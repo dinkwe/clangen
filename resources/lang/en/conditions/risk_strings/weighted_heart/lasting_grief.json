@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "weighted_heart_lasting_grief0",
+        "strings": [
+            "r_c0 lays comfortingly beside m_c, purring as {PRONOUN/r_c0/subject} {VERB/r_c0/try/tries} to comfort {PRONOUN/m_c/object}. {PRONOUN/m_c/poss/CAP} grief seems worse then normal, residing where not even herbs or words can reach."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "weighted_heart_lasting_grief1",
+        "strings": [
+            "m_c walks out of camp alone, wailing into the sky because of everything that's ever hurt {PRONOUN/m_c/object}. {PRONOUN/m_c/poss/CAP} heart hurts too much, too bad, for {PRONOUN/m_c/object} to keep it inside.",
+            "m_c heads behind {PRONOUN/m_c/poss} den, scratching out another mark in the ground. Another day lived without the one {PRONOUN/m_c/subject} {VERB/m_c/grieve/grieves}. {PRONOUN/m_c/subject/CAP} had to keep going, but it hurts every day.",
+            "m_c curls up in {PRONOUN/m_c/poss} nest alone, crying softly. Everything reminds {PRONOUN/m_c/object} of the one {PRONOUN/m_c/subject} {VERB/m_c/grieve/grieves}, and it makes the grief so much worse. Today was another day."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

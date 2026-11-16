@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "foggy_mind_anxiety_attack0",
+        "strings": [
+            "In the middle of the night, m_c wakes r_c0 up, tail tucked into {PRONOUN/m_c/poss} side. {PRONOUN/m_c/subject/CAP} just {VERB/m_c/need/needs} to talk about the anxieties chasing {PRONOUN/m_c/object} around in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "foggy_mind_anxiety_attack1",
+        "strings": [
+            "m_c breathes harshly while walking around camp, struggling to fight back against the irrational thoughts and memories in {PRONOUN/m_c/poss} head.",
+            "m_c can't get the thoughts and feelings related to {PRONOUN/m_c/poss} memories out of {PRONOUN/m_c/poss} head this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

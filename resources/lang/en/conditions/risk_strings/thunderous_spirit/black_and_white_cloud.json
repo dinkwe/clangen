@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "thunderous_spirit_black_and_white_cloud0",
+        "strings": [
+            "r_c0 notices that m_c cannot think rationally, and is lashing out at every cat around {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_black_and_white_cloud1",
+        "strings": [
+            "m_c thinks that no cat has any flaws and that everyone is perfect, and it's affecting {PRONOUN/m_c/poss} relationships. A black and white cloud has covered {PRONOUN/m_c/poss} vision.",
+            "m_c goes around camp, saying that {PRONOUN/m_c/subject} hate everything and everyone. {PRONOUN/m_c/poss/CAP} Clanmates think that a black and white cloud has covered {PRONOUN/m_c/poss} vision."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

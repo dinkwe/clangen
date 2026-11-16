@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "anxiety_attack_nausea0",
+        "strings": [
+            "m_c admits to r_c0 that due to {PRONOUN/m_c/poss} anxiety, {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} incredibly nauseous."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_attack_nausea1",
+        "strings": [
+            "All of m_c's anxieties have left {PRONOUN/m_c/object} feeling rather nauseous."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "event_id": "murky_mind_emotionally_numb0",
+        "strings": [
+            "m_c wishes that {PRONOUN/m_c/subject} felt more.",
+            "m_c forgot that most people get excited for new things.",
+            "After going to the Gathering, m_c just feels relieved rather than accomplished.",
+            "m_c has learned to fake excitement pretty well!",
+            "m_c doesn't remember the last time {PRONOUN/m_c/subject} felt anything deeply."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

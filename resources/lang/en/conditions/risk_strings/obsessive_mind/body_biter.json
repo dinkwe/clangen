@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "obsessive_mind_body_biter0",
+        "strings": [
+            "m_c has started biting {PRONOUN/m_c/self} whenever {PRONOUN/m_c/subject} feel anxious. r_c0 thinks that {PRONOUN/m_c/subject} {VERB/m_c/are/is} a body biter."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_body_biter1",
+        "strings": [
+            "m_c has started grooming {PRONOUN/m_c/self} repetitively whenever {PRONOUN/m_c/subject} {VERB/m_c/get/gets} anxious."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

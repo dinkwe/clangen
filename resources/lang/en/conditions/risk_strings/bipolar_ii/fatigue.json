@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "bipolar_ii_fatigue0",
+        "strings": [
+            "Looking up at the den's ceiling, m_c wonders if {PRONOUN/m_c/subject} will ever feel less tired."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

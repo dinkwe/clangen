@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "reveal_condition_otherworldly_mind0",
+        "strings": [
+            "r_c0 notices that m_c sees and hears things that other cats can't, and suggests that {PRONOUN/m_c/subject} {VERB/m_c/have/has} an otherworldly mind."
+        ],
+        "involved cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_otherworldly_mind1",
+        "strings": [
+            "m_c often has strong beliefs that no other cat has, like how {PRONOUN/m_c/subject} can talk to birds or {VERB/m_c/were/was} once a powerful leader.",
+            "Clanmates are worried about m_c, as sometimes the words {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} saying are gibberish, or {PRONOUN/m_c/subject}'ll stop randomly in a conversation. Paired with other factors, m_c speaks to a medicine cat.",
+            "A queen in the nursery notices that m_c keeps on complaining about a scary monster which no other cat can see, and they speak to some other Clanmates about it.",
+            "m_c cannot help but repeat what others say, {PRONOUN/m_c/subject} {VERB/m_c/have/has} to! {PRONOUN/m_c/poss/CAP} Clanmates think this is apart of something bigger.",
+            "m_c is constantly worried that someone or something is after {PRONOUN/m_c/object}, and sometimes believes that cats have poisoned {PRONOUN/m_c/poss} prey or put thorns in {PRONOUN/m_c/poss} nest. {PRONOUN/m_c/poss/CAP} Clanmates talk to a medicine cat about it."
+        ],
+        "involved cats": {
+            "m_c": {}
+        }
+    }
+]

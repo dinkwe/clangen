@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "anxiety_double_tongue0",
+        "strings": [
+            "r_c0 yells at m_c to just tell the truth! {PRONOUN/m_c/poss/CAP} whiskers quiver when {PRONOUN/m_c/subject} pathetically {VERB/m_c/mew/mews} out that {PRONOUN/m_c/subject} can't."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_double_tongue1",
+        "strings": [
+            "m_c has started lying whenever {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} like {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to. It's not that {PRONOUN/m_c/subject} {VERB/m_c/WANT/WANTS} to, it's that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} feel like {PRONOUN/m_c/subject} {VERB/m_c/have/has} any other options.",
+            "It feels like m_c has another tongue. {PRONOUN/m_c/subject/CAP} {VERB/m_c/WANT/WANTS} to tell the truth, but it's like another tongue comes out and tells a lie for {PRONOUN/m_c/object}.",
+            "m_c feels like if {PRONOUN/m_c/subject} {VERB/m_c/tell/tells} the truth, no one will believe {PRONOUN/m_c/object}! So instead {PRONOUN/m_c/subject} {VERB/m_c/start/starts} lying. Then it grows into a habit, regardless of how important the truth is.",
+            "m_c feels like if {PRONOUN/m_c/subject} {VERB/m_c/say/says} the wrong thing, everyone will hate {PRONOUN/m_c/object}. This, ironically, has led m_c to get in trouble lying.",
+            "m_c feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to burst if {PRONOUN/m_c/subject} tell the truth.",
+            "m_c can't breathe when {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to tell the truth."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

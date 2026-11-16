@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "disrupted_senses_severe_headache0",
+        "strings": [
+            "Weakly, m_c thanks r_c0 for the herbs, only barely able to squint at {PRONOUN/r_c0/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_severe_headache1",
+        "strings": [
+            "m_c curls up in the very back of the den. {PRONOUN/m_c/poss/CAP} head aches and pounds and even the dim lighting of the den is too much for {PRONOUN/m_c/object} today.",
+            "m_c whimpers in the glare of the sun. {PRONOUN/m_c/subject/CAP} {VERB/m_c/don't/doesn't} know how {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to make it to the medicine den between the headache and all the squinting.",
+            "Thankfully for m_c, one of {PRONOUN/m_c/poss} Clanmates notices how out of it {PRONOUN/m_c/subject} {VERB/m_c/look/looks} and helps {PRONOUN/m_c/object} to the medicine den for some much needed headache-relieving herbs."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

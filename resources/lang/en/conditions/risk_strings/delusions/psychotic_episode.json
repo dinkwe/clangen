@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "delusions_psychotic_episode0",
+        "strings": [
+            "m_c's delusions have only deepened. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} now in a psychotic episode.",
+            "Trying to reality check m_c has only made {PRONOUN/m_c/object} more distrustful of {PRONOUN/m_c/poss} Clanmates."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

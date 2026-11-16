@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "reveal_condition_anxiety0",
+        "strings": [
+            "r_c is growing very used to m_c coming into the medicine den with a twitching tail and pressed down ears. They sit together, r_c purring as {PRONOUN/r_c/subject} steadily {VERB/r_c/answer/answers} all of {PRONOUN/m_c/poss} many worried questions."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_anxiety1",
+        "strings": [
+            "While most kittens are already curiously looking around and exploring camp, m_c is still hiding behind {PRONOUN/m_c/poss} parents and very awkwardly batting at leaves, before running back into the nursery to hide.",
+            "It's normal for a kitten to get startled by new things, but even after identifying something, m_c stares at it with wide eyes as if it would attack {PRONOUN/m_c/object}.",
+            "No matter how many reassurances {PRONOUN/m_c/poss} parents give {PRONOUN/m_c/object}, m_c still worries about each action that {PRONOUN/m_c/subject} {VERB/m_c/take/takes}.",
+            "m_c took some prey from the fresh-kill pile, and then cried because {PRONOUN/m_c/subject} thought it might mean the rest of the Clan wouldn't have enough."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

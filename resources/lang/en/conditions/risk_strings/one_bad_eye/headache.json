@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "one_bad_eye_headache0",
+        "strings": [
+            "While it's only a minor irritation at best, m_c still goes to talk to r_c0 about the dull ache in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "one_bad_eye_headache1",
+        "strings": [
+            "With m_c's bad eye and all the squinting {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done it's no wonder {PRONOUN/m_c/poss} head is starting to complain.",
+            "m_c knows the day isn't starting well when there's a dull thumping in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

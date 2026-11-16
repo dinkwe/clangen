@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "confused_body_impulsivity0",
+        "strings": [
+            "m_c has said some things that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} mean to r_c0."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "confused_body_impulsivity1",
+        "strings": [
+            "m_c ran for seemingly no reason.",
+            "m_c scared off prey despite knowing better.",
+            "m_c starts play fighting with another cat without thinking about it."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

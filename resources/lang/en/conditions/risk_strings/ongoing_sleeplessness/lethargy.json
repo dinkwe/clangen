@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_lethargy0",
+        "strings": [
+            "m_c goes to talk with r_c0 about how {PRONOUN/m_c/poss} lack of sleep has been affecting {PRONOUN/m_c/object} emotionally."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_lethargy1",
+        "strings": [
+            "With all the lack of sleep, it's no surprise for m_c that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} finding it harder and harder to be happy.",
+            "{PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} so tired, always so tired. m_c only wishes that the tiredness would translate into actual sleep.",
+            "m_c gazes blankly at the wall. {PRONOUN/m_c/subject/CAP} {VERB/m_c/have/has} no idea what time it is... but it doesn't really make a difference, with the weight in {PRONOUN/m_c/poss} limbs."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

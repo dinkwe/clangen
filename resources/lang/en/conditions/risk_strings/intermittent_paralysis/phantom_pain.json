@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "intermittent_paralysis_phantom_pain0",
+        "strings": [
+            "No matter how much m_c complains to r_c0 about pain, there just isn't any injury to be found."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_phantom_pain1",
+        "strings": [
+            "m_c's body feels full of ants.",
+            "It's all apologies from m_c about snapping at a Clanmate, it's just that {PRONOUN/m_c/poss} body is full of pain without source."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

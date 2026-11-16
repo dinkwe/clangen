@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "irritable_bowels_nest_wetting0",
+        "strings": [
+            "Sheepishly, m_c has to go to ask r_c0 for help clearing out {PRONOUN/m_c/poss} soiled nest and replace it with fresh clean moss."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritable_bowels_nest_wetting1",
+        "strings": [
+            "m_c has to ask the apprentices for help cleaning up the mess that {PRONOUN/m_c/poss} nest currently is.",
+            "Awkwardly, m_c moves {PRONOUN/m_c/poss} soiled nesting out of the den."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

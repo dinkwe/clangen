@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "comet_spirit_impulsivity0",
+        "strings": [
+            "r_c0 sighs as {PRONOUN/r_c0/subject} watch m_c racing around camp, leaping into decisions without fully thinking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_impulsivity1",
+        "strings": [
+            "m_c steps up as a volunteer for a patrol before fully listening to what it involves.",
+            "Before anyone told {PRONOUN/m_c/object} to, m_c went out on a solo patrol.",
+            "m_c keeps picking up shiny things.",
+            "While out on patrol, m_c keeps racing off at the slightest sight of anything in {PRONOUN/m_c/poss} peripheral.",
+            "m_c comes into the medicine den, sheepishly asking the medicine cat if they need any herbs because {PRONOUN/m_c/subject} found a bush and plucked it before asking."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

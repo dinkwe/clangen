@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deer_tick_disease_fainting0",
+        "strings": [
+            "r_c0 makes sure that the nest is nice and soft, set aside for m_c to rest in once {PRONOUN/m_c/subject} {VERB/m_c/recover/recovers} from {PRONOUN/m_c/poss} fainting spell."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deer_tick_disease_fainting1",
+        "strings": [
+            "When m_c blinks {PRONOUN/m_c/poss} eyes open, it's to worried Clanmates hovering around {PRONOUN/m_c/object}. It appears that m_c had fainted.",
+            "m_c wakes up in the middle of the forest, with little memory of what led to {PRONOUN/m_c/object} falling asleep there."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

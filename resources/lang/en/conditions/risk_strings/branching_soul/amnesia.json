@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "branching_soul_amnesia0",
+        "strings": [
+            "m_c can't understand why r_c0 is so upset with {PRONOUN/m_c/object}, only to learn {PRONOUN/m_c/subject} said something awful- that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} remember at all."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "branching_soul_amnesia1",
+        "strings": [
+            "m_c has a hard time remembering what happened these past few moons. {PRONOUN/m_c/subject/CAP} have a vague idea of what happened, but all the details are gone.",
+            "m_c swears that one of {PRONOUN/m_c/poss} Clanmates was a kit yesterday. How can a few moons pass in just a moment?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

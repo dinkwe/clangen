@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_lethargy0",
+        "strings": [
+            "Sometimes, m_c tells r_c0 how {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to tell if {PRONOUN/m_c/subject} {VERB/m_c/are/is} just tired or if the feeling is something deeper weighing {PRONOUN/m_c/object} down."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_lethargy1",
+        "strings": [
+            "m_c's fatigue seems to have bled into lethargy.",
+            "Something deep inside m_c pulls them down until {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} just wandering around the camp listless and feeling lost."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

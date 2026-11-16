@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "seizure_prone_absence0",
+        "strings": [
+            "r_c0 comes over to check on m_c, since {PRONOUN/m_c/subject} {VERB/m_c/have/has} been silently standing in place and staring for a few heartbeats... It seems like {PRONOUN/m_c/subject} might have gone absent."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "seizure_prone_absence1",
+        "strings": [
+            "m_c stops mid action, just staring blankly for a period as the sunlight shifts over {PRONOUN/m_c/poss} nose.",
+            "Carefully, m_c's denmates check on {PRONOUN/m_c/object}, since {PRONOUN/m_c/subject} {VERB/m_c/are/is} just staring at a spot on the wall.",
+            "m_c blinks and the camp seems to have moved around {PRONOUN/m_c/object}. Awkwardly {PRONOUN/m_c/subject} {VERB/m_c/shuffle/shuffles}, trying to figure out what tasks have been assigned.",
+            "When m_c blinks, {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} no longer in the clearing but resting in the shade, a Clanmate close by to keep watch."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

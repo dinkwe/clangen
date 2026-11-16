@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "prismatic_mind_word_loss0",
+        "strings": [
+            "With more than some frustration m_c talks with r_c0 about {PRONOUN/m_c/poss} recent difficulties with speaking properly and finding the proper words, having to simplify {PRONOUN/m_c/poss} sentences."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_word_loss1",
+        "strings": [
+            "m_c's tail lashes in the air as the proper words just refuse to come to {PRONOUN/m_c/object}.",
+            "m_c has been struggling to find the proper words to say what {PRONOUN/m_c/subject} {VERB/m_c/wish/wishes}.",
+            "Whenever m_c gets too excited and tries to speak too fast the words get lost.",
+            "Poor m_c has been stumbling over {PRONOUN/m_c/poss} words a lot more recently.",
+            "m_c feels a little bit upset when another cat jokes about {PRONOUN/m_c/poss} double wording sentences.",
+            "Because of how rapidly m_c has been speaking some of {PRONOUN/m_c/poss} words have slid into each other."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

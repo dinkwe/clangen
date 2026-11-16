@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "thunderous_spirit_delusions0",
+        "strings": [
+            "m_c scoffs when r_c0 offers herbs to calm {PRONOUN/m_c/object} down. Can't {PRONOUN/r_c0/subject} tell that m_c has been chosen by StarClan to save all the Clans?"
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thunderous_spirit_delusions1",
+        "strings": [
+            "m_c is absolutely certain that an outsider is following {PRONOUN/m_c/object} wherever they go and insists {PRONOUN/m_c/subject} {VERB/m_c/need/needs} protection.",
+            "m_c comes crying into the medicine den, insisting that {PRONOUN/m_c/poss} teeth are falling out, even after repeated assurances that they're not.",
+            "m_c is certain that {PRONOUN/m_c/poss} Clanmates despise {PRONOUN/m_c/object}. {PRONOUN/m_c/poss/CAP} fur prickles when a Clanmate mentions that {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} different."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

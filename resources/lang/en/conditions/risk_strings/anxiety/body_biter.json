@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "anxiety_body_biter0",
+        "strings": [
+            "Recently, when m_c starts getting anxious, {PRONOUN/m_c/subject} {VERB/m_c/start/starts} biting {PRONOUN/m_c/poss} body.",
+            "m_c works off {PRONOUN/m_c/poss} anxiety by grooming {PRONOUN/m_c/self} - perhaps a bit too much.",
+            "m_c starts pulling out {PRONOUN/m_c/poss} fur when {PRONOUN/m_c/subject} {VERB/m_c/get/gets} anxious."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

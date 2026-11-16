@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "masking_burn_out0",
+        "strings": [
+            "r_c0 comforts m_c as {PRONOUN/m_c/subject} explain that everything is just too much and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} so, so burnt out."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "masking_burn_out1",
+        "strings": [
+            "m_c's mask crumbles as {PRONOUN/m_c/poss} burn out becomes obvious."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "declawed_joint_pain0",
+        "strings": [
+            "m_c talks with r_c0 in the medicine den about the pain in the joints of {PRONOUN/m_c/poss} paws."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "declawed_joint_pain1",
+        "strings": [
+            "m_c hisses as {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to walk, the joints in {PRONOUN/m_c/poss} paws feeling off and unbalanced.",
+            "With much pain, m_c limps {PRONOUN/m_c/poss} way to the medicine den, {PRONOUN/m_c/poss} paws feeling stiff and awkward."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

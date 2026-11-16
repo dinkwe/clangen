@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "recurring_shock_shock0",
+        "strings": [
+            "r_c0 watches as m_c wakes yet again with flattened ears and a racing heart. It seems {PRONOUN/m_c/poss} shock has returned this moon, fresh as the day it first occurred."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "recurring_shock_shock1",
+        "strings": [
+            "m_c's shock feels fresh, the event from the past flashing before {PRONOUN/m_c/poss} eyes and making {PRONOUN/m_c/object} shake and shiver, wishing to just curl back up in the den and not leave.",
+            "Breathing harshly, m_c creeps around the camp towards the medicine den, every step shaky and weak."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

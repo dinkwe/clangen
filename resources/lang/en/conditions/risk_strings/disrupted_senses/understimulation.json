@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_understimulation0",
+        "strings": [
+            "r_c0 watches with worry as m_c looks frantically around camp, struggling to center {PRONOUN/m_c/self}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_understimulation1",
+        "strings": [
+            "Something is wrong, m_c can't land {PRONOUN/m_c/poss} paws on what, but {PRONOUN/m_c/subject} {VERB/m_c/feel/feels} a sense of unease deep in {PRONOUN/m_c/poss} bones .",
+            "m_c paces around and around the camp in circles feeling unsettled for reasons beyond {PRONOUN/m_c/poss} understanding."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

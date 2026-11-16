@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "otherworldly_mind_psychotic_episode0",
+        "strings": [
+            "m_c insists to r_c0 that {PRONOUN/m_c/subject} {VERB/m_c/have/has} been chosen by StarClan to herald the end of the world - a terrifying prospect, but completely untrue."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "otherworldly_mind_psychotic_episode1",
+        "strings": [
+            "m_c is completely convinced that every cat in the Clan has it out for {PRONOUN/m_c/object}, despite all evidence to the contrary.",
+            "m_c is struggling to differentiate hallucinations and delusions from reality."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

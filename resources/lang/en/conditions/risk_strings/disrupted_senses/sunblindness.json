@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "disrupted_senses_sunblindness0",
+        "strings": [
+            "r_c0 helps m_c around the camp, softly talking to {PRONOUN/m_c/object} and offering {PRONOUN/r_c0/poss} side for m_c's comfort."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "disrupted_senses_sunblindness1",
+        "strings": [
+            "Unsurprisingly, with m_c's sensitivity to the light outside, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} experiencing more than a bit of sunblindness this moon.",
+            "m_c woke up and stepped out of the den only to yowl as the sun burnt {PRONOUN/m_c/poss} eyes."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

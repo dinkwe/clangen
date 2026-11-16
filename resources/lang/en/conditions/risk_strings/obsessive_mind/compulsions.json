@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "obsessive_mind_compulsions0",
+        "strings": [
+            "r_c0 sits back and watches as m_c comes in just to reorder and count the herbs in the medicine den."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_compulsions1",
+        "strings": [
+            "m_c decided to reorganise the entire fresh-kill pile into multiple piles of prey, sorted by size.",
+            "Before {PRONOUN/m_c/subject} could go on patrol, m_c needed to go back and forth between the camp and the start of the patrol route before {PRONOUN/m_c/subject} nodded and could proceed.",
+            "m_c has to stop every few minutes to shake off {PRONOUN/m_c/poss} paws.",
+            "When settling down to sleep, m_c has to get up and check the front of the den three times.",
+            "m_c keeps grooming the same spot on {PRONOUN/m_c/poss} pelt.",
+            "m_c keeps repeating behaviours and when asked can only explain that {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to do them."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_fainting0",
+        "strings": [
+            "r_c0 fusses worriedly over m_c, it looks like {PRONOUN/m_c/poss} lack of sleep is catching up and causing fainting spells."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_fainting1",
+        "strings": [
+            "m_c sheepishly apologises to {PRONOUN/m_c/poss} Clanmates for the scare. It looks like {PRONOUN/m_c/poss} lack of sleep has led to fainting."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

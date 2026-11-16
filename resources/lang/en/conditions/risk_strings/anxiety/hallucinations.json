@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "anxiety_hallucinations0",
+        "strings": [
+            "r_c0 talks m_c through the things that {PRONOUN/m_c/subject} {VERB/m_c/are/is} seeing and hearing. It helps m_c more firmly ground {PRONOUN/m_c/self} in reality."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_hallucinations1",
+        "strings": [
+            "m_c struggles to understand what is really there or not as the shadows seem to hold impossible things.",
+            "Sometimes when m_c is half asleep, it feels as if there are creatures climbing up over {PRONOUN/m_c/poss} body, conspiring to keep {PRONOUN/m_c/object} awake.",
+            "m_c admits to a Clanmate that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not sure if {PRONOUN/m_c/subject} can actually trust {PRONOUN/m_c/poss} ears and what {PRONOUN/m_c/subject} {VERB/m_c/are/is} hearing anymore."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

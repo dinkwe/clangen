@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "thought_blind_face_blindness0",
+        "strings": [
+            "r_c0 has noticed that m_c seems to struggle with recognizing {PRONOUN/m_c/poss} Clanmates."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "thought_blind_face_blindness1",
+        "strings": [
+            "With more than a bit of frustration, m_c has to admit that {PRONOUN/m_c/subject} might be face blind alongside {PRONOUN/m_c/poss} thought blindness."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

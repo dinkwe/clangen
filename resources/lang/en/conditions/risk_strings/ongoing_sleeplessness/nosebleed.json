@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "ongoing_sleeplessness_nosebleed0",
+        "strings": [
+            "r_c0 fusses over m_c after {PRONOUN/m_c/subject} walked into a rock and gave {PRONOUN/m_c/self} a nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "ongoing_sleeplessness_nosebleed1",
+        "strings": [
+            "A Clanmate worriedly asks if m_c's okay after noticing that {PRONOUN/m_c/subject} {VERB/m_c/has/have} a nosebleed."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "irritated_belly_nausea0",
+        "strings": [
+            "r_c0 gets some herbs for m_c's nausea. m_c looks beyond miserable."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "irritated_belly_nausea1",
+        "strings": [
+            "m_c ate some prey and midway through realized {PRONOUN/m_c/poss} meal had ingested something that {PRONOUN/m_c/subject} {VERB/m_c/are/is} not supposed to eat.",
+            "m_c can't eat anything today. {PRONOUN/m_c/subject} {VERB/m_c/are/is} just too nauseous to."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

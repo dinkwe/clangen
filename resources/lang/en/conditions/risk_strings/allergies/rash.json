@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "allergies_rash0",
+        "strings": [
+            "r_c0 fusses as m_c comes in wincing. It's hard to see between {PRONOUN/m_c/poss} fur, but it's clear by the state of {PRONOUN/m_c/poss} pawpads that {PRONOUN/m_c/subject} {VERB/m_c/have/has} a bad rash."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "allergies_rash1",
+        "strings": [
+            "m_c winces as they try to groom {PRONOUN/m_c/self} between sneezes. The skin under {PRONOUN/m_c/poss} pelt blisters beneath {PRONOUN/m_c/poss} tongue.",
+            "Irritably, m_c scratches at {PRONOUN/m_c/poss} fur rather uselessly. This rash is horrible and {PRONOUN/m_c/subject} {VERB/m_c/are/is} really starting to hate this season for it."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

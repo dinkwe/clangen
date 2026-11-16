@@ -1,0 +1,29 @@
+[
+    {
+        "event_id": "obsessive_mind_hyperfixation0",
+        "strings": [
+            "r_c0 is always grateful for m_c's help sorting through the herbs in the medicine den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} a good helper!"
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "obsessive_mind_hyperfixation1",
+        "strings": [
+            "m_c has been really focused on the Warrior Code recently and keeps parroting the rules at everyone.",
+            "While it's nice that m_c cares so much about the Code, some of {PRONOUN/m_c/poss} Clanmates are getting tired of being pulled up over every little thing.",
+            "m_c has been really focused on catching enough prey to feed everyone.",
+            "m_c has been eagerly practising battle moves.",
+            "m_c has been eagerly practising hunting techniques."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

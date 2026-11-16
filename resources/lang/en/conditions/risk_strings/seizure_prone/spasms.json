@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "seizure_prone_spasms0",
+        "strings": [
+            "r_c0 gently guides m_c down into a nest, assuring {PRONOUN/m_c/object} {PRONOUN/r_c0/subject} {VERB/r_c0/understand/understands} while {PRONOUN/m_c/poss} forelimb refuses to remain in place beneath {PRONOUN/m_c/object}."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "seizure_prone_spasms1",
+        "strings": [
+            "One minute, m_c is doing {PRONOUN/m_c/poss} duties as usual, the next, one of {PRONOUN/m_c/poss} paws decides to shift, sending {PRONOUN/m_c/object} down with a surprised yowl.",
+            "m_c glares at {PRONOUN/m_c/poss} paw, frustrated that {PRONOUN/m_c/subject} can't keep it still when it messes up {PRONOUN/m_c/poss} carefully arranged nest.",
+            "m_c longingly watches {PRONOUN/m_c/poss} Clanmates practice hunting techniques. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} unable to join, as {PRONOUN/m_c/poss} forepaw keeps jumping around and {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need more bruises.",
+            "m_c's tail aches after it stops spasming. Gingerly, {PRONOUN/m_c/subject} {VERB/m_c/raise/raises} {PRONOUN/m_c/poss} paws to rub it, hoping that it'll stay still."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

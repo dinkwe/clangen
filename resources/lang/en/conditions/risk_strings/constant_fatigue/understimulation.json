@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_fatigue_understimulation0",
+        "strings": [
+            "r_c0's noticed that m_c's a bit on edge recently. Talking with {PRONOUN/m_c/object} only gets the answer that something is off, like a tingling beneath m_c's fur that {PRONOUN/m_c/subject} can't name."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_fatigue_understimulation1",
+        "strings": [
+            "Due to m_c's fatigue, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} found {PRONOUN/m_c/self} struggling to keep up with the activity {PRONOUN/m_c/subject} {VERB/m_c/need/needs}.",
+            "m_c's paws dig into the ground around the camp, stress and tension evident in every twitch of {PRONOUN/m_c/poss} ears and eyes."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

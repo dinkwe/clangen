@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "murky_mind_brain_fog0",
+        "strings": [
+            "m_c just can't seem to hold a line of thought these days.",
+            "m_c struggles to grasp anything these days. Holding onto thoughts is like trying to hold water in {PRONOUN/m_c/poss} claws.",
+            "m_c sighs and shrugs after getting asked a question. {PRONOUN/m_c/subject/CAP} {VERB/m_c/doubt/doubts} that {PRONOUN/m_c/subject} would have cared anyways."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

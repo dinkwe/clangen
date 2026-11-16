@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "masking_meltdown0",
+        "strings": [
+            "At the end of a long day r_c0's unsurprised to find m_c having a meltdown due to all {PRONOUN/m_c/poss} recent masking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "masking_meltdown1",
+        "strings": [
+            "m_c's masking has led to a full meltdown as {PRONOUN/m_c/subject} {VERB/m_c/reach/reaches} the end of {PRONOUN/m_c/poss} limit.",
+            "In the end, m_c has a meltdown from all {PRONOUN/m_c/poss} masking."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

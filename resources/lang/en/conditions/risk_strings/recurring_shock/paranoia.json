@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "recurring_shock_paranoia0",
+        "strings": [
+            "m_c struggles to trust r_c0's words of reassurance. After all, {PRONOUN/r_c0/subject} {VERB/r_c0/are/is} probably lying, right?"
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "recurring_shock_paranoia1",
+        "strings": [
+            "Shaking {PRONOUN/m_c/poss} head, m_c refuses to leave the self-imposed vigil that {PRONOUN/m_c/subject} {VERB/m_c/are/is} sitting.",
+            "Awkwardly, m_c keeps interrupting {PRONOUN/m_c/poss} Clanmates and insisting on taking over tasks to do them 'properly'."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

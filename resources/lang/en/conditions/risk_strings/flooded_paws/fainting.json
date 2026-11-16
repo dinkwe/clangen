@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "flooded_paws_fainting0",
+        "strings": [
+            "m_c stood up too fast and ended up crashing back down to the distress of {PRONOUN/m_c/poss} Clanmates."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "flooded_paws_fainting1",
+        "strings": [
+            "m_c assures {PRONOUN/m_c/poss} Clanmates that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} fine. The fainting spell only lasted a few moments.",
+            "m_c thought {PRONOUN/m_c/subject} could ride out the wave of dizziness, only to wake up on the ground."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

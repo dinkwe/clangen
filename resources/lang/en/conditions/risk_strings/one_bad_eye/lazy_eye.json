@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "one_bad_eye_lazy_eye0",
+        "strings": [
+            "r_c0 has noticed that m_c's bad eye has been falling out of focus more and more. It would seem it's gone lazy."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "one_bad_eye_lazy_eye1",
+        "strings": [
+            "m_c's fur bristles as yet another cat thoughtlessly asks about the state of {PRONOUN/m_c/poss} bad eye, and why it looks a bit 'funny'.",
+            "Sometimes, m_c feels a little bit insecure about {PRONOUN/m_c/poss} bad eye and how it doesn't quite focus as well."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

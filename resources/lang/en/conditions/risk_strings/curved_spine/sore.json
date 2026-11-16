@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "curved_spine_sore0",
+        "strings": [
+            "m_c finds it difficult to move from {PRONOUN/m_c/poss} nest due to {PRONOUN/m_c/poss} sore back.",
+            "The tilt in m_c's shoulders is particularly prominent today. {PRONOUN/m_c/subject} can already tell it is going to be a sore week."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

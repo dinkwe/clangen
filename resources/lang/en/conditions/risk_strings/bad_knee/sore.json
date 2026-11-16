@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "bad_knee_sore0",
+        "strings": [
+            "r_c0 has to tell m_c to slow down and get some rest when {PRONOUN/r_c0/subject} {VERB/r_c0/notice/notices} {PRONOUN/m_c/object} limping."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bad_knee_sore1",
+        "strings": [
+            "m_c's knees are sore again."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

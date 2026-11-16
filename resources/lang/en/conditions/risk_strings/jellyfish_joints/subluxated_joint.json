@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "jellyfish_joints_subluxated_joint0",
+        "strings": [
+            "When m_c suddenly lets out a hiss of pain, {PRONOUN/m_c/poss} concerned Clanmates help {PRONOUN/m_c/object} to r_c0's den. While nothing looks wrong, {PRONOUN/m_c/poss} Clanmates trust that m_c knows what {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} talking about when {PRONOUN/m_c/subject} say that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} subluxated {PRONOUN/m_c/poss} joint."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "jellyfish_joints_subluxated_joint1",
+        "strings": [
+            "{PRONOUN/m_c/poss/CAP} joints have been hurting for a few days now, so m_c decides to go to the medicine den - only for the medicine cat to say that {PRONOUN/m_c/subject} subluxated {PRONOUN/m_c/poss} shoulder. Oops...",
+            "With a startled hiss, m_c staggers back from training. The cat {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} training with pauses, asking about {PRONOUN/m_c/poss} well-being. m_c informs them that no, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not alright and {PRONOUN/m_c/subject}'d like to pause this and go to the medicine den. {PRONOUN/m_c/poss/CAP} Clanmate nods and helps {PRONOUN/m_c/object} there."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

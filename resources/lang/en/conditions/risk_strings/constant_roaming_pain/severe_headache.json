@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "constant_roaming_pain_severe_headache0",
+        "strings": [
+            "r_c0 worriedly comes over to the den when told that nobody's seen m_c out yet. Turns out, {PRONOUN/m_c/subject} {VERB/m_c/are/is} curled up tightly in {PRONOUN/m_c/poss} nest, whimpering from the pain in {PRONOUN/m_c/poss} head."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_roaming_pain_severe_headache1",
+        "strings": [
+            "m_c is barely able to make {PRONOUN/m_c/poss} way to the medicine den, the pain from {PRONOUN/m_c/poss} head throbbing throughout {PRONOUN/m_c/poss} whole body, making the world spin.",
+            "To the distress of {PRONOUN/m_c/poss} denmates, m_c has spent the day silently shaking, barely able to get out the information that {PRONOUN/m_c/poss} head hurts.",
+            "Barely coherent, m_c swallows the herbs delivered to {PRONOUN/m_c/object} by {PRONOUN/m_c/poss} Clanmates. Hopefully this pain will pass soon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

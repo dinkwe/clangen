@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "confused_body_tic_attack0",
+        "strings": [
+            "m_c has to get permission from r_c0 to skip today's patrols because of {PRONOUN/m_c/poss} tic attack."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "confused_body_tic_attack1",
+        "strings": [
+            "m_c has gotten a tic attack!",
+            "m_c has multiple tics going on at once.",
+            "m_c squeaked at another cat and got them very confused before the other cat realized that m_c is having a tic attack.",
+            "m_c can't patrol today because of {PRONOUN/m_c/poss} tics."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

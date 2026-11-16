@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "comet_spirit_stimming0",
+        "strings": [
+            "m_c has been zooming around r_c0's den all moon. Jumping up and down, chattering and generally waving {PRONOUN/m_c/poss} paws around chasing extra stimulation."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "comet_spirit_stimming1",
+        "strings": [
+            "m_c's been stimming more and more recently, bouncing and pacing around camp with the best of them.",
+            "While m_c knows some of {PRONOUN/m_c/poss} Clanmates don't like it when {PRONOUN/m_c/subject} {VERB/m_c/pace/paces} around camp, {PRONOUN/m_c/subject} {VERB/m_c/need/needs} the extra stimulation."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

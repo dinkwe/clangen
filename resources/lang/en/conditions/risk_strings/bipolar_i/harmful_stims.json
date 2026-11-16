@@ -1,0 +1,17 @@
+[
+    {
+        "event_id": "bipolar_i_harmful_stims0",
+        "strings": [
+            "m_c admits to r_c0 that the only way {PRONOUN/m_c/subject} can calm down is by hurting {PRONOUN/m_c/self}.",
+            "r_c0 catches m_c biting {PRONOUN/m_c/self} repeatedly whenever emotions run high."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    }
+]

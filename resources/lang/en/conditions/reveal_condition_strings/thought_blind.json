@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "reveal_condition_thought_blind0",
+        "strings": [
+            "When talking with r_c0 about {PRONOUN/m_c/poss} dreams for the future, m_c reveals {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have any image of what it might look like."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "reveal_condition_thought_blind1",
+        "strings": [
+            "When m_c talks with {PRONOUN/m_c/poss} Clanmates, {PRONOUN/m_c/subject} {VERB/m_c/get/gets} increasingly frustrated when trying to visualise what they describe.",
+            "m_c has come to the realization that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} thought blind."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "echoing_shock_paranoia0",
+        "strings": [
+            "r_c0 struggles to soothe m_c as {PRONOUN/m_c/subject} {VERB/m_c/refuse/refuses} to hear anything from a 'traitorous' cat like r_c."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "echoing_shock_paranoia1",
+        "strings": [
+            "m_c feels like the whole world and the Clan is against {PRONOUN/m_c/object}.",
+            "Staring up at the sky, m_c lashes {PRONOUN/m_c/poss} tail and presses {PRONOUN/m_c/poss} ears firmly down... Has everyone abandoned {PRONOUN/m_c/object}?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

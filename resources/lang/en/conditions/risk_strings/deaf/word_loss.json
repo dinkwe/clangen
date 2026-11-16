@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "deaf_word_loss0",
+        "strings": [
+            "r_c0 patiently sits beside m_c as {PRONOUN/m_c/subject} {VERB/m_c/struggle/struggles} to properly form words. The two have all the time m_c needs."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "deaf_word_loss1",
+        "strings": [
+            "m_c has been struggling to find the correct words to use when speaking to {PRONOUN/m_c/poss} Clanmates, often mixing up words and phrases.",
+            "Poor m_c has been experiencing some word loss recently."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

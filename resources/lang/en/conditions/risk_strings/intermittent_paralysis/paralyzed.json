@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "intermittent_paralysis_paralyzed0",
+        "strings": [
+            "Quietly, m_c admits to r_c0 in some ways {PRONOUN/m_c/subject} {VERB/m_c/are/is} relieved that {PRONOUN/m_c/poss} intermittent paralysis has progressed to full paralysis."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "intermittent_paralysis_paralyzed1",
+        "strings": [
+            "As {PRONOUN/m_c/poss} Clanmates keep trying to say it's not so bad and that it could be worse, m_c just wishes they would leave {PRONOUN/m_c/object} alone. It makes no difference to {PRONOUN/m_c/object} to be fully paralyzed.",
+            "All m_c can feel is tired at the confirmation that {PRONOUN/m_c/poss} intermittent paralysis has progressed fully."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

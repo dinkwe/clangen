@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "bipolar_ii_lethargy0",
+        "strings": [
+            "Recently, m_c has been feeling so worn down. It's all that {PRONOUN/m_c/subject} can say to explain to r_c0 the awful overwhelming feeling that prickles just beneath {PRONOUN/m_c/poss} fur."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "bipolar_ii_lethargy0",
+        "strings": [
+            "m_c feels barely able to do {PRONOUN/m_c/poss} in-camp jobs this moon."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

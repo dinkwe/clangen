@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "lazy_eye_dizziness0",
+        "strings": [
+            "m_c falls in front of r_c0, miserably asking {PRONOUN/r_c0/object} if {PRONOUN/r_c0/subject} {VERB/r_c0/have/has} a solution to the dizziness that's been plaguing m_c all day."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "lazy_eye_dizziness1",
+        "strings": [
+            "Poor m_c's found that the world has been rocking beneath {PRONOUN/m_c/poss} feet, unsettlingly making {PRONOUN/m_c/object} sway.",
+            "m_c feels a bit turned around, maybe {PRONOUN/m_c/subject} stood up too fast, or didn't sleep properly. In any case, m_c's had to take a break until the dizziness leaves."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

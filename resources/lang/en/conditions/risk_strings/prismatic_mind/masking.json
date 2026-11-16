@@ -1,0 +1,30 @@
+[
+    {
+        "event_id": "prismatic_mind_masking0",
+        "strings": [
+            "r_c0 has noticed that m_c seems to be acting a bit more stiff and not quite {PRONOUN/m_c/self} recently. {PRONOUN/m_c/subject/CAP} might be masking."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "prismatic_mind_masking1",
+        "strings": [
+            "m_c's been feeling awkward about being {PRONOUN/m_c/self} recently.",
+            "With frustration, m_c talks to a Clanmate about how {PRONOUN/m_c/subject} {VERB/m_c/haven't/hasn't} been feeling like {PRONOUN/m_c/self}.",
+            "With the stresses of recent events m_c's felt like {PRONOUN/m_c/subject} {VERB/m_c/have/has} to put on an act for the cats around {PRONOUN/m_c/object}.",
+            "m_c's been slipping into an act around others recently.",
+            "While mimicking others is good on occasion, m_c's Clanmates express worry at how much {PRONOUN/m_c/subject} {VERB/m_c/seem/seems} to be doing it recently.",
+            "It looks like m_c feels the need to mask more recently."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

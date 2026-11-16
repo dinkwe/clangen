@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "constant_rash_whitecough0",
+        "strings": [
+            "As whitecough season comes around again, r_c0 notices that m_c is one of the first in the Clan who's unfortunate enough to catch it."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "constant_rash_whitecough1",
+        "strings": [
+            "With a bit of frustration, m_c slinks off to the medicine den to get some help with the bout of whitecough that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} caught.",
+            "Unfortunately, due to {PRONOUN/m_c/poss} rash, m_c's a bit more susceptible to whitecough when it comes around the Clan."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

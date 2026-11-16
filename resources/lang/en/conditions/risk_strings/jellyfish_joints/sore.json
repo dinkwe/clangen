@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "jellyfish_joints_sore0",
+        "strings": [
+            "After going on a long walk, m_c's muscles protest. {PRONOUN/m_c/subject/CAP} {VERB/m_c/make/makes} the slow trudge to r_c0's den - seems like it's going to be a long moon."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "jellyfish_joints_sore1",
+        "strings": [
+            "m_c winces, it's been a few days and {PRONOUN/m_c/subject} still ache all over. {PRONOUN/m_c/subject/CAP} {VERB/m_c/sigh/sighs} and pad over to the medicine den for some herbs to help with the pain."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

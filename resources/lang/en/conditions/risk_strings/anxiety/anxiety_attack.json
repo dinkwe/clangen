@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "anxiety_anxiety_attack0",
+        "strings": [
+            "It's not uncommon for m_c to come into the medicine den with worries and troubles swirling around {PRONOUN/m_c/poss} head. r_c0 has a specific pile of herbs set aside just for when {PRONOUN/m_c/subject} {VERB/m_c/need/needs} them. And {PRONOUN/r_c0/subject} {VERB/r_c0/are/is} prepared simply for when {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to talk."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "anxiety_anxiety_attack1",
+        "strings": [
+            "m_c's tail lashes, fur standing uncomfortably on end as {PRONOUN/m_c/subject} {VERB/m_c/share/shares} some of the anxieties bothering {PRONOUN/m_c/object} with a Clanmate.",
+            "The sunshine offers no relief to m_c as {PRONOUN/m_c/subject} {VERB/m_c/pace/paces} around the camp entrance, on edge.",
+            "m_c keeps going in circles, worriedly pacing and unable to settle down to sleep properly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

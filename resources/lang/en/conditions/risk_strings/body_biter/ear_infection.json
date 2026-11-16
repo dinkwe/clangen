@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "body_biter_ear_infection0",
+        "strings": [
+            "Seeing m_c coming into the medicine den to talk, r_c0 is quick to notice that {PRONOUN/m_c/poss} ears look inflamed."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "body_biter_ear_infection1",
+        "strings": [
+            "After purposely scratching at and putting objects into {PRONOUN/m_c/poss} ears, it's no shock that m_c has gotten an ear infection.",
+            "m_c has gotten an ear infection after putting objects into {PRONOUN/m_c/poss} ears."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]
