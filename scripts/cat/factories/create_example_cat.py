@@ -26,7 +26,7 @@ def create_example_cats(majority_rank: CatRank, rank_weights: dict) -> list["Cat
     chosen_cats = []
     for cat_index in range(12):
         if cat_index in majority_rank_cats:
-            chosen_cats.append(NewCatFactory.create_cat(rank=majority_rank))
+            new_cat = NewCatFactory.create_cat(rank=majority_rank)
         else:
             random_rank = choices(
                 list(rank_weights.keys()), list(rank_weights.values())
