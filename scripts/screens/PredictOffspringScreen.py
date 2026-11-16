@@ -7,6 +7,8 @@ import pygame_gui.elements
 
 from scripts.cat.cats import Cat
 from scripts.cat.factories.new_cat_factory import NewCatFactory
+
+from scripts.game_structure import game
 from scripts.game_structure.game import (
     Switch,
     switch_get_value
@@ -92,7 +94,7 @@ class PredictOffspringScreen(Screens):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             
             if event.ui_element == self.back_button:
-                self.change_screen("profile screen")
+                self.change_screen(game.last_screen_forProfile)
                 
             elif event.ui_element == self.predict_button:
                 self.predicted_offspring = {}
