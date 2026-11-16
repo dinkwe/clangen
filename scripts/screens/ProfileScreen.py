@@ -1797,7 +1797,10 @@ class ProfileScreen(Screens):
         ]
         for con in all_conditions:
             if con["name"] in self.the_cat.permanent_conditions:
-                con["name"] = i18n.t(f"conditions.permanent_conditions.{con['name']}")
+                if game.game_setting_get("warriorified names"):
+                    con["name"] = i18n.t(f"conditions.permanent_conditions.{con['name']}")
+                else:
+                    con["name"] = i18n.t(f"conditions.real_condition_names.{con['name']}")  
             else:
                 con["name"] = i18n.t(f"conditions.temporary_conditions.{con['name']}")
 

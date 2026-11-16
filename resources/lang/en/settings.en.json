@@ -109,6 +109,24 @@
         "requires_mediator": "-requires mediator-",
         "requires_medicine_cat": "-requires medicine cat-",
         "warriorified names":"Use warriors names for the new conditions",
-        "warriorified names_tooltip": "IE: use prismatic mind instead of autism."
+        "warriorified names_tooltip": "IE: use prismatic mind instead of autism.",
+        "allow triggers": "Allow triggering content.",
+        "allow triggers_tooltip": "This setting will override all other trigger settings. Changing this setting mid-game may cause certain conditions to crash.",
+        "misdiagnosis": "Allow cats to be incorrectly diagnosed.",
+        "misdiagnosis_tooltip": "When enabled, cats can be given the wrong diagnosis. The correct diagnosis is still visible in the cat's conditions file.",
+        "iatrogenic_disorders": "Allow cats to have conditions induced by medicical interference.",
+        "iatrogenic_disorders_tooltip": "This toggle requires misdiagnosis to be enabled.",
+        "eating_disorders": "Allow content with eating disorders",
+        "eating_disorders_tooltip": "This toggle enables cats to experience eating disorders",
+        "self_harm": "Allow content with non-suicidal self harm.",
+        "self_harm_tooltip": "This toggle enables cats to experience non-suicidal self harm, such as harmful stims and tics. This does not include suicide or attempts.",
+        "psychosis": "Allow content with psychosis.",
+        "psychosis_tooltip": "This toggle enables cats to experience psychotic symptoms such as paranoia, delusions, and intense hallucinations.",
+        "dissociation": "Allow content with dissociation from trauma.",
+        "dissociation_tooltip": "This toggle enables cats to experience dissociation from trauma. This does not include mild dissociative symptoms from attention and memory disorders.",
+        "intrusive_thoughts": "Allow content with intrusive thoughts.",
+        "intrusive_thoughts_tooltip": "This toggle enables to experience intrusive thoughts such as depressive hopelessness and homidical ideation.",
+        "body fluids": "Allow content with night dirtmaking and nest wetting",
+        "body fluids_tooltip": "This toggle enables cats to experience diarrhea, night dirtmaking (having to get up in the night to use the dirtplace) and nest wetting."
     }
 }
