@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "zoomies_bruises0",
+        "strings": [
+            "After zooming around for most of the day m_c comes over to r_c0's den to sheepishly ask for some help with the new bruises {PRONOUN/m_c/subject} {VERB/m_c/have/has} obtained."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "zoomies_bruises1",
+        "strings": [
+            "No serious harm has come to m_c from {PRONOUN/m_c/poss} zooming, just a few extra knocks and bruises.",
+            "m_c trots into camp unabashed, only slightly wincing from a couple of bruises."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

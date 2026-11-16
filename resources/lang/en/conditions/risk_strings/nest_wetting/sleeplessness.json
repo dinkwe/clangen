@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "nest_wetting_sleeplessness0",
+        "strings": [
+            "r_c0 wakes blearily as little m_c paws into the medicine den. {PRONOUN/m_c/subject/CAP} {VERB/m_c/look/looks} rather ashamed and sheepish as {PRONOUN/m_c/subject} {VERB/m_c/explain/explains} the issue."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "nest_wetting_sleeplessness1",
+        "strings": [
+            "m_c can't seem to get a good night's sleep with all the wet nesting around {PRONOUN/m_c/object}.",
+            "Awkwardly, m_c spends the nights wandering around camp. It's better than waking up in wet nesting again."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

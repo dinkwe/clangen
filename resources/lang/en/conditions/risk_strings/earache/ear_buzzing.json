@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "earache_ear_buzzing0",
+        "strings": [
+            "Poor m_c complains to r_c0 that not only are {PRONOUN/m_c/poss} ears hurting, now there's an incessant buzzing in them."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "earache_ear_buzzing1",
+        "strings": [
+            "m_c buries {PRONOUN/m_c/poss} head into the nesting around {PRONOUN/m_c/object}. It doesn't help with the buzzing at all."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

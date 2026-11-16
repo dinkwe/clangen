@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "derealization_healed0",
+        "strings": [
+            "m_c was finally able to ground {PRONOUN/m_c/self} and is no longer experiencing derealization.",
+		    "m_c no longer feels trapped in an endless dream.",
+            "m_c feels back in touch with reality."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

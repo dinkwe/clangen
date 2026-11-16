@@ -1,0 +1,11 @@
+[
+    {
+        "event_id": "gain_temporary_condition_puppyspace0",
+        "strings": [
+            "Recently, m_c has been acting a bit differently than usual. It seems like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} gone into puppyspace."
+        ],
+        "involved_cats": {
+            "m_c":{}
+        }
+    }
+]

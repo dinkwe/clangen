@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "compulsions_healed0",
+        "strings": [
+            "With some relief, m_c finds that {PRONOUN/m_c/subject} {VERB/m_c/are/is} able to balance {PRONOUN/m_c/poss} compulsions throughout the day.",
+		    "m_c has figured out a way to factor {PRONOUN/m_c/poss} compulsions more naturally into {PRONOUN/m_c/poss} routine.",
+            "m_c has been able to reorganize {PRONOUN/m_c/self} and {PRONOUN/m_c/poss} compulsions."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

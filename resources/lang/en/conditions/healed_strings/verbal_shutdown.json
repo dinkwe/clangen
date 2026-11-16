@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "verbal_shutdown_healed0",
+        "strings": [
+            "While cats are surprised to see m_c speaking again, it's welcomed wholeheartedly.",
+		    "m_c cracks a joke at the gathering and makes some of the cats from the other Clans laugh.",
+            "m_c chats with some of {PRONOUN/m_c/poss} denmates, comfortable and at ease."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

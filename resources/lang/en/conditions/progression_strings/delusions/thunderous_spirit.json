@@ -1,0 +1,25 @@
+[
+    {
+        "event_id": "delusions_thunderous_spirit0",
+        "strings": [
+            "m_c's delusions are a sign of a greater problem. r_c0 suggests {PRONOUN/m_c/subject} {VERB/m_c/have/has} an thunderous spirit."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "delusions_thunderous_spirit1",
+        "strings": [
+            "m_c's delusions are not just a temporary symptom, but a sign of a long-term condition."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

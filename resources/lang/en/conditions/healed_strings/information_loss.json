@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "information_loss_healed0",
+        "strings": [
+            "After {PRONOUN/m_c/subject} got clarification, m_c understands what {PRONOUN/m_c/poss} Clanmates were trying to tell {PRONOUN/m_c/object}.",
+		    "When a Clanmate gives m_c instructions piece-by-piece instead of all at once, {PRONOUN/m_c/subject} {VERB/m_c/were/was} able to finish the task."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

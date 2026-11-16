@@ -244,6 +244,18 @@ class NewCatFactory(BaseCatFactory, ABC):
             "sex": sex if sex else cls.rng.choice(("male", "female")),
         }
         gender["genderalign"] = genderalign if genderalign else gender["sex"]
+        intersex_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["intersex_chance"])
+        if intersex_chance == 1:
+            gender["sex"] = "intersex"
+            #print("INTERSEX ALERT!!")
+        #weighing "nonbinary" to be the most common
+        genderqueer_list = [
+            "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary", "nonbinary",
+            "neutrois", "agender", "genderqueer", "demigirl", "demiboy", "demienby", "genderfluid",
+            "genderfae", "genderfaun", "genderflor", "bigender", "pangender", "???"
+        ]
+        transmasc_list = ["trans male", "trans male", "trans male", "trans masc", "trans masc", "demiboy", "genderfaun"]
+        transfem_list = ["trans female", "trans female", "trans female", "trans fem",  "trans fem", "demigirl", "genderflor"]
 
         if genderalign and "trans" in genderalign:
             gender["sex"] = "female" if genderalign == "trans male" else "male"
@@ -252,16 +264,18 @@ class NewCatFactory(BaseCatFactory, ABC):
         if age.is_baby():
             return gender
 
-        trans_chance = cls.rng.randint(0, 50)
-        nb_chance = cls.rng.randint(0, 75)
+        trans_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["trans_chance"])
+        nb_chance = cls.rng.randint(0, constants.CONFIG["cat_generation"]["enby_chance"])
 
         if nb_chance == 1:
-            gender["genderalign"] = "nonbinary"
+            gender["genderalign"] = cls.rng.choice(genderqueer_list)
         elif trans_chance == 1:
             gender["genderalign"] = (
-                "trans male" if gender["sex"] == "female" else "trans female"
+                cls.rng.choice(transmasc_list) if gender["sex"] == "female" else cls.rng.choice(transfem_list)
             )
-
+        if gender["sex"] == "intersex":
+            gender["genderalign"] = "intersex " + gender["genderalign"]
+            #print(gender)
         return gender
 
     @staticmethod
@@ -286,6 +300,7 @@ class NewCatFactory(BaseCatFactory, ABC):
                 "NOLEFTEAR",
                 "NORIGHTEAR",
                 "MANLEG",
+                "DECLAWED"
             )
 
             pelt.scars = tuple(

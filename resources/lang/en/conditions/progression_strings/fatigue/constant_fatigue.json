@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "fatigue_constant_fatigue0",
+        "strings": [
+            "r_c0 reassures m_c that it's alright if {PRONOUN/m_c/subject} still {VERB/m_c/feel/feels} exhausted, {PRONOUN/m_c/poss} fatigue just might be constant.",
+            "Despite following all of r_c0's instructions, m_c still seems to be experiencing ongoing and constant fatigue."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fatigue_constant_fatigue1",
+        "strings": [
+            "m_c feels only mildly better after {PRONOUN/m_c/poss} long rest, the fatigue seems to want to be a constant companion."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

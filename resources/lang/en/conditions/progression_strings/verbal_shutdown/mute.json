@@ -1,0 +1,27 @@
+[
+    {
+        "event_id": "verbal_shutdown_mute0",
+        "strings": [
+            "After all this time, some of the Clan thinks that m_c should have started speaking again. r_c0 simply shakes their head, it's not up to those cats to demand that."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "verbal_shutdown_mute1",
+        "strings": [
+            "m_c simply shakes {PRONOUN/m_c/poss} head when a Clanmate asks if {PRONOUN/m_c/subject} {VERB/m_c/are/is} going to start speaking again soon.",
+            "The Clan doesn't think twice about m_c's silence, that's just how {PRONOUN/m_c/subject} {VERB/m_c/are/is}.",
+            "m_c softly pads out into the clearing, {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need to use words to talk. {PRONOUN/m_c/poss/CAP} cat-sign is loud enough."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

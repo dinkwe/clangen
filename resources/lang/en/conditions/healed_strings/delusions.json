@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "delusions_healed0",
+        "strings": [
+            "m_c is no longer trapped in a delusion.",
+		    "With the support of {PRONOUN/m_c/poss} clanmates, m_c has calmed down and is no longer stuck in a delusion."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

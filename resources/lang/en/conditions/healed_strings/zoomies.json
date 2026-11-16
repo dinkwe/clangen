@@ -1,0 +1,14 @@
+[
+    {
+        "event_id": "zoomies_healed0",
+        "strings": [
+            "m_c has calmed back down from all of {PRONOUN/m_c/poss} zooming around.",
+		    "After all {PRONOUN/m_c/poss} zooming, m_c has calmed down.",
+            "The Clan is relieved to see that m_c is calm and collected once more.",
+            "m_c is no longer zooming around the camp like a young kitten."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

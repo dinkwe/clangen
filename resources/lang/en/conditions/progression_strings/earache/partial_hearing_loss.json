@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "earache_partial_hearing_loss0",
+        "strings": [
+            "Ever since m_c's earache, r_c0 has noticed that {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been struggling to properly hear {PRONOUN/m_c/poss} Clanmates. After a few short talks it's determined that something deep in {PRONOUN/m_c/poss} ears must have gotten damaged."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "earache_partial_hearing_loss1",
+        "strings": [
+            "As m_c recovers, r_c0 talks with {PRONOUN/m_c/object} about the damage that the earache might have caused {PRONOUN/m_c/poss} ears.",
+            "m_c has noticed that after {PRONOUN/m_c/poss} earache {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} had a bit of trouble hearing {PRONOUN/m_c/poss} Clanmates clearly."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

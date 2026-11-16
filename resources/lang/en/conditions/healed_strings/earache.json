@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "earache_healed0",
+        "strings": [
+            "m_c purrs over and over again so happy that {PRONOUN/m_c/poss} ears no longer ache.",
+            "m_c's earache has cleared up."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

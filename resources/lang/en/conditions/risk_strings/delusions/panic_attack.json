@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "delusions_panic_attack0",
+        "strings": [
+            "m_c bursts into tears after a particularly upsetting delusion.",
+            "m_c finds it hard to breathe. Why won't these delusions stop?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

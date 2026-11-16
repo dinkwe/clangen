@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "stimming_body_biter0",
+        "strings": [
+            "r_c0 lightly scolds m_c when {PRONOUN/r_c0/subject} {VERB/r_c0/notice/notices} that in all of {PRONOUN/m_c/poss} stimming, {PRONOUN/m_c/poss} {VERB/m_c/have/has} become a body biter."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "stimming_body_biter1",
+        "strings": [
+            "Reluctantly, m_c has to admit {PRONOUN/m_c/subject} might have a problem with body biting.",
+            "m_c stares at {PRONOUN/m_c/poss} bleeding paws with the realisation that it's self-inflicted."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "amnesia_brain_fog0",
+        "strings": [
+            "Thoughts don't work anymore. m_c is too overwhelmed.",
+            "m_c struggles to put thoughts together while missing {PRONOUN/m_c/poss} memories."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

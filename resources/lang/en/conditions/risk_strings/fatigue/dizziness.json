@@ -1,0 +1,26 @@
+[
+    {
+        "event_id": "fatigue_dizziness0",
+        "strings": [
+            "r_c0 gently helps m_c lie down in one of the spare nests in the medicine den. It's better than letting {PRONOUN/m_c/object} stumble around the camp."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "fatigue_dizziness1",
+        "strings": [
+            "m_c feels a little bit dizzy from the tiredness weighing {PRONOUN/m_c/object} down.",
+            "Due to how overtired m_c's been, {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} stood up and needed to sit back down with a spinning head."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

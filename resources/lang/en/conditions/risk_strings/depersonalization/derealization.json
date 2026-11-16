@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "depersonalization_derealization0",
+        "strings": [
+            "In the fog of dissociation, m_c feels like the world around {PRONOUN/m_c/object} is fake.",
+            "m_c feels endlessly trapped in a dream. Is any of this real?"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

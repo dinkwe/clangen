@@ -397,6 +397,9 @@ def _assign_health(created_cat, option_dict):
                 and not PERMANENT_CONDITIONS[condition]["can_be_congenital"]
             ):
                 continue
+            if condition in ["excess_testosterone", "testosterone_deficiency", "aneuploidy",
+                                            "mosaicism", "chimerism"]:
+                continue
             possible_conditions.append(condition)
 
         if possible_conditions:

@@ -1,0 +1,13 @@
+[
+    {
+        "event_id": "gain_temporary_condition_zoomies0",
+        "strings": [
+            "m_c has gotten the zoomies!",
+        	"m_c is driving camp wild because of {PRONOUN/m_c/poss} zooming around.",
+            "It appears as though m_c has the zoomies!"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

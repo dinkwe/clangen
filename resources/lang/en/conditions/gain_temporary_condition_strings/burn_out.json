@@ -1,0 +1,15 @@
+[
+    {
+        "event_id": "gain_temporary_condition_burn_out0",
+        "strings": [
+            "m_c has gotten burnt out.",
+        	"m_c is suffering from some burn out.",
+	        "m_c is experiencing some burn out.",
+            "m_c is starting to feel a bit burnt out.",
+            "m_c is starting to feel burnt out and is taking it easy."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

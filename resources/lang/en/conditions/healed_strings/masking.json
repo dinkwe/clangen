@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "masking_healed0",
+        "strings": [
+            "m_c is no longer masking.",
+		    "It's a relief to the Clan to see m_c back to {PRONOUN/m_c/poss} normal self."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

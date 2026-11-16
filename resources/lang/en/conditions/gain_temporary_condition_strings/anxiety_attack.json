@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "gain_temporary_condition_anxiety_attack0",
+        "strings": [
+            "m_c has gotten worked up into an anxiety attack.",
+        	"With all the stress weighing on {PRONOUN/m_c/poss} mind, m_c has gotten an anxiety attack."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

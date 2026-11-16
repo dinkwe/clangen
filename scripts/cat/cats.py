@@ -98,7 +98,7 @@ class Cat:
         CatRank.LEADER,
     ]
 
-    gender_tags = {"female": "F", "male": "M"}
+    gender_tags = {"female": "F", "male": "M", "intersex": "I"}
 
     # EX levels and ranges.
     # Ranges are inclusive to both bounds
@@ -184,7 +184,7 @@ class Cat:
         # Public attributes
         self.ID = ID
 
-        self.gender: Literal["male", "female"] = gender_dict["sex"]
+        self.gender: Literal["male", "female", "intersex"] = gender_dict["sex"]
         self.genderalign = gender_dict["genderalign"]
         if gender_dict.get("pronouns"):  # pronouns are lazy-loaded for new cats
             self.pronouns = gender_dict.get("pronouns")
@@ -415,7 +415,22 @@ class Cat:
         locale = i18n.config.get("locale")
         value = self._pronouns.get(locale)
         if value is None:
-            self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            second_set_chance = constants.CONFIG["cat_generation"]["multiple_pronouns_chance"]
+            if self.genderalign not in ["male", "female", "intersex"]:
+                second_set_chance= int(second_set_chance/2)
+            seconds = randint(1,second_set_chance)
+            if "intersex" in self.genderalign:
+                self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign[9:])
+            else:
+                self._pronouns[locale] = pronouns.get_new_pronouns(self.genderalign)
+            if seconds == 1:
+                pronoun_gender = randint(1, 10)
+                if pronoun_gender < 6:
+                    # add he, she, or they
+                    self._pronouns[locale] += pronouns.get_new_pronouns(choice(["male", "female", "nonbinary"]))
+                else:
+                    # add neos
+                    self._pronouns[locale] += pronouns.get_new_pronouns("neos")
             value = self._pronouns[locale]
         return value
 
@@ -464,6 +479,7 @@ class Cat:
             "trans female",
             "trans male",
             "nonbinary",
+            "intersex",
         ):
             return i18n.t(f"general.{self.genderalign}")
         # otherwise, it's custom - just return it directly
@@ -2186,9 +2202,32 @@ class Cat:
 
     def get_info_block(self, *, make_clan=False, patrol=False, relationship=False):
         if make_clan:
+            pronoun_text = ""
+            perm_cond_text = ""
+            if len(self.pronouns) == 1:
+                    if self.pronouns[0].get("subject") == self.pronouns[0].get("object"):
+                        pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("poss")
+                    else:
+                        pronoun_text += self.pronouns[0].get("subject") + "/" + self.pronouns[0].get("object")
+            else:
+                    for pronoun in self.pronouns:
+                        pronoun_text += pronoun.get("subject") + "/"
+                    if pronoun_text[-1] == "/":
+                        pronoun_text = pronoun_text[:-1]
+            if self.permanent_conditions:
+                perm_cond_text = "conditions:\n"
+                for condition in self.permanent_conditions:
+                    if game and not game.game_setting_get("warriorified names"):
+                        perm_cond_text += i18n.t(f"conditions.real_condition_names.{condition.name}")  
+                    else:
+                        perm_cond_text += i18n.t(f"conditions.permanent_conditions.{condition.name}")
+                    perm_cond_text += "\n"
+                    
+            perm_cond_text=perm_cond_text[:-1]
+                        
             return "\n".join(
                 [
-                    self.genderalign_string,
+                    (self.genderalign_string + " (" + pronoun_text + ")"),
                     i18n.t(
                         (
                             f"general.{self.age}"
@@ -2201,6 +2240,7 @@ class Cat:
                     self.skills.skill_string(
                         is_adolescent=(self.age == CatAge.ADOLESCENT)
                     ),
+                    perm_cond_text
                 ]
             )
         elif patrol:

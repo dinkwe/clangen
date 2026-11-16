@@ -737,6 +737,9 @@ def create_new_cat(
                     "can_be_congenital"
                 ]:
                     continue
+                if condition in ["excess_testosterone", "testosterone_deficiency", "aneuploidy",
+                                            "mosaicism", "chimerism"]:
+                    continue
                 possible_conditions.append(condition)
 
             if possible_conditions:
@@ -747,6 +750,11 @@ def create_new_cat(
                         chosen_condition,
                         is_congenital=True,
                     )
+
+        if new_cat.gender == "intersex":
+            intersex_condition = choice(["excess_testosterone", "testosterone_deficiency", "aneuploidy",
+                                            "mosaicism", "chimerism"])
+            gain_permanent_condition(new_cat, intersex_condition, is_congenital=True)
 
         # KILL >:D only if we're sposed to tho
         if not alive:

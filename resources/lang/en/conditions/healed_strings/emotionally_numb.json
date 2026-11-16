@@ -1,0 +1,15 @@
+[
+    {
+        "event_id": "emotionally_numb_healed0",
+        "strings": [
+            "m_c breathes a sigh of relief when taking in the sounds and sights of nature make {PRONOUN/m_c/object} happy again.",
+		    "m_c has realized what {PRONOUN/m_c/subject} {VERB/m_c/are/is} feeling!",
+            "m_c has sorted {PRONOUN/m_c/poss} emotions again.",
+            "m_c's clanmates are happy to see {PRONOUN/m_c/object} laughing again.",
+            "m_c's feelings once again come to them like a flowing river and not like a scattered breeze."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]
