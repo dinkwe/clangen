@@ -42,3 +42,5 @@ class GameScreen(StrEnum):
     CHOOSE_MATE = "choose_mate_screen"
     CHOOSE_MENTOR = "choose_mentor_screen"
     CHOOSE_ADOPTIVE_PARENT = "choose_adoptive_parent_screen"
+    PREDICT_OFFSPRING = "predict_offspring_screen"
+    
